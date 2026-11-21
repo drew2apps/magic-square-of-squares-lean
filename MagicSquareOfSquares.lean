@@ -11,3 +11,5 @@ import MagicSquareOfSquares.Elliptic
 import MagicSquareOfSquares.Triangles
 import MagicSquareOfSquares.G1
 import MagicSquareOfSquares.G1Certificates
+import MagicSquareOfSquares.G1Classes
+import MagicSquareOfSquares.G1Primes

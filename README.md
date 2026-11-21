@@ -65,6 +65,12 @@ In the three reformulations the nine squares are required to be distinct. The in
 
 [KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md) checks 120 exclusions reported by the Kepler71 project for its G1 family. All reported numbers were reproduced. In addition, 114 of the 120 exclusions follow from congruences alone, and those 114 are checked by the Lean kernel (`G1.no_point`).
 
+The same file goes beyond the 127 pairs of that report:
+
+- Six Lean theorems rule out whole remainder classes of `(m, n)`, of any size: two classes for the prime 2, every prime `p ≡ 5 (mod 8)` dividing `m² + n²` to an odd power, and classes modulo 7, 23 and 47.
+- An argument with the Weil bound (written out, not formalized) shows that no other prime of good reduction can obstruct.
+- A census: of the 12,231 coprime pairs with `m ≤ 200`, congruences exclude 11,051, rank 0 closes 252 more, and 928 remain open.
+
 ## What is not proved
 
 - Whether a 3×3 magic square of distinct squares exists.
@@ -92,6 +98,9 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/Triangles.lean` | The right-triangle reformulation |
 | `MagicSquareOfSquares/G1.lean` | A finite check modulo `M` that rules out squares on the diagonal of the G1 family |
 | `MagicSquareOfSquares/G1Certificates.lean` | The 114 certificates (generated) |
+| `MagicSquareOfSquares/G1Classes.lean` | Remainder classes of `(m, n)` with no rational point: modulo 8, 32, 7, 23, 47 |
+| `MagicSquareOfSquares/G1Primes.lean` | Primes `p ≡ 5 (mod 8)` dividing `m² + n²` to an odd power |
+| `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind [KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md) |
 | `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |
 | `scripts/Audit.lean` | Lists every theorem and fails if any uses a non-standard axiom |
 

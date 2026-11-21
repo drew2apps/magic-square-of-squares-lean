@@ -117,28 +117,20 @@ theorem certificates_length : certificates.length = {len(certs)} := by
 theorem certificates_nodup : (certificates.map fun c => (c.1, c.2.1)).Nodup := by
   decide +kernel
 
-/-- For each listed pair `(m, n)`, no rational `t` makes the three diagonal cells
-`m² + n²t²`, `(m² + n²)(t² + 1)/2`, `n² + m²t²` of the G1 family all squares. -/
+/-- For each listed pair `(m, n)`, no rational `t` makes the three diagonal cells of the G1
+family all squares. -/
 theorem no_point {{m n M S : ℕ}} (hc : (m, n, M, S) ∈ certificates) (t : ℚ) :
-    ¬(IsSquare ((m : ℚ) ^ 2 + (n : ℚ) ^ 2 * t ^ 2) ∧
-      IsSquare (((m : ℚ) ^ 2 + (n : ℚ) ^ 2) * (t ^ 2 + 1) / 2) ∧
-      IsSquare ((n : ℚ) ^ 2 + (m : ℚ) ^ 2 * t ^ 2)) := by
+    ¬DiagonalSquares m n t := by
   have h := List.all_eq_true.mp certificates_valid (m, n, M, S) hc
   simp only [Bool.and_eq_true, decide_eq_true_eq, beq_iff_eq] at h
   exact no_point_of_obstructs h.1.1 h.1.2 h.2 t
 
 /-- The pair `(13, 3)`: excluded by a congruence modulo 7. -/
-theorem no_point_13_3 (t : ℚ) :
-    ¬(IsSquare (((13 : ℕ) : ℚ) ^ 2 + ((3 : ℕ) : ℚ) ^ 2 * t ^ 2) ∧
-      IsSquare ((((13 : ℕ) : ℚ) ^ 2 + ((3 : ℕ) : ℚ) ^ 2) * (t ^ 2 + 1) / 2) ∧
-      IsSquare (((3 : ℕ) : ℚ) ^ 2 + ((13 : ℕ) : ℚ) ^ 2 * t ^ 2)) :=
+theorem no_point_13_3 (t : ℚ) : ¬DiagonalSquares 13 3 t :=
   no_point (M := 7) (S := 23) (by decide) t
 
 /-- The pair `(19, 11)`: excluded by a congruence modulo 7. -/
-theorem no_point_19_11 (t : ℚ) :
-    ¬(IsSquare (((19 : ℕ) : ℚ) ^ 2 + ((11 : ℕ) : ℚ) ^ 2 * t ^ 2) ∧
-      IsSquare ((((19 : ℕ) : ℚ) ^ 2 + ((11 : ℕ) : ℚ) ^ 2) * (t ^ 2 + 1) / 2) ∧
-      IsSquare (((11 : ℕ) : ℚ) ^ 2 + ((19 : ℕ) : ℚ) ^ 2 * t ^ 2)) :=
+theorem no_point_19_11 (t : ℚ) : ¬DiagonalSquares 19 11 t :=
   no_point (M := 7) (S := 23) (by decide) t
 
 end MagicSquareOfSquares.G1
