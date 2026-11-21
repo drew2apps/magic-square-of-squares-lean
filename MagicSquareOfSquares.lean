@@ -1,0 +1,8 @@
+import MagicSquareOfSquares.Defs
+import MagicSquareOfSquares.Basic
+import MagicSquareOfSquares.Primes
+import MagicSquareOfSquares.Residues
+import MagicSquareOfSquares.Primitive
+import MagicSquareOfSquares.Progressions
+import MagicSquareOfSquares.Examples
+import MagicSquareOfSquares.Statement
