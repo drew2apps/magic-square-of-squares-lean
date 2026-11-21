@@ -301,16 +301,29 @@ theorem openStatement_iff_exists_isMSS :
         · exact natAbs_line hT HM.col₂
         · exact natAbs_line hT HM.col₃
 
+private theorem nodup_reorder (x y z n : ℤ) :
+    [y + n, x - n, z, z - n, y, x + n, x, z + n, y - n].Nodup ↔
+      [x - n, x, x + n, y - n, y, y + n, z - n, z, z + n].Nodup := by
+  let f : Fin 9 → ℤ := ![x - n, x, x + n, y - n, y, y + n, z - n, z, z + n]
+  have h1 : [y + n, x - n, z, z - n, y, x + n, x, z + n, y - n] =
+      ([5, 0, 7, 6, 4, 2, 1, 8, 3] : List (Fin 9)).map f := rfl
+  have h2 : [x - n, x, x + n, y - n, y, y + n, z - n, z, z + n] =
+      ([0, 1, 2, 3, 4, 5, 6, 7, 8] : List (Fin 9)).map f := rfl
+  rw [h1, h2]
+  exact List.Perm.nodup_iff (List.Perm.map f (by decide))
+
 /-- Robertson's reformulation: the open statement holds if and only if there are three
-3-term arithmetic progressions of squares with the same common difference whose middle
-terms form an arithmetic progression, with all nine squares distinct. -/
+3-term arithmetic progressions of squares `x - n, x, x + n`, `y - n, y, y + n` and
+`z - n, z, z + n` with the same common difference `n`, whose middle terms `x, y, z` form an
+arithmetic progression, with all nine squares distinct. -/
 theorem openStatement_iff_three_progressions :
     OpenStatement ↔ ∃ x y z n : ℤ, x + z = 2 * y ∧
       IsSquare (x - n) ∧ IsSquare x ∧ IsSquare (x + n) ∧
       IsSquare (y - n) ∧ IsSquare y ∧ IsSquare (y + n) ∧
       IsSquare (z - n) ∧ IsSquare z ∧ IsSquare (z + n) ∧
-      [y + n, x - n, z, z - n, y, x + n, x, z + n, y - n].Nodup :=
-  openStatement_iff_exists_isMSS.trans exists_isMSS_iff_three_progressions
+      [x - n, x, x + n, y - n, y, y + n, z - n, z, z + n].Nodup := by
+  rw [openStatement_iff_exists_isMSS, exists_isMSS_iff_three_progressions]
+  simp only [nodup_reorder]
 
 /-- If the open problem has a solution then it has a primitive solution, so the necessary
 conditions for primitive squares apply without loss of generality. -/
