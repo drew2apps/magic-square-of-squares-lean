@@ -71,11 +71,11 @@ The same file goes beyond the 127 pairs of that report:
 - An argument with the Weil bound (written out, not formalized) shows that no other prime of good reduction can obstruct.
 - A census: of the 12,231 coprime pairs with `m ≤ 200`, congruences exclude 11,051, rank 0 closes 252 more, and 928 remain open.
 
-[G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) repeats this with all nine cells (computed, not in Lean), and corrects the audit, which was based on an early snapshot of the Kepler71 notes:
+[G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) repeats this with all nine cells, and corrects the audit, which was based on an early snapshot of the Kepler71 notes:
 
-- Exactly 34 primes can obstruct the full system modulo `p`; the largest is 607.
-- For `m ≤ 200`, every pair without a trivial rational point is excluded by a congruence. 60 pairs have a trivial point; 16 of them are not closed.
-- For `m ≤ 1000`, 174 of 304,191 pairs are not closed.
+- **A Lean theorem about the open problem (`IsMSS.ratio_ne_of_le_200`).** In a magic square of squares with roots `a b c / d e f / g h i`, the ratio `(b + d) : (h + f)` is not `m : n` for any coprime `1 ≤ n < m ≤ 200`, outside 60 listed pairs. This excludes infinitely many squares at once, of any size.
+- Computed, not in Lean: exactly 34 primes can obstruct the full system modulo `p`, the largest is 607.
+- Computed, not in Lean: of the 60 listed pairs, 16 are not closed; for `m ≤ 1000`, 157 of 304,191 pairs are not closed.
 
 ## What is not proved
 
@@ -106,6 +106,9 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/G1Certificates.lean` | The 114 certificates (generated) |
 | `MagicSquareOfSquares/G1Classes.lean` | Remainder classes of `(m, n)` with no rational point: modulo 8, 32, 7, 23, 47 |
 | `MagicSquareOfSquares/G1Primes.lean` | Primes `p ≡ 5 (mod 8)` dividing `m² + n²` to an odd power |
+| `MagicSquareOfSquares/G1Full.lean` | The G1 family with all nine cells: a finite check that rules out whole ratio classes |
+| `MagicSquareOfSquares/G1FullCertificates.lean` | The 484 obstructed classes and the census for `m ≤ 200` (generated) |
+| `MagicSquareOfSquares/G1Bridge.lean` | From a magic square of squares to the G1 system; the theorem on edge-root ratios |
 | `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind [KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md) |
 | `scripts/g1_full/` | The scans behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) |
 | `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |

@@ -122,7 +122,7 @@ private theorem exists_nat_rep {M : ℕ} (hM : 0 < M) (x : ℤ) :
   · rw [Int.toNat_of_nonneg (Int.emod_nonneg x hM'.ne')]
     exact Int.mod_modEq x M
 
-private theorem testBit_sqMask_of_int {M : ℕ} (hM : 0 < M) {x : ℕ} {r : ℤ}
+theorem testBit_sqMask_of_int {M : ℕ} (hM : 0 < M) {x : ℕ} {r : ℤ}
     (h : r * r ≡ (x : ℤ) [ZMOD M]) : (sqMask M).testBit (x % M) = true := by
   obtain ⟨ρ, hρlt, hρ⟩ := exists_nat_rep hM r
   have h1 : ((ρ * ρ : ℕ) : ℤ) ≡ (x : ℤ) [ZMOD M] := by
