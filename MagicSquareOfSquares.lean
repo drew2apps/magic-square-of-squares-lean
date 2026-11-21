@@ -6,3 +6,6 @@ import MagicSquareOfSquares.Primitive
 import MagicSquareOfSquares.Progressions
 import MagicSquareOfSquares.Examples
 import MagicSquareOfSquares.Statement
+import MagicSquareOfSquares.Curve
+import MagicSquareOfSquares.Elliptic
+import MagicSquareOfSquares.Triangles

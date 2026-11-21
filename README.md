@@ -44,8 +44,13 @@ Properties 3, 8 and 9 do not need the square to be primitive. Theorems 7 and 9 a
 | If one entry is 0 then all nine are 0 | `IsMSS.eq_zero_of_exists_eq_zero` |
 | Distinct entries are automatically positive, so the positivity hypothesis in the formal-conjectures statement is redundant | `IsMagicSquareOfSquares.pos`, `openStatement_iff` |
 | If a solution exists then a primitive solution exists | `IsMSS.exists_primitive`, `openStatement_iff_primitive` |
-| Robertson's reformulation: a solution exists if and only if there are three 3-term arithmetic progressions of squares with the same common difference whose middle terms form an arithmetic progression | `openStatement_iff_three_progressions` |
+| Robertson's first reformulation: a solution exists if and only if there are three 3-term arithmetic progressions of squares with the same common difference whose middle terms form an arithmetic progression | `openStatement_iff_three_progressions` (integer squares), `openStatement_iff_rat_progressions` (rational squares) |
+| Robertson's second reformulation: a solution exists if and only if there are three rational right triangles with the same area whose squared hypotenuses form an arithmetic progression | `openStatement_iff_three_triangles` |
+| Robertson's third reformulation: a solution exists if and only if, for some rational `n`, the curve `y² = x³ - n²x` has three rational points, each the double of a rational point, whose `x`-coordinates form an arithmetic progression | `openStatement_iff_three_doubles` |
+| For rational `n ≠ 0`: `x - n`, `x`, `x + n` are all rational squares if and only if `x` is the `x`-coordinate of the double of a rational point of `y² = x³ - n²x` | `isSquare_iff_isDoubleX` |
 | The formal-conjectures statement is equivalent to the nine-integer-roots form used here | `openStatement_iff_exists_isMSS` |
+
+In the three reformulations the nine squares are required to be distinct. The informal statements leave this implicit. The curve uses Mathlib's `WeierstrassCurve.Affine.Point` and its group law.
 
 ### Checks against published examples
 
@@ -59,7 +64,6 @@ Properties 3, 8 and 9 do not need the square to be primitive. Theorems 7 and 9 a
 ## What is not proved
 
 - Whether a 3×3 magic square of distinct squares exists.
-- Robertson's other two reformulations (three rational right triangles of equal area; three points on a congruent-number elliptic curve).
 - Any search bound, and any result that needs the arithmetic of curves (Bremner 1999 and 2001, Bruin–Thomas–Várilly-Alvarado, Auel–Singer).
 - The existence of magic squares of squares for every size from 4×4 up (Rome–Yamagishi). Only Euler's 4×4 example is checked.
 
@@ -79,6 +83,9 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/Progressions.lean` | Robertson's arithmetic-progression reformulation |
 | `MagicSquareOfSquares/Examples.lean` | Bremner, Sallows, Parker, Euler |
 | `MagicSquareOfSquares/Statement.lean` | The formal-conjectures statement and the results restated for it |
+| `MagicSquareOfSquares/Curve.lean` | Squares in progression and doubles on `y² = x³ - n²x` |
+| `MagicSquareOfSquares/Elliptic.lean` | Rational squares; the elliptic-curve reformulation |
+| `MagicSquareOfSquares/Triangles.lean` | The right-triangle reformulation |
 | `scripts/Audit.lean` | Lists every theorem and fails if any uses a non-standard axiom |
 
 ## Reproduce
