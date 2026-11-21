@@ -50,7 +50,7 @@ Properties 3, 8 and 9 do not need the square to be primitive. Theorems 7 and 9 a
 | For rational `n ≠ 0`: `x - n`, `x`, `x + n` are all rational squares if and only if `x` is the `x`-coordinate of the double of a rational point of `y² = x³ - n²x` | `isSquare_iff_isDoubleX` |
 | The formal-conjectures statement is equivalent to the nine-integer-roots form used here | `openStatement_iff_exists_isMSS` |
 
-In the three reformulations the nine squares are required to be distinct. The informal statements leave this implicit. The curve uses Mathlib's `WeierstrassCurve.Affine.Point` and its group law.
+In the three reformulations the nine squares are required to be distinct. The informal statements leave this implicit. The curve uses Mathlib's `WeierstrassCurve.Affine.Point` and its group law. In the curve version `n` is any rational number: the statement does not say that `n` is a congruent number.
 
 ### Checks against published examples
 
