@@ -1,5 +1,7 @@
 # Audit of the G1 closures in Kepler71/magic-square-of-squares
 
+> **Correction, 21 November 2026.** This audit was written from two Kepler71 notes dated 12 September 2026. Later notes in that repository close all 127 pairs with `m ≤ 20`, and already state congruence obstructions for whole classes of `(m : n)` using all nine cells. "Seven open pairs" below describes their state on 12 September only. See [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md), which also supersedes the census at the end of this file.
+
 [Kepler71/magic-square-of-squares](https://github.com/Kepler71/magic-square-of-squares) studies a two-parameter family of 3×3 magic squares called G1. For coprime `1 ≤ n < m ≤ 20` (127 pairs) it reports that 120 pairs cannot give a magic square of nine distinct squares: 62 because an elliptic curve has rank 0, and 58 because of congruences. Its handoff note says these 120 closures were inherited without a consolidated audit.
 
 This is an independent check of those 120 closures. It was made from the statements in `RESULTS_FOR_CLAUDE_2026-09-12_G1.md` and `SUMMARY_2026-09-12.md` (read on 21 November 2026). The repository's code and logs were not read or run.
@@ -51,7 +53,7 @@ The check depends only on the remainders of `m` and `n`, so each obstruction rul
 | `no_point_mod_twenty_three` | the same modulo 23 | table modulo 23 |
 | `no_point_mod_forty_seven` | `m ≡ ±5n` or `n ≡ ±5m` modulo 47, not both divisible by 47 | table modulo 47 |
 
-The first three are the two general lemmas of the Kepler71 notes (the 2-adic criterion and the primes `5 mod 8`), now with Lean proofs. The classes modulo 7, 23 and 47 appear pair by pair in the notes; I did not find them stated as classes there.
+The first three are the two general lemmas of the Kepler71 notes (the 2-adic criterion and the primes `5 mod 8`), now with Lean proofs. The classes modulo 7, 23 and 47 appear pair by pair in the two notes I had read. Later Kepler71 notes state such classes for the full nine-cell system (modulo 17 and 41), so the idea is theirs.
 
 For a table modulo a prime power `p^k`, the Lean check uses that every admissible `(U, V)` is a unit multiple of `(1, v)` or of `(u, 1)` with `p | u`, so about `2p^k` cases per class are enough.
 

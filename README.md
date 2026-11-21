@@ -71,6 +71,12 @@ The same file goes beyond the 127 pairs of that report:
 - An argument with the Weil bound (written out, not formalized) shows that no other prime of good reduction can obstruct.
 - A census: of the 12,231 coprime pairs with `m ≤ 200`, congruences exclude 11,051, rank 0 closes 252 more, and 928 remain open.
 
+[G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) repeats this with all nine cells (computed, not in Lean), and corrects the audit, which was based on an early snapshot of the Kepler71 notes:
+
+- Exactly 34 primes can obstruct the full system modulo `p`; the largest is 607.
+- For `m ≤ 200`, every pair without a trivial rational point is excluded by a congruence. 60 pairs have a trivial point; 16 of them are not closed.
+- For `m ≤ 1000`, 174 of 304,191 pairs are not closed.
+
 ## What is not proved
 
 - Whether a 3×3 magic square of distinct squares exists.
@@ -101,6 +107,7 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/G1Classes.lean` | Remainder classes of `(m, n)` with no rational point: modulo 8, 32, 7, 23, 47 |
 | `MagicSquareOfSquares/G1Primes.lean` | Primes `p ≡ 5 (mod 8)` dividing `m² + n²` to an odd power |
 | `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind [KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md) |
+| `scripts/g1_full/` | The scans behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) |
 | `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |
 | `scripts/Audit.lean` | Lists every theorem and fails if any uses a non-standard axiom |
 
