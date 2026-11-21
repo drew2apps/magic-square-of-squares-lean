@@ -9,3 +9,5 @@ import MagicSquareOfSquares.Statement
 import MagicSquareOfSquares.Curve
 import MagicSquareOfSquares.Elliptic
 import MagicSquareOfSquares.Triangles
+import MagicSquareOfSquares.G1
+import MagicSquareOfSquares.G1Certificates

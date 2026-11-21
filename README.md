@@ -61,6 +61,10 @@ In the three reformulations the nine squares are required to be distinct. The in
 | The Parker square: rows, columns and one diagonal sum to 3051; the other diagonal sums to 4107 | `parker` |
 | Euler's 4×4 magic square of distinct squares (1770) | `exists_magic_square_squares_four` |
 
+### An audit of one family from another project
+
+[KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md) checks 120 exclusions reported by the Kepler71 project for its G1 family. All reported numbers were reproduced. In addition, 114 of the 120 exclusions follow from congruences alone, and those 114 are checked by the Lean kernel (`G1.no_point`).
+
 ## What is not proved
 
 - Whether a 3×3 magic square of distinct squares exists.
@@ -86,6 +90,9 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/Curve.lean` | Squares in progression and doubles on `y² = x³ - n²x` |
 | `MagicSquareOfSquares/Elliptic.lean` | Rational squares; the elliptic-curve reformulation |
 | `MagicSquareOfSquares/Triangles.lean` | The right-triangle reformulation |
+| `MagicSquareOfSquares/G1.lean` | A finite check modulo `M` that rules out squares on the diagonal of the G1 family |
+| `MagicSquareOfSquares/G1Certificates.lean` | The 114 certificates (generated) |
+| `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |
 | `scripts/Audit.lean` | Lists every theorem and fails if any uses a non-standard axiom |
 
 ## Reproduce
