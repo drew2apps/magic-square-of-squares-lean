@@ -80,6 +80,9 @@ The same file goes beyond the 127 pairs of that report:
 ## What is not proved
 
 - Whether a 3×3 magic square of distinct squares exists.
+- Any lower bound on the size of the entries. The theorem on the ratio `(b + d) : (h + f)` says nothing about size.
+- Anything about the infinitely many ratios above 200, or about the 60 excepted ratios, where the system has a degenerate solution and no congruence can help. This sieve cannot settle the problem by itself.
+- The Lean proofs use congruences and algebraic identities only. The rank computations behind the census in [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) are not formalized.
 - Any search bound, and any result that needs the arithmetic of curves (Bremner 1999 and 2001, Bruin–Thomas–Várilly-Alvarado, Auel–Singer).
 - The existence of magic squares of squares for every size from 4×4 up (Rome–Yamagishi). Only Euler's 4×4 example is checked.
 

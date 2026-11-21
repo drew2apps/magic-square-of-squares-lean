@@ -8,7 +8,7 @@ Status: the census for `m ≤ 200` and the table of obstructed classes are **Lea
 
 The audit was written from two Kepler71 notes dated 12 September 2026. Later notes in the same repository go further, and I had not read them:
 
-- All 127 pairs with `m ≤ 20` are closed there (the last one, (15,8), on 13 September), not 120.
+- Their later notes report all 127 pairs with `m ≤ 20` as excluded, not 120. For the last one, (15,8), a note of 13 September gives a computational proof and lists its audit as pending; their README still names (15,8) and (11,4) as open. I have not checked either claim.
 - The five-form local test below is theirs (`PARALLEL_RESULT_FULL_NINE_126_2026-09-12.md`). They state the forbidden classes modulo 17 and 41 for all `(m : n)`.
 - They also use other elliptic quotients of the same curves, and report 1,715 of the 12,231 pairs with `m ≤ 200` closed by a rank-0 criterion.
 
@@ -71,7 +71,7 @@ Rank 0 is proved by PARI `ellrank` on the curve or on a curve isogenous to it. N
 - Of the 85, 42 are closed without `E_B`, by `f0·g4·f8`, `g4·K` or `w·K`.
 - 19 of the closures use `L(E,1) ≠ 0` (Kolyvagin) where 2-descent gives only `[0, 2]`: 18 pairs with a trivial point, among them the couple (112,15)~(127,97) with `L(E,1) ≈ 1.026`, and (700,529). Only curves of conductor below `10^14` were tried.
 
-**Open for `m ≤ 200` (16 pairs, 10 up to the symmetry):** (15,8)~(23,7), (21,20)~(41,1), (72,65)~(137,7), (91,60)~(151,31), (99,20)~(119,79), (117,44)~(161,73), (156,133), (176,57), (187,84), (195,28). Kepler71 closed (15,8) by other means, which leaves nine.
+**Open for `m ≤ 200` (16 pairs, 10 up to the symmetry):** (15,8)~(23,7), (21,20)~(41,1), (72,65)~(137,7), (91,60)~(151,31), (99,20)~(119,79), (117,44)~(161,73), (156,133), (176,57), (187,84), (195,28). Kepler71 reports a computational proof for (15,8) (see the correction above); if it stands, nine remain.
 
 **Open for `m ≤ 1000` without a trivial point (34 pairs):** (320,289), (388,287), (423,332), (427,320), (540,239), (541,476), (560,33), (593,527), (609,31), (664,301), (675,101), (724,325), (724,665), (740,539), (747,107), (755,91), (773,192), (779,301), (784,391), (788,487), (820,799), (828,173), (836,745), (840,83), (864,151), (889,320), (899,724), (920,371), (923,757), (935,416), (964,541), (965,363), (965,581), (988,27).
 
