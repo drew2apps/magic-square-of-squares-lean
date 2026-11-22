@@ -1,0 +1,13 @@
+# Output of scripts/search/ratio_pairs.c, 2026-11-22: gcc -O2 -o ratio_pairs ratio_pairs.c -lm; ./ratio_pairs H ../g1_full/modp_classes.txt
+# for H = 25, 50, 100, 200, 400, 800, 1600, 3200, 6000 (gcc 13.3.0, x86-64 Linux; under a minute in all).
+# ratio_pairs_brute.py (a direct test of every pair, written separately) prints the same lines for H = 25, 50 and 100.
+# pairs = ordered pairs of ratios of height at most H; F1 ... F5 = how many pass the conditions of the header of ratio_pairs.c, cumulatively.
+H=25 ratios: first=199 second=399 pairs=79401 | F1=469 (of these with both numbers a square or twice a square: 65) F2=149 F3=65 F4=5 F5=0
+H=50 ratios: first=773 second=1547 pairs=1195831 | F1=2124 (of these with both numbers a square or twice a square: 232) F2=600 F3=232 F4=8 F5=0
+H=100 ratios: first=3043 second=6087 pairs=18522741 | F1=9662 (of these with both numbers a square or twice a square: 882) F2=2586 F3=882 F4=18 F5=0
+H=200 ratios: first=12231 second=24463 pairs=299206953 | F1=46067 (of these with both numbers a square or twice a square: 3535) F2=11487 F3=3535 F4=35 F5=0
+H=400 ratios: first=48677 second=97355 pairs=4738949335 | F1=210547 (of these with both numbers a square or twice a square: 14271) F2=49475 F3=14283 F4=71 F5=0
+H=800 ratios: first=194749 second=389499 pairs=75854540751 | F1=959214 (of these with both numbers a square or twice a square: 58078) F2=212054 F3=58174 F4=142 F5=0
+H=1600 ratios: first=778231 second=1556463 pairs=1211287756953 | F1=4315435 (of these with both numbers a square or twice a square: 229887) F2=898967 F3=230303 F4=287 F5=0
+H=3200 ratios: first=3113267 second=6226535 pairs=19384865939845 | F1=19324496 (of these with both numbers a square or twice a square: 924924) F2=3816036 F3=926904 F4=572 F5=0
+H=6000 ratios: first=10943163 second=21886327 pairs=239505643832301 | F1=74789282 (of these with both numbers a square or twice a square: 3248850) F2=14113938 F3=3256246 F4=1074 F5=0

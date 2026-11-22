@@ -28,7 +28,7 @@ for line in open(os.path.join(here, 'dm_evidence.txt')):
     h53 = G.height(precision=53); h200 = G.height(precision=200)
     d1 = max(d1, abs(float(h53 - h200)) / float(h200)); d2 = max(d2, abs(float(h200) - float(f['hG'])))
     count += 1
-assert count == 121 and d1 < 1e-9 and d2 < 1e-4
+assert count == 122 and d1 < 1e-9 and d2 < 1e-4
 print('lines: %d; largest relative difference between the 53-bit and the 200-bit height: %.1e;' % (count, d1))
 print('largest difference between the 200-bit height and the recorded hG: %.1e' % d2)
 print('height_precision OK')

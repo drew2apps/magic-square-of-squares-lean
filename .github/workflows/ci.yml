@@ -15,7 +15,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          python3 -m py_compile scripts/g1_full/*.py
+          python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py
           python3 scripts/g1_full/check_evidence.py
           python3 scripts/g1_full/octic_check.py > /tmp/octic.out
           diff /tmp/octic.out <(tail -n +2 scripts/g1_full/octic_check.txt)
@@ -27,6 +27,9 @@ jobs:
           /tmp/seven 1 100000 | tee /tmp/seven.out
           grep -q "7 squares=235 8 squares=0 9 squares=0; multiples of Bremner's square=235 other=0" /tmp/seven.out
           test "$(/tmp/seven_brute 430 | sort -u)" = "425 138600 41496 7"
+          gcc -O2 -Wall -Wextra -Werror -o /tmp/ratio_pairs scripts/search/ratio_pairs.c -lm
+          for H in 100 400; do grep -qxF "$(/tmp/ratio_pairs $H scripts/g1_full/modp_classes.txt)" scripts/search/ratio_pairs.txt; done
+          grep -qxF "$(python3 scripts/search/ratio_pairs_brute.py 50 scripts/g1_full/modp_classes.txt)" scripts/search/ratio_pairs.txt
           python3 scripts/g1_full/gen_lean.py
           python3 scripts/g1_full/gen_census1000.py
           python3 scripts/g1_full/gen_sizecheck.py

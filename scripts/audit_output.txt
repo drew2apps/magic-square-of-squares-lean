@@ -152,6 +152,8 @@ MagicSquareOfSquares.IsMSS.of_mul
 MagicSquareOfSquares.IsMSS.opposite
 MagicSquareOfSquares.IsMSS.parity
 MagicSquareOfSquares.IsMSS.prime_dvd_center_of_dvd_norm
+MagicSquareOfSquares.IsMSS.prime_dvd_edge_line
+MagicSquareOfSquares.IsMSS.primitive_factorization
 MagicSquareOfSquares.IsMSS.ratio_ne_of_le_1000
 MagicSquareOfSquares.IsMSS.ratio_ne_of_le_200
 MagicSquareOfSquares.IsMSS.ratio_not_in_class
@@ -160,6 +162,12 @@ MagicSquareOfSquares.IsMSS.sq_emod_24
 MagicSquareOfSquares.IsMSS.sum_emod_72
 MagicSquareOfSquares.IsMSS.sum_eq
 MagicSquareOfSquares.IsMSS.transpose
+MagicSquareOfSquares.IsMSS.twoLines
+MagicSquareOfSquares.IsMSS.twoLines_column_antidiagonal
+MagicSquareOfSquares.IsMSS.twoLines_column_diagonal
+MagicSquareOfSquares.IsMSS.twoLines_diagonals
+MagicSquareOfSquares.IsMSS.twoLines_row_antidiagonal
+MagicSquareOfSquares.IsMSS.twoLines_row_diagonal
 MagicSquareOfSquares.IsMSS.two_mul_norms_isSquare
 MagicSquareOfSquares.IsMagic.anti
 MagicSquareOfSquares.IsMagic.col₁
@@ -196,6 +204,14 @@ MagicSquareOfSquares.IsMagicSquareOfSquares.pos
 MagicSquareOfSquares.IsMagicSquareOfSquares.row
 MagicSquareOfSquares.IsMagicSquareOfSquares.sum_emod_72
 MagicSquareOfSquares.IsMagicSquareOfSquares.sum_eq
+MagicSquareOfSquares.TwoLinesSq.center_factorization
+MagicSquareOfSquares.TwoLinesSq.edge_params
+MagicSquareOfSquares.TwoLinesSq.edge_params_two
+MagicSquareOfSquares.TwoLinesSq.edge_sums_identity
+MagicSquareOfSquares.TwoLinesSq.norms_padicVal_parity
+MagicSquareOfSquares.TwoLinesSq.norms_parity
+MagicSquareOfSquares.TwoLinesSq.prime_dvd_line
+MagicSquareOfSquares.TwoLinesSq.two_mul_norms_isSquare
 MagicSquareOfSquares.bremner_isMagic
 MagicSquareOfSquares.bremner_not_isSquare
 MagicSquareOfSquares.dvd_of_dvd_sq_add_sq
@@ -222,6 +238,7 @@ MagicSquareOfSquares.openStatement_iff_three_progressions
 MagicSquareOfSquares.openStatement_iff_three_triangles
 MagicSquareOfSquares.parity_of_sq_add_sq
 MagicSquareOfSquares.parker
+MagicSquareOfSquares.prime_dvd_of_sq_dvd_two_mul_sq
 MagicSquareOfSquares.rest_of_two_lines
 MagicSquareOfSquares.sallows
 MagicSquareOfSquares.six_cases
@@ -230,4 +247,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 592 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 612 theorems (including auxiliary ones), standard axioms only

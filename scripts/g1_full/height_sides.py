@@ -113,7 +113,7 @@ for line in open(os.path.join(here, 'dm_evidence.txt')):
     least_slack = slack if least_slack is None else min(least_slack, slack)
     least_j = jsize if least_j is None else min(least_j, jsize)
     if '-v' in sys.argv: print(w[0], curve, 'B in [%.6f, %.6f]' % (B[0], B[1]), 'U <= %.4f' % U[1], 'X = %.3f' % X, 'amax = %d' % amax)
-assert count == 121
+assert count == 122
 print('1. lines: %d; recorded B within %.4f of the enclosure of eclib\'s formula in every line' % (count, worst_rec))
 print('2. B - U >= %.3f in every line (U bounds hhat - h); smallest max(|num j|, den j) has %d digits' % (least_gap, len(str(least_j))))
 print('3. listed amax against the bound X computed from the recorded heights: X would have to grow by at least %.1f%% in every line' % (100 * least_slack))

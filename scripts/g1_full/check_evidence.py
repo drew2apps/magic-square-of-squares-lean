@@ -3,8 +3,8 @@
 
 1. Unit tests of classify_t, the exact test applied to every candidate t in dm.py, dm2.py, dm3.py.
    The function is taken from the source of dm.py without importing Sage.
-2. Consistency of dm_evidence.txt, dm_closures.txt and open_pairs_1000.txt: 157 pairs, 121 closed
-   (91 E04, 24 D1, 6 E0L), 36 open, no overlap; every recorded t is re-tested and is degenerate; the listed bound
+2. Consistency of dm_evidence.txt, dm_closures.txt and open_pairs_1000.txt: 157 pairs, 122 closed
+   (91 E04, 25 D1, 6 E0L), 35 open, no overlap; every recorded t is re-tested and is degenerate; the listed bound
    amax is at least the bound that follows from the recorded heights.
 3. Every recorded E04 and D1 generator is a rational point of its curve with y != 0.
    Every recorded E0L model is isomorphic over Q to the Weierstrass curve of G1.e0l_weierstrass for the
@@ -51,7 +51,7 @@ for l in lines:
     if l and not l.startswith('#'): all157 |= set(pairs(l))
 assert len(all157) == 157
 ev = [l.split() for l in open(os.path.join(here, 'dm_evidence.txt')) if l.strip() and not l.startswith('#')]
-assert len(ev) == 121
+assert len(ev) == 122
 closed = set(); meth = {'E04': 0, 'D1': 0, 'E0L': 0}
 def cinv(a1, a2, a3, a4, a6):
     b2 = a1 * a1 + 4 * a2; b4 = 2 * a4 + a1 * a3; b6 = a3 * a3 + 4 * a6
@@ -92,11 +92,11 @@ for r in ev:
         assert issq(u2) and u2 * u2 == c4w / c4m, r[:3]
         disc = (mdl[0] * x + mdl[2]) ** 2 + 4 * (x ** 3 + mdl[1] * x * x + mdl[3] * x + mdl[4])
         assert issq(disc) and disc != 0, r[:3]         # G is a rational point of the model, not of order 2
-assert meth == {'E04': 91, 'D1': 24, 'E0L': 6}, meth
-assert all(tuple(r[:3]) in magma for r in ev) and len(magma) == 121   # Magma's bound 'rank <= 1' is recorded for every line, and for nothing else
+assert meth == {'E04': 91, 'D1': 25, 'E0L': 6}, meth
+assert all(tuple(r[:3]) in magma for r in ev) and len(magma) == 122   # Magma's bound 'rank <= 1' is recorded for every line, and for nothing else
 import json
 log = [json.loads(l) for l in open(os.path.join(here, 'dm_log.jsonl'))]   # the scripts' JSON output: one record per line of dm_evidence.txt, same order
-assert len(log) == 121
+assert len(log) == 122
 for r, j in zip(ev, log):
     f = dict(x.split('=', 1) for x in r[3:] if '=' in x); g = j['G'][0] if isinstance(j['G'], list) else j['G']
     assert [j['of'], j['run'], j['method']] == r[:3] and str(g) == f['G'] and int(j['amax']) == int(f['amax']) and j['status'] == 'closed' and '%d,%d' % tuple(j['pair']) == r[1], r[:3]
@@ -106,7 +106,7 @@ cl = open(os.path.join(here, 'dm_closures.txt')).read().split('\n')
 still = set()
 for i, l in enumerate(cl):
     if l.startswith('# Still open'): still |= set(pairs(cl[i + 1]))
-assert len(still) == 36 and not (still & closed) and (still | closed) == all157
+assert len(still) == 35 and not (still & closed) and (still | closed) == all157
 listed = set(pairs(l.split()[0])[0] for l in cl if l and not l.startswith('#') and len(l.split()) == 4)
 assert listed == closed
-print('check_evidence OK: classify_t tests pass; 157 = 121 closed (91 E04, 24 D1, 6 E0L) + 36 open')
+print('check_evidence OK: classify_t tests pass; 157 = 122 closed (91 E04, 25 D1, 6 E0L) + 35 open')

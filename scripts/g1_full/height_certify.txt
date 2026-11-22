@@ -1,0 +1,4 @@
+1. lines: 122; h - hhat <= B + 0.025 and hhat - h <= B in every line (largest BUP - B: 0.0245)
+2. hhat(G) enclosed for every line; widest enclosure, relative to its lower end: 0.457%; the recorded hG lies in every one
+3. with these enclosures the bound on |a| is below amax + 1 in every line; least room: 9.0%
+height_certify OK

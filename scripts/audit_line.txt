@@ -1,1 +1,1 @@
-AUDIT OK: 592 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 612 theorems (including auxiliary ones), standard axioms only
