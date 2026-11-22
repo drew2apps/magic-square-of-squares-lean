@@ -193,6 +193,8 @@ Lean checks the algebra of curve membership only (`G1Relations.lean`): the absci
 | (72,65)~(137,7), (425,168)~(593,257), (920,129) | `E0L` has rank 3, the others at least 2 | the same four-point argument |
 | the other 24, all with a trivial point | `E0L` has rank 4 to 6 (for two pairs only bounds `[3, 5]`) | curves of genus 2 (Chabauty), or another fibration |
 
+**A quotient of genus 2 (experiment, 22 November 2026).** `H: y² = (n²t² + m²)(t² + 1)(S(t² + 1) − 4mnt)`, that is `F0·G4·GL` up to squares, is a quotient of the curve; so are its images under `t ↦ −t` and `t ↦ 1/t`, which are isomorphic to it, and the pair and its partner give the same `H`. Its Jacobian does not split over ℚ for the three pairs I tried (the characteristic polynomial of Frobenius is irreducible at several primes). If the rank of the Jacobian were at most 1, Chabauty's method would determine `H(ℚ)` and could close a pair. Through the public Magma calculator, `RankBound(Jacobian(H))` gave 6 for (91,60), 5 for (209,120) and 6 for (440,279), too large for that, and ran into the calculator's limits (60 seconds, about 300 MB) for the other 20 couples of open pairs, among them the seven without a trivial point, also with class groups computed under GRH. So for most pairs this is undecided; it needs a Magma installation without those limits.
+
 Kepler71 reports a computational proof for (15,8). The closure here uses a different method; both computations await outside checking.
 
 ## Limits
