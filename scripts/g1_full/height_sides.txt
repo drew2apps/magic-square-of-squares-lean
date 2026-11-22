@@ -1,2 +1,4 @@
-lines: 121; largest |formula - recorded B|: 0.0005; smallest h(j): 31.81; largest U/B: 0.9168; lines failing: 0
+1. lines: 121; recorded B within 0.0005 of the enclosure of eclib's formula in every line
+2. B - U >= 2.433 in every line (U bounds hhat - h); smallest max(|num j|, den j) has 14 digits
+3. listed amax against the proved bound X: X would have to grow by at least 9.1% in every line
 height_sides OK

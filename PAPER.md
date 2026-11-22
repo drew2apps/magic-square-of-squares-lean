@@ -1,4 +1,4 @@
-# The 3×3 magic square of squares: a machine-checked reduction and a computed census
+# The 3×3 magic square of squares: a statement on the centre, a machine-checked reduction, and a computed census
 
 Drew Carlson. 22 November 2026, text after release 0.3.3.
 Repository: https://github.com/drew2apps/magic-square-of-squares-lean. Archive: https://doi.org/10.5281/zenodo.24435351.
@@ -15,75 +15,108 @@ d e f
 g h i
 ```
 
-so that the rows, columns and two diagonals of `a², …, i²` have the same sum `3e²`. Lee Morgenstern showed by computation (2006) that every entry of a solution exceeds 10¹⁴, and searched much further in other parametrisations; Pierrat, Thiriet and Zimmermann (2015) cite Buell for a centre above 25·10²⁴. The only known square with seven square entries is Bremner's (1999). A 2025 preprint (O. Hill, arXiv:2510.08286) claims a proof of nonexistence; I have not verified it, and nothing here depends on it.
+so that the rows, columns and two diagonals of `a², …, i²` have the same sum `3e²`. Lee Morgenstern showed by computation (2006) that every entry of a solution exceeds 10¹⁴. The only known square with seven square entries is Bremner's (1999). A 2025 preprint (O. Hill, arXiv:2510.08286) claims a proof of nonexistence; its last step is not justified as written (see `G1_FULL_SYSTEM.md`), and nothing here depends on it.
 
-This note does not solve the problem. It contributes three things: a Lean library of the known facts, a reduction of the problem to a one-parameter family of curves with a kernel-checked list of excluded cases, and a computed census of the remaining cases.
+This note does not solve the problem. It contains:
+
+- Theorems 1 to 3, on the centre of a solution. They are short, their proofs are below, and Lean checks them.
+- Theorems 4 to 6, a reduction of the problem to a one-parameter family of curves with a kernel-checked list of excluded cases.
+- Computations A to E, a census of the remaining cases, not formalized.
 
 ## 2. Proved in Lean
 
-Lean 4 with Mathlib, 250 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures.
+Lean 4 with Mathlib, 250 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures. The library also contains the nine necessary conditions listed on Wikipedia (most of them are in Rabern 2003) and the classical reformulations: three arithmetic progressions of squares with a common difference, rational right triangles of equal area, and points on the curves `y² = x³ − n²x`.
 
-**Known facts.** The nine necessary conditions listed on Wikipedia (most of them are in Rabern 2003), and the classical reformulations: three arithmetic progressions of squares with a common difference, rational right triangles of equal area, and points on the curves `y² = x³ − n²x`.
+### 2.1 The centre
 
-**The ratio of the edges.** Let `m : n` be the ratio `(b + d) : (h + f)` in lowest terms. Then there are integers `u`, `v` with
+Throughout, `a, …, i` are integers whose squares form a magic square; nothing is assumed about distinctness or common factors unless stated. For a square with nine distinct entries one can take the roots positive and, after transposing the square if necessary, `f > h`; then all hypotheses below hold.
 
-`b + d = mu`, `h + f = nu`, `b − d = nv`, `f − h = mv`, `8e² = (m² + n²)(u² + v²)`,
+**Theorem 1** (`IsMSS.edge_params`, `IsMSS.center_factorization`). Let `h + f ≠ 0`, and let `m ≥ 1`, `n ≥ 0` be coprime with `(b + d)·n = (h + f)·m`. Then there are integers `u`, `v` with
 
-and the square is determined by `m`, `n` and a rational parameter `t`, for which five quadratic forms must be squares: `F0 = m² + n²t²`, `F8 = n² + m²t²`, `G4 = 2(m² + n²)(t² + 1)`, `GL = G4 − 8mnt`, `GU = G4 + 8mnt`. The pair `(m + n, m − n)` (halved if both are even) gives the same system; this is the *partner*.
+`b + d = mu`, `h + f = nu`, `b − d = nv`, `f − h = mv`, `8e² = (m² + n²)(u² + v²)`.
 
-**Excluded ratios.** 484 residue classes of `m : n` at 34 primes (the largest is 607) are impossible; each class is certified by a finite computation that the Lean kernel checks.
+If also `f ≠ h`, and `m′ ≥ 0`, `n′ ≥ 0` are coprime with `(b + d)·n′ = (f − h)·m′`, then there is an integer `k ≠ 0` with
 
-**The norm.** `m² + n²` is a square modulo 7, 17, 31 and 47; every prime `≡ 5 (mod 8)` divides it to an even power; and `m² + n²` divides `8e²`. Hence: either `m² + n²` is a square or twice a square, or a prime `≡ 1 (mod 8)` divides the centre root `e` (and divides `m² + n²` to an odd power). With the second ratio `m′ : n′ = (b + d) : (f − h)` one has `8e² = (m² + n²)·k²·(m′² + n′²)`, and the two numbers cannot both be squares or both be twice a square. So either a prime `≡ 1 (mod 8)` divides the centre root, or one of `m² + n²`, `m′² + n′²` is a square and the other is twice a square; I do not know whether the second case can occur. Published statements on the centre that I have seen go from a prime to its residue class (Weisenberg's Theorem 2.10, Woll's Corollary 4.3); this one produces a prime. I have not found it in Rabern (2003), Bremner (1999), Woll (2018), Weisenberg (2023) or the multimagie pages, but I have not made a full literature search and claim no novelty.
+`8e² = (m² + n²)·k²·(m′² + n′²)`;
 
-**Size.** One of the four edge roots exceeds 500. This is far below Morgenstern's bound; it is included because it is machine-checked.
+in fact `u = k·m′` and `v = k·n′` (a step of the Lean proof, not part of the Lean statement).
 
-**Census.** For coprime `1 ≤ n < m ≤ 1000` (304,191 ratios), no solution exists outside an explicit list of 425 ratios. The kernel evaluates the census.
+*Proof.* Opposite entries satisfy `b² + h² = d² + f² = 2e²`. Put `β = b + hi`, `δ = d + fi`, `μ = m + ni` in `ℤ[i]`. Then `β + δ = uμ` with `u` rational, and `u` is an integer because `m`, `n` are coprime. Since `β` and `δ` have the same norm, `(β − δ)·conj(β + δ)` is purely imaginary, so `β − δ = −iv·μ` with `v` rational, and again an integer. Hence `2β = μ(u − iv)`, `2δ = μ(u + iv)`; real and imaginary parts give the four linear relations, and norms give `8e² = (m² + n²)(u² + v²)`. The second ratio is `(b + d) : (f − h) = u : v`. ∎
 
-**Algebra for Section 3.** Identities used by the computations below are checked in Lean: membership of the points on the three elliptic curves, the map from the quartic `v² = F0·GL` to a Weierstrass model, the partner identities, and the identities behind the singular fibres.
+**Theorem 2** (`IsMSS.norm_dvd_center`, `IsMSS.norm_isSquare_or_prime_dvd_center`). Let `h + f ≠ 0`, `b ≠ d`, and `m ≥ 0`, `n ≥ 1` coprime with `(b + d)·n = (h + f)·m`. Then `m² + n²` divides `8e²`, every odd prime dividing `m² + n²` divides `e`, and either `m² + n²` is a square or twice a square, or some prime `p ≡ 1 (mod 8)` divides `e` and divides `m² + n²` to an odd power.
 
-**What Lean does not prove about these identities.** They are statements about points and polynomials. `e0l_weierstrass` sends a point of the quartic with `t ≠ m/n` to a point of a Weierstrass curve; it does not treat the base point, does not prove that the two curves are isomorphic, and does not cover the change to the minimal model on which the computations run (a script checks that the recorded models are isomorphic). The resultant and octic statements are polynomial identities; what they imply modulo a prime is argued in the text. No Lean theorem transfers a closure from a ratio to its partner; only the identities between the forms and the coprimality of the partner pair are checked. Ranks, generators and heights are not in Lean at all.
+*Proof.* The first two statements follow from Theorem 1 (they are trivial if `m = 0`). Let `p` be an odd prime dividing `S = m² + n²` to an odd power. It is `≡ 1 (mod 4)`, since `m`, `n` are coprime. From `S(u² + v²) = 8e²`, `p` divides `u² + v²`. The corner `a` satisfies `2a² = f² + h²`, that is, `4a² = n²u² + m²v²`. Modulo `p`, `n² ≡ −m²` and `v² ≡ −u²`, so `4a² ≡ −2m²u²`. If `p ∤ u`, then `−2` is a square modulo `p`, hence so is `2`, and `p ≡ 1 (mod 8)`. If `p ∣ u`, then `p ∣ v`, and `p` divides all nine roots; divide the square by `p` and repeat, which stops because `u ≠ 0`. So every prime `≡ 5 (mod 8)` divides `S` to an even power (a statement of the Kepler71 project), and if `S` is not a square or twice a square, some prime divides it to an odd power. This is a sketch; the Lean proof is organised differently. ∎
+
+**Theorem 3** (`IsMSS.centre_two_ratios`). Under the hypotheses of Theorem 2, let also `f ≠ h`, and `m′ ≥ 0`, `n′ ≥ 1` coprime with `(b + d)·n′ = (f − h)·m′`. Then either some prime `p ≡ 1 (mod 8)` divides the centre root `e`, or one of the numbers `m² + n²`, `m′² + n′²` is a square and the other is twice a square.
+
+*Proof.* The square with `h` replaced by `−h` is again a magic square of squares, and its first ratio is `m′ : n′`. So Theorem 2 applies to both numbers: if no prime `≡ 1 (mod 8)` divides `e`, each is a square or twice a square. By Theorem 1, `8e² = (m² + n²)·k²·(m′² + n′²)` with `k ≠ 0` and both numbers positive. If both were squares, `8e²` would be a nonzero square; if both were twice a square, `32e²` would be. Neither is possible, since `x² = 2y²` has only the zero solution. ∎
+
+**Remarks.**
+
+1. *The exceptional case.* If no prime `≡ 1 (mod 8)` divides `e`, write the two numbers as `r²` and `2r′²`. Then `2e = ±r·k·r′`, `r ≥ 5`, and every prime divisor of `r` and of `r′` is `≡ 5 (mod 8)` and divides `e`. The proof does not exclude this case, and I do not know whether it can occur.
+2. *Relation to known results.* Every prime divisor of the centre of a primitive solution is `≡ 1 (mod 4)` (Rabern, Theorem 1.2; Woll, Theorem 3.1). A prime dividing the centre and a mid-edge entry is `≡ 1 (mod 8)` (Woll, Corollary 4.3). A prime dividing only the centre has three consecutive nonzero quadratic residues (Weisenberg, Theorem 2.10; Woll). These statements start from a prime. Theorem 3 produces one: the centre root of a primitive solution has a prime divisor `≡ 1 (mod 8)`, or the solution is of the exceptional type and all prime divisors of its centre root are `≡ 5 (mod 8)`. Rabern closes his paper with the remark that one might conjecture that all prime divisors of all entries of a solution are `≡ 1 (mod 8)`, and that it would be interesting to prove the opposite, that some entry has a prime divisor `≡ 5` or `7 (mod 8)`; Theorem 3 is a statement of that kind for the centre.
+3. *Novelty.* I did not find Theorem 1, the divisibility `m² + n² ∣ 8e²` or Theorem 3 in Rabern (2003), Woll (2018), Weisenberg (2023), Bremner (1999, 2001), Auel and Singer (2026), Kominers, or the multimagie pages. Pierrat, Thiriet and Zimmermann (2015), Robertson (1996) and Boyer (2005) have not been read. I claim no novelty; the proofs are elementary and the statements may be known in another form.
+
+### 2.2 The reduction
+
+By Theorem 1 a solution is determined by the ratio `m : n` and the rational number `t = u/v`, and five quadratic forms in `t` must be squares: `F0 = m² + n²t²`, `F8 = n² + m²t²`, `G4 = 2(m² + n²)(t² + 1)`, `GL = G4 − 8mnt`, `GU = G4 + 8mnt` (`IsMSS.fullSquares`). For fixed `m : n` this is a curve of genus 49. In the coordinates `a, …, i` it is a component of the hyperplane section `n(b + d) = m(h + f)` of the surface studied by Auel and Singer (my remark, checked by hand; see `G1_FULL_SYSTEM.md`). The pair `(m + n, m − n)`, halved if both are even, gives the same system; it is the *partner*. The forms and the five-form local test come from the Kepler71 project.
+
+**Theorem 4** (`G1.fullTable_valid`, `G1.no_solution_of_ratio`). For each of 484 residue classes of `m : n`, at 34 primes of which the largest is 607, the five forms are not simultaneously squares for any rational `t`. Each class is certified by a finite computation that the Lean kernel evaluates.
+
+**Theorem 5** (`IsMSS.ratio_ne_of_le_1000`). In a magic square of squares with `b ≠ d` and `h + f ≠ 0`, the ratio `(b + d) : (h + f)` is not `m : n` for any coprime `1 ≤ n < m ≤ 1000` outside an explicit list of 425 pairs. There are 304,191 such pairs in all. The size of the entries plays no role.
+
+**Theorem 6** (`IsMSS.edge_root_gt_500`). If `b² ≠ d²`, `h² ≠ f²` and `b² ≠ f²`, one of the edge roots `b, d, f, h` exceeds 500 in absolute value. This is far below Morgenstern's bound; it is included because it is machine-checked.
+
+Also in Lean: `m² + n²` is a square modulo 7, 17, 31 and 47 (`IsMSS.edge_norm`); no ratio is excluded by a congruence modulo a prime `p ≡ ±3 (mod 8)`; and the algebra used in Section 3 (membership of the points on the three elliptic curves, the map from the quartic `v² = F0·GL` to a Weierstrass model, the partner identities, the identities behind the singular fibres, and the case analysis of the side search).
+
+**What Lean does not prove about that algebra.** These are statements about points and polynomials. `e0l_weierstrass` sends a point of the quartic with `t ≠ m/n` to a point of a Weierstrass curve; it does not treat the base point, does not prove that the two curves are isomorphic, and does not cover the change to the minimal model on which the computations run (a script checks that the recorded models are isomorphic). The resultant and octic statements are polynomial identities; what they imply modulo a prime is argued in the text. No Lean theorem transfers a closure from a ratio to its partner. Ranks, generators and heights are not in Lean at all.
 
 ## 3. Computed, not formalized
 
 Details, limits and commands are in `G1_FULL_SYSTEM.md`. Programs: PARI 2.17, Sage (passagemath) with eclib, Magma 2.29 through its public calculator, and C and Python programs in the repository.
 
-**Which primes can obstruct.** For a ratio of good reduction the five conditions define a smooth curve of genus 49 over `F_p`. The Weil bound, a separate character-sum bound for the fibres where two branch points collide (`p` dividing `m⁸ + 14m⁴n⁴ + n⁸`), and a direct computation below those bounds show that exactly the 34 primes above have an obstructed class. All 34 are `±1 (mod 8)`; there is a short proof that no other residue is possible, and that part is in Lean.
+**A. Which primes can obstruct.** For a ratio of good reduction the five conditions define a smooth curve of genus 49 over `F_p`. The Weil bound, a separate character-sum bound for the fibres where two branch points collide (`p` dividing `m⁸ + 14m⁴n⁴ + n⁸`), and a direct computation below those bounds show that exactly the 34 primes of Theorem 4 have an obstructed class. All 34 are `±1 (mod 8)`; that no other residue is possible is in Lean.
 
-**Local solubility.** The 425 ratios are exactly those not excluded by the classes and by the condition on primes `≡ 5 (mod 8)`. A separately written local test checks all primes below 700 and the primes dividing the bad-reduction factors; it agrees with the classification on all 304,191 ratios, with no undecided case. The remaining primes are covered by the Weil-bound and singular-fibre arguments above. Together these give that the 425 ratios are soluble in every `ℚ_p`, so no congruence closes any of them. The excluded ratios have density 1 (argued, with a proof sketch).
+**B. Local solubility.** The 425 ratios of Theorem 5 are exactly those not excluded by the classes and by the condition on primes `≡ 5 (mod 8)`. A separately written local test agrees with the classification on all 304,191 ratios. With A, the 425 ratios are soluble in every `ℚ_p`, so no congruence closes any of them. The excluded ratios have density 1 (argued, with a proof sketch).
 
-**Rank 0.** 268 of the 425 ratios are closed by a quotient elliptic curve of rank 0.
+**C. Rank 0.** 268 of the 425 ratios are closed by a quotient elliptic curve of rank 0.
 
-**Rank 1 with multiplicity.** Three quotient elliptic curves occur more than once in the Jacobian: `E04: y² = x(x + 2Sm²)(x + 2Sn²)` with `S = m² + n²` (twice), a second curve `D1` (twice), and `E0L: y² = F0·GL` (four times). When such a curve has rank exactly 1, a solution gives two points whose heights are tied to each other, and the Demjanenko–Manin argument leaves finitely many candidates, which are tested exactly. This closes 121 more ratios (91, 24 and 6 on the three curves). For every one of them the bound "rank at most 1" is given by Magma (87 distinct curves); for all but two it is also given by PARI, and for most of the first curve by eclib. For two ratios, (631,71) and its partner, PARI gives only `[1, 3]` and the bound rests on Magma alone.
+**D. Rank 1 with multiplicity.** Three quotient elliptic curves occur more than once in the Jacobian: `E04: y² = x(x + 2Sm²)(x + 2Sn²)` with `S = m² + n²` (twice), a second curve `D1` (twice), and `E0L: y² = F0·GL` (four times). When such a curve has rank exactly 1, a solution gives two points whose heights are tied to each other, and the Demjanenko–Manin argument leaves finitely many candidates, which are tested exactly. This closes 121 more ratios (91, 24 and 6 on the three curves). For every one of them the bound "rank at most 1" is given by Magma (87 distinct curves); for all but two it is also given by PARI, and for most of the first curve by eclib. For two ratios, (631,71) and its partner, PARI gives only `[1, 3]` and the bound rests on Magma alone.
 
-**Open.** 36 ratios, 5 of them with `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). Seven have no trivial point. For these the curves above have rank at least 2. A quotient of genus 2 was tried through the Magma calculator; for 20 of its 23 instances the calculator's limits were reached.
+**E. Open.** 36 ratios, 5 of them with `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). Seven have no trivial point. For these the curves above have rank at least 2. An experiment with a quotient of genus 2 through the Magma calculator closed nothing: for 20 of its 23 instances the calculator's limits were reached.
 
-**A side search.** Among magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square and its multiples. This is not new: B. Chaffin's page reports a search of the same family to centre root 10¹⁴ (about 2008, published 2019) with nothing else found (I have the figures from an AI summary of the page), and Pierrat, Thiriet and Zimmermann (2015) report searches of particular configurations. The search here re-verifies a small part of Chaffin's range with an independent program; that its six cases are all the cases is proved in Lean, as is Bremner's square; the program is not verified.
+**A side search.** Among magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square and its multiples. This is not new: B. Chaffin's page reports a search of the same family to centre root 10¹⁴ (about 2008, published 2019) with nothing else found (I have the figures from an AI summary of the page). The search here re-verifies a small part of that range with an independent program. That its six cases are all the cases is proved in Lean; the program is not verified, and its output is evidence of a computation, not a theorem.
 
 ## 4. What has not been checked
 
 In order of importance:
 
-1. **Heights and generators.** The Demjanenko–Manin closures need the generator of each curve (saturation with a proved height lower bound) and explicit comparisons between canonical and naive heights. The derivations were written with an AI model. The heights are floating-point with a safety margin, not interval arithmetic. An automatic checker verifies the recorded points, models, candidates and bounds for consistency, but not the heights or that the points generate. A second script recomputes Silverman's constant for each of the 121 models and checks that it bounds the height difference on both sides (the software documents one side only). `AUDIT_REQUEST.md` lists what a reader is asked to check, with three closures worked out.
-2. **The character-sum bound** for the singular fibres and the Weil-bound step.
-3. **The density argument**, which is a sketch.
-4. **Rank bounds** are computed, by two or three programs, not proved here.
-5. **The literature.** Robertson (1996), Bremner's second paper (2001) and Boyer's article (2005) have not been read; the preprint of Pierrat, Thiriet and Zimmermann (2015) only through an AI summary.
+1. **Heights and generators.** The closures in D need the generator of each curve (saturation with a proved height lower bound) and explicit comparisons between canonical and naive heights. The derivations were written with an AI model. Scripts check what can be checked without a specialist: the recorded points, models, candidates and bounds are consistent; Silverman's constant, which the software documents for one side of the height difference, bounds the other side as well for all 121 models (in exact rational arithmetic, from bounds of Cremona, Prickett and Siksek and of Silverman that I have only through an automated summary); the listed range of multiples exceeds the proved bound by at least 9% in every case; and the heights of the generators are stable from 53 to 200 bits. The heights themselves are floating-point values without a proved error bound. `AUDIT_REQUEST.md` lists what a reader is asked to check, with three closures worked out.
+2. **The character-sum bound** for the singular fibres and the Weil-bound step in A.
+3. **The density argument** in B, which is a sketch.
+4. **Rank bounds** are computed, by two or three programs, not proved here. That a program returns a bound is not a proof that its algorithm gives that bound unconditionally; the audit request asks about this.
+5. **The literature.** Robertson (1996), Boyer's article (2005) and the preprint of Pierrat, Thiriet and Zimmermann (2015) have not been read.
 
 Three errors were found and corrected during the work, all recorded in `CHANGES.md`: the singular fibres were overlooked in the first statement of the 34 primes; the first version of the side search missed two of six cases; and the curve of genus 2 in the experiment lacked a factor `m² + n²` (no recorded number was affected). Others may remain.
 
 ## 5. Reproducing
 
-`lake build` and `lake env lean scripts/Audit.lean` check the Lean part (about 15 minutes from an empty cache). CI also regenerates the certificate files, runs the evidence checker, the check of the singular fibres and the side search on a small range. The elliptic-curve computations are rerun with the scripts in `scripts/g1_full/`; they need PARI and Sage, and Magma for the rank bounds; their outputs are committed, with verbatim Magma responses for 41 of the 87 curves.
+`lake build` and `lake env lean scripts/Audit.lean` check the Lean part (about 15 minutes from an empty cache). CI also regenerates the certificate files and runs the evidence checker, the check of the singular fibres, the height check and the side search on a small range; these are regression tests, not a rerun of the computations. The elliptic-curve computations are rerun with the scripts in `scripts/g1_full/`; they need PARI and Sage, and Magma for the rank bounds; their outputs are committed, with verbatim Magma responses for 41 of the 87 curves.
 
 ## References
 
-- A. Bremner, On squares of squares, Acta Arith. 88 (1999), 289–297.
-- B. Chaffin, Magic square of squares, https://benchaffin.com/magic-squares/magic-squares.html (2019).
+- A. Auel and B. Singer, The algebraic geometry of 3-by-3 magic squares of squares, arXiv:2609.09351.
 - C. Boyer, 3×3 magic square of squares search, multimagie.com (read 22 November 2026); reports Morgenstern's results.
-- P. Pierrat, F. Thiriet and P. Zimmermann, Magic squares of squares, preprint, 2015.
+- A. Bremner, On squares of squares, Acta Arith. 88 (1999), 289–297; On squares of squares II, Acta Arith. 99 (2001), no. 3.
+- N. Bruin, J. Thomas and A. Várilly-Alvarado, Explicit computation of symmetric differentials and its application to quasihyperbolicity, Algebra Number Theory 16 (2022), 1377–1405.
+- B. Chaffin, Magic square of squares, https://benchaffin.com/magic-squares/magic-squares.html (2019).
+- J. E. Cremona, M. Prickett and S. Siksek, Height difference bounds for elliptic curves over number fields, J. Number Theory 116 (2006), 42–68.
+- O. Hill, On arithmetic progressions and a proof of the nonexistence of magic squares of squares, arXiv:2510.08286.
+- Kepler71, notes on the full nine-cell system, https://github.com/Kepler71/magic-square-of-squares (cited in `G1_FULL_SYSTEM.md`).
+- S. D. Kominers, Center-zero magic squares of squares over number fields, preprint.
+- P. Pierrat, F. Thiriet and P. Zimmermann, Magic squares of squares, preprint, 2015 (not read).
 - L. Rabern, Properties of magic squares of squares, Rose-Hulman Undergrad. Math. J. 4 (2003).
 - J. P. Robertson, Magic squares of squares, Math. Mag. 69 (1996), 289–293 (not read).
+- J. H. Silverman, The difference between the Weil height and the canonical height on elliptic curves, Math. Comp. 55 (1990), 723–743 (not seen).
 - D. Weisenberg, Some thoughts on the 3×3 magic square of squares problem, Rose-Hulman Undergrad. Math. J. 24 (2023).
 - C. Woll, A partial residue categorization of the magic square of squares, arXiv:1809.03067.
-- A. Auel and B. Singer, The algebraic geometry of 3-by-3 magic squares of squares, arXiv:2609.09351.
-- Kepler71, notes on the full nine-cell system (cited in `G1_FULL_SYSTEM.md`).
