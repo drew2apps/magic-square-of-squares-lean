@@ -23,3 +23,4 @@ import MagicSquareOfSquares.G1Norm
 import MagicSquareOfSquares.G1Statement
 import MagicSquareOfSquares.G1Centre
 import MagicSquareOfSquares.G1Relations
+import MagicSquareOfSquares.SevenSquares

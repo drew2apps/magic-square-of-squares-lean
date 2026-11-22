@@ -1,6 +1,6 @@
 # The 3×3 magic square of squares: a machine-checked reduction and a computed census
 
-Drew Carlson. Version 0.3.3, 22 November 2026.
+Drew Carlson. 22 November 2026, text after release 0.3.3.
 Repository: https://github.com/drew2apps/magic-square-of-squares-lean. Archive: https://doi.org/10.5281/zenodo.24435351.
 
 The Lean code and this text were written with Claude, an AI model made by Anthropic. I am not a number theorist. Nobody else has checked the mathematics outside Lean. This note says what is proved, what is only computed, and what is unchecked, so that someone who knows the subject can check it.
@@ -21,7 +21,7 @@ This note does not solve the problem. It contributes three things: a Lean librar
 
 ## 2. Proved in Lean
 
-Lean 4 with Mathlib, 241 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures.
+Lean 4 with Mathlib, 246 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures.
 
 **Known facts.** The nine necessary conditions listed on Wikipedia (most of them are in Rabern 2003), and the classical reformulations: three arithmetic progressions of squares with a common difference, rational right triangles of equal area, and points on the curves `y² = x³ − n²x`.
 
@@ -41,13 +41,15 @@ and the square is determined by `m`, `n` and a rational parameter `t`, for which
 
 **Algebra for Section 3.** Identities used by the computations below are checked in Lean: membership of the points on the three elliptic curves, the map from the quartic `v² = F0·GL` to a Weierstrass model, the partner identities, and the identities behind the singular fibres.
 
+**What Lean does not prove about these identities.** They are statements about points and polynomials. `e0l_weierstrass` sends a point of the quartic with `t ≠ m/n` to a point of a Weierstrass curve; it does not treat the base point, does not prove that the two curves are isomorphic, and does not cover the change to the minimal model on which the computations run (a script checks that the recorded models are isomorphic). The resultant and octic statements are polynomial identities; what they imply modulo a prime is argued in the text. No Lean theorem transfers a closure from a ratio to its partner; only the identities between the forms and the coprimality of the partner pair are checked. Ranks, generators and heights are not in Lean at all.
+
 ## 3. Computed, not formalized
 
 Details, limits and commands are in `G1_FULL_SYSTEM.md`. Programs: PARI 2.17, Sage (passagemath) with eclib, Magma 2.29 through its public calculator, and C and Python programs in the repository.
 
 **Which primes can obstruct.** For a ratio of good reduction the five conditions define a smooth curve of genus 49 over `F_p`. The Weil bound, a separate character-sum bound for the fibres where two branch points collide (`p` dividing `m⁸ + 14m⁴n⁴ + n⁸`), and a direct computation below those bounds show that exactly the 34 primes above have an obstructed class. All 34 are `±1 (mod 8)`; there is a short proof that no other residue is possible, and that part is in Lean.
 
-**Local solubility.** The 425 ratios are exactly those not excluded by the classes and by the condition on primes `≡ 5 (mod 8)`. A second program, written separately, decides solubility in every `ℚ_p` and agrees on all 304,191 ratios. So no congruence closes any of the 425. The excluded ratios have density 1 (argued, with a proof sketch).
+**Local solubility.** The 425 ratios are exactly those not excluded by the classes and by the condition on primes `≡ 5 (mod 8)`. A separately written local test checks all primes below 700 and the primes dividing the bad-reduction factors; it agrees with the classification on all 304,191 ratios, with no undecided case. The remaining primes are covered by the Weil-bound and singular-fibre arguments above. Together these give that the 425 ratios are soluble in every `ℚ_p`, so no congruence closes any of them. The excluded ratios have density 1 (argued, with a proof sketch).
 
 **Rank 0.** 268 of the 425 ratios are closed by a quotient elliptic curve of rank 0.
 
@@ -55,7 +57,7 @@ Details, limits and commands are in `G1_FULL_SYSTEM.md`. Programs: PARI 2.17, Sa
 
 **Open.** 36 ratios, 5 of them with `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). Seven have no trivial point. For these the curves above have rank at least 2. A quotient of genus 2 was tried through the Magma calculator; for 20 of its 23 instances the calculator's limits were reached.
 
-**A side search.** Among magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square and its multiples. This re-verifies, on a smaller range and with a different program, searches reported by Pierrat, Thiriet and Zimmermann (2015) for several configurations; it is not a new bound.
+**A side search.** Among magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square and its multiples. This is not new: B. Chaffin searched the same family to centre root 10¹⁴ (about 2008, published 2019) and found nothing else, and Pierrat, Thiriet and Zimmermann (2015) report searches of particular configurations. The search here re-verifies a small part of Chaffin's range with an independent program; its case analysis and Bremner's square are checked in Lean, the program is not.
 
 ## 4. What has not been checked
 
@@ -71,11 +73,12 @@ Two errors were found and corrected during the work, both recorded in `CHANGES.m
 
 ## 5. Reproducing
 
-`lake build` and `lake env lean scripts/Audit.lean` check the Lean part (about 15 minutes from an empty cache). CI also regenerates the certificate files, runs the evidence checker, the check of the singular fibres and the side search on a small range. The elliptic-curve computations are rerun with the scripts in `scripts/g1_full/`; their outputs are committed.
+`lake build` and `lake env lean scripts/Audit.lean` check the Lean part (about 15 minutes from an empty cache). CI also regenerates the certificate files, runs the evidence checker, the check of the singular fibres and the side search on a small range. The elliptic-curve computations are rerun with the scripts in `scripts/g1_full/`; they need PARI and Sage, and Magma for the rank bounds; their outputs are committed, with verbatim Magma responses for 41 of the 87 curves.
 
 ## References
 
 - A. Bremner, On squares of squares, Acta Arith. 88 (1999), 289–297.
+- B. Chaffin, Magic square of squares, benchaffin.com/magic-squares/magic-squares.html (2019).
 - C. Boyer, 3×3 magic square of squares search, multimagie.com (read 22 November 2026); reports Morgenstern's results.
 - P. Pierrat, F. Thiriet and P. Zimmermann, Magic squares of squares, preprint, 2015.
 - L. Rabern, Properties of magic squares of squares, Rose-Hulman Undergrad. Math. J. 4 (2003).

@@ -1,6 +1,6 @@
 // Independent check of seven.c on a small range, with a different reduction.
 // For every x <= X: H = all d > 0 with x^2 + d a square or x^2 - d a positive square. A magic square
-// E, E±s, E±t, E±(s+t), E±(s-t) (E = x^2, s > t > 0, all entries positive) with at least 6 squares among the
+// E, E±s, E±t, E±(s+t), E±(s-t) (E = x^2, s > t > 0, s != 2t, so nine distinct positive entries) with at least 6 squares among the
 // 8 other entries has at least two of its four lines with deviation in H. So: for every ordered pair (d1, d2)
 // in H and every ordered pair of lines, solve the two linear equations for (s, t) and count the squares.
 // No table of cases is used. Prints "x s t squares" for every solution found (possibly several times).
@@ -19,7 +19,7 @@ int main(int argc,char**argv){
         long det=al[p]*be[q]-al[q]*be[p]; long ns=d1*be[q]-d2*be[p], nt=al[p]*d2-al[q]*d1;
         if(ns%det||nt%det) continue;
         long s=ns/det,t=nt/det;
-        if(!(s>t&&t>0)||s+t>=E) continue;
+        if(!(s>t&&t>0)||s+t>=E||s==2*t) continue;                               /* s = 2t: two equal deviations */
         int c=sq[E+s]+sq[E-s]+sq[E+t]+sq[E-t]+sq[E+s+t]+sq[E-s-t]+sq[E+s-t]+sq[E-s+t];
         if(c>=6) printf("%ld %ld %ld %d\n",x,s,t,c+1); } } }
   return 0; }

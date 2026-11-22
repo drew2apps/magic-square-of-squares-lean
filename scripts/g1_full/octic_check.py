@@ -86,4 +86,22 @@ for line in open(os.path.join(here, 'modp_classes.txt')):
     if (pow(r, 8, p) + 14 * pow(r, 4, p) + 1) % p == 0: hits += 1
 print('3. obstructed classes read: %d; on the octic: %d' % (total, hits))
 assert hits == 0 and total == 484
+# 4. the exact number N of t for every class of step 2, against the bound:
+#    |32 N - 2 p| <= 100 + 270 sqrt(p). The lower side is the bound of G1_FULL_SYSTEM.md; the upper side follows from
+#    the same character sums. This tests the main term p/16 (not p/32) and the size of the constants on real data.
+if True:
+    worst = 0.0; nclass = 0
+    for p in primes(9700, 20000):
+        roots = [r for r in range(1, p) if (pow(r, 8, p) + 14 * pow(r, 4, p) + 1) % p == 0]
+        if not roots: continue
+        qr = bytearray(p)
+        for x in range(1, p): qr[x * x % p] = 1
+        for r in roots:
+            fs = forms(r, 1); N = 0
+            for t in range(p):
+                if all(qr[(a * t * t + b * t + c) % p] for (a, b, c) in fs): N += 1
+            dev = abs(32 * N - 2 * p); bound = 100 + 270 * p ** 0.5; nclass += 1
+            assert dev <= bound, (p, r, N)
+            worst = max(worst, dev / bound)
+    print('4. exact counts for %d classes: |32N - 2p| <= 100 + 270 sqrt(p) in every class; largest ratio %.3f' % (nclass, worst))
 print('octic_check OK')

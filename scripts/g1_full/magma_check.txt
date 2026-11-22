@@ -1,7 +1,7 @@
 # Answers of the public Magma calculator (Magma 2.29-10) to magma_check.py, 2026-11-22: upper bounds for the rank
 # from TwoPowerIsogenyDescentRankBound, for the curve of each line of dm_evidence.txt (87 distinct curves).
-# The requests after 06:30 PT and the verbatim responses are in magma_raw.txt; the first 80 answers were kept
-# only as parsed bounds.
+# Verbatim requests and responses are in magma_raw.txt for 41 of the 87 curves (14 requests, from 14:28 UTC);
+# for the other 46 curves only the parsed bound was kept.
 15,8 15,8 E04 rank <= 1
 21,20 21,20 E04 rank <= 1
 23,7 23,7 E04 rank <= 1

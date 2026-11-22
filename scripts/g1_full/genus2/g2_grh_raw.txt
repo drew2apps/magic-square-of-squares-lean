@@ -1,0 +1,49 @@
+=== 724,665
+--- input
+SetClassGroupBounds("GRH"); P<t>:=PolynomialRing(Rationals()); m:=724; n:=665; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>708991830</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== 740,539
+--- input
+SetClassGroupBounds("GRH"); P<t>:=PolynomialRing(Rationals()); m:=740; n:=539; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>276332037</seed><version>2.29-10</version><time>14.089</time><memory>323.41MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 296.7MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; =Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print</line><line>                                                       ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; =Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print</line><line>                                                             ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 820,799
+--- input
+SetClassGroupBounds("GRH"); P<t>:=PolynomialRing(Rationals()); m:=820; n:=799; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2098533357</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== 828,173
+--- input
+SetClassGroupBounds("GRH"); P<t>:=PolynomialRing(Rationals()); m:=828; n:=173; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3535441178</seed><version>2.29-10</version><time>26.370</time><memory>322.56MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 301.7MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; =Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print</line><line>                                                       ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; =Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print</line><line>                                                             ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 840,83
+--- input
+SetClassGroupBounds("GRH"); P<t>:=PolynomialRing(Rationals()); m:=840; n:=83; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3968119690</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== 889,320
+--- input
+SetClassGroupBounds("GRH"); P<t>:=PolynomialRing(Rationals()); m:=889; n:=320; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4203910766</seed><version>2.29-10</version><time>9.330</time><memory>323.81MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 297.2MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; =Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print</line><line>                                                       ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; =Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print</line><line>                                                             ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 72,65
+--- input
+SetClassGroupBounds("GRH"); P<t>:=PolynomialRing(Rationals()); m:=72; n:=65; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>725841543</seed><version>2.29-10</version><time>6.490</time><memory>322.75MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 295.8MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; acobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "</line><line>                                                     ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; acobian(H); r:=RankBound(J); print "G2GRH", m, n, r; if r le 1 then print "</line><line>                                                           ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+

@@ -1,0 +1,5 @@
+# Output of './seven_brute 1300 | sort -u' (gcc 13.3.0, about 3 minutes), 2026-11-22: x s t squares.
+# The three lines are Bremner's square and its multiples by 4 and 9.
+1275 1247400 373464 7
+425 138600 41496 7
+850 554400 165984 7
