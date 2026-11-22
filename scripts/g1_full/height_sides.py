@@ -19,8 +19,11 @@ So, D being a nonzero integer,
 eclib's bound for the other side (libsrc/htconst.cc, with Bremner's constant 1.922 instead of 1.946) is
     h - hhat <= B := h(j)/12 + log|D|/6 + log+|j|/6 + log+|b2/12| + [log 2 if b2 != 0] + 1.922,
 so U = B - h(j)/12 + 0.218, and U <= B as soon as h(j) >= 2.616.
-I read the paper of Cremona, Prickett and Siksek through an automated summary of its PDF and have not seen
-Silverman's paper; the two statements above should be compared with the originals.
+In that paper: h - hhat is the sum over the places of Psi_v = (naive local height) - (canonical local height)
+(equation (1)); inf Psi_v = 0 at every finite place (Proposition 8); and the canonical height is twice
+Silverman's (Section 4). These statements were read from the text of the paper with an AI model. Silverman's
+paper has not been seen, only the quotation of its bound in their Theorem 15; it is stated there for points
+over the complex numbers and is applied here to real points.
 
 For the model of every line of dm_evidence.txt this script, in exact rational arithmetic (logarithms are
 enclosed in rational intervals by the series for atanh; no floating point enters a comparison):

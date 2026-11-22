@@ -12,11 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Generated Lean files match their generators
+        shell: bash
         run: |
+          set -e
           python3 -m py_compile scripts/g1_full/*.py
           python3 scripts/g1_full/check_evidence.py
-          python3 scripts/g1_full/octic_check.py
-          python3 scripts/g1_full/height_sides.py
+          python3 scripts/g1_full/octic_check.py > /tmp/octic.out
+          diff /tmp/octic.out <(tail -n +2 scripts/g1_full/octic_check.txt)
+          python3 scripts/g1_full/height_sides.py > /tmp/height_sides.out
+          diff /tmp/height_sides.out scripts/g1_full/height_sides.txt
           grep -q "$(sha256sum scripts/search/seven.c | cut -d' ' -f1)" scripts/search/seven_search.txt
           gcc -O2 -Wall -Wextra -Werror -o /tmp/seven scripts/search/seven.c -lm
           gcc -O2 -Wall -Wextra -Werror -o /tmp/seven_brute scripts/search/seven_brute.c
@@ -35,3 +39,5 @@ jobs:
           lake env lean scripts/Audit.lean | tee audit.txt
           grep '^AUDIT OK:' audit.txt >> "$GITHUB_STEP_SUMMARY"
           diff <(grep '^AUDIT OK:' audit.txt) scripts/audit_line.txt
+          diff <(sort audit.txt) <(sort scripts/audit_output.txt)
+          echo "::notice title=Axiom audit::$(grep '^AUDIT OK:' audit.txt)"

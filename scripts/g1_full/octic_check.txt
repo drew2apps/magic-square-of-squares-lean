@@ -1,4 +1,4 @@
-# Output of 'python3 octic_check.py' (Python 3, no dependencies), 2026-11-22.
+# Output of 'python3 octic_check.py' (Python 3, no dependencies), 2026-11-22; the same output with the exact comparison of step 4. CI compares it.
 1. F0 F8 GL GU is (2Smn)^2 times the square of t^4 + c t^2 + 1 modulo the octic: OK
 2. primes in (9700, 20000) with roots of the octic: 264; classes checked: 2112; every one has a point: OK
 3. obstructed classes read: 484; on the octic: 0

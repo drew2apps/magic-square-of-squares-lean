@@ -15,9 +15,13 @@ the centre root.
 
 * `IsMSS.centre_two_ratios`: the same for the second ratio `m' : n' = (b + d) : (f − h)`, which is
   the first ratio of the square with `h` replaced by `−h`, and the two together. Since
-  `8e² = (m² + n²)·k²·(m'² + n'²)` with `k ≠ 0` (`IsMSS.center_factorization`), the two numbers
-  cannot both be squares and cannot both be twice a square. So either a prime `≡ 1 (mod 8)` divides
-  the centre root, or one of `m² + n²`, `m'² + n'²` is a square and the other is twice a square.
+  `8e² = (m² + n²)·k²·(m'² + n'²)` with `k ≠ 0` (`IsMSS.center_factorization`), the number
+  `2(m² + n²)(m'² + n'²)` is a square (`IsMSS.two_mul_norms_isSquare`). Hence exactly one of the
+  two numbers is even (`IsMSS.norms_parity`), and every odd prime divides them to exponents of
+  the same parity (`IsMSS.norms_padicVal_parity`). So either a prime `≡ 1 (mod 8)` divides the
+  centre root and divides both numbers to an odd power, or one of `m² + n²`, `m'² + n'²` is a
+  square and the other is twice a square.
+* `IsMSS.edge_sums_identity`: the same factorisation in terms of the entries.
 
 So a magic square of squares whose centre root has no prime factor `≡ 1 (mod 8)` has
 `m² + n²` a square or twice a square. The proof combines `norm_dvd_center` with the statement on
@@ -259,14 +263,143 @@ theorem not_both_same_type {N N' k e : ℤ} (hN : 0 < N) (hN' : 0 < N') (hk : k 
     · rw [h] at hr'
       linarith
 
+/-- The factorisation of `center_factorization` in terms of the entries: a polynomial identity,
+given that opposite edge entries sum to twice the centre. -/
+theorem IsMSS.edge_sums_identity {a b c d e f g h i T : ℤ} (hs : IsMSS a b c d e f g h i T) :
+    ((b + d) ^ 2 + (h + f) ^ 2) * ((b + d) ^ 2 + (f - h) ^ 2) = 8 * e ^ 2 * (b + d) ^ 2 := by
+  obtain ⟨-, -, hbh, hdf⟩ := IsMagic.opposite
+    (show IsMagic (a ^ 2) (b ^ 2) (c ^ 2) (d ^ 2) (e ^ 2) (f ^ 2) (g ^ 2) (h ^ 2) (i ^ 2) T from hs)
+  linear_combination (2 * e ^ 2 + b ^ 2 + 4 * b * d + 2 * d ^ 2 - 2 * f ^ 2 + h ^ 2) * hbh +
+    (-2 * e ^ 2 + 4 * b ^ 2 + 4 * b * d + d ^ 2 + f ^ 2) * hdf
+
+/-- `2(m² + n²)(m'² + n'²)` is a square: it is `(4e/k)²` in the notation of
+`center_factorization`. This is the condition that the centre is a square, written
+multiplicatively. -/
+theorem IsMSS.two_mul_norms_isSquare {a b c d e f g h i T : ℤ}
+    (hs : IsMSS a b c d e f g h i T) {m n m' n' : ℕ} (hcop : Nat.Coprime m n)
+    (hcop' : Nat.Coprime m' n') (hmn : (b + d) * n = (h + f) * m)
+    (hmn' : (b + d) * n' = (f - h) * m') (hne : h + f ≠ 0) (hne' : f - h ≠ 0) :
+    IsSquare (2 * ((m : ℤ) ^ 2 + (n : ℤ) ^ 2) * ((m' : ℤ) ^ 2 + (n' : ℤ) ^ 2)) := by
+  obtain ⟨k, hk, h8⟩ := hs.center_factorization hcop hcop' hmn hmn' hne hne'
+  have hdvd : k ^ 2 ∣ (4 * e) ^ 2 :=
+    ⟨2 * ((m : ℤ) ^ 2 + (n : ℤ) ^ 2) * ((m' : ℤ) ^ 2 + (n' : ℤ) ^ 2), by linear_combination 2 * h8⟩
+  have hk4 : k ∣ 4 * e := (Int.pow_dvd_pow_iff (by norm_num)).mp hdvd
+  obtain ⟨q, hq⟩ := hk4
+  refine ⟨q, ?_⟩
+  have hk2 : k ^ 2 ≠ 0 := pow_ne_zero 2 hk
+  apply mul_left_cancel₀ hk2
+  linear_combination (-2 : ℤ) * h8 + (4 * e + k * q) * hq
+
+/-- Twice a product of two odd numbers is not a square. -/
+theorem two_mul_odd_mul_odd_ne_sq {S S' q : ℤ} (hS : Odd S) (hS' : Odd S')
+    (h : 2 * S * S' = q * q) : False := by
+  have hqq : Even (q * q) := ⟨S * S', by rw [← h]; ring⟩
+  have hq : Even q := by
+    rcases Int.even_mul.mp hqq with h | h <;> exact h
+  obtain ⟨c, rfl⟩ := hq
+  have h2 : S * S' = 2 * (c * c) := by
+    have h4 : (2 : ℤ) * (S * S') = 2 * (2 * (c * c)) := by linear_combination h
+    exact mul_left_cancel₀ (by norm_num) h4
+  exact (Int.not_even_iff_odd.mpr (hS.mul hS')) ⟨c * c, by rw [h2]; ring⟩
+
+/-- Eight times a product of two odd numbers is not a square. -/
+theorem two_mul_two_odd_ne_sq {s s' q : ℤ} (hs : Odd s) (hs' : Odd s')
+    (h : 2 * (2 * s) * (2 * s') = q * q) : False := by
+  have hqq : Even (q * q) := ⟨2 * s * (2 * s'), by rw [← h]; ring⟩
+  have hq : Even q := by
+    rcases Int.even_mul.mp hqq with h | h <;> exact h
+  obtain ⟨c, rfl⟩ := hq
+  have h2 : 2 * s * s' = c * c := by
+    have h4 : (4 : ℤ) * (2 * s * s') = 4 * (c * c) := by linear_combination h
+    exact mul_left_cancel₀ (by norm_num) h4
+  exact two_mul_odd_mul_odd_ne_sq hs hs' h2
+
+/-- For coprime `m`, `n`, if `m² + n²` is even it is twice an odd number. -/
+theorem norm_eq_two_mul_odd {m n : ℕ} (hcop : Nat.Coprime m n)
+    (hev : Even ((m : ℤ) ^ 2 + (n : ℤ) ^ 2)) :
+    ∃ s : ℤ, Odd s ∧ (m : ℤ) ^ 2 + (n : ℤ) ^ 2 = 2 * s := by
+  have hiff := Int.even_add.mp hev
+  have hm : Odd (m : ℤ) := by
+    by_contra hm
+    rw [Int.not_odd_iff_even] at hm
+    have hn : Even (n : ℤ) := (Int.even_pow.mp (hiff.mp (Int.even_pow.mpr ⟨hm, by norm_num⟩))).1
+    have h2m : (2 : ℤ) ∣ (m : ℤ) := hm.two_dvd
+    have h2n : (2 : ℤ) ∣ (n : ℤ) := hn.two_dvd
+    have h2m' : 2 ∣ m := by exact_mod_cast h2m
+    have h2n' : 2 ∣ n := by exact_mod_cast h2n
+    have hg := Nat.dvd_gcd h2m' h2n'
+    rw [hcop.gcd_eq_one] at hg
+    omega
+  have hn : Odd (n : ℤ) := by
+    by_contra hn
+    rw [Int.not_odd_iff_even] at hn
+    have h1 : Even ((m : ℤ) ^ 2) := hiff.mpr (Int.even_pow.mpr ⟨hn, by norm_num⟩)
+    exact (Int.not_even_iff_odd.mpr hm) (Int.even_pow.mp h1).1
+  obtain ⟨x, hx⟩ := hm
+  obtain ⟨y, hy⟩ := hn
+  exact ⟨2 * (x ^ 2 + x + y ^ 2 + y) + 1, ⟨x ^ 2 + x + y ^ 2 + y, rfl⟩, by rw [hx, hy]; ring⟩
+
+/-- Exactly one of the numbers `m² + n²`, `m'² + n'²` is even. -/
+theorem IsMSS.norms_parity {a b c d e f g h i T : ℤ} (hs : IsMSS a b c d e f g h i T)
+    {m n m' n' : ℕ} (hcop : Nat.Coprime m n) (hcop' : Nat.Coprime m' n')
+    (hmn : (b + d) * n = (h + f) * m) (hmn' : (b + d) * n' = (f - h) * m')
+    (hne : h + f ≠ 0) (hne' : f - h ≠ 0) :
+    (Even ((m : ℤ) ^ 2 + (n : ℤ) ^ 2) ∧ Odd ((m' : ℤ) ^ 2 + (n' : ℤ) ^ 2)) ∨
+      (Odd ((m : ℤ) ^ 2 + (n : ℤ) ^ 2) ∧ Even ((m' : ℤ) ^ 2 + (n' : ℤ) ^ 2)) := by
+  obtain ⟨q, hq⟩ := hs.two_mul_norms_isSquare hcop hcop' hmn hmn' hne hne'
+  rcases Int.even_or_odd ((m : ℤ) ^ 2 + (n : ℤ) ^ 2) with h1 | h1 <;>
+    rcases Int.even_or_odd ((m' : ℤ) ^ 2 + (n' : ℤ) ^ 2) with h2 | h2
+  · exfalso
+    obtain ⟨s, hs1, e1⟩ := norm_eq_two_mul_odd hcop h1
+    obtain ⟨s', hs2, e2⟩ := norm_eq_two_mul_odd hcop' h2
+    rw [e1, e2] at hq
+    exact two_mul_two_odd_ne_sq hs1 hs2 hq
+  · exact Or.inl ⟨h1, h2⟩
+  · exact Or.inr ⟨h1, h2⟩
+  · exact (two_mul_odd_mul_odd_ne_sq h1 h2 hq).elim
+
+/-- For an odd prime `p`, the exponents of `p` in `m² + n²` and in `m'² + n'²` have the same
+parity. So the two numbers have the same odd squarefree part. -/
+theorem IsMSS.norms_padicVal_parity {a b c d e f g h i T : ℤ}
+    (hs : IsMSS a b c d e f g h i T) {m n m' n' : ℕ} (hn : 0 < n) (hn' : 0 < n')
+    (hcop : Nat.Coprime m n) (hcop' : Nat.Coprime m' n') (hmn : (b + d) * n = (h + f) * m)
+    (hmn' : (b + d) * n' = (f - h) * m') (hne : h + f ≠ 0) (hne' : f - h ≠ 0)
+    {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) :
+    Even (padicValNat p (m * m + n * n) + padicValNat p (m' * m' + n' * n')) := by
+  obtain ⟨q, hq⟩ := hs.two_mul_norms_isSquare hcop hcop' hmn hmn' hne hne'
+  have hN : 2 * (m * m + n * n) * (m' * m' + n' * n') = q.natAbs * q.natAbs := by
+    apply Nat.cast_injective (R := ℤ)
+    push_cast
+    first
+      | rw [Int.natAbs_mul_self']
+      | rw [abs_mul_abs_self]
+    linear_combination hq
+  have : Fact p.Prime := ⟨hp⟩
+  have hS : m * m + n * n ≠ 0 := by
+    have := Nat.mul_pos hn hn
+    omega
+  have hS' : m' * m' + n' * n' ≠ 0 := by
+    have := Nat.mul_pos hn' hn'
+    omega
+  have hQ : q.natAbs ≠ 0 := by
+    intro h0
+    rw [h0] at hN
+    exact mul_ne_zero (mul_ne_zero two_ne_zero hS) hS' (hN.trans (by simp))
+  have hv := congrArg (padicValNat p) hN
+  rw [padicValNat.mul (mul_ne_zero two_ne_zero hS) hS', padicValNat.mul two_ne_zero hS,
+    padicValNat.mul hQ hQ, padicValNat_primes hp2] at hv
+  exact ⟨padicValNat p q.natAbs, by omega⟩
+
 /-- **The two edge ratios together.** `m : n` is the ratio `(b + d) : (h + f)` and `m' : n'` the
 ratio `(b + d) : (f − h)`, both in lowest terms. Either a prime `≡ 1 (mod 8)` divides the centre
-root `e`, or one of `m² + n²`, `m'² + n'²` is a square and the other is twice a square. -/
+root `e` and divides both `m² + n²` and `m'² + n'²` to an odd power, or one of the two numbers is
+a square and the other is twice a square. -/
 theorem IsMSS.centre_two_ratios {a b c d e f g h i T : ℤ} (hs : IsMSS a b c d e f g h i T)
     {m n m' n' : ℕ} (hn : 0 < n) (hn' : 0 < n') (hcop : Nat.Coprime m n)
     (hcop' : Nat.Coprime m' n') (hmn : (b + d) * n = (h + f) * m)
     (hmn' : (b + d) * n' = (f - h) * m') (hne : h + f ≠ 0) (hne' : f - h ≠ 0) (hbd : b ≠ d) :
-    (∃ p : ℕ, p.Prime ∧ p % 8 = 1 ∧ (p : ℤ) ∣ e) ∨
+    (∃ p : ℕ, p.Prime ∧ p % 8 = 1 ∧ (p : ℤ) ∣ e ∧ Odd (padicValNat p (m * m + n * n)) ∧
+        Odd (padicValNat p (m' * m' + n' * n'))) ∨
       (IsSquare (m * m + n * n) ∧ IsSquare (2 * (m' * m' + n' * n'))) ∨
       (IsSquare (2 * (m * m + n * n)) ∧ IsSquare (m' * m' + n' * n')) := by
   have hs' : IsMSS a b c d e f g (-h) i T := by
@@ -297,15 +430,25 @@ theorem IsMSS.centre_two_ratios {a b c d e f g h i T : ℤ} (hs : IsMSS a b c d 
     have h := congrArg (Nat.cast : ℕ → ℤ) hr
     push_cast at h
     linear_combination h
-  rcases h1 with ⟨r, hr⟩ | ⟨r, hr⟩ | ⟨p, hp, hp8, hpe, -⟩
-  · rcases h2 with ⟨r', hr'⟩ | ⟨r', hr'⟩ | ⟨p, hp, hp8, hpe, -⟩
+  -- a prime with odd exponent in one of the two numbers has odd exponent in the other
+  have both : ∀ {p : ℕ}, p.Prime → p % 8 = 1 →
+      (Odd (padicValNat p (m * m + n * n)) ∨ Odd (padicValNat p (m' * m' + n' * n'))) →
+      Odd (padicValNat p (m * m + n * n)) ∧ Odd (padicValNat p (m' * m' + n' * n')) := by
+    intro p hp hp8 hodd
+    have hp2 : p ≠ 2 := by omega
+    obtain ⟨r, hr⟩ := hs.norms_padicVal_parity hn hn' hcop hcop' hmn hmn' hne hne' hp hp2
+    rcases hodd with ⟨j, hj⟩ | ⟨j, hj⟩
+    · exact ⟨⟨j, hj⟩, ⟨r - j - 1, by omega⟩⟩
+    · exact ⟨⟨r - j - 1, by omega⟩, ⟨j, hj⟩⟩
+  rcases h1 with ⟨r, hr⟩ | ⟨r, hr⟩ | ⟨p, hp, hp8, hpe, hodd⟩
+  · rcases h2 with ⟨r', hr'⟩ | ⟨r', hr'⟩ | ⟨p, hp, hp8, hpe, hodd⟩
     · exact absurd ⟨⟨r, cast1 hr⟩, ⟨r', cast1 hr'⟩⟩ hA
     · exact Or.inr (Or.inl ⟨⟨r, hr⟩, ⟨r', hr'⟩⟩)
-    · exact Or.inl ⟨p, hp, hp8, hpe⟩
-  · rcases h2 with ⟨r', hr'⟩ | ⟨r', hr'⟩ | ⟨p, hp, hp8, hpe, -⟩
+    · exact Or.inl ⟨p, hp, hp8, hpe, both hp hp8 (Or.inr hodd)⟩
+  · rcases h2 with ⟨r', hr'⟩ | ⟨r', hr'⟩ | ⟨p, hp, hp8, hpe, hodd⟩
     · exact Or.inr (Or.inr ⟨⟨r, hr⟩, ⟨r', hr'⟩⟩)
     · exact absurd ⟨⟨r, cast2 hr⟩, ⟨r', cast2 hr'⟩⟩ hB
-    · exact Or.inl ⟨p, hp, hp8, hpe⟩
-  · exact Or.inl ⟨p, hp, hp8, hpe⟩
+    · exact Or.inl ⟨p, hp, hp8, hpe, both hp hp8 (Or.inr hodd)⟩
+  · exact Or.inl ⟨p, hp, hp8, hpe, both hp hp8 (Or.inl hodd)⟩
 
 end MagicSquareOfSquares

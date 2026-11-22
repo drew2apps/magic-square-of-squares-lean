@@ -1,4 +1,4 @@
-# Output of frobenius.py, 2026-11-22: prime:degrees of the irreducible factors of the characteristic polynomial of Frobenius.
+# Output of frobenius.py, 2026-11-22, for the curve with the factor S: prime:degrees of the irreducible factors of the characteristic polynomial of Frobenius.
 (72,65) 101:2+2 103:4 107:4 109:2+2 113:2+2 127:4 131:4 139:4 149:4
 (724,665) 101:2+2 103:4 107:4 109:4 113:2+2 127:4 131:4 137:4 139:4 149:4
 (3,2) 101:2+2 103:4 107:4 113:2+2 127:2+2 131:4 137:2+2 139:4 149:2+2
