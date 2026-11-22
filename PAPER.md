@@ -15,7 +15,7 @@ d e f
 g h i
 ```
 
-so that the rows, columns and two diagonals of `a², …, i²` have the same sum `3e²`. Lee Morgenstern showed by computation (2006) that every entry of a solution exceeds 10¹⁴, and searched much further in other parametrisations; the only known square with seven square entries is Bremner's (1999). A 2025 preprint (O. Hill, arXiv:2510.08286) claims a proof of nonexistence; I have not verified it, and nothing here depends on it.
+so that the rows, columns and two diagonals of `a², …, i²` have the same sum `3e²`. Lee Morgenstern showed by computation (2006) that every entry of a solution exceeds 10¹⁴, and searched much further in other parametrisations; Pierrat, Thiriet and Zimmermann (2015) cite Buell for a centre above 25·10²⁴. The only known square with seven square entries is Bremner's (1999). A 2025 preprint (O. Hill, arXiv:2510.08286) claims a proof of nonexistence; I have not verified it, and nothing here depends on it.
 
 This note does not solve the problem. It contributes three things: a Lean library of the known facts, a reduction of the problem to a one-parameter family of curves with a kernel-checked list of excluded cases, and a computed census of the remaining cases.
 
@@ -55,7 +55,7 @@ Details, limits and commands are in `G1_FULL_SYSTEM.md`. Programs: PARI 2.17, Sa
 
 **Open.** 36 ratios, 5 of them with `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). Seven have no trivial point. For these the curves above have rank at least 2. A quotient of genus 2 was tried through the Magma calculator; for 20 of its 23 instances the calculator's limits were reached.
 
-**A side search.** Among magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square and its multiples.
+**A side search.** Among magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square and its multiples. This re-verifies, on a smaller range and with a different program, searches reported by Pierrat, Thiriet and Zimmermann (2015) for several configurations; it is not a new bound.
 
 ## 4. What has not been checked
 
@@ -65,7 +65,7 @@ In order of importance:
 2. **The character-sum bound** for the singular fibres and the Weil-bound step.
 3. **The density argument**, which is a sketch.
 4. **Rank bounds** are computed, by two or three programs, not proved here.
-5. **The literature.** Robertson (1996), Bremner's second paper (2001), Boyer's article (2005) and the paper of Zimmermann, Pierrat and Thiriet have not been read.
+5. **The literature.** Robertson (1996), Bremner's second paper (2001) and Boyer's article (2005) have not been read; the preprint of Pierrat, Thiriet and Zimmermann (2015) only through an AI summary.
 
 Two errors were found and corrected during the work, both recorded in `CHANGES.md`: the singular fibres were overlooked in the first statement of the 34 primes, and the first version of the side search missed two of six cases. Others may remain.
 
@@ -77,6 +77,7 @@ Two errors were found and corrected during the work, both recorded in `CHANGES.m
 
 - A. Bremner, On squares of squares, Acta Arith. 88 (1999), 289–297.
 - C. Boyer, 3×3 magic square of squares search, multimagie.com (read 22 November 2026); reports Morgenstern's results.
+- P. Pierrat, F. Thiriet and P. Zimmermann, Magic squares of squares, preprint, 2015.
 - L. Rabern, Properties of magic squares of squares, Rose-Hulman Undergrad. Math. J. 4 (2003).
 - J. P. Robertson, Magic squares of squares, Math. Mag. 69 (1996), 289–293 (not read).
 - D. Weisenberg, Some thoughts on the 3×3 magic square of squares problem, Rose-Hulman Undergrad. Math. J. 24 (2023).
