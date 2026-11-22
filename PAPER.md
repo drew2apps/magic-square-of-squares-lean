@@ -1,6 +1,6 @@
 # The 3×3 magic square of squares: a statement on the centre, a machine-checked reduction, and a computed census
 
-Drew Carlson. 22 November 2026, text after release 0.3.3.
+Drew Carlson. 22 November 2026, release 0.3.4.
 Repository: https://github.com/drew2apps/magic-square-of-squares-lean. Archive: https://doi.org/10.5281/zenodo.24435351.
 
 The Lean code and this text were written with Claude, an AI model made by Anthropic. I am not a number theorist. Nobody else has checked the mathematics outside Lean. This note says what is proved, what is only computed, and what is unchecked, so that someone who knows the subject can check it.
@@ -76,7 +76,7 @@ By Theorem 1 a solution is determined by the ratio `m : n` and the rational numb
 
 **Theorem 6** (`IsMSS.edge_root_gt_500`). If `b² ≠ d²`, `h² ≠ f²` and `b² ≠ f²`, one of the edge roots `b, d, f, h` exceeds 500 in absolute value. This is far below Morgenstern's bound; it is included because it is machine-checked.
 
-Also in Lean: `m² + n²` is a square modulo 7, 17, 31 and 47 (`IsMSS.edge_norm`); for a prime `p ≡ ±3 (mod 8)` every ratio has a point modulo `p`, so no ratio is excluded by a congruence modulo such a prime (`G1.exists_point_mod_of_not_isSquare_two`; powers of `p` are not covered); and the algebra used in Section 3 (membership of the points on the three elliptic curves, the map from the quartic `v² = F0·GL` to a Weierstrass model, the partner identities, the identities behind the singular fibres, and the case analysis of the side search).
+Also in Lean: `m² + n²` is a square modulo 7, 17, 31 and 47 (`IsMSS.edge_norm`); for a prime `p ≡ ±3 (mod 8)` every ratio has a point modulo `p`, so no ratio is excluded by a congruence modulo such a prime (`G1.exists_point_mod_of_not_isSquare_two`, and `G1.exists_point_mod_of_three_five_mod_eight` for the statement in terms of `p` modulo 8; powers of `p` are not covered); and the algebra used in Section 3 (membership of the points on the three elliptic curves, the map from the quartic `v² = F0·GL` to a Weierstrass model, the partner identities, the identities behind the singular fibres, and the case analysis of the side search).
 
 **What Lean does not prove about that algebra.** These are statements about points and polynomials. `e0l_weierstrass` sends a point of the quartic with `t ≠ m/n` to a point of a Weierstrass curve; it does not treat the base point, does not prove that the two curves are isomorphic, and does not cover the change to the minimal model on which the computations run (a script checks that the recorded models are isomorphic). The resultant and octic statements are polynomial identities; what they imply modulo a prime is argued in the text. No Lean theorem transfers a closure from a ratio to its partner. Ranks, generators and heights are not in Lean at all.
 
