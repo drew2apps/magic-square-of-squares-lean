@@ -9,7 +9,7 @@
 3. Every recorded E04 and D1 generator is a rational point of its curve with y != 0.
    Every recorded E0L model is isomorphic over Q to the Weierstrass curve of G1.e0l_weierstrass for the
    pair, and the recorded generator is a rational point of that model, not of order 2.
-4. Every line marked upper=magma has an answer 'rank <= 1' in magma_check.txt.
+4. Every line has an answer 'rank <= 1' in magma_check.txt (required first of all for the lines marked upper=magma).
 This does not check the heights, the ranks, or that the points generate."""
 import ast, math, os, re, sys
 from fractions import Fraction as Fr
@@ -90,6 +90,7 @@ for r in ev:
         disc = (mdl[0] * x + mdl[2]) ** 2 + 4 * (x ** 3 + mdl[1] * x * x + mdl[3] * x + mdl[4])
         assert issq(disc) and disc != 0, r[:3]         # G is a rational point of the model, not of order 2
 assert meth == {'E04': 91, 'D1': 24, 'E0L': 6}, meth
+assert all(tuple(r[:3]) in magma for r in ev)       # Magma's bound 'rank <= 1' is recorded for every line
 assert closed <= all157
 cl = open(os.path.join(here, 'dm_closures.txt')).read().split('\n')
 still = set()

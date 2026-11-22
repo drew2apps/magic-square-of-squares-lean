@@ -85,6 +85,8 @@ The first three rows have no bound on the size of the entries. The signs of the 
 
 Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 121 more by the Demjanenko–Manin argument on three curves of rank 1, and 36 are open (5 of them up to 200). These computations depend on PARI, Sage (with eclib), for two pairs Magma, and derivations that nobody has checked; `scripts/g1_full/dm_evidence.txt` records each one.
 
+Also computed, not in Lean (`scripts/search/seven.c`, output in `scripts/search/seven_search.txt`): there is no 3×3 magic square of nine distinct positive squares whose centre root is at most 10⁹, that is with magic sum at most 3·10¹⁸. Among the magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square (1999) and its multiples. The program lists, for every `x`, the Pythagorean triangles with hypotenuse `x` and tests every pair of them (2·10¹⁰ pairs, about 25 minutes). Squares with seven square entries and a centre that is not a square are not covered. I do not know how far unpublished searches have gone; this is not claimed as a record.
+
 An earlier audit of the same family, restricted to three of the five forms, is in [archive/](archive/KEPLER71_G1_AUDIT.md). Its numbers are superseded.
 
 ## What is not proved
