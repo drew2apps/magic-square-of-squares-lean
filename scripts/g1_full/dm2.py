@@ -21,7 +21,7 @@ def dm2(m, n):
     if not (lo == 1 and hi == 1): out['status'] = 'rank not 1'; return out
     Em = E.minimal_model(); iso = Em.isomorphism_to(E)
     Ep = Em.pari_curve(); pts = []
-    for effort in (0, 1, 2, 3):
+    for effort in (0, 1, 2, 3, 4, 5):
         pts = Ep.ellrank(effort)[3]
         if len(pts) >= 1: break
     if len(pts) != 1: out['status'] = 'no point found'; return out

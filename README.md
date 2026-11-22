@@ -36,7 +36,9 @@ The [Wikipedia article](https://en.wikipedia.org/wiki/Magic_square_of_squares) (
 | 8 | A prime ≡ 3 (mod 4) dividing a corner divides the two edges that do not touch it | Rabern | `IsMSS.dvd_edges_of_dvd_corner` |
 | 9 | A prime ≡ 5 (mod 8) dividing a corner divides the centre and the opposite corner | Morgenstern | `IsMSS.dvd_center_of_dvd_corner` |
 
-Properties 3, 8 and 9 do not need the square to be primitive. Theorems 7 and 9 are proved for primes ≡ 3 (mod 8) as well.
+Properties 3, 8 and 9 do not need the square to be primitive. Theorems 7 and 9 are proved for primes ≡ 3 (mod 8) as well; for property 9 this is already in Rabern's paper.
+
+Checked against Rabern (2003), read on 21 November 2026: property 1 is his Theorem 1.1, property 6 is Theorem 1.2, property 5 is Corollary 1.1, property 7 is Theorem 1.4, property 8 is Theorem 1.5, each with the same hypothesis (entries without a common factor) and the same conclusion. Property 9, which Wikipedia cites to Morgenstern, is contained in Rabern's Theorem 1.3: a prime ≡ 3 or 5 (mod 8) dividing a non-centre entry divides the centre and the other entry in that line.
 
 ### Other results
 
@@ -70,7 +72,7 @@ All of this is about 3×3 squares. Write the roots of a magic square of squares 
 | Statement | Lean name |
 |---|---|
 | `m² + n²` is a square modulo 7, 17, 31 and 47, and every prime `≡ 5 (mod 8)` divides it to an even power | `IsMSS.edge_norm`, `IsMagicSquareOfSquares.edge_norm` |
-| Either `m² + n²` is a square or twice a square, or a prime `≡ 1 (mod 8)` divides the centre root `e` | `IsMSS.norm_isSquare_or_prime_dvd_center` |
+| `m² + n²` divides `8e²`. Either `m² + n²` is a square or twice a square, or a prime `≡ 1 (mod 8)` divides the centre root `e` | `IsMSS.norm_dvd_center`, `IsMSS.norm_isSquare_or_prime_dvd_center`, `IsMagicSquareOfSquares.centre` |
 | `m : n` lies in none of 484 residue classes at 34 primes | `IsMSS.ratio_not_in_class`, `G1.fullTable_valid` |
 | In particular `m : n` is not one of the coprime pairs `1 ≤ n < m ≤ 1000` outside 425 listed pairs (60 of them up to 200) | `IsMSS.ratio_ne_of_le_1000` |
 | The same for the five forms of the G1 family: no rational `t` makes them squares | `G1.no_solution_le_1000` |
@@ -79,7 +81,7 @@ All of this is about 3×3 squares. Write the roots of a magic square of squares 
 
 The first three rows have no bound on the size of the entries. The signs of the roots are arbitrary, so the theorems also apply with `b − d` or `h − f`. The ratios excluded by rows 1 and 3 have density 1 among all ratios (argued in G1_FULL_SYSTEM.md, not in Lean); this does not decide the problem. The bound 500 is far below what computer searches have covered.
 
-Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 118 more by the Demjanenko–Manin argument on three curves of rank 1, and 39 are open (5 of them up to 200). These computations depend on PARI, Sage and derivations that nobody has checked; `scripts/g1_full/dm_evidence.txt` records each one.
+Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 119 more by the Demjanenko–Manin argument on three curves of rank 1, and 38 are open (5 of them up to 200). These computations depend on PARI, Sage and derivations that nobody has checked; `scripts/g1_full/dm_evidence.txt` records each one.
 
 An earlier audit of the same family, restricted to three of the five forms, is in [archive/](archive/KEPLER71_G1_AUDIT.md). Its numbers are superseded.
 
@@ -89,7 +91,7 @@ An earlier audit of the same family, restricted to three of the five forms, is i
 - Any lower bound on the size of the entries beyond "an edge root exceeds 500" (an edge entry exceeds 250,000), which is far below what computer searches have covered.
 - Anything about the 425 excepted ratios up to 1000, or about the ratios above 1000 that lie in none of the 484 classes and pass the condition at primes `≡ 5 (mod 8)`. For 306 of the 425 the system has a degenerate solution and no congruence can help. This sieve cannot settle the problem by itself, and it does not transfer to the other natural ways of cutting the problem into curves (see [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md)).
 - That the list of 34 obstructing primes is complete, and anything about obstructions modulo prime powers other than the statement on primes `≡ 5 (mod 8)`. The first is computed, the second is not studied.
-- The Lean proofs use congruences and algebraic identities only. The rank, generator and height computations behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) (268 pairs by rank 0, 118 by the Demjanenko–Manin argument) are not formalized, and the derivations behind the 118 have not been checked by anyone. The density statement is argued in prose.
+- The Lean proofs use congruences and algebraic identities only. The rank, generator and height computations behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) (268 pairs by rank 0, 119 by the Demjanenko–Manin argument) are not formalized, and the derivations behind the 119 have not been checked by anyone. The density statement is argued in prose.
 - Any search bound, and any result that needs the arithmetic of curves (Bremner 1999 and 2001) or the geometry of the surface of magic squares of squares (Bruin–Thomas–Várilly-Alvarado, Auel–Singer).
 - The existence of magic squares of squares for every size from 4×4 up (Rome–Yamagishi). Only Euler's 4×4 example is checked.
 
@@ -124,7 +126,7 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/G1Norm.lean` | The conditions on `m² + n²`; why only primes `±1 (mod 8)` obstruct |
 | `MagicSquareOfSquares/G1Statement.lean` | The size bound and the conditions on `m² + n²` for the matrix form |
 | `MagicSquareOfSquares/G1Centre.lean` | `m² + n²` divides `8e²`; a prime `≡ 1 (mod 8)` divides the centre root unless `m² + n²` is a square or twice a square |
-| `MagicSquareOfSquares/G1Relations.lean` | The algebra of the relations used by the Demjanenko–Manin computation |
+| `MagicSquareOfSquares/G1Relations.lean` | Curve-membership algebra for the Demjanenko–Manin computation, and the partner symmetry |
 | `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind the archived audit |
 | `scripts/g1_full/` | The scans behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) |
 | `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |
@@ -140,13 +142,13 @@ lake build
 lake env lean scripts/Audit.lean
 ```
 
-On GitHub's runner the build takes about 15 minutes; `G1FullCertificates.lean` needs about 5 GB of memory. The audit takes about four minutes. At this commit it prints `AUDIT OK: 463 theorems (including auxiliary ones), standard axioms only`; the sources declare 224 theorems, and the rest are auxiliary theorems that Lean generates. The audit checks axioms only. That the generated certificate files are the ones their scripts produce is checked separately in CI.
+On GitHub's runner the build takes about 15 minutes from an empty cache and about 5 minutes with the cache; `G1FullCertificates.lean` needs about 5 GB of memory. The audit takes about four minutes. Its last line has the form `AUDIT OK: N theorems (including auxiliary ones), standard axioms only`, and CI copies that line into the summary of each run; at version 0.3.1 `N` is 478, against 229 theorems declared in the sources (the rest are auxiliary theorems that Lean generates). The audit checks axioms only. CI also checks that the generated certificate files are the ones their scripts produce, and runs `scripts/g1_full/check_evidence.py`.
 
 ## How this was made, and its limits
 
 - The Lean code was written by Claude (an AI model made by Anthropic), directed by Drew (`drew2apps`). The proofs do not rest on trust in either: the Lean kernel checks them.
 - The kernel checks proofs, not whether a statement says what was intended. The statements are short. Please read them, and open an issue if one does not match its source.
-- The statements follow the Wikipedia list. The original papers by Rabern, Zimmermann, Morgenstern and Robertson were not consulted, and the proofs here were written independently of them.
+- The statements follow the Wikipedia list. Rabern's paper was read afterwards and its theorems agree with properties 1, 5, 6, 7, 8 and contain 9. The papers by Zimmermann, Morgenstern and Robertson were not consulted. The proofs here were written independently of all of them.
 
 ## Sources
 

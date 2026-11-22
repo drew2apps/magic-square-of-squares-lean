@@ -7,7 +7,7 @@ authors:
     given-names: Drew
 repository-code: "https://github.com/drew2apps/magic-square-of-squares-lean"
 license: Apache-2.0
-version: 0.3.0
+version: 0.3.1
 date-released: 2026-11-21
 abstract: >-
   Lean 4 proofs of the known necessary conditions and reformulations for a 3x3 magic square of

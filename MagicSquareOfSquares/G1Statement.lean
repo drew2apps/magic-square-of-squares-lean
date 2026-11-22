@@ -1,5 +1,6 @@
 import MagicSquareOfSquares.G1Size
 import MagicSquareOfSquares.G1Norm
+import MagicSquareOfSquares.G1Centre
 import MagicSquareOfSquares.Statement
 
 /-!
@@ -13,6 +14,9 @@ used in formal-conjectures. The edge entries are `m 0 1`, `m 1 0`, `m 1 2`, `m 2
   Only three inequalities between edge entries are used; they hold when the nine entries are
   distinct.
 * `IsMagicSquareOfSquares.edge_norm`: the conditions on `m² + n²` of `IsMSS.edge_norm`.
+* `IsMagicSquareOfSquares.centre`: the statement on the centre of `G1Centre.lean`.
+* `isMSS_ones`: the square with nine entries `1` satisfies `IsMSS`, so the hypotheses used
+  throughout are not contradictory.
 -/
 
 namespace MagicSquareOfSquares
@@ -80,5 +84,56 @@ theorem IsMagicSquareOfSquares.edge_norm {m : Fin 3 → Fin 3 → ℕ} {t : ℕ}
   have n2 : ((r 2 1 : ℤ) + (r 1 2 : ℤ)).natAbs = r 2 1 + r 1 2 := by omega
   rw [n1, n2] at e1 e2
   exact ⟨r, hr, μ, ν, hcop, e1, e2, hq, h5⟩
+
+/-- For the matrix form: if `m 0 1 ≠ m 1 0` and `m 2 1 ≠ m 1 2`, with `μ : ν` the ratio
+`(r 0 1 + r 1 0) : (r 2 1 + r 1 2)` of the roots in lowest terms, either `μ² + ν²` is a square or
+twice a square, or a prime `p ≡ 1 (mod 8)` divides the centre root `r 1 1` and divides
+`μ² + ν²` to an odd power. -/
+theorem IsMagicSquareOfSquares.centre {m : Fin 3 → Fin 3 → ℕ} {t : ℕ}
+    (H : IsMagicSquareOfSquares m t) (h1 : m 0 1 ≠ m 1 0) (h2 : m 2 1 ≠ m 1 2) :
+    ∃ r : Fin 3 → Fin 3 → ℕ, (∀ i j, m i j = r i j ^ 2) ∧ ∃ μ ν : ℕ, Nat.Coprime μ ν ∧
+      r 0 1 + r 1 0 = μ * Nat.gcd (r 0 1 + r 1 0) (r 2 1 + r 1 2) ∧
+      r 2 1 + r 1 2 = ν * Nat.gcd (r 0 1 + r 1 0) (r 2 1 + r 1 2) ∧
+      (IsSquare (μ * μ + ν * ν) ∨ IsSquare (2 * (μ * μ + ν * ν)) ∨
+        ∃ p : ℕ, p.Prime ∧ p % 8 = 1 ∧ p ∣ r 1 1 ∧ Odd (padicValNat p (μ * μ + ν * ν))) := by
+  obtain ⟨r, hr, hs⟩ := H.exists_roots
+  have hbd : (r 0 1 : ℤ) ≠ (r 1 0 : ℤ) := by
+    intro h
+    apply h1
+    have h' : r 0 1 = r 1 0 := by exact_mod_cast h
+    rw [hr 0 1, hr 1 0, h']
+  have hY : 0 < r 2 1 + r 1 2 := by
+    rcases Nat.eq_zero_or_pos (r 2 1 + r 1 2) with h0 | h0
+    · exfalso
+      have ha : r 2 1 = 0 := by omega
+      have hb : r 1 2 = 0 := by omega
+      apply h2
+      rw [hr 2 1, hr 1 2, ha, hb]
+    · exact h0
+  have hne : (r 2 1 : ℤ) + (r 1 2 : ℤ) ≠ 0 := by
+    have h0 : (0 : ℤ) < (r 2 1 : ℤ) + (r 1 2 : ℤ) := by exact_mod_cast hY
+    exact h0.ne'
+  obtain ⟨μ, ν, hcop, e1, e2⟩ := Nat.exists_coprime (r 0 1 + r 1 0) (r 2 1 + r 1 2)
+  have hν : 0 < ν := by
+    rcases Nat.eq_zero_or_pos ν with h0 | h0
+    · rw [h0, zero_mul] at e2
+      omega
+    · exact h0
+  have hN : (r 0 1 + r 1 0) * ν = (r 2 1 + r 1 2) * μ := by
+    calc (r 0 1 + r 1 0) * ν
+        = (μ * Nat.gcd (r 0 1 + r 1 0) (r 2 1 + r 1 2)) * ν := by rw [← e1]
+      _ = (ν * Nat.gcd (r 0 1 + r 1 0) (r 2 1 + r 1 2)) * μ := by ring
+      _ = (r 2 1 + r 1 2) * μ := by rw [← e2]
+  have hmn : ((r 0 1 : ℤ) + (r 1 0 : ℤ)) * (ν : ℤ) = ((r 2 1 : ℤ) + (r 1 2 : ℤ)) * (μ : ℤ) := by
+    exact_mod_cast hN
+  rcases hs.norm_isSquare_or_prime_dvd_center hν hcop hmn hne hbd with
+    h | h | ⟨p, hp, hp8, hpe, hodd⟩
+  · exact ⟨r, hr, μ, ν, hcop, e1, e2, Or.inl h⟩
+  · exact ⟨r, hr, μ, ν, hcop, e1, e2, Or.inr (Or.inl h)⟩
+  · exact ⟨r, hr, μ, ν, hcop, e1, e2, Or.inr (Or.inr ⟨p, hp, hp8, by exact_mod_cast hpe, hodd⟩)⟩
+
+/-- The square with nine entries `1` is a magic square of squares in the sense of `IsMSS`. -/
+theorem isMSS_ones : IsMSS 1 1 1 1 1 1 1 1 1 3 := by
+  refine IsMagic.mk ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;> norm_num
 
 end MagicSquareOfSquares

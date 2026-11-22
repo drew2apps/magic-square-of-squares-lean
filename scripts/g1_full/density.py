@@ -5,8 +5,8 @@ Height of a ratio m : n (coprime, 1 <= n < m) is m. Two conditions:
   A: m : n lies in one of the 484 obstructed classes of modp_classes.txt;
   B: some prime p = 5 (mod 8) divides m^2 + n^2 to an odd power.
 Prints the exact counts for m <= 1000, the product of (1 - c_p/(p+1)), and, for a sample of
-20000 pairs drawn with the fixed seed below (m uniform in [2, H], n uniform in [1, m-1], kept if
-coprime), the proportion that fails B ("passes the condition")."""
+20000 pairs drawn uniformly from the coprime pairs 1 <= n < m <= H with the fixed seed below
+(m and n uniform in [1, H], kept if n < m and coprime), the proportion that does not satisfy B."""
 import collections, math, os, random
 here = os.path.dirname(os.path.abspath(__file__))
 cls = collections.defaultdict(set)
@@ -41,7 +41,7 @@ random.seed(1)
 for H in (10**3, 10**4, 10**5, 10**6):
     k = s = 0
     while k < 20000:
-        m = random.randint(2, H); n = random.randint(1, m - 1)
-        if math.gcd(m, n) != 1: continue
+        m = random.randint(1, H); n = random.randint(1, H)
+        if n >= m or math.gcd(m, n) != 1: continue
         k += 1; s += not cond_b(m * m + n * n)
-    print('H = %d: %.4f of the sample fails B' % (H, s / k))
+    print('H = %d: %.4f of the sample does not satisfy B' % (H, s / k))

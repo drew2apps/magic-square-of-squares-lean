@@ -1,13 +1,15 @@
-# Evidence for Result 4 of G1_FULL_SYSTEM.md: one line for each of the 118 closed pairs.
+# Evidence for Result 4 of G1_FULL_SYSTEM.md: one line for each of the 119 closed pairs.
 # Produced on 2026-11-21 by dm.py (E04), dm2.py (D1), dm3.py (E0L) with passagemath 10.8.14 (Sage),
 # PARI 2.17.4 through cypari2, eclib as shipped with passagemath-eclib, Python 3.13.18.
 # Fields: pair; pair for which the curve was run (the pair or its partner); curve; x-coordinate of the
 # generator G on the model used by the script; canonical height hG; Silverman bound B; amax = bound
-# on |a| used in the enumeration (the proved bound times 1.02, rounded down, plus 2; plus 3 for E0L);
+# on |a| used in the enumeration: the proved bound times 1.02, rounded down, plus 2 (for E0L the
+# proved bound is W + |rho|/2 and the script lists up to 1.02 (W + |rho|), rounded down, plus 3). The
+# margin is a safety factor against rounding in the floating-point heights, not interval arithmetic;
 # tors = order of the torsion subgroup; cand = number of candidate points tested;
-# how G was proved to be a generator: mwrank = eclib gens(proof=True); sat-eclib = a known point
+# PARI ellrank gave rank bounds [1, 1] in every line. How G was proved to be a generator: mwrank = eclib gens(proof=True); sat-eclib = a known point
 # saturated by eclib with its own index bound; sat<=N,hmin=H = a PARI point saturated at all primes
-# <= N, where N follows from the lower bound H for the canonical height of non-torsion points
+# <= N (the index of the point is at most N - 1), where N follows from the lower bound H for the canonical height of non-torsion points
 # (Sage height_function().min(0.01, 20)); for E0L also C1, K, rho of dm3.py and the largest observed
 # value of |2 h(sigma) - hhat(Q) - hhat(R0 - Q)|, which must be below K;
 # t = the rational t at which all five forms are squares (deg = degenerate square). No line has a
@@ -130,3 +132,4 @@
 747,107 747,107 E0L G=-27023534480 hG=25.5127 B=42.520 amax=12 tors=4 cand=100 sat<=5,hmin=1.5760 C1=104.43 K=190.17 rho=-1 worst=40.02 t=[]
 560,33 560,33 E0L G=-33009722240 hG=25.6729 B=42.703 amax=12 tors=4 cand=100 sat<=3,hmin=6.2699 C1=103.24 K=189.34 rho=-1 worst=40.58 t=[]
 593,527 593,527 E0L G=-33009722240 hG=25.6729 B=42.703 amax=11 tors=4 cand=92 sat<=3,hmin=6.2699 C1=99.96 K=186.06 rho=1 worst=37.78 t=[]
+784,391 784,391 D1 G=0 hG=13.3913 B=125.996 amax=21 tors=2 cand=43 sat<=122,hmin=0.0009 t=[]

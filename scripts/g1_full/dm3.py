@@ -13,9 +13,13 @@ so [1 : sum : product] is the image of sigma under a degree-2 map P^1 -> P^2, an
 C1 = log of the larger row-sum norm of the integer matrix of the map and of its adjugate.
 With Silverman's bound B:  | 2 h(sigma(Q)) - hhat(Q) - hhat(R0 - Q) | <= K = C1 + log 2 + 2B,
 and | h(t) - h(sigma) | <= h(t1) + log 2.
-If E(Q) = <G> (rank 1, no torsion), Q = aG, R0 = rho G:  hhat(Q) + hhat(R0 - Q) = hG (a^2 + (rho - a)^2).
-For Q1 = a1 G, Q2 = a2 G with t(Q2) = -t(Q1):  2 |a1 - a2| |a1 + a2 - rho| hG <= 2K + 4(h(t1) + log 2).
-So a1 = a2 or a1 + a2 = rho (both force t = 0), or |a1| <= W + |rho|/2 with W the right side over 2 hG."""
+If E(Q) = <G> + torsion (rank 1), Q = aG + T, R0 = rho G + T0:  hhat(Q) + hhat(R0 - Q) = hG (a^2 + (rho - a)^2).
+For Q1 = a1 G + T1, Q2 = a2 G + T2 with t(Q2) = -t(Q1):  2 |a1 - a2| |a1 + a2 - rho| hG <= 2K + 4(h(t1) + log 2).
+So either |a1| <= W + |rho|/2, with W the right side over 2 hG: these points are listed, for every torsion point T;
+or a1 = a2 or a1 + a2 = rho: then Q2 = Q + T'' with T'' torsion and Q = Q1 or R0 - Q1 (which has the same t),
+so t(Q + T'') = -t(Q). For T'' = O this forces t = 0; for the other torsion points it is a polynomial equation
+in t, solved at the end. The output records C1, K, rho, W and the largest observed value of
+|2 h(sigma) - hhat(Q) - hhat(R0 - Q)|, which must be below K."""
 import sys, json, math, time
 from fractions import Fraction as Fr
 from sage.all__sagemath_schemes import *

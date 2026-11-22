@@ -5,8 +5,10 @@ import Mathlib.Tactic
 
 `G1_FULL_SYSTEM.md`, Result 4, uses two elliptic curves, each with two rational points coming
 from one solution `t` of the five-form system. The rank and height computations of that result
-are outside Lean. This file checks only the algebra: the points lie on the stated curves, on the
-same curve and not on a twist.
+are outside Lean. This file checks only the algebra of curve membership: for arbitrary rational
+`m`, `n`, `t` the stated abscissas give a square times the stated product of forms, so when the
+forms are squares the points are rational points of the stated curves, of the same curve and not
+of a twist. It does not prove anything about ranks, generators or heights.
 
 Integer forms: `F0 = m² + n²t²`, `F8 = n² + m²t²`, `G4 = 2(m² + n²)(t² + 1)`,
 `GL = G4 − 8mnt`, `GU = G4 + 8mnt`.
@@ -17,6 +19,12 @@ Integer forms: `F0 = m² + n²t²`, `F8 = n² + m²t²`, `G4 = 2(m² + n²)(t² 
 * Curve `D1: y² = d1 m n x`. With `c0 = −16Smn(m² − n²)²` and `z = t + 1/t`, at `x = c0/z` the
   right side is a square times `F0·F8·G4·GL` (`d1_point`), and at `x = −c0/z` it is a square times
   `F0·F8·G4·GU` (`d1_point'`). The two abscissas are opposite.
+* Curve `E0L: y² = F0(t)·GL(t)`. Its value at `−t` is `F0(t)·GU(t)` (`e0l_point`), and `t = m/n`
+  is a rational point (`e0l_base`).
+* The partner pair: with `M = m + n`, `N = m − n` and `t' = (t + 1)/(t − 1)`, the five forms of
+  `(M, N)` at `t'` are the five forms of `(m, n)` at `t`, in another order, times squares
+  (`partner_forms`). When `m`, `n` are both odd the scripts use `(M/2, N/2)`, which divides every
+  form by `4`.
 -/
 
 namespace MagicSquareOfSquares.G1
@@ -65,5 +73,33 @@ theorem d1_point' (m n t : ℚ) :
   unfold d1
   field_simp
   ring
+
+theorem e0l_point (m n t : ℚ) :
+    (m ^ 2 + n ^ 2 * (-t) ^ 2) * (2 * (m ^ 2 + n ^ 2) * ((-t) ^ 2 + 1) - 8 * m * n * (-t)) =
+      (m ^ 2 + n ^ 2 * t ^ 2) * (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) + 8 * m * n * t) := by
+  ring
+
+theorem e0l_base (m n : ℚ) (hn : n ≠ 0) :
+    (m ^ 2 + n ^ 2 * (m / n) ^ 2) *
+        (2 * (m ^ 2 + n ^ 2) * ((m / n) ^ 2 + 1) - 8 * m * n * (m / n)) =
+      (2 * m * (m ^ 2 - n ^ 2) / n) ^ 2 := by
+  field_simp
+  ring
+
+/-- The five forms of the partner pair `(m + n, m − n)` at `(t + 1)/(t − 1)`. -/
+theorem partner_forms (m n t : ℚ) (ht : t - 1 ≠ 0) :
+    (m + n) ^ 2 + (m - n) ^ 2 * ((t + 1) / (t - 1)) ^ 2 =
+        (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) - 8 * m * n * t) / (t - 1) ^ 2 ∧
+      (m - n) ^ 2 + (m + n) ^ 2 * ((t + 1) / (t - 1)) ^ 2 =
+        (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) + 8 * m * n * t) / (t - 1) ^ 2 ∧
+      2 * ((m + n) ^ 2 + (m - n) ^ 2) * (((t + 1) / (t - 1)) ^ 2 + 1) =
+        2 ^ 2 * (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1)) / (t - 1) ^ 2 ∧
+      2 * ((m + n) ^ 2 + (m - n) ^ 2) * (((t + 1) / (t - 1)) ^ 2 + 1) -
+          8 * (m + n) * (m - n) * ((t + 1) / (t - 1)) =
+        4 ^ 2 * (m ^ 2 + n ^ 2 * t ^ 2) / (t - 1) ^ 2 ∧
+      2 * ((m + n) ^ 2 + (m - n) ^ 2) * (((t + 1) / (t - 1)) ^ 2 + 1) +
+          8 * (m + n) * (m - n) * ((t + 1) / (t - 1)) =
+        4 ^ 2 * (n ^ 2 + m ^ 2 * t ^ 2) / (t - 1) ^ 2 := by
+  refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> field_simp <;> ring
 
 end MagicSquareOfSquares.G1
