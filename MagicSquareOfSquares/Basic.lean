@@ -43,21 +43,25 @@ theorem corner (H : IsMSS a b c d e f g h i T) :
 
 end IsMSS
 
-/-- `x² = 2y²` has only the zero solution in integers. -/
+/-- `x² = 2y²` has only the zero solution in integers. The proof compares the powers of `2`
+on the two sides: even on the left, odd on the right. -/
 theorem eq_zero_of_sq_eq_two_mul_sq {x y : ℤ} (hxy : x ^ 2 = 2 * y ^ 2) : x = 0 ∧ y = 0 := by
   by_cases hy : y = 0
   · subst hy
     refine ⟨?_, rfl⟩
     simpa using hxy
   · exfalso
-    have hy' : (y : ℝ) ≠ 0 := by exact_mod_cast hy
-    have h2 : ((x : ℝ) / y) ^ 2 = 2 := by
-      rw [div_pow, div_eq_iff (pow_ne_zero 2 hy')]
-      exact_mod_cast hxy
-    have hs : Real.sqrt 2 = |(x : ℝ) / y| := by
-      rw [← h2, Real.sqrt_sq_eq_abs]
-    have hirr : Irrational |(x : ℝ) / y| := hs ▸ irrational_sqrt_two
-    exact hirr ⟨|(x : ℚ) / y|, by push_cast; rfl⟩
+    have hx : x ≠ 0 := by
+      rintro rfl
+      have h0 : y ^ 2 = 0 := by
+        have h1 : (0 : ℤ) ^ 2 = 0 := by norm_num
+        linarith
+      exact hy ((pow_eq_zero_iff two_ne_zero).mp h0)
+    have h := congrArg (padicValInt 2) hxy
+    have h2 : padicValInt 2 (2 : ℤ) = 1 := by simp [padicValInt]
+    rw [sq, sq, padicValInt.mul hx hx, padicValInt.mul two_ne_zero (mul_ne_zero hy hy),
+      padicValInt.mul hy hy, h2] at h
+    omega
 
 /-- A sum of two integer squares is zero only if both are zero. -/
 theorem eq_zero_of_sq_add_sq_eq_zero {x y : ℤ} (hxy : x ^ 2 + y ^ 2 = 0) : x = 0 ∧ y = 0 := by

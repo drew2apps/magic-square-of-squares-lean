@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Writes MagicSquareOfSquares/G1SizeCheck.lean: for every two exceptional pairs (M, N) and (p, q)
 with m <= 1000, the five forms for (p, q) at (N, M) and at (M, N) are not all squares, because one
-of them is a non-residue modulo one of the 34 primes. The kernel checks this in parts."""
-import math, os, re
+of them is a non-residue modulo one of 18 small primes. The kernel checks this in parts."""
+import ast, math, os, re
 here = os.path.dirname(os.path.abspath(__file__))
 src = open(os.path.join(here, '..', '..', 'MagicSquareOfSquares', 'G1Census1000.lean'), encoding='utf-8').read()
-exc = eval(re.search(r'def exceptions1000 : List \(ℕ × ℕ\) := (\[.*?\])\n', src).group(1))
+exc = ast.literal_eval(re.search(r'def exceptions1000 : List \(ℕ × ℕ\) := (\[.*?\])\n', src).group(1))
 # The 34 primes of the sieve are all +-1 mod 8, so they never detect a form of the shape 2 x square.
 # Here any modulus will do; small primes of both kinds are used, those that are 3 or 5 mod 8 first.
 primes = [3, 5, 11, 13, 19, 29, 37, 43, 7, 17, 23, 31, 41, 47, 53, 59, 61, 67]

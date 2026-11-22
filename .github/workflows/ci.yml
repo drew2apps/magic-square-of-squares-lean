@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Generated Lean files match their generators
+        run: |
+          python3 scripts/g1_full/gen_lean.py
+          python3 scripts/g1_full/gen_census1000.py
+          python3 scripts/g1_full/gen_sizecheck.py
+          git diff --exit-code
       - uses: leanprover/lean-action@v1
       - name: Axiom audit
         run: lake env lean scripts/Audit.lean

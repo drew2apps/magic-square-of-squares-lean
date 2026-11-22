@@ -19,3 +19,5 @@ import MagicSquareOfSquares.G1Bridge
 import MagicSquareOfSquares.G1Census1000
 import MagicSquareOfSquares.G1SizeCheck
 import MagicSquareOfSquares.G1Size
+import MagicSquareOfSquares.G1Norm
+import MagicSquareOfSquares.G1Statement
