@@ -1,0 +1,11 @@
+# Run of local_all_census.py on 2026-11-22: 'python3 local_all_census.py S 4' for S = 0, 1, 2, 3.
+# Python 3.13.18, cypari2 with PARI 2.17.4. Columns: shard, pairs, agreements with Result 1b, differences,
+# pairs with an undecided prime, pairs with no prime of insolubility.
+0  50830  50830 0 0 141
+1 101212 101212 0 0 139
+2  50701  50701 0 0   0
+3 101448 101448 0 0 145
+total 304191 304191 0 0 425
+# Primes tested for each pair: all primes below 700 and all primes dividing 2mn(m^2-n^2)(m^2+n^2)(m^8+14m^4n^4+n^8).
+# Separate run, default bound 20000: 'python3 local_all.py 724,665 740,539 820,799 828,173 840,83 889,320 923,757'
+# gave 'insoluble at [] undecided at []' for each of the seven pairs (2264 or 2265 primes each).

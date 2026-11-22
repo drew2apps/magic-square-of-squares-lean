@@ -3,10 +3,11 @@
 
 1. Unit tests of classify_t, the exact test applied to every candidate t in dm.py, dm2.py, dm3.py.
    The function is taken from the source of dm.py without importing Sage.
-2. Consistency of dm_evidence.txt, dm_closures.txt and open_pairs_1000.txt: 157 pairs, 119 closed
-   (91 E04, 22 D1, 6 E0L), 38 open, no overlap; every recorded t is degenerate; the listed bound
+2. Consistency of dm_evidence.txt, dm_closures.txt and open_pairs_1000.txt: 157 pairs, 121 closed
+   (91 E04, 24 D1, 6 E0L), 36 open, no overlap; every recorded t is re-tested and is degenerate; the listed bound
    amax is at least the bound that follows from the recorded heights.
-This does not check the heights, generators or ranks themselves."""
+3. Every recorded E04 and D1 generator is a rational point of its curve with y != 0.
+This does not check the heights, the ranks, that the points generate, or the E0L generators."""
 import ast, math, os, re, sys
 from fractions import Fraction as Fr
 here = os.path.dirname(os.path.abspath(__file__))
@@ -44,7 +45,7 @@ for l in lines:
     if l and not l.startswith('#'): all157 |= set(pairs(l))
 assert len(all157) == 157
 ev = [l.split() for l in open(os.path.join(here, 'dm_evidence.txt')) if l.strip() and not l.startswith('#')]
-assert len(ev) == 119
+assert len(ev) == 121
 closed = set(); meth = {'E04': 0, 'D1': 0, 'E0L': 0}
 def partner(m, n): return (m + n, m - n) if (m + n) % 2 else ((m + n) // 2, (m - n) // 2)
 for r in ev:
@@ -70,13 +71,13 @@ for r in ev:
         K = float(f['K']); m, n = run
         W = (2 * K + 4 * (math.log(max(m, n)) + math.log(2))) / (2 * hG)
         assert amax >= W + abs(int(f['rho'])) / 2 and float(f['worst']) < K, r[:3]
-assert meth == {'E04': 91, 'D1': 22, 'E0L': 6}, meth
+assert meth == {'E04': 91, 'D1': 24, 'E0L': 6}, meth
 assert closed <= all157
 cl = open(os.path.join(here, 'dm_closures.txt')).read().split('\n')
 still = set()
 for i, l in enumerate(cl):
     if l.startswith('# Still open'): still |= set(pairs(cl[i + 1]))
-assert len(still) == 38 and not (still & closed) and (still | closed) == all157
+assert len(still) == 36 and not (still & closed) and (still | closed) == all157
 listed = set(pairs(l.split()[0])[0] for l in cl if l and not l.startswith('#') and len(l.split()) == 4)
 assert listed == closed
-print('check_evidence OK: classify_t tests pass; 157 = 119 closed (91 E04, 22 D1, 6 E0L) + 38 open')
+print('check_evidence OK: classify_t tests pass; 157 = 121 closed (91 E04, 24 D1, 6 E0L) + 36 open')

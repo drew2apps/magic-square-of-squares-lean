@@ -83,7 +83,7 @@ All of this is about 3×3 squares. Write the roots of a magic square of squares 
 
 The first three rows have no bound on the size of the entries. The signs of the roots are arbitrary, so the theorems also apply with `b − d` or `h − f`. The ratios excluded by rows 1 and 3 have density 1 among all ratios (argued in G1_FULL_SYSTEM.md, not in Lean); this does not decide the problem. The bound 500 is far below what computer searches have covered.
 
-Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 119 more by the Demjanenko–Manin argument on three curves of rank 1, and 38 are open (5 of them up to 200). These computations depend on PARI, Sage and derivations that nobody has checked; `scripts/g1_full/dm_evidence.txt` records each one.
+Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 121 more by the Demjanenko–Manin argument on three curves of rank 1, and 36 are open (5 of them up to 200). These computations depend on PARI, Sage and derivations that nobody has checked; `scripts/g1_full/dm_evidence.txt` records each one.
 
 An earlier audit of the same family, restricted to three of the five forms, is in [archive/](archive/KEPLER71_G1_AUDIT.md). Its numbers are superseded.
 
@@ -93,7 +93,7 @@ An earlier audit of the same family, restricted to three of the five forms, is i
 - Any lower bound on the size of the entries beyond "an edge root exceeds 500" (an edge entry exceeds 250,000), which is far below what computer searches have covered.
 - Anything about the 425 excepted ratios up to 1000, or about the ratios above 1000 that lie in none of the 484 classes and pass the condition at primes `≡ 5 (mod 8)`. For 306 of the 425 the system has a degenerate solution and no congruence can help. This sieve cannot settle the problem by itself, and it does not transfer to the other natural ways of cutting the problem into curves (see [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md)).
 - That the list of 34 obstructing primes is complete, and anything about obstructions modulo prime powers other than the statement on primes `≡ 5 (mod 8)`. The first is computed, the second is not studied.
-- The Lean proofs use congruences and algebraic identities only. The rank, generator and height computations behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) (268 pairs by rank 0, 119 by the Demjanenko–Manin argument) are not formalized, and the derivations behind the 119 have not been checked by anyone. The density statement is argued in prose.
+- The Lean proofs use congruences and algebraic identities only. The rank, generator and height computations behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) (268 pairs by rank 0, 121 by the Demjanenko–Manin argument) are not formalized, and the derivations behind the 121 have not been checked by anyone. The density statement is argued in prose.
 - Any search bound, and any result that needs the arithmetic of curves (Bremner 1999 and 2001) or the geometry of the surface of magic squares of squares (Bruin–Thomas–Várilly-Alvarado, Auel–Singer).
 - The existence of magic squares of squares for every size from 4×4 up (Rome–Yamagishi). Only Euler's 4×4 example is checked.
 
@@ -129,7 +129,7 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/G1Statement.lean` | The size bound and the conditions on `m² + n²` for the matrix form |
 | `MagicSquareOfSquares/G1Centre.lean` | `m² + n²` divides `8e²`; a prime `≡ 1 (mod 8)` divides the centre root unless `m² + n²` is a square or twice a square |
 | `MagicSquareOfSquares/G1Relations.lean` | Curve-membership algebra for the Demjanenko–Manin computation, and the partner symmetry |
-| `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind the archived audit |
+| `scripts/g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | Further scans behind the archived audit |
 | `scripts/g1_full/` | The scans behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) |
 | `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |
 | `scripts/Audit.lean` | Lists every theorem and fails if any uses a non-standard axiom |
@@ -144,7 +144,7 @@ lake build
 lake env lean scripts/Audit.lean
 ```
 
-On GitHub's runner the build takes about 15 minutes from an empty cache; with the cache a whole CI run takes 4 to 5 minutes; `G1FullCertificates.lean` needs about 5 GB of memory. The audit takes about four minutes on a laptop and about two on the runner. Its last line has the form `AUDIT OK: N theorems (including auxiliary ones), standard axioms only`, and CI copies that line into the summary of each run; at version 0.3.2 `N` is 480, against 231 theorems declared in the sources; for version 0.3.1 the line `AUDIT OK: 478 theorems (including auxiliary ones), standard axioms only` is in the log of [CI run 44991834257](https://github.com/drew2apps/magic-square-of-squares-lean/actions/runs/44991834257) (the rest are auxiliary theorems that Lean generates). The audit checks axioms only. CI also checks that the generated certificate files are the ones their scripts produce, and runs `scripts/g1_full/check_evidence.py` and `scripts/g1_full/octic_check.py`.
+On GitHub's runner a CI run takes about 15 minutes from an empty cache. With the cache, the four runs of 21 and 22 November 2026 took between 3 min 47 s and 5 min 9 s in all, of which the audit step took between 1 min 49 s and 3 min 20 s; on a laptop the audit takes about four minutes. `G1FullCertificates.lean` needs about 5 GB of memory. The last line of the audit has the form `AUDIT OK: N theorems (including auxiliary ones), standard axioms only`, and CI copies that line into the summary of each run. At this commit `N` is 486, against 237 theorems declared in the sources (the rest are auxiliary theorems that Lean generates). The audit checks axioms only. CI also checks that the generated certificate files are the ones their scripts produce, and runs `scripts/g1_full/check_evidence.py` and `scripts/g1_full/octic_check.py`.
 
 ## How this was made, and its limits
 

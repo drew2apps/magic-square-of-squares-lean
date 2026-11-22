@@ -85,5 +85,5 @@ for line in open(os.path.join(here, 'modp_classes.txt')):
     p, r = int(w[0]), int(w[1]); total += 1
     if (pow(r, 8, p) + 14 * pow(r, 4, p) + 1) % p == 0: hits += 1
 print('3. obstructed classes read: %d; on the octic: %d' % (total, hits))
-assert hits == 0
+assert hits == 0 and total == 484
 print('octic_check OK')

@@ -1,4 +1,5 @@
 import Mathlib.Tactic
+import Mathlib.RingTheory.Coprime.Basic
 
 /-!
 # Curve-membership algebra for the Demjanenko–Manin computation
@@ -26,7 +27,14 @@ Integer forms: `F0 = m² + n²t²`, `F8 = n² + m²t²`, `G4 = 2(m² + n²)(t² 
 * The partner pair: with `M = m + n`, `N = m − n` and `t' = (t + 1)/(t − 1)`, the five forms of
   `(M, N)` at `t'` are the five forms of `(m, n)` at `t`, in another order, times squares
   (`partner_forms`). When `m`, `n` are both odd the scripts use `(M/2, N/2)`, which divides every
-  form by `4`.
+  form by `4` (`forms_double`). The partner pair is again coprime (`partner_coprime` when `m + n`
+  is odd, `partner_half_coprime` for the halved pair).
+* The quartic `v² = aτ⁴ + bτ³ + cτ² + dτ + q²` and its Weierstrass model, by the formulas
+  `dm3.py` uses (`quartic_to_weierstrass`). For `E0L`, `τ = t − m/n` and `q = 2m(m² − n²)/n`.
+  The further change to a minimal model is made by Sage and is not in Lean.
+* The octic `m⁸ + 14m⁴n⁴ + n⁸` of `G1_FULL_SYSTEM.md`, Result 1: it is a quarter of the
+  resultant of `F0` and `GL` (`resultant_F0_GL`), and modulo it `S²·F0·F8·GL·GU` is a square
+  (`octic_square`).
 -/
 
 namespace MagicSquareOfSquares.G1
@@ -103,5 +111,72 @@ theorem partner_forms (m n t : ℚ) (ht : t - 1 ≠ 0) :
           8 * (m + n) * (m - n) * ((t + 1) / (t - 1)) =
         4 ^ 2 * (n ^ 2 + m ^ 2 * t ^ 2) / (t - 1) ^ 2 := by
   refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> field_simp <;> ring
+
+/-- The five forms of `(2m, 2n)` are `4` times the five forms of `(m, n)`. -/
+theorem forms_double (m n t : ℚ) :
+    (2 * m) ^ 2 + (2 * n) ^ 2 * t ^ 2 = 4 * (m ^ 2 + n ^ 2 * t ^ 2) ∧
+    (2 * n) ^ 2 + (2 * m) ^ 2 * t ^ 2 = 4 * (n ^ 2 + m ^ 2 * t ^ 2) ∧
+    2 * ((2 * m) ^ 2 + (2 * n) ^ 2) * (t ^ 2 + 1) = 4 * (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1)) ∧
+    2 * ((2 * m) ^ 2 + (2 * n) ^ 2) * (t ^ 2 + 1) - 8 * (2 * m) * (2 * n) * t =
+      4 * (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) - 8 * m * n * t) ∧
+    2 * ((2 * m) ^ 2 + (2 * n) ^ 2) * (t ^ 2 + 1) + 8 * (2 * m) * (2 * n) * t =
+      4 * (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) + 8 * m * n * t) := by
+  refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> ring
+
+/-- If `m`, `n` are coprime and `m + n` is odd, the partner pair `(m + n, m − n)` is coprime. -/
+theorem partner_coprime (m n : ℤ) (h : IsCoprime m n) (hodd : Odd (m + n)) :
+    IsCoprime (m + n) (m - n) := by
+  obtain ⟨a, b, hab⟩ := h
+  obtain ⟨k, hk⟩ := hodd
+  exact ⟨1 - k * (a + b), -(k * (a - b)), by linear_combination hk - 2 * k * hab⟩
+
+/-- If `M + N` and `M − N` are coprime, so are `M` and `N`. With `M = (m + n)/2`, `N = (m − n)/2`
+for odd coprime `m`, `n` this says that the halved partner pair is coprime. -/
+theorem partner_half_coprime (M N : ℤ) (h : IsCoprime (M + N) (M - N)) : IsCoprime M N := by
+  obtain ⟨a, b, hab⟩ := h
+  exact ⟨a + b, a - b, by linear_combination hab⟩
+
+/-- A rational point `(τ, v)`, `τ ≠ 0`, of the quartic `v² = aτ⁴ + bτ³ + cτ² + dτ + q²` gives the
+point `(X, Y)` of the Weierstrass curve
+`Y² + (d/q)XY + 2qbY = X³ + (c − d²/(4q²))X² − 4q²aX − 4q²a(c − d²/(4q²))`. -/
+theorem quartic_to_weierstrass (a b c d q τ v X Y : ℚ) (hq : q ≠ 0) (hτ : τ ≠ 0)
+    (h : v ^ 2 = a * τ ^ 4 + b * τ ^ 3 + c * τ ^ 2 + d * τ + q ^ 2)
+    (hX : X = (2 * q * (v + q) + d * τ) / τ ^ 2)
+    (hY : Y = (4 * q ^ 2 * (v + q) + 2 * q * (d * τ + c * τ ^ 2) - d ^ 2 * τ ^ 2 / (2 * q)) / τ ^ 3) :
+    Y ^ 2 + d / q * X * Y + 2 * q * b * Y =
+      X ^ 3 + (c - d ^ 2 / (4 * q ^ 2)) * X ^ 2 - 4 * q ^ 2 * a * X -
+        4 * q ^ 2 * a * (c - d ^ 2 / (4 * q ^ 2)) := by
+  have h0 : v ^ 2 - (a * τ ^ 4 + b * τ ^ 3 + c * τ ^ 2 + d * τ + q ^ 2) = 0 := by rw [h]; ring
+  have hK : Y ^ 2 + d / q * X * Y + 2 * q * b * Y -
+      (X ^ 3 + (c - d ^ 2 / (4 * q ^ 2)) * X ^ 2 - 4 * q ^ 2 * a * X -
+        4 * q ^ 2 * a * (c - d ^ 2 / (4 * q ^ 2))) =
+      -(4 * c * q ^ 2 * τ ^ 2 - d ^ 2 * τ ^ 2 + 4 * d * q ^ 2 * τ + 8 * q ^ 4 + 8 * q ^ 3 * v) / τ ^ 6 *
+        (v ^ 2 - (a * τ ^ 4 + b * τ ^ 3 + c * τ ^ 2 + d * τ + q ^ 2)) := by
+    rw [hX, hY]
+    field_simp
+    ring
+  rw [h0, mul_zero] at hK
+  exact sub_eq_zero.mp hK
+
+/-- The resultant of `F0 = n²t² + m²` and `GL = 2St² − 8mnt + 2S` (for quadratics
+`at² + bt + c`, `At² + Bt + C` it is `(aC − cA)² − (aB − bA)(bC − cB)`) is four times the octic. -/
+theorem resultant_F0_GL (m n : ℚ) :
+    (n ^ 2 * (2 * (m ^ 2 + n ^ 2)) - m ^ 2 * (2 * (m ^ 2 + n ^ 2))) ^ 2 -
+      (n ^ 2 * (-8 * m * n) - 0 * (2 * (m ^ 2 + n ^ 2))) *
+        (0 * (2 * (m ^ 2 + n ^ 2)) - m ^ 2 * (-8 * m * n)) =
+    4 * (m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8) := by
+  ring
+
+/-- `S²·F0·F8·GL·GU` is a square plus a multiple of the octic. So modulo a prime dividing the
+octic and not dividing `S`, the product `F0·F8·GL·GU` is a square for every `t`. -/
+theorem octic_square (m n t : ℚ) :
+    (m ^ 2 + n ^ 2) ^ 2 * ((m ^ 2 + n ^ 2 * t ^ 2) * (n ^ 2 + m ^ 2 * t ^ 2) *
+      (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) - 8 * m * n * t) *
+      (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) + 8 * m * n * t)) =
+    (2 * m * n * ((m ^ 2 + n ^ 2) ^ 2 * (t ^ 4 + 1) +
+      (2 * (m ^ 2 + n ^ 2) ^ 2 - 16 * m ^ 2 * n ^ 2) * t ^ 2)) ^ 2 +
+    4 * (m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8) * t ^ 2 * ((m ^ 2 + n ^ 2) ^ 2 * (t ^ 4 + 1) +
+      (2 * (m ^ 2 + n ^ 2) ^ 2 - 16 * m ^ 2 * n ^ 2) * t ^ 2) := by
+  ring
 
 end MagicSquareOfSquares.G1

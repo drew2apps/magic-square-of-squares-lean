@@ -163,6 +163,7 @@ private theorem quad_scale {M : ℕ} {P Q R m n m' n' c c' a0 : ℤ}
   rw [e1]
   exact modEq_rhs ((modEq_rhs (h1.mul_right _) e2).trans h2) (by ring)
 
+-- Not `private`: `G1Size.lean` uses this theorem.
 theorem sqFive_of_solution {m n m' n' M u v u₀ V : ℕ} (hM : 0 < M)
     {c c' w a b c3 d e : ℤ}
     (hm : (m : ℤ) ≡ c * m' [ZMOD M]) (hn : (n : ℤ) ≡ c * n' [ZMOD M])

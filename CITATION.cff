@@ -7,7 +7,11 @@ authors:
     given-names: Drew
 repository-code: "https://github.com/drew2apps/magic-square-of-squares-lean"
 license: Apache-2.0
-version: 0.3.2
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.24435351
+    description: "Zenodo concept DOI; resolves to the latest archived version"
+version: 0.3.3
 date-released: 2026-11-21
 abstract: >-
   Lean 4 proofs of the known necessary conditions and reformulations for a 3x3 magic square of

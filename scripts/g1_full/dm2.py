@@ -12,12 +12,14 @@ from fractions import Fraction as Fr
 from sage.all__sagemath_schemes import *
 from dm import classify_t, issq, sqrt_fr, tight_bounds
 
+EXT_UPPER = None
 def dm2(m, n):
     S = m*m + n*n; D2 = (m*m - n*n)**2
     c3 = 4*S*S*m*m*n*n; c2 = -16*S*m**3*n**3; c1 = 4*S*S*D2; c0 = -16*S*m*n*D2
     E = EllipticCurve(QQ, [0, c1, 0, c0*c2, c0*c0*c3])
     lo, hi, _pts = tight_bounds(E)
     out = dict(pair=[m, n], curve='D1', rank=[lo, hi])
+    if EXT_UPPER is not None and lo == 1: hi = min(hi, EXT_UPPER); out['rank'] = [lo, hi]; out['upper'] = 'external'
     if not (lo == 1 and hi == 1): out['status'] = 'rank not 1'; return out
     Em = E.minimal_model(); iso = Em.isomorphism_to(E)
     Ep = Em.pari_curve(); pts = []
@@ -71,6 +73,7 @@ def dm2(m, n):
 
 if __name__ == '__main__':
     for s in sys.argv[1:]:
+        if s.startswith('--upper='): EXT_UPPER = int(s[8:]); continue   # upper rank bound from another program (Magma)
         m, n = (int(v) for v in s.split(','))
         t0 = time.time()
         try: r = dm2(m, n)
