@@ -18,7 +18,8 @@ Status: the congruence census for `m ≤ 1000` and the table of obstructed class
 | No ratio is excluded by a congruence modulo a prime `p ≡ ±3 (mod 8)` (modulo `p`, not modulo powers of `p`) | Lean (`G1.exists_point_mod_of_not_isSquare_two`, `G1.exists_point_mod_of_three_five_mod_eight`) |
 | The excluded ratios have density 1 | Argued in Result 1b. Not in Lean |
 | 44 of 60, 183 of 306, 85 of 119 closed by rank 0; 157 left | Computed with PARI. Not in Lean |
-| 122 of those 157 closed by the Demjanenko–Manin argument; 35 open | Computed with PARI and Sage; every upper rank bound is confirmed by Magma, and three pairs rest on Magma alone. Not in Lean, except the curve-membership algebra (`G1Relations.lean`) |
+| 122 of those 157 closed by the Demjanenko–Manin argument on curves of rank 1 | Computed with PARI and Sage; every upper rank bound is confirmed by Magma, and three pairs rest on Magma alone. Not in Lean, except the curve-membership algebra (`G1Relations.lean`) |
+| 9 more closed by the argument with four points on `E0L` (rank 2 or 3); 26 open | Computed with PARI and Sage (`dm4.py`), after release 0.3.4. A new derivation, not checked by anyone. Not in Lean |
 | A prime `≡ 1 (mod 8)` divides the centre root unless `m² + n²` is a square or twice a square | Lean (`IsMSS.norm_isSquare_or_prime_dvd_center`) |
 | `2(m² + n²)(m′² + n′²)` is a square (`m′ : n′` the second ratio); a prime `≡ 1 (mod 8)` divides the centre root and both numbers to an odd power, unless one of them is a square and the other twice a square | Lean (`IsMSS.two_mul_norms_isSquare`, `IsMSS.centre_two_ratios`) |
 | Exactly 34 primes; the Weil-bound argument | Computed and argued. Not in Lean |
@@ -207,7 +208,7 @@ Rank 0 is proved by PARI `ellrank` on the curve or on a curve isogenous to it. N
 
 These 157 pairs are listed in `scripts/g1_full/open_pairs_1000.txt`; `global.py` reproduces the closing curve for each closed pair.
 
-**In total: of the 304,191 pairs with `m ≤ 1000`, 157 are left by congruences and rank-0 quotients.** Result 4 closes 122 of them.
+**In total: of the 304,191 pairs with `m ≤ 1000`, 157 are left by congruences and rank-0 quotients.** Result 4 closes 131 of them: 122 on curves of rank 1 and 9 with four points on `E0L`.
 
 For the 119 pairs without a trivial point, the bad primes and 2 were also tested to prime powers up to 3·10⁶; no further obstruction appeared.
 
@@ -247,15 +248,74 @@ Lean checks the algebra of curve membership only (`G1Relations.lean`): the absci
 
 **The lines for (631,71) and (351,280).** For the `D1` curve of (631,71) PARI gives the rank bounds `[1, 3]`. Magma's `TwoPowerIsogenyDescentRankBound` (public Magma calculator, version 2.29-10) gives rank at most 1. With that bound, `dm2.py --upper=1 631,71` closes the pair and its partner (351,280): the generator is again `x = 0`, and the only candidate is the degenerate `t = 0`. These two lines rest on Magma alone for the upper bound and are marked `upper=magma`.
 
-**The line for (724,665) (added after release 0.3.4).** This pair has no trivial point and was one of seven such pairs left open. Its partner is (1389,59), with `m > 1000`, so the partner's `D1` curve had not been looked at with Magma. For that curve PARI gives the rank bounds `[1, 3]` and Magma's `TwoPowerIsogenyDescentRankBound` gives rank at most 1 (the request and the answer are the last entry of `magma_raw.txt`). With that bound, `dm2.py --upper=1 1389,59` closes the pair: the generator is `x = 0` of height 14.1261, saturated at the primes up to 13, the bound on `|a|` is 21, and none of the 43 candidate points gives a `t` at which the five forms are squares. Like the two lines above, this one rests on Magma alone for the upper bound. The same run asks Magma for the `D1` and `E04` curves of all 36 pairs that were open at release 0.3.4 and of their partners (92 curves, one request every two minutes). When this was written it had answered for 24 `D1` curves and nothing else was closed: the other bounds are 2 or more. In each of these answers Magma's bound has the same parity as the root number of the curve (computed with Sage), so the known parity of the 2-Selmer rank does not lower any of them. For the two `D1` curves with bounds `[1, 3]` and root number −1, those of (828,173) and (923,757), an analytic rank of 1 would settle the rank, but their conductors are about 10⁵¹, out of reach for such a computation.
+**The line for (724,665) (added after release 0.3.4).** This pair has no trivial point and was one of seven such pairs left open. Its partner is (1389,59), with `m > 1000`, so the partner's `D1` curve had not been looked at with Magma. For that curve PARI gives the rank bounds `[1, 3]` and Magma's `TwoPowerIsogenyDescentRankBound` gives rank at most 1 (the request and the answer are the last entry of `magma_raw.txt`). With that bound, `dm2.py --upper=1 1389,59` closes the pair: the generator is `x = 0` of height 14.1261, saturated at the primes up to 13, the bound on `|a|` is 21, and none of the 43 candidate points gives a `t` at which the five forms are squares. Like the two lines above, this one rests on Magma alone for the upper bound. The same run asked Magma for the `D1` and `E04` curves of all 36 pairs that were open at release 0.3.4 and of their partners (92 curves, one request every two minutes). It answered for 45 of the 46 `D1` curves (the request for (840,83) ran out of time) and for 30 of the 46 `E04` curves before it was stopped, and nothing else was closed: every other bound is 2 or more (`magma_open.txt`; verbatim in `magma_open_raw.txt`). In each of the `D1` answers Magma's bound has the same parity as the root number of the curve (computed with Sage), so the known parity of the 2-Selmer rank does not lower any of them. For the two `D1` curves with bounds `[1, 3]` and root number −1, those of (828,173) and (923,757), an analytic rank of 1 would settle the rank, but their conductors are about 10⁵¹, out of reach for such a computation.
 
-**Open after this: 35 pairs.** None can be closed by a congruence: 29 have a rational point, and the six others are soluble in every `ℚ_p` (`local_all.py`, with all primes below 20000). For `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). By what blocks them:
+**Rank 2 and 3 on `E0L`: the argument with four points (`dm4.py`; added after release 0.3.4).** `C: y² = q(t) = F0·GL` occurs four times in the Jacobian because `F0·GL`, `F0·GU`, `F8·GL`, `F8·GU` define the same curve: `q(−t) = F0·GU`, `t⁴q(1/t) = F8·GL`, `t⁴q(−1/t) = F8·GU`. So a solution `t0` gives four rational points of `C`,
+
+`Q1, Q2, Q3, Q4` with `t`-coordinates `t0, −t0, 1/t0, −1/t0`.
+
+The argument above uses `Q1` and `Q2` and needs rank 1. With all four it works for rank 2 and rank 3. It cannot work for rank 4 or more, because the curve occurs only four times.
+
+*Notation.* `E` is `C` with origin `(t1, y1)`; the involution `y ↦ −y` is `Q ↦ R0 − Q`. Put `a_i = Q_i − R0/2` in `E(ℚ) ⊗ ℚ`, write `N` for the canonical height as a quadratic form and `⟨ , ⟩` for its bilinear form, and `H = h(t0)`. `E` has its full 2-torsion over ℚ; `x` is the coordinate of the model `Y² = x(x − α)(x − β)` in which one particular 2-torsion point is at `x = 0`.
+
+*Three identities* (in the function fields, with `y1² = F0·GL`, `y2² = F0·GU`, `y3² = F8·GL`; `dm4.py` checks them exactly for each pair, in `ℚ(t)(y1, y2)`):
+
+- `x(2Q − R0) = 4Π(t)²/(F0·GL)` with `Π = 2mn(n²t² − m²) + (m⁴ − n⁴)t`;
+- `x(Q1 + Q2 − R0) = ((y1 − y2)/(2t))²` and `x(Q1 − Q2) = ((y1 + y2)/(2t))²`;
+- `x(Q1 + Q3 − R0) = ((y1 − y3)/(t² − 1))²` and `x(Q1 − Q3) = ((y1 + y3)/(t² − 1))²`.
+
+For a magic square of squares with roots `a b c / d e f / g h i` and `t0 = u/v` these read `x(Q1 ∓ Q2 …) = (4a(c ± g)/(uv))²` and `x(Q1 ∓ Q3 …) = (8c(a ± i)/(u² − v²))²`, up to the signs of the roots: the points attached to a square have coordinates that are squares of simple expressions in its entries. This remark is not used below.
+
+A second remark, also not used: on a curve `Y² = x(x² + Ax + B)` a rational point other than the origin and `(0, 0)` has `x` a square exactly when it lies in the image of the 2-isogeny from the curve `Y² = x(x² − 2Ax + A² − 4B)`. So the identities say that `Q1 − Q2`, `Q1 − Q3`, `Q2 − Q4`, `Q3 − Q4` and `2Q − R0` lie in that image: the four points of a solution are in one class modulo the image of this 2-isogeny, which is a subgroup of `E(ℚ)` of 2-power index.
+
+*Heights.* Let `t0 = p/q` in lowest terms with `pq ≠ 0` and `p² ≠ q²`, `M = max(p², q²)`, `Ψ0 = m²q² + n²p²`, `Ψ = S(p² + q²) − 4mnpq`. The identities become `x(2Q − R0) = 2Π(p,q)²/(Ψ0Ψ)`, `x(Q1 ± Q2 …) = 32m²n²Ψ0/(G ± r)` with `G = 2S(p² + q²)` and `r² = G² − 64m²n²p²q²`, and `x(Q1 ± Q3 …) = 2(m² − n²)²Ψ/(G′ ± r′)` with `G′ = S(p² + q²)` and `r′² = G′² − (m² − n²)²(p² − q²)²`. Each denominator `G ± r`, `G′ ± r′` divides a known number (`64m²n²p²q²`, `(m² − n²)²(p² − q²)²`), which bounds the common factor with the numerator; the numerators are positive definite forms. This gives, by elementary estimates written out in the header of `dm4.py`:
+
+- `lo4 ≤ h(x(2Q − R0)) − 4H ≤ up4`, with `lo4 = log(n²(m − n)²) − log(2·Res(Π,Ψ0)²·Res(Π,Ψ)²)` and `up4 = log(2(2m³n + m⁴ − n⁴)²)`;
+- `−log(2m²) ≤ h(x(Q1 ± Q2 …)) − 2H ≤ log(32m²n²S)`;
+- `−log(8(m + n)²) ≤ h(x(Q1 ± Q3 …)) − 2H ≤ log(4(m² − n²)²(m + n)²)`.
+
+For every rational point `P` of the model, `−U ≤ h(x(P)) − ĥ(P) ≤ BUP`, with the two constants of `height_certify.py` computed for this model (`hbounds.py`). Since `N(a_i) = ĥ(2Q_i − R0)/4` and `4⟨a_1, a_2⟩ = ĥ(Q1 + Q2 − R0) − ĥ(Q1 − Q2)`:
+
+- `N(a_i)` lies in `[H − eL, H + eU]` for the four points, with `eL = (BUP − lo4)/4`, `eU = (up4 + U)/4`;
+- `|⟨a_1, a_2⟩|, |⟨a_3, a_4⟩|, |⟨a_1, a_3⟩|, |⟨a_2, a_4⟩| ≤ κ`, with `κ = (BUP + U + w)/4` and `w` the larger of the two widths above.
+
+In words: the four points have almost the same height `h(t0)`, and four of the six pairs are almost orthogonal. The other two pairs, `(Q1, Q4)` and `(Q2, Q3)`, are not controlled this way (their sums and differences live on a curve of genus 3).
+
+*Rank 2.* Then `a_1, a_2, a_4` are linearly dependent, so their Gram determinant vanishes, which gives `N(a_2)·(N(a_1)N(a_4) − ⟨a_1, a_4⟩²) ≤ κ²(√N(a_1) + √N(a_4))²`. So `a_1` and `a_4` are almost parallel, and `z = a_1 − a_4` or `z = a_1 + a_4`, which is a point of `E(ℚ)` (`Q1 − Q4` or `Q1 + Q4 − R0`), has `ĥ(z) ≤ c*(H) = (√(H + eU) − √(H − eL))² + 8κ²(H + eU)/(H − eL)²`. This tends to 0 as `H` grows.
+
+*Rank 3.* The Gram matrix of `a_1, a_4, a_2, a_3` is singular. In blocks `[[A, B], [Bᵀ, D]]`, `A` for `(a_1, a_4)` and `D` for `(a_2, a_3)`, all four entries of `B` are among the controlled products, and a vector in the kernel gives `λ_min(A)·λ_min(D) ≤ ‖B‖² ≤ 4κ²`. So `λ_min(A) ≤ 2κ` or `λ_min(D) ≤ 2κ`, and `z = a_1 ∓ a_4` or `z = a_2 ∓ a_3` has `ĥ(z) ≤ c*(H) = (√(H + eU) − √(H − eL))² + 8κ(H + eU)/((H − eL) + √((H − eL)² − 4κ(H + eU)))`, which tends to `4κ`.
+
+*The two listings.* Fix `H*`. Either (A) `H < H*`: then `ĥ(2Q1 − R0) ≤ 4(H* + eU)`, and all such points `Q1` are listed, for every torsion point; or (B) `ĥ(z) ≤ c*(H*)`: all such `z` are listed, and for each the equation `t(Q − z)·t(Q) = −1` on `E` is solved (in case (B), `t(Q4) = −1/t(Q1)` and `Q4 = Q1 − z` or `R0 − (Q1 − z)`; for `z = a_2 ∓ a_3` the same equation holds for `Q2`, whose `t` is `−t0`). The equation is a polynomial equation in `t`; its rational roots, the poles of the functions involved and the special positions are all tested. Every candidate `t`, with both signs, goes through the exact five-form test. `t0 ∈ {0, ±1}` and `t0 = ±m/n, ±n/m` are tested directly.
+
+*Result.* 9 pairs are closed: (72,65), (137,7), (425,168), (593,257), (920,129) with rank 3 and (740,539), (828,173), (840,83), (923,757) with rank 2. No candidate gave a non-degenerate square; for the pairs with a trivial point the only values found are the degenerate `t = ±1` or `t = 0`.
+
+| Pair | rank | heights of the basis | saturated up to | `eL`, `eU` | `κ` | `H*` | `c*` | points in (A) | points `z` in (B) |
+|---|---|---|---|---|---|---|---|---|---|
+| (740,539) | 2 | 27.7, 86.1 | 33 | 92.5, 28.7 | 47.6 | 1067 | 24.4 | 288 | 4 |
+| (828,173) | 2 | 27.3, 111.7 | 10 | 91.6, 28.6 | 47.5 | 1056 | 24.5 | 248 | 4 |
+| (840,83) | 2 | 27.3, 40.3 | 6 | 91.2, 28.5 | 47.3 | 1053 | 24.5 | 472 | 4 |
+| (923,757) | 2 | 27.3, 40.3 | 6 | 95.7, 29.7 | 49.0 | 1155 | 23.8 | 480 | 4 |
+| (72,65) | 3 | 10.8, 11.6, 11.7 | 5 | 61.7, 19.6 | 32.8 | 1000 | 150.3 | 18512 | 1076 |
+| (137,7) | 3 | 10.8, 11.6, 11.7 | 9 | 66.2, 21.2 | 35.3 | 1062 | 161.8 | 20376 | 1188 |
+| (425,168) | 3 | 14.7, 15.3, 15.7 | 5 | 83.3, 26.2 | 43.5 | 1301 | 200.1 | 17992 | 1084 |
+| (593,257) | 3 | 14.7, 15.3, 15.7 | 5 | 87.8, 27.6 | 45.6 | 1432 | 208.2 | 20792 | 1148 |
+| (920,129) | 3 | 16.9, 17.3, 17.3 | 5 | 92.7, 28.9 | 48.0 | 1503 | 219.4 | 19016 | 1060 |
+
+The largest of `eL`, `eU`, `κ` is 95.7. The lists are short because the constants are small compared with the heights that occur: in (A) the points `Q` have `ĥ(2Q − R0)` up to about 6000.
+
+*What this rests on.* (1) The rank: PARI's upper bound (2-descent and Cassels pairing, on the curve and its isogenous curves), and as many independent points as the bound. PARI's lower bound is not used: it can exceed the number of points found, by parity, and that step assumes that the 2-primary part of the Tate–Shafarevich group is finite. (2) A basis of `E(ℚ)` modulo torsion: the points are saturated at all primes up to `γ·√Reg′/λ^(r/2)` (`γ = 2/√3` for rank 2, `√2` for rank 3; Hermite's constant), `λ` being Sage's lower bound for the canonical height of non-torsion points. For (740,539) PARI finds one point only; the second was found with Magma's `FourDescent` and `PointsQI` through the public calculator, with class groups computed under GRH. GRH enters only the search: `dm4.py` checks that the point lies on the curve. (3) The three identities: exact, checked by the script for each pair. (4) The elementary bounds: written by an AI model, checked by nobody. (5) The height-difference bounds `BUP`, `U` for a model that is integral and not minimal, as in question 5 of `AUDIT_REQUEST.md`. (6) The listings: floating-point heights with a margin of 2%; the script encloses the Gram matrix of the basis in exact arithmetic (doubling, as in `height_certify.py`) and checks that the enclosure moves the quadratic form by less than 1.5%.
+
+*Checks made.* On every point listed in (A) the script compares `N(a) − H` with `[−eL, eU]`: the observed range is inside it for all pairs (for (840,83): `[−26.9, 13.5]` against `[−91.2, 28.5]`). `dm4_validate.py` evaluates the heights of `2Q1 − R0`, `Q1 + Q2 − R0`, `Q1 − Q2` and the analogues for `Q3` over quadratic and biquadratic fields, for values of `t0` of height from 0.7 to 9.9: the differences with `H` and `2H` stay within a band of width 2.5 (`dm4_validate.txt`; over those fields the two points of a pair are conjugate, so this tests the boundedness, not the size of `⟨a_1, a_2⟩`). The only rational configurations available are the degenerate solutions: when `m² + n²` is a square, `t0 = 1` gives rational points `Q1` above 1 and `Q2` above −1. For the six ratios tried, among them (72,65), (425,168) and (920,129), `dm4_degenerate.py` finds `⟨a_1, a_2⟩` between −0.16 and −0.01 (for those three the bound `κ` is 32.8, 43.5 and 48.0), `N(a_1) − H` between 2.6 and 10.4, and the identity for the product `x(Q1 + Q2 − R0)·x(Q1 − Q2) = (4mnS)²` holds exactly (`dm4_degenerate.txt`). So on real rational points the two vectors are orthogonal to within a small fraction of the bound. A search for non-degenerate rational configurations to test the method end to end found none: for `m ≤ 250` and `t0 = p/q` with `0 < p, q ≤ 250`, `p ≠ q`, no `t0` makes the three products `F0·GL`, `F0·GU`, `F8·GL` squares, and for `m ≤ 150`, `p, q ≤ 150` none makes `F0·GL` a square together with one of the other two. `check_evidence.py` recomputes the elementary constants and `c*` from `m`, `n` and the recorded `BUP`, `U`, and checks the recorded points and models. None of this replaces a reading of the derivation by a specialist; it is the newest and least checked part of this document.
+
+*A correction to earlier wording.* Before this, the text said that `E0L` "has rank 2" for the pairs without a trivial point. What had been computed was PARI's pair of bounds `[2, 2]`. For five of those six curves PARI found a single point at that time, and its lower bound 2 came from parity. Unconditionally the rank was known to be 1 or 2. With two independent points it is 2 for the curves in the table.
+
+**Open after this: 26 pairs.** None can be closed by a congruence: 24 have a rational point, and the others are soluble in every `ℚ_p` (`local_all.py`, with all primes below 20000). For `m ≤ 200`: (91,60)~(151,31), (195,28). By what blocks them:
 
 | Pairs | Situation | What would be needed |
 |---|---|---|
-| 6 without a trivial point: (740,539), (820,799), (828,173), (840,83), (889,320), (923,757) | `E0L` has rank 2; `E04` has rank 2 or 3; `D1` has rank at least 2, or bounds `[1, 3]`, `[0, 2]`, `[0, 4]` that PARI does not improve with more effort | the argument with all four points on `E0L`, which needs explicit bounds on how far the four maps are from orthogonal; or a second descent on the `D1` curves with bounds `[1, 3]` |
-| (72,65)~(137,7), (425,168)~(593,257), (920,129) | `E0L` has rank 3, the others at least 2 | the same four-point argument |
-| the other 24, all with a trivial point | `E0L` has rank 4 to 6 (for two pairs only bounds `[3, 5]`) | curves of genus 2 (Chabauty), or another fibration |
+| 2 without a trivial point: (820,799), (889,320) | `E0L` has rank at most 2 and one known point of infinite order; `E04` and `D1` have upper bounds 2 or more | a second independent point on `E0L` (its height is probably large), or a proof that the rank is 1; then `dm4.py` applies |
+| (609,200)~(809,409) | `E0L` has rank bounds `[3, 5]` | an upper bound 3 for the rank, with three independent points; then `dm4.py` applies |
+| the other 22, all with a trivial point | `E0L` has rank 4 to 6 | the four-point argument cannot reach rank 4. Curves of genus 2 (Chabauty), or another fibration |
 
 **A quotient of genus 2 (experiment, 22 November 2026; files in `scripts/g1_full/genus2/`).** With `S = m² + n²` and `h(t) = (n²t² + m²)(t² + 1)(S(t² + 1) − 4mnt)`, the product `F0·G4·GL` is `4S·h(t)`. So if `w0² = F0`, `w4² = G4`, `wL² = GL`, then `y = w0·w4·wL/2` satisfies `y² = S·h(t)`, and `H: y² = S·h(t)` is a quotient of the curve by `(t, w0, …) ↦ (t, y)`; so are its images under `t ↦ −t` and `t ↦ 1/t`. *Correction (after release 0.3.3):* this paragraph and the scripts had the curve `y² = h(t)`, without the factor `S`. That is the same curve when `S` is a square, which is the case for the three pairs with an answer below ((91,60), (209,120), (440,279): `S = 109², 241², 521²`). For a pair with `S` not a square (twice a square, or one of the seven pairs without a trivial point) the requests were made for the wrong twist; all of those requests failed, so no wrong number was recorded. The scripts now have the factor; the Magma requests were not sent again. The Jacobian of `H` does not split over ℚ for the three pairs tried: the characteristic polynomial of Frobenius is irreducible at several primes (`frobenius.py`, output in `frobenius.txt`, computed again with the factor `S`, with the same factorisation types as before; the pair (3,2) there is a small control, not an open pair). If the rank of the Jacobian were at most 1, Chabauty's method would determine `H(ℚ)` and could close a pair. The 36 open pairs give 23 curves `H` (13 couples of partners that are both open, and 10 pairs whose partner has `m > 1000`). Through the public Magma calculator (`magma_g2.py`; answers in `g2.txt`, requests and verbatim responses in `g2_raw.txt`), `RankBound` of the Jacobian gave 6 for (91,60), 5 for (209,120) and 6 for (440,279), too large for that, and ran into the calculator's limits (60 seconds, about 300 MB) for the other 20, among them the seven pairs without a trivial point. A second run with `SetClassGroupBounds("GRH")` (`magma_g2_grh.py`), whose answers would have been conditional on GRH, made 7 requests before it was stopped, for (724,665), (740,539), (820,799), (828,173), (840,83), (889,320) and (72,65); all 7 hit the same limits (`g2_grh.txt`, `g2_grh_raw.txt`), and the other 13 curves were not tried under GRH. So this is undecided for 20 of the 23 curves and closes nothing; it needs a Magma installation without those limits.
 
@@ -328,6 +388,9 @@ python3 eclib_check.py          # Result 4: eclib's rank bounds for the E04 line
 python3 magma_check.py          # Result 4: Magma's rank bounds through the public calculator; slow, rate-limited
 python3 dm2.py --upper=1 631,71 # Result 4: the two lines that use Magma's bound
 python3 dm2.py --upper=1 1389,59 # Result 4: the line for (724,665)
+python3 dm4.py 840,83           # Result 4: four points on E0L, rank 2 or 3; 2 to 45 seconds per pair
+python3 dm4_validate.py 3,2 2 7/3 101/17   # the height relations of dm4.py over number fields, numerically
+python3 dm4_degenerate.py 72,65 # the same relations on a degenerate solution
 python3 local_all_census.py 0 4 # Result 2: the second local program on a quarter of the pairs (needs cypari2)
 python3 local_all.py 724,665    # solubility in every Q_p for one pair (needs cypari2)
 cd ../.. && lake build          # the Lean theorems; G1FullCertificates needs about 5 GB of memory

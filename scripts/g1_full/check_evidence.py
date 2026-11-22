@@ -3,8 +3,8 @@
 
 1. Unit tests of classify_t, the exact test applied to every candidate t in dm.py, dm2.py, dm3.py.
    The function is taken from the source of dm.py without importing Sage.
-2. Consistency of dm_evidence.txt, dm_closures.txt and open_pairs_1000.txt: 157 pairs, 122 closed
-   (91 E04, 25 D1, 6 E0L), 35 open, no overlap; every recorded t is re-tested and is degenerate; the listed bound
+2. Consistency of dm_evidence.txt, dm_closures.txt and open_pairs_1000.txt: 157 pairs, 131 closed
+   (91 E04, 25 D1, 6 E0L, and 9 with four points on E0L, section 6), 26 open, no overlap; every recorded t is re-tested and is degenerate; the listed bound
    amax is at least the bound that follows from the recorded heights.
 3. Every recorded E04 and D1 generator is a rational point of its curve with y != 0.
    Every recorded E0L model is isomorphic over Q to the Weierstrass curve of G1.e0l_weierstrass for the
@@ -13,6 +13,13 @@
 5. dm_log.jsonl (JSON records assembled from the scripts' outputs, one per line; a partner line repeats the record of
    its run pair) agrees with dm_evidence.txt in the pair, the run pair, the curve name, the x-coordinate of the
    generator, the bound amax, and the height to 0.001.
+6. dm4_log.jsonl (the JSON records printed by dm4.py, the argument with four points on E0L for rank 2 and 3): the pair
+   is one of the 157 and is not closed otherwise; every recorded t is degenerate; the recorded model is the
+   Weierstrass curve of the pair and the recorded generators are rational points of the minimal model, with a
+   positive definite height matrix; the elementary constants lo4, up4, wpm, winv are recomputed from m and n; eL, eU,
+   kappa and cstar are recomputed from them and from the recorded BUP and U; Hstar satisfies the condition of the
+   argument; the saturation bound covers the index bound that follows from the recorded regulator and height
+   lower bound.
 This does not check the heights, the ranks, or that the points generate."""
 import ast, math, os, re, sys
 from fractions import Fraction as Fr
@@ -101,12 +108,65 @@ for r, j in zip(ev, log):
     f = dict(x.split('=', 1) for x in r[3:] if '=' in x); g = j['G'][0] if isinstance(j['G'], list) else j['G']
     assert [j['of'], j['run'], j['method']] == r[:3] and str(g) == f['G'] and int(j['amax']) == int(f['amax']) and j['status'] == 'closed' and '%d,%d' % tuple(j['pair']) == r[1], r[:3]
     assert abs(float(j['hG']) - float(f['hG'])) < 1e-3 and (('upper' in j) == (f.get('upper') == 'magma')), r[:3]
+# --- 6. the four-point closures
+def res2(A, B):                                  # resultant of two quadratics, coefficients from the leading one down
+    a2, a1, a0 = A; b2, b1, b0 = B
+    return (a2 * b0 - a0 * b2) ** 2 - (a2 * b1 - a1 * b2) * (a1 * b0 - a0 * b1)
+def e0l_c4c6(m, n):                              # c4, c6 of the Weierstrass curve of G1.e0l_weierstrass
+    mm, nn = Fr(m), Fr(n); S = mm * mm + nn * nn
+    qa = 2 * nn ** 2 * S; qb = 8 * mm ** 3 * nn; qc = 2 * (7 * mm ** 4 - 4 * mm ** 2 * nn ** 2 + nn ** 4)
+    qd = 4 * mm * (mm * mm - nn * nn) * (3 * mm * mm - nn * nn) / nn; qq = 2 * mm * (mm * mm - nn * nn) / nn
+    a2w = qc - qd ** 2 / (4 * qq ** 2)
+    return cinv(qd / qq, a2w, 2 * qq * qb, -4 * qq ** 2 * qa, a2w * (-4 * qq ** 2 * qa))
+def same_curve(c46a, c46b):
+    (c4a, c6a), (c4b, c6b) = c46a, c46b
+    if c4a == 0 or c6a == 0 or c4b == 0 or c6b == 0: return False
+    u2 = (c6a / c6b) / (c4a / c4b)
+    return issq(u2) and u2 * u2 == c4a / c4b
+log4 = [json.loads(l) for l in open(os.path.join(here, 'dm4_log.jsonl'))]
+closed4 = set(); ranks4 = {2: 0, 3: 0}
+for j in log4:
+    m, n = j['pair']; of = (m, n); S = m * m + n * n; r = j['rank']
+    assert j['status'] == 'closed' and of in all157 and of not in closed and of not in closed4 and j['rank_bounds'] == [r, r] and r in (2, 3), of
+    closed4.add(of); ranks4[r] += 1
+    for tt, verdict in j['t'].items():
+        assert verdict == 'degenerate' and classify_t(m, n, Fr(tt)) == 'degenerate', (of, tt)
+    mdl = [Fr(z) for z in j['model']]; mn = [Fr(z) for z in j['min_model']]
+    assert same_curve(e0l_c4c6(m, n), cinv(*mdl)) and same_curve(cinv(*mdl), cinv(*mn)), of
+    assert mdl[0] == 0 and mdl[2] == 0 and mdl[4] == 0 and all(z.denominator == 1 for z in mdl), of      # Y^2 = x (x - al)(x - be), integral
+    for x, y in j['G'] + [j['R0']]:
+        x, y = Fr(x), Fr(y)
+        assert y * y + mn[0] * x * y + mn[2] * y == x ** 3 + mn[1] * x * x + mn[3] * x + mn[4], of
+    g = j['gram']; assert len(g) == r and len(j['G']) == r
+    det = g[0][0] * g[1][1] - g[0][1] ** 2 if r == 2 else (g[0][0] * (g[1][1] * g[2][2] - g[1][2] ** 2) - g[0][1] * (g[0][1] * g[2][2] - g[1][2] * g[0][2]) + g[0][2] * (g[0][1] * g[1][2] - g[1][1] * g[0][2]))
+    assert g[0][0] > 0 and g[0][0] * g[1][1] - g[0][1] ** 2 > 0 and det > 0 and abs(det - j['reg']) < 1e-6 * det, of
+    assert j['kmax'] >= math.sqrt(j['reg0'] * {2: 4.0 / 3, 3: 2.0}[r] / j['lam'] ** r) and j['lam'] > 0 and j['reg0'] >= j['reg'] * (1 - 1e-9), of
+    Pi = (2 * m * n ** 3, m ** 4 - n ** 4, -2 * m ** 3 * n); Psi0 = (n * n, 0, m * m); Psi = (S, -4 * m * n, S)
+    r0, r1 = abs(res2(Pi, Psi0)), abs(res2(Pi, Psi)); assert [str(r0), str(r1)] == j['res'] and r0 > 0 and r1 > 0, of
+    lo4 = math.log(n * n * (m - n) ** 2) - math.log(2) - 2 * math.log(r0) - 2 * math.log(r1)
+    up4 = math.log(2) + 2 * math.log(2 * m ** 3 * n + m ** 4 - n ** 4)
+    wpm = math.log(32 * m * m * n * n * S) + math.log(2 * m * m)
+    winv = math.log(4 * (m * m - n * n) ** 2 * (m + n) ** 2) + math.log(8 * (m + n) ** 2)
+    BUP, U = j['BUP'], j['U']; eL = (BUP - lo4) / 4; eU = (up4 + U) / 4; kap = (BUP + U + max(wpm, winv)) / 4
+    for name, v in (('lo4', lo4), ('up4', up4), ('wpm', wpm), ('winv', winv), ('eL', eL), ('eU', eU), ('kappa', kap)):
+        assert abs(v - j[name]) < 1e-9 * max(1, abs(v)), (of, name)
+    H = j['Hstar']; L = H - eL; Uu = H + eU
+    if r == 2:
+        cs = (math.sqrt(Uu) - math.sqrt(L)) ** 2 + 8 * kap * kap * Uu / L ** 2; assert L > 0 and L ** 3 >= 4 * kap * kap * Uu, of
+    else:
+        assert L > 0 and L * L > 4 * kap * Uu, of
+        cs = (math.sqrt(Uu) - math.sqrt(L)) ** 2 + 8 * kap * Uu / (L + math.sqrt(L * L - 4 * kap * Uu))
+    assert abs(cs - j['cstar']) < 1e-9 * cs and j['gram_check']['relative'] <= 0.015, of
+    assert -eL <= j['observed N(a) - H'][0] and j['observed N(a) - H'][1] <= eU, of
+closed |= closed4
 assert closed <= all157
 cl = open(os.path.join(here, 'dm_closures.txt')).read().split('\n')
 still = set()
 for i, l in enumerate(cl):
     if l.startswith('# Still open'): still |= set(pairs(cl[i + 1]))
-assert len(still) == 35 and not (still & closed) and (still | closed) == all157
+assert len(log4) == 9 and ranks4 == {2: 4, 3: 5}
+assert len(still) == 26 and not (still & closed) and (still | closed) == all157
 listed = set(pairs(l.split()[0])[0] for l in cl if l and not l.startswith('#') and len(l.split()) == 4)
 assert listed == closed
-print('check_evidence OK: classify_t tests pass; 157 = 122 closed (91 E04, 25 D1, 6 E0L) + 35 open')
+assert set(pairs(l.split()[0])[0] for l in cl if l and not l.startswith('#') and len(l.split()) == 4 and l.split()[2] == 'E0L4') == closed4
+print('check_evidence OK: classify_t tests pass; 157 = 131 closed (91 E04, 25 D1, 6 E0L, 9 E0L with four points) + 26 open')

@@ -6,13 +6,13 @@ For a reader who knows elliptic curves over ℚ. The Lean part of this repositor
 
 ## What is claimed
 
-For coprime `1 ≤ n < m ≤ 1000` there are 425 ratios `m : n` for which congruences do not exclude a 3×3 magic square of squares with `(b + d) : (h + f) = m : n`. A solution is a rational `t` at which five quadratic forms in `t` are squares (`G1_FULL_SYSTEM.md`, "The system"). 268 ratios are closed by a quotient elliptic curve of rank 0. 122 more are closed by the Demjanenko–Manin argument on a quotient elliptic curve that occurs at least twice in the Jacobian and has rank exactly 1. This request is about those 121. `scripts/g1_full/dm_evidence.txt` has one line for each, and `dm_log.jsonl` the raw output of the scripts.
+For coprime `1 ≤ n < m ≤ 1000` there are 425 ratios `m : n` for which congruences do not exclude a 3×3 magic square of squares with `(b + d) : (h + f) = m : n`. A solution is a rational `t` at which five quadratic forms in `t` are squares (`G1_FULL_SYSTEM.md`, "The system"). 268 ratios are closed by a quotient elliptic curve of rank 0. 122 more are closed by the Demjanenko–Manin argument on a quotient elliptic curve that occurs at least twice in the Jacobian and has rank exactly 1. This request is about those 122, and about 9 more that are closed by a version of the argument with four points, for rank 2 and 3 (closure 4 below). `scripts/g1_full/dm_evidence.txt` has one line for each, and `dm_log.jsonl` the raw output of the scripts.
 
 ## Software
 
 Python 3.13.18; passagemath 10.8.14 (Sage), installed with `pip install passagemath-schemes passagemath-eclib passagemath-symbolics cypari2`; PARI 2.17.4 through cypari2; eclib as shipped with passagemath-eclib; Magma 2.29-10 through the public calculator at magma.maths.usyd.edu.au/calc. Commands are run in `scripts/g1_full/`. Each script prints one JSON record per pair; the records below are the ones that were printed, copied from `dm_log.jsonl` without its bookkeeping fields (`of`, `run`, `method`, `sec`).
 
-## Three closures, worked out
+## Four closures, worked out
 
 Heights are Sage's (twice Silverman's `ĥ`). `B` is Sage's `silverman_height_bound()`. `S = m² + n²`.
 
@@ -36,7 +36,7 @@ Heights are Sage's (twice Silverman's `ĥ`). `B` is Sage's `silverman_height_bou
 m:=631; n:=71; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
 ```
 
-and it is in `magma_raw.txt` with the response. This line and its partner (351,280) are the only two that rest on Magma alone.
+and it is in `magma_raw.txt` with the response. This line, its partner (351,280) and the line for (724,665) (run on its partner (1389,59)) are the only three that rest on Magma alone.
 
 **3. Curve `E0L`, pair (423,332).** Command: `python3 dm3.py 423,332`.
 
@@ -45,6 +45,14 @@ and it is in `magma_raw.txt` with the response. This line and its partner (351,2
 ```
 
 `C: y² = F0(t)·GL(t)` with the rational point `t = m/n`; a solution `t` gives points of `C` at `t` and at `−t`. `t` is not an even function on the curve, so with `σ = 1/(t − m/n)` the script uses `|2h(σ(Q)) − ĥ(Q) − ĥ(R0 − Q)| ≤ K = C1 + log 2 + 2B`, where `R0` is the second point over `t = m/n` (derivation in `G1_FULL_SYSTEM.md`, "The bound for `E0L` in symbols"). `model` is the minimal model on which `G` is given. Here `R0 = G + torsion`, and the bound computed from these values is `|a| ≤ W + 1/2 = 8.08`; the script lists `|a| ≤ 11`, 92 points, none of which gives a square. `worst_observed` is the largest value of the left side on the listed points; it must be below `K`.
+
+**4. Curve `E0L` with four points, pair (840,83), rank 2.** Command: `python3 dm4.py 840,83`. The record, without the coordinates of the points:
+
+```
+{"pair": [840, 83], "rank_bounds": [2, 2], "rank": 2, "gens": "points saturated at primes <= 6 (height lower bound 6.7272, regulator of the points before saturation 918.282)", "gram": [[27.33573160470327, 13.55818659312613], [13.55818659312613, 40.31743168527588]], "rho": [1, 0], "BUP": 72.46748012016593, "U": 59.15875684694732, "lo4": -292.5078744823475, "up4": 54.92087403996096, "eL": 91.24383865062836, "eU": 28.51990772172707, "kappa": 47.329118695951244, "Hstar": 1053.0644658966871, "cstar": 24.464379015342047, "nA": 472, "observed N(a) - H": [-26.914238473697424, 13.52452656518119], "nz": 4, "nroots": 8, "t": {}, "status": "closed"}
+```
+
+A solution `t0` gives four rational points `Q1, …, Q4` of `C: y² = F0·GL`, above `t0, −t0, 1/t0, −1/t0`. With `a_i = Q_i − R0/2`: (i) `N(a_i) = ĥ(2Q_i − R0)/4` is within `[−eL, eU]` of `H = h(t0)`; (ii) `|⟨a_1, a_2⟩|` and `|⟨a_2, a_4⟩|` are at most `κ`. Both come from identities of the form `x(…) = (…)²` on the model `Y² = x(x − α)(x − β)`, from elementary bounds for the heights of the resulting fractions, and from the bounds `−U ≤ h(x) − ĥ ≤ BUP` (`G1_FULL_SYSTEM.md`, "Rank 2 and 3 on `E0L`"; the header of `dm4.py`). In rank 2 the Gram determinant of `a_1, a_2, a_4` vanishes, so `z = a_1 ∓ a_4` has `ĥ(z) ≤ c*(H)`. With `H* = 1053`: either `H < H*` and `Q1` is one of the 472 listed points, or `ĥ(z) ≤ 24.5`, which is below the smallest height of a non-torsion point (27.3), so `z` is one of the 4 torsion points, and `t(Q − z)·t(Q) = −1` is solved for each. No candidate passes the five-form test.
 
 ## Questions
 
@@ -55,6 +63,7 @@ and it is in `magma_raw.txt` with the response. This line and its partner (351,2
 5. **Heights of the generators.** The heights `ĥ(G)` used by the scripts are double-precision values from Sage. `scripts/g1_full/height_certify.py` replaces them by enclosures in exact rational arithmetic: `ĥ(G)` lies between `(h(x(2ᵏG)) − BUP)/4ᵏ` and `(h(x(2ᵏG)) + U)/4ᵏ`, where `2ᵏG` is computed exactly with the duplication formula (`k = 6` or `7`), `U` is as in question 3, and `BUP` bounds `h − ĥ` by the local bounds of Cremona, Prickett and Siksek (Proposition 8 and Table 1: `α_p` by Kodaira type and Tamagawa number, plus `ord_p(D/D_min)/6` for a non-minimal model) and Silverman's bound at the real place. With the lower ends of the enclosures the bound on `|a|` stays below the listed range in every line, by at least 9%. Is the use of Table 1 correct (in particular for a model that is integral and not minimal), and is the doubling enclosure the right way to certify a height?
 6. **The singular fibres** (`G1_FULL_SYSTEM.md`, Result 1): the character-sum bound `32N ≥ 2p − 100 − 270√p` and the count of roots behind it.
 7. **The density sketch** (Result 1b).
+8. **The argument with four points** (closure 4): the three identities are checked by the program; the questions are the elementary height bounds in the header of `dm4.py` (in particular the bounds for the common factors), the use of the Gram determinant in rank 2 and of the block argument in rank 3, the completeness of the two listings, and the saturation bound from Hermite's constant. For (740,539) the second independent point came from Magma's four-descent with class groups under GRH; the point is checked to lie on the curve, so GRH should not matter. Is that right?
 
 A question for a number theorist of any kind, not only for this audit: are Theorem 1, Theorem 1′, the Lemma and Theorem 3′ of `PAPER.md`, on the two ratios of a magic square of squares, known? (The congruences in Theorems 2 and 3 follow from Rabern's Theorem 1.4 and Woll's Corollary 4.3 once the Lemma is known; `PAPER.md` says so.)
 

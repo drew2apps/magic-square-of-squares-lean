@@ -1,0 +1,170 @@
+# Requests to the public Magma calculator for points on E0L curves (TwoDescent, FourDescent with class groups under GRH, PointsQI), 2026-11-22.
+# Verbatim. The points found are used only after dm4.py has checked that they lie on the curve.
+=== 2026-11-22 22:40:52 UTC
+--- input
+E:=EllipticCurve([0,-2809787242564,0,1805499685162751220865924,0]);
+tds:=TwoDescent(E : RemoveTorsion:=true);
+print "TWO", #tds;
+for i in [1..#tds] do
+  fds:=FourDescent(tds[i] : RemoveTorsion:=true);
+  print "FOUR", i, #fds;
+  for j in [1..#fds] do
+    pts:=PointsQI(fds[j], 10^5 : OnlyOne:=true);
+    if #pts gt 0 then
+      _,mp:=AssociatedEllipticCurve(fds[j] : E:=E);
+      P:=mp(pts[1]);
+      print "PT", i, j, Eltseq(P), Height(P);
+    else
+      print "NOPT", i, j;
+    end if;
+  end for;
+end for;
+print "DONE";
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3669162836</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>TWO 3</line><line>FOUR 1 2</line><line>NOPT 1 1</line><line>PT 1 2 [ 702446810641, -477953239579167239, 1 ]</line><line>27.6724730368679194503471927701</line><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
+=== 2026-11-22 22:43:42 UTC
+--- input
+SetClassGroupBounds("GRH");
+E:=EllipticCurve([0,-2809787242564,0,1805499685162751220865924,0]);
+tds:=TwoDescent(E : RemoveTorsion:=true);
+print "TWO", #tds;
+for i in [1..#tds] do
+  fds:=FourDescent(tds[i] : RemoveTorsion:=true);
+  print "FOUR", i, #fds;
+  for j in [1..#fds] do
+    pts:=PointsQI(fds[j], 10^6 : OnlyOne:=true);
+    if #pts gt 0 then
+      _,mp:=AssociatedEllipticCurve(fds[j] : E:=E);
+      P:=mp(pts[1]);
+      print "PT", i, j, Eltseq(P), Height(P);
+    else
+      print "NOPT", i, j;
+    end if;
+  end for;
+end for;
+print "DONE";
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>844763986</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>TWO 3</line><line>FOUR 1 2</line><line>NOPT 1 1</line><line>PT 1 2 [ 702446810641, -477953239579167239, 1 ]</line><line>27.6724730368679194503471927701</line><line>FOUR 2 2</line><line>PT 2 1 [ 420672258585150753650026931613802135666238724/227474913897287186171270\</line><line>349613249, -798372405517165038182538424755939465150787768190901855040094178108/\</line><line>3430838413082061446972975149716135176448129340193, 1 ]</line><line>86.0944375982606938979286685749</line><line>NOPT 2 2</line></results></calculator>
+
+=== 2026-11-22 22:46:04 UTC
+--- input
+SetClassGroupBounds("GRH");
+E:=EllipticCurve([0,-6872797046404,0,11800895668937733610214404,0]);
+tds:=TwoDescent(E : RemoveTorsion:=true);
+F:=[]; for C in tds do for D in FourDescent(C : RemoveTorsion:=true) do Append(~F, D); end for; end for;
+print "COVERS", #F;
+found:=[false: D in F];
+for B in [10^3, 10^4, 10^5, 10^6, 10^7] do
+ for j in [1..#F] do
+  if not found[j] then
+   pts:=PointsQI(F[j], B : OnlyOne:=true);
+   if #pts gt 0 then found[j]:=true; _,mp:=AssociatedEllipticCurve(F[j] : E:=E); P:=mp(pts[1]); print "PT", j, B, Eltseq(P), Height(P); end if;
+  end if;
+ end for;
+ print "BOUND", B;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>708977756</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== 2026-11-22 22:48:14 UTC
+--- input
+SetClassGroupBounds("GRH");
+E:=EllipticCurve([0,-6872797046404,0,11800895668937733610214404,0]);
+tds:=TwoDescent(E : RemoveTorsion:=true);
+print "TWO", #tds;
+fds:=FourDescent(tds[1] : RemoveTorsion:=true);
+print "FOUR", 1, #fds;
+found:=[false: D in fds];
+for B in [10^3, 10^4, 10^5, 10^6, 10^7] do
+ for j in [1..#fds] do
+  if not found[j] then
+   pts:=PointsQI(fds[j], B : OnlyOne:=true);
+   if #pts gt 0 then found[j]:=true; _,mp:=AssociatedEllipticCurve(fds[j] : E:=E); P:=mp(pts[1]); print "PT", j, B, Eltseq(P), Height(P); end if;
+  end if;
+ end for;
+ print "BOUND", B;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1093238548</seed><version>2.29-10</version><time>46.350</time><memory>64.12MB</memory></headers><results><line>TWO 15</line><line>FOUR 1 8</line><line>PT 1 1000 [ 1718199261601, 2249186916660166799, 1 ]</line><line>28.4426086855251831590513968317</line><line>BOUND 1000</line><line>BOUND 10000</line><line>BOUND 100000</line><line>BOUND 1000000</line><line>BOUND 10000000</line><line></line></results></calculator>
+
+=== 2026-11-22 22:51:23 UTC
+--- input
+SetClassGroupBounds("GRH");
+E:=EllipticCurve([0,-6872797046404,0,11800895668937733610214404,0]);
+tds:=TwoDescent(E : RemoveTorsion:=true);
+print "TWO", #tds;
+for i in [2..#tds] do
+  fds:=FourDescent(tds[i] : RemoveTorsion:=true);
+  print "FOUR", i, #fds;
+  for j in [1..#fds] do
+    pts:=PointsQI(fds[j], 10^4 : OnlyOne:=true);
+    if #pts gt 0 then _,mp:=AssociatedEllipticCurve(fds[j] : E:=E); P:=mp(pts[1]); print "PT", i, j, Eltseq(P), Height(P); end if;
+  end for;
+end for;
+print "DONE";
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2179567113</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>TWO 15</line><line>FOUR 2 0</line><line>FOUR 3 0</line><line>FOUR 4 0</line></results></calculator>
+
+=== 2026-11-22 22:53:31 UTC
+--- input
+SetClassGroupBounds("GRH");
+E:=EllipticCurve([0,-3187803135364,0,1927747832358869729790724,0]);
+tds:=TwoDescent(E : RemoveTorsion:=true);
+print "TWO", #tds;
+for i in [1..Min(1+2,#tds)] do
+  fds:=FourDescent(tds[i] : RemoveTorsion:=true);
+  print "FOUR", i, #fds;
+  for j in [1..#fds] do
+    pts:=PointsQI(fds[j], 10^4 : OnlyOne:=true);
+    if #pts gt 0 then _,mp:=AssociatedEllipticCurve(fds[j] : E:=E); P:=mp(pts[1]); print "PT", i, j, Eltseq(P), Height(P); end if;
+  end for;
+end for;
+print "DONE";
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2550115081</seed><version>2.29-10</version><time>48.840</time><memory>64.12MB</memory></headers><results><line>TWO 15</line><line>FOUR 1 8</line><line>PT 1 6 [ 796950783841, -133479483802454161, 1 ]</line><line>27.7547447462695633691297962986</line><line>FOUR 2 0</line><line>FOUR 3 0</line><line>DONE</line><line></line></results></calculator>
+
+=== 2026-11-22 22:56:37 UTC
+--- input
+SetClassGroupBounds("GRH");
+E:=EllipticCurve([0,-6872797046404,0,11800895668937733610214404,0]);
+tds:=TwoDescent(E : RemoveTorsion:=true);
+print "TWO", #tds;
+for i in [5..Min(5+2,#tds)] do
+  fds:=FourDescent(tds[i] : RemoveTorsion:=true);
+  print "FOUR", i, #fds;
+  for j in [1..#fds] do
+    pts:=PointsQI(fds[j], 10^4 : OnlyOne:=true);
+    if #pts gt 0 then _,mp:=AssociatedEllipticCurve(fds[j] : E:=E); P:=mp(pts[1]); print "PT", i, j, Eltseq(P), Height(P); end if;
+  end for;
+end for;
+print "DONE";
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3736523382</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>TWO 15</line><line>FOUR 5 0</line></results></calculator>
+
+=== 2026-11-22 22:59:43 UTC
+--- input
+SetClassGroupBounds("GRH");
+E:=EllipticCurve([0,-3187803135364,0,1927747832358869729790724,0]);
+tds:=TwoDescent(E : RemoveTorsion:=true);
+print "TWO", #tds;
+for i in [4..Min(4+2,#tds)] do
+  fds:=FourDescent(tds[i] : RemoveTorsion:=true);
+  print "FOUR", i, #fds;
+  for j in [1..#fds] do
+    pts:=PointsQI(fds[j], 10^4 : OnlyOne:=true);
+    if #pts gt 0 then _,mp:=AssociatedEllipticCurve(fds[j] : E:=E); P:=mp(pts[1]); print "PT", i, j, Eltseq(P), Height(P); end if;
+  end for;
+end for;
+print "DONE";
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3951289952</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>TWO 15</line><line>FOUR 4 0</line><line>FOUR 5 0</line></results></calculator>
+
