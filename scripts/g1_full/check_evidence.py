@@ -10,6 +10,7 @@
    Every recorded E0L model is isomorphic over Q to the Weierstrass curve of G1.e0l_weierstrass for the
    pair, and the recorded generator is a rational point of that model, not of order 2.
 4. Every line has an answer 'rank <= 1' in magma_check.txt (required first of all for the lines marked upper=magma).
+5. dm_log.jsonl (the scripts' JSON output) has one record per line, with the same pair, run pair, curve, generator, height and bound.
 This does not check the heights, the ranks, or that the points generate."""
 import ast, math, os, re, sys
 from fractions import Fraction as Fr
@@ -90,7 +91,14 @@ for r in ev:
         disc = (mdl[0] * x + mdl[2]) ** 2 + 4 * (x ** 3 + mdl[1] * x * x + mdl[3] * x + mdl[4])
         assert issq(disc) and disc != 0, r[:3]         # G is a rational point of the model, not of order 2
 assert meth == {'E04': 91, 'D1': 24, 'E0L': 6}, meth
-assert all(tuple(r[:3]) in magma for r in ev)       # Magma's bound 'rank <= 1' is recorded for every line
+assert all(tuple(r[:3]) in magma for r in ev) and len(magma) == 121   # Magma's bound 'rank <= 1' is recorded for every line, and for nothing else
+import json
+log = [json.loads(l) for l in open(os.path.join(here, 'dm_log.jsonl'))]   # the scripts' JSON output: one record per line of dm_evidence.txt, same order
+assert len(log) == 121
+for r, j in zip(ev, log):
+    f = dict(x.split('=', 1) for x in r[3:] if '=' in x); g = j['G'][0] if isinstance(j['G'], list) else j['G']
+    assert [j['of'], j['run'], j['method']] == r[:3] and str(g) == f['G'] and int(j['amax']) == int(f['amax']) and j['status'] == 'closed', r[:3]
+    assert abs(float(j['hG']) - float(f['hG'])) < 1e-3 and (('upper' in j) == (f.get('upper') == 'magma')), r[:3]
 assert closed <= all157
 cl = open(os.path.join(here, 'dm_closures.txt')).read().split('\n')
 still = set()

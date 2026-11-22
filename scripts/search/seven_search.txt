@@ -1,23 +1,26 @@
-# Output of scripts/search/seven.c (gcc -O2 seven.c -lm), 2026-11-22. Runs: './seven 1 100000000' and './seven L R' for the 18 blocks
-# of length 5*10^7 from 10^8 + 1 to 10^9. Columns: range of x, pairs of triangles tested, hits (magic squares with centre x^2 and >= 7 squares).
-1<=x<=100000000 pairs=1502318247 hits=235294
-100000001<=x<=150000000 pairs=909141047 hits=117647
-150000001<=x<=200000000 pairs=959298112 hits=117647
-200000001<=x<=250000000 pairs=997970400 hits=117647
-250000001<=x<=300000000 pairs=1029280927 hits=117647
-300000001<=x<=350000000 pairs=1056358138 hits=117647
-350000001<=x<=400000000 pairs=1079421335 hits=117647
-400000001<=x<=450000000 pairs=1100077215 hits=117647
-450000001<=x<=500000000 pairs=1118805952 hits=117647
-500000001<=x<=550000000 pairs=1135624714 hits=117647
-550000001<=x<=600000000 pairs=1151051081 hits=117647
-600000001<=x<=650000000 pairs=1165464976 hits=117647
-650000001<=x<=700000000 pairs=1178890269 hits=117647
-700000001<=x<=750000000 pairs=1191353088 hits=117647
-750000001<=x<=800000000 pairs=1203075569 hits=117647
-800000001<=x<=850000000 pairs=1214081876 hits=117648
-850000001<=x<=900000000 pairs=1224486369 hits=117647
-900000001<=x<=950000000 pairs=1234713567 hits=117647
-950000001<=x<=1000000000 pairs=1244242296 hits=117647
-# Every hit has exactly 7 squares and x divisible by 425: hits = 235294 + 2117647 = 2352941 = floor(10^9 / 425), one for each
-# multiple of Bremner's square (373^2 289^2 565^2 / 360721 425^2 23^2 / 205^2 527^2 222121). No hit has 8 or 9 squares.
+# Output of scripts/search/seven.c, 2026-11-22: gcc -O2 seven.c -lm (gcc 13.3.0, x86-64 Linux, 2 cores, 7 GB),
+# './seven L R' for the 20 blocks of length 5*10^7 from 1 to 10^9; about 30 minutes in all.
+# The program prints a line starting with OTHER for every hit that is not the multiple of Bremner's square
+# (373^2 289^2 565^2 / 360721 425^2 23^2 / 205^2 527^2 222121) with the same centre root. No such line was printed.
+1<=x<=50000000 triangles=130164675 pairs=666782974 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+50000001<=x<=100000000 triangles=141195978 pairs=835535273 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+100000001<=x<=150000000 triangles=145360258 pairs=909141047 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+150000001<=x<=200000000 triangles=148064089 pairs=959298112 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+200000001<=x<=250000000 triangles=150075005 pairs=997970400 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+250000001<=x<=300000000 triangles=151676820 pairs=1029280927 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+300000001<=x<=350000000 triangles=153010292 pairs=1056358138 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+350000001<=x<=400000000 triangles=154150284 pairs=1079421335 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+400000001<=x<=450000000 triangles=155147468 pairs=1100077215 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+450000001<=x<=500000000 triangles=156033755 pairs=1118805952 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+500000001<=x<=550000000 triangles=156831421 pairs=1135624714 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+550000001<=x<=600000000 triangles=157554901 pairs=1151051081 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+600000001<=x<=650000000 triangles=158219441 pairs=1165464976 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+650000001<=x<=700000000 triangles=158831934 pairs=1178890269 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+700000001<=x<=750000000 triangles=159400617 pairs=1191353088 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+750000001<=x<=800000000 triangles=159931783 pairs=1203075569 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+800000001<=x<=850000000 triangles=160429901 pairs=1214081876 hits: 7 squares=117648 8 squares=0 9 squares=0; multiples of Bremner's square=117648 other=0
+850000001<=x<=900000000 triangles=160897049 pairs=1224486369 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+900000001<=x<=950000000 triangles=161340876 pairs=1234713567 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+950000001<=x<=1000000000 triangles=161758885 pairs=1244242296 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0
+# Totals: triangles=3080075432 pairs=21695655178; hits with 7 squares=2352941, with 8 squares=0, with 9 squares=0;
+# multiples of Bremner's square=2352941 = floor(10^9 / 425); other=0.

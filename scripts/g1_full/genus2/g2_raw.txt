@@ -1,0 +1,161 @@
+=== 72,65
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=72; n:=65; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2966998096</seed><version>2.29-10</version><time>6.500</time><memory>325.88MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 299.9MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r</line><line>                                                                             ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt;  print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5</line><line>                            ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 91,60
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=91; n:=60; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2633294322</seed><version>2.29-10</version><time>2.669</time><memory>73.81MB</memory></headers><results><line>G2 91 60 6</line><line></line></results></calculator>
+
+=== 195,28
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=195; n:=28; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>759521381</seed><version>2.29-10</version><time>7.070</time><memory>324.31MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 297.8MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ; print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=</line><line>                       ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ; print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=</line><line>                             ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 209,120
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=209; n:=120; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>191066393</seed><version>2.29-10</version><time>5.730</time><memory>162.31MB</memory></headers><results><line>G2 209 120 5</line><line></line></results></calculator>
+
+=== 420,341
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=420; n:=341; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>57375160</seed><version>2.29-10</version><time>8.310</time><memory>325.41MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 299.3MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 425,168
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=425; n:=168; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3218601086</seed><version>2.29-10</version><time>8.980</time><memory>326.91MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 301.2MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 440,279
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=440; n:=279; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4203917758</seed><version>2.29-10</version><time>6.240</time><memory>192.47MB</memory></headers><results><line>G2 440 279 6</line><line></line></results></calculator>
+
+=== 572,555
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=572; n:=555; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3068055259</seed><version>2.29-10</version><time>8.250</time><memory>324.91MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 298.6MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 608,105
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=608; n:=105; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3900739590</seed><version>2.29-10</version><time>8.369</time><memory>324.72MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 298.4MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 609,200
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=609; n:=200; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4087057132</seed><version>2.29-10</version><time>7.620</time><memory>323.41MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 296.7MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 627,364
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=627; n:=364; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1563759640</seed><version>2.29-10</version><time>7.639</time><memory>327.25MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 301.7MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 680,111
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=680; n:=111; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2465911845</seed><version>2.29-10</version><time>11.519</time><memory>324.00MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 297.4MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 741,580
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=741; n:=580; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>140541595</seed><version>2.29-10</version><time>8.669</time><memory>323.81MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 297.2MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 760,39
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=760; n:=39; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1644828029</seed><version>2.29-10</version><time>9.300</time><memory>327.03MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 301.4MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ; print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=</line><line>                       ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ; print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=</line><line>                             ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 861,620
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=861; n:=620; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2815414326</seed><version>2.29-10</version><time>10.230</time><memory>322.75MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 295.8MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 920,129
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=920; n:=129; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>426859998</seed><version>2.29-10</version><time>9.669</time><memory>325.03MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 298.8MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 945,248
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=945; n:=248; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1062697835</seed><version>2.29-10</version><time>8.480</time><memory>324.66MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 298.3MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 724,665
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=724; n:=665; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>995315244</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== 740,539
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=740; n:=539; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2748047657</seed><version>2.29-10</version><time>14.089</time><memory>325.41MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 299.3MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 820,799
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=820; n:=799; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>394225070</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== 828,173
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=828; n:=173; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3934431582</seed><version>2.29-10</version><time>25.780</time><memory>326.09MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 300.2MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+
+=== 840,83
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=840; n:=83; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4018641941</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== 889,320
+--- input
+P<t>:=PolynomialRing(Rationals()); m:=889; n:=320; S:=m^2+n^2; f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); r:=RankBound(J); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3382819169</seed><version>2.29-10</version><time>9.400</time><memory>325.03MB</memory><warning>The computation exceeded the memory limit and so was terminated prematurely.</warning><warning>An error occurred. See the output for details.</warning></headers><results><line></line><line>Current total memory usage: 298.8MB, failed memory request: 108.1MB</line><line>System Error: User memory limit has been reached</line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                        ^</line><line>Runtime error: Variable 'r' has not been initialized</line><line></line><line></line><line>&gt;&gt; ); print "G2", m, n, r; if r le 1 then print "PTS", RationalPoints(H:Bound:</line><line>                              ^</line><line>User error: Identifier 'r' has not been declared or assigned</line><line></line></results></calculator>
+

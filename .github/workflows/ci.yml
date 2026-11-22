@@ -16,6 +16,11 @@ jobs:
           python3 -m py_compile scripts/g1_full/*.py
           python3 scripts/g1_full/check_evidence.py
           python3 scripts/g1_full/octic_check.py
+          gcc -O2 -Wall -Wextra -Werror -o /tmp/seven scripts/search/seven.c -lm
+          gcc -O2 -Wall -Wextra -Werror -o /tmp/seven_brute scripts/search/seven_brute.c
+          /tmp/seven 1 100000 | tee /tmp/seven.out
+          grep -q "7 squares=235 8 squares=0 9 squares=0; multiples of Bremner's square=235 other=0" /tmp/seven.out
+          test "$(/tmp/seven_brute 430 | sort -u)" = "425 138600 41496 7"
           python3 scripts/g1_full/gen_lean.py
           python3 scripts/g1_full/gen_census1000.py
           python3 scripts/g1_full/gen_sizecheck.py
