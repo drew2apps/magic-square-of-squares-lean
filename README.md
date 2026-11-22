@@ -73,7 +73,7 @@ The same file goes beyond the 127 pairs of that report:
 
 [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) repeats this with all nine cells, and corrects the audit, which was based on an early snapshot of the Kepler71 notes:
 
-- **A Lean theorem about the open problem (`IsMSS.ratio_ne_of_le_200`).** In a magic square of squares with roots `a b c / d e f / g h i`, the ratio `(b + d) : (h + f)` is not `m : n` for any coprime `1 ≤ n < m ≤ 200`, outside 60 listed pairs. This excludes infinitely many squares at once, of any size.
+- **A Lean theorem about the open problem (`IsMSS.ratio_ne_of_le_1000`).** In a magic square of squares with roots `a b c / d e f / g h i`, the ratio `(b + d) : (h + f)` is not `m : n` for any coprime `1 ≤ n < m ≤ 1000`, outside 425 listed pairs (60 of them up to 200). This excludes 303,766 ratios, each covering infinitely many squares of any size.
 - Computed, not in Lean: exactly 34 primes can obstruct the full system modulo `p`, the largest is 607.
 - Computed, not in Lean: of the 60 listed pairs, 16 are not closed; for `m ≤ 1000`, 157 of 304,191 pairs are not closed.
 
@@ -81,9 +81,9 @@ The same file goes beyond the 127 pairs of that report:
 
 - Whether a 3×3 magic square of distinct squares exists.
 - Any lower bound on the size of the entries. The theorem on the ratio `(b + d) : (h + f)` says nothing about size.
-- Anything about the infinitely many ratios above 200, or about the 60 excepted ratios, where the system has a degenerate solution and no congruence can help. This sieve cannot settle the problem by itself.
+- Anything about the infinitely many ratios above 1000, or about the 425 excepted ratios; for 306 of them the system has a degenerate solution and no congruence can help. This sieve cannot settle the problem by itself, and it does not transfer to the other natural ways of cutting the problem into curves (see [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md)).
 - The Lean proofs use congruences and algebraic identities only. The rank computations behind the census in [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) are not formalized.
-- Any search bound, and any result that needs the arithmetic of curves (Bremner 1999 and 2001, Bruin–Thomas–Várilly-Alvarado, Auel–Singer).
+- Any search bound, and any result that needs the arithmetic of curves (Bremner 1999 and 2001) or the geometry of the surface of magic squares of squares (Bruin–Thomas–Várilly-Alvarado, Auel–Singer).
 - The existence of magic squares of squares for every size from 4×4 up (Rome–Yamagishi). Only Euler's 4×4 example is checked.
 
 ## A remark on the formal-conjectures docstring
@@ -112,6 +112,7 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/G1Full.lean` | The G1 family with all nine cells: a finite check that rules out whole ratio classes |
 | `MagicSquareOfSquares/G1FullCertificates.lean` | The 484 obstructed classes and the census for `m ≤ 200` (generated) |
 | `MagicSquareOfSquares/G1Bridge.lean` | From a magic square of squares to the G1 system; the theorem on edge-root ratios |
+| `MagicSquareOfSquares/G1Census1000.lean` | The census for `m ≤ 1000`, evaluated by the kernel in 20 blocks (generated) |
 | `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind [KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md) |
 | `scripts/g1_full/` | The scans behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) |
 | `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |
@@ -142,7 +143,9 @@ The audit takes about three minutes and ends with `AUDIT OK`.
 - M. Gardner, *Riddles of the Sphinx*, 1987, pp. 136–137.
 - Morgenstern, *Properties of a 3x3 Magic Square of Squares*, multimagie.com, 2007.
 - J. P. Robertson, *Magic Squares of Squares*, Mathematics Magazine 69(4), 1996, 289–293.
-- A. Bremner, *On squares of squares*, Acta Arithmetica 88, 1999.
+- A. Bremner, *On squares of squares*, Acta Arithmetica 88, 1999; *On squares of squares II*, Acta Arithmetica 99, 2001.
+- N. Bruin, J. Thomas, A. Várilly-Alvarado, *Explicit computation of symmetric differentials and its application to quasihyperbolicity*, Algebra & Number Theory 16(6), 2022, 1377–1405.
+- A. Auel, B. Singer, *The algebraic geometry of 3-by-3 magic squares of squares*, arXiv:2609.09351, 2026.
 - L. Sallows, *The Lost Theorem*, The Mathematical Intelligencer 19(4), 1997.
 - C. Boyer, *Some Notes on the Magic Squares of Squares Problem*, The Mathematical Intelligencer 27(2), 2005, 52–64.
 

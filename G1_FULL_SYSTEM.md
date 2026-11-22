@@ -2,7 +2,7 @@
 
 This note continues [KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md). That file looked only at the three diagonal cells of the G1 family of [Kepler71/magic-square-of-squares](https://github.com/Kepler71/magic-square-of-squares). This one uses all nine cells.
 
-Status: the census for `m ≤ 200` and the table of obstructed classes are **Lean theorems** (see "What is checked in Lean"). Everything else is **computed, not formalized, not refereed.** The scripts are in `scripts/g1_full/`. Prepared with Claude, an AI model.
+Status: the congruence census for `m ≤ 1000` and the table of obstructed classes are **Lean theorems** (see "What is checked in Lean"). Everything else is **computed, not formalized, not refereed.** The scripts are in `scripts/g1_full/`. Prepared with Claude, an AI model.
 
 ## Correction to the earlier audit
 
@@ -87,7 +87,17 @@ For the 119 pairs without a trivial point, the bad primes and 2 were also tested
 - "Not excluded by a congruence" is not a proof of local solubility: at primes of bad reduction only small prime powers were tested.
 - The rank bounds depend on PARI 2.17.2. The `L`-value closures also depend on its numerical `L`-function code.
 - The Weil-bound step is a standard argument, written by an AI model and not checked by a number theorist.
-- In Lean: only what the next section lists. The completeness of the list of 34 primes, the census beyond 200 and every rank statement are not in Lean.
+- In Lean: only what the next section lists. The completeness of the list of 34 primes and every rank statement are not in Lean.
+
+## Why this sieve does not transfer to the other fibrations
+
+The same surface can be cut into curves in other ways, and I tried the same sieve on three of them. It finds nothing, for a simple reason: every fibre has a rational point, so no congruence can exclude it.
+
+- **Slopes** (the Kepler71 census: cells `1, 1 ± sz, 1 ± rz, 1 ± (s−r)z, 1 ± (s+r)z`). At `z = 0` all nine cells are equal.
+- **G2** (the two corner pairs are squares identically; centre and edges must be squares). At `(a, b) = (m + n, m − n)` the five values are `4(m² + n²)²` and `4(m² ± 2mn − n²)²`, each of the last two twice.
+- **G3** (one corner pair and one edge pair). `families.py` finds no obstructed class at any prime below 700 and no excluded pair for `m ≤ 200`, the same as for G2.
+
+So G1, where the two edge pairs are the identical squares, is the one fibration of these four in which degenerate points are rare and congruences decide almost every fibre. For the others only global methods (ranks, Chabauty) can work, which is what Kepler71 used for the slopes.
 
 ## What is checked in Lean
 
@@ -97,12 +107,17 @@ For the 119 pairs without a trivial point, the bad primes and 2 were also tested
 | `G1.fullTable_valid` (`G1FullCertificates.lean`) | The check fails for each of the 484 classes at the 34 primes. Evaluated by the Lean kernel |
 | `G1.no_solution_le_200` | For coprime `1 ≤ n < m ≤ 200` outside the 60 pairs of `exceptions200`, no rational `t` makes the five cells squares |
 | `G1.exceptions200_spec` | Each of the 60 exceptions has `m² + n² = k²` or `m² + n² = 2k²` |
+| `G1.no_solution_le_1000` (`G1Census1000.lean`) | The same for coprime `1 ≤ n < m ≤ 1000` outside the 425 pairs of `exceptions1000` (the 306 with a trivial point and the 119 without). The kernel evaluates the census in 20 blocks |
 | `IsMSS.fullSquares` (`G1Bridge.lean`) | A magic square of squares with roots `a b c / d e f / g h i` and `(b + d)·n = (h + f)·m` gives a solution of the five-form system for `(m, n)` at `t = (h + f)/(b − d)` |
 | `IsMSS.ratio_ne_of_le_200` | **In a magic square of squares with `b ≠ d` and `h + f ≠ 0`, `(b + d) : (h + f)` is not `m : n` for any coprime `1 ≤ n < m ≤ 200` outside the 60 exceptions** |
 
-The last line is a statement about the open problem itself: it excludes every magic square of squares whose edge roots have one of 12,171 ratios, whatever the size of the entries. The signs of the roots are arbitrary. The theorems use only `propext`, `Classical.choice` and `Quot.sound`.
+| `IsMSS.ratio_ne_of_le_1000` | The same for `m ≤ 1000` outside the 425 exceptions |
+
+The last two lines are statements about the open problem itself: they exclude every magic square of squares whose edge roots have one of 303,766 ratios, whatever the size of the entries. The signs of the roots are arbitrary, so the same holds for `(b − d) : (h + f)`; in terms of the family, the system is symmetric under exchanging `(m : n)` with `(b : a)`, so the parameter `t` of a solution must avoid the excluded ratios as well. The theorems use only `propext`, `Classical.choice` and `Quot.sound`.
 
 `scripts/g1_full/gen_lean.py` writes `G1FullCertificates.lean` from `modp_classes.txt`.
+
+**A consequence for size (computed, not in Lean).** By the symmetry just mentioned, a solution in which `(m : n)` and `t` both have height at most 1000 needs both of them among the 425 exceptions. A direct test of all 361,250 such combinations finds no solution. So in a magic square of nine distinct squares the ratios `(b + d) : (h + f)` and `(h + f) : (b − d)` cannot both have height at most 1000; in particular the roots cannot all be at most 500 in absolute value. Published computer searches go far beyond that size. The point is only that this bound follows from the theorems here and one small exact computation.
 
 ## Reproduce
 
@@ -115,5 +130,7 @@ python3 local.py 1000           # about 4 minutes
 python3 weil49.py
 python3 global.py FILE.json OUT.json   # FILE has {"open": [[m, n], ...]}; needs cypari2
 python3 gen_lean.py             # rewrites MagicSquareOfSquares/G1FullCertificates.lean
+python3 gen_census1000.py       # rewrites MagicSquareOfSquares/G1Census1000.lean
+python3 families.py G2 700 200  # the sister families: no obstruction anywhere
 cd ../.. && lake build          # the Lean theorems; G1FullCertificates needs about 5 GB of memory
 ```
