@@ -1,8 +1,20 @@
 # The full G1 system: congruences, trivial points, and what is left
 
-This note continues [KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md). That file looked only at the three diagonal cells of the G1 family of [Kepler71/magic-square-of-squares](https://github.com/Kepler71/magic-square-of-squares). This one uses all nine cells.
+This note replaces an earlier audit, now in [archive/KEPLER71_G1_AUDIT.md](archive/KEPLER71_G1_AUDIT.md). That file looked only at the three diagonal cells of the G1 family of [Kepler71/magic-square-of-squares](https://github.com/Kepler71/magic-square-of-squares). This one uses all nine cells.
 
 Status: the congruence census for `m ≤ 1000` and the table of obstructed classes are **Lean theorems** (see "What is checked in Lean"). Everything else is **computed, not formalized, not refereed.** The scripts are in `scripts/g1_full/`. Prepared with Claude, an AI model.
+
+## Which numbers are checked by Lean
+
+| Number | Status |
+|---|---|
+| The 484 obstructed classes at 34 primes | Lean: each class is obstructed (`fullTable_valid`, `maskTable_valid`). That there are no others is computed |
+| 425 exceptions for `m ≤ 1000`, 60 for `m ≤ 200` | Lean (`exceptions1000_length`, `exceptions200_length`): every coprime pair outside these lists is excluded |
+| 304,191 coprime pairs, hence 303,766 excluded | The count of coprime pairs is by script; the Lean theorem does not need it |
+| 306 of the 425 have a trivial point | Computed by the generator; for `m ≤ 200` all 60 do, and that is Lean (`exceptions200_spec`) |
+| Some edge root exceeds 500 | Lean (`IsMSS.edge_root_gt_500`) |
+| 44 of 60, 183 of 306, 85 of 119 closed by rank 0; 157 open | Computed with PARI. Not in Lean |
+| Exactly 34 primes; the Weil-bound argument | Computed and argued. Not in Lean |
 
 ## Correction to the earlier audit
 
@@ -117,7 +129,7 @@ The last two lines are statements about the open problem itself: they exclude ev
 
 `scripts/g1_full/gen_lean.py` writes `G1FullCertificates.lean` from `modp_classes.txt`.
 
-**A consequence for size (computed, not in Lean).** By the symmetry just mentioned, a solution in which `(m : n)` and `t` both have height at most 1000 needs both of them among the 425 exceptions. A direct test of all 361,250 such combinations finds no solution. So in a magic square of nine distinct squares the ratios `(b + d) : (h + f)` and `(h + f) : (b − d)` cannot both have height at most 1000; in particular the roots cannot all be at most 500 in absolute value. Published computer searches go far beyond that size. The point is only that this bound follows from the theorems here and one small exact computation.
+**A consequence for size (Lean: `IsMSS.edge_root_gt_500`, in `G1Size.lean`).** By the symmetry just mentioned, a solution in which `(m : n)` and `t` both have height at most 1000 needs both of them among the 425 exceptions. `G1SizeCheck.lean` shows that no two exceptional pairs fit together: for each of the 361,250 combinations one of the five forms is a non-residue modulo one of 18 small primes (3, 5, 11, 13 and others, listed in that file; the 34 sieve primes are all ±1 mod 8 and are poor at this job). So in a magic square of squares with `b² ≠ d²`, `h² ≠ f²` and `b² ≠ f²`, one of the edge roots `b, d, f, h` is larger than 500 in absolute value. Published computer searches exclude far larger squares; this is only the bound that follows from the theorems here.
 
 ## Reproduce
 
@@ -131,6 +143,7 @@ python3 weil49.py
 python3 global.py FILE.json OUT.json   # FILE has {"open": [[m, n], ...]}; needs cypari2
 python3 gen_lean.py             # rewrites MagicSquareOfSquares/G1FullCertificates.lean
 python3 gen_census1000.py       # rewrites MagicSquareOfSquares/G1Census1000.lean
+python3 gen_sizecheck.py        # rewrites MagicSquareOfSquares/G1SizeCheck.lean
 python3 families.py G2 700 200  # the sister families: no obstruction anywhere
 cd ../.. && lake build          # the Lean theorems; G1FullCertificates needs about 5 GB of memory
 ```

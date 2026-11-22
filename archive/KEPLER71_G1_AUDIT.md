@@ -1,6 +1,8 @@
 # Audit of the G1 closures in Kepler71/magic-square-of-squares
 
-> **Correction, 21 November 2026.** This audit was written from two Kepler71 notes dated 12 September 2026. Later notes in that repository close all 127 pairs with `m ≤ 20`, and already state congruence obstructions for whole classes of `(m : n)` using all nine cells. "Seven open pairs" below describes their state on 12 September only. See [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md), which also supersedes the census at the end of this file.
+> **Archived on 21 November 2026. Do not cite the numbers in this file.** It looked only at the three diagonal cells of the G1 family and was written from an early snapshot of the Kepler71 notes. Its census ("928 remain open", "seven open pairs") is superseded by [G1_FULL_SYSTEM.md](../G1_FULL_SYSTEM.md). The Lean theorems it describes (`G1.lean`, `G1Certificates.lean`, `G1Classes.lean`, `G1Primes.lean`) are still part of the library and still correct.
+
+> **Correction, 21 November 2026.** This audit was written from two Kepler71 notes dated 12 September 2026. Later notes in that repository close all 127 pairs with `m ≤ 20`, and already state congruence obstructions for whole classes of `(m : n)` using all nine cells. "Seven open pairs" below describes their state on 12 September only. See [G1_FULL_SYSTEM.md](../G1_FULL_SYSTEM.md), which also supersedes the census at the end of this file.
 
 [Kepler71/magic-square-of-squares](https://github.com/Kepler71/magic-square-of-squares) studies a two-parameter family of 3×3 magic squares called G1. For coprime `1 ≤ n < m ≤ 20` (127 pairs) it reports that 120 pairs cannot give a magic square of nine distinct squares: 62 because an elliptic curve has rank 0, and 58 because of congruences. Its handoff note says these 120 closures were inherited without a consolidated audit.
 

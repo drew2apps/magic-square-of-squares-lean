@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this formalization, please cite it as below."
+title: "Magic square of squares: known facts, checked in Lean"
+type: software
+authors:
+  - family-names: Carlson
+    given-names: Drew
+repository-code: "https://github.com/drew2apps/magic-square-of-squares-lean"
+license: Apache-2.0
+abstract: >-
+  Lean 4 proofs of the known necessary conditions and reformulations for a 3x3 magic square of
+  squares (an open problem), and a kernel-checked theorem excluding 303,766 ratios of the edge
+  roots. The Lean code and the text were written with Claude, an AI model made by Anthropic.
+keywords:
+  - Lean 4
+  - Mathlib
+  - magic square of squares
+  - formal verification

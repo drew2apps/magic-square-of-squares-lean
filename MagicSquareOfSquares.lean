@@ -17,3 +17,5 @@ import MagicSquareOfSquares.G1Full
 import MagicSquareOfSquares.G1FullCertificates
 import MagicSquareOfSquares.G1Bridge
 import MagicSquareOfSquares.G1Census1000
+import MagicSquareOfSquares.G1SizeCheck
+import MagicSquareOfSquares.G1Size

@@ -63,26 +63,26 @@ In the three reformulations the nine squares are required to be distinct. The in
 | The Parker square: rows, columns and one diagonal sum to 3051; the other diagonal sums to 4107 | `parker` |
 | Euler's 4×4 magic square of distinct squares (1770) | `exists_magic_square_squares_four` |
 
-### An audit of one family from another project
+### A theorem on the ratio of the edge roots
 
-[KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md) checks 120 exclusions reported by the Kepler71 project for its G1 family. All reported numbers were reproduced. In addition, 114 of the 120 exclusions follow from congruences alone, and those 114 are checked by the Lean kernel (`G1.no_point`).
+Write the roots of a magic square of squares as `a b c / d e f / g h i`. [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) has the details; the forms and the five-form local test come from the [Kepler71 project](https://github.com/Kepler71/magic-square-of-squares).
 
-The same file goes beyond the 127 pairs of that report:
+| Statement | Lean name |
+|---|---|
+| If `b ≠ d` and `h + f ≠ 0`, the ratio `(b + d) : (h + f)` is not `m : n` for any coprime `1 ≤ n < m ≤ 1000` outside 425 listed pairs (60 of them up to 200). The signs of the roots are arbitrary | `IsMSS.ratio_ne_of_le_1000` |
+| The same for the five forms of the G1 family: no rational `t` makes them squares | `G1.no_solution_le_1000` |
+| If `b² ≠ d²`, `h² ≠ f²` and `b² ≠ f²`, one of the edge roots `b, d, f, h` is larger than 500 in absolute value | `IsMSS.edge_root_gt_500` |
 
-- Six Lean theorems rule out whole remainder classes of `(m, n)`, of any size: two classes for the prime 2, every prime `p ≡ 5 (mod 8)` dividing `m² + n²` to an odd power, and classes modulo 7, 23 and 47.
-- An argument with the Weil bound (written out, not formalized) shows that no other prime of good reduction can obstruct.
-- A census: of the 12,231 coprime pairs with `m ≤ 200`, congruences exclude 11,051, rank 0 closes 252 more, and 928 remain open.
+Each excluded ratio covers infinitely many squares of any size, and each is excluded by a congruence at one prime. The bound 500 is far below what computer searches have covered; it is only what follows from these theorems.
 
-[G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) repeats this with all nine cells, and corrects the audit, which was based on an early snapshot of the Kepler71 notes:
+Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607; of the 425 listed pairs, 157 are not closed by rank computations either (16 of them up to 200).
 
-- **A Lean theorem about the open problem (`IsMSS.ratio_ne_of_le_1000`).** In a magic square of squares with roots `a b c / d e f / g h i`, the ratio `(b + d) : (h + f)` is not `m : n` for any coprime `1 ≤ n < m ≤ 1000`, outside 425 listed pairs (60 of them up to 200). This excludes 303,766 ratios, each covering infinitely many squares of any size.
-- Computed, not in Lean: exactly 34 primes can obstruct the full system modulo `p`, the largest is 607.
-- Computed, not in Lean: of the 60 listed pairs, 16 are not closed; for `m ≤ 1000`, 157 of 304,191 pairs are not closed.
+An earlier audit of the same family, restricted to three of the five forms, is in [archive/](archive/KEPLER71_G1_AUDIT.md). Its numbers are superseded.
 
 ## What is not proved
 
 - Whether a 3×3 magic square of distinct squares exists.
-- Any lower bound on the size of the entries. The theorem on the ratio `(b + d) : (h + f)` says nothing about size.
+- Any lower bound on the size of the entries beyond "an edge root exceeds 500", which is far below what computer searches have covered.
 - Anything about the infinitely many ratios above 1000, or about the 425 excepted ratios; for 306 of them the system has a degenerate solution and no congruence can help. This sieve cannot settle the problem by itself, and it does not transfer to the other natural ways of cutting the problem into curves (see [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md)).
 - The Lean proofs use congruences and algebraic identities only. The rank computations behind the census in [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) are not formalized.
 - Any search bound, and any result that needs the arithmetic of curves (Bremner 1999 and 2001) or the geometry of the surface of magic squares of squares (Bruin–Thomas–Várilly-Alvarado, Auel–Singer).
@@ -115,7 +115,8 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/G1FullCertificates.lean` | The 484 obstructed classes and the census for `m ≤ 200` (generated) |
 | `MagicSquareOfSquares/G1Bridge.lean` | From a magic square of squares to the G1 system; the theorem on edge-root ratios |
 | `MagicSquareOfSquares/G1Census1000.lean` | The census for `m ≤ 1000`, evaluated by the kernel in 20 blocks (generated) |
-| `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind [KEPLER71_G1_AUDIT.md](KEPLER71_G1_AUDIT.md) |
+| `MagicSquareOfSquares/G1SizeCheck.lean`, `G1Size.lean` | No two exceptional pairs fit together (generated); the bound on the edge roots |
+| `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind the archived audit |
 | `scripts/g1_full/` | The scans behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) |
 | `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |
 | `scripts/Audit.lean` | Lists every theorem and fails if any uses a non-standard axiom |
