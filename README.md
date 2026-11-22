@@ -149,6 +149,8 @@ On GitHub's runner the build takes about 15 minutes from an empty cache; with th
 - The Lean code was written by Claude (an AI model made by Anthropic), directed by Drew (`drew2apps`). The proofs do not rest on trust in either: the Lean kernel checks them.
 - The kernel checks proofs, not whether a statement says what was intended. The statements are short. Please read them, and open an issue if one does not match its source.
 - The statements follow the Wikipedia list. Rabern's paper was read afterwards and its theorems agree with properties 1, 5, 6, 7, 8 and contain 9. The papers by Zimmermann, Morgenstern and Robertson were not consulted. The proofs here were written independently of all of them.
+- Related work found on 21 November 2026 and only skimmed: C. Woll, *A Partial Residue Categorization of the Magic Square of Squares* (arXiv:1809.03067), studies the square modulo the primes dividing the centre root; its Corollary 4.3 says that a prime dividing both the centre and a mid-edge entry of a primitive square is `≡ 1 (mod 8)`. I did not find `m² + n² ∣ 8e²`, or the statement on the centre proved here, in that paper, in Rabern's paper or in the Kepler71 notes. I have not made a full literature search and claim no novelty.
+- O. Hill, arXiv:2510.08286 (October 2025), claims a proof that no 3×3 magic square of distinct squares exists. I have not read or checked it and do not know its status. Wikipedia (read on 21 November 2026) lists the problem as open. Nothing in this repository depends on it.
 
 ## Sources
 

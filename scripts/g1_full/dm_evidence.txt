@@ -16,6 +16,8 @@
 # non-degenerate t.
 # The line for 784,391 was added later on the same day, in a run of dm2.py with PARI point-search effort up to 5
 # (the point was found at effort 4); the other 118 lines used effort at most 3.
+# The lines for 271,103, 396,203 and 667,156 were rerun on the partner pair (version 0.3.2): there eclib's
+# 2-descent gives the rank bound 1 as well (eclib_check.py); on the pair itself only PARI's Cassels pairing does.
 15,8 15,8 E04 G=-83521 hG=3.1576 B=29.242 amax=27 tors=4 cand=111 mwrank t=[-1:deg;1:deg]
 21,20 21,20 E04 G=-707281 hG=3.7137 B=33.560 amax=27 tors=4 cand=111 mwrank t=[-1:deg;1:deg]
 23,7 23,7 E04 G=-334084 hG=2.7700 B=32.708 amax=34 tors=8 cand=277 mwrank t=[0:deg]
@@ -34,7 +36,7 @@
 253,204 457,49 E04 G=88238702500 hG=5.6501 B=59.437 amax=30 tors=8 cand=245 mwrank t=[0:deg]
 255,32 255,32 E04 G=-4362470401 hG=5.7709 B=54.196 amax=27 tors=4 cand=111 mwrank t=[-1:deg;1:deg]
 264,23 287,241 E04 G=23137452100 hG=5.5778 B=56.651 amax=31 tors=8 cand=253 mwrank t=[0:deg]
-271,103 271,103 E04 G=-7064402500 hG=5.2768 B=55.014 amax=31 tors=8 cand=253 sat-eclib t=[0:deg]
+271,103 187,84 E04 G=-1766100625 hG=5.6358 B=51.789 amax=28 tors=4 cand=115 mwrank t=[-1:deg;1:deg]
 273,136 409,137 D1 G=0 hG=11.6946 B=112.793 amax=21 tors=2 cand=43 sat<=7,hmin=0.2394 t=[0:deg]
 287,223 287,223 E04 G=21761560324 hG=5.5452 B=56.436 amax=31 tors=8 cand=253 mwrank t=[0:deg]
 287,241 287,241 E04 G=23137452100 hG=5.5778 B=56.651 amax=31 tors=8 cand=253 mwrank t=[0:deg]
@@ -44,7 +46,7 @@
 343,151 343,151 E04 G=33047604100 hG=5.5445 B=57.233 amax=31 tors=8 cand=253 mwrank t=[0:deg]
 377,336 377,336 E04 G=-65037750625 hG=6.5703 B=59.299 amax=28 tors=4 cand=115 mwrank t=[-1:deg;1:deg]
 388,287 388,287 D1 G=0 hG=12.1162 B=113.879 amax=21 tors=2 cand=43 sat<=22,hmin=0.0251 t=[]
-396,203 396,203 E04 G=62106976800 hG=6.4199 B=58.660 amax=28 tors=4 cand=115 sat-eclib t=[-1:deg;1:deg]
+396,203 599,193 E04 G=284206272100 hG=6.0392 B=62.070 amax=31 tors=8 cand=253 mwrank t=[0:deg]
 399,40 439,359 E04 G=82896774724 hG=5.9915 B=60.398 amax=31 tors=8 cand=253 sat-eclib t=[0:deg]
 408,145 553,263 D1 G=0 hG=12.3371 B=119.179 amax=21 tors=2 cand=43 sat<=9,hmin=0.1797 t=[0:deg]
 409,137 409,137 D1 G=0 hG=11.6946 B=112.793 amax=21 tors=2 cand=43 sat<=7,hmin=0.2394 t=[0:deg]
@@ -73,7 +75,7 @@
 647,577 647,577 D1 G=0 hG=12.8836 B=121.384 amax=21 tors=2 cand=43 sat<=9,hmin=0.1826 t=[0:deg]
 660,259 660,259 E04 G=437935687200 hG=6.8667 B=63.044 amax=28 tors=4 cand=115 sat-eclib t=[-1:deg;1:deg]
 664,301 965,363 D1 G=0 hG=13.4196 B=127.766 amax=21 tors=2 cand=43 sat<=17,hmin=0.0479 t=[]
-667,156 667,156 E04 G=22838119200 hG=6.7928 B=62.934 amax=28 tors=4 cand=115 sat-eclib t=[-1:deg;1:deg]
+667,156 823,511 E04 G=1271278800100 hG=6.5161 B=65.481 amax=30 tors=8 cand=245 mwrank t=[0:deg]
 672,185 672,185 E04 G=-236010384481 hG=6.8224 B=63.046 amax=28 tors=4 cand=115 mwrank t=[-1:deg;1:deg]
 675,101 388,287 D1 G=0 hG=12.1162 B=113.879 amax=21 tors=2 cand=43 sat<=22,hmin=0.0251 t=[]
 684,37 684,37 E04 G=-220172100625 hG=6.7095 B=63.047 amax=27 tors=4 cand=111 mwrank t=[-1:deg;1:deg]
