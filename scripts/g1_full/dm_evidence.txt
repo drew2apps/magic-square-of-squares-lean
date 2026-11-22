@@ -13,10 +13,11 @@
 # <= N (the index of the point is at most N - 1), where N follows from the lower bound H for the canonical height of non-torsion points
 # (Sage height_function().min(0.01, 20)); for E0L also C1, K, rho of dm3.py and the largest observed
 # value of |2 h(sigma) - hhat(Q) - hhat(R0 - Q)|, which must be below K;
+# for E0L, model = a-invariants of the minimal model on which G is given (computed by Sage);
 # t = the rational t at which all five forms are squares (deg = degenerate square). No line has a
 # non-degenerate t.
 # The line for 784,391 was added later on the same day, in a run of dm2.py with PARI point-search effort up to 5
-# (the point was found at effort 4); the other 118 lines used effort at most 3.
+# (the point was found at effort 4); the other lines used effort at most 3.
 # The lines for 271,103, 396,203 and 667,156 were rerun on the partner pair (version 0.3.2): there eclib's
 # 2-descent gives the rank bound 1 as well (eclib_check.py); on the pair itself only PARI's Cassels pairing does.
 15,8 15,8 E04 G=-83521 hG=3.1576 B=29.242 amax=27 tors=4 cand=111 mwrank t=[-1:deg;1:deg]
@@ -131,12 +132,12 @@
 988,27 1015,961 E04 G=3608650919332 hG=6.8959 B=68.440 amax=30 tors=4 cand=123 sat-eclib t=[]
 989,660 1649,329 E04 G=15376766227684 hG=6.9862 B=71.048 amax=30 tors=8 cand=245 mwrank t=[0:deg]
 992,705 992,705 E04 G=-2193624625921 hG=7.4437 B=67.397 amax=28 tors=4 cand=115 mwrank t=[-1:deg;1:deg]
-423,332 423,332 E0L G=-27869819136 hG=25.5397 B=42.530 amax=11 tors=4 cand=92 sat<=3,hmin=6.3039 C1=94.27 K=180.02 rho=1 worst=35.41 t=[]
-755,91 755,91 E0L G=-27869819136 hG=25.5397 B=42.530 amax=12 tors=4 cand=100 sat<=3,hmin=6.3039 C1=104.48 K=190.24 rho=-1 worst=40.03 t=[]
-427,320 427,320 E0L G=-27023534480 hG=25.5127 B=42.520 amax=11 tors=4 cand=92 sat<=5,hmin=1.5760 C1=94.62 K=180.35 rho=1 worst=35.33 t=[]
-747,107 747,107 E0L G=-27023534480 hG=25.5127 B=42.520 amax=12 tors=4 cand=100 sat<=5,hmin=1.5760 C1=104.43 K=190.17 rho=-1 worst=40.02 t=[]
-560,33 560,33 E0L G=-33009722240 hG=25.6729 B=42.703 amax=12 tors=4 cand=100 sat<=3,hmin=6.2699 C1=103.24 K=189.34 rho=-1 worst=40.58 t=[]
-593,527 593,527 E0L G=-33009722240 hG=25.6729 B=42.703 amax=11 tors=4 cand=92 sat<=3,hmin=6.2699 C1=99.96 K=186.06 rho=1 worst=37.78 t=[]
+423,332 423,332 E0L G=-27869819136 hG=25.5397 B=42.530 amax=11 tors=4 cand=92 sat<=3,hmin=6.3039 C1=94.27 K=180.02 rho=1 worst=35.41 model=0,-1,0,-10810266634575227101441,180302397457159147910876363714305 t=[]
+755,91 755,91 E0L G=-27869819136 hG=25.5397 B=42.530 amax=12 tors=4 cand=100 sat<=3,hmin=6.3039 C1=104.48 K=190.24 rho=-1 worst=40.03 model=0,-1,0,-10810266634575227101441,180302397457159147910876363714305 t=[]
+427,320 427,320 E0L G=-27023534480 hG=25.5127 B=42.520 amax=11 tors=4 cand=92 sat<=5,hmin=1.5760 C1=94.62 K=180.35 rho=1 worst=35.33 model=0,-1,0,-10671723082454487898241,109458239519214194853673220186241 t=[]
+747,107 747,107 E0L G=-27023534480 hG=25.5127 B=42.520 amax=12 tors=4 cand=100 sat<=5,hmin=1.5760 C1=104.43 K=190.17 rho=-1 worst=40.02 model=0,-1,0,-10671723082454487898241,109458239519214194853673220186241 t=[]
+560,33 560,33 E0L G=-33009722240 hG=25.6729 B=42.703 amax=12 tors=4 cand=100 sat<=3,hmin=6.2699 C1=103.24 K=189.34 rho=-1 worst=40.58 model=0,-1,0,-13609348715412649323521,505038118870851158289241096555521 t=[]
+593,527 593,527 E0L G=-33009722240 hG=25.6729 B=42.703 amax=11 tors=4 cand=92 sat<=3,hmin=6.2699 C1=99.96 K=186.06 rho=1 worst=37.78 model=0,-1,0,-13609348715412649323521,505038118870851158289241096555521 t=[]
 784,391 784,391 D1 G=0 hG=13.3913 B=125.996 amax=21 tors=2 cand=43 sat<=122,hmin=0.0009 t=[]
 631,71 631,71 D1 G=0 hG=12.5482 B=121.374 amax=21 tors=2 cand=43 sat<=9,hmin=0.1816 upper=magma t=[0:deg]
 351,280 631,71 D1 G=0 hG=12.5482 B=121.374 amax=21 tors=2 cand=43 sat<=9,hmin=0.1816 upper=magma t=[0:deg]

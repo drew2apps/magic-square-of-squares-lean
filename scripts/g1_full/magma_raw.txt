@@ -1,0 +1,125 @@
+=== 2026-11-22 14:28:17 UTC
+--- input
+m:=1009; n:=463; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=759; n:=280; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=773; n:=192; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1311230879</seed><version>2.29-10</version><time>0.250</time><memory>32.09MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:30:18 UTC
+--- input
+m:=777; n:=464; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=779; n:=660; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=1231; n:=329; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2815305202</seed><version>2.29-10</version><time>0.180</time><memory>32.09MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:32:19 UTC
+--- input
+m:=839; n:=727; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=788; n:=487; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=1457; n:=167; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2048116756</seed><version>2.29-10</version><time>0.290</time><memory>32.09MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:34:19 UTC
+--- input
+m:=836; n:=123; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=1581; n:=91; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=840; n:=559; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3034384210</seed><version>2.29-10</version><time>0.200</time><memory>32.09MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:36:24 UTC
+--- input
+m:=1015; n:=713; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=1633; n:=103; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=884; n:=387; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4237643675</seed><version>2.29-10</version><time>3.859</time><memory>64.12MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:38:24 UTC
+--- input
+m:=899; n:=60; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=1623; n:=175; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=1201; n:=599; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>276402288</seed><version>2.29-10</version><time>0.240</time><memory>32.09MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:40:28 UTC
+--- input
+m:=912; n:=215; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=920; n:=371; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=924; n:=893; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2714243569</seed><version>2.29-10</version><time>2.700</time><memory>64.12MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:42:28 UTC
+--- input
+m:=928; n:=585; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=1351; n:=519; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=957; n:=124; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2533300102</seed><version>2.29-10</version><time>0.200</time><memory>32.09MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:44:29 UTC
+--- input
+m:=959; n:=713; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=959; n:=839; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=960; n:=799; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3800785788</seed><version>2.29-10</version><time>0.120</time><memory>32.09MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:46:34 UTC
+--- input
+m:=964; n:=541; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=975; n:=448; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=1871; n:=103; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>124733894</seed><version>2.29-10</version><time>5.309</time><memory>64.12MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:48:39 UTC
+--- input
+m:=1015; n:=961; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=1649; n:=329; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=992; n:=705; S:=m^2+n^2; E:=EllipticCurve([0,2*S^2,0,4*S^2*m^2*n^2,0]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>140539543</seed><version>2.29-10</version><time>4.089</time><memory>64.12MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:50:51 UTC
+--- input
+m:=423; n:=332; S:=m^2+n^2; P<t>:=PolynomialRing(Rationals()); C:=HyperellipticCurve((n^2*t^2+m^2)*(2*S*t^2-8*m*n*t+2*S)); E:=EllipticCurve(C, C![m/n, 2*m*(m^2-n^2)/n]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=755; n:=91; S:=m^2+n^2; P<t>:=PolynomialRing(Rationals()); C:=HyperellipticCurve((n^2*t^2+m^2)*(2*S*t^2-8*m*n*t+2*S)); E:=EllipticCurve(C, C![m/n, 2*m*(m^2-n^2)/n]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=427; n:=320; S:=m^2+n^2; P<t>:=PolynomialRing(Rationals()); C:=HyperellipticCurve((n^2*t^2+m^2)*(2*S*t^2-8*m*n*t+2*S)); E:=EllipticCurve(C, C![m/n, 2*m*(m^2-n^2)/n]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1160579824</seed><version>2.29-10</version><time>11.349</time><memory>64.12MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:53:01 UTC
+--- input
+m:=747; n:=107; S:=m^2+n^2; P<t>:=PolynomialRing(Rationals()); C:=HyperellipticCurve((n^2*t^2+m^2)*(2*S*t^2-8*m*n*t+2*S)); E:=EllipticCurve(C, C![m/n, 2*m*(m^2-n^2)/n]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=560; n:=33; S:=m^2+n^2; P<t>:=PolynomialRing(Rationals()); C:=HyperellipticCurve((n^2*t^2+m^2)*(2*S*t^2-8*m*n*t+2*S)); E:=EllipticCurve(C, C![m/n, 2*m*(m^2-n^2)/n]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+m:=593; n:=527; S:=m^2+n^2; P<t>:=PolynomialRing(Rationals()); C:=HyperellipticCurve((n^2*t^2+m^2)*(2*S*t^2-8*m*n*t+2*S)); E:=EllipticCurve(C, C![m/n, 2*m*(m^2-n^2)/n]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 2, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1829049082</seed><version>2.29-10</version><time>10.560</time><memory>64.12MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line>BOUNDS 2 1</line><line></line></results></calculator>
+
+=== 2026-11-22 14:55:20 UTC
+--- input
+m:=631; n:=71; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
+m:=784; n:=391; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 1, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1530079054</seed><version>2.29-10</version><time>18.260</time><memory>64.12MB</memory></headers><results><line>BOUNDS 0 1</line><line>BOUNDS 1 1</line><line></line></results></calculator>
+

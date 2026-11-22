@@ -23,17 +23,20 @@ Integer forms: `F0 = m² + n²t²`, `F8 = n² + m²t²`, `G4 = 2(m² + n²)(t² 
   `F0·F8·G4·GU` (`d1_point'`). The two abscissas are opposite.
 * Curve `E0L: y² = F0(t)·GL(t)`. Its value at `−t` is `F0(t)·GU(t)` (`e0l_neg`; a symmetry of the
   factorisation, not a point), and `t = m/n` is a rational point of the quartic (`e0l_base`).
-  The passage from this quartic to the Weierstrass model used by `dm3.py` is not in Lean.
+  The map from this quartic to a Weierstrass model is `e0l_weierstrass`; the change from that
+  model to the minimal model used by `dm3.py` is not in Lean.
 * The partner pair: with `M = m + n`, `N = m − n` and `t' = (t + 1)/(t − 1)`, the five forms of
   `(M, N)` at `t'` are the five forms of `(m, n)` at `t`, in another order, times squares
   (`partner_forms`). When `m`, `n` are both odd the scripts use `(M/2, N/2)`, which divides every
-  form by `4` (`forms_double`). The partner pair is again coprime (`partner_coprime` when `m + n`
-  is odd, `partner_half_coprime` for the halved pair).
+  form by `4` (`forms_double`; `partner_forms_half` states the five identities for the halved
+  pair directly). The partner pair is again coprime (`partner_coprime` when `m + n` is odd,
+  `partner_halved_coprime` when `m`, `n` are both odd).
 * The quartic `v² = aτ⁴ + bτ³ + cτ² + dτ + q²` and its Weierstrass model, by the formulas
   `dm3.py` uses (`quartic_to_weierstrass`). For `E0L`, `τ = t − m/n` and `q = 2m(m² − n²)/n`.
   The further change to a minimal model is made by Sage and is not in Lean.
 * The octic `m⁸ + 14m⁴n⁴ + n⁸` of `G1_FULL_SYSTEM.md`, Result 1: it is a quarter of the
-  resultant of `F0` and `GL` (`resultant_F0_GL`), and modulo it `S²·F0·F8·GL·GU` is a square
+  resultant of `F0` and `GL` (`resultant_F0_GL`) and of the three other such pairs
+  (`resultants_octic`), and modulo it `S²·F0·F8·GL·GU` is a square
   (`octic_square`).
 -/
 
@@ -178,5 +181,79 @@ theorem octic_square (m n t : ℚ) :
     4 * (m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8) * t ^ 2 * ((m ^ 2 + n ^ 2) ^ 2 * (t ^ 4 + 1) +
       (2 * (m ^ 2 + n ^ 2) ^ 2 - 16 * m ^ 2 * n ^ 2) * t ^ 2) := by
   ring
+
+/-- The resultants of `F0`, `GU`; of `F8`, `GL`; and of `F8`, `GU` are four times the octic as
+well (same formula as in `resultant_F0_GL`). -/
+theorem resultants_octic (m n : ℚ) :
+    (n ^ 2 * (2 * (m ^ 2 + n ^ 2)) - m ^ 2 * (2 * (m ^ 2 + n ^ 2))) ^ 2 -
+        (n ^ 2 * (8 * m * n) - 0 * (2 * (m ^ 2 + n ^ 2))) *
+          (0 * (2 * (m ^ 2 + n ^ 2)) - m ^ 2 * (8 * m * n)) =
+      4 * (m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8) ∧
+    (m ^ 2 * (2 * (m ^ 2 + n ^ 2)) - n ^ 2 * (2 * (m ^ 2 + n ^ 2))) ^ 2 -
+        (m ^ 2 * (-8 * m * n) - 0 * (2 * (m ^ 2 + n ^ 2))) *
+          (0 * (2 * (m ^ 2 + n ^ 2)) - n ^ 2 * (-8 * m * n)) =
+      4 * (m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8) ∧
+    (m ^ 2 * (2 * (m ^ 2 + n ^ 2)) - n ^ 2 * (2 * (m ^ 2 + n ^ 2))) ^ 2 -
+        (m ^ 2 * (8 * m * n) - 0 * (2 * (m ^ 2 + n ^ 2))) *
+          (0 * (2 * (m ^ 2 + n ^ 2)) - n ^ 2 * (8 * m * n)) =
+      4 * (m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8) := by
+  refine ⟨?_, ?_, ?_⟩ <;> ring
+
+/-- The halved partner pair: with `M = (m + n)/2`, `N = (m − n)/2` and `t' = (t + 1)/(t − 1)`, the
+five forms of `(M, N)` at `t'` are the five forms of `(m, n)` at `t`, in another order, times
+squares. -/
+theorem partner_forms_half (m n t : ℚ) (ht : t - 1 ≠ 0) :
+    ((m + n) / 2) ^ 2 + ((m - n) / 2) ^ 2 * ((t + 1) / (t - 1)) ^ 2 =
+        (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) - 8 * m * n * t) / (2 * (t - 1)) ^ 2 ∧
+    ((m - n) / 2) ^ 2 + ((m + n) / 2) ^ 2 * ((t + 1) / (t - 1)) ^ 2 =
+        (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) + 8 * m * n * t) / (2 * (t - 1)) ^ 2 ∧
+    2 * (((m + n) / 2) ^ 2 + ((m - n) / 2) ^ 2) * (((t + 1) / (t - 1)) ^ 2 + 1) =
+        2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) / (t - 1) ^ 2 ∧
+    2 * (((m + n) / 2) ^ 2 + ((m - n) / 2) ^ 2) * (((t + 1) / (t - 1)) ^ 2 + 1) -
+          8 * ((m + n) / 2) * ((m - n) / 2) * ((t + 1) / (t - 1)) =
+        2 ^ 2 * (m ^ 2 + n ^ 2 * t ^ 2) / (t - 1) ^ 2 ∧
+    2 * (((m + n) / 2) ^ 2 + ((m - n) / 2) ^ 2) * (((t + 1) / (t - 1)) ^ 2 + 1) +
+          8 * ((m + n) / 2) * ((m - n) / 2) * ((t + 1) / (t - 1)) =
+        2 ^ 2 * (n ^ 2 + m ^ 2 * t ^ 2) / (t - 1) ^ 2 := by
+  refine ⟨?_, ?_, ?_, ?_, ?_⟩ <;> field_simp <;> ring
+
+/-- If `m`, `n` are odd and coprime, the halved partner pair `((m + n)/2, (m − n)/2)` is coprime. -/
+theorem partner_halved_coprime (m n : ℤ) (hm : Odd m) (hn : Odd n) (h : IsCoprime m n) :
+    IsCoprime ((m + n) / 2) ((m - n) / 2) := by
+  obtain ⟨a, ha⟩ := hm
+  obtain ⟨b, hb⟩ := hn
+  have e1 : (m + n) / 2 = a + b + 1 := by omega
+  have e2 : (m - n) / 2 = a - b := by omega
+  rw [e1, e2]
+  apply partner_half_coprime
+  have e3 : a + b + 1 + (a - b) = m := by omega
+  have e4 : a + b + 1 - (a - b) = n := by omega
+  rw [e3, e4]
+  exact h
+
+/-- `quartic_to_weierstrass` for `E0L`. A rational point `(t, v)` of `v² = F0(t)·GL(t)` with
+`t ≠ m/n` gives the point `(X, Y)` of the Weierstrass curve of `quartic_to_weierstrass` with
+`τ = t − m/n`, `q = 2m(m² − n²)/n` and the coefficients `a, b, c, d` of `F0·GL` at `m/n + τ`. -/
+theorem e0l_weierstrass (m n t v a b c d q τ X Y : ℚ) (hm : m ≠ 0) (hn : n ≠ 0)
+    (hmn : m ^ 2 ≠ n ^ 2) (ht : t ≠ m / n)
+    (h : v ^ 2 = (m ^ 2 + n ^ 2 * t ^ 2) * (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) - 8 * m * n * t))
+    (ha : a = 2 * n ^ 2 * (m ^ 2 + n ^ 2)) (hb : b = 8 * m ^ 3 * n)
+    (hc : c = 2 * (7 * m ^ 4 - 4 * m ^ 2 * n ^ 2 + n ^ 4))
+    (hd : d = 4 * m * (m ^ 2 - n ^ 2) * (3 * m ^ 2 - n ^ 2) / n)
+    (hq : q = 2 * m * (m ^ 2 - n ^ 2) / n) (hτ : τ = t - m / n)
+    (hX : X = (2 * q * (v + q) + d * τ) / τ ^ 2)
+    (hY : Y = (4 * q ^ 2 * (v + q) + 2 * q * (d * τ + c * τ ^ 2) - d ^ 2 * τ ^ 2 / (2 * q)) / τ ^ 3) :
+    Y ^ 2 + d / q * X * Y + 2 * q * b * Y =
+      X ^ 3 + (c - d ^ 2 / (4 * q ^ 2)) * X ^ 2 - 4 * q ^ 2 * a * X -
+        4 * q ^ 2 * a * (c - d ^ 2 / (4 * q ^ 2)) := by
+  have hq0 : q ≠ 0 := by
+    rw [hq]
+    exact div_ne_zero (mul_ne_zero (mul_ne_zero two_ne_zero hm) (sub_ne_zero.mpr hmn)) hn
+  have hτ0 : τ ≠ 0 := by rw [hτ]; exact sub_ne_zero.mpr ht
+  have hquart : v ^ 2 = a * τ ^ 4 + b * τ ^ 3 + c * τ ^ 2 + d * τ + q ^ 2 := by
+    rw [h, ha, hb, hc, hd, hq, hτ]
+    field_simp
+    ring
+  exact quartic_to_weierstrass a b c d q τ v X Y hq0 hτ0 hquart hX hY
 
 end MagicSquareOfSquares.G1

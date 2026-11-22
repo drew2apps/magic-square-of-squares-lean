@@ -19,7 +19,7 @@ def dm2(m, n):
     E = EllipticCurve(QQ, [0, c1, 0, c0*c2, c0*c0*c3])
     lo, hi, _pts = tight_bounds(E)
     out = dict(pair=[m, n], curve='D1', rank=[lo, hi])
-    if EXT_UPPER is not None and lo == 1: hi = min(hi, EXT_UPPER); out['rank'] = [lo, hi]; out['upper'] = 'external'
+    if EXT_UPPER is not None and lo == 1: hi = min(hi, EXT_UPPER); out['rank'] = [lo, hi]; out['upper'] = 'external: --upper=%d (Magma, see magma_check.txt)' % EXT_UPPER
     if not (lo == 1 and hi == 1): out['status'] = 'rank not 1'; return out
     Em = E.minimal_model(); iso = Em.isomorphism_to(E)
     Ep = Em.pari_curve(); pts = []

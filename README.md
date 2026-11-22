@@ -83,7 +83,7 @@ All of this is about 3×3 squares. Write the roots of a magic square of squares 
 
 The first three rows have no bound on the size of the entries. The signs of the roots are arbitrary, so the theorems also apply with `b − d` or `h − f`. The ratios excluded by rows 1 and 3 have density 1 among all ratios (argued in G1_FULL_SYSTEM.md, not in Lean); this does not decide the problem. The bound 500 is far below what computer searches have covered.
 
-Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 121 more by the Demjanenko–Manin argument on three curves of rank 1, and 36 are open (5 of them up to 200). These computations depend on PARI, Sage and derivations that nobody has checked; `scripts/g1_full/dm_evidence.txt` records each one.
+Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 121 more by the Demjanenko–Manin argument on three curves of rank 1, and 36 are open (5 of them up to 200). These computations depend on PARI, Sage (with eclib), for two pairs Magma, and derivations that nobody has checked; `scripts/g1_full/dm_evidence.txt` records each one.
 
 An earlier audit of the same family, restricted to three of the five forms, is in [archive/](archive/KEPLER71_G1_AUDIT.md). Its numbers are superseded.
 
@@ -144,7 +144,7 @@ lake build
 lake env lean scripts/Audit.lean
 ```
 
-On GitHub's runner a CI run takes about 15 minutes from an empty cache. With the cache, the four runs of 21 and 22 November 2026 took between 3 min 47 s and 5 min 9 s in all, of which the audit step took between 1 min 49 s and 3 min 20 s; on a laptop the audit takes about four minutes. `G1FullCertificates.lean` needs about 5 GB of memory. The last line of the audit has the form `AUDIT OK: N theorems (including auxiliary ones), standard axioms only`, and CI copies that line into the summary of each run. At this commit `N` is 486, against 237 theorems declared in the sources (the rest are auxiliary theorems that Lean generates). The audit checks axioms only. CI also checks that the generated certificate files are the ones their scripts produce, and runs `scripts/g1_full/check_evidence.py` and `scripts/g1_full/octic_check.py`.
+On GitHub's runner a CI run takes about 15 minutes from an empty cache. With the cache, the four runs of 21 and 22 November 2026 took between 3 min 47 s and 5 min 9 s in all, of which the audit step took between 1 min 49 s and 3 min 20 s; on a laptop the audit takes about four minutes. `G1FullCertificates.lean` needs about 5 GB of memory. The last line of the audit has the form `AUDIT OK: N theorems (including auxiliary ones), standard axioms only`, and CI copies that line into the summary of each run. At this commit `N` is 494, against 241 theorems declared in the sources (the rest are auxiliary theorems that Lean generates). The audit checks axioms only. CI also checks that the generated certificate files are the ones their scripts produce, and runs `scripts/g1_full/check_evidence.py` and `scripts/g1_full/octic_check.py`.
 
 ## How this was made, and its limits
 

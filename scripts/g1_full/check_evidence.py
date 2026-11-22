@@ -7,7 +7,10 @@
    (91 E04, 24 D1, 6 E0L), 36 open, no overlap; every recorded t is re-tested and is degenerate; the listed bound
    amax is at least the bound that follows from the recorded heights.
 3. Every recorded E04 and D1 generator is a rational point of its curve with y != 0.
-This does not check the heights, the ranks, that the points generate, or the E0L generators."""
+   Every recorded E0L model is isomorphic over Q to the Weierstrass curve of G1.e0l_weierstrass for the
+   pair, and the recorded generator is a rational point of that model, not of order 2.
+4. Every line marked upper=magma has an answer 'rank <= 1' in magma_check.txt.
+This does not check the heights, the ranks, or that the points generate."""
 import ast, math, os, re, sys
 from fractions import Fraction as Fr
 here = os.path.dirname(os.path.abspath(__file__))
@@ -47,10 +50,15 @@ assert len(all157) == 157
 ev = [l.split() for l in open(os.path.join(here, 'dm_evidence.txt')) if l.strip() and not l.startswith('#')]
 assert len(ev) == 121
 closed = set(); meth = {'E04': 0, 'D1': 0, 'E0L': 0}
+def cinv(a1, a2, a3, a4, a6):
+    b2 = a1 * a1 + 4 * a2; b4 = 2 * a4 + a1 * a3; b6 = a3 * a3 + 4 * a6
+    return b2 * b2 - 24 * b4, -b2 ** 3 + 36 * b2 * b4 - 216 * b6
+magma = set(tuple(l.split()[:3]) for l in open(os.path.join(here, 'magma_check.txt')) if l.rstrip().endswith('rank <= 1'))
 def partner(m, n): return (m + n, m - n) if (m + n) % 2 else ((m + n) // 2, (m - n) // 2)
 for r in ev:
     of = pairs(r[0])[0]; run = pairs(r[1])[0]; f = dict(x.split('=', 1) for x in r[3:] if '=' in x)
     assert of not in closed; closed.add(of); meth[r[2]] += 1
+    if f.get('upper') == 'magma': assert tuple(r[:3]) in magma, r[:3]
     assert run == of or run == partner(*of) or partner(*run) == of, r[:2]
     hG = float(f['hG']); B = float(f['B']); amax = int(f['amax'])
     assert re.fullmatch(r'\[((-?\d+(/\d+)?:deg)(;-?\d+(/\d+)?:deg)*)?\]', f['t']), f['t']
@@ -71,6 +79,16 @@ for r in ev:
         K = float(f['K']); m, n = run
         W = (2 * K + 4 * (math.log(max(m, n)) + math.log(2))) / (2 * hG)
         assert amax >= W + abs(int(f['rho'])) / 2 and float(f['worst']) < K, r[:3]
+        mdl = [Fr(z) for z in f['model'].split(',')]; x = Fr(f['G']); mm, nn = Fr(m), Fr(n); S = mm * mm + nn * nn
+        qa = 2 * nn ** 2 * S; qb = 8 * mm ** 3 * nn; qc = 2 * (7 * mm ** 4 - 4 * mm ** 2 * nn ** 2 + nn ** 4)
+        qd = 4 * mm * (mm * mm - nn * nn) * (3 * mm * mm - nn * nn) / nn; qq = 2 * mm * (mm * mm - nn * nn) / nn
+        a2w = qc - qd ** 2 / (4 * qq ** 2)
+        c4w, c6w = cinv(qd / qq, a2w, 2 * qq * qb, -4 * qq ** 2 * qa, a2w * (-4 * qq ** 2 * qa)); c4m, c6m = cinv(*mdl)
+        assert c4m != 0 and c6m != 0, r[:3]
+        u2 = (c6w / c6m) / (c4w / c4m)                 # c4w = u^4 c4m, c6w = u^6 c6m with u rational: isomorphic over Q
+        assert issq(u2) and u2 * u2 == c4w / c4m, r[:3]
+        disc = (mdl[0] * x + mdl[2]) ** 2 + 4 * (x ** 3 + mdl[1] * x * x + mdl[3] * x + mdl[4])
+        assert issq(disc) and disc != 0, r[:3]         # G is a rational point of the model, not of order 2
 assert meth == {'E04': 91, 'D1': 24, 'E0L': 6}, meth
 assert closed <= all157
 cl = open(os.path.join(here, 'dm_closures.txt')).read().split('\n')

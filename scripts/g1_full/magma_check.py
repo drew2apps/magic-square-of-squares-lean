@@ -8,6 +8,7 @@ prints 'of run curve rank <= r' and a summary. With arguments 'CURVE m,n ...': t
 Options: --batch=K curves per request (default 3), --pause=S seconds between requests (default 45; the
 calculator refuses clients that connect too often), --skip=FILE to reuse answers from an earlier output.
 The E0L curve is built in Magma from the quartic y^2 = F0(t) GL(t) and its point t = m/n.
+Every request and the verbatim response are appended to magma_raw.txt.
 This sends the curve coefficients to a server of the University of Sydney. No dependencies."""
 import os, re, sys, time, urllib.parse, urllib.request
 
@@ -30,6 +31,8 @@ def ask(batch):
     data = urllib.parse.urlencode({'input': ''.join(code(k, m, n, i) for i, (k, m, n) in enumerate(batch))}).encode()
     try: out = urllib.request.urlopen(URL, data, timeout=150).read().decode()
     except Exception as ex: out = 'ERROR %s' % ex
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'magma_raw.txt'), 'a') as fr:   # verbatim record
+        fr.write('=== %s UTC\n--- input\n%s--- response\n%s\n' % (time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime()), urllib.parse.parse_qs(data.decode())['input'][0], out))
     got = {int(a): int(b) for a, b in re.findall(r'BOUNDS (\d+) (\d+)', out)}
     ver = re.search(r'<version>([^<]*)</version>', out)
     return [got.get(i) for i in range(len(batch))], (ver.group(1) if ver else None), ('offline' in out)

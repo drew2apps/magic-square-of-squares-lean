@@ -81,6 +81,11 @@ def tree2(fs, a, k):
     return tree2(fs, a, k + 1) or tree2(fs, a + 2**k, k + 1)
 
 def soluble(m, n, p):
+    """True, False or None (undecided; also when a search is cut off at its depth limit)."""
+    try: return _soluble(m, n, p)
+    except RuntimeError: return None
+
+def _soluble(m, n, p):
     fs = forms(m, n); rev = [(c0, c1, c2) for (c2, c1, c0) in fs]
     if p == 2:
         return tree2(fs, 0, 1) or tree2(fs, 1, 1) or tree2(rev, 0, 1)
