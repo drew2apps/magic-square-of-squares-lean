@@ -1,6 +1,8 @@
 # Magic square of squares: known facts, checked in Lean
 
-[![CI](https://github.com/drew2apps/magic-square-of-squares-lean/actions/workflows/ci.yml/badge.svg)](https://github.com/drew2apps/magic-square-of-squares-lean/actions/workflows/ci.yml)
+[![CI](https://github.com/drew2apps/magic-square-of-squares-lean/actions/workflows/ci.yml/badge.svg)](https://github.com/drew2apps/magic-square-of-squares-lean/actions/workflows/ci.yml) [![DOI](https://zenodo.org/badge/1466891268.svg)](https://doi.org/10.5281/zenodo.24435351)
+
+Archived at Zenodo. Version 0.3.2 is [10.5281/zenodo.24435352](https://doi.org/10.5281/zenodo.24435352); [10.5281/zenodo.24435351](https://doi.org/10.5281/zenodo.24435351) always resolves to the latest version.
 
 Is there a 3×3 magic square whose nine entries are distinct perfect squares? The question is open. It appears in [formal-conjectures](https://github.com/google-deepmind/formal-conjectures) as `MagicSquares.exists_magic_square_squares`.
 
