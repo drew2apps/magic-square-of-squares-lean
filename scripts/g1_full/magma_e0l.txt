@@ -1,0 +1,12 @@
+# Bounds from Magma (public calculator, version 2.29-10, 2026-11-22) for the rank of the curve E0L of the pairs used by dm4.py:
+# TwoPowerIsogenyDescentRankBound on the minimal model of Y^2 = x (x - al)(x - be) (the model of dm4_log.jsonl).
+# Verbatim requests and responses: magma_e0l_raw.txt. PARI gives the same upper bounds (for 609,200: bounds [3, 5]).
+72,65 (and 137,7) E0L rank <= 3
+425,168 (and 593,257) E0L rank <= 3
+920,129 E0L rank <= 3
+740,539 E0L rank <= 2
+828,173 E0L rank <= 2
+840,83 (and 923,757) E0L rank <= 2
+609,200 (and 809,409) E0L rank <= 5
+820,799 E0L rank <= 2
+889,320 E0L rank <= 2

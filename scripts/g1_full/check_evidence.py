@@ -19,7 +19,7 @@
    positive definite height matrix; the elementary constants lo4, up4, wpm, winv are recomputed from m and n; eL, eU,
    kappa and cstar are recomputed from them and from the recorded BUP and U; Hstar satisfies the condition of the
    argument; the saturation bound covers the index bound that follows from the recorded regulator and height
-   lower bound.
+   lower bound. dm4_cross.jsonl: the same checks for 43 pairs of dm_evidence.txt that dm4.py closes a second time.
 This does not check the heights, the ranks, or that the points generate."""
 import ast, math, os, re, sys
 from fractions import Fraction as Fr
@@ -123,12 +123,12 @@ def same_curve(c46a, c46b):
     if c4a == 0 or c6a == 0 or c4b == 0 or c6b == 0: return False
     u2 = (c6a / c6b) / (c4a / c4b)
     return issq(u2) and u2 * u2 == c4a / c4b
-log4 = [json.loads(l) for l in open(os.path.join(here, 'dm4_log.jsonl'))]
-closed4 = set(); ranks4 = {2: 0, 3: 0}
-for j in log4:
+def check4(j, new):
+    """One record of dm4.py. new = True: a closure of the census (rank 2 or 3, pair not closed otherwise);
+    new = False: a second closure of a pair that dm_evidence.txt already closes (rank 1, 2 or 3)."""
     m, n = j['pair']; of = (m, n); S = m * m + n * n; r = j['rank']
-    assert j['status'] == 'closed' and of in all157 and of not in closed and of not in closed4 and j['rank_bounds'] == [r, r] and r in (2, 3), of
-    closed4.add(of); ranks4[r] += 1
+    assert j['status'] == 'closed' and of in all157 and j['rank_bounds'][1] == r and r in ((2, 3) if new else (1, 2, 3)), of
+    assert (of not in closed) if new else (of in closed), of
     for tt, verdict in j['t'].items():
         assert verdict == 'degenerate' and classify_t(m, n, Fr(tt)) == 'degenerate', (of, tt)
     mdl = [Fr(z) for z in j['model']]; mn = [Fr(z) for z in j['min_model']]
@@ -138,11 +138,13 @@ for j in log4:
         x, y = Fr(x), Fr(y)
         assert y * y + mn[0] * x * y + mn[2] * y == x ** 3 + mn[1] * x * x + mn[3] * x + mn[4], of
     g = j['gram']; assert len(g) == r and len(j['G']) == r
-    det = g[0][0] * g[1][1] - g[0][1] ** 2 if r == 2 else (g[0][0] * (g[1][1] * g[2][2] - g[1][2] ** 2) - g[0][1] * (g[0][1] * g[2][2] - g[1][2] * g[0][2]) + g[0][2] * (g[0][1] * g[1][2] - g[1][1] * g[0][2]))
-    assert g[0][0] > 0 and g[0][0] * g[1][1] - g[0][1] ** 2 > 0 and det > 0 and abs(det - j['reg']) < 1e-6 * det, of
-    assert j['kmax'] >= math.sqrt(j['reg0'] * {2: 4.0 / 3, 3: 2.0}[r] / j['lam'] ** r) and j['lam'] > 0 and j['reg0'] >= j['reg'] * (1 - 1e-9), of
+    det = g[0][0] if r == 1 else g[0][0] * g[1][1] - g[0][1] ** 2 if r == 2 else (g[0][0] * (g[1][1] * g[2][2] - g[1][2] ** 2) - g[0][1] * (g[0][1] * g[2][2] - g[1][2] * g[0][2]) + g[0][2] * (g[0][1] * g[1][2] - g[1][1] * g[0][2]))
+    assert g[0][0] > 0 and (r == 1 or g[0][0] * g[1][1] - g[0][1] ** 2 > 0) and det > 0 and abs(det - j['reg']) < 1e-6 * det, of
+    assert j['kmax'] >= math.sqrt(j['reg0'] * {1: 1.0, 2: 4.0 / 3, 3: 2.0}[r] / j['lam'] ** r) and j['lam'] > 0 and j['reg0'] >= j['reg'] * (1 - 1e-9), of
     Pi = (2 * m * n ** 3, m ** 4 - n ** 4, -2 * m ** 3 * n); Psi0 = (n * n, 0, m * m); Psi = (S, -4 * m * n, S)
     r0, r1 = abs(res2(Pi, Psi0)), abs(res2(Pi, Psi)); assert [str(r0), str(r1)] == j['res'] and r0 > 0 and r1 > 0, of
+    octic = m ** 8 + 14 * m ** 4 * n ** 4 + n ** 8
+    assert r0 == m * m * n * n * octic and r1 == (m * m - n * n) ** 2 * octic, of      # the forms of G1.fourPoint_res_psi0_dvd, G1.fourPoint_res_psi_dvd
     lo4 = math.log(n * n * (m - n) ** 2) - math.log(2) - 2 * math.log(r0) - 2 * math.log(r1)
     up4 = math.log(2) + 2 * math.log(2 * m ** 3 * n + m ** 4 - n ** 4)
     wpm = math.log(32 * m * m * n * n * S) + math.log(2 * m * m)
@@ -151,13 +153,23 @@ for j in log4:
     for name, v in (('lo4', lo4), ('up4', up4), ('wpm', wpm), ('winv', winv), ('eL', eL), ('eU', eU), ('kappa', kap)):
         assert abs(v - j[name]) < 1e-9 * max(1, abs(v)), (of, name)
     H = j['Hstar']; L = H - eL; Uu = H + eU
-    if r == 2:
+    if r <= 2:
         cs = (math.sqrt(Uu) - math.sqrt(L)) ** 2 + 8 * kap * kap * Uu / L ** 2; assert L > 0 and L ** 3 >= 4 * kap * kap * Uu, of
     else:
         assert L > 0 and L * L > 4 * kap * Uu, of
         cs = (math.sqrt(Uu) - math.sqrt(L)) ** 2 + 8 * kap * Uu / (L + math.sqrt(L * L - 4 * kap * Uu))
-    assert abs(cs - j['cstar']) < 1e-9 * cs and j['gram_check']['relative'] <= 0.015, of
+    assert abs(cs - j['cstar']) < 1e-9 * cs and j['gram_check']['relative'] <= 0.015 and j['solver_selftest'] == 'ok', of
     assert -eL <= j['observed N(a) - H'][0] and j['observed N(a) - H'][1] <= eU, of
+    return of, r
+log4 = [json.loads(l) for l in open(os.path.join(here, 'dm4_log.jsonl'))]
+closed4 = set(); ranks4 = {2: 0, 3: 0}
+for j in log4:
+    of, r = check4(j, True); assert of not in closed4; closed4.add(of); ranks4[r] += 1
+cross4 = [json.loads(l) for l in open(os.path.join(here, 'dm4_cross.jsonl'))]      # second closures of pairs closed on a curve of rank 1
+crossed = set()
+for j in cross4:
+    of, r = check4(j, False); assert of not in crossed; crossed.add(of)
+assert len(crossed) == 43
 closed |= closed4
 assert closed <= all157
 cl = open(os.path.join(here, 'dm_closures.txt')).read().split('\n')

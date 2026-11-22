@@ -46,13 +46,16 @@ candidate are tested.  So for any Hstar: either
         which has finitely many solutions; its rational solutions are found from a polynomial in t.
 Every candidate t0 is tested exactly in the five-form system.
 
-Needs: the rank r = 2 or 3, as PARI's upper bound (ellrank on the curve and its isogenous curves) together with r
+The argument for rank 2 uses only that three vectors are dependent, so it also covers rank 1 (used as a cross-check of
+the pairs closed by dm3.py).
+
+Needs: the rank r = 1, 2 or 3, as PARI's upper bound (ellrank on the curve and its isogenous curves) together with r
 independent points (PARI's lower bound is not used: it can rest on parity); a basis of E(Q) modulo torsion (the
-points saturated at all primes up to the index bound sqrt(gamma^r Reg' / lambda^r), gamma^r = 4/3 or 2 (Hermite),
+points saturated at all primes up to the index bound sqrt(gamma^r Reg' / lambda^r), gamma^r = 1, 4/3 or 2 (Hermite),
 lambda a lower bound for hhat on non-torsion points from Sage's height_function().min); floating-point heights
 with a 2% margin in the two listings, justified by an enclosure of the Gram matrix in exact arithmetic.
 On every listed point the observed N(a) - H is compared with [-eL, eU].
-usage: dm4.py [-v] [--Hstar=H] m,n [m,n ...]      (needs passagemath-schemes, cypari2; 2 to 45 seconds per pair)"""
+usage: dm4.py [-v] [--Hstar=H] [--upper=N] m,n [m,n ...]      (needs passagemath-schemes, cypari2; 2 to 45 seconds per pair)"""
 import sys, json, math, time, os
 from fractions import Fraction as Fr
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -97,6 +100,8 @@ extra_points = {
     (740, 539): [('420672258585150753650026931613802135666238724/227474913897287186171270349613249',
                   '-798372405517165038182538424755939465150787768190901855040094178108/3430838413082061446972975149716135176448129340193')],
 }
+
+EXT_UPPER = None                                    # an upper bound for the rank from another program (--upper=N)
 
 def dm4(m, n, Hstar=None, verbose=False):
     T0 = time.time(); out = dict(pair=[m, n], curve='E0L', method='four points')
@@ -146,9 +151,11 @@ def dm4(m, n, Hstar=None, verbose=False):
     out['identities'] = 'I0, I+-, Iinv hold in the function fields'; out['model'] = [0, str(-(al + be)), 0, str(al*be), 0]
     # ---- rank and a basis
     Em = ET.minimal_model(); phi = ET.isomorphism_to(Em); psi = Em.isomorphism_to(ET)
-    lo, hi, _ = tight_bounds(Em); out['rank_bounds'] = [lo, hi]
+    lo, hi, _ = tight_bounds(Em)
+    if EXT_UPPER is not None and EXT_UPPER < hi: hi = EXT_UPPER; out['upper'] = 'external: --upper=%d (Magma, see magma_e0l.txt)' % EXT_UPPER
+    out['rank_bounds'] = [lo, hi]
     r = hi
-    if r not in (2, 3): out['status'] = 'upper bound for the rank is not 2 or 3'; return out
+    if r not in (1, 2, 3): out['status'] = 'upper bound for the rank is not 1, 2 or 3'; return out
     from cypari2 import Pari
     pari = Pari(); Ep = Em.pari_curve()
     R0 = phi(toET(E0([-a2, a1*a2 - a3])))
@@ -183,7 +190,7 @@ def dm4(m, n, Hstar=None, verbose=False):
     reg0 = float(Em.height_pairing_matrix(basis).det())
     lam = float(Em.height_function().min(0.01, 20))
     if lam <= 0: out['status'] = 'no height lower bound'; return out
-    herm = {2: 4.0/3, 3: 2.0}[r]                        # gamma_r^r (Hermite): Reg >= lam^r / gamma_r^r
+    herm = {1: 1.0, 2: 4.0/3, 3: 2.0}[r]                        # gamma_r^r (Hermite): Reg >= lam^r / gamma_r^r
     kmax = int(math.floor(math.sqrt(reg0 * herm / lam**r))) + 1
     sat = pari.ellsaturation(Ep, [[P[0], P[1]] for P in basis], kmax)
     gens = [Em([QQ(P[0]), QQ(P[1])]) for P in sat]
@@ -251,7 +258,7 @@ def dm4(m, n, Hstar=None, verbose=False):
     winv = math.log(4*(m*m - n*n)**2*(m + n)**2) + math.log(8*(m + n)**2)
     eL = (BUP - lo4) / 4; eU = (up4 + U) / 4
     kap = (BUP + U + max(wpm, winv)) / 4
-    if r == 2:
+    if r <= 2:                                          # three vectors in a space of dimension at most 2
         def cstar(H): return (math.sqrt(H + eU) - math.sqrt(H - eL))**2 + 8*kap*kap*(H + eU) / (H - eL)**2
         def valid(H): return (H - eL)**3 >= 4*kap*kap*(H + eU)
         target = 0.9 * min(Gm[i][i] for i in range(r))  # below the smallest height of a basis vector
@@ -333,7 +340,8 @@ def dm4(m, n, Hstar=None, verbose=False):
         if Nn == 0: return None
         return [rr for pol in (Rt(Nn.numerator()), Rt(Nn.denominator()), Rt(f.al.denominator()), Rt(f.be.denominator())) for rr, _ in pol.roots(QQ)]
     # self-test of the solver: for known points Q and z, t(Q) must be among the candidates for the constant t(Q - z) t(Q)
-    for Qs, zs_ in ((gens[0] + gens[1], gens[0]), (2*gens[0] - gens[1] + tors[1], gens[1] + tors[2]), (3*gens[1] + tors[3], tors[1])):
+    gl = gens[-1]                                       # the last basis vector (the same as the first in rank 1)
+    for Qs, zs_ in ((gens[0] + gl + (gens[0] if r == 1 else 0*gl), gens[0]), (2*gens[0] - gl + tors[1] + (3*gens[0] if r == 1 else 0*gl), gl + tors[2 % len(tors)]), (3*gl + tors[3 % len(tors)], tors[1])):
         ta, tb = t_of(Qs), t_of(Qs - zs_)
         assert ta is not None and tb is not None and ta in solve(zs_, ta*tb), 'solver self-test'
     out['solver_selftest'] = 'ok'
@@ -356,6 +364,7 @@ if __name__ == '__main__':
     for s in sys.argv[1:]:
         if s.startswith('--Hstar='): Hs = float(s[8:]); continue
         if s == '-v': continue
+        if s.startswith('--upper='): EXT_UPPER = int(s[8:]); continue
         m, n = (int(v) for v in s.split(','))
         try: r = dm4(m, n, Hs, verbose=('-v' in sys.argv))
         except Exception as ex:
