@@ -15,6 +15,7 @@ jobs:
         run: |
           python3 -m py_compile scripts/g1_full/*.py
           python3 scripts/g1_full/check_evidence.py
+          python3 scripts/g1_full/octic_check.py
           python3 scripts/g1_full/gen_lean.py
           python3 scripts/g1_full/gen_census1000.py
           python3 scripts/g1_full/gen_sizecheck.py
@@ -25,4 +26,4 @@ jobs:
         run: |
           set -o pipefail
           lake env lean scripts/Audit.lean | tee audit.txt
-          tail -n 1 audit.txt >> "$GITHUB_STEP_SUMMARY"
+          grep '^AUDIT OK:' audit.txt >> "$GITHUB_STEP_SUMMARY"

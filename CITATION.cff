@@ -7,13 +7,15 @@ authors:
     given-names: Drew
 repository-code: "https://github.com/drew2apps/magic-square-of-squares-lean"
 license: Apache-2.0
-version: 0.3.1
+version: 0.3.2
 date-released: 2026-11-21
 abstract: >-
   Lean 4 proofs of the known necessary conditions and reformulations for a 3x3 magic square of
-  squares (an open problem), and kernel-checked conditions on the ratio of the edge roots: it
-  avoids 484 residue classes at 34 primes, its norm is a square modulo 7, 17, 31 and 47, and one
-  edge root exceeds 500 (far below published search bounds). The problem itself is not solved.
+  squares (an open problem), and kernel-checked conditions on the ratio m : n of two sums of
+  edge roots: the ratio avoids 484 residue classes at 34 primes; m^2 + n^2 is a square modulo
+  7, 17, 31 and 47 and divides 8 e^2, where e is the centre root, so that a prime congruent to
+  1 modulo 8 divides e unless m^2 + n^2 is a square or twice a square; and one edge root
+  exceeds 500 (far below published search bounds). The problem itself is not solved.
   The Lean code and the text were written with Claude, an AI model made by Anthropic.
 keywords:
   - Lean 4

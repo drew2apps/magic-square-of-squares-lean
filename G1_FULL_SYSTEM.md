@@ -50,13 +50,15 @@ A pair has a **trivial point** when `m² + n²` is a square (`t = ±1`) or `(m²
 
 ## Result 1: the primes at which the full system can fail modulo `p`
 
-For `p ∤ 2mn(m² − n²)(m² + n²)` the five conditions define a smooth curve of genus 49 over `F_p` (a `(Z/2)⁵` cover of the line branched at ten points; the Kepler71 notes give the same genus and cite Auel–Singer, arXiv:2609.09351). The Weil bound gives at least `p + 1 − 98√p` points, which is positive for `p ≥ 9613`. `classify.c` tests every ratio `(m : n)` for every odd prime below 9700.
+For `p ∤ 2mn(m² − n²)(m² + n²)(m⁸ + 14m⁴n⁴ + n⁸)` the five conditions define a smooth curve of genus 49 over `F_p` (a `(Z/2)⁵` cover of the line branched at ten points; the Kepler71 notes give the same genus and cite Auel–Singer, arXiv:2609.09351). The Weil bound gives at least `p + 1 − 98√p` points, which is positive for `p ≥ 9613`. `classify.c` tests every ratio `(m : n)` for every odd prime below 9700.
+
+The octic factor was missing from this statement before version 0.3.2. Up to squares it is the resultant of `F0` and `GL` (and of `F0`, `GU`; `F8`, `GL`; `F8`, `GU`): at a prime dividing it two branch points collide, the curve modulo `p` is singular, and the bound for a smooth curve does not apply. For such a ratio and `p ∤ 2mn(m⁴ − n⁴)`, `F0·F8·GL·GU` is `(2Smn)²` times the square of a quartic modulo `p`, and no other product of some of the five forms is a constant times a square. Weil's bound for character sums then gives `32N ≥ 2p − 100 − 270√p` for the number `N` of `t` modulo `p` at which all five forms are nonzero squares, which is positive for `p ≥ 18400`; such a `t` lifts to `ℚ_p`. `octic_check.py` checks the identity, and checks directly the 2112 ratios of this kind at the 264 primes between 9700 and 20000 that have one: each has such a `t`. Below 9700 these ratios were among those tested by `classify.c`. So the list of 34 primes is unchanged.
 
 **There are exactly 34 primes with an obstructed class, the largest is 607:**
 
 7, 17, 23, 31, 41, 47, 73, 79, 89, 103, 113, 127, 137, 151, 167, 191, 193, 199, 223, 233, 239, 257, 263, 271, 281, 311, 313, 337, 353, 439, 457, 521, 599, 607.
 
-There are 484 obstructed classes in total (`modp_classes.txt`), all at ratios of good reduction. All 34 primes are `±1 mod 8`; Result 1b says why. The classes for 17 and 41 agree with the Kepler71 lists.
+There are 484 obstructed classes in total (`modp_classes.txt`), all at ratios of good reduction (for the octic factor this is checked by `octic_check.py`). All 34 primes are `±1 mod 8`; Result 1b says why. The classes for 17 and 41 agree with the Kepler71 lists.
 
 ## Result 1b: the number `m² + n²`
 
@@ -101,6 +103,8 @@ This says nothing about whether a magic square of squares exists: a single survi
 ## Result 2: census
 
 Local tests used: the 34 primes above, the 2-adic test modulo 32, 64, 128, and powers of the odd primes dividing `mn(m² − n²)(m² + n²)`.
+
+**Second implementation.** `local_all.py` decides solubility in `ℚ_p` (it does not stop at a fixed power of `p`) and shares no code with the census. Run on all 304,191 pairs, with the primes below 700 and every prime dividing `2mn(m² − n²)(m² + n²)(m⁸ + 14m⁴n⁴ + n⁸)`, it finds a prime of insolubility for exactly the 303,766 pairs excluded by the two conditions of Result 1b, and none for the other 425. With Result 1 for the remaining primes, the 425 pairs are soluble in every `ℚ_p`: no congruence closes any of them.
 
 | Range | Coprime pairs | Excluded by a congruence | Not excluded |
 |---|---|---|---|
@@ -157,7 +161,7 @@ The 157 pairs above have positive rank on all twelve quotients. Some elliptic qu
 
 **Curve `D1`.** With `z = t + 1/t` and `c0 = −16Smn(m² − n²)²`, a solution gives two points on one cubic with `x(P) = c0/z` and `x(P′) = −c0/z`.
 
-Lean checks the algebra of curve membership only (`G1Relations.lean`): the abscissas above give a square times the stated product of forms, so the points lie on the stated curves, on the same curve and not on a twist (`e04_point`, `e04_point'`, `d1_point`, `d1_point'`, with the same cubic as in `dm2.py`); `F0·GL` at `−t` is `F0·GU` at `t`, and `t = m/n` is a point (`e0l_point`, `e0l_base`); and the forms of the partner pair are the forms of the pair (`partner_forms`). Ranks, generators and heights are not in Lean.
+Lean checks the algebra of curve membership only (`G1Relations.lean`): the abscissas above give a square times the stated product of forms, so the points lie on the stated curves, on the same curve and not on a twist (`e04_point`, `e04_point'`, `d1_point`, `d1_point'`, with the same cubic as in `dm2.py`); `F0·GL` at `−t` is `F0·GU` at `t`, and `t = m/n` is a point (`e0l_neg`, `e0l_base`); and the forms of the partner pair are the forms of the pair (`partner_forms`). Ranks, generators and heights are not in Lean.
 
 **Curve `E0L`.** `C: y² = F0(t)·GL(t)` has the rational point `t = m/n`. A solution `t` gives rational points on `C` with `t`-coordinates `t` and `−t`. Here `t` is not an even function on the curve, so its height is compared with canonical heights through the fibre `{Q, R0 − Q}` of `t`: the sum and the product of the two Weierstrass abscissas are quadratic polynomials in `σ = 1/(t − m/n)`, which gives `|2h(σ(Q)) − ĥ(Q) − ĥ(R0 − Q)| ≤ K` with an explicit `K` (`dm3.py`, which also checks this inequality numerically on every point it lists and checks that every listed point is on `C`).
 
@@ -165,13 +169,15 @@ Lean checks the algebra of curve membership only (`G1Relations.lean`): the absci
 
 **Result.** 119 of the 157 pairs are closed: 91 by `E04`, 22 by `D1`, 6 by `E0L`, each for the pair or for its partner. No candidate gave a non-degenerate square. The bound on `|a|` used is 27 to 34 for `E04`, 21 or 22 for `D1`, 11 or 12 for `E0L`. `scripts/g1_full/dm_evidence.txt` has one line per closed pair: generator, heights, bounds, torsion, number of candidates, how the generator was proved, and the software versions.
 
-**The bound for `E0L` in symbols.** With `τ = t − m/n`, `σ = 1/τ`, `q0 = 2m(m² − n²)/n` and `q(m/n + τ) = aτ⁴ + bτ³ + cτ² + dτ + q0²`, Connell's formulas give a Weierstrass model in which `X(Q) + X(R0 − Q) = 4q0²σ² + 2dσ` and `X(Q)·X(R0 − Q) = (d² − 4q0²c)σ² − 4q0²bσ − 4q0²a`, where `R0` is the second point with `t = m/n`. `C1` is the logarithm of the larger of the row-sum norms of the 3×3 integer matrix of these quadratics (after the change to the minimal model) and of its adjugate; `K = C1 + log 2 + 2B`; `ρ` is the integer with `R0 = ρG + torsion`; and with `W = (2K + 4(log max(m, n) + log 2))/(2ĥ(G))` the proved bound is `|a| ≤ W + |ρ|/2`.
+**The bound for `E0L` in symbols.** With `τ = t − m/n`, `σ = 1/τ`, `q0 = 2m(m² − n²)/n` and `q(m/n + τ) = aτ⁴ + bτ³ + cτ² + dτ + q0²`, Connell's formulas give a Weierstrass model in which `X(Q) + X(R0 − Q) = 4q0²σ² + 2dσ` and `X(Q)·X(R0 − Q) = (d² − 4q0²c)σ² − 4q0²bσ − 4q0²a`, where `R0` is the second point with `t = m/n`. `C1` is the logarithm of the larger of the row-sum norms of the 3×3 integer matrix of these quadratics (after the change to the minimal model) and of its adjugate; `K = C1 + log 2 + 2B`; `ρ` is the integer with `R0 = ρG + torsion`; and with `W = (2K + 4(log max(m, n) + log 2))/(2ĥ(G))` the proved bound is `|a| ≤ W + |ρ|/2`. The script lists `|a| ≤ ⌊1.02·(W + |ρ|)⌋ + 3`, which is larger; for `E04` and `D1` it lists the proved bound times 1.02, rounded down, plus 2.
 
 **A worked example for `E0L`, (423,332).** Minimal model `y² = x³ − x² − 10810266634575227101441x + 180302397457159147910876363714305`, rank bounds `[1, 1]`, torsion of order 4, generator with `x(G) = −27869819136`, `ĥ(G) = 25.54`, `B = 42.53`, `C1 = 94.27`, `K = 180.02`, `ρ = 1`, `W = 7.58`. The script lists `|a| ≤ 11` with all four torsion translates, 92 points; the largest observed `|2h(σ) − ĥ(Q) − ĥ(R0 − Q)|` is 35.4, below `K`. No listed `t`, and no `t` from the torsion equations, makes the five forms squares.
 
 **A worked example, (15,8).** `S = 289`, `κ = 36992`, `E: y² = x(x + 130050)(x + 36992)`. PARI gives rank bounds `[1, 1]`; eclib proves that `G` with `x(G) = −83521 = −S²` generates `E(ℚ)` modulo its torsion subgroup of order 4. `ĥ(G) = 3.1576`, `B = 29.242`, so `|a| ≤ (2B + 2 log κ)/ĥ(G) = 25.2`; the script lists `a ≤ 27`. Among the 111 candidate abscissas, the only ones of the form `κt²` at which the five forms are squares are `t = ±1`, the degenerate square of the pair.
 
-**Open after this: 38 pairs.** For `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). By what blocks them:
+**The line for (784,391).** PARI's `ellrank` finds no point on this `D1` curve at efforts 0 to 3 and finds `x = 418733994302308977769` (minimal model) at effort 4. Its canonical height is 13.3913, the same as that of the point `x = 0` of the `D1` model, which is the generator in the other 21 `D1` lines as well. The saturation bound 122 in that line is large only because the proved lower bound for the height of a non-torsion point on this curve is small (0.0009): `⌊√(13.39/0.0009)⌋ + 1 = 122`. PARI's `ellsaturation` up to 122 leaves the point unchanged. This is the line I would check first.
+
+**Open after this: 38 pairs.** None can be closed by a congruence: 31 have a rational point, and the seven others are soluble in every `ℚ_p` (`local_all.py`, with all primes below 20000). For `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). By what blocks them:
 
 | Pairs | Situation | What would be needed |
 |---|---|---|
@@ -184,10 +190,10 @@ Kepler71 reports a computational proof for (15,8). The closure here uses a diffe
 ## Limits
 
 - "Open" means not closed by these methods. It does not mean a solution is likely.
-- "Not excluded by a congruence" is not a proof of local solubility: at primes of bad reduction only small prime powers were tested.
+- That the 425 pairs are soluble in every `ℚ_p` rests on `local_all.py` (primes below 700 and primes of bad reduction) and on Result 1 (the other primes). Both were written with an AI model and checked by nobody else.
 - The rank bounds of Result 3 were computed with PARI 2.17.2; Result 4 was computed with PARI 2.17.4 as shipped with passagemath 10.8.14. The `L`-value closures also depend on its numerical `L`-function code.
-- The Weil-bound step is a standard argument, written by an AI model and not checked by a number theorist.
-- Result 4 is not in Lean, except the four identities of `G1Relations.lean`. What an outside reader would have to check: (1) the upper rank bound 1 from PARI `ellrank`; (2) that `G` is a generator: eclib (`gens(proof=True)`, or its saturation with its own index bound), or PARI `ellsaturation` with a bound `N` such that the index of the starting point is at most `N − 1` (`N − 1 = ⌊√(ĥ(P)/λ)⌋`, `λ` the height lower bound), which follows from Sage's lower bound for the canonical height (`height_function().min(0.01, 20)`; the two arguments are a tolerance and a cap on the number of multiples used, and the returned value is documented as a proved lower bound); (3) Silverman's bound as implemented in Sage, applied to the integral model whose points are listed; (4) the height comparison for `E0L` in `dm3.py`; (5) floating-point heights: the proved bound on `|a|` is multiplied by 1.02 and increased by 2 before listing (see the header of `dm_evidence.txt` for `E0L`), which is a safety margin and not interval arithmetic; the numerical check of the `E0L` inequality on the listed points is a sanity check, not a proof of it; (6) the torsion case, solved for every torsion point; (7) the final test of each candidate (`classify_t`, exact rational arithmetic; unit tests in `check_evidence.py`); (8) the passage to the partner pair (the identities are in Lean, `G1.partner_forms`). Nobody has checked (1) to (6).
+- The Weil-bound step and the character-sum step for the singular fibres are standard arguments, written by an AI model and not checked by a number theorist. The singular fibres were overlooked until version 0.3.2, which shows the kind of error that may remain.
+- Result 4 is not in Lean, except the identities of `G1Relations.lean` (curve membership for `E04` and `D1`, the base point and the symmetry of the quartic for `E0L`, the partner forms; not the Weierstrass model of `E0L`, and not the halving of the partner pair when `m`, `n` are both odd). What an outside reader would have to check: (1) the upper rank bound 1 from PARI `ellrank`; (2) that `G` is a generator: eclib (`gens(proof=True)`, or its saturation with its own index bound), or PARI `ellsaturation` with a bound `N` such that the index of the starting point is at most `N − 1` (`N − 1 = ⌊√(ĥ(P)/λ)⌋`, `λ` the height lower bound), which follows from Sage's lower bound for the canonical height (`height_function().min(0.01, 20)`; the two arguments are a tolerance and a cap on the number of multiples used, and the returned value is documented as a proved lower bound); (3) Silverman's bound as implemented in Sage, applied to the integral model whose points are listed; (4) the height comparison for `E0L` in `dm3.py`; (5) floating-point heights: the proved bound on `|a|` is multiplied by 1.02 and increased by 2 before listing (see the header of `dm_evidence.txt` for `E0L`), which is a safety margin and not interval arithmetic; the numerical check of the `E0L` inequality on the listed points is a sanity check, not a proof of it; (6) the torsion case, solved for every torsion point; (7) the final test of each candidate (`classify_t`, exact rational arithmetic; unit tests in `check_evidence.py`); (8) the passage to the partner pair (the form identities are in Lean, `G1.partner_forms`; the halving when `m`, `n` are both odd is not). Nobody else has checked any of these; only (7) and (8) have the automatic checks named.
 - The density statement in Result 1b uses only the Chinese remainder theorem for finitely many primes and Dirichlet's theorem; it is not formalized.
 - In Lean: only what the next section lists. The completeness of the list of 34 primes and every rank statement are not in Lean.
 
@@ -240,5 +246,7 @@ python3 dm.py - 15,8            # Result 4, curve E04, for the pair and its part
 python3 dm2.py 119,79           # Result 4, curve D1; also needs passagemath-symbolics
 python3 dm3.py 423,332          # Result 4, curve E0L
 python3 check_evidence.py       # tests of classify_t and consistency of the tables; no dependencies
+python3 octic_check.py          # Result 1, the singular fibres; no dependencies, 5 seconds
+python3 local_all.py 724,665    # solubility in every Q_p for one pair (needs cypari2)
 cd ../.. && lake build          # the Lean theorems; G1FullCertificates needs about 5 GB of memory
 ```

@@ -53,11 +53,19 @@ for r in ev:
     assert run == of or run == partner(*of) or partner(*run) == of, r[:2]
     hG = float(f['hG']); B = float(f['B']); amax = int(f['amax'])
     assert re.fullmatch(r'\[((-?\d+(/\d+)?:deg)(;-?\d+(/\d+)?:deg)*)?\]', f['t']), f['t']
+    for item in f['t'][1:-1].split(';'):          # every recorded t is re-tested, on the pair the curve was run for
+        if item: assert classify_t(run[0], run[1], Fr(item.split(':')[0])) == 'degenerate', (r[:2], item)
     if r[2] == 'E04':
         m, n = run; kappa = 2 * (m * m + n * n) * n * n
         assert amax >= (2 * B + 2 * math.log(kappa)) / hG, r[:3]
+        x = Fr(f['G']); S = m * m + n * n         # the recorded generator is a rational point of E04 with y != 0
+        assert issq(x * (x + 2 * S * m * m) * (x + 2 * S * n * n)) and x * (x + 2 * S * m * m) * (x + 2 * S * n * n) != 0, r[:3]
     elif r[2] == 'D1':
         assert amax >= 2 * B / hG, r[:3]
+        m, n = run; S = m * m + n * n; D2 = (m * m - n * n) ** 2; x = Fr(f['G'])
+        c3 = 4 * S * S * m * m * n * n; c2 = -16 * S * m ** 3 * n ** 3; c1 = 4 * S * S * D2; c0 = -16 * S * m * n * D2
+        v = x ** 3 + c1 * x * x + c0 * c2 * x + c0 * c0 * c3     # the recorded generator is a rational point of D1 with y != 0
+        assert issq(v) and v != 0, r[:3]
     else:
         K = float(f['K']); m, n = run
         W = (2 * K + 4 * (math.log(max(m, n)) + math.log(2))) / (2 * hG)

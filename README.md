@@ -38,7 +38,7 @@ The [Wikipedia article](https://en.wikipedia.org/wiki/Magic_square_of_squares) (
 
 Properties 3, 8 and 9 do not need the square to be primitive. Theorems 7 and 9 are proved for primes ≡ 3 (mod 8) as well; for property 9 this is already in Rabern's paper.
 
-Checked against Rabern (2003), read on 21 November 2026: property 1 is his Theorem 1.1, property 6 is Theorem 1.2, property 5 is Corollary 1.1, property 7 is Theorem 1.4, property 8 is Theorem 1.5, each with the same hypothesis (entries without a common factor) and the same conclusion. Property 9, which Wikipedia cites to Morgenstern, is contained in Rabern's Theorem 1.3: a prime ≡ 3 or 5 (mod 8) dividing a non-centre entry divides the centre and the other entry in that line.
+Checked against Rabern (2003), read on 21 November 2026: property 1 is his Theorem 1.1, property 6 is Theorem 1.2, property 5 is Corollary 1.1, property 7 is Theorem 1.4, property 8 is Theorem 1.5, each with the same conclusion, and with the same hypothesis or a weaker one (Rabern assumes entries without a common factor; the Lean proof of property 8 does not use it). Property 9, which Wikipedia cites to Morgenstern, is contained in Rabern's Theorem 1.3: a prime ≡ 3 or 5 (mod 8) dividing a non-centre entry divides the centre and the other entry in that line.
 
 ### Other results
 
@@ -142,7 +142,7 @@ lake build
 lake env lean scripts/Audit.lean
 ```
 
-On GitHub's runner the build takes about 15 minutes from an empty cache and about 5 minutes with the cache; `G1FullCertificates.lean` needs about 5 GB of memory. The audit takes about four minutes. Its last line has the form `AUDIT OK: N theorems (including auxiliary ones), standard axioms only`, and CI copies that line into the summary of each run; at version 0.3.1 `N` is 478, against 229 theorems declared in the sources (the rest are auxiliary theorems that Lean generates). The audit checks axioms only. CI also checks that the generated certificate files are the ones their scripts produce, and runs `scripts/g1_full/check_evidence.py`.
+On GitHub's runner the build takes about 15 minutes from an empty cache; with the cache a whole CI run takes 4 to 5 minutes; `G1FullCertificates.lean` needs about 5 GB of memory. The audit takes about four minutes on a laptop and about two on the runner. Its last line has the form `AUDIT OK: N theorems (including auxiliary ones), standard axioms only`, and CI copies that line into the summary of each run; at version 0.3.2 `N` is 480, against 231 theorems declared in the sources; for version 0.3.1 the line `AUDIT OK: 478 theorems (including auxiliary ones), standard axioms only` is in the log of [CI run 44991834257](https://github.com/drew2apps/magic-square-of-squares-lean/actions/runs/44991834257) (the rest are auxiliary theorems that Lean generates). The audit checks axioms only. CI also checks that the generated certificate files are the ones their scripts produce, and runs `scripts/g1_full/check_evidence.py` and `scripts/g1_full/octic_check.py`.
 
 ## How this was made, and its limits
 

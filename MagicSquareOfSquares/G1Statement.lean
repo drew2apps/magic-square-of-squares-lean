@@ -15,8 +15,10 @@ used in formal-conjectures. The edge entries are `m 0 1`, `m 1 0`, `m 1 2`, `m 2
   distinct.
 * `IsMagicSquareOfSquares.edge_norm`: the conditions on `m² + n²` of `IsMSS.edge_norm`.
 * `IsMagicSquareOfSquares.centre`: the statement on the centre of `G1Centre.lean`.
-* `isMSS_ones`: the square with nine entries `1` satisfies `IsMSS`, so the hypotheses used
-  throughout are not contradictory.
+* `isMSS_ones`, `isMagicSquareOfSquares_ones`, `isPrimitive_ones`: the square with nine entries
+  `1` satisfies `IsMSS`, `IsMagicSquareOfSquares` and `IsPrimitive`, so the hypotheses used
+  throughout are not contradictory. Its entries are not distinct, so it says nothing about the
+  open problem.
 -/
 
 namespace MagicSquareOfSquares
@@ -135,5 +137,15 @@ theorem IsMagicSquareOfSquares.centre {m : Fin 3 → Fin 3 → ℕ} {t : ℕ}
 /-- The square with nine entries `1` is a magic square of squares in the sense of `IsMSS`. -/
 theorem isMSS_ones : IsMSS 1 1 1 1 1 1 1 1 1 3 := by
   refine IsMagic.mk ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;> norm_num
+
+/-- The matrix with nine entries `1` satisfies `IsMagicSquareOfSquares` with sum `3`. -/
+theorem isMagicSquareOfSquares_ones : IsMagicSquareOfSquares (fun _ _ => 1) 3 := by
+  refine ⟨fun _ _ => ⟨1, by norm_num⟩, fun i => by simp, fun j => by simp, by norm_num,
+    by norm_num⟩
+
+/-- The matrix with nine entries `1` is primitive. -/
+theorem isPrimitive_ones : IsPrimitive (fun _ _ => 1) := by
+  intro p hp
+  exact ⟨0, 0, by simpa using hp.ne_one⟩
 
 end MagicSquareOfSquares

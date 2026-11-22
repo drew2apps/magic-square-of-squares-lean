@@ -1,10 +1,11 @@
 import Mathlib.Tactic
 
 /-!
-# The two relations used by the Demjanenko–Manin computation
+# Curve-membership algebra for the Demjanenko–Manin computation
 
-`G1_FULL_SYSTEM.md`, Result 4, uses two elliptic curves, each with two rational points coming
-from one solution `t` of the five-form system. The rank and height computations of that result
+`G1_FULL_SYSTEM.md`, Result 4, uses three elliptic curves (`scripts/g1_full/dm.py` for `E04`,
+`dm2.py` for `D1`, `dm3.py` for `E0L`), each with two rational points coming from one solution
+`t` of the five-form system. The rank and height computations of that result
 are outside Lean. This file checks only the algebra of curve membership: for arbitrary rational
 `m`, `n`, `t` the stated abscissas give a square times the stated product of forms, so when the
 forms are squares the points are rational points of the stated curves, of the same curve and not
@@ -19,8 +20,9 @@ Integer forms: `F0 = m² + n²t²`, `F8 = n² + m²t²`, `G4 = 2(m² + n²)(t² 
 * Curve `D1: y² = d1 m n x`. With `c0 = −16Smn(m² − n²)²` and `z = t + 1/t`, at `x = c0/z` the
   right side is a square times `F0·F8·G4·GL` (`d1_point`), and at `x = −c0/z` it is a square times
   `F0·F8·G4·GU` (`d1_point'`). The two abscissas are opposite.
-* Curve `E0L: y² = F0(t)·GL(t)`. Its value at `−t` is `F0(t)·GU(t)` (`e0l_point`), and `t = m/n`
-  is a rational point (`e0l_base`).
+* Curve `E0L: y² = F0(t)·GL(t)`. Its value at `−t` is `F0(t)·GU(t)` (`e0l_neg`; a symmetry of the
+  factorisation, not a point), and `t = m/n` is a rational point of the quartic (`e0l_base`).
+  The passage from this quartic to the Weierstrass model used by `dm3.py` is not in Lean.
 * The partner pair: with `M = m + n`, `N = m − n` and `t' = (t + 1)/(t − 1)`, the five forms of
   `(M, N)` at `t'` are the five forms of `(m, n)` at `t`, in another order, times squares
   (`partner_forms`). When `m`, `n` are both odd the scripts use `(M/2, N/2)`, which divides every
@@ -74,7 +76,7 @@ theorem d1_point' (m n t : ℚ) :
   field_simp
   ring
 
-theorem e0l_point (m n t : ℚ) :
+theorem e0l_neg (m n t : ℚ) :
     (m ^ 2 + n ^ 2 * (-t) ^ 2) * (2 * (m ^ 2 + n ^ 2) * ((-t) ^ 2 + 1) - 8 * m * n * (-t)) =
       (m ^ 2 + n ^ 2 * t ^ 2) * (2 * (m ^ 2 + n ^ 2) * (t ^ 2 + 1) + 8 * m * n * t) := by
   ring
