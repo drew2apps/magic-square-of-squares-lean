@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Experiment: the genus-2 quotient H: y^2 = F0 G4 GL (up to squares, y^2 = (n^2 t^2 + m^2)(t^2 + 1)(S(t^2 + 1) - 4mnt))
+"""Experiment: the genus-2 quotient H: y^2 = S (n^2 t^2 + m^2)(t^2 + 1)(S(t^2 + 1) - 4mnt), where y = w0 w4 wL / 2 (F0 G4 GL is 4 S times the sextic; the factor S was missing when the recorded outputs were produced, which matters only when S is not a square: see G1_FULL_SYSTEM.md)
 of the G1 curve, for the open pairs. Asks the public Magma calculator for RankBound(Jacobian(H)); when the bound
 is at most 1 also for the rational points of small height. One pair per request, a long pause between requests."""
 import re, sys, time, urllib.parse, urllib.request
@@ -12,7 +12,7 @@ for pr in OPEN:
     if (m, n) in done or partner(m, n) in done: continue
     done.add((m, n))
     code = ('SetClassGroupBounds("GRH"); P<t>:=PolynomialRing(Rationals()); m:=%d; n:=%d; S:=m^2+n^2; '
-            'f:=(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); '
+            'f:=S*(n^2*t^2+m^2)*(t^2+1)*(S*(t^2+1)-4*m*n*t); H:=HyperellipticCurve(f); J:=Jacobian(H); '
             'r:=RankBound(J); print "G2GRH", m, n, r; '
             'if r le 1 then print "PTS", RationalPoints(H:Bound:=5000); end if;') % (m, n)
     for attempt in range(6):

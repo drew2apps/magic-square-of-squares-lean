@@ -16,6 +16,8 @@ jobs:
           python3 -m py_compile scripts/g1_full/*.py
           python3 scripts/g1_full/check_evidence.py
           python3 scripts/g1_full/octic_check.py
+          python3 scripts/g1_full/height_sides.py
+          grep -q "$(sha256sum scripts/search/seven.c | cut -d' ' -f1)" scripts/search/seven_search.txt
           gcc -O2 -Wall -Wextra -Werror -o /tmp/seven scripts/search/seven.c -lm
           gcc -O2 -Wall -Wextra -Werror -o /tmp/seven_brute scripts/search/seven_brute.c
           /tmp/seven 1 100000 | tee /tmp/seven.out
@@ -32,3 +34,4 @@ jobs:
           set -o pipefail
           lake env lean scripts/Audit.lean | tee audit.txt
           grep '^AUDIT OK:' audit.txt >> "$GITHUB_STEP_SUMMARY"
+          diff <(grep '^AUDIT OK:' audit.txt) scripts/audit_line.txt

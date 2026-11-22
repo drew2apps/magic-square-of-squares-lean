@@ -1,0 +1,2 @@
+lines: 121; largest |formula - recorded B|: 0.0005; smallest h(j): 31.81; largest U/B: 0.9168; lines failing: 0
+height_sides OK

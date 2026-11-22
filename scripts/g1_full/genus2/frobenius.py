@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 """Does the Jacobian of H: y^2 = (n^2 t^2 + m^2)(t^2 + 1)(S(t^2 + 1) - 4mnt), S = m^2 + n^2, split over Q?
+(The quotient of the G1 curve is the twist y^2 = S (...); a quadratic twist changes the Frobenius polynomial by T -> -T
+at most, so the answer is the same.)
 If it were isogenous over Q to a product of two elliptic curves, the characteristic polynomial of Frobenius
 would be a product of two quadratics at every prime of good reduction. This prints its factorisation type at
 a few primes for three pairs; a factor of degree 4 shows that the Jacobian does not split over Q.

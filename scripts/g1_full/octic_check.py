@@ -11,7 +11,10 @@ which is positive for p >= 18400. This script checks the remaining range directl
   2. for every prime 9700 < p < 20000 and every root r of r^8 + 14 r^4 + 1 mod p, a value of t exists at
      which the five forms of (m, n) = (r, 1) are nonzero squares mod p;
   3. none of the 484 obstructed classes in modp_classes.txt is a root of the octic (so the statement
-     'all obstructed classes are at ratios of good reduction' stays true with the octic included).
+     'all obstructed classes are at ratios of good reduction' stays true with the octic included);
+  4. for every class of step 2, the exact number N of such t satisfies |32 N - 2 p| <= 100 + 270 sqrt(p)
+     (compared in integers: dev <= 100 or (dev - 100)^2 <= 270^2 p). This tests the main term and the
+     constants of the bound on real data; it is not a proof of the bound.
 No dependencies."""
 import os, sys
 
@@ -100,8 +103,8 @@ if True:
             fs = forms(r, 1); N = 0
             for t in range(p):
                 if all(qr[(a * t * t + b * t + c) % p] for (a, b, c) in fs): N += 1
-            dev = abs(32 * N - 2 * p); bound = 100 + 270 * p ** 0.5; nclass += 1
-            assert dev <= bound, (p, r, N)
-            worst = max(worst, dev / bound)
+            dev = abs(32 * N - 2 * p); nclass += 1
+            assert dev <= 100 or (dev - 100) ** 2 <= 270 * 270 * p, (p, r, N)   # exact: dev <= 100 + 270 sqrt(p)
+            worst = max(worst, dev / (100 + 270 * p ** 0.5))                    # floating point, for the report only
     print('4. exact counts for %d classes: |32N - 2p| <= 100 + 270 sqrt(p) in every class; largest ratio %.3f' % (nclass, worst))
 print('octic_check OK')

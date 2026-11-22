@@ -1,5 +1,8 @@
 # Output of scripts/search/seven.c, 2026-11-22: gcc -O2 seven.c -lm (gcc 13.3.0, x86-64 Linux, 2 cores, 7 GB),
 # './seven L R' for the 20 blocks of length 5*10^7 from 1 to 10^9; about 30 minutes in all.
+# Source: scripts/search/seven.c with SHA-256 52fd0a22ddbe526645906c9ab9131c2faa10239749ec10a76ee2ad2bf07a99f9
+# (CI checks that the committed seven.c has this hash). Commands: gcc -O2 -o seven seven.c -lm, then
+# ./seven $((k*50000000+1)) $(((k+1)*50000000)) for k = 0, ..., 19; the 20 lines below are their outputs in order.
 # The program prints a line starting with OTHER for every hit that is not the multiple of Bremner's square
 # (373^2 289^2 565^2 / 360721 425^2 23^2 / 205^2 527^2 222121) with the same centre root. No such line was printed.
 1<=x<=50000000 triangles=130164675 pairs=666782974 hits: 7 squares=117647 8 squares=0 9 squares=0; multiples of Bremner's square=117647 other=0

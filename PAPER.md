@@ -21,7 +21,7 @@ This note does not solve the problem. It contributes three things: a Lean librar
 
 ## 2. Proved in Lean
 
-Lean 4 with Mathlib, 246 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures.
+Lean 4 with Mathlib, 250 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures.
 
 **Known facts.** The nine necessary conditions listed on Wikipedia (most of them are in Rabern 2003), and the classical reformulations: three arithmetic progressions of squares with a common difference, rational right triangles of equal area, and points on the curves `y² = x³ − n²x`.
 
@@ -33,7 +33,7 @@ and the square is determined by `m`, `n` and a rational parameter `t`, for which
 
 **Excluded ratios.** 484 residue classes of `m : n` at 34 primes (the largest is 607) are impossible; each class is certified by a finite computation that the Lean kernel checks.
 
-**The norm.** `m² + n²` is a square modulo 7, 17, 31 and 47; every prime `≡ 5 (mod 8)` divides it to an even power; and `m² + n²` divides `8e²`. Hence: either `m² + n²` is a square or twice a square, or a prime `≡ 1 (mod 8)` divides the centre root `e` (and divides `m² + n²` to an odd power). I have not found this statement in Rabern (2003), Bremner (1999), Woll (2018), Weisenberg (2023) or the multimagie pages, but I have not made a full literature search and claim no novelty.
+**The norm.** `m² + n²` is a square modulo 7, 17, 31 and 47; every prime `≡ 5 (mod 8)` divides it to an even power; and `m² + n²` divides `8e²`. Hence: either `m² + n²` is a square or twice a square, or a prime `≡ 1 (mod 8)` divides the centre root `e` (and divides `m² + n²` to an odd power). With the second ratio `m′ : n′ = (b + d) : (f − h)` one has `8e² = (m² + n²)·k²·(m′² + n′²)`, and the two numbers cannot both be squares or both be twice a square. So either a prime `≡ 1 (mod 8)` divides the centre root, or one of `m² + n²`, `m′² + n′²` is a square and the other is twice a square; I do not know whether the second case can occur. Published statements on the centre that I have seen go from a prime to its residue class (Weisenberg's Theorem 2.10, Woll's Corollary 4.3); this one produces a prime. I have not found it in Rabern (2003), Bremner (1999), Woll (2018), Weisenberg (2023) or the multimagie pages, but I have not made a full literature search and claim no novelty.
 
 **Size.** One of the four edge roots exceeds 500. This is far below Morgenstern's bound; it is included because it is machine-checked.
 
@@ -57,19 +57,19 @@ Details, limits and commands are in `G1_FULL_SYSTEM.md`. Programs: PARI 2.17, Sa
 
 **Open.** 36 ratios, 5 of them with `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). Seven have no trivial point. For these the curves above have rank at least 2. A quotient of genus 2 was tried through the Magma calculator; for 20 of its 23 instances the calculator's limits were reached.
 
-**A side search.** Among magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square and its multiples. This is not new: B. Chaffin searched the same family to centre root 10¹⁴ (about 2008, published 2019) and found nothing else, and Pierrat, Thiriet and Zimmermann (2015) report searches of particular configurations. The search here re-verifies a small part of Chaffin's range with an independent program; its case analysis and Bremner's square are checked in Lean, the program is not.
+**A side search.** Among magic squares with nine distinct positive entries, a square centre of root at most 10⁹ and at least seven square entries, the only ones are Bremner's square and its multiples. This is not new: B. Chaffin's page reports a search of the same family to centre root 10¹⁴ (about 2008, published 2019) with nothing else found (I have the figures from an AI summary of the page), and Pierrat, Thiriet and Zimmermann (2015) report searches of particular configurations. The search here re-verifies a small part of Chaffin's range with an independent program; that its six cases are all the cases is proved in Lean, as is Bremner's square; the program is not verified.
 
 ## 4. What has not been checked
 
 In order of importance:
 
-1. **Heights and generators.** The Demjanenko–Manin closures need the generator of each curve (saturation with a proved height lower bound) and explicit comparisons between canonical and naive heights. The derivations were written with an AI model. The heights are floating-point with a safety margin, not interval arithmetic. An automatic checker verifies the recorded points, models, candidates and bounds for consistency, but not the heights or that the points generate.
+1. **Heights and generators.** The Demjanenko–Manin closures need the generator of each curve (saturation with a proved height lower bound) and explicit comparisons between canonical and naive heights. The derivations were written with an AI model. The heights are floating-point with a safety margin, not interval arithmetic. An automatic checker verifies the recorded points, models, candidates and bounds for consistency, but not the heights or that the points generate. A second script recomputes Silverman's constant for each of the 121 models and checks that it bounds the height difference on both sides (the software documents one side only). `AUDIT_REQUEST.md` lists what a reader is asked to check, with three closures worked out.
 2. **The character-sum bound** for the singular fibres and the Weil-bound step.
 3. **The density argument**, which is a sketch.
 4. **Rank bounds** are computed, by two or three programs, not proved here.
 5. **The literature.** Robertson (1996), Bremner's second paper (2001) and Boyer's article (2005) have not been read; the preprint of Pierrat, Thiriet and Zimmermann (2015) only through an AI summary.
 
-Two errors were found and corrected during the work, both recorded in `CHANGES.md`: the singular fibres were overlooked in the first statement of the 34 primes, and the first version of the side search missed two of six cases. Others may remain.
+Three errors were found and corrected during the work, all recorded in `CHANGES.md`: the singular fibres were overlooked in the first statement of the 34 primes; the first version of the side search missed two of six cases; and the curve of genus 2 in the experiment lacked a factor `m² + n²` (no recorded number was affected). Others may remain.
 
 ## 5. Reproducing
 
@@ -78,7 +78,7 @@ Two errors were found and corrected during the work, both recorded in `CHANGES.m
 ## References
 
 - A. Bremner, On squares of squares, Acta Arith. 88 (1999), 289–297.
-- B. Chaffin, Magic square of squares, benchaffin.com/magic-squares/magic-squares.html (2019).
+- B. Chaffin, Magic square of squares, https://benchaffin.com/magic-squares/magic-squares.html (2019).
 - C. Boyer, 3×3 magic square of squares search, multimagie.com (read 22 November 2026); reports Morgenstern's results.
 - P. Pierrat, F. Thiriet and P. Zimmermann, Magic squares of squares, preprint, 2015.
 - L. Rabern, Properties of magic squares of squares, Rose-Hulman Undergrad. Math. J. 4 (2003).
