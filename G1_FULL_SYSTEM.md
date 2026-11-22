@@ -15,10 +15,11 @@ Status: the congruence census for `m ≤ 1000` and the table of obstructed class
 | Some edge root exceeds 500 | Lean (`IsMSS.edge_root_gt_500`) |
 | An edge entry exceeds 250,000 when the nine entries are distinct | Lean (`IsMagicSquareOfSquares.edge_gt`) |
 | `m² + n²` is a square modulo 7, 17, 31, 47 | Lean (`G1.isSquare_norm_mod`, `IsMSS.edge_norm`) |
-| No ratio is excluded modulo a prime `≡ ±3 (mod 8)` | Lean (`G1.exists_point_mod_of_not_isSquare_two`) |
+| No ratio is excluded by a congruence modulo a prime `p ≡ ±3 (mod 8)` (modulo `p`, not modulo powers of `p`) | Lean (`G1.exists_point_mod_of_not_isSquare_two`) |
 | The excluded ratios have density 1 | Argued in Result 1b. Not in Lean |
 | 44 of 60, 183 of 306, 85 of 119 closed by rank 0; 157 left | Computed with PARI. Not in Lean |
-| 112 of those 157 closed by the Demjanenko–Manin argument; 45 open | Computed with PARI and Sage. Not in Lean |
+| 118 of those 157 closed by the Demjanenko–Manin argument; 39 open | Computed with PARI and Sage. Not in Lean, except the algebra of the two relations (`G1Relations.lean`) |
+| A prime `≡ 1 (mod 8)` divides the centre root unless `m² + n²` is a square or twice a square | Lean (`IsMSS.norm_isSquare_or_prime_dvd_center`) |
 | Exactly 34 primes; the Weil-bound argument | Computed and argued. Not in Lean |
 
 ## Correction to the earlier audit
@@ -59,26 +60,41 @@ There are 484 obstructed classes in total (`modp_classes.txt`), all at ratios of
 
 ## Result 1b: the number `m² + n²`
 
-**Why only primes `±1 (mod 8)` obstruct (Lean: `G1.exists_point_mod_of_not_isSquare_two`).** In integer form, at `t = 1` the five forms are `m² + n²`, `m² + n²`, `4(m² + n²)`, `4(m − n)²`, `4(m + n)²`, and at `t = 0` they are `m²`, `n²` and three times `2(m² + n²)`. So a class `m : n` can be obstructed modulo `p` only if both `m² + n²` and `2(m² + n²)` are non-residues. If `2` is a non-residue this is impossible. Hence no congruence modulo a prime `p ≡ ±3 (mod 8)` excludes a ratio, and every obstructed class has `m² + n²` a non-residue. (Prime powers are different: see the primes `≡ 5 (mod 8)` below.)
+Everything here is about 3×3 squares. "No bound" means no bound on the size of the entries.
 
-**At 7, 17, 31 and 47 the converse holds (Lean: `G1.isSquare_norm_mod`).** At these four primes every class with `m² + n²` a non-residue is obstructed: 4 of 4 classes, 8 of 8, 16 of 16, 24 of 24. So a solution has `m² + n²` a square modulo 7, 17, 31 and 47. At the other 30 primes only some non-residue classes are obstructed, for example 8 of 12 at 23, 8 of 20 at 41, 8 of 304 at 607.
+**No obstruction modulo a prime `≡ ±3 (mod 8)` (Lean: `G1.exists_point_mod_of_not_isSquare_two`).** In integer form, at `t = 1` the five forms are `m² + n²`, `m² + n²`, `4(m² + n²)`, `4(m − n)²`, `4(m + n)²`, and at `t = 0` they are `m²`, `n²` and three times `2(m² + n²)`. So a class `m : n` can be obstructed modulo `p` only if both `m² + n²` and `2(m² + n²)` are non-residues. If `2` is a non-residue this is impossible. Three remarks on the scope:
 
-**As conditions on a magic square of squares (Lean: `IsMSS.edge_norm`).** Take any magic square of squares with roots `a b c / d e f / g h i`, `b ≠ d`, `h + f ≠ 0`. Write `b + d = ±g·m`, `h + f = ±g·n` with `g = gcd(b + d, h + f)`. Then
+- This is a necessary condition for a prime to obstruct. It does not say which primes `±1 (mod 8)` do; that the list of 34 is complete is computed (Result 1).
+- It concerns congruences modulo `p` only. Modulo a power of `p` such a prime can obstruct: the condition at primes `≡ 5 (mod 8)` below is an example. Other prime-power obstructions are not studied here.
+- The class `n ≡ 0` is never obstructed either: for `(m, n) ≡ (1, 0)` the forms at `(u, v) = (1, 1)` are `1, 4, 1, 4, 4`. So modulo `p` there are `p + 1` classes, and the obstructed ones, `c_p` in number, are among the `p` classes with `n ≢ 0`.
+
+**At 7, 17, 31 and 47 the converse holds (Lean: `G1.isSquare_norm_mod`).** At these four primes every class with `m² + n²` a non-residue is obstructed: 4 of 4 classes, 8 of 8, 16 of 16, 24 of 24. So a solution has `m² + n²` a square modulo 7, 17, 31 and 47 (if `p` divides `m² + n²` this says nothing). This is a reading of the class table, checked by the kernel; I know no reason why it holds at these four primes and fails at the others. The numbers `c_p` are:
+
+7:4, 17:8, 23:8, 31:16, 41:8, 47:24, 73:8, 79:24, 89:28, 103:20, 113:8, 127:8, 137:8, 151:36, 167:24, 191:24, 193:8, 199:8, 223:16, 233:12, 239:8, 257:16, 263:16, 271:24, 281:16, 311:16, 313:16, 337:16, 353:8, 439:16, 457:8, 521:8, 599:8, 607:8 (total 484).
+
+**As conditions on a 3×3 magic square of squares (Lean: `IsMSS.edge_norm`; for the matrix form `IsMagicSquareOfSquares.edge_norm`).** Take a magic square of squares with roots `a b c / d e f / g h i` such that `b ≠ d` and `h + f ≠ 0`. This holds when the nine entries are distinct and the roots are taken positive. Write `|b + d| = g·m`, `|h + f| = g·n` with `g = gcd(b + d, h + f)`. Then
 
 - `m² + n²` is a square modulo 7, 17, 31 and 47;
 - every prime `p ≡ 5 (mod 8)` divides `m² + n²` to an even power (this is the statement of the Kepler71 notes, proved in `G1Primes.lean`).
 
-Since `m`, `n` are coprime, no prime `≡ 3 (mod 4)` divides `m² + n²`. So `m² + n² = 2^ε·k²·c`, where every prime factor of `c` is `≡ 1 (mod 8)`, and `c` is a square modulo 7, 31, 47, and modulo 17 unless `17 ∣ c`. The cases `c = 1` are exactly the pairs with a trivial point. The signs of the roots are arbitrary, so the same holds with `b − d` or `h − f` in place of `b + d` or `h + f`, and, rotating the square, for the pair `d + h`, `f + b`. I did not find the conditions at 7, 17, 31, 47 in the Kepler71 notes or in the sources I read; I cannot say they are new.
+Since `m`, `n` are coprime, `m² + n²` is odd or twice an odd number, and no prime `≡ 3 (mod 4)` divides it. So `m² + n² = 2^ε·k²·c` with `ε ∈ {0, 1}`, `c` squarefree, every prime factor of `c` `≡ 1 (mod 8)`, and `c` a square modulo 7, 31, 47, and modulo 17 unless 17 divides `m² + n²`. `c = 1` means that `m² + n²` is a square or twice a square; these are exactly the pairs with a trivial point. Replacing a root by its negative, or rotating the square, gives another magic square of squares, so the same Lean theorem applies to the ratios `(b − d) : (h + f)`, `(b + d) : (h − f)` and `(d + h) : (f + b)`; these variants are not stated separately.
 
-In Gaussian integers: `β = b + h·i` and `δ = d + f·i` both have norm `2e²`, and `β + δ = 2A·(m + n·i)`. So `m² + n²` is the norm of the primitive part of `β + δ`, and the exchange of `(m : n)` with the parameter is the exchange of the two factors in `β = (m + n·i)(A − B·i)`.
+**The centre (Lean: `IsMSS.norm_dvd_center`, `IsMSS.norm_isSquare_or_prime_dvd_center`).** With `m`, `n` as above there are integers `u`, `v` with `b + d = m·u`, `h + f = n·u`, `b − d = n·v`, `f − h = m·v`, and `8e² = (m² + n²)(u² + v²)`. In Gaussian integers: `2(b + h·i) = (m + n·i)(u − v·i)` and `2(d + f·i) = (m + n·i)(u + v·i)`. Hence every odd prime dividing `m² + n²` divides the centre root `e`, and:
 
-**Density (argued, not in Lean).** The theorems hold for all `m`, `n`, with no bound.
+> either `m² + n²` is a square or twice a square, or some prime `p ≡ 1 (mod 8)` divides the centre root and divides `m² + n²` to an odd power.
 
-- The 484 classes alone exclude all ratios outside a set of density `∏ (1 − c_p/(p + 1)) ≈ 0.00277`, the product over the 34 primes, `c_p` the number of obstructed classes at `p`.
-- The condition at primes `≡ 5 (mod 8)` alone excludes a set of density 1. For one such prime the ratios with `p` dividing `m² + n²` to an odd power have density `2p/(p + 1)²`; these conditions are independent for different primes; and `∑ 1/p` over primes `≡ 5 (mod 8)` diverges. The decay is slow: of 20,000 random coprime pairs, 23% pass this condition at height `10³` and 16% at height `10⁶`.
-- For `m ≤ 1000`: the classes exclude 303,204 pairs, the primes `≡ 5 (mod 8)` exclude 237,715, together 303,766.
+So a magic square of squares whose centre root has no prime factor `≡ 1 (mod 8)` has both ratios of trivial type (the second ratio is `u : v`, obtained by negating `h`).
 
-So the set of ratios not excluded by the Lean theorems has density zero. This says nothing about whether a magic square of squares exists: a single surviving ratio would be enough.
+**What I searched.** The Kepler71 repository has 256 notes. I searched them by keyword (non-residue, quadratic, `m² + n²` together with residue or Legendre, `±1 (mod 8)`) and read about ten in part. I found the statement on primes `≡ 5 (mod 8)` and none of the others. I could not open Rabern's or Zimmermann's papers. No novelty is claimed for anything in this section.
+
+**Density (argued; not in Lean).** Order the coprime pairs `1 ≤ n < m` by `m`. The density of a set of pairs is the limit, if it exists, of its proportion among the pairs with `m ≤ X`. A condition on `m : n` modulo a fixed integer `N` has a density, equal to the proportion of the points of the projective line over `ℤ/N` that satisfy it; for coprime moduli these proportions multiply (Chinese remainder theorem).
+
+- The ratios in none of the 484 classes have density `∏ (1 − c_p/(p + 1)) = 0.0027661`.
+- Let `P` be a finite set of primes `≡ 5 (mod 8)`. The ratios for which no `p ∈ P` divides `m² + n²` exactly once form a set defined modulo `∏ p²`, of density `∏ (1 − 2(p − 1)/(p(p + 1)))`. Every ratio that passes the condition at primes `≡ 5 (mod 8)` lies in this set, for every `P`. As `P` grows the product tends to 0, because `∑ 1/p` over primes `≡ 5 (mod 8)` diverges (Dirichlet). So the ratios that pass have density 0. Only finite sets of primes are used, so no sieve with error terms is needed.
+- The decay is slow. `scripts/g1_full/density.py` draws 20,000 coprime pairs (seed 1; `m` uniform up to `H`, `n` uniform below `m`): 22.8% pass the condition for `H = 10³`, 19.5% for `10⁴`, 17.4% for `10⁵`, 15.8% for `10⁶`.
+- For `m ≤ 1000` (same script): 303,204 pairs lie in one of the classes, 237,715 fail the condition at primes `≡ 5 (mod 8)`, 237,153 do both, 303,766 do at least one, 425 do neither. The Lean census uses the second condition only in the form "`p` divides `m² + n²` exactly once" for 19 primes; the 425 exceptions are the same.
+
+This says nothing about whether a magic square of squares exists: a single surviving ratio would be enough.
 
 ## Result 2: census
 
@@ -123,23 +139,41 @@ For the 119 pairs without a trivial point, the bad primes and 2 were also tested
 
 ## Result 4: pairs closed by the Demjanenko–Manin argument
 
-The 157 pairs above have positive rank on all twelve quotients. Two elliptic quotients occur twice in the Jacobian of the genus-49 curve, and a curve that occurs twice can be used when its rank is exactly 1. The Kepler71 notes use this argument for their slope family (`FABLE_JOINT_SIEVE_2026-09-15.md`, with the symmetry `z ↦ −z`); the two curves and the computation below are for G1.
+The 157 pairs above have positive rank on all twelve quotients. Some elliptic quotients occur more than once in the Jacobian of the genus-49 curve, and such a curve can be used when its rank is exactly 1. The Kepler71 notes use this argument for their slope family (`FABLE_JOINT_SIEVE_2026-09-15.md`, with the symmetry `z ↦ −z`); the curves and the computation below are for G1.
 
-**Curve `E04`.** With `S = m² + n²`, `κ = 2Sn²`: `E: y² = x(x + 2Sm²)(x + 2Sn²)`. A solution `t` gives a point `P` with `x(P) = κt²` (from `F0`, `F4`) and a point `P′` with `x(P′) = κ/t²` (from `F8`, `F4`, after `w ↦ 1/w`). So `x(P)·x(P′) = κ²`.
+| Curve | Comes from | Times in the Jacobian | Use |
+|---|---|---|---|
+| `w·f0·f8` (`E_B`), `w·K`, and the other curves of Result 3 | `F0·F8`, `L·U`, … | 1 | rank 0 |
+| `E04` | `F0·F4` and `F8·F4` | 2 | this section |
+| `F4·L`, `F4·U` | | 2 | it is `E04` of the partner pair |
+| `D1` | `F0·F8·F4·L` and `F0·F8·F4·U` | 2 | this section |
+| `f0·g4·K`, `f8·g4·K` | | 2 | it is `D1` of the partner pair |
+| `E0L` | `F0·L`, `F0·U`, `F8·L`, `F8·U` | 4 | this section, with two of the four points |
+| `f0·f8·K` and two quartics in `t ± 1/t` | `F0·F8·L·U` | 1 each | none: each has the rational point `w = 1` or `t = ±1`, and PARI never gave rank 0 in 15 pairs tried |
 
-**Curve `D1`.** With `z = t + 1/t`: `F0·F8·F4·L` and `F0·F8·F4·U` are `t⁴` times a quartic in `z`, and the two quartics differ by `z ↦ −z`. This gives an elliptic curve with two points `P`, `P′` such that `x(P′) = −x(P)`.
+**Curve `E04`.** With `S = m² + n²`, `κ = 2Sn²`: `E: y² = x(x + 2Sm²)(x + 2Sn²)`. A solution `t` gives a point `P` with `x(P) = κt²` and a point `P′` with `x(P′) = κ/t²`. So `x(P)·x(P′) = κ²`.
 
-**The argument.** If `E(ℚ) = ⟨G⟩ + torsion`, write `P = aG + T`, `P′ = a′G + T′`. The naive heights of `x(P)` and `x(P′)` differ by at most `2 log κ` (by 0 for `D1`), and the naive and canonical heights differ by at most Silverman's bound `B`. So `|a² − a′²|·ĥ(G) ≤ 2B + 2 log κ`. Either `|a|, |a′|` are below an explicit bound (between 19 and 32 in all cases here), and these points are listed; or `a′ = ±a`, and then `x(P)·x(P + T″) = κ²` for a torsion point `T″`, a polynomial equation for `x(P)`. Every candidate `t` is tested in the five-form system.
+**Curve `D1`.** With `z = t + 1/t` and `c0 = −16Smn(m² − n²)²`, a solution gives two points on one cubic with `x(P) = c0/z` and `x(P′) = −c0/z`.
 
-**Result.** 112 of the 157 pairs are closed: 91 by `E04`, 21 by `D1`, each for the pair or for its partner `(m + n, m − n)`. No candidate gave a non-degenerate square. The list, with the curve and the bound for each pair, is `scripts/g1_full/dm_closures.txt`.
+That the four points lie on the stated curves, on the same curve and not on a twist, is checked in Lean (`G1Relations.lean`: `e04_point`, `e04_point'`, `d1_point`, `d1_point'`). Nothing else in this section is in Lean.
 
-**Open after this, `m ≤ 200` (5 pairs, 3 up to the symmetry):** (72,65)~(137,7), (91,60)~(151,31), (195,28).
+**Curve `E0L`.** `C: y² = F0(t)·GL(t)` has the rational point `t = m/n`. A solution `t` gives rational points on `C` with `t`-coordinates `t` and `−t`. Here `t` is not an even function on the curve, so its height is compared with canonical heights through the fibre `{Q, R0 − Q}` of `t`: the sum and the product of the two Weierstrass abscissas are quadratic polynomials in `σ = 1/(t − m/n)`, which gives `|2h(σ(Q)) − ĥ(Q) − ĥ(R0 − Q)| ≤ K` with an explicit `K` (`dm3.py`, which also checks this inequality numerically on every point it lists and checks that every listed point is on `C`).
 
-**Open after this, `m ≤ 1000`: 45 pairs**, 14 without a trivial point and 31 with one. They are listed at the end of `dm_closures.txt`. For them both curves have rank at least 2, or the rank is not determined, or (one pair, (784,391)) no generator was found.
+**The argument.** If `E(ℚ) = ⟨G⟩ + torsion`, write `P = aG + T`, `P′ = a′G + T′`. The naive heights of the two abscissas differ by a bounded amount, and naive and canonical heights differ by at most Silverman's bound `B`. For `E04`: `|a² − a′²|·ĥ(G) ≤ 2B + 2 log κ`. Either `|a|, |a′|` are below an explicit bound, and these points are listed; or `a′ = ±a`, and then `P′ = ±P + T″` with `T″` torsion, a polynomial equation for `x(P)`, solved for every torsion point. Every candidate `t` is tested in the five-form system, so a superset of candidates is harmless. The partner of `(m, n)` is `(m + n, m − n)`, divided by 2 when both are even.
 
-Kepler71 reports a computational proof for (15,8); the closure here is independent of it and uses a different method.
+**Result.** 118 of the 157 pairs are closed: 91 by `E04`, 21 by `D1`, 6 by `E0L`, each for the pair or for its partner. No candidate gave a non-degenerate square. The bound on `|a|` used is 27 to 34 for `E04`, 21 or 22 for `D1`, 11 or 12 for `E0L`. `scripts/g1_full/dm_evidence.txt` has one line per closed pair: generator, heights, bounds, torsion, number of candidates, how the generator was proved, and the software versions.
 
-**Nine further elliptic quotients do not help.** `y² = F0·L`, `F8·L`, `F4·L` (in `t`), `f0·f8·K`, `f0·g4·K`, `f8·g4·K` (in `w`), and three quartics in `t ± 1/t` are also quotients. In every pair I tried each has a rational point of infinite order (for example `t = m/n` on `y² = F0·L`, `w = 1` on the three in `w`), so none of them has rank 0.
+**A worked example, (15,8).** `S = 289`, `κ = 36992`, `E: y² = x(x + 130050)(x + 36992)`. PARI gives rank bounds `[1, 1]`; eclib proves that `G` with `x(G) = −83521 = −S²` generates `E(ℚ)` modulo its torsion subgroup of order 4. `ĥ(G) = 3.1576`, `B = 29.242`, so `|a| ≤ (2B + 2 log κ)/ĥ(G) = 25.2`; the script lists `a ≤ 27`. Among the 111 candidate abscissas, the only ones of the form `κt²` at which the five forms are squares are `t = ±1`, the degenerate square of the pair.
+
+**Open after this: 39 pairs.** For `m ≤ 200`: (72,65)~(137,7), (91,60)~(151,31), (195,28). By what blocks them:
+
+| Pairs | Situation | What would be needed |
+|---|---|---|
+| 8 without a trivial point: (724,665), (740,539), (784,391), (820,799), (828,173), (840,83), (889,320), (923,757) | `E0L` has rank 2; `E04` has rank 2 or 3; `D1` has rank at least 2 or undetermined; for (784,391) the partner's `D1` has rank 1 but no generator was found | the argument with all four points on `E0L`, which needs explicit bounds on how far the four maps are from orthogonal; or a generator for (784,391) |
+| (72,65)~(137,7), (425,168)~(593,257), (920,129) | `E0L` has rank 3, the others at least 2 | the same four-point argument |
+| the other 26, all with a trivial point | `E0L` has rank 4 to 6 (for two pairs only bounds `[3, 5]`) | curves of genus 2 (Chabauty), or another fibration |
+
+Kepler71 reports a computational proof for (15,8). The closure here uses a different method; both computations await outside checking.
 
 ## Limits
 
@@ -147,8 +181,8 @@ Kepler71 reports a computational proof for (15,8); the closure here is independe
 - "Not excluded by a congruence" is not a proof of local solubility: at primes of bad reduction only small prime powers were tested.
 - The rank bounds depend on PARI 2.17.2. The `L`-value closures also depend on its numerical `L`-function code.
 - The Weil-bound step is a standard argument, written by an AI model and not checked by a number theorist.
-- Result 4 depends on: the upper rank bound 1 from PARI `ellrank`; a generator from eclib (`gens(proof=True)` in Sage) or from a PARI point saturated with `ellsaturation` up to a bound that follows from Sage's lower bound for the canonical height (Cremona–Siksek); Silverman's height bound as implemented in Sage; floating-point heights (the bound on `|a|` is rounded up by one); and my derivation of the two relations, which nobody has checked. `passagemath` 10.8 was used for Sage.
-- The density statement in Result 1b is a standard argument (the Chinese remainder theorem and Dirichlet's theorem), not formalized.
+- Result 4 is not in Lean, except the four identities of `G1Relations.lean`. What an outside reader would have to check: (1) the upper rank bound 1 from PARI `ellrank`; (2) that `G` is a generator: eclib (`gens(proof=True)`, or its saturation with its own index bound), or PARI `ellsaturation` up to a bound that follows from Sage's lower bound for the canonical height (`height_function().min(0.01, 20)`; the two arguments are a tolerance and a cap on the number of multiples used, and the returned value is documented as a proved lower bound); (3) Silverman's bound as implemented in Sage, applied to the integral model whose points are listed; (4) the height comparison for `E0L` in `dm3.py`; (5) floating-point heights: the proved bound on `|a|` is multiplied by 1.02 and increased by 2 before listing, which is a margin and not interval arithmetic; (6) the torsion case, solved for every torsion point; (7) the final test of each candidate (`classify_t`, exact rational arithmetic). Nobody has checked these.
+- The density statement in Result 1b uses only the Chinese remainder theorem for finitely many primes and Dirichlet's theorem; it is not formalized.
 - In Lean: only what the next section lists. The completeness of the list of 34 primes and every rank statement are not in Lean.
 
 ## Why this sieve does not transfer to the other fibrations
@@ -195,7 +229,9 @@ python3 gen_lean.py             # rewrites MagicSquareOfSquares/G1FullCertificat
 python3 gen_census1000.py       # rewrites MagicSquareOfSquares/G1Census1000.lean
 python3 gen_sizecheck.py        # rewrites MagicSquareOfSquares/G1SizeCheck.lean
 python3 families.py G2 700 200  # the sister families: no obstruction anywhere
+python3 density.py              # the counts and the sample of Result 1b; no dependencies
 python3 dm.py - 15,8            # Result 4, curve E04, for the pair and its partner; needs passagemath-schemes, passagemath-eclib
 python3 dm2.py 119,79           # Result 4, curve D1; also needs passagemath-symbolics
+python3 dm3.py 423,332          # Result 4, curve E0L
 cd ../.. && lake build          # the Lean theorems; G1FullCertificates needs about 5 GB of memory
 ```

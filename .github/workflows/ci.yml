@@ -13,6 +13,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Generated Lean files match their generators
         run: |
+          python3 -m py_compile scripts/g1_full/*.py
           python3 scripts/g1_full/gen_lean.py
           python3 scripts/g1_full/gen_census1000.py
           python3 scripts/g1_full/gen_sizecheck.py

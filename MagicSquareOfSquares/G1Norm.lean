@@ -11,7 +11,7 @@ number `m² + n²`. This file records three facts.
 * `G1.isSquare_norm_mod`: if the five forms are squares for some rational `t`, then `m² + n²` is a
   square modulo `7`, `17`, `31` and `47`. For these four primes *every* class `m : n` with
   `m² + n²` a non-residue is obstructed; the check is evaluated by the Lean kernel.
-* `IsMSS.isSquare_edge_norm`, `IsMSS.even_padicValNat_edge_norm`: the same, and the statement about
+* `IsMSS.isSquare_ratio_norm`, `IsMSS.even_padicValNat_ratio_norm`, `IsMSS.edge_norm`: the same, and the statement about
   primes `≡ 5 (mod 8)` from `G1Primes.lean`, read as conditions on the edge roots of a magic
   square of squares: the number `(b + d)² + (h + f)²`, divided by the square of
   `gcd(b + d, h + f)`, is a square modulo `7`, `17`, `31`, `47`, and every prime `≡ 5 (mod 8)`

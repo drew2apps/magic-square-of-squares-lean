@@ -65,29 +65,31 @@ In the three reformulations the nine squares are required to be distinct. The in
 
 ### Conditions on the edge roots
 
-Write the roots of a magic square of squares as `a b c / d e f / g h i`, with `b ≠ d` and `h + f ≠ 0`, and let `m : n` be the ratio `(b + d) : (h + f)` in lowest terms. [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) has the details; the forms, the five-form local test and the statement on primes `≡ 5 (mod 8)` come from the [Kepler71 project](https://github.com/Kepler71/magic-square-of-squares).
+All of this is about 3×3 squares. Write the roots of a magic square of squares as `a b c / d e f / g h i`, assume `b ≠ d` and `h + f ≠ 0` (true when the nine entries are distinct and the roots are taken positive), and let `m : n` be the ratio `|b + d| : |h + f|` in lowest terms. [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) has the details; the forms, the five-form local test and the statement on primes `≡ 5 (mod 8)` come from the [Kepler71 project](https://github.com/Kepler71/magic-square-of-squares).
 
 | Statement | Lean name |
 |---|---|
-| `m² + n²` is a square modulo 7, 17, 31 and 47, and every prime `≡ 5 (mod 8)` divides it to an even power | `IsMSS.edge_norm` |
-| `m : n` lies in none of 484 residue classes at 34 primes. There is no bound on `m`, `n` | `IsMSS.ratio_not_in_class`, `G1.fullTable_valid` |
+| `m² + n²` is a square modulo 7, 17, 31 and 47, and every prime `≡ 5 (mod 8)` divides it to an even power | `IsMSS.edge_norm`, `IsMagicSquareOfSquares.edge_norm` |
+| Either `m² + n²` is a square or twice a square, or a prime `≡ 1 (mod 8)` divides the centre root `e` | `IsMSS.norm_isSquare_or_prime_dvd_center` |
+| `m : n` lies in none of 484 residue classes at 34 primes | `IsMSS.ratio_not_in_class`, `G1.fullTable_valid` |
 | In particular `m : n` is not one of the coprime pairs `1 ≤ n < m ≤ 1000` outside 425 listed pairs (60 of them up to 200) | `IsMSS.ratio_ne_of_le_1000` |
 | The same for the five forms of the G1 family: no rational `t` makes them squares | `G1.no_solution_le_1000` |
-| If `b² ≠ d²`, `h² ≠ f²` and `b² ≠ f²`, one of the edge roots `b, d, f, h` is larger than 500 in absolute value. If the nine entries are distinct, one of the four edge entries is larger than 250,000 | `IsMSS.edge_root_gt_500`, `IsMagicSquareOfSquares.edge_gt` |
-| No congruence modulo a prime `≡ ±3 (mod 8)` can exclude a ratio | `G1.exists_point_mod_of_not_isSquare_two` |
+| If `b² ≠ d²`, `h² ≠ f²` and `b² ≠ f²`, one of the edge roots `b, d, f, h` is larger than 500 in absolute value; so one of the four edge entries is larger than 250,000, in particular when the nine entries are distinct | `IsMSS.edge_root_gt_500`, `IsMagicSquareOfSquares.edge_gt_of_ne`, `edge_gt` |
+| For a prime `p ≡ ±3 (mod 8)` no ratio is excluded by a congruence modulo `p` (powers of `p` are not covered) | `G1.exists_point_mod_of_not_isSquare_two` |
 
-The signs of the roots are arbitrary, so `b − d` or `h − f` may replace `b + d` or `h + f`. The first two rows hold for squares of any size. The ratios they exclude have density 1 among all ratios (argued in G1_FULL_SYSTEM.md, not in Lean); this does not decide the problem. The bound 500 is far below what computer searches have covered; it is only what follows from these theorems.
+The first three rows have no bound on the size of the entries. The signs of the roots are arbitrary, so the theorems also apply with `b − d` or `h − f`. The ratios excluded by rows 1 and 3 have density 1 among all ratios (argued in G1_FULL_SYSTEM.md, not in Lean); this does not decide the problem. The bound 500 is far below what computer searches have covered.
 
-Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 112 more by the Demjanenko–Manin argument on two curves of rank 1, and 45 are open (5 of them up to 200).
+Computed, not in Lean: exactly 34 primes can obstruct the system modulo `p`, the largest is 607. Of the 425 listed pairs, 268 are closed by elliptic curves of rank 0, 118 more by the Demjanenko–Manin argument on three curves of rank 1, and 39 are open (5 of them up to 200). These computations depend on PARI, Sage and derivations that nobody has checked; `scripts/g1_full/dm_evidence.txt` records each one.
 
 An earlier audit of the same family, restricted to three of the five forms, is in [archive/](archive/KEPLER71_G1_AUDIT.md). Its numbers are superseded.
 
 ## What is not proved
 
 - Whether a 3×3 magic square of distinct squares exists.
-- Any lower bound on the size of the entries beyond "an edge root exceeds 500", which is far below what computer searches have covered.
-- Anything about the infinitely many ratios above 1000, or about the 425 excepted ratios; for 306 of them the system has a degenerate solution and no congruence can help. This sieve cannot settle the problem by itself, and it does not transfer to the other natural ways of cutting the problem into curves (see [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md)).
-- The Lean proofs use congruences and algebraic identities only. The rank computations behind the census in [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) are not formalized.
+- Any lower bound on the size of the entries beyond "an edge root exceeds 500" (an edge entry exceeds 250,000), which is far below what computer searches have covered.
+- Anything about the 425 excepted ratios up to 1000, or about the ratios above 1000 that lie in none of the 484 classes and pass the condition at primes `≡ 5 (mod 8)`. For 306 of the 425 the system has a degenerate solution and no congruence can help. This sieve cannot settle the problem by itself, and it does not transfer to the other natural ways of cutting the problem into curves (see [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md)).
+- That the list of 34 obstructing primes is complete, and anything about obstructions modulo prime powers other than the statement on primes `≡ 5 (mod 8)`. The first is computed, the second is not studied.
+- The Lean proofs use congruences and algebraic identities only. The rank, generator and height computations behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) (268 pairs by rank 0, 118 by the Demjanenko–Manin argument) are not formalized, and the derivations behind the 118 have not been checked by anyone. The density statement is argued in prose.
 - Any search bound, and any result that needs the arithmetic of curves (Bremner 1999 and 2001) or the geometry of the surface of magic squares of squares (Bruin–Thomas–Várilly-Alvarado, Auel–Singer).
 - The existence of magic squares of squares for every size from 4×4 up (Rome–Yamagishi). Only Euler's 4×4 example is checked.
 
@@ -120,7 +122,9 @@ The docstring of `MagicSquares.exists_magic_square_squares` says that 0 is exclu
 | `MagicSquareOfSquares/G1Census1000.lean` | The census for `m ≤ 1000`, evaluated by the kernel in 20 blocks (generated) |
 | `MagicSquareOfSquares/G1SizeCheck.lean`, `G1Size.lean` | No two exceptional pairs fit together (generated); the bound on the edge roots |
 | `MagicSquareOfSquares/G1Norm.lean` | The conditions on `m² + n²`; why only primes `±1 (mod 8)` obstruct |
-| `MagicSquareOfSquares/G1Statement.lean` | The size bound for a square with nine distinct entries |
+| `MagicSquareOfSquares/G1Statement.lean` | The size bound and the conditions on `m² + n²` for the matrix form |
+| `MagicSquareOfSquares/G1Centre.lean` | `m² + n²` divides `8e²`; a prime `≡ 1 (mod 8)` divides the centre root unless `m² + n²` is a square or twice a square |
+| `MagicSquareOfSquares/G1Relations.lean` | The algebra of the relations used by the Demjanenko–Manin computation |
 | `scripts/g1_audit.py`, `g1_census.py`, `g1_good_primes.py`, `g1_three_kinds.py` | The scans behind the archived audit |
 | `scripts/g1_full/` | The scans behind [G1_FULL_SYSTEM.md](G1_FULL_SYSTEM.md) |
 | `scripts/g1_audit.py` | The scan behind the audit; writes the certificates |
@@ -136,7 +140,7 @@ lake build
 lake env lean scripts/Audit.lean
 ```
 
-On GitHub's runner the build takes about 15 minutes; `G1FullCertificates.lean` needs about 5 GB of memory. The audit takes about four minutes and ends with `AUDIT OK`.
+On GitHub's runner the build takes about 15 minutes; `G1FullCertificates.lean` needs about 5 GB of memory. The audit takes about four minutes. At this commit it prints `AUDIT OK: 463 theorems (including auxiliary ones), standard axioms only`; the sources declare 224 theorems, and the rest are auxiliary theorems that Lean generates. The audit checks axioms only. That the generated certificate files are the ones their scripts produce is checked separately in CI.
 
 ## How this was made, and its limits
 

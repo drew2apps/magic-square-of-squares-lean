@@ -35,9 +35,9 @@ def dm2(m, n):
     gens = [iso(G1)]; out['gens'] = 'pari point, saturated at primes <= %d (height lower bound %.4f)' % (kmax, lam)
     if len(gens) != 1: out['status'] = 'gens %d' % len(gens); return out
     G = gens[0]; hG = float(G.height()); B = float(E.silverman_height_bound())
-    amax = int(math.floor(2*B / hG)) + 1
+    amax = int(math.floor(1.02 * 2*B / hG)) + 2                              # 2% and +2: margin for rounding
     tors = E.torsion_points()
-    out.update(hG=hG, B=B, amax=amax, ntors=len(tors))
+    out.update(G=str(G[0]), hG=hG, B=B, amax=amax, ntors=len(tors))
     cand = set([QQ(0)])
     aG = E(0)
     for a in range(0, amax + 1):
