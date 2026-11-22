@@ -27,10 +27,11 @@ enclosed in rational intervals by the series for atanh; no floating point enters
   1. encloses B and checks that the recorded value (three decimals) is within 0.001 of it; this also shows
      that B was computed for the model whose points the scripts list;
   2. checks U <= B - 2, and that h(j) >= log 32 (the numerator or denominator of j is at least 32);
-  3. computes the proved bound X on |a| from the recorded hG, B (and kappa, or K and rho) and checks that
-     the listed bound amax leaves room: X would have to grow by the reported fraction before a multiple
-     could be missed. The heights hG are floating-point values computed by Sage; this step measures the
-     margin against their error, it does not bound that error.
+  3. computes the bound X on |a| from the recorded hG, B (and kappa, or K and rho) and checks that the
+     listed bound amax leaves room: X would have to grow by the reported fraction before a multiple could
+     be missed. The heights hG are floating-point values computed by Sage, so X is a computed bound, proved
+     only to the extent that hG is exact; this step measures the margin against the error of hG, it does
+     not bound that error.
 No dependencies."""
 import os, sys
 from fractions import Fraction as Fr
@@ -112,5 +113,5 @@ for line in open(os.path.join(here, 'dm_evidence.txt')):
 assert count == 121
 print('1. lines: %d; recorded B within %.4f of the enclosure of eclib\'s formula in every line' % (count, worst_rec))
 print('2. B - U >= %.3f in every line (U bounds hhat - h); smallest max(|num j|, den j) has %d digits' % (least_gap, len(str(least_j))))
-print('3. listed amax against the proved bound X: X would have to grow by at least %.1f%% in every line' % (100 * least_slack))
+print('3. listed amax against the bound X computed from the recorded heights: X would have to grow by at least %.1f%% in every line' % (100 * least_slack))
 print('height_sides OK')

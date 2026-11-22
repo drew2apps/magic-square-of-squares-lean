@@ -1,4 +1,4 @@
 1. lines: 121; recorded B within 0.0005 of the enclosure of eclib's formula in every line
 2. B - U >= 2.433 in every line (U bounds hhat - h); smallest max(|num j|, den j) has 14 digits
-3. listed amax against the proved bound X: X would have to grow by at least 9.1% in every line
+3. listed amax against the bound X computed from the recorded heights: X would have to grow by at least 9.1% in every line
 height_sides OK
