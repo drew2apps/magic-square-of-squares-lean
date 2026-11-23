@@ -32,7 +32,7 @@ A solution for the ratio `m : n` is a coprime integer pair `(u, v)`, `t0 = u/v`,
 
 *Proof.* `v_π(N(ℓ)) = v_π(ℓ) + v_π(ℓ̄)` and `v_π(ℓ̄) = v_π̄(ℓ)`. If `v_π(ℓ)` is odd and `v_p(c)` is even, then `v_π(ℓ̄)` is odd, so `π` divides `ℓ` and `ℓ̄`, hence `R` (the values of two linear forms at a coprime pair have their common divisors among the divisors of the resultant), and `π̄` divides `ℓ` to an odd power as well. The other cases are the same count. ∎
 
-The resultants are `2mn`, `2mn`, `2`, `2(m² − n²)`, `2(m² − n²)` (up to units). So
+The resultants, as determinants of the coefficients of `(u, v)` in `ℓ` and `ℓ̄`: for `α0 = (in)u + mv` and `ᾱ0 = (−in)u + mv` it is `2imn`; for `α8` the same with `m`, `n` exchanged; for `γ4 = u + iv` and `u − iv` it is `−2i`; for `γL` and `γ̄L = (m − in)u + i(m + in)v` it is `i(m + in)² + i(m − in)² = 2i(m² − n²)`, and for `γU` its negative. So
 
 - `δ_0, δ_8 ∈ { iᵃ·d : d | odd part of mn, squarefree }`,
 - `δ_4 ∈ { iᵃ·(1 + i)ᵇ·∏ (π_p or π̄_p) }`, the product over the primes `p | S` with odd exponent, `b ≡ 1 + v_2(S) mod 2`,
@@ -46,7 +46,9 @@ Let `p` be a rational prime and `v` a place of `ℚ(i)` above it. A solution giv
 
 > a tuple `(δ_0, δ_8, δ_4, δ_L, δ_U)` can only come from a solution if, for every prime `p`, some primitive `(u, v) ∈ ℤ_p²` gives its five classes at all places above `p`.
 
-For each prime the program computes a set `W_p` that contains all class tuples that occur (when a value vanishes to an order that the working precision does not resolve, every class is allowed for it, so `W_p` can only be too large), and keeps the tuples of `D_0 × … × D_U` that match some element of `W_p`. If no tuple is left after finitely many primes, the ratio has no solution. Classes: at an odd place, the parity of the valuation and the quadratic character of the unit part; at `1 + i`, the parity of the valuation and the unit modulo squares, read off modulo `(1 + i)⁵`.
+For each prime the program computes a set `W_p` that contains all class tuples that occur (when a value vanishes to an order that the working precision does not resolve, every class is allowed for it, so `W_p` can only be too large), and keeps the tuples of `D_0 × … × D_U` that match some element of `W_p`. If no tuple is left after finitely many primes, the ratio has no solution. Classes: at an odd place, the parity of the valuation and the quadratic character of the unit part (for an inert prime the residue field is `F_{p²}`, and a unit is a square there exactly when its norm is a square modulo `p`). At `π = 1 + i`, the parity of the valuation and the class of the unit part modulo squares, read off modulo `π⁵`: *a unit `x` of `ℤ_2[i]` with `x ≡ 1 mod π⁵` is a square.* Proof: Hensel's lemma for `f(y) = y² − x` at `y = 1` needs `v_π(f(1)) > 2·v_π(f′(1)) = 2·v_π(2) = 4`. So two units are in the same class exactly when their quotient is congruent to a square modulo `π⁵`; the units modulo `π⁵` form a group of order 16, the squares among them a subgroup of order 2, and there are 8 classes, as there must be (`[ℚ_2(i) : ℚ_2] = 2` gives `2³` unit classes). The program works modulo `8 = π⁶` and takes as the label of `x` the smallest element of `x·{z², z² + 4 + 4i}`, where `4 + 4i` generates `π⁵` modulo 8.
+
+*Why finite precision is safe.* The program knows `(u, v)` modulo `pᵏ`, hence each value `ℓ_j(u, v)` modulo `pᵏ`. A class is taken as known only if the valuation is below `k` at an odd place (then the leading term is the same for every lift), or `v_π + 5 ≤ 2k` at `π`. Otherwise the place is marked as undetermined, and an undetermined place matches every candidate. A point is refined (all `p` lifts are examined) until every place is determined or a depth limit is reached; at the limit the undetermined marks stay. So every class tuple of an actual point of `ℤ_p²` is matched by a tuple of `W_p`.
 
 This is finer than testing the five forms modulo `p`, which only sees the norms. The ratios of the census all pass that test at every prime, by definition.
 
@@ -70,16 +72,18 @@ So in every case computed, the descent set is the set of degenerate solutions. I
 
 ## 4. Checks made
 
-- **A system with a solution is never excluded** (`gd_control.py`). For random `m, n, u, v`, let `c_j` be the squarefree part of `N(ℓ_j(u, v))`. The system "`N(ℓ_j) ∈ c_j·ℚ²`" has the solution `(u, v)`, and the Lemma gives its sets `D_j`. In 60 such systems the tuple of the solution survived every prime, and 1 or 2 tuples were left in all. This tests the Lemma (a wrong support would lose the true tuple), the choice between `π` and `π̄`, and the agreement between the global and the local classes. The rule of the Lemma, applied to the real constants, gives exactly the sets of Section 1.
+- **A system with a solution is never excluded** (`gd_control.py`). For random `m, n, u, v`, let `c_j` be the squarefree part of `N(ℓ_j(u, v))`. The system "`N(ℓ_j) ∈ c_j·ℚ²`" has the solution `(u, v)`, and the Lemma gives its sets `D_j`. In 100 such systems (two runs) the tuple of the solution survived every prime, and 1 or 2 tuples were left in all. This tests the Lemma (a wrong support would lose the true tuple), the choice between `π` and `π̄`, and the agreement between the global and the local classes. The rule of the Lemma, applied to the real constants, gives exactly the sets of Section 1.
 - **The degenerate solutions are never excluded**: in all 123 ratios with a trivial point their tuples are among those left.
-- **A second implementation of the local step** (`gd_check.py`), without class labels and without the refinement by lifting: it decides for each `(u, v)` modulo `pᵏ` and each `δ` whether `ℓ_j(u, v)·δ` is a square. It gives 0 tuples for (820,799) and (889,320) and 2 for (4,3) and (15,8), as the first.
+- **A second implementation of the local step** (`gd_check.py`), without class labels and without the refinement by lifting: it decides for each `(u, v)` modulo `pᵏ` and each `δ` whether `ℓ_j(u, v)·δ` is a square, and counts an undecided case as possible. **It gives 0 tuples for all 34 ratios without a trivial point** (`gd_check_34.txt`) and 2 for (4,3) and (15,8), as the first. At the fixed precision `p²` it left 8 tuples for (320,289) and (609,31), where 17² divides `n` or the forms vanish to higher order modulo 17; at precision `17³` it leaves none. It shares with the first program the sets `D_j` and the five forms, so it does not check the Lemma.
+- **Lower precision only enlarges the set**: with lifting depth 1, 2 and 5 the sets left are nested, as they must be (and still empty for (820,799), (889,320), (740,539)).
 
 ## 5. What could be wrong, and what is not done
 
+- **A bug that a reader found within an hour of the first commit of this file** (`25c1253`): the function that compares a candidate with a local pattern treated an undetermined place as a mismatch instead of a wildcard, which is the unsafe direction, so the first program's empty sets were not proofs. Fixed (the comparison is now per place, with a self-test; `gauss_descent.py`), and everything was run again: no output changed, for the 157 ratios, the 681, or the pairs up to 60. Why it made no difference was not investigated; it was luck, not design. The second implementation never had this defect.
+
 - Both implementations were written by the same AI model in one evening. An error in the shared ideas (the Lemma, the handling of the place above 2, the claim that a solution gives a primitive pair over `ℤ_p` with these classes) would not be caught by the second implementation. The control with known solutions is the main protection against that.
-- At the place above 2 the unit classes are read modulo `(1 + i)⁵`; that a unit congruent to a square modulo `(1 + i)⁵` is a square is the standard fact for `ℚ_2(i)` (ramification index 2), used from memory.
 - Not in Lean. The statement for one ratio is a finite computation of the same kind as the table of 484 classes, so it could be formalised.
-- The 2 tuples left for a ratio with a trivial point are not explained away: the next step there is a second descent, on the elliptic curves `δ·y² = ℓ_aℓ_bℓ_cℓ_d` over `ℚ(i)` that the twisted cover maps to. A curve of rank 0 over `ℚ(i)` among them would close the ratio. Not started: it needs a 2-descent over `ℚ(i)`, which the software at hand does not provide.
+- The 2 tuples left for a ratio with a trivial point prove nothing about that ratio: other rational `t0` could give the same two patterns. They are not explained away: the next step there is a second descent, on the elliptic curves `δ·y² = ℓ_aℓ_bℓ_cℓ_d` over `ℚ(i)` that the twisted cover maps to. A curve of rank 0 over `ℚ(i)` among them would close the ratio. Not started: it needs a 2-descent over `ℚ(i)`, which the software at hand does not provide.
 
 ## 6. Reproduce
 
@@ -87,9 +91,8 @@ So in every case computed, the descent set is the set of degenerate solutions. I
 cd scripts/gauss_descent
 python3 gauss_descent.py -v 820,799 889,320        # under a second each
 python3 gauss_descent.py --pmax=200 $(cat pairs157.txt)   # all 157, about 10 minutes
-python3 gauss_descent.py --pmax=150 $(cat pairs_notrivial_1000.txt)   # the 681 ratios without a trivial point, under a minute
 python3 gd_control.py 1 60                         # the control with known solutions
-python3 gd_check.py 4,3 820,799 889,320 15,8       # the second implementation
+python3 gd_check.py $(cat pairs34.txt)            # the second implementation on the 34 ratios, under 2 minutes
 python3 small_all.py 60                            # every coprime pair with m <= 60
 ```
 

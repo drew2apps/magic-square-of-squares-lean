@@ -64,5 +64,7 @@ if __name__ == '__main__':
         T2 = np.ones(T.shape, dtype=bool); T1 = np.ones(T.shape, dtype=bool); same = True
         for p, _ in hist:
             if p > 60: break
-            T2 &= allowed_at(m, n, D, p, prec.get(p, 2))
+            k = prec.get(p, 2)
+            while p ** (k + 1) <= 5000: k += 1               # 11, 13, 17: precision 3
+            T2 &= allowed_at(m, n, D, p, k)
         print('(%d,%d): first implementation %d tuples, second implementation (primes up to %d) %d tuples' % (m, n, int(T.sum()), min(60, hist[-1][0]), int(T2.sum())), flush=True)

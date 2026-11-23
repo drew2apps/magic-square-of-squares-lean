@@ -1,2 +1,0 @@
-(820,799): first implementation 0 tuples, second implementation (primes up to 13) 0 tuples
-(889,320): first implementation 0 tuples, second implementation (primes up to 17) 0 tuples

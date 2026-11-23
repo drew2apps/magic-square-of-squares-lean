@@ -160,7 +160,17 @@ def dsets(m, n):
     return [D0, list(D0), D4, DLU, list(DLU)]
 
 def match(c, w):
-    return all(wi is None or wi == ci for ci, wi in zip(c, w))
+    """c: the classes of one delta at the places above p (all determined).  w: the classes of a form at a local point,
+    one entry per place, None where the precision does not determine the class.  An undetermined place matches anything."""
+    assert len(c) == len(w) and None not in c
+    return all(wk is None or wk == ck for ck, wk in zip(c, w))
+
+def selftest():
+    """The wildcard is per place: an undetermined place never rejects a candidate."""
+    a, b = (0, 1), (1, -1)
+    assert match((a, b), (a, b)) and match((a, b), (None, b)) and match((a, b), (a, None)) and match((a, b), (None, None))
+    assert not match((a, b), (b, b)) and not match((a, b), (None, a)) and match((a,), (None,)) and not match((a,), (b,))
+selftest()
 
 def descent(m, n, pmax=400, kmax=5, verbose=False, primes=None):
     assert gcd(m, n) == 1 and m > n >= 1
