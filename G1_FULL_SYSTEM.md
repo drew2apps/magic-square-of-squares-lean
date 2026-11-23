@@ -208,7 +208,7 @@ Rank 0 is proved by PARI `ellrank` on the curve or on a curve isogenous to it. N
 
 These 157 pairs are listed in `scripts/g1_full/open_pairs_1000.txt`; `global.py` reproduces the closing curve for each closed pair.
 
-**In total: of the 304,191 pairs with `m ≤ 1000`, 157 are left by congruences and rank-0 quotients.** Result 4 closes 131 of them, in two tiers: 122 on curves of rank 1, by a published method (Demjanenko–Manin), and 9 with four points on `E0L`, by an argument that is new here and that nobody but its authors has read. Until it has been read, the count to quote is 122 closed and 35 not closed, with 9 of the 35 closed conditionally on that argument.
+**In total: of the 304,191 pairs with `m ≤ 1000`, 157 are left by congruences and rank-0 quotients.** Result 4 closes 131 of them, in two tiers: 122 on curves of rank 1, by a published method (Demjanenko–Manin), and 9 with four points on `E0L`, by an explicit form of the same method with four maps, which was derived here and which nobody but its authors has read. Until it has been read, the count to quote is 122 closed and 35 not closed, with 9 of the 35 closed conditionally on that argument.
 
 For the 119 pairs without a trivial point, the bad primes and 2 were also tested to prime powers up to 3·10⁶; no further obstruction appeared.
 

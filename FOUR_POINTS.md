@@ -196,7 +196,13 @@ The method does not apply to the other 26 open ratios: for 22 of them the upper 
 - **Proposition 1 on actual rational points** (`dm4_twist.py`, output in `dm4_twist.txt`). If `GL·GU` is a square at `t0`, then `Q1` and `Q2` are rational points of one quadratic twist of `C`, and `2Q1 − R0`, `2Q2 − R0`, `Q1 + Q2 − R0`, `Q1 − Q2` are rational points of the corresponding twist of `E`, with the abscissas given by (I0) and (I±). Such `t0` are the abscissas of the rational points of the genus-1 curve `w² = GL·GU`, which has positive rank for most of the pairs tried, so they exist with any height. The same holds for `Q1`, `Q3` and (Iinv) when `F0·F8` is a square. For 72 such configurations, on 8 pairs, with `h(t0)` from 2.8 to 230.8 (numerators and denominators of up to 100 digits), the script (a) checks the identities against the group law, exactly: the abscissas of `(Q1 + Q2 − R0) ± (Q1 − Q2)` computed from the addition formula are those of `2Q1 − R0` and `2Q2 − R0`; (b) encloses the canonical heights by exact doubling. Result: `N(a_i) − H` lies between 2.4 and 13.5 in all 144 cases, where the bounds are `[−61.7, 19.6]` to `[−92.7, 28.9]`; `|⟨a_1, a_2⟩|` and `|⟨a_1, a_3⟩|` are at most 10.2, where `κ` is 32.8 to 48.0. The constants do not grow with the height. (For points that are rational only on a twist the height-difference bounds have to be valid over number fields; the script uses Silverman's, in the form that Sage's documentation gives as valid over all number fields. For these curves they agree with the constants of Section 4 to one decimal.)
 - All four points are never rational on a twist in the range searched: for `m, p, q ≤ 400` no `t0 = p/q ≠ 1` makes `F0·F8` and `GL·GU` both squares (`scripts/search/twist_find.c`, `twist_search.txt`). So Propositions 2 and 3, which are in Lean, cannot be tested on an actual four-point configuration; an earlier search without twists found none either (`m ≤ 250`).
 
-## 12. What a reader is asked to check
+## 12. Relation to known work
+
+The principle is not new. The method of Demjanenko and Manin applies to a curve with `k` independent morphisms to an elliptic curve whose rank over ℚ is less than `k`, and bounds the height of its rational points. Here the curve is the curve of the five forms, the morphisms are `t0 ↦ Q1, …, Q4`, and `k = 4`: the condition "rank at most 3" is the classical one, and the method stops where the classical method stops. Explicit applications that we found use two morphisms and rank 1 (Kulesz 1999; Kulesz, Matera and Schost 2004) or three morphisms and rank at most 2 (Girard and Kulesz 2005). We have not read these papers; this description is from their abstracts and from the introduction of Viada 2018.
+
+What this document adds, as far as we can tell: the three identities, which give the heights and four of the six pairings up to bounded errors with constants that are explicit in `m`, `n`; the lattice step in the form of Propositions 2 and 3, which needs only those four pairings; exact arithmetic and certificates for the two lists; and applications with four morphisms to curves of rank 3. Whether any of that is new in a sense that matters to specialists is their call, not ours.
+
+## 13. What a reader is asked to check
 
 1. Section 2: are (I0), (I±), (Iinv) plausible as stated, and is exact computer algebra in the function field an acceptable proof of them?
 2. Section 3: the three lemmas.
@@ -205,6 +211,7 @@ The method does not apply to the other 26 open ratios: for 22 of them the upper 
 5. Section 6: the completeness of the case distinction and of the solution of the equation in (B).
 6. Section 7: the index bound; whether Sage's `height_function().min` returns a proved lower bound; whether PARI's upper bound for the rank is unconditional.
 7. Section 8: the superset argument.
+8. Section 12: is this explicit form of the method, with four morphisms and rank 3, in the literature?
 
 Answers of the form "this step is wrong" are as welcome as confirmations: https://github.com/drew2apps/magic-square-of-squares-lean/issues.
 
@@ -212,5 +219,9 @@ Answers of the form "this step is wrong" are as welcome as confirmations: https:
 
 - J. E. Cremona, M. Prickett, S. Siksek, Height difference bounds for elliptic curves over number fields, J. Number Theory 116 (2006).
 - V. A. Demjanenko (1966) and Yu. I. Manin (1969), on rational points of curves with several maps to an elliptic curve; see J.-P. Serre, *Lectures on the Mordell–Weil theorem*, Section 5.2.
+- M. Girard, L. Kulesz, Computation of sets of rational points of genus-3 curves via the Dem'janenko–Manin method, LMS J. Comput. Math. 8 (2005) (three independent morphisms to an elliptic curve of rank at most two; not read).
+- L. Kulesz, Application de la méthode de Dem'janenko–Manin à certaines familles de courbes de genre 2 et 3, J. Number Theory 76 (1999) (not read).
+- E. Viada, An explicit Manin–Dem'janenko theorem in elliptic curves, Canad. J. Math. 70 (2018) (introduction read).
+- J. E. Cremona, S. Siksek, Computing a lower bound for the canonical height on elliptic curves over ℚ, ANTS VII (2006) (the algorithm behind Sage's `height_function().min`; not read).
 - T. Fisher, Higher descents on an elliptic curve with a rational 2-torsion point, Math. Comp. 86 (2017) (the routine behind Magma's `TwoPowerIsogenyDescentRankBound`).
 - J. H. Silverman, The difference between the Weil height and the canonical height on elliptic curves, Math. Comp. 55 (1990) (as quoted by Cremona, Prickett and Siksek).
