@@ -1,0 +1,6 @@
+ap_exact_2000.txt was produced on 23 November 2026 by
+  gcc -O2 -Wall -Wextra -Werror -fopenmp -o ap_exact ap_exact.c ; ./ap_exact 2000
+compiler: gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, x86_64, 2 threads; roughly 40 minutes of wall time (not measured precisely)
+sha256 of ap_exact.c at that run: 7bcf8857ba11435afc8c917bf107cdb12597027d63c12bfea75fc3a0be20c42e
+The output file is the whole standard output of the program.  The run has not been repeated by anyone else, and CI does not
+rerun it (CI reruns 250 on every push and 1000 in the full run, with the same source).

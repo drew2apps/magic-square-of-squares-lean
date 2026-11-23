@@ -15,7 +15,7 @@ d e f
 g h i
 ```
 
-so that the rows, columns and two diagonals of `a², …, i²` have the same sum `3e²`. Lee Morgenstern showed by computation (2006) that every entry of a solution exceeds 10¹⁴. The only known square with seven square entries is Bremner's (1999). A 2025 preprint (O. Hill, arXiv:2510.08286) claims a proof of nonexistence; it has not been verified here, and nothing here depends on it. A reading of its last step (versions 2 and 3, by an AI model, not confirmed by a person) is in `HILL_NOTE.md`: the final equation is the magic condition rewritten and holds for real magic squares, for which the conclusion drawn from it is false.
+so that the rows, columns and two diagonals of `a², …, i²` have the same sum `3e²`. Lee Morgenstern showed by computation (2006) that every entry of a solution exceeds 10¹⁴. The only known square with seven square entries is Bremner's (1999). A 2025 preprint (O. Hill, arXiv:2510.08286) claims a proof of nonexistence; it has not been verified here, and nothing here depends on it. A reading of its last step (versions 2 and 3, by an AI model, not confirmed by a person) is in `HILL_NOTE.md`: the final equation is the magic condition rewritten, and the conclusion is drawn from it by comparing coefficients of a quantity that is not a free variable (real magic squares, which are outside the integer hypotheses of the preprint, satisfy the same relations without the conclusion).
 
 This note does not solve the problem. It contains:
 
