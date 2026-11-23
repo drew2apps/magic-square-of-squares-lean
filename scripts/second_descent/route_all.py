@@ -5,7 +5,7 @@ For each ratio of two_map_scope.txt with rank bounds [1, 1]: saturation.py (the 
 four primes (the pairs (a, b) left, and the range covered), closure_estimate.py with that range (the bound for a, b from the
 height bound, and whether the sieve covers it), fibre.py (the rational t with a = 1 or b = 1).  One line per ratio.
 All of these ratios except (627,364) are closed by other means, so this is a test of the route, not a new result.
-usage: route_all.py [jobs [m,n ...]]"""
+usage: route_all.py [jobs [scope.txt] [m,n ...]]   (scope.txt: an output of two_map_scope.py; default two_map_scope.txt)"""
 import re, subprocess, sys
 from concurrent.futures import ThreadPoolExecutor
 PR = [10009, 20089, 30013, 40009]
@@ -44,7 +44,8 @@ def one(item):
     ts = sorted(set(re.findall(r"'(-?[0-9/]+)': '", ' '.join(fb))))
     return out + 'generator: %s; primes %s; height bound: a, b <= %d; sieve to %d%s leaves %d pair(s), within the bound: %s; range covers the bound: %s; fibre over a = 1 or b = 1: rational t = %s' % (
         gen, ' '.join(str(q) for q in pr), b96[0], rng, ' (from one prime)' if one_prime else '', len(left), inb, b96[0] <= rng, ', '.join(ts))
-items = [tuple(int(x) for x in re.match(r'\((\d+),(\d+)\): d = (\d+)', l).groups()) for l in open('two_map_scope.txt') if 'rank of E1 in [1, 1]' in l]
-if len(sys.argv) > 2: items = [it for it in items if '%d,%d' % it[:2] in sys.argv[2:]]
+scope = [a for a in sys.argv[2:] if a.endswith('.txt')] or ['two_map_scope.txt']; only = [a for a in sys.argv[2:] if not a.endswith('.txt')]
+items = [tuple(int(x) for x in re.match(r'\((\d+),(\d+)\): d = (\d+)', l).groups()) for l in open(scope[0]) if 'rank of E1 in [1, 1]' in l]
+if only: items = [it for it in items if '%d,%d' % it[:2] in only]
 with ThreadPoolExecutor(int(sys.argv[1]) if len(sys.argv) > 1 else 2) as ex:
     for line in ex.map(one, items): print(line, flush=True)

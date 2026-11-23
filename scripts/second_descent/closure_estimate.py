@@ -22,7 +22,8 @@ printed for deg C <= 192, twice that, to show how little depends on it.
 Arithmetic.  Everything that enters a bound is a rational number and is computed exactly: every log of an integer is replaced by
 (number of bits) * L2 with L2 = 0.6931471806 > log 2, log 3 by 1.0987, and the constants of the paper are decimal fractions.  The
 comparisons (the bound for a, b against the range of the sieve) are made on these exact rationals; printed values are rounded up.
-The only floating-point number used in a bound is PARI's canonical height of G, taken 0.001 lower, truncated to three decimals.
+The canonical height of G enters through a proved rational lower bound (height_enclosure.py: exact doubling and the
+height-difference bounds of Cremona, Prickett and Siksek); PARI's floating-point value is only compared with it.
 (The test of (P) on the point G, further down, is a floating-point sanity check and not a step of the argument.)
 
 The height.  Above t = a root of unity, s = -i t is a root of unity, x(P1) = A0/(s - r) on the model of weierstrass(), and
@@ -89,9 +90,11 @@ X, Y = QQ(G[0]), QQ(G[1]); den = lcm(X.denominator(), Y.denominator()); co = [ab
 h2G = log(float(sum(v*v for v in co))**0.5) - log(float(gcd(co)))
 print('real point: G has h^ = 1.5 * %.4f = %.3f and h2 = %.3f; h2 - h^ = %.3f, to be between -c2 = %.2f and c1 = %.2f: %s; h^(G) <= 4 * %.1f: %s' % (
     hG, 1.5*hG, h2G, h2G - 1.5*hG, -float(c['c2q']), float(c['c1q']), -float(c['c2q']) <= h2G - 1.5*hG <= float(c['c1q']), up(c['Kpt']), 1.5*hG <= 4*float(c['Kpt'])))
-hlow = QQ(int(floor(hG*1000)) - 1)/1000                  # a rational lower bound for PARI's height of G
+from height_enclosure import enclose
+_lo, _hi, _, _ = enclose(Em, QQ(Gm[0])); assert _lo <= hG <= _hi
+hlow = QQ(int(_lo.numerator))/QQ(int(_lo.denominator))   # a proved rational lower bound for the canonical height of G (height_enclosure.py)
 low = QQ(3)/2*hlow*(amax + 1)**2
-print('sieve: a non-degenerate solution has a or b above %d, so its point has h^ >= 1.5 * %.3f * %d^2 >= %.4e' % (amax, float(hlow), amax + 1, float(low)*(1 - 1e-9)))
+print('sieve: a non-degenerate solution has a or b above %d, so its point has h^ >= 1.5 * %.4f * %d^2 >= %.4e' % (amax, floor(float(hlow)*10**4)/10**4, amax + 1, float(low)*(1 - 1e-9)))
 for deg in (96, 192):
     top = max(v for k, v in bounds.items() if k[0] == deg); ab = isqrt(int(floor(top/(QQ(3)/2*hlow))))
     print('deg C <= %d: every solution has a, b <= %d (exact arithmetic); the sieve covers 0 <= a, b <= %d: %s; ratio of the two bounds for h^: %.3e' % (deg, ab, amax, ab <= amax, float(low/top)))

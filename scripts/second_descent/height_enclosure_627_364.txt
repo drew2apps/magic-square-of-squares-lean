@@ -1,0 +1,4 @@
+minimal model [0, 1, 0, 15223208213202973031750280786182975, 372517508636065850025943055293341065999858640587423]; x(G) = 83214074135015341
+h - hhat <= 57.299 and hhat - h <= 44.123 for every rational point (rounded up)
+from 2^7 G, in exact arithmetic: 20002899/10^6 <= hhat(G) <= 20009091/10^6
+floating-point values for comparison: PARI 20.006653, Sage 20.006653

@@ -43,7 +43,7 @@ Let `K = ℚ(i)`, with conjugation `σ`.
 
 **Lemma 1 (the group).** `E₁(ℚ) = ℤ·G ⊕ {O, T}`, where `T` is the point of order 2 and `G = (83214074135015341, 47069367709023802879687500)` on the minimal model. `G` is the point `A` of the degenerate solution `t = 1`. Its canonical height is `ĥ(G) = 20.00665…` in the normalisation of PARI, Sage and Magma (twice Silverman's).
 
-*Proof, by computation.* Rank at most 1: PARI's `ellrank` gives the bounds 1 and 1, and Magma's `RankBounds` gives 1 and 1 and its `TwoPowerIsogenyDescentRankBound` gives 1 (the 2-Selmer group has order 64, so a 2-descent alone would not do; `magma_last_pair_raw.txt`). `G` has infinite order, so the rank is 1. Torsion: `{O, T}` (Sage; Magma: invariants `[2]`). Generator: Sage's `height_function().min` gives `0.045162` as a lower bound for the height of a point of infinite order; if `G = k·G₀ + torsion` then `k² ≤ 20.007/0.045162`, so `k ≤ 21`, and `G` is not `ℓ` times a point plus torsion for `ℓ = 2, 3, 5, 7, 11, 13, 17, 19`, by reduction modulo a prime in each case (`saturation.py`). Independently, Magma's `Saturation([G], 200)` returns the two points `T` and `G`: `G` is not divisible by any prime up to 200. (The last line of that first request prints `false`: it compared the first point returned, which is `T`, with `±G`. The request was sent again with a correct test, also with the primes up to 1000: one point of infinite order is returned, it is `±G` plus torsion, and the other is a torsion point; the last request in the transcript.) About the lower bound: in the source of Sage (10.8, `height.py`) `min` is `min_gr`, the bound of Cremona and Siksek for points of good reduction, divided by the square of the least common multiple of the Tamagawa exponents and the number of real components, and its documentation states the result as a proved bound for all points of infinite order. The index bound is computed with rationals: `k² ≤ 20.008/0.045161`. ∎
+*Proof, by computation.* Rank at most 1: PARI's `ellrank` gives the bounds 1 and 1, and Magma's `RankBounds` gives 1 and 1 and its `TwoPowerIsogenyDescentRankBound` gives 1 (the 2-Selmer group has order 64, so a 2-descent alone would not do; `magma_last_pair_raw.txt`). `G` has infinite order, so the rank is 1. Torsion: `{O, T}` (Sage; Magma: invariants `[2]`). Generator: Sage's `height_function().min` gives `0.045162` as a lower bound for the height of a point of infinite order; if `G = k·G₀ + torsion` then `k² ≤ 20.007/0.045162`, so `k ≤ 21`, and `G` is not `ℓ` times a point plus torsion for `ℓ = 2, 3, 5, 7, 11, 13, 17, 19`, by reduction modulo a prime in each case (`saturation.py`). Independently, Magma's `Saturation([G], 200)` returns the two points `T` and `G`: `G` is not divisible by any prime up to 200. (The last line of that first request prints `false`: it compared the first point returned, which is `T`, with `±G`. The request was sent again with a correct test, also with the primes up to 1000: one point of infinite order is returned, it is `±G` plus torsion, and the other is a torsion point; the last request in the transcript.) About the lower bound: in the source of Sage (10.8, `height.py`) `min` is `min_gr`, the bound of Cremona and Siksek for points of good reduction, divided by the square of the least common multiple of the Tamagawa exponents and the number of real components, and its documentation states the result as a proved bound for all points of infinite order. The height of `G` itself is enclosed in exact arithmetic (`height_enclosure.py`: the point `2⁷·G` computed exactly, and the bounds of Cremona, Prickett and Siksek for the difference between the naive and the canonical height): `20.002899 ≤ ĥ(G) ≤ 20.009091`. The index bound uses the upper end, `k² ≤ 20.0091/0.045161`, and Lemma 5 uses the lower end. Since Magma finds `G` saturated at all primes up to 1000, the conclusion would survive a lower bound for the height two thousand times smaller than Sage's (any bound above `2.1·10⁻⁵` gives `k < 1000`). ∎
 
 So for a `t` as in Theorem A there are integers `a, b ≥ 0` with `A = ±(aG + εT)`, `B = ±(bG + ε′T)`.
 
@@ -71,15 +71,15 @@ For a `t` as in Theorem A, the point `(t, Y₁, σY₁, Y₂, σY₂)` lies on o
 
 *Proof.* Notation and facts from [CVV] (section 5 below): `h₂` is the Weil height with the Euclidean norm at the infinite places; on `E₁²` heights are sums over the two factors; `ĥ` is their Néron–Tate height, 1.5 times PARI's; (P) for a point `x` of `E₁`: `−c₂ ≤ h₂(x) − ĥ(x) ≤ c₁`, with `c₁ = 236.45`, `c₂ = 216.64` for algebraic points; (Z) `h₂(C) ≤ 2·deg C·μ` whenever the points of `C` with `h₂ ≤ μ` are Zariski dense, which on an irreducible curve means infinitely many.
 
-Take `t = ζ` a root of unity and a point `w` of `W` above it. Then `s = ∓iζ` is a root of unity, and the point `x = ψ₁(s, y)` has, on the model `y² = x³ + Ax + B` with integers `A, B`, the coordinate `X = a·A₀/(s − r) + b` with rational `a, b, r, A₀`. So `h(X) ≤ h(aA₀) + h(r) + h(b) + 2 log 2 = 110.21`; `h(X : Y : 1) ≤ 1.5·h(X) + 0.5·log(1 + |A| + |B|)`, because `|Y|² ≤ (1 + |A| + |B|)·max(1, |X|)³` at the infinite places and `|Y|² ≤ max(1, |X|)³` at the finite ones; `h₂ ≤ h + 0.5·log 3`; and by (P) `ĥ(x) ≤ 446.3`. On `E₂`: `448.4`. By the parallelogram law `ĥ(α(w)) ≤ 2·446.3 + 2·446.3` and `ĥ(β(w)) ≤ 4·448.4` (`θ` is an isomorphism and does not change `ĥ`). By (P) again, `h₂(α(w), β(w)) ≤ 4·446.3 + 4·448.4 + 2·236.45 = 4051.4`. There are infinitely many such points, so by (Z) `h₂(C) ≤ 2·96·4051.4`. ∎ (In the program every quantity that enters a bound is a rational number, computed exactly: a logarithm of an integer is replaced by its number of bits times `0.6931471806 > log 2`, `log 3` by `1.0987`, and the constants of the paper are decimal fractions. The comparison of the bound with the range of the sieve is made on exact rationals. The one floating-point input is PARI's height of `G`, taken `0.001` lower.)
+Take `t = ζ` a root of unity and a point `w` of `W` above it. Then `s = ∓iζ` is a root of unity, and the point `x = ψ₁(s, y)` has, on the model `y² = x³ + Ax + B` with integers `A, B`, the coordinate `X = a·A₀/(s − r) + b` with rational `a, b, r, A₀`. So `h(X) ≤ h(aA₀) + h(r) + h(b) + 2 log 2 = 110.21`; `h(X : Y : 1) ≤ 1.5·h(X) + 0.5·log(1 + |A| + |B|)`, because `|Y|² ≤ (1 + |A| + |B|)·max(1, |X|)³` at the infinite places and `|Y|² ≤ max(1, |X|)³` at the finite ones; `h₂ ≤ h + 0.5·log 3`; and by (P) `ĥ(x) ≤ 446.3`. On `E₂`: `448.4`. By the parallelogram law `ĥ(α(w)) ≤ 2·446.3 + 2·446.3` and `ĥ(β(w)) ≤ 4·448.4` (`θ` is an isomorphism and does not change `ĥ`). By (P) again, `h₂(α(w), β(w)) ≤ 4·446.3 + 4·448.4 + 2·236.45 = 4051.4`. There are infinitely many such points, so by (Z) `h₂(C) ≤ 2·96·4051.4`. ∎ (In the program every quantity that enters a bound is a rational number, computed exactly: a logarithm of an integer is replaced by its number of bits times `0.6931471806 > log 2`, `log 3` by `1.0987`, and the constants of the paper are decimal fractions. The comparison of the bound with the range of the sieve is made on exact rationals. The height of `G` enters through the proved lower bound 20.002899 of Lemma 1; no floating-point number enters a bound.)
 
-**Lemma 5 (the bound).** For a `t` as in Theorem A, `a² + b² ≤ 6.03·10⁹/30.0 ≈ 2.0·10⁸`; in particular `a, b ≤ 14,174`.
+**Lemma 5 (the bound).** For a `t` as in Theorem A, `a² + b² ≤ 6.03·10⁹/30.004 ≈ 2.0·10⁸`; in particular `a, b ≤ 14,175`.
 
 *Proof.* [CVV, Theorem 1.2] for `N = 2`: if `E: y² = x³ + Ax + B` has no complex multiplication, `C ⊂ E²` is an irreducible curve of genus at least 2, and `P ∈ C` has rank at most 1, that is, lies in an algebraic subgroup of dimension at most 1 (which is the case for every point with coordinates in a group of rank 1, as here: `2b·x ∓ 2a·y = 0`), then
 
     ĥ(P) ≤ C₁·h₂(C)·deg C + C₂(E)·(deg C)² + C₃(E),    C₁ = 72.251,  C₂(E) = C₁(6.019 + 4c₁(E)),  C₃(E) = 4c₂(E).
 
-With Lemmas 3 and 4 and the larger of the two sets of constants, the right side is at most `6.03·10⁹` (`2.42·10¹⁰` if one only assumes `deg C ≤ 192`). And `ĥ(A, B) = 1.5·ĥ(G)·(a² + b²) = 30.01·(a² + b²)`. ∎
+With Lemmas 3 and 4 and the larger of the two sets of constants, the right side is at most `6.03·10⁹` (`2.42·10¹⁰` if one only assumes `deg C ≤ 192`). And `ĥ(A, B) = 1.5·ĥ(G)·(a² + b²) ≥ 30.004·(a² + b²)`. ∎
 
 **Lemma 6 (the sieve).** For a `t` as in Theorem A, if `a, b < 59,631,000` then `(a, b) = (1, 1)`.
 
@@ -89,13 +89,14 @@ With Lemmas 3 and 4 and the larger of the two sets of constants, the right side 
 
 *Proof, by computation.* `A = ±G` or `±G + T` means `σP = c − P` with `c` one of four points. Since `σ(s) = −s`, the coordinate `x` of `P` satisfies `x(c − P) = −A₀x/(2rx + A₀)`: a polynomial equation over `K`, not identically satisfied, whose roots give four values of `s`; the rational `t = is` among them are `±1` (`fibre.py`; the equation is squared, so `−c` is covered with `c`). The same computation for `B` gives the same answer. ∎
 
-*Proof of Theorem A.* For a `t` as in the theorem, Lemma 5 gives `a, b ≤ 14,174`, Lemma 6 then gives `(a, b) = (1, 1)`, and Lemma 7 gives `t = ±1`. At `t = ±1` both numbers are squares (the degenerate solution). `t = ∞` and `t = 0` are not points: `d` times the leading coefficient, and `d·Qⱼ(0)`, are not squares in `K` (`fibre.py`). ∎
+*Proof of Theorem A.* For a `t` as in the theorem, Lemma 5 gives `a, b ≤ 14,175`, Lemma 6 then gives `(a, b) = (1, 1)`, and Lemma 7 gives `t = ±1`. At `t = ±1` both numbers are squares (the degenerate solution). `t = ∞` and `t = 0` are not points: `d` times the leading coefficient, and `d·Qⱼ(0)`, are not squares in `K` (`fibre.py`). ∎
 
 ## 4. The numbers
 
 | Quantity | Value | Program |
 |---|---|---|
 | `ĥ(G)` (PARI, Sage, Magma agree) | 20.006653 | `saturation.py`, `magma_last_pair_raw.txt` |
+| `ĥ(G)`, proved enclosure | between 20.002899 and 20.009091 | `height_enclosure.py` |
 | lower bound for heights on `E₁` | 0.045162 | `saturation.py` |
 | genus of `W`; branch points | 9; 8 | `closure_estimate.py` |
 | `deg C` | ≤ 96 | Lemma 3 |
@@ -103,7 +104,7 @@ With Lemmas 3 and 4 and the larger of the two sets of constants, the right side 
 | `h₂(C)` | ≤ 7.78·10⁵ | `closure_estimate.py` |
 | bound of [CVV] for `ĥ(A, B)` | ≤ 6.03·10⁹ | `closure_estimate.py` |
 | sieve: `ĥ(A, B)` if not `(1, 1)` | ≥ 1.07·10¹⁷ | `mw_sieve_big.py` |
-| so `a, b` are at most | 14,174 (28,349 with `deg C ≤ 192`) | `closure_estimate.py` |
+| so `a, b` are at most | 14,175 (28,350 with `deg C ≤ 192`) | `closure_estimate.py` |
 | the sieve covers | 59,630,999 (596,309 with four primes) | `mw_sieve_big.py`, `mw_sieve.py` |
 
 ## 5. What is used from the literature
@@ -143,3 +144,32 @@ python3 route_all.py 4                                                          
 ```
 
 The full CI run executes all of these in a job of its own (`last-pair`) and compares the outputs with the committed files; the job `quick`, on every push, runs all but the two sieves. Magma is not run in CI; its answers are in `magma_last_pair_raw.txt`.
+
+## 9. The construction for every ratio
+
+Nothing in Lemma 2 is special to (627,364). `lemma2_general.py` checks the following as identities in the variables `m, n, d, t` over `ℚ(i)`. Put `A = q₊(−it)`, `A′ = q₊(it)`, `B = (m + int)(n − imt)`, `B′ = (m − int)(n + imt)`. Then
+
+    f₁ = d·A·B,    f₂ = d·A′·B′,    f₃ = d·A·B′,    f₄ = d·A′·B,
+    A·A′ = GL·GU/4,        B·B′ = F0·F8,        f₁f₂f₃f₄ = d⁴·(F0·F8·GL·GU/4)²,
+    Q₂(s) = −s⁴·Q₁(1/s),
+
+where `F0, F8, GL, GU` are four of the five forms of the family, in `t`. The discriminant of `F0·F8·GL·GU` in `t` is a constant times a power of
+
+    m·n·(m − n)·(m + n)·(m² + n²)·((m² − mn − n²)² + 3m²n²)·((m² + mn − n²)² + 3m²n²),
+
+which is not zero for integers `m > n > 0`. So for every ratio and every `d`:
+
+**Theorem B (structure).** (1) The four polynomials `A, A′, B, B′` are squarefree and pairwise coprime, each root of `f₁f₂f₃f₄` is a root of exactly two of the `fᵢ`, and a product of some of the `fᵢ` is a constant times a square only for none or all of them (the pairs of `fᵢ` that share roots form a cycle `1–3–2–4–1`). (2) The curve of solutions `V` has two components, each a cover of the line of `t` with group `(ℤ/2)³`, branched exactly over the eight roots of `F0·F8·GL·GU`, of genus 9. (3) Each component is an **unramified double cover of the curve `X: u² = F0·F8, v² = GL·GU`**, which has genus 5 (`16 = 2·8 + 0` in the formula of Riemann and Hurwitz). (4) `Y² = d·Q₂` is the twist by `−1` of `Y² = d·Q₁`, so both maps `α, β` of section 3 go to the same curve `E₁`, and by the argument with four characters no `uα + vβ` is constant. (5) For a rational `t` the product of the four square roots is `N(Y₁)·N(Y₂) > 0`, which says on which component the point lies.
+
+*What this says about the problem.* A magic square of squares with ratio `m : n` gives a rational point of `X` (two of the conditions "product of two forms is a square"). At a rational point of `X` the numbers `N(A(t)) = GL·GU/4` and `N(B(t)) = F0·F8` are squares, so `A(t)·B(t)` has square norm, and an element of `ℚ(i)` with square norm is a rational number times a square: **the class `d` of `A(t)·B(t)` is a rational number for every rational point of `X`**, whatever the type of the ratio, and the point lifts to the double cover with that `d`. So the curves of this file are the twists of one unramified double cover of the classical curve `X`, and the two descents of this repository are used, for the Corollary, only to say which twists `d` can occur. That is a much smaller statement to check than the whole Gaussian descent on five forms: a 2-descent on one double cover. It has not been written out separately, and it is the natural next step.
+
+**Corollary of Theorem B and of [CVV] (effective, rank 1).** For every `m, n, d` such that `E₁ = Jac(Y² = d·Q₁)` has no complex multiplication and rank at most 1 over `ℚ`, the set of rational `t` with `d·Q₁(−it)` and `d·Q₂(−it)` both squares in `ℚ(i)` is finite and can be determined: the points `(A, B)` have height at most the bound of Lemma 5, computed by `closure_estimate.py` for the given numbers, and a sieve covers that range. The statement and its proof are those of Theorem A, with the same lemmas; what depends on the numbers is computed by the same programs (they take the degenerate point as generator, so as written they need a ratio of square type and that point of infinite order). Nobody has read this either.
+
+## 10. Twelve more ratios, between 1000 and 3000
+
+`SECOND_DESCENT.md` leaves 67 ratios with `1000 < m ≤ 3000` (two descents, then rank 0 from descent bounds or `L`-values). Of these, 40 are of square type, and for 12 of them `E₁` has rank exactly 1 (`two_map_scope_wide.txt`; PARI's bounds, not checked with Magma). On each of the 12 the whole route gives the same answer as for (627,364): the degenerate point generates, the bound of Lemma 5 (13,651 to 14,132) is covered by the sieve, only `(1, 1)` is left within it, and the fibre is `t = ±1` (`route_wide.txt`):
+
+    (1064,423) (1332,1045) (1395,532) (1785,688) (2015,1632) (2107,276) (2108,195) (2135,1248) (2331,1300) (2752,825) (2765,2508) (2867,756).
+
+Six of them have their partner in the list of 67: (1487,641), (2377,287), (1927,863), (2473,1097), (2383,1831), (2303,1913). So, if the two descents and this route are right, 18 of the 67 are closed and 49 are left with `1000 < m ≤ 3000`; with (627,364) and (991,263), none is left with `m ≤ 1000`. For 15 other ratios of square type PARI's first bounds for the rank of `E₁` are 1 and 3; with more effort one of them, (2257,1176), is found to have rank 3, and 14 stay undecided. These are results of the experiment, not of the census.
+

@@ -1,0 +1,1 @@
+(440,279), curve y^2 = x(x - 719^2)(x + 161^2), the twist by -1 of the Frey curve: N = 1.93e+09  terms 216484  L(E,1) in [1.104924973, 1.104924976]  positive

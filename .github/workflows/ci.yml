@@ -87,6 +87,9 @@ jobs:
           python3 second_descent.py --all 15,8 21,20 23,7 | diff - <(head -n 3 second_123.jsonl)
           python3 lproof.py 1e7 second_123.jsonl | grep -v "PARI stack" | head -n 5 | diff - <(head -n 5 lproof.txt)
           # LAST_PAIR.md, the fast parts (the two sieves are in the job last-pair of the full run)
+          python3 lemma2_general.py | grep -v "PARI stack" | diff - lemma2_general.txt
+          grep -q "^all identities hold: True$" lemma2_general.txt
+          python3 height_enclosure.py 627,364 521266 | grep -v "PARI stack" | diff - height_enclosure_627_364.txt
           python3 saturation.py 627,364 521266 | grep -v "PARI stack" | diff - saturation_627_364.txt
           python3 closure_estimate.py 627,364 521266 59630999 | grep -v "PARI stack" | diff - closure_estimate_627_364.txt
           python3 fibre.py 627,364 521266 | grep -v "PARI stack" | diff - fibre_627_364.txt
@@ -159,6 +162,9 @@ jobs:
           python3 magma_check.py | diff - magma_check.txt
           python3 kdescent_test.py 1 300 | diff - kdescent_test.txt
           python3 lproof.py 1e14 second_123.jsonl | grep -v "PARI stack" | diff - lproof.txt
+          pip install -q python-flint==0.9.0
+          python3 lball.py 1e14 second_123.jsonl | grep -v "PARI stack" | diff - lball.txt
+          python3 lball.py curve 0,-491040,0,-13400146081,0 '(440,279), curve y^2 = x(x - 719^2)(x + 161^2), the twist by -1 of the Frey curve:' | grep -v "PARI stack" | diff - lball_440_279.txt
           python3 lvalue_close.py 1e13 $(python3 -c "import json; print(' '.join('%d,%d' % tuple(json.loads(l)['pair']) for l in open('second_123.jsonl') if json.loads(l)['status'] == 'open'))") | grep '^{' | diff - lvalue_open.jsonl
           python3 tally.py second_123.jsonl lvalue_open.jsonl | diff - tally.txt
           python3 wide.py 1000 1020 ../g1_full/modp_classes.txt | diff - <(head -n 5 wide_1000_2000.jsonl)
@@ -210,6 +216,10 @@ jobs:
           python3 mw_sieve.py 99,20 18802 1000000 10009 20089 30013 40009 | f | diff - mw_sieve_99_20.txt
           # the whole route on the 24 ratios of square type with E1 of rank exactly 1
           python3 route_all.py 4 | diff - route_all.txt
+          # the same on the ratios of square type left with 1000 < m <= 3000 whose E1 has rank exactly 1
+          python3 two_map_scope.py pairs_wide_open.txt | f | diff - two_map_scope_wide.txt
+          python3 route_all.py 4 two_map_scope_wide.txt | diff - route_wide.txt
+          test "$(grep -c "generator: True; .*within the bound: \[(1, 1)\]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1$" route_wide.txt)" = 12
           test "$(grep -c "generator: True; .*within the bound: \[(1, 1)\]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1$" route_all.txt)" = 24
           grep -q "^left: \[(1, 1)\]$" mw_sieve_627_364.txt
           test "$(cat mw_sieve_627_364.txt mw_sieve_big_627_364.txt | grep -c "^test of the lifting: .* all of them returned: True; returned beyond them and the pairs left[a-z ]*: \[\]$")" = 2

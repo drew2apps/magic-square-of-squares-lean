@@ -9,6 +9,6 @@ mu2(C) <= 4 * 446.3 + 4 * 448.4 + 236.45 + 236.45 = 4051.4  (the points of C abo
 (T) with deg C <= 192, h2(C) <= 1.5558e+06 and the constants over Q: C2 = 56116.8, C3 = 691.5; every point of C of rank at most 1 has h^ <= 2.3651e+10
 (T) with deg C <= 192, h2(C) <= 1.5558e+06 and the general constants: C2 = 68769.4, C3 = 866.6; every point of C of rank at most 1 has h^ <= 2.4117e+10
 real point: G has h^ = 1.5 * 20.0067 = 30.010 and h2 = 64.489; h2 - h^ = 34.479, to be between -c2 = -172.86 and c1 = 192.67: True; h^(G) <= 4 * 446.3: True
-sieve: a non-degenerate solution has a or b above 59630999, so its point has h^ >= 1.5 * 20.005 * 59631000^2 >= 1.0670e+17
-deg C <= 96: every solution has a, b <= 14174 (exact arithmetic); the sieve covers 0 <= a, b <= 59630999: True; ratio of the two bounds for h^: 1.770e+07
-deg C <= 192: every solution has a, b <= 28349 (exact arithmetic); the sieve covers 0 <= a, b <= 59630999: True; ratio of the two bounds for h^: 4.424e+06
+sieve: a non-degenerate solution has a or b above 59630999, so its point has h^ >= 1.5 * 20.0028 * 59631000^2 >= 1.0669e+17
+deg C <= 96: every solution has a, b <= 14175 (exact arithmetic); the sieve covers 0 <= a, b <= 59630999: True; ratio of the two bounds for h^: 1.770e+07
+deg C <= 192: every solution has a, b <= 28350 (exact arithmetic); the sieve covers 0 <= a, b <= 59630999: True; ratio of the two bounds for h^: 4.424e+06

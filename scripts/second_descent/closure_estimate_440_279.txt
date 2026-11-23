@@ -9,6 +9,6 @@ mu2(C) <= 4 * 422.8 + 4 * 424.8 + 224.76 + 224.76 = 3839.5  (the points of C abo
 (T) with deg C <= 192, h2(C) <= 1.4744e+06 and the constants over Q: C2 = 53337.3, C3 = 656.8; every point of C of rank at most 1 has h^ <= 2.2419e+10
 (T) with deg C <= 192, h2(C) <= 1.4744e+06 and the general constants: C2 = 65389.0, C3 = 823.6; every point of C of rank at most 1 has h^ <= 2.2864e+10
 real point: G has h^ = 1.5 * 18.9786 = 28.468 and h2 = 61.190; h2 - h^ = 32.722, to be between -c2 = -164.19 and c1 = 183.05: True; h^(G) <= 4 * 422.8: True
-sieve: a non-degenerate solution has a or b above 30000, so its point has h^ >= 1.5 * 18.977 * 30001^2 >= 2.5621e+10
+sieve: a non-degenerate solution has a or b above 30000, so its point has h^ >= 1.5 * 18.9752 * 30001^2 >= 2.5618e+10
 deg C <= 96: every solution has a, b <= 14170 (exact arithmetic); the sieve covers 0 <= a, b <= 30000: True; ratio of the two bounds for h^: 4.482e+00
-deg C <= 192: every solution has a, b <= 28340 (exact arithmetic); the sieve covers 0 <= a, b <= 30000: True; ratio of the two bounds for h^: 1.121e+00
+deg C <= 192: every solution has a, b <= 28341 (exact arithmetic); the sieve covers 0 <= a, b <= 30000: True; ratio of the two bounds for h^: 1.121e+00

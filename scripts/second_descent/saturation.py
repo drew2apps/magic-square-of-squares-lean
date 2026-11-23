@@ -21,9 +21,11 @@ print('minimal model %s; G = (%s, %s)' % (list(Em.a_invariants()), Gm[0], Gm[1])
 print('rank bounds (PARI ellrank): %d, %d; torsion points other than O: %d' % (int(rk[0]), int(rk[1]), len(T)))
 hG = float(pari.ellheight(em, [pari(str(Gm[0])), pari(str(Gm[1]))])); hS = float(Gm.height())
 lam = float(Em.height_function().min(.01, 30))
-hup = QQ(int(floor(hG*1000)) + 2)/1000; lamlow = QQ(int(floor(lam*10**6)))/10**6     # rationals: above PARI's h(G), below Sage's bound
+from height_enclosure import enclose
+_lo, _hi, _, _ = enclose(Em, QQ(Gm[0])); assert _lo <= hG <= _hi
+hup = QQ(int(_hi.numerator))/QQ(int(_hi.denominator)); lamlow = QQ(int(floor(lam*10**6)))/10**6     # rationals: a proved upper bound for h(G) (height_enclosure.py), and Sage's bound rounded down
 kmax = isqrt(int(floor(hup/lamlow)))
-print('h(G) = %.6f (PARI), %.6f (Sage); lower bound for the height of a point of infinite order (Sage): %.6f; so an index k has k^2 <= %.3f/%.6f, k <= %d' % (hG, hS, lam, float(hup), float(lamlow), kmax))
+print('h(G) = %.6f (PARI), %.6f (Sage); lower bound for the height of a point of infinite order (Sage): %.6f; so an index k has k^2 <= %.4f/%.6f, k <= %d' % (hG, hS, lam, ceil(float(hup)*10**4)/10**4, float(lamlow), kmax))
 allok = True
 for l in prime_range(2, kmax + 1):
     ok = None

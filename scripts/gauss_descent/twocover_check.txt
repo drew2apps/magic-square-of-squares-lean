@@ -29,7 +29,9 @@
 (788,487) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (820,799) F0.F8.G4: Magma did not finish (1 request, no result)
 (820,799) F0.F8.GL: Magma did not finish (1 request, no result)
+(820,799) F0.F8.GU: Magma did not finish (2 requests, no result)
 (820,799) F0.GL.GU: Magma did not finish (1 request, no result)
+(820,799) F8.GL.GU: Magma did not finish (2 requests, no result)
 (820,799) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (828,173) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (836,745) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
@@ -48,7 +50,7 @@
 (965,581) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (988,27) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (988,27) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
-49 requests, 50 curves asked for, 42 finished, 8 not finished; of the finished ones 0 different; Magma 2.29-10
+53 requests, 52 curves asked for, 42 finished, 10 not finished; of the finished ones 0 different; Magma 2.29-10
 the 34 ratios of pairs34.txt: Magma finds an empty fake 2-Selmer set for some triple: 33
   a non-empty set, no element with the three norms square: 1: 740,539
   no finished request: 0: none
