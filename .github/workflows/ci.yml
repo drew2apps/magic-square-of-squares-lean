@@ -15,7 +15,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py
+          python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py scripts/gauss_descent/*.py
           python3 scripts/g1_full/check_evidence.py
           python3 scripts/g1_full/check_evidence.py --negative > /tmp/negative.out
           grep -q '^negative tests: 520 altered records, all rejected' /tmp/negative.out
@@ -76,6 +76,7 @@ jobs:
           cat /tmp/fresh/*.jsonl > /tmp/dm4_fresh.jsonl
           test "$(wc -l < /tmp/dm4_fresh.jsonl)" = 52
           python3 check_evidence.py --dm4 /tmp/dm4_fresh.jsonl
+          (cd ../gauss_descent && python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt && python3 gd_check.py 820,799 889,320 | diff - gd_check_expected.txt && python3 gauss_descent.py --pmax=150 $(cat pairs_notrivial_1000.txt) | sed 's/  \[[0-9.]* s\]$//' | diff - gauss_descent_notrivial_1000.txt)
           wait $TWIST
           diff <(sed 's/   \[[0-9]* s\]$//' /tmp/dm4_twist.out) dm4_twist.txt
           grep -q "^72 configurations on twists, 0 outside the bounds" /tmp/dm4_twist.out

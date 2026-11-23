@@ -1,0 +1,4 @@
+(820,799): |D| = 32x32x4x16x16 = 1048576, tuples left 0 after primes up to 13 (last change at p = 13)
+(889,320): |D| = 16x16x4x32x32 = 1048576, tuples left 0 after primes up to 17 (last change at p = 17)
+(4,3): |D| = 4x4x2x4x4 = 512, tuples left 2 after primes up to 457 (last change at p = 5); degenerate solutions present: kept
+(72,65): |D| = 16x16x2x8x8 = 32768, tuples left 2 after primes up to 397 (last change at p = 29); degenerate solutions present: kept

@@ -1,0 +1,157 @@
+(320,289): |D| = 8x8x8x32x32 = 524288, tuples left 0 after primes up to 17 (last change at p = 17)
+(388,287): |D| = 16x16x8x16x16 = 524288, tuples left 0 after primes up to 5 (last change at p = 5)
+(423,332): |D| = 16x16x16x32x32 = 4194304, tuples left 0 after primes up to 17 (last change at p = 17)
+(427,320): |D| = 16x16x4x16x16 = 262144, tuples left 0 after primes up to 37 (last change at p = 37)
+(540,239): |D| = 16x16x16x32x32 = 4194304, tuples left 0 after primes up to 19 (last change at p = 19)
+(541,476): |D| = 16x16x4x32x32 = 1048576, tuples left 0 after primes up to 17 (last change at p = 17)
+(560,33): |D| = 32x32x8x16x16 = 2097152, tuples left 0 after primes up to 29 (last change at p = 29)
+(593,527): |D| = 16x16x8x32x32 = 2097152, tuples left 0 after primes up to 29 (last change at p = 29)
+(609,31): |D| = 32x32x8x8x8 = 524288, tuples left 0 after primes up to 17 (last change at p = 17)
+(664,301): |D| = 16x16x4x32x32 = 1048576, tuples left 0 after primes up to 17 (last change at p = 17)
+(675,101): |D| = 16x16x8x16x16 = 524288, tuples left 0 after primes up to 5 (last change at p = 5)
+(724,325): |D| = 16x16x8x32x32 = 2097152, tuples left 0 after primes up to 7 (last change at p = 7)
+(724,665): |D| = 32x32x4x16x16 = 1048576, tuples left 0 after primes up to 13 (last change at p = 13)
+(740,539): |D| = 32x32x8x16x16 = 2097152, tuples left 0 after primes up to 17 (last change at p = 17)
+(747,107): |D| = 16x16x4x16x16 = 262144, tuples left 0 after primes up to 37 (last change at p = 37)
+(755,91): |D| = 32x32x16x16x16 = 4194304, tuples left 0 after primes up to 17 (last change at p = 17)
+(773,192): |D| = 8x8x8x32x32 = 524288, tuples left 0 after primes up to 5 (last change at p = 5)
+(779,301): |D| = 32x32x16x16x16 = 4194304, tuples left 0 after primes up to 19 (last change at p = 19)
+(784,391): |D| = 16x16x4x32x32 = 1048576, tuples left 0 after primes up to 37 (last change at p = 37)
+(788,487): |D| = 8x8x4x64x64 = 1048576, tuples left 0 after primes up to 13 (last change at p = 13)
+(820,799): |D| = 32x32x4x16x16 = 1048576, tuples left 0 after primes up to 13 (last change at p = 13)
+(828,173): |D| = 16x16x8x64x64 = 8388608, tuples left 0 after primes up to 13 (last change at p = 13)
+(836,745): |D| = 32x32x16x64x64 = 67108864, tuples left 0 after primes up to 13 (last change at p = 13)
+(840,83): |D| = 32x32x4x16x16 = 1048576, tuples left 0 after primes up to 13 (last change at p = 13)
+(864,151): |D| = 8x8x4x64x64 = 1048576, tuples left 0 after primes up to 5 (last change at p = 5)
+(889,320): |D| = 16x16x4x32x32 = 1048576, tuples left 0 after primes up to 17 (last change at p = 17)
+(899,724): |D| = 16x16x8x32x32 = 2097152, tuples left 0 after primes up to 5 (last change at p = 5)
+(920,371): |D| = 32x32x8x16x16 = 2097152, tuples left 0 after primes up to 13 (last change at p = 13)
+(923,757): |D| = 16x16x4x32x32 = 1048576, tuples left 0 after primes up to 13 (last change at p = 13)
+(935,416): |D| = 32x32x4x32x32 = 4194304, tuples left 0 after primes up to 13 (last change at p = 13)
+(964,541): |D| = 8x8x8x64x64 = 2097152, tuples left 0 after primes up to 5 (last change at p = 5)
+(965,363): |D| = 32x32x4x16x16 = 1048576, tuples left 0 after primes up to 17 (last change at p = 17)
+(965,581): |D| = 32x32x8x8x8 = 524288, tuples left 0 after primes up to 5 (last change at p = 5)
+(988,27): |D| = 16x16x8x32x32 = 2097152, tuples left 0 after primes up to 13 (last change at p = 13)
+(15,8): |D| = 8x8x2x8x8 = 8192, tuples left 2 after primes up to 9397 (last change at p = 13); degenerate solutions present: kept
+(21,20): |D| = 16x16x2x4x4 = 8192, tuples left 2 after primes up to 709 (last change at p = 13); degenerate solutions present: kept
+(23,7): |D| = 8x8x2x8x8 = 8192, tuples left 2 after primes up to 9397 (last change at p = 13); degenerate solutions present: kept
+(41,1): |D| = 4x4x2x16x16 = 8192, tuples left 2 after primes up to 709 (last change at p = 13); degenerate solutions present: kept
+(72,65): |D| = 16x16x2x8x8 = 32768, tuples left 2 after primes up to 199 (last change at p = 29); degenerate solutions present: kept
+(91,60): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 199 (last change at p = 29); degenerate solutions present: kept
+(99,20): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 2269 (last change at p = 29); degenerate solutions present: kept
+(117,44): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 349 (last change at p = 29); degenerate solutions present: kept
+(119,79): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 2269 (last change at p = 29); degenerate solutions present: kept
+(137,7): |D| = 8x8x2x16x16 = 32768, tuples left 2 after primes up to 199 (last change at p = 29); degenerate solutions present: kept
+(151,31): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 199 (last change at p = 29); degenerate solutions present: kept
+(156,133): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 1153 (last change at p = 23); degenerate solutions present: kept
+(161,73): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 349 (last change at p = 29); degenerate solutions present: kept
+(176,57): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 1801 (last change at p = 29); degenerate solutions present: kept
+(187,84): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 271 (last change at p = 17); degenerate solutions present: kept
+(195,28): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 223 (last change at p = 37); degenerate solutions present: kept
+(209,120): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 409 (last change at p = 29); degenerate solutions present: kept
+(220,21): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 6037 (last change at p = 37); degenerate solutions present: kept
+(223,167): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 223 (last change at p = 37); degenerate solutions present: kept
+(233,119): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 1801 (last change at p = 29); degenerate solutions present: kept
+(241,199): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 6037 (last change at p = 37); degenerate solutions present: kept
+(247,96): |D| = 16x16x2x8x8 = 32768, tuples left 2 after primes up to 16381 (last change at p = 13); degenerate solutions present: kept
+(253,204): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 3529 (last change at p = 17); degenerate solutions present: kept
+(255,32): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 257 (last change at p = 17); degenerate solutions present: kept
+(264,23): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 1933 (last change at p = 29); degenerate solutions present: kept
+(271,103): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 271 (last change at p = 17); degenerate solutions present: kept
+(273,136): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 409 (last change at p = 29); degenerate solutions present: kept
+(287,223): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 257 (last change at p = 17); degenerate solutions present: kept
+(287,241): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 1933 (last change at p = 29); degenerate solutions present: kept
+(289,23): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 1153 (last change at p = 23); degenerate solutions present: kept
+(329,89): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 409 (last change at p = 29); degenerate solutions present: kept
+(340,189): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 601 (last change at p = 17); degenerate solutions present: kept
+(343,151): |D| = 8x8x2x16x16 = 32768, tuples left 2 after primes up to 16381 (last change at p = 13); degenerate solutions present: kept
+(351,280): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 2017 (last change at p = 37); degenerate solutions present: kept
+(377,336): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 997 (last change at p = 37); degenerate solutions present: kept
+(396,203): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 599 (last change at p = 29); degenerate solutions present: kept
+(399,40): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 4057 (last change at p = 37); degenerate solutions present: kept
+(408,145): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 2017 (last change at p = 17); degenerate solutions present: kept
+(409,137): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 409 (last change at p = 29); degenerate solutions present: kept
+(416,87): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 2713 (last change at p = 29); degenerate solutions present: kept
+(420,341): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 5737 (last change at p = 29); degenerate solutions present: kept
+(425,168): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 10369 (last change at p = 17); degenerate solutions present: kept
+(439,359): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 4057 (last change at p = 37); degenerate solutions present: kept
+(440,279): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 18397 (last change at p = 41); degenerate solutions present: kept
+(457,49): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 3529 (last change at p = 17); degenerate solutions present: kept
+(460,429): |D| = 64x64x2x16x16 = 2097152, tuples left 2 after primes up to 661 (last change at p = 37); degenerate solutions present: kept
+(465,368): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 11593 (last change at p = 29); degenerate solutions present: kept
+(476,93): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 4153 (last change at p = 37); degenerate solutions present: kept
+(483,44): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 601 (last change at p = 37); degenerate solutions present: kept
+(493,276): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 6133 (last change at p = 29); degenerate solutions present: kept
+(503,329): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 2713 (last change at p = 29); degenerate solutions present: kept
+(520,231): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 3061 (last change at p = 29); degenerate solutions present: kept
+(527,439): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 601 (last change at p = 37); degenerate solutions present: kept
+(529,151): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 601 (last change at p = 17); degenerate solutions present: kept
+(552,385): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 937 (last change at p = 17); degenerate solutions present: kept
+(553,263): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 2017 (last change at p = 17); degenerate solutions present: kept
+(569,383): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 4153 (last change at p = 37); degenerate solutions present: kept
+(572,315): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 2281 (last change at p = 29); degenerate solutions present: kept
+(572,555): |D| = 64x64x2x16x16 = 2097152, tuples left 2 after primes up to 4129 (last change at p = 29); degenerate solutions present: kept
+(593,257): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 10369 (last change at p = 17); degenerate solutions present: kept
+(599,193): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 599 (last change at p = 29); degenerate solutions present: kept
+(608,105): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 617 (last change at p = 29); degenerate solutions present: kept
+(609,200): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 809 (last change at p = 29); degenerate solutions present: kept
+(612,35): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 647 (last change at p = 17); degenerate solutions present: kept
+(627,364): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 991 (last change at p = 37); degenerate solutions present: kept
+(631,71): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 2017 (last change at p = 37); degenerate solutions present: kept
+(644,333): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 3877 (last change at p = 37); degenerate solutions present: kept
+(647,577): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 647 (last change at p = 17); degenerate solutions present: kept
+(660,259): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 919 (last change at p = 37); degenerate solutions present: kept
+(667,156): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 9697 (last change at p = 29); degenerate solutions present: kept
+(672,185): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 19813 (last change at p = 13); degenerate solutions present: kept
+(680,111): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 569 (last change at p = 29); degenerate solutions present: kept
+(684,37): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 3793 (last change at p = 61); degenerate solutions present: kept
+(700,429): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 1129 (last change at p = 37); degenerate solutions present: kept
+(713,41): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 997 (last change at p = 37); degenerate solutions present: kept
+(713,503): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 617 (last change at p = 29); degenerate solutions present: kept
+(719,161): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 18397 (last change at p = 41); degenerate solutions present: kept
+(721,647): |D| = 16x16x2x16x16 = 131072, tuples left 2 after primes up to 3793 (last change at p = 61); degenerate solutions present: kept
+(736,273): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 1657 (last change at p = 37); degenerate solutions present: kept
+(741,580): |D| = 64x64x2x16x16 = 2097152, tuples left 2 after primes up to 1321 (last change at p = 37); degenerate solutions present: kept
+(751,289): |D| = 8x8x2x64x64 = 524288, tuples left 2 after primes up to 3061 (last change at p = 29); degenerate solutions present: kept
+(759,280): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 1039 (last change at p = 41); degenerate solutions present: kept
+(760,39): |D| = 32x32x2x32x32 = 2097152, tuples left 2 after primes up to 761 (last change at p = 53); degenerate solutions present: kept
+(761,79): |D| = 8x8x2x64x64 = 524288, tuples left 2 after primes up to 5737 (last change at p = 29); degenerate solutions present: kept
+(769,217): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 6133 (last change at p = 29); degenerate solutions present: kept
+(777,464): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 313 (last change at p = 29); degenerate solutions present: kept
+(779,660): |D| = 64x64x2x16x16 = 2097152, tuples left 2 after primes up to 1439 (last change at p = 29); degenerate solutions present: kept
+(780,451): |D| = 64x64x2x16x16 = 2097152, tuples left 2 after primes up to 19309 (last change at p = 61); degenerate solutions present: kept
+(783,56): |D| = 16x16x2x8x8 = 32768, tuples left 2 after primes up to 839 (last change at p = 13); degenerate solutions present: kept
+(791,569): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 569 (last change at p = 29); degenerate solutions present: kept
+(799,721): |D| = 32x32x2x32x32 = 2097152, tuples left 2 after primes up to 761 (last change at p = 53); degenerate solutions present: kept
+(809,409): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 809 (last change at p = 29); degenerate solutions present: kept
+(812,645): |D| = 64x64x2x16x16 = 2097152, tuples left 2 after primes up to 199 (last change at p = 29); degenerate solutions present: kept
+(823,511): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 9697 (last change at p = 29); degenerate solutions present: kept
+(833,97): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 11593 (last change at p = 29); degenerate solutions present: kept
+(836,123): |D| = 32x32x2x32x32 = 2097152, tuples left 2 after primes up to 199 (last change at p = 41); degenerate solutions present: kept
+(839,727): |D| = 8x8x2x16x16 = 32768, tuples left 2 after primes up to 839 (last change at p = 13); degenerate solutions present: kept
+(840,559): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 1399 (last change at p = 37); degenerate solutions present: kept
+(857,487): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 19813 (last change at p = 13); degenerate solutions present: kept
+(861,620): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 1481 (last change at p = 37); degenerate solutions present: kept
+(868,765): |D| = 64x64x2x16x16 = 2097152, tuples left 2 after primes up to 409 (last change at p = 53); degenerate solutions present: kept
+(884,387): |D| = 32x32x2x32x32 = 2097152, tuples left 2 after primes up to 199 (last change at p = 37); degenerate solutions present: kept
+(887,257): |D| = 8x8x2x64x64 = 524288, tuples left 2 after primes up to 2281 (last change at p = 29); degenerate solutions present: kept
+(889,31): |D| = 16x16x2x64x64 = 2097152, tuples left 2 after primes up to 661 (last change at p = 37); degenerate solutions present: kept
+(899,60): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 3697 (last change at p = 29); degenerate solutions present: kept
+(900,301): |D| = 32x32x2x8x8 = 131072, tuples left 2 after primes up to 1201 (last change at p = 29); degenerate solutions present: kept
+(912,215): |D| = 32x32x2x32x32 = 2097152, tuples left 2 after primes up to 1429 (last change at p = 29); degenerate solutions present: kept
+(919,401): |D| = 8x8x2x64x64 = 524288, tuples left 2 after primes up to 919 (last change at p = 37); degenerate solutions present: kept
+(920,129): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 6469 (last change at p = 37); degenerate solutions present: kept
+(924,893): |D| = 64x64x2x16x16 = 2097152, tuples left 2 after primes up to 421 (last change at p = 37); degenerate solutions present: kept
+(928,585): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 3109 (last change at p = 61); degenerate solutions present: kept
+(937,167): |D| = 8x8x2x64x64 = 524288, tuples left 2 after primes up to 937 (last change at p = 17); degenerate solutions present: kept
+(945,248): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 1193 (last change at p = 29); degenerate solutions present: kept
+(957,124): |D| = 32x32x2x32x32 = 2097152, tuples left 2 after primes up to 1117 (last change at p = 29); degenerate solutions present: kept
+(959,713): |D| = 32x32x2x32x32 = 2097152, tuples left 2 after primes up to 199 (last change at p = 41); degenerate solutions present: kept
+(959,839): |D| = 16x16x2x32x32 = 524288, tuples left 2 after primes up to 3697 (last change at p = 29); degenerate solutions present: kept
+(960,799): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 1759 (last change at p = 41); degenerate solutions present: kept
+(975,448): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 8461 (last change at p = 37); degenerate solutions present: kept
+(977,311): |D| = 8x8x2x32x32 = 131072, tuples left 2 after primes up to 3877 (last change at p = 37); degenerate solutions present: kept
+(987,884): |D| = 64x64x2x8x8 = 524288, tuples left 2 after primes up to 1871 (last change at p = 37); degenerate solutions present: kept
+(989,660): |D| = 64x64x2x32x32 = 8388608, tuples left 2 after primes up to 199 (last change at p = 37); degenerate solutions present: kept
+(991,263): |D| = 8x8x2x64x64 = 524288, tuples left 2 after primes up to 991 (last change at p = 37); degenerate solutions present: kept
+(992,705): |D| = 32x32x2x16x16 = 524288, tuples left 2 after primes up to 9277 (last change at p = 37); degenerate solutions present: kept
