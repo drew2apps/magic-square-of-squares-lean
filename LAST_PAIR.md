@@ -126,7 +126,7 @@ With Lemmas 3 and 4 and the larger of the two sets of constants, the right side 
 3. **Lemma 2**: short, and the genus was wrong once.
 4. **Lemma 4**: the chain of inequalities, in particular the use of (P) for algebraic points and of (Z) with the points above roots of unity.
 5. **Lemma 1**: the lower bound for the height is Sage's (its source and documentation say it is a proved bound for all points of infinite order; the computation behind it is Sage's and was not repeated by hand); the rank bound is PARI's and Magma's; the saturation is checked by two programs.
-6. **For the Corollary only**: the first descent, which gives the class `d`, and the second descent's set-up. These are the experiments of `GAUSS_DESCENT.md` and `SECOND_DESCENT.md`, with their own lists of what could be wrong.
+6. **For the Corollary only**: that a solution has class `d`. Section 11 gives this with a short program and four Lean lemmas; before that it came from the two descents of `GAUSS_DESCENT.md` and `SECOND_DESCENT.md`, which say the same.
 
 The route has been run on all 24 ratios of square type for which `E₁` has rank exactly 1 (section 6); it gives the known answer on the 23 that are closed by other means. That tests the programs and the constants; it does not test whether the sieve could wrongly remove a true point, which is what the planted control is for, and it does not replace a reader.
 
@@ -177,5 +177,33 @@ which is not zero for integers `m > n > 0`. So for every ratio and every `d`:
 
     (1064,423) (1332,1045) (1395,532) (1785,688) (2015,1632) (2107,276) (2108,195) (2135,1248) (2331,1300) (2752,825) (2765,2508) (2867,756).
 
-Six of them have their partner in the list of 67: (1487,641), (2377,287), (1927,863), (2473,1097), (2383,1831), (2303,1913). So, if the two descents and this route are right, 18 of the 67 are closed and 49 are left with `1000 < m ≤ 3000`; with (627,364) and (991,263), none is left with `m ≤ 1000`. For 15 other ratios of square type PARI's first bounds for the rank of `E₁` are 1 and 3; with more effort one of them, (2257,1176), is found to have rank 3, and 14 stay undecided (`rank_effort.py`, `rank_effort_wide.txt`; not rerun in CI). These are results of the experiment, not of the census.
+Six of them have their partner in the list of 67: (1487,641), (2377,287), (1927,863), (2473,1097), (2383,1831), (2303,1913).
+
+*The twist.* The two conditions do not change when `d` is replaced by `−d`, because `−1` is a square in `ℚ(i)`; but the curves over `ℚ` do: `Y² = −d·Q₁` has Jacobian `E₂`, and the two curves of section 2 change places. So the whole argument, and every program, can be run with `−d`, and it then needs `E₂` of rank 1 instead of `E₁`; the point of the degenerate solution is again a point of infinite order, now on `E₂`. For three of the 40 ratios `E₂` has rank exactly 1 while `E₁` does not (`rank_pairs_wide.txt`): (2365,588) and (2405,1428), where `E₁` has rank 2, and (2640,511). On each the route with `−d` leaves only `(1, 1)` and `t = ±1` (`route_twist.txt`). The partner of (2365,588), (2953,1777), is in the list.
+
+So, if the two descents and this route are right, 22 of the 67 are closed and 45 are left with `1000 < m ≤ 3000` (`route_wide_summary.txt`); with (627,364) and (991,263), none is left with `m ≤ 1000`. Where `E₁` and `E₂` both have rank 2 or more (10 of the 40 for certain) nothing here applies. For 15 other ratios of square type PARI's first bounds for the rank of `E₁` are 1 and 3; with more effort one of them, (2257,1176), is found to have rank 3, and 14 stay undecided (`rank_effort.py`, `rank_effort_wide.txt`; not rerun in CI). These are results of the experiment, not of the census.
+
+## 11. The class `d` without the two descents
+
+The Corollary of section 1 used the two descents of this repository for one thing: that a solution has class `d = 521266`. Section 9 said that this is a 2-descent on one double cover. Here it is, as a short program with no computer algebra in it (`scripts/cover_descent/cover_descent.py`: Python integers and a factoring routine).
+
+**Setting.** Let `u, v` be coprime integers with `F0, F8, GL, GU` all squares (a magic square of squares with ratio `m : n` gives such a pair, with `t = u/v`; `G4` is not used). In `ℤ[i]`,
+
+    F0 = N(mv + inu),   F8 = N(nv − imu),   GL = 2·N(γ_L),   GU = 2·N(γ_U),
+    γ_L = (mu − nv) + i(mv − nu),   γ_U = (mu + nv) + i(mv + nu),
+    A·B = −(mv + inu)·(nv − imu)·conj(γ_L)·conj(γ_U),
+
+with `A, B` as in section 9, made homogeneous. (1) `A·B` has square norm, so `A·B = d·z²` with `d` a squarefree positive integer (an element of `ℚ(i)` of square norm is a rational number times a square, and `−1` is a square). The solution then satisfies the two conditions of Theorem A with this `d`. (2) *Support.* Let `p` be an odd prime not dividing `mn(m² − n²)`. A common divisor of one of the four linear forms and its conjugate divides `2mn` or `2(m² − n²)` (`support_alpha0`, `support_alpha8`, `support_gammaL`, `support_gammaU` in `GaussDescent.lean`), so no prime above `p` divides both; as the norm of each form is a square or twice a square, each form has even valuation at every prime above `p`, and so has `A·B`. So `d` is a product of primes dividing `2mn(m² − n²)`: for (627,364) one of 256 numbers. (3) *Local test.* For a prime `p`, `d` is possible only if some `(u : v)` over `ℚ_p` has `F0, F8, GL, GU` squares in `ℚ_p` and `d·A·B`, `d·A·B′` squares in `ℚ_p(i)`. The program decides this on discs: on `t₀ + p^k ℤ_p` a value is congruent to its value at `t₀` modulo `p^k`, so its square class is constant once its valuation is small against `k`; a disc is dropped when a constant class is wrong, kept when all are constant and right, and cut into `p` discs otherwise, down to a fixed depth, where everything not yet constant is counted as possible. The set of classes allowed at `p` can therefore be too large but not too small.
+
+**Result for (627,364)** (`cover_627_364.txt`). Of the 256 classes, 64 pass at 2, then 32 (at 3), 16 (at 11), 8 (at 13), 4 (at 17), 2 (at 37) and 1 (at 53): **`d = 521266`, the class of the degenerate solution, and no other.**
+
+**Corollary, in its new form.** There is no magic square of squares with ratio `627 : 364` or `991 : 263`, given: the five forms and the partner map (Lean); steps (1) to (3) above, where (2) rests on four Lean lemmas and (3) on the output of a program of about 130 lines; and Theorem A. `GAUSS_DESCENT.md` and `SECOND_DESCENT.md` are no longer used for this pair. What is still used and unread is listed in section 7, with this program added.
+
+**Checks of the program.** The class of every known point passes at every prime, in every run (the program stops otherwise). Random points: for (627,364) and 14 primes, 43,228 random `(u, v)` at which the four forms are squares in `ℚ_p`, with the class computed from the exact integers: none outside the allowed set, and `A·B` and `A·B′` always in the same class (`cover_selftest_627_364.txt`). And it agrees with the Gaussian descent wherever both say something, on the 157 ratios of the census list (`cover_34.txt`, `cover_123.txt`, `cover_summary.txt`):
+
+- **The 34 ratios without a trivial point: no class is possible, for every one of them.** Among them are (820,799) and (889,320), which the census counts on Magma's two-cover descent alone (`cover_820_799.txt`, `cover_889_320.txt`: empty after the primes up to 61). For these 34 ratios this is a complete argument of its own: steps (1) to (3), and nothing else.
+- The 123 ratios with a trivial point: for 111 the only class left is that of the known points (65 of square type, 46 of the other type); for 12 one or three further classes are left, also with good primes up to 1500. This descent follows one class where the Gaussian descent follows five, so it can leave more; those 12 would need the further classes treated by ranks.
+- Of the 24 ratios of section 6, 19 have exactly one class here, (627,364) among them. For these 19 the route of this file closes the ratio without the two descents.
+
+Nobody has read this section or the program. It is the smallest complete argument in the repository for a ratio that the census counts as open: for (820,799) or (889,320), a reader has to check steps (1) and (2), half a page, and 130 lines of Python.
 

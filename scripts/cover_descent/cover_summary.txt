@@ -1,0 +1,5 @@
+cover_34.txt: 34 ratios; no class possible: 34; exactly the class of the known points: 0 (0 at t = 1, -1 and 0 at t = 0, infinity); one or more further classes: 0
+  ratios that needed good primes above 150: 1: (784,391)
+cover_123.txt: 123 ratios; no class possible: 0; exactly the class of the known points: 111 (65 at t = 1, -1 and 46 at t = 0, infinity); one or more further classes: 12
+  further classes: (247,96) [14, 2114]; (476,93) [435854, 599726]; (483,44) [462706, 2403086]; (493,276) [14, 333746]; (527,439) [462706, 2403086]; (569,383) [435854, 599726]; (644,333) [14, 607694]; (680,111) [1138, 900158]; (769,217) [14, 333746]; (777,464) [45698, 776866]; (868,765) [3502, 336398]; (975,448) [238, 1054, 338674, 1499842]
+  ratios that needed good primes above 150: 21: (247,96) (377,336) (460,429) (465,368) (476,93) (483,44) (493,276) (527,439) (569,383) (644,333) (680,111) (769,217) (777,464) (780,451) (833,97) (868,765) (884,387) (924,893) (928,585) (975,448) (992,705)

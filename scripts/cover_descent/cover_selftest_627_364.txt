@@ -1,0 +1,1 @@
+(627,364): random points at the primes [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 53]: 43228 with the four forms square in Q_p; class outside the allowed set, or different for A B and A B': 0

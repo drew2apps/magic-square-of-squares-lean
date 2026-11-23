@@ -1,0 +1,4 @@
+(820,799): primes that can divide d: [2, 3, 5, 7, 17, 41, 47, 1619] (256 classes)
+classes of the known points: none (m^2 + n^2 is neither a square nor twice a square)
+classes left after each prime that removes some: 2: 64, 3: 32, 5: 8, 13: 4, 29: 2, 53: all, 61: 0
+left: [] (no class is possible: no rational point with the four forms square)

@@ -45,7 +45,7 @@ def one(item):
     return out + 'generator: %s; primes %s; height bound: a, b <= %d; sieve to %d%s leaves %d pair(s), within the bound: %s; range covers the bound: %s; fibre over a = 1 or b = 1: rational t = %s' % (
         gen, ' '.join(str(q) for q in pr), b96[0], rng, ' (from one prime)' if one_prime else '', len(left), inb, b96[0] <= rng, ', '.join(ts))
 scope = [a for a in sys.argv[2:] if a.endswith('.txt')] or ['two_map_scope.txt']; only = [a for a in sys.argv[2:] if not a.endswith('.txt')]
-items = [tuple(int(x) for x in re.match(r'\((\d+),(\d+)\): d = (\d+)', l).groups()) for l in open(scope[0]) if 'rank of E1 in [1, 1]' in l]
+items = [tuple(int(x) for x in re.match(r'\((\d+),(\d+)\): d = (-?\d+)', l).groups()) for l in open(scope[0]) if 'rank of E1 in [1, 1]' in l]
 if only: items = [it for it in items if '%d,%d' % it[:2] in only]
 with ThreadPoolExecutor(int(sys.argv[1]) if len(sys.argv) > 1 else 2) as ex:
     for line in ex.map(one, items): print(line, flush=True)

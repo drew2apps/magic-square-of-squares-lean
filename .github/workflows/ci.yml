@@ -91,6 +91,16 @@ jobs:
           python3 degenerate_section.py /tmp/degenerate_section_polys.txt | grep -v "PARI stack" | diff - degenerate_section.txt
           diff /tmp/degenerate_section_polys.txt degenerate_section_polys.txt
           python3 wide_open.py | diff - route_wide_summary.txt
+          # LAST_PAIR.md, section 11: the class d from a short descent on the double cover (Python and sympy only)
+          cd ../cover_descent
+          python3 cover_descent.py 627,364 | diff - cover_627_364.txt
+          grep -q "^left: \[521266\] (exactly the classes of the known points)$" cover_627_364.txt
+          python3 cover_descent.py 820,799 | diff - cover_820_799.txt
+          python3 cover_descent.py 889,320 | diff - cover_889_320.txt
+          test "$(cat cover_820_799.txt cover_889_320.txt | grep -c "^left: \[\] (no class is possible")" = 2
+          python3 cover_descent.py 627,364 selftest | diff - cover_selftest_627_364.txt
+          python3 cover_summary.py cover_34.txt cover_123.txt | diff - cover_summary.txt
+          cd ../second_descent
           grep -q "G has infinite order for every other rational tau: True$" degenerate_section.txt
           grep -q "^all identities hold: True$" lemma2_general.txt
           python3 height_enclosure.py 627,364 521266 | grep -v "PARI stack" | diff - height_enclosure_627_364.txt
@@ -223,6 +233,10 @@ jobs:
           # the same on the ratios of square type left with 1000 < m <= 3000 whose E1 has rank exactly 1
           python3 two_map_scope.py pairs_wide_open.txt | f | diff - two_map_scope_wide.txt
           python3 route_all.py 4 two_map_scope_wide.txt | diff - route_wide.txt
+          python3 route_all.py 4 two_map_scope_wide_twist.txt | diff - route_twist.txt
+          # the cover descent on the 157 ratios of the census list
+          (cd ../cover_descent && python3 cover_batch.py ../gauss_descent/pairs34.txt 4 | diff - cover_34.txt && python3 cover_batch.py ../second_descent/pairs123.txt 4 | diff - cover_123.txt)
+          test "$(grep -c "no class is possible" ../cover_descent/cover_34.txt)" = 34
           test "$(grep -c "generator: True; .*within the bound: \[(1, 1)\]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1$" route_wide.txt)" = 12
           test "$(grep -c "generator: True; .*within the bound: \[(1, 1)\]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1$" route_all.txt)" = 24
           grep -q "^left: \[(1, 1)\]$" mw_sieve_627_364.txt

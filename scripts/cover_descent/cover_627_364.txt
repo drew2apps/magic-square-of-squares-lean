@@ -1,0 +1,4 @@
+(627,364): primes that can divide d: [2, 3, 7, 11, 13, 19, 263, 991] (256 classes)
+classes of the known points: t = 1, -1: d = 521266
+classes left after each prime that removes some: 2: 64, 3: 32, 5: all, 11: 16, 13: 8, 17: 4, 29: all, 37: 2, 53: 1, 137: all, 149: all
+left: [521266] (exactly the classes of the known points)

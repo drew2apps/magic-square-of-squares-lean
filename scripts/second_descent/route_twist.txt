@@ -1,0 +1,3 @@
+(2365,588), d = -10494962: generator: True; primes 10009 20089 30013 40009; height bound: a, b <= 14132; sieve to 1000000 leaves 1 pair(s), within the bound: [(1, 1)]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1
+(2405,1428), d = -7489682: generator: True; primes 10009 20089 30013 40009; height bound: a, b <= 14101; sieve to 30000 (from one prime) leaves 1 pair(s), within the bound: [(1, 1)]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1
+(2640,511), d = -13416958: generator: True; primes 10009 20089 30013 40009; height bound: a, b <= 14263; sieve to 30000 (from one prime) leaves 1 pair(s), within the bound: [(1, 1)]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1
