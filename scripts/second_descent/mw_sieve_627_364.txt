@@ -1,4 +1,4 @@
-E1 has rank 1; generator of canonical height 20.007 (PARI; not checked to be saturated: if G = k G0 the sieve below is on multiples of G only)
+E1 has rank 1 (PARI: bounds 1 and 1); G = P + conj(P) at the degenerate solution t = 1, of canonical height 20.007; that G generates E1(Q) modulo torsion is the business of saturation.py
 p = 10009: order of G 834, pairs allowed 1632 of 695556
 p = 20089: order of G 715, pairs allowed 204 of 511225
 p = 30013: order of G 3018, pairs allowed 909 of 9108324

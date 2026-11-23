@@ -86,6 +86,11 @@ jobs:
           python3 wide.py --summary wide_1000_2000.jsonl | diff - wide_summary.txt
           python3 second_descent.py --all 15,8 21,20 23,7 | diff - <(head -n 3 second_123.jsonl)
           python3 lproof.py 1e7 second_123.jsonl | grep -v "PARI stack" | head -n 5 | diff - <(head -n 5 lproof.txt)
+          # LAST_PAIR.md, the fast parts (the two sieves are in the job last-pair of the full run)
+          python3 saturation.py 627,364 521266 | grep -v "PARI stack" | diff - saturation_627_364.txt
+          python3 closure_estimate.py 627,364 521266 59630999 | grep -v "PARI stack" | diff - closure_estimate_627_364.txt
+          python3 fibre.py 627,364 521266 | grep -v "PARI stack" | diff - fibre_627_364.txt
+          (for r in 2,1 3,2 10,3 4,1 4,3 5,2; do python3 planted_control.py $r 30; done) | grep -v "PARI stack" | diff - planted_control.txt
           cd ../gauss_descent
           python3 subsets_summary.py | diff - subsets_summary.txt
           cd ../hill
@@ -158,8 +163,6 @@ jobs:
           python3 tally.py second_123.jsonl lvalue_open.jsonl | diff - tally.txt
           python3 wide.py 1000 1020 ../g1_full/modp_classes.txt | diff - <(head -n 5 wide_1000_2000.jsonl)
           python3 wide.py --summary wide_1000_2000.jsonl | diff - wide_summary.txt
-          python3 fibre.py 627,364 521266 | grep -v "PARI stack" | diff - fibre_627_364.txt
-          python3 mw_sieve.py 627,364 521266 1000000 10009 20089 30013 40009 | grep -v "PARI stack" | diff - mw_sieve_627_364.txt
           cd ../gauss_descent
           python3 real_points.py 300 $(cat pairs157.txt) | diff - real_points_157.txt
           python3 local_points.py $(cat pairs157.txt) | diff - local_points_157.txt
@@ -173,6 +176,42 @@ jobs:
           python3 gd_check.py --pmax=100 $(cat pairs_scan_high.txt) | diff - gd_check_scan_high.txt
           cd ../hill
           gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c && /tmp/ap_exact 1000 | diff - ap_exact_1000.txt
+
+  last-pair:
+    # LAST_PAIR.md: the argument for (627,364) and (991,263). An experiment, not counted in the census. This job reruns every
+    # computation of it: the generator, the constants of the height bound, both sieves, the fibre, and the planted control.
+    # Magma is not run; its answers are in magma_last_pair_raw.txt.
+    if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 75
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: generator, constants, sieves to 596,309 and to 59,631,000, fibre, planted control
+        shell: bash
+        run: |
+          set -e -o pipefail
+          pip install -q -r scripts/g1_full/requirements.txt numpy
+          cd scripts/second_descent
+          f() { grep -v "PARI stack" || true; }
+          python3 saturation.py 627,364 521266 | f | diff - saturation_627_364.txt
+          python3 closure_estimate.py 627,364 521266 59630999 | f | diff - closure_estimate_627_364.txt
+          python3 fibre.py 627,364 521266 | f | diff - fibre_627_364.txt
+          (for r in 2,1 3,2 10,3 4,1 4,3 5,2; do python3 planted_control.py $r 30; done) | f | diff - planted_control.txt
+          python3 mw_sieve.py 627,364 521266 1000000 10009 20089 30013 40009 | f | diff - mw_sieve_627_364.txt
+          python3 mw_sieve_big.py 627,364 521266 100 10009 20089 30013 40009 50021 60013 | f | diff - mw_sieve_big_627_364.txt
+          # the whole route on (440,279), closed by an L-value on another curve, and the sieve on (99,20)
+          python3 saturation.py 440,279 231518 | f | diff - saturation_440_279.txt
+          python3 closure_estimate.py 440,279 231518 30000 | f | diff - closure_estimate_440_279.txt
+          python3 fibre.py 440,279 231518 | f | diff - fibre_440_279.txt
+          python3 mw_sieve.py 440,279 231518 1000000 10009 20089 30013 40009 | f | diff - mw_sieve_440_279.txt
+          python3 mw_sieve.py 99,20 18802 1000000 10009 20089 30013 40009 | f | diff - mw_sieve_99_20.txt
+          grep -q "^left: \[(1, 1)\]$" mw_sieve_627_364.txt
+          grep -q "^left: \[(1, 1)\]$" mw_sieve_big_627_364.txt
+          test "$(grep -c "the planted pair (2, 1) survives; survivors: \[(0, 1), (2, 1)\]" planted_control.txt)" = 3
+          test "$(grep -c "14 of 14" planted_control.txt)" = 6
 
   twist-search:
     # scripts/search/twist_search.txt: no t0 = p/q != 1 with m, p, q <= 400 at which all four points are rational on a twist.

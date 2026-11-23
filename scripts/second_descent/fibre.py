@@ -12,9 +12,11 @@ pari = cypari2.Pari(); pari.allocatemem(2*10**9)
 m, n = (int(v) for v in sys.argv[1].split(',')); d = int(sys.argv[2])
 fam = family(m, n); (Q1, r1), (Q2, r2) = fam['+13'], fam['+24']
 E1, A1 = weierstrass(d*Q1, r1); E2, A2 = weierstrass(d*Q2, r2)
-Em = E1.minimal_model(); em = pari.ellinit([pari(str(a)) for a in Em.a_invariants()]); g = pari.ellrank(em, 2)[3][0]
-G = Em.isomorphism_to(E1)(Em(QQ(str(g[0])), QQ(str(g[1])))); T = [P for P in E1.torsion_points() if not P.is_zero()][0]
-e1 = E1.change_ring(K); e2 = E2.change_ring(K); iso = e1.isomorphism_to(e2)
+conj = [a for a in K.automorphisms() if a(I) == -I][0]; e1 = E1.change_ring(K); e2 = E2.change_ring(K); iso = e1.isomorphism_to(e2)
+vd = d*Q1.change_ring(K)(-I); wd = 1/(-I - r1); Pd = e1(A1*wd, A1*vd.sqrt()*wd*wd); Gs = Pd + e1(conj(Pd[0]), conj(Pd[1]))
+G = E1(QQ(Gs[0]), QQ(Gs[1])); T = [P for P in E1.torsion_points() if not P.is_zero()][0]          # G: the point of the degenerate solution t = 1, exactly
+for name, Q in (('q+ L1 L3', Q1), ('q+ L2 L4', Q2)):
+    print('curve %s: t = infinity is a point over K (d times the leading coefficient a square in K): %s; t = 0 is: %s' % (name, K(d*Q.leading_coefficient()).is_square(), K(d*Q(0)).is_square()))
 def solve(EK, A, r, consts, label):
     R = PolynomialRing(K, 'x'); x = R.gen(); a2 = EK.a2(); f = x**3 + a2*x**2 + EK.a4()*x + EK.a6(); cand = set(); ident = 0
     for c in consts:

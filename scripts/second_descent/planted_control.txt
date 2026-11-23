@@ -1,0 +1,21 @@
+ratio (2,1), planted t0 = 3, twists d1 = 2, d2 = 962
+local test: for the 14 primes [17, 29, 41, 53, 61, 73, 89, 97, 101, 109, 113, 137, 149, 157] the reductions of A and of B are in the sets computed by the sieve from t0 mod p: 14 of 14
+EA and F have rank 1; the planted solution has A = +-(2 G_A + torsion), B = +-(1 G_F + torsion)
+whole sieve, pairs 0 <= a, b <= 30, 14 primes: the planted pair (2, 1) survives; survivors: [(0, 1), (2, 1)]
+ratio (3,2), planted t0 = 5, twists d1 = 2, d2 = 49922
+local test: for the 14 primes [17, 29, 37, 41, 53, 61, 73, 89, 97, 101, 113, 137, 149, 157] the reductions of A and of B are in the sets computed by the sieve from t0 mod p: 14 of 14
+EA and F have rank 1; the planted solution has A = +-(2 G_A + torsion), B = +-(1 G_F + torsion)
+whole sieve, pairs 0 <= a, b <= 30, 14 primes: the planted pair (2, 1) survives; survivors: [(0, 1), (2, 1)]
+ratio (10,3), planted t0 = 13/7, twists d1 = 2, d2 = 222693122
+local test: for the 14 primes [17, 29, 37, 41, 53, 61, 73, 89, 97, 101, 113, 137, 149, 157] the reductions of A and of B are in the sets computed by the sieve from t0 mod p: 14 of 14
+EA and F have rank 1; the planted solution has A = +-(2 G_A + torsion), B = +-(1 G_F + torsion)
+whole sieve, pairs 0 <= a, b <= 30, 14 primes: the planted pair (2, 1) survives; survivors: [(0, 1), (2, 1)]
+ratio (4,1), planted t0 = 5/3, twists d1 = 2, d2 = 818
+local test: for the 14 primes [29, 37, 41, 53, 61, 73, 89, 97, 101, 109, 113, 137, 149, 157] the reductions of A and of B are in the sets computed by the sieve from t0 mod p: 14 of 14
+whole sieve not run: EA or F does not have rank exactly 1 with a point found
+ratio (4,3), planted t0 = 7, twists d1 = 2, d2 = 724802
+local test: for the 14 primes [17, 29, 37, 41, 53, 73, 89, 97, 101, 109, 113, 137, 149, 157] the reductions of A and of B are in the sets computed by the sieve from t0 mod p: 14 of 14
+whole sieve not run: EA or F does not have rank exactly 1 with a point found
+ratio (5,2), planted t0 = 7/3, twists d1 = 2, d2 = 1061762
+local test: for the 14 primes [17, 37, 41, 53, 73, 89, 101, 109, 113, 137, 149, 157, 173, 181] the reductions of A and of B are in the sets computed by the sieve from t0 mod p: 14 of 14
+whole sieve not run: EA or F does not have rank exactly 1 with a point found

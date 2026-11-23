@@ -1,9 +1,17 @@
 products of f1..f4 that are a constant times a square in K[t]: ['1234'] (expected: only 1234)
-E1: HX = 109.19, c1 (general) = 197.62, c2 (general) = 177.86, c1 (over Q) = 133.52, c2 (over Q) = 66.83; bound for h^ of a point above a root of unity: 405.8
-E2: HX = 110.81, c1 (general) = 197.62, c2 (general) = 177.86; bound for h^ of a point above a root of unity: 408.2
-mu2(C) <= 4 * 405.8 + 4 * 408.2 + 2 * 197.62 = 3651.3;  deg C <= 96;  h2(C) <= 2 deg mu = 7.0104e+05
-(T) with the constants over Q: C2 = 39023.2, C3 = 267.3; every rational point of C has h^ <= 5.2221e+09
-(T) with the general constants: C2 = 57548.8, C3 = 711.4; every rational point of C has h^ <= 5.3929e+09
-real point: G has h^ = 1.5 * 20.0067 = 30.010 and h2 = 64.489; h2 - h^ = 34.479, to be between -c2 = -66.83 and c1 = 133.52: True; h^(G) <= 4 * 405.8: True
-sieve: a non-degenerate solution has a or b above 59630999, so its point has h^ >= 1.0671e+17
-ratio of the sieve bound to the largest bound of (T): 1.979e+07
+f1 f2 f3 f4 = c g^2 with c a square in K: True
+distinct roots of f1 f2 f3 f4: 8; number of the f that each root divides: [2]; genus of a component: 1 + (8 * (-2) + 8 * 4)/2 = 9
+E1: HX = 110.21, c1 (general) = 236.45, c2 (general) = 216.64, c1 (over Q) = 192.67, c2 (over Q) = 172.86; bound for h^ of a point above a root of unity: 446.3
+E2: HX = 111.60, c1 (general) = 236.45, c2 (general) = 216.64; bound for h^ of a point above a root of unity: 448.4
+mu2(C) <= 4 * 446.3 + 4 * 448.4 + 236.45 + 236.45 = 4051.4  (the points of C above the roots of unity)
+(T) with deg C <= 96, h2(C) <= 7.7787e+05 and the constants over Q: C2 = 56116.7, C3 = 691.4; every rational point of C has h^ <= 5.9125e+09
+(T) with deg C <= 96, h2(C) <= 7.7787e+05 and the general constants: C2 = 68769.3, C3 = 866.6; every rational point of C has h^ <= 6.0291e+09
+(T) with deg C <= 192, h2(C) <= 1.5557e+06 and the constants over Q: C2 = 56116.7, C3 = 691.4; every rational point of C has h^ <= 2.3650e+10
+(T) with deg C <= 192, h2(C) <= 1.5557e+06 and the general constants: C2 = 68769.3, C3 = 866.6; every rational point of C has h^ <= 2.4117e+10
+real point: G has h^ = 1.5 * 20.0067 = 30.010 and h2 = 64.489; h2 - h^ = 34.479, to be between -c2 = -172.86 and c1 = 192.67: True; h^(G) <= 4 * 446.3: True
+sieve: a non-degenerate solution has a or b above 59630999, so its point has h^ >= 1.5 * 20.006 * 59631000^2 = 1.0671e+17
+ratio of the sieve bound to the largest bound of (T) with deg C <= 96: 1.770e+07
+ratio of the sieve bound to the largest bound of (T) with deg C <= 192: 4.425e+06
+so every solution has a, b <= 14174 (deg C <= 96); the sieve covers 0 <= a, b <= 59630999: True
+so every solution has a, b <= 28348 (deg C <= 192); the sieve covers 0 <= a, b <= 59630999: True
+the same with the first sieve (a, b <= 596309): 1.770e+03 and 4.425e+02

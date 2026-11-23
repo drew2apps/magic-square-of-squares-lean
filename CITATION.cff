@@ -23,7 +23,8 @@ abstract: >-
   one of them is a square and the other is twice a square. One edge root exceeds 500 (far below
   published search bounds). Computed and not formalized: a census of the ratios with m <= 1000
   (of 425 ratios left by congruences, 268 are closed by rank 0 and 122 by rank 1; 9 more by an
-  argument with four maps that has not been reviewed; 26 are open).
+  argument with four maps that has not been reviewed; 26 were open at release 0.4.0, and 24 are
+  open at the current head, where 2 more are closed by a two-cover descent run in Magma).
   The problem itself is not solved, and no novelty is claimed.
   The Lean code and the text were written with Claude, an AI model made by Anthropic.
 keywords:

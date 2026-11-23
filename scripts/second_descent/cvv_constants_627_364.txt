@@ -1,6 +1,0 @@
-E1 in the form y^2 = x^3 + A x + B: log|A| = 85.88, log|B| = 127.19; complex multiplication: False
-c1(E1) = 133.522, c2(E1) = 66.833; C2(E1) = 39023.2, C3(E1) = 267.3
-sieve: a non-degenerate solution has a or b above 59630999, so h(P) >= 1.5 * 20.007 * 59631000^2 = 1.067e+17
-  if deg C <= 96: the bound is below that as soon as h2(C) <= 1.539e+13
-  if deg C <= 200: the bound is below that as soon as h2(C) <= 7.385e+12
-  if deg C <= 1000: the bound is below that as soon as h2(C) <= 1.477e+12

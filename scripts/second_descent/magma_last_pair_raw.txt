@@ -1,0 +1,35 @@
+=== 2026-11-23 20:01:20 UTC
+--- input
+SetColumns(0);
+E := EllipticCurve([0, 1, 0, 15223208213202973031750280786182975, 372517508636065850025943055293341065999858640587423]);
+G := E![83214074135015341, 47069367709023802879687500];
+print "on curve", IsPoint(E, [G[1], G[2]]);
+T, mp := TorsionSubgroup(E); print "torsion invariants", Invariants(T);
+print "canonical height of G", Height(G);
+S := Saturation([G], 200); print "saturation of [G] at the primes up to 200:", S;
+print "the saturated point is G or -G up to torsion:", exists{t : t in T | S[1] eq G + mp(t) or S[1] eq -G + mp(t)};
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3167967713</seed><version>2.29-10</version><time>0.110</time><memory>32.09MB</memory></headers><results><line>on curve true (83214074135015341 : 47069367709023802879687500 : 1)</line><line>torsion invariants [ 2 ]</line><line>canonical height of G 20.0066529896007104899395827016</line><line>saturation of [G] at the primes up to 200: [ (-23606246921408183 : 0 : 1), (83214074135015341 : 47069367709023802879687500 : 1) ]</line><line>the saturated point is G or -G up to torsion: false</line><line></line></results></calculator>
+
+=== 2026-11-23 20:03:26 UTC
+--- input
+SetColumns(0);
+E := EllipticCurve([0, 1, 0, 15223208213202973031750280786182975, 372517508636065850025943055293341065999858640587423]);
+G := E![83214074135015341, 47069367709023802879687500];
+print "TwoPowerIsogenyDescentRankBound", TwoPowerIsogenyDescentRankBound(E);
+print "2-Selmer group order", #TwoSelmerGroup(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1093575578</seed><version>2.29-10</version><time>0.410</time><memory>32.09MB</memory></headers><results><line>TwoPowerIsogenyDescentRankBound 1 [ 6, 2 ]</line><line>[ 1 ]</line><line>2-Selmer group order 64</line><line></line></results></calculator>
+
+=== 2026-11-23 20:05:36 UTC
+--- input
+SetColumns(0);
+E := EllipticCurve([0, 1, 0, 15223208213202973031750280786182975, 372517508636065850025943055293341065999858640587423]);
+G := E![83214074135015341, 47069367709023802879687500];
+lo, hi := RankBounds(E); print "RankBounds", lo, hi;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2898492860</seed><version>2.29-10</version><time>3.439</time><memory>85.16MB</memory></headers><results><line>RankBounds 1 1</line><line></line></results></calculator>
+

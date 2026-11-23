@@ -1,0 +1,8 @@
+minimal model [0, -1, 0, 234855998575724119950174256951679, 494588188707432659580713964254497581771145395745]; G = (8308823111539095, 1737693168860182619291360)
+rank bounds (PARI ellrank): 1, 1; torsion points other than O: 1
+h(G) = 18.978585 (PARI), 18.978585 (Sage); lower bound for the height of a point of infinite order (Sage): 0.157775; so an index k has k <= 10
+G is not 2 times a point plus torsion: shown modulo 61
+G is not 3 times a point plus torsion: shown modulo 53
+G is not 5 times a point plus torsion: shown modulo 59
+G is not 7 times a point plus torsion: shown modulo 173
+G generates E1(Q) modulo torsion, given the rank bound and the lower bound for the height: True

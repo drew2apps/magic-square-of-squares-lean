@@ -1,8 +1,8 @@
-E1 has rank 1; generator of canonical height 18.979 (PARI; not checked to be saturated: if G = k G0 the sieve below is on multiples of G only)
+E1 has rank 1 (PARI: bounds 1 and 1); G = P + conj(P) at the degenerate solution t = 1, of canonical height 18.979; that G generates E1(Q) modulo torsion is the business of saturation.py
 p = 10009: order of G 2510, pairs allowed 8904 of 6300100
-p = 20089: order of G 10090, pairs allowed 72868 of 101808100
-p = 30013: order of G 7535, pairs allowed 26520 of 56776225
-p = 40009: order of G 20046, pairs allowed 69536 of 401842116
+p = 20089: order of G 5045, pairs allowed 18217 of 25452025
+p = 30013: order of G 15070, pairs allowed 106080 of 227104900
+p = 40009: order of G 10023, pairs allowed 17384 of 100460529
 G is not divisible by 2 in E1(Q) modulo torsion: shown modulo 61
 G is not divisible by 3 in E1(Q) modulo torsion: shown modulo 53
 G is not divisible by 5 in E1(Q) modulo torsion: shown modulo 59
@@ -11,6 +11,7 @@ G is not divisible by 11 in E1(Q) modulo torsion: shown modulo 149
 G is not divisible by 13 in E1(Q) modulo torsion: shown modulo 61
 G is not divisible by 17 in E1(Q) modulo torsion: shown modulo 127
 G is not divisible by 19 in E1(Q) modulo torsion: shown modulo 67
+the orders of G modulo 10009 and 20089 are not coprime: lifting from the first prime only (a simpler path than for coprime orders), range 30000
 pairs 0 <= a, b <= 30000 allowed by p = 10009: 1273021
   after p = 20089: 905
   after p = 30013: 3

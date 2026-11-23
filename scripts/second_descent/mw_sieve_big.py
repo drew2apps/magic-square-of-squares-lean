@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""The Mordell-Weil sieve of mw_sieve.py for a larger range of (a, b), with arrays (EXPERIMENT; see SECOND_DESCENT.md, section 6).
+"""The Mordell-Weil sieve of mw_sieve.py for a larger range of (a, b), with arrays (EXPERIMENT; see LAST_PAIR.md).
 The pairs allowed by the first two primes are lifted to 0 <= a, b < L * (product of the two orders) and filtered by the other primes.
 usage: mw_sieve_big.py m,n d L p1 p2 p3 ...
 
@@ -21,17 +21,32 @@ m, n = (int(v) for v in sys.argv[1].split(',')); d = int(sys.argv[2]); L = int(s
 fam = family(m, n); (Q1, r1), (Q2, r2) = fam['+13'], fam['+24']
 E1, A1 = weierstrass(d*Q1, r1); E2, A2 = weierstrass(d*Q2, r2)
 Em = E1.minimal_model(); em = pari.ellinit([pari(str(a)) for a in Em.a_invariants()]); rk = pari.ellrank(em, 2)
-assert int(rk[0]) == 1 and int(rk[1]) == 1 and len(rk[3]) == 1
-g = rk[3][0]; G = Em.isomorphism_to(E1)(Em(QQ(str(g[0])), QQ(str(g[1])))); T = [P for P in E1.torsion_points() if not P.is_zero()]; assert len(T) == 1; T = T[0]
-print('E1 has rank 1; generator of canonical height %.3f (PARI; not checked to be saturated: if G = k G0 the sieve below is on multiples of G only)' % float(pari.ellheight(em, g)), flush=True)
+assert int(rk[0]) == 1 and int(rk[1]) == 1, 'E1 does not have rank exactly 1'
+# G: the point of the degenerate solution t = 1 (s = -i), computed exactly; it does not depend on which point PARI returns
+conj = [a for a in K.automorphisms() if a(I) == -I][0]; EK1 = E1.change_ring(K)
+vd = d*Q1.change_ring(K)(-I); assert vd.is_square(); wd = 1/(-I - r1); Pd = EK1(A1*wd, A1*vd.sqrt()*wd*wd); Gs = Pd + EK1(conj(Pd[0]), conj(Pd[1]))
+G = E1(QQ(Gs[0]), QQ(Gs[1])); assert not G.has_finite_order()
+T = [P for P in E1.torsion_points() if not P.is_zero()]; assert len(T) == 1; T = T[0]
+assert E2.quadratic_twist(-1).is_isomorphic(E1), 'E2 is not the twist of E1 by -1'
+Gm = E1.isomorphism_to(Em)(G)
+print('E1 has rank 1 (PARI: bounds 1 and 1); G = P + conj(P) at the degenerate solution t = 1, of canonical height %.3f; that G generates E1(Q) modulo torsion is the business of saturation.py' % float(pari.ellheight(em, [pari(str(Gm[0])), pari(str(Gm[1]))])), flush=True)
+def red(E, P):
+    """The reduction of a rational point: the point at infinity when p divides the denominator of x."""
+    if P.is_zero() or QQ(P[0]).denominator() % E.base_ring().characteristic() == 0: return E(0)
+    return E(P[0], P[1])
+def good(p):
+    """p = 1 mod 4, good reduction, the maps s = r + A/x defined modulo p, and no automorphism other than +-1 modulo p."""
+    nd = lambda q: QQ(q).numerator()*QQ(q).denominator()
+    return p % 4 == 1 and all(ZZ(x) % p != 0 for x in (E1.discriminant(), E2.discriminant(), nd(A1), nd(A2), nd(r1), nd(r2), d)) and GF(p)(E1.j_invariant()) not in (0, 1728)
 def local(p):
+    assert good(p), 'the prime %d is not allowed' % p
     F = GF(p); iota = F(-1).sqrt(); e1 = E1.change_ring(F); e2 = E2.change_ring(F); q1, q2 = (d*Q1).change_ring(F), (d*Q2).change_ring(F)
-    tau = e2.isomorphism_to(e1); Gp = e1(G); Tp = e1(T); o = Gp.order()
+    tau = e2.isomorphism_to(e1); Gp = red(e1, G); Tp = red(e1, T); o = Gp.order()        # tau: one of the two isomorphisms, they differ by -1
     dlog = {}; X = e1(0)
     for a in range(o): dlog[X] = a; X += Gp
     def pts(E, A, q, r, s):                              # the points of E above s (s = None is infinity), [] if there is none over F_p
         if s is None:
-            v = q.leading_coefficient(); return [E(0, F(A)*y) for y in ([v.sqrt(), -v.sqrt()] if v.is_square() else [])] if True else []
+            v = q.leading_coefficient(); return [E(0, F(A)*y) for y in ([v.sqrt(), -v.sqrt()] if v.is_square() else [])]
         if s == F(r): return [E(0)]
         v = q(s)
         if not v.is_square(): return []

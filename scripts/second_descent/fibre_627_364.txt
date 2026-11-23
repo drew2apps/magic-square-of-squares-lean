@@ -1,2 +1,5 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+curve q+ L1 L3: t = infinity is a point over K (d times the leading coefficient a square in K): False; t = 0 is: False
+curve q+ L2 L4: t = infinity is a point over K (d times the leading coefficient a square in K): False; t = 0 is: False
 curve q+ L1 L3, A = +-G or +-G + T: 2 constants, equation identically satisfied for 0; values of s found: 4; rational t among them: {'-1': 'degenerate', '1': 'degenerate'}
 curve q+ L2 L4, B = +-G or +-G + T (as points of E2 over K): 2 constants, equation identically satisfied for 0; values of s found: 4; rational t among them: {'-1': 'degenerate', '1': 'degenerate'}
