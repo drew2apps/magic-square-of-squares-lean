@@ -440,3 +440,1191 @@ end for;
 <?xml version="1.0"?>
 <calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2432685152</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>ratio 59 56 forms [ F0, GL, GU ]</line><line>genus 2</line></results></calculator>
 
+=== 2026-11-23 10:04:01 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 889; n := 320; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,4,5]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+ERROR timed out
+=== 2026-11-23 10:06:19 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 320; n := 289; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3017600747</seed><version>2.29-10</version><time>2.859</time><memory>85.16MB</memory></headers><results><line>ratio 320 289 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:08:28 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 388; n := 287; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2163207693</seed><version>2.29-10</version><time>3.430</time><memory>85.16MB</memory></headers><results><line>ratio 388 287 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:10:36 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 423; n := 332; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>592215692</seed><version>2.29-10</version><time>2.500</time><memory>85.16MB</memory></headers><results><line>ratio 423 332 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:12:44 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 427; n := 320; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>895117807</seed><version>2.29-10</version><time>2.500</time><memory>85.16MB</memory></headers><results><line>ratio 427 320 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:14:52 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 540; n := 239; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[3,4,5]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1062228025</seed><version>2.29-10</version><time>2.839</time><memory>85.16MB</memory></headers><results><line>ratio 540 239 forms [ G4, GL, GU ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:17:58 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 541; n := 476; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3619195106</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>ratio 541 476 forms [ F0, F8, G4 ]</line><line>genus 2</line></results></calculator>
+
+=== 2026-11-23 10:20:15 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 560; n := 33; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4001465166</seed><version>2.29-10</version><time>11.150</time><memory>85.16MB</memory></headers><results><line>ratio 560 33 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:22:24 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 593; n := 527; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3101156900</seed><version>2.29-10</version><time>3.810</time><memory>85.16MB</memory></headers><results><line>ratio 593 527 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:24:32 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 609; n := 31; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3034308101</seed><version>2.29-10</version><time>2.850</time><memory>85.16MB</memory></headers><results><line>ratio 609 31 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:27:38 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 664; n := 301; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3101151938</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>ratio 664 301 forms [ F0, F8, G4 ]</line><line>genus 2</line></results></calculator>
+
+=== 2026-11-23 10:29:47 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 675; n := 101; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1998073774</seed><version>2.29-10</version><time>3.319</time><memory>85.16MB</memory></headers><results><line>ratio 675 101 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:31:55 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 724; n := 325; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1862272921</seed><version>2.29-10</version><time>2.310</time><memory>85.16MB</memory></headers><results><line>ratio 724 325 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:34:09 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 724; n := 665; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1530147831</seed><version>2.29-10</version><time>8.189</time><memory>85.16MB</memory></headers><results><line>ratio 724 665 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:36:35 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 740; n := 539; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3249445491</seed><version>2.29-10</version><time>21.010</time><memory>85.16MB</memory></headers><results><line>ratio 740 539 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 24</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:38:43 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 747; n := 107; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>911826844</seed><version>2.29-10</version><time>2.129</time><memory>85.16MB</memory></headers><results><line>ratio 747 107 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:40:51 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 755; n := 91; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[3,4,5]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2848390395</seed><version>2.29-10</version><time>2.560</time><memory>85.16MB</memory></headers><results><line>ratio 755 91 forms [ G4, GL, GU ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:42:58 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 773; n := 192; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3117870197</seed><version>2.29-10</version><time>2.180</time><memory>85.16MB</memory></headers><results><line>ratio 773 192 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:45:07 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 779; n := 301; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1346307126</seed><version>2.29-10</version><time>2.910</time><memory>85.16MB</memory></headers><results><line>ratio 779 301 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:47:15 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 788; n := 487; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1862286215</seed><version>2.29-10</version><time>1.550</time><memory>85.16MB</memory></headers><results><line>ratio 788 487 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:49:24 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 828; n := 173; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2865089955</seed><version>2.29-10</version><time>3.560</time><memory>85.16MB</memory></headers><results><line>ratio 828 173 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:51:33 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 836; n := 745; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2931935852</seed><version>2.29-10</version><time>3.759</time><memory>85.16MB</memory></headers><results><line>ratio 836 745 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:53:40 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 840; n := 83; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>861693254</seed><version>2.29-10</version><time>1.730</time><memory>85.16MB</memory></headers><results><line>ratio 840 83 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:55:48 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 864; n := 151; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1062234570</seed><version>2.29-10</version><time>1.790</time><memory>85.16MB</memory></headers><results><line>ratio 864 151 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 10:58:04 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 899; n := 724; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3232731537</seed><version>2.29-10</version><time>10.439</time><memory>85.16MB</memory></headers><results><line>ratio 899 724 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:00:34 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 920; n := 371; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1446589275</seed><version>2.29-10</version><time>24.649</time><memory>85.16MB</memory></headers><results><line>ratio 920 371 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:02:41 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 923; n := 757; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[3,4,5]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>828265102</seed><version>2.29-10</version><time>1.790</time><memory>85.16MB</memory></headers><results><line>ratio 923 757 forms [ G4, GL, GU ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:04:52 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 935; n := 416; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2683359090</seed><version>2.29-10</version><time>4.639</time><memory>85.16MB</memory></headers><results><line>ratio 935 416 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:06:59 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 964; n := 541; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2814964967</seed><version>2.29-10</version><time>2.189</time><memory>85.16MB</memory></headers><results><line>ratio 964 541 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:09:09 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 965; n := 363; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2967462790</seed><version>2.29-10</version><time>4.419</time><memory>85.16MB</memory></headers><results><line>ratio 965 363 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:11:19 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 965; n := 581; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2831665428</seed><version>2.29-10</version><time>4.139</time><memory>85.16MB</memory></headers><results><line>ratio 965 581 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:13:31 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 988; n := 27; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[1,2,3]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2566388140</seed><version>2.29-10</version><time>6.469</time><memory>85.16MB</memory></headers><results><line>ratio 988 27 forms [ F0, F8, G4 ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:15:43 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 541; n := 476; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[3,4,5]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1012093244</seed><version>2.29-10</version><time>2.049</time><memory>85.16MB</memory></headers><results><line>ratio 541 476 forms [ G4, GL, GU ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:17:53 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 664; n := 301; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[3,4,5]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>945247710</seed><version>2.29-10</version><time>4.490</time><memory>85.16MB</memory></headers><results><line>ratio 664 301 forms [ G4, GL, GU ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+
+=== 2026-11-23 11:20:02 UTC
+--- input
+SetColumns(0);
+P<x> := PolynomialRing(Rationals());
+m := 988; n := 27; S := m^2 + n^2;
+F := [m^2 + n^2*x^2, n^2 + m^2*x^2, 2*S*(x^2 + 1), 2*S*(x^2 + 1) - 8*m*n*x, 2*S*(x^2 + 1) + 8*m*n*x];
+names := ["F0", "F8", "G4", "GL", "GU"];
+for T in [[3,4,5]] do
+  fs := [F[j] : j in T]; f := &*fs;
+  H := HyperellipticCurve(f);
+  print "ratio", m, n, "forms", [names[j] : j in T], "genus", Genus(H);
+  Sel, mp := TwoCoverDescent(H);
+  print "fake 2-Selmer set:", #Sel;
+  try
+    fm := Modulus(Domain(mp)); print "algebra modulus is f up to a constant:", fm*LeadingCoefficient(f) eq f*LeadingCoefficient(fm);
+  catch e
+    print "modulus not available";
+  end try;
+  cnt := 0;
+  for s in Sel do
+    g := P!(s @@ mp); ok := true;
+    for fj in fs do
+      r := g mod fj; a := Coefficient(r, 1); b := Coefficient(r, 0);
+      l := Coefficient(fj, 2); c1 := Coefficient(fj, 1); c0 := Coefficient(fj, 0);
+      sq, _ := IsSquare(a^2*c0 - a*b*c1 + b^2*l); ok := ok and sq;
+    end for;
+    if ok then cnt +:= 1; end if;
+  end for;
+  print "elements at which each of these forms has a square norm:", cnt;
+end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1795437721</seed><version>2.29-10</version><time>3.310</time><memory>85.16MB</memory></headers><results><line>ratio 988 27 forms [ G4, GL, GU ]</line><line>genus 2</line><line>fake 2-Selmer set: 0</line><line>algebra modulus is f up to a constant: true</line><line>elements at which each of these forms has a square norm: 0</line><line></line></results></calculator>
+

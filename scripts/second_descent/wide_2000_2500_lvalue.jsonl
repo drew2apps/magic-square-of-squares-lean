@@ -1,0 +1,25 @@
+{"pair": [2015, 1632], "status": "open", "tried": []}
+{"pair": [2067, 644], "status": "open", "tried": []}
+{"pair": [2072, 585], "status": "closed by L-value", "tried": [{"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "2.72e+11", "L": "2.259440832624", "tail_bound": "3.3e-20", "L_over_Omega": "2048.000000000", "rank0_by": "L-value"}], "by": "1356", "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "closing": [{"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "2.72e+11", "L": "2.259440832624", "tail_bound": "3.3e-20", "L_over_Omega": "2048.000000000", "rank0_by": "L-value"}]}
+{"pair": [2077, 1764], "status": "open", "tried": []}
+{"pair": [2107, 276], "status": "open", "tried": []}
+{"pair": [2108, 195], "status": "open", "tried": []}
+{"pair": [2135, 1248], "status": "open", "tried": []}
+{"pair": [2145, 1568], "status": "closed by L-value", "tried": [{"curve": "1356", "twist": 1, "pari_bound": 2, "root_number": 1, "conductor": "1.82e+11", "L": "0.446037551493", "tail_bound": "2.7e-20", "L_over_Omega": "256.000000000", "rank0_by": "L-value"}, {"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "1.82e+11", "L": "-0.000000000000", "tail_bound": "2.7e-20", "L_over_Omega": "-0.000000000"}], "by": "1356", "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "closing": [{"curve": "1356", "twist": 1, "pari_bound": 2, "root_number": 1, "conductor": "1.82e+11", "L": "0.446037551493", "tail_bound": "2.7e-20", "L_over_Omega": "256.000000000", "rank0_by": "L-value"}]}
+{"pair": [2177, 1489], "status": "open", "tried": []}
+{"pair": [2200, 1311], "status": "closed by L-value", "tried": [{"curve": "1356", "twist": 1, "pari_bound": 2, "root_number": 1, "conductor": "2.56e+11", "L": "3.187821505643", "tail_bound": "3.2e-20", "L_over_Omega": "2048.000000000", "rank0_by": "L-value"}], "by": "1356", "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "closing": [{"curve": "1356", "twist": 1, "pari_bound": 2, "root_number": 1, "conductor": "2.56e+11", "L": "3.187821505643", "tail_bound": "3.2e-20", "L_over_Omega": "2048.000000000", "rank0_by": "L-value"}]}
+{"pair": [2257, 1176], "status": "open", "tried": []}
+{"pair": [2263, 1409], "status": "open", "tried": []}
+{"pair": [2273, 961], "status": "open", "tried": [{"curve": "+56", "twist": 1, "pari_bound": 2, "root_number": 1, "conductor": "1.65e+08", "L": "-0.000000000000", "tail_bound": "8.2e-22", "L_over_Omega": "-0.000000000"}, {"curve": "+56", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "1.65e+08", "L": "-0.000000000000", "tail_bound": "8.2e-22", "L_over_Omega": "-0.000000000"}]}
+{"pair": [2303, 96], "status": "open", "tried": []}
+{"pair": [2303, 1913], "status": "open", "tried": []}
+{"pair": [2331, 1300], "status": "open", "tried": []}
+{"pair": [2337, 784], "status": "open", "tried": []}
+{"pair": [2359, 79], "status": "open", "tried": [{"curve": "+56", "twist": 1, "pari_bound": 2, "root_number": 1, "conductor": "1.11e+12", "L": "0.000000000000", "tail_bound": "6.7e-20", "L_over_Omega": "0.000000000"}, {"curve": "+56", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "1.11e+12", "L": "0.000000000000", "tail_bound": "6.7e-20", "L_over_Omega": "0.000000000"}]}
+{"pair": [2365, 588], "status": "open", "tried": []}
+{"pair": [2377, 287], "status": "open", "tried": []}
+{"pair": [2383, 1831], "status": "open", "tried": []}
+{"pair": [2399, 2207], "status": "open", "tried": []}
+{"pair": [2400, 1679], "status": "open", "tried": [{"curve": "1356", "twist": 1, "pari_bound": 2, "root_number": 1, "conductor": "2.76e+11", "L": "0.000000000000", "tail_bound": "3.3e-20", "L_over_Omega": "0.000000000"}]}
+{"pair": [2405, 1428], "status": "open", "tried": []}
+{"pair": [2473, 1097], "status": "open", "tried": []}

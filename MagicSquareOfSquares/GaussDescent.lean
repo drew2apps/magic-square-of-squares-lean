@@ -25,6 +25,7 @@ With `t = u/v` the five forms of the G1 family are norms of the linear forms
   descent for `s = -i t`: the quartic `(m - n s)(n + m s)(1 - s²)` is `α0 · conj α8 · N(γ4) / v⁴`,
   the quadratic `q₊` is `-γL · conj γU / v²`, and at the degenerate solution `s = -i` the quartic is
   the square of `(1 - i)(m + i n)`.
+* `quartic_b_frey`: the curve `Y² = (m - n s)(n + m s)(1 - s²)` maps to `y² = x (x + (m+n)²)(x - (m-n)²)`.
 
 No local computation, no rank and no elimination of a ratio is in Lean.
 -/
@@ -146,5 +147,15 @@ theorem quad_plus_value (I m n u v : R) (hI : I * I = -1) :
 theorem quartic_b_degenerate (I m n : R) (hI : I * I = -1) :
     (m - n * (-I)) * (n + m * (-I)) * (1 - (-I) ^ 2) = ((1 - I) * (m + I * n)) ^ 2 := by
   linear_combination (I^2*m*n - I^2*n^2 + I*m^2 - 2*I*m*n + I*n^2 - m^2 + m*n) * hI
+
+/-! ### The main curve of the second descent is a Frey curve -/
+
+/-- If `Y² = (m - n s)(n + m s)(1 - s²)`, then `x = (n² - m²)(s + 1)/(s - 1)`, `y = 2 (n² - m²) Y/(s - 1)²` is a point of
+`y² = x (x + (m + n)²)(x - (m - n)²)`. Stated with the denominators cleared. -/
+theorem quartic_b_frey (m n s Y : R) (hY : Y ^ 2 = (m - n * s) * (n + m * s) * (1 - s ^ 2)) :
+    (2 * (n ^ 2 - m ^ 2)) ^ 2 * Y ^ 2
+      = ((n ^ 2 - m ^ 2) * (s + 1)) * ((n ^ 2 - m ^ 2) * (s + 1) + (m + n) ^ 2 * (s - 1))
+        * ((n ^ 2 - m ^ 2) * (s + 1) - (m - n) ^ 2 * (s - 1)) * (s - 1) := by
+  linear_combination (4 * (n ^ 2 - m ^ 2) ^ 2) * hY
 
 end MagicSquareOfSquares.GaussDescent

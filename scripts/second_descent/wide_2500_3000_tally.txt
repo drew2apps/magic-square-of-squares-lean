@@ -1,0 +1,3 @@
+ratios with a degenerate solution, m from 2501 to 2999: 149; closed by second_descent.py (rank bounds from descent): 131
+of the 18 others, closed with rank 0 from an L-value (lvalue_close.py), for the ratio or its partner: 4: 2520,71 2591,2449 2657,1487 2719,1081
+not closed: 14: 2583,1144 2624,657 2640,511 2703,104 2711,1423 2752,825 2765,2508 2775,2128 2793,424 2805,212 2807,2599 2867,756 2953,1777 2993,1824

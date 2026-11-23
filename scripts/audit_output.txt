@@ -151,6 +151,7 @@ MagicSquareOfSquares.GaussDescent.norm_gammaL
 MagicSquareOfSquares.GaussDescent.norm_gammaU
 MagicSquareOfSquares.GaussDescent.quad_plus_value
 MagicSquareOfSquares.GaussDescent.quartic_b_degenerate
+MagicSquareOfSquares.GaussDescent.quartic_b_frey
 MagicSquareOfSquares.GaussDescent.quartic_b_value
 MagicSquareOfSquares.GaussDescent.support_alpha0
 MagicSquareOfSquares.GaussDescent.support_alpha8
@@ -285,4 +286,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 650 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 651 theorems (including auxiliary ones), standard axioms only

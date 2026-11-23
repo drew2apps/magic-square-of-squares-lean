@@ -1,0 +1,18 @@
+{"pair": [2591, 2449], "status": "open", "tried": []}
+{"pair": [3727, 1439], "status": "open", "tried": []}
+{"pair": [2520, 71], "status": "closed by L-value", "tried": [{"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "5.12e+11", "L": "0.262938483568", "tail_bound": "4.6e-20", "L_over_Omega": "256.000000000", "rank0_by": "L-value"}], "by": "1356", "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "closing": [{"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "5.12e+11", "L": "0.262938483568", "tail_bound": "4.6e-20", "L_over_Omega": "256.000000000", "rank0_by": "L-value"}]}
+{"pair": [3281, 1967], "status": "open", "tried": []}
+{"pair": [3151, 2129], "status": "open", "tried": []}
+{"pair": [2072, 585], "status": "closed by L-value", "tried": [{"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "2.72e+11", "L": "2.259440832624", "tail_bound": "3.3e-20", "L_over_Omega": "2048.000000000", "rank0_by": "L-value"}], "by": "1356", "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "closing": [{"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "2.72e+11", "L": "2.259440832624", "tail_bound": "3.3e-20", "L_over_Omega": "2048.000000000", "rank0_by": "L-value"}]}
+{"pair": [2807, 2599], "status": "open", "tried": []}
+{"pair": [2067, 644], "status": "open", "tried": []}
+{"pair": [1900, 819], "status": "closed by L-value", "tried": [{"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "1.95e+11", "L": "0.285037088988", "tail_bound": "2.8e-20", "L_over_Omega": "256.000000000", "rank0_by": "L-value"}], "by": "1356", "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "closing": [{"curve": "1356", "twist": -1, "pari_bound": 2, "root_number": 1, "conductor": "1.95e+11", "L": "0.285037088988", "tail_bound": "2.8e-20", "L_over_Omega": "256.000000000", "rank0_by": "L-value"}]}
+{"pair": [3577, 1927], "status": "open", "tried": []}
+{"pair": [5273, 257], "status": "open", "tried": []}
+{"pair": [4903, 647], "status": "open", "tried": []}
+{"pair": [3217, 2369], "status": "open", "tried": []}
+{"pair": [3017, 2593], "status": "open", "tried": []}
+{"pair": [2703, 104], "status": "open", "tried": []}
+{"pair": [3623, 2111], "status": "open", "tried": []}
+{"pair": [2365, 588], "status": "open", "tried": []}
+{"pair": [4817, 1169], "status": "open", "tried": []}

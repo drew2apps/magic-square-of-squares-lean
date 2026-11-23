@@ -5,11 +5,45 @@
 (15,8) F0.GL.GU: fake 2-Selmer set of Magma 11, of these with the three norms square 2; tuples left by the first descent, up to a rational factor: 2  equal
 (59,56) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (59,56) F0.GL.GU: Magma did not finish
+(320,289) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(388,287) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(423,332) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(427,320) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(540,239) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(541,476) F0.F8.G4: Magma did not finish
+(541,476) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(560,33) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(593,527) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(609,31) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(664,301) F0.F8.G4: Magma did not finish
+(664,301) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(675,101) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(724,325) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(724,665) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(740,539) F0.F8.G4: fake 2-Selmer set of Magma 24, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(747,107) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(755,91) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(773,192) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(779,301) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(788,487) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (820,799) F0.F8.G4: Magma did not finish
 (820,799) F0.F8.GL: Magma did not finish
 (820,799) F0.GL.GU: Magma did not finish
 (820,799) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(828,173) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(836,745) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(840,83) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(864,151) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (889,320) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
 (889,320) F0.F8.GL: Magma did not finish
 (889,320) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
-9 curves compared, 0 different; Magma 2.29-10
+(899,724) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(920,371) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(923,757) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(935,416) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(964,541) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(965,363) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(965,581) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(988,27) F0.F8.G4: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+(988,27) G4.GL.GU: fake 2-Selmer set of Magma 0, of these with the three norms square 0; tuples left by the first descent, up to a rational factor: 0  equal
+41 curves compared, 0 different; Magma 2.29-10
