@@ -1,6 +1,6 @@
 # Descent over the Gaussian integers: an experiment
 
-23 November 2026, after release 0.4.0. Written with Claude (an AI model made by Anthropic). **An experiment: nobody has read it, it is not in Lean, and it is not counted in the census.** If it is right, it does three things:
+23 November 2026, after release 0.4.0. Written with Claude (an AI model made by Anthropic). **An experiment: nobody has read it, only its starting identities are in Lean, and it is not counted in the census.** If it is right, it does three things:
 
 - it closes the two open ratios without a trivial point, (820,799) and (889,320), by congruences alone;
 - it gives a second proof, with no elliptic curve, rank or height in it, for the other 32 ratios without a trivial point that the census closes with ranks (among them (724,665), which rests on Magma's rank bound, and (740,539), a four-point closure);
@@ -86,7 +86,7 @@ The ratios with a trivial point are taken one step further in `SECOND_DESCENT.md
 - **A bug that a reader found within an hour of the first commit of this file** (`25c1253`): the function that compares a candidate with a local pattern treated an undetermined place as a mismatch instead of a wildcard, which is the unsafe direction, so the first program's empty sets were not proofs. Fixed (the comparison is now per place, with a self-test; `gauss_descent.py`), and everything was run again: no output changed, for the 157 ratios, the 681, or the pairs up to 60. Why it made no difference was not investigated; it was luck, not design. The second implementation never had this defect.
 
 - Both implementations were written by the same AI model in one evening. An error in the shared ideas (the Lemma, the handling of the place above 2, the claim that a solution gives a primitive pair over `ℤ_p` with these classes) would not be caught by the second implementation. The control with known solutions is the main protection against that.
-- Not in Lean. The statement for one ratio is a finite computation of the same kind as the table of 484 classes, so it could be formalised.
+- Not in Lean, except the identities it starts from (`GaussDescent.lean`: the five norms, and that a common divisor of a form and its conjugate divides `2mn`, `2` or `2(m² − n²)`). The statement for one ratio is a finite computation of the same kind as the table of 484 classes, so it could be formalised; that has not been done.
 - The 2 tuples left for a ratio with a trivial point prove nothing about that ratio: other rational `t0` could give the same two patterns. They are not explained away: the next step there is a second descent, on the elliptic curves `δ·y² = ℓ_aℓ_bℓ_cℓ_d` over `ℚ(i)` that the twisted cover maps to. A curve of rank 0 over `ℚ(i)` among them would close the ratio. Not started: it needs a 2-descent over `ℚ(i)`, which the software at hand does not provide.
 
 ## 6. Reproduce

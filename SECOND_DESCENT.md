@@ -68,17 +68,17 @@ and leaves 4: `440,279`, `719,161`, `627,364`, `991,263`. For these all 24 curve
 
 - **The degenerate solutions come back.** For each of the 60 closed ratios of square type, the equations return `t = 1` and `t = −1`. These are not put in by hand; they are points with `σP = ±P + T`, so the equation step finds points that are known to be there.
 - **The polynomial.** For a random `x1 ∈ K`, the product `(x(P+T) − g(x1))·(x(P−T) − g(x1))`, computed with Sage's group law over `K(√f(x1))`, equals the polynomial of the script divided by the stated denominator (`second_control.py`, four ratios, all torsion points not of order 2).
-- **Rank 0, second route.** For 53 of the 89 rank-0 curves (conductor up to `10¹⁴`), PARI's `L(E,1)` is not zero, and `L(E,1)/Ω` is an integer between 4 and 32768 to six decimals (`lcheck.txt`). With Kolyvagin's theorem that gives rank 0 without the 2-descent. This covers 16 of the 20 ratios above, directly or through the partner. The four not covered are (572,555), (609,200) with its partner (809,409), and (861,620): their curves have conductors of `10²⁴` to `10³⁰`, and they rest on PARI's `ellrank` alone.
+- **Rank 0, second route.** For 53 of the 89 rank-0 curves (conductor up to `10¹⁴`), PARI's `L(E,1)` is not zero, and `L(E,1)/Ω` is an integer between 4 and 32768 to six decimals (`lcheck.txt`). With Kolyvagin's theorem that gives rank 0 without the 2-descent. This covers 16 of the 20 ratios above, directly or through the partner. The four not covered are (572,555), (609,200) with its partner (809,409), and (861,620): their curves have conductors of `10²⁴` to `10³⁰`. For these four curves Magma's `TwoPowerIsogenyDescentRankBound` and `RankBounds` also give rank 0 (public calculator, version 2.29-10; requests and answers in `magma_second_raw.txt`).
 - **Root numbers.** All 89 rank-0 curves have root number `+1`, as they must.
 - **No conflict with the census.** No candidate is a solution, on ratios where the census already says there is none.
 
 ## 6. What could be wrong, and what is not done
 
 - **Everything depends on the first descent.** If a tuple was wrongly removed there, the class `d` here is wrong and the conclusion fails. `GAUSS_DESCENT.md` lists what is unproved in that step.
-- **Rank bounds** are PARI's (`ellrank`, effort 1, least bound over the isogeny class). No second program was run for the upper bounds; the `L`-values are a second route for 53 curves only.
+- **Rank bounds** are PARI's (`ellrank`, effort 1, least bound over the isogeny class). A second route exists for 57 of the 89 curves only: `L`-values for 53, Magma for 4.
 - **Torsion of `E(K)` and roots over `K`** are Sage's. No certificate is stored.
 - **The argument in sections 2 and 3** was written by the same AI model that wrote the scripts. The steps to check: that the class of `Q(s0)` is determined by the tuple; that `C` and `E` are as stated; the equation for `x(P)`; the special points (`P = O`, `x = 0`, `2r·x + A = 0`).
-- **Not done:** a 2-descent over `ℚ(i)` for curves that are not defined over `ℚ` (products that use a single factor of `q₊`); that is where the four remaining ratios would have to go next. The six unclosed ratios whose partner has `m > 1000` were not run on the partner. Nothing is in Lean.
+- **Not done:** a 2-descent over `ℚ(i)` for curves that are not defined over `ℚ` (products that use a single factor of `q₊`); that is where the four remaining ratios would have to go next. The six unclosed ratios whose partner has `m > 1000` were not run on the partner. In Lean there are only the identities (`GaussDescent.lean`: the factorisations of `Q_b` and `q₊` and the square at `s = −i`); no rank, no torsion and no closure.
 - **Known technique.** Passing to covers and to points over a quadratic field is standard (covering techniques of Bruin, and of Flynn and Wetherell; named from memory, not checked). No claim that the method is new, and the literature on this system was not searched for it.
 
 ## 7. Reproduce

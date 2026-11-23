@@ -25,3 +25,4 @@ import MagicSquareOfSquares.G1Centre
 import MagicSquareOfSquares.G1Relations
 import MagicSquareOfSquares.SevenSquares
 import MagicSquareOfSquares.G1FourPoints
+import MagicSquareOfSquares.GaussDescent

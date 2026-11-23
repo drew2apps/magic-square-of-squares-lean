@@ -139,6 +139,24 @@ MagicSquareOfSquares.G1.table47
 MagicSquareOfSquares.G1.table7
 MagicSquareOfSquares.G1.table8
 MagicSquareOfSquares.G1.testBit_sqMask_of_int
+MagicSquareOfSquares.GaussDescent.gaussianInt_norm_alpha0
+MagicSquareOfSquares.GaussDescent.gaussianInt_norm_alpha8
+MagicSquareOfSquares.GaussDescent.gaussianInt_norm_gamma4
+MagicSquareOfSquares.GaussDescent.gaussianInt_norm_gammaL
+MagicSquareOfSquares.GaussDescent.gaussianInt_norm_gammaU
+MagicSquareOfSquares.GaussDescent.norm_alpha0
+MagicSquareOfSquares.GaussDescent.norm_alpha8
+MagicSquareOfSquares.GaussDescent.norm_gamma4
+MagicSquareOfSquares.GaussDescent.norm_gammaL
+MagicSquareOfSquares.GaussDescent.norm_gammaU
+MagicSquareOfSquares.GaussDescent.quad_plus_value
+MagicSquareOfSquares.GaussDescent.quartic_b_degenerate
+MagicSquareOfSquares.GaussDescent.quartic_b_value
+MagicSquareOfSquares.GaussDescent.support_alpha0
+MagicSquareOfSquares.GaussDescent.support_alpha8
+MagicSquareOfSquares.GaussDescent.support_gamma4
+MagicSquareOfSquares.GaussDescent.support_gammaL
+MagicSquareOfSquares.GaussDescent.support_gammaU
 MagicSquareOfSquares.IsMSS.abs_edges
 MagicSquareOfSquares.IsMSS.center_factorization
 MagicSquareOfSquares.IsMSS.center_prime_factors
@@ -267,4 +285,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 632 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 650 theorems (including auxiliary ones), standard axioms only
