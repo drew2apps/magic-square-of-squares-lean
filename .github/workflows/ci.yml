@@ -183,7 +183,7 @@ jobs:
     # Magma is not run; its answers are in magma_last_pair_raw.txt.
     if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
     runs-on: ubuntu-latest
-    timeout-minutes: 75
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -208,6 +208,9 @@ jobs:
           python3 fibre.py 440,279 231518 | f | diff - fibre_440_279.txt
           python3 mw_sieve.py 440,279 231518 1000000 10009 20089 30013 40009 | f | diff - mw_sieve_440_279.txt
           python3 mw_sieve.py 99,20 18802 1000000 10009 20089 30013 40009 | f | diff - mw_sieve_99_20.txt
+          # the whole route on the 24 ratios of square type with E1 of rank exactly 1
+          python3 route_all.py 4 | diff - route_all.txt
+          test "$(grep -c "generator: True; .*within the bound: \[(1, 1)\]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1$" route_all.txt)" = 24
           grep -q "^left: \[(1, 1)\]$" mw_sieve_627_364.txt
           grep -q "^left: \[(1, 1)\]$" mw_sieve_big_627_364.txt
           test "$(grep -c "the planted pair (2, 1) survives; survivors: \[(0, 1), (2, 1)\]" planted_control.txt)" = 3
