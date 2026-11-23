@@ -1,0 +1,9 @@
+products of f1..f4 that are a constant times a square in K[t]: ['1234'] (expected: only 1234)
+E1: HX = 109.19, c1 (general) = 197.62, c2 (general) = 177.86, c1 (over Q) = 133.52, c2 (over Q) = 66.83; bound for h^ of a point above a root of unity: 405.8
+E2: HX = 110.81, c1 (general) = 197.62, c2 (general) = 177.86; bound for h^ of a point above a root of unity: 408.2
+mu2(C) <= 4 * 405.8 + 4 * 408.2 + 2 * 197.62 = 3651.3;  deg C <= 96;  h2(C) <= 2 deg mu = 7.0104e+05
+(T) with the constants over Q: C2 = 39023.2, C3 = 267.3; every rational point of C has h^ <= 5.2221e+09
+(T) with the general constants: C2 = 57548.8, C3 = 711.4; every rational point of C has h^ <= 5.3929e+09
+real point: G has h^ = 1.5 * 20.0067 = 30.010 and h2 = 64.489; h2 - h^ = 34.479, to be between -c2 = -66.83 and c1 = 133.52: True; h^(G) <= 4 * 405.8: True
+sieve: a non-degenerate solution has a or b above 59630999, so its point has h^ >= 1.0671e+17
+ratio of the sieve bound to the largest bound of (T): 1.979e+07

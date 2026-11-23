@@ -55,16 +55,24 @@ loc = {}
 for p in primes:
     loc[p] = local(p); print('p = %d: order of G %d, pairs allowed %d of %d' % (p, loc[p][0], len(loc[p][1]), loc[p][0]**2), flush=True)
 # saturation of G at small primes l: G is not l times a rational point (nor l times a point plus T) if this fails modulo some prime
-for l in (2, 3, 5, 7, 11, 13):
+for l in (2, 3, 5, 7, 11, 13, 17, 19):
     ok = False
-    for p in prime_range(50, 3000):
+    for p in prime_range(50, 40000):
         if E1.discriminant() % p == 0 or d % p == 0: continue
         e = E1.change_ring(GF(p)); cnt = e.cardinality()
         if cnt % l: continue
         Gp, Tp = e(G), e(T)
         if all(not X.division_points(l) for X in ((Gp, Gp + Tp) if l == 2 else (Gp,))): ok = True; break
     print('G is not divisible by %d in E1(Q) modulo torsion: %s' % (l, 'shown modulo %d' % p if ok else 'NOT SHOWN'), flush=True)
-(o1, S1), (o2, S2) = loc[primes[0]], loc[primes[1]]; assert gcd(o1, o2) == 1; M = o1*o2; inv = pow(o1, -1, o2); N = min(N, M - 1); cand = set()
+(o1, S1), (o2, S2) = loc[primes[0]], loc[primes[1]]
+if gcd(o1, o2) != 1:                                      # the two orders are not coprime: lift from the first prime only, in a smaller range
+    N = min(N, 30000); cand = set((a, b) for (a0, b0) in S1 for a in range(a0, N + 1, o1) for b in range(b0, N + 1, o1))
+    print('pairs 0 <= a, b <= %d allowed by p = %d: %d' % (N, primes[0], len(cand)), flush=True)
+    for p in primes[1:]:
+        o, Sp = loc[p]; cand = set(c for c in cand if (c[0] % o, c[1] % o) in Sp)
+        print('  after p = %d: %d' % (p, len(cand)), flush=True)
+    print('left:', sorted(cand)[:40]); sys.exit(0)
+M = o1*o2; inv = pow(o1, -1, o2); N = min(N, M - 1); cand = set()
 B2 = {}
 for (a2, b2) in S2: B2.setdefault(a2, []).append(b2)
 crt = lambda x1, x2: x1 + o1*(((x2 - x1)*inv) % o2)

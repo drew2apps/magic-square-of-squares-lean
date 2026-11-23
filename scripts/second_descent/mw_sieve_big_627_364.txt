@@ -1,0 +1,13 @@
+E1 has rank 1; generator of canonical height 20.007 (PARI; not checked to be saturated: if G = k G0 the sieve below is on multiples of G only)
+p = 10009: order of G 834, pairs allowed 1632 of 695556
+p = 20089: order of G 715, pairs allowed 204 of 511225
+p = 30013: order of G 3018, pairs allowed 909 of 9108324
+p = 40009: order of G 9996, pairs allowed 35858 of 99920016
+p = 50021: order of G 6247, pairs allowed 5236 of 39025009
+p = 60013: order of G 1667, pairs allowed 393 of 2778889
+pairs modulo 596310 allowed by the first two primes: 332928; lifting to 0 <= a, b < 59631000
+  after p = 30013: 344728
+  after p = 40009: 237
+  after p = 50021: 1
+  after p = 60013: 1
+left: [(1, 1)]

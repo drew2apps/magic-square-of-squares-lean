@@ -1,0 +1,18 @@
+E1 has rank 1; generator of canonical height 14.280 (PARI; not checked to be saturated: if G = k G0 the sieve below is on multiples of G only)
+p = 10009: order of G 4944, pairs allowed 7945 of 24443136
+p = 20089: order of G 5020, pairs allowed 8565 of 25200400
+p = 30013: order of G 1078, pairs allowed 477 of 1162084
+p = 40009: order of G 6606, pairs allowed 15124 of 43639236
+G is not divisible by 2 in E1(Q) modulo torsion: shown modulo 89
+G is not divisible by 3 in E1(Q) modulo torsion: shown modulo 53
+G is not divisible by 5 in E1(Q) modulo torsion: shown modulo 59
+G is not divisible by 7 in E1(Q) modulo torsion: shown modulo 131
+G is not divisible by 11 in E1(Q) modulo torsion: shown modulo 103
+G is not divisible by 13 in E1(Q) modulo torsion: shown modulo 61
+G is not divisible by 17 in E1(Q) modulo torsion: shown modulo 197
+G is not divisible by 19 in E1(Q) modulo torsion: shown modulo 67
+pairs 0 <= a, b <= 30000 allowed by p = 10009: 292325
+  after p = 20089: 86
+  after p = 30013: 2
+  after p = 40009: 2
+left: [(0, 0), (1, 1)]
