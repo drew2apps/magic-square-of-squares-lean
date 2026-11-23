@@ -1,0 +1,4 @@
+closing curves in second_123.jsonl: 89; in the Magma transcripts with the same coefficients and an upper bound 0: 89
+RankBounds = 0 0 for 80; TwoPowerIsogenyDescentRankBound = 0 for 31 (it needs a single point of order 2); both for 22
+RankBounds weaker than 0 (the isogeny descent gives 0 there): [((572, 315), '0 2'), ((887, 257), '0 2')]
+Magma version in the transcripts: 2.29-10 ; missing or different: []

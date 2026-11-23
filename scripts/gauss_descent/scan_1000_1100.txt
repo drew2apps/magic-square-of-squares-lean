@@ -1,0 +1,1 @@
+1000 < m <= 1100: 187 pairs avoid the classes; 30 with a trivial point (not run); 157 without, of which 157 have an empty descent set and 0 do not; last prime used: 2:81 5:33 7:1 13:25 17:9 19:1 29:4 37:1 41:2

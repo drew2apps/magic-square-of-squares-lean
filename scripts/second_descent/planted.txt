@@ -1,0 +1,7 @@
+points (m, n, t0) with F0 F8 a square, t0 not 0, 1: 164 on 82 curves;  no summand of rank 0: 164;  a summand of rank 0: 0, of these t0 and -t0 returned: 0, missed: 0
+NEGATIVE CONTROL: d multiplied by 3, so the point is not on the curve
+points (m, n, t0) with F0 F8 a square, t0 not 0, 1: 164 on 82 curves;  no summand of rank 0: 68;  a summand of rank 0: 96, of these t0 and -t0 returned: 0, missed: 96
+NEGATIVE CONTROL: d multiplied by 5, so the point is not on the curve
+points (m, n, t0) with F0 F8 a square, t0 not 0, 1: 164 on 82 curves;  no summand of rank 0: 70;  a summand of rank 0: 94, of these t0 and -t0 returned: 0, missed: 94
+NEGATIVE CONTROL: d multiplied by 7, so the point is not on the curve
+points (m, n, t0) with F0 F8 a square, t0 not 0, 1: 164 on 82 curves;  no summand of rank 0: 88;  a summand of rank 0: 76, of these t0 and -t0 returned: 0, missed: 76

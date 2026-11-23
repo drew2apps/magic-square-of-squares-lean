@@ -1,0 +1,10 @@
+p =  2 (ram): 3000 pairs, label equal in 193, and exactly then all symbols are 1; 16 classes seen at each of 1 place(s)
+p =  3 (inert): 3000 pairs, label equal in 745, and exactly then all symbols are 1; 4 classes seen at each of 1 place(s)
+p =  5 (split): 3000 pairs, label equal in 192, and exactly then all symbols are 1; 4 classes seen at each of 2 place(s)
+p =  7 (inert): 3000 pairs, label equal in 755, and exactly then all symbols are 1; 4 classes seen at each of 1 place(s)
+p = 11 (inert): 3000 pairs, label equal in 795, and exactly then all symbols are 1; 4 classes seen at each of 1 place(s)
+p = 13 (split): 3000 pairs, label equal in 244, and exactly then all symbols are 1; 4 classes seen at each of 2 place(s)
+p = 17 (split): 3000 pairs, label equal in 238, and exactly then all symbols are 1; 4 classes seen at each of 2 place(s)
+p = 29 (split): 3000 pairs, label equal in 235, and exactly then all symbols are 1; 4 classes seen at each of 2 place(s)
+p = 37 (split): 3000 pairs, label equal in 222, and exactly then all symbols are 1; 4 classes seen at each of 2 place(s)
+27000 pairs in all: the labels and the Hilbert symbols agree

@@ -1,0 +1,3 @@
+157 ratios, |u|, |v| <= 300: points on the single conditions (F0, F8, G4, GL, GU): [8292, 8292, 22082, 6384, 6384], in all 51434
+Lemma: squarefree part outside the set D_j, or not unique: 0
+local classes compared at the primes up to 37: 874378 (at 1+i: 51434); different: 0

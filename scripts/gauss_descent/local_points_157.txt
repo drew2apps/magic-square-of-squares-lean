@@ -1,0 +1,1 @@
+157 ratios: 1979148 integer points with exact classes tested against W_p (primes up to 37 and the bad primes up to 100); pattern missing from W_p: 0

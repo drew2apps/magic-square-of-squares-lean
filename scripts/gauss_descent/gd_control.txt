@@ -1,0 +1,2 @@
+the general rule gives the sets D_j of gauss_descent.py for 5 ratios
+100 twisted systems with a known solution: 0 failures; nontrivial pi/pibar choices in 100 of them; tuples left: min 1, max 2

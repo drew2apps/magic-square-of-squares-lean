@@ -1,0 +1,5 @@
+(440,279): 210 quartics, both curves of Selmer rank 2 over K (rank 0): 0; open
+(719,161): 210 quartics, both curves of Selmer rank 2 over K (rank 0): 0; open
+(627,364): 210 quartics, both curves of Selmer rank 2 over K (rank 0): 0; open
+(991,263): 210 quartics, both curves of Selmer rank 2 over K (rank 0): 0; open
+(4,3): 210 quartics, both curves of Selmer rank 2 over K (rank 0): 6; closed by L1L2L3L4 L1L3M1M2 L1L3M3M4 L2L4M1M2 L2L4M3M4 M1M2M3M4

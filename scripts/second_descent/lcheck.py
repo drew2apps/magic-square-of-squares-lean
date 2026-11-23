@@ -7,7 +7,7 @@ rows = [json.loads(l) for l in open(sys.argv[2])]
 out = []
 for r in rows:
     if r['status'] != 'closed': continue
-    c = r['curves'][-1]; E = pari.ellinit([pari(a) for a in c['rank0_curve']]); N = pari.ellglobalred(E)[0]
+    c = [c for c in r['curves'] if c['curve'] == r['by']][0]; E = pari.ellinit([pari(a) for a in c['rank0_curve']]); N = pari.ellglobalred(E)[0]
     out.append((int(N), r['pair'], c['rank0_curve']))
 out.sort()
 print('conductors: min %.3g median %.3g max %.3g' % (out[0][0], out[len(out)//2][0], out[-1][0]), flush=True)

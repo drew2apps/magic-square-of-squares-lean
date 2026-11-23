@@ -28,6 +28,14 @@ All of them have rational coefficients in `s`. Take a quartic `Q(s)` that is a p
 
 so `(s0, Y)` is a `K`-point of the curve `C: Y² = d·Q(s)`. This curve is defined over `ℚ`, and it has a rational point, a rational root `r` of `Q`. Let `E` be its Jacobian in Weierstrass form with `x = A/(s − r)` (`A` a rational constant), and let `P ∈ E(K)` be the point of the solution.
 
+**The main curve is a Frey curve.** For `Q_b = L1·L3·L5·L6 = (m − ns)(n + ms)(1 − s²)` the Jacobian is, for any `m, n`,
+
+    E_b:  y² = x·(x + (m+n)²)·(x − (m−n)²),        and its twist by −1 is   y² = x·(x − (m+n)²)·(x + (m−n)²)
+
+(checked in Sage for several pairs). When `m² + n² = k²` the class is `d = 1`, because `Q_b(−i) = ((1 − i)(m + in))²` (`quartic_b_degenerate` in Lean), and `(m+n)² + (m−n)² = 2k²`: `E_b` is the Frey curve of the three squares `(m−n)², k², (m+n)²` in arithmetic progression. So for a ratio with `m² + n²` a square the main criterion reads: *if the first descent leaves only the two degenerate tuples, and one of these two curves has rank 0 over `ℚ`, the ratio has no solution.* This is the case for 50 of the 74 such ratios.
+
+**What these curves are.** Let `W` be the curve of the triples `(t, Y, Y′)` with `Y² = d·Q(−it)`, `Y′² = d·Q(it)`. It is defined over `ℚ` (conjugation exchanges `Y` and `Y′`), it has genus 3, and a solution gives a rational point of it. Its Jacobian is isogenous over `ℚ` to `E × E⁽⁻¹⁾ × Jac(D)`, where `D: Z² = Q(−it)·Q(it)` is one of the classical curves in `t` (for `Q_b` it is `Z² = F0·F8`). The census with ranks used `D`. The two factors `E` and `E⁽⁻¹⁾` are new quotients of the curve of solutions; they become visible only after the first descent has fixed the twist `d`.
+
 Up to `s → −s` there are 24 such quartics. For 12 of them the class is not rational or differs at the two degenerate solutions; they are not used.
 
 ## 3. Rank 0 on one side
@@ -43,18 +51,19 @@ In both cases `T` is a torsion point of `E(K)`. Now `t0` is rational, so `σ(s0)
 
 for some torsion point `T` of `E(K)`. For each `T` this is a polynomial equation for `x(P)` (from the addition formula, squared to remove `y`). If the polynomial is not identically zero it has finitely many roots in `K`. Each root gives `s0 = r + A/x`, `t0 = i·s0`; the rational `t0` are tested in the five-form system directly. A superset of candidates is harmless.
 
-The polynomial is identically zero when `Q` is even in `s`: then `s → −s` is an automorphism of the curve, and the equation says nothing. Those curves are the ones already defined over `ℚ` in the variable `t`.
+For some curves the polynomial is identically zero for one torsion point `T`. Then a solution with that `T` is not constrained at all, so the curve cannot close the ratio, whatever the other torsion points give. In the computation this happens exactly for the three quartics that are even in `s` (`L1L2L3L4`, `L1L2L5L6`, `L3L4L5L6`): there `s → −s` is an automorphism of the curve, of the form `P → P + T1` or `P → −P + T2`, and the equation holds for every `P`. Those curves are the ones already defined over `ℚ` in the variable `t`. The program goes through all torsion points of every curve and records the identities; it does not stop at the first.
 
 If no rational `t0` passes the five-form test except the degenerate ones, the ratio has no solution. A ratio is also closed when its partner `(m+n):(m−n)` (halved if both are even) is closed; a solution for one gives a solution for the other (`partner_forms` in Lean).
 
 ## 4. Result
 
-Run on the 123 ratios of the list of 157 that have a degenerate solution: 74 with `S` a square, 49 with `S` twice a square (`second_123.jsonl`, `second_summary.txt`).
+Run on the 123 ratios of the list of 157 that have a degenerate solution: 74 with `S` a square, 49 with `S` twice a square (`second_123.jsonl`, `second_summary.txt`). All 24 curves were run on every ratio, also after a curve had closed it.
 
 - Closed directly: 89 (60 and 29). With partners: **101 of 123**.
-- The curve that closed: `L1·L3·L5·L6` in 59 cases (`Y² = (m − ns)(n + ms)(1 − s²)`, `d = 1` for the square type), `q₊·L1·L4` in 17, `q₊·L2·L3` in 13.
+- The first curve that closed, in the order of the family: `L1·L3·L5·L6` in 59 cases (`Y² = (m − ns)(n + ms)(1 − s²)`, `d = 1` for the square type), `q₊·L1·L4` in 17, `q₊·L2·L3` in 13. In all, 127 curves close a ratio: 57 ratios are closed by one curve, 26 by two, 6 by three, and they agree.
+- The equation is an identity for a torsion point on 110 curves, all of them even quartics; no even quartic reaches the equation step without one. So no closure was missed by stopping early.
 - The summand of rank 0 was `E(ℚ)` in 38 cases and `E⁽⁻¹⁾(ℚ)` in 51.
-- The only rational `t` returned by the equations were `0`, `1`, `−1`. None is a non-degenerate solution.
+- The only rational `t` returned by the equations, on all 127 curves, were `0`, `1`, `−1`. None is a non-degenerate solution.
 - Not closed: 22 ratios. On the curves of each, and of the partner when it is in the list, no usable summand has rank bound 0.
 
 Against the census. 99 of the 123 were already closed there (rank-1 method or the four-point tier); the second descent closes 81 of these again by a different route, and fails on 18. Of the **24 open ratios with a degenerate solution it closes 20**:
@@ -67,30 +76,49 @@ and leaves 4: `440,279`, `719,161`, `627,364`, `991,263`. For these all 24 curve
 ## 5. Checks made
 
 - **The degenerate solutions come back.** For each of the 60 closed ratios of square type, the equations return `t = 1` and `t = −1`. These are not put in by hand; they are points with `σP = ±P + T`, so the equation step finds points that are known to be there.
+- **Real points that are not degenerate** (`planted.py`, `planted.txt`). For any coprime `m > n` and any rational `t0` with `F0(t0)·F8(t0)` a square (a rational point of the classical curve `Y² = (m² + n²t²)(n² + m²t²)`), the number `Q_b(−i·t0)` has a square norm, so it is `d` times a square in `K` for a rational `d`, and `(−i·t0, Y)` is a `K`-point of `Y² = d·Q_b(s)`: the situation of sections 2 and 3 with a point that exists, and without the first descent. The argument predicts that such a curve has no summand of rank 0, unless `t0` is in the finite list. For `m ≤ 30` and `t0 = u/v`, `u, v ≤ 60`, there are 164 such points on 82 curves: **none has a summand of rank 0.** Negative control: with `d` replaced by `3d`, `5d`, `7d` (the point is then not on the curve) a summand of rank 0 appears for 96, 94 and 76 of the 164 points, and the solver does not return `t0`, as it should not. So the curve, the class `d` and the rank bounds, taken together, see real points.
 - **The polynomial.** For a random `x1 ∈ K`, the product `(x(P+T) − g(x1))·(x(P−T) − g(x1))`, computed with Sage's group law over `K(√f(x1))`, equals the polynomial of the script divided by the stated denominator (`second_control.py`, four ratios, all torsion points not of order 2).
-- **Rank 0, second route.** For 53 of the 89 rank-0 curves (conductor up to `10¹⁴`), PARI's `L(E,1)` is not zero, and `L(E,1)/Ω` is an integer between 4 and 32768 to six decimals (`lcheck.txt`). With Kolyvagin's theorem that gives rank 0 without the 2-descent. This covers 16 of the 20 ratios above, directly or through the partner. The four not covered are (572,555), (609,200) with its partner (809,409), and (861,620): their curves have conductors of `10²⁴` to `10³⁰`. For these four curves Magma's `TwoPowerIsogenyDescentRankBound` and `RankBounds` also give rank 0 (public calculator, version 2.29-10; requests and answers in `magma_second_raw.txt`).
-- **Root numbers.** All 89 rank-0 curves have root number `+1`, as they must.
+- **Rank 0, a second program.** For all 89 closing curves Magma gives the upper bound 0 as well (public calculator, version 2.29-10; 37 requests, verbatim in `magma_second_raw.txt`): `RankBounds` returns `0 0` for 80 of them, and `TwoPowerIsogenyDescentRankBound` returns 0 for 31, among them the 9 for which `RankBounds` did not finish within the calculator's 60 seconds or returned the weaker `0 2` (two curves). `magma_check.py` checks that every closing curve is in the transcripts with exactly the coefficients of `second_123.jsonl` and with the bound 0; CI runs it. Magma itself cannot be run in CI.
+- **Rank 0, numerically.** For 53 of the 89 closing curves (conductor up to `10¹⁴`), PARI's `L(E,1)` is not zero, and `L(E,1)/Ω` is an integer between 4 and 32768 to six decimals (`lcheck.txt`; CI recomputes all 53 and compares). These are floating-point values without a proved error bound, so this is evidence and not a proof of non-vanishing; if the values are right, Kolyvagin's theorem gives rank 0 without any 2-descent. This covers 16 of the 20 ratios above, directly or through the partner. The four not covered are (572,555), (609,200) with its partner (809,409), and (861,620): their curves have conductors of `10²⁴` to `10³⁰`.
+- **Root numbers.** All 127 rank-0 curves have root number `+1`, as they must.
 - **No conflict with the census.** No candidate is a solution, on ratios where the census already says there is none.
 
-## 6. What could be wrong, and what is not done
+## 6. A 2-descent over `ℚ(i)`, and the four ratios left
+
+The 24 quartics use the factors of the forms in pairs that are defined over `ℚ`. Over `K` there are ten linear factors (`L1, …, L6` and the four factors `M1, …, M4` of `q₊`, `q₋`), hence 210 quartics, and for each the classes at the two degenerate solutions give two curves `δ·Y² = Q_J(s)` over `K`. A solution is a `K`-point of one of them. These curves have all their points of order 2 over `K`, and if both have rank 0 over `K` the solution is a torsion point, and there are finitely many to test. No equation is needed.
+
+Their ranks cannot be computed with a program for curves over `ℚ`. `kdescent.py` is a 2-descent over `ℚ(i)` written for this: the 2-Selmer group as the `S`-units modulo squares whose classes lie in the local images at all places of `S`, with the local images generated by actual local points until they have their known order (4 at an odd place, 16 at `1 + i`), and the local classes taken from the labels of the first descent. Test (`kdescent_test.py`, `kdescent_test.txt`): on 295 curves `y² = x(x + a)(x + b)` over `ℚ`, where the rank over `K` is the sum of the ranks of the curve and of its twist by `−1` and PARI knows both, the Selmer bound over `K` is never below the rank; it equals the rank for 267 curves and exceeds it by 2 for 28 (an even excess, as the Cassels pairing requires).
+
+Result (`kclose.py`, `kclose_open4.txt`): for (440,279), (719,161), (627,364), (991,263), none of the 210 quartics has both curves of Selmer rank 0; the least bounds are 2 and 3. For (4,3), as a check, six quartics close the ratio again. So this does not close the four ratios. It also shows a limit of the tool: for curves that come from `ℚ` the 2-Selmer group over `K` can be larger than over `ℚ` (for (15,8) the bound over `K` is 2 although both ranks over `ℚ` are 0), so a 2-descent over `K` alone is weaker than what PARI does over `ℚ` with isogenous curves.
+
+Where the four could go next, not done:
+
+- **Rank 1 with two maps.** `s → 1/s` (that is `t → −1/t`) exchanges the quartics `q₊·L1·L3` and `q₊·L2·L4` up to the factor `−1`, so `E(q₊L2L4) ≅ E(q₊L1L3)⁽⁻¹⁾`. For both remaining pairs PARI's bounds are `[1, ≥2]` for one and `[≥2, 1]` for the other. So the same curve over `ℚ`, of rank at most 1, receives two maps from the curve of solutions: `P + σP` from the first quartic and `P − σP` from the second. Two independent maps into a curve of rank 1 is the situation of the rank-1 method of the census (Demjanenko–Manin); it needs a generator and explicit height bounds for these two maps, which have not been worked out.
+- **Chabauty on `W`**, when the three ranks add up to less than 3.
+
+## 7. What could be wrong, and what is not done
 
 - **Everything depends on the first descent.** If a tuple was wrongly removed there, the class `d` here is wrong and the conclusion fails. `GAUSS_DESCENT.md` lists what is unproved in that step.
-- **Rank bounds** are PARI's (`ellrank`, effort 1, least bound over the isogeny class). A second route exists for 57 of the 89 curves only: `L`-values for 53, Magma for 4.
+- **Rank bounds** are PARI's (`ellrank`, effort 1, least bound over the isogeny class). Magma agrees for all 89 closing curves (transcripts of the public calculator; not reproducible in CI); the `L`-values are a third, numerical, route for 53 of them. The other 38 curves that also close a ratio in the run of all curves were checked with PARI only.
 - **Torsion of `E(K)` and roots over `K`** are Sage's. No certificate is stored.
-- **The argument in sections 2 and 3** was written by the same AI model that wrote the scripts. The steps to check: that the class of `Q(s0)` is determined by the tuple; that `C` and `E` are as stated; the equation for `x(P)`; the special points (`P = O`, `x = 0`, `2r·x + A = 0`).
-- **Not done:** a 2-descent over `ℚ(i)` for curves that are not defined over `ℚ` (products that use a single factor of `q₊`); that is where the four remaining ratios would have to go next. The six unclosed ratios whose partner has `m > 1000` were not run on the partner. In Lean there are only the identities (`GaussDescent.lean`: the factorisations of `Q_b` and `q₊` and the square at `s = −i`); no rank, no torsion and no closure.
+- **The argument in sections 2 and 3** was written by the same AI model that wrote the scripts. The steps to check: that the class of `Q(s0)` is determined by the tuple; that `C` and `E` are as stated; the equation for `x(P)`; the special points (`P = O`, `x = 0`, `2r·x + A = 0`). The same holds for `kdescent.py`, which is new code for a standard method.
+- **Not done:** the two routes at the end of section 6. The six unclosed ratios whose partner has `m > 1000` were not run on the partner. In Lean there are only the identities (`GaussDescent.lean`: the factorisations of `Q_b` and `q₊` and the square at `s = −i`); no rank, no torsion and no closure.
+- **The family of 24 quartics is a choice, not a claim.** Each curve is used on its own: a curve that closes a ratio closes it whatever the other curves do. Nothing depends on the family being complete; other curves could close more.
 - **Known technique.** Passing to covers and to points over a quadratic field is standard (covering techniques of Bruin, and of Flynn and Wetherell; named from memory, not checked). No claim that the method is new, and the literature on this system was not searched for it.
 
-## 7. Reproduce
+## 8. Reproduce
 
     pip install -r scripts/g1_full/requirements.txt
     cd scripts/second_descent
-    python3 second_descent.py $(cat pairs123.txt) > out.jsonl      # about 10 minutes on one core
+    python3 second_descent.py --all $(cat pairs123.txt) > out.jsonl    # about 10 minutes on one core
     diff out.jsonl second_123.jsonl
     python3 second_descent.py --summary second_123.jsonl           # second_summary.txt
-    python3 second_descent.py --all 440,279 719,161                # all 24 curves of a ratio
     python3 second_control.py                                      # second_control.txt
     python3 degenerate_tuples.py pairs123.txt                      # degenerate_tuples.txt
+    python3 planted.py 30 60; python3 planted.py 30 60 3           # planted.txt (with the negative controls 3, 5, 7)
     python3 lcheck.py 1e14 second_123.jsonl                        # lcheck.txt, about 40 minutes
+    python3 magma_check.py                                         # the Magma transcripts against second_123.jsonl
+    python3 kdescent_test.py 1 300                                 # the 2-descent over Q(i) against PARI, kdescent_test.txt
+    python3 kclose.py 440,279 719,161 627,364 991,263              # section 6
 
-CI runs the first five on every commit (with `lcheck.py 3e9`).
+CI runs all of these on every commit, in a job of its own, and compares each output with the committed file. Magma itself is not run in CI: the requests were sent to the public calculator by hand, and `magma_check.py` checks that the transcripts contain every closing curve with the answer 0.

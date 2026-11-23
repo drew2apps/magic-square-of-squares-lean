@@ -1,0 +1,2 @@
+curves y^2 = x(x+a)(x+b): local image not found: 0; Selmer bound over K below the PARI lower bound for rank E(Q) + rank E^(-1)(Q): 0
+curves with both ranks known: 295; bound over K minus rank over K: [(0, 267), (2, 28)]

@@ -42,3 +42,601 @@ print "RankBounds:"; print RankBounds(E);
 <?xml version="1.0"?>
 <calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>426883160</seed><version>2.29-10</version><time>0.330</time><memory>32.09MB</memory></headers><results><line>pair 861,620 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 2, 2 ]</line><line>[ 2, 0 ]</line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
 
+=== 2026-11-23 07:00:06 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 11085/8, 0, 34384931/64, 32474217615/512]));
+print "pair 15,8 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 36183/20, 0, 59410763/400, 24967726581/8000]));
+print "pair 21,20 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -865444, 0, 240108783360, -21540188308377600]));
+print "pair 23,7 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1628031907</seed><version>2.29-10</version><time>0.100</time><memory>32.09MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 15,8 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 21,20 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 23,7 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:02:12 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -27585902408, 0, 253644605733102904320, -777346856491168488226686566400]));
+print "pair 41,1 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -1423944/65, 0, 178452439487/4225, -5862146232913992/274625]));
+print "pair 72,65 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 862771/20, 0, 527285445241/1200, 281465173719868411/216000]));
+print "pair 91,60 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1845949504</seed><version>2.29-10</version><time>0.290</time><memory>32.09MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 41,1 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 2, 2 ]</line><line>[ 2, 0 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 72,65 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 91,60 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:04:17 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 5031351/44, 0, 7897097796875/1936, 3945693860595703125/85184]));
+print "pair 117,44 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 14148732/133, 0, 25335315851975/17689, 12172825605568777500/2352637]));
+print "pair 156,133 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -5642384/19, 0, 30422598837925/1083, -158491270297488590000/185193]));
+print "pair 176,57 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1761723232</seed><version>2.29-10</version><time>0.120</time><memory>32.09MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 117,44 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 156,133 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 176,57 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:07:23 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -9898480631876723/14, 0, 31863920776917343829365192219187/196, -930210644018417701687598927908149165468579840475/74088]));
+print "pair 187,84 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 22397505/28, 0, 166004101113371/784, 407326048776712447395/21952]));
+print "pair 195,28 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 10132529/40, 0, 82450170683041/4800, 604486025919777598289/1728000]));
+print "pair 209,120 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1345899332</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>pair 187,84 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 7, 3, 3, 3, 2 ]</line><line>[ 1, 1, 1, 1, 0 ]</line><line>RankBounds:</line><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
+=== 2026-11-23 07:09:30 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 10680340/7, 0, 113714818850893/147, 1207068769412030659420/9261]));
+print "pair 220,21 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -8805812404, 0, 14927411710272996480, -7106399462169296484480230400]));
+print "pair 223,167 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -685003004333192, 0, 170509029103054497303534907392, -15729080935198975958908894713821304953241600]));
+print "pair 233,119 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>426869119</seed><version>2.29-10</version><time>1.950</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 220,21 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 223,167 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 233,119 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 4, 4, 2 ]</line><line>[ 2, 2 ]</line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:11:39 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 667009199320247/16, 0, 155166739648312645853487331227/256, 336680750364724769439385737542184122624815975/110592]));
+print "pair 247,96 curve +14 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -242999108859926909/16, 0, 19648081812991535817091260269322499/256, -528746638233463837549429907068672907464946178983295/4096]));
+print "pair 255,32 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 55338888/23, 0, 1018162713013775/529, 6228526280418850485000/12167]));
+print "pair 264,23 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>258447128</seed><version>2.29-10</version><time>3.180</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 247,96 curve +14 twist 1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 255,32 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 264,23 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:14:45 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -3545008440464072, 0, 4124044430949440625884866993152, -1600243297586986335866475281614873729828454400]));
+print "pair 271,103 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 66088659/136, 0, 1261850332645475/18496, 7417366777694199860625/2515456]));
+print "pair 273,136 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -5256265071765512, 0, 7036076923554014492823487242240, -3573069734018421267607060381898559198226022400]));
+print "pair 287,223 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4018620120</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>pair 271,103 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 7, 3, 3, 3, 2 ]</line><line>[ 1, 1, 1, 1, 0 ]</line><line>RankBounds:</line><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
+=== 2026-11-23 07:17:50 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -5516047562234888, 0, 10233731536514151359303996897280, -6360204473752898341072211735683564019181158400]));
+print "pair 329,89 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 43352380/63, 0, 1541224306863613/11907, 49675535902632452995540/6751269]));
+print "pair 340,189 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -137448982823432, 0, 6726552354879971376696041472, -116583958478838730438599006300314429030400]));
+print "pair 343,151 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3968103874</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>pair 329,89 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 3, 3, 2 ]</line><line>[ 1, 1, 1, 1, 0 ]</line><line>RankBounds:</line><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
+=== 2026-11-23 07:19:57 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 157249053/280, 0, 4046330123427203/78400, 28633068774091365293151/21952000]));
+print "pair 351,280 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -326500899699958857/56, 0, 52696636365272242892999704591141841/9408, -10771915920968430794067925352403650008312617358979225/4741632]));
+print "pair 377,336 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -202616172/203, 0, 11713402676471975/41209, -207540802954723641727500/8365427]));
+print "pair 396,203 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3619651227</seed><version>2.29-10</version><time>0.990</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 351,280 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 377,336 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 3, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 396,203 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:22:03 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 191201997/40, 0, 12144153340954403/1600, 256252625529287935363599/64000]));
+print "pair 399,40 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 212330136/145, 0, 14190841433603807/21025, 303370612286521061330328/3048625]));
+print "pair 408,145 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 73040864/29, 0, 5248247581373125/2523, 371686525194082962500000/658503]));
+print "pair 416,87 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>759532058</seed><version>2.29-10</version><time>0.580</time><memory>32.09MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 399,40 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 408,145 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 416,87 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:24:09 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -271102020/341, 0, 11357682956582759/116281, -130035474558017592278820/39651821]));
+print "pair 420,341 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -136262226724, 0, 2797609544146855576320, -15656018270235260512040616038400]));
+print "pair 439,359 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -125555620/143, 0, 2976069513160093/61347, -54687405898764422410060/78953589]));
+print "pair 460,429 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2714318496</seed><version>2.29-10</version><time>0.750</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 420,341 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 439,359 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 460,429 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:26:16 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -364606035/368, 0, 22279068171110051/135424, -375409447394485091472465/49836032]));
+print "pair 465,368 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 109222484/31, 0, 11762499395940925/2883, 1250823372838108958577500/804357]));
+print "pair 476,93 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 338970849/44, 0, 38192125874493275/1936, 1430422576669653905191875/85184]));
+print "pair 483,44 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2330074644</seed><version>2.29-10</version><time>0.630</time><memory>32.09MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 465,368 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 476,93 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 483,44 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:28:23 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 3615787954460903333/46, 0, 4755326637637830821913676229327331267/2116, 64991266669860427697839985122485562410737597589240575725/2628072]));
+print "pair 493,276 curve +14 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -219426609412, 0, 11475449940127505280000, -175078493468280124169241600000000]));
+print "pair 503,329 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 149857240/77, 0, 20250544198359973/17787, 2567603557467077799821320/12326391]));
+print "pair 520,231 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1729086253</seed><version>2.29-10</version><time>1.740</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 493,276 curve +14 twist 1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 503,329 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 520,231 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:31:28 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -344862428449352, 0, 39313430084941614094294287360, -1489129760374207547026396947306140403302400]));
+print "pair 529,151 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -586410024/385, 0, 75291941860987967/148225, -2772754754733940366172712/57066625]));
+print "pair 552,385 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -269219469584016392, 0, 23457056268631555241532860429015040, -689127576461486710084904806692287543030461032038400]));
+print "pair 553,263 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1143791998</seed><version>2.29-10</version><warning>An error occurred. See the output for details.</warning><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>pair 529,151 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 552,385 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 553,263 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 5, 4, 2 ]</line><line>[ 1, 1, 0 ]</line><line>RankBounds:</line></results></calculator>
+
+=== 2026-11-23 07:34:35 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -173887252323403592, 0, 10271903209117074917218791156820992, -257013224766698615110340207100763802152517777817600]));
+print "pair 569,383 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 20589014058785343916/105, 0, 462996856020331145149179511823453594956/33075, 11934078412887470116363317294163898419958726614753885566496/31255875]));
+print "pair 572,315 curve +14 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -396498934502717768, 0, 51845240125513115748999787738678272, -2254428047588724877718697252372031826128564651622400]));
+print "pair 599,193 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>692173805</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>pair 569,383 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 3, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 572,315 curve +14 twist 1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 4, 4, 4, 2 ]</line><line>[ 2, 0, 0 ]</line><line>RankBounds:</line><line>0 2</line><line>pair 599,193 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 5, 4, 2 ]</line><line>[ 1, 1, 0 ]</line><line>RankBounds:</line></results></calculator>
+
+=== 2026-11-23 07:36:43 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 226990112/35, 0, 50971944650732869/3675, 11333375162597783492844128/1157625]));
+print "pair 608,105 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -437649098724472328, 0, 63754158959742383651974702166599680, -3091834423726089602134950448698225711846980380262400]));
+print "pair 631,71 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 290894156/111, 0, 72140657294108125/36963, 16426604435225789951562500/36926037]));
+print "pair 644,333 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2363764533</seed><version>2.29-10</version><time>2.299</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 608,105 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 631,71 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 644,333 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:38:49 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 302151667/52, 0, 89392490919506425/8112, 25973447050103177435426875/3796416]));
+print "pair 667,156 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 317224760/37, 0, 99674796689044213/4107, 31042972496732671621863080/1367631]));
+print "pair 680,111 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -960976908/37, 0, 307522954514032775/1369, -32771587406607025271347500/50653]));
+print "pair 684,37 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3900734353</seed><version>2.29-10</version><time>1.340</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 667,156 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 680,111 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 684,37 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:41:55 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -385942900/143, 0, 113703691017649693/61347, -29771254415953501277232700/78953589]));
+print "pair 700,429 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -850169388465688712, 0, 240837652481885239675756258775519232, -22733379108399916889368487909123569466547850208870400]));
+print "pair 713,41 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -704983492690237832, 0, 161715712002879328997386129238876160, -16140293005258152623543336468123309847351953090150400]));
+print "pair 713,503 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2280593279</seed><version>2.29-10</version><warning>An error occurred. See the output for details.</warning><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>pair 700,429 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 713,41 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 3, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 713,503 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 7, 3, 3, 3, 2 ]</line><line>[ 1, 1, 1, 1, 0 ]</line><line>RankBounds:</line><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
+=== 2026-11-23 07:44:02 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 416972704/91, 0, 163095238581135925/24843, 60995915741912047116940000/20346417]));
+print "pair 736,273 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -1469879463/580, 0, 373569537349535723/336400, -26280528159136558276776261/195112000]));
+print "pair 741,580 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -1001397311524/289, 0, 311556104036446162333440/83521, -30790690946934217880113995375513600/24137569]));
+print "pair 751,289 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1761724782</seed><version>2.29-10</version><time>2.000</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 736,273 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 741,580 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 751,289 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:47:08 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -1371242037/280, 0, 588464741694920723/78400, -80526344422441911582157239/21952000]));
+print "pair 759,280 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 439361320/13, 0, 192867737391883813/507, 84589470692973427274765560/59319]));
+print "pair 760,39 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -1009757692084, 0, 338614348320196994855040, -37715077134989265635530017861657600]));
+print "pair 761,79 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1110107086</seed><version>2.29-10</version><warning>An error occurred. See the output for details.</warning><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>pair 759,280 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 760,39 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 761,79 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line></results></calculator>
+
+=== 2026-11-23 07:49:16 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -891496176379608008, 0, 267926366299540431386011193605358592, -27018113620830559649986133684134544784969952213401600]));
+print "pair 769,217 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 1582308780/451, 0, 666960582942084599/203401, 84314383409812552661808780/91733851]));
+print "pair 780,451 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -591344959307999959661/28, 0, 116494413215548584087292340873866079006563/784, -7645525235564745383985318760140709371449274176290115305020975/21952]));
+print "pair 783,56 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>725858858</seed><version>2.29-10</version><time>2.270</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 769,217 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 780,451 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 783,56 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 4, 2 ]</line><line>[ 2, 0 ]</line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:51:24 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -1341248743471814408, 0, 572361952446420078187085500939130880, -107464845044193279746430614160163897494706944009830400]));
+print "pair 791,569 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -1856723574685107848, 0, 539742084999522306135883998223779840, -77067734622961504843613169040756393485090213337497600]));
+print "pair 799,721 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -29611727236, 0, 290916132640224898560, -948401115478534382227295846400]));
+print "pair 833,97 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1678563661</seed><version>2.29-10</version><time>2.430</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 791,569 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 3, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 799,721 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 833,97 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:53:30 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -588493004/41, 0, 343681837620537325/5043, -199273425920593394672802500/1860867]));
+print "pair 836,123 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -3123339898099647752, 0, 1852966676868155875481373724340570112, -451305966373440696854050616313418173773512024267161600]));
+print "pair 839,727 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 2040596040/559, 0, 972263809470814559/312481, 134552576955910127246669640/174676879]));
+print "pair 840,559 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>107920272</seed><version>2.29-10</version><time>0.780</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 836,123 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 839,727 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 4, 2 ]</line><line>[ 2, 0 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 840,559 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 07:56:24 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -823297132/255, 0, 213563487699300349/195075, -44004792743643852899319268/447697125]));
+print "pair 868,765 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -734939036/129, 0, 489052649777196925/49923, -305890082745656946727872500/57960603]));
+print "pair 884,387 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -2088070818695918792, 0, 1472256020380972215099075280017822720, -348727942865888161178287598427365426510325990177177600]));
+print "pair 887,257 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>410035235</seed><version>2.29-10</version><time>48.020</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 868,765 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 884,387 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 887,257 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 4, 4, 4, 2 ]</line><line>[ 2, 0, 0 ]</line><line>RankBounds:</line><line>0 2</line><line></line></results></calculator>
+
+=== 2026-11-23 07:58:29 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -1874581347604, 0, 1170875431151030114590080, -243679978334170512067257160483046400]));
+print "pair 889,31 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 727651499/20, 0, 528681223722865801/1200, 383548237723685646392768099/216000]));
+print "pair 899,60 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 2268540900/301, 0, 1633075858940218199/90601, 377787008146226683070160900/27270901]));
+print "pair 900,301 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3282795695</seed><version>2.29-10</version><time>0.160</time><memory>32.09MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 889,31 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 899,60 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 900,301 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 08:00:35 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -3103509948/893, 0, 312394980474646775/797449, -7993145603577595535497500/712121957]));
+print "pair 924,893 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 905040352/195, 0, 609068683612413829/114075, 361943334100429315394735008/200201625]));
+print "pair 928,585 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 2589847155/248, 0, 2175227448204744611/61504, 595328271090453511047562545/15252992]));
+print "pair 945,248 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3518590526</seed><version>2.29-10</version><time>0.400</time><memory>32.09MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 924,893 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 928,585 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 945,248 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 08:02:57 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 2644117311/124, 0, 2316829656712629275/15376, 672918676174496335982908125/1906624]));
+print "pair 957,124 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -4414525174451891912, 0, 5925292383956736807539973679844600832, -3565493378810083051255953600668028399400700715402854400]));
+print "pair 959,713 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -3267072960/799, 0, 1503502630981559999/638401, -187371881380507619321856960/510082399]));
+print "pair 960,799 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4018622591</seed><version>2.29-10</version><time>16.440</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 957,124 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 959,713 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 9, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 960,799 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 08:05:04 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 2976264525/448, 0, 2635614398322778211/200704, 726832827683745246077328975/89915392]));
+print "pair 975,448 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -2825699834932, 0, 2548133205108520695120000, -740918530802342395598730339600000000]));
+print "pair 977,311 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -1110964469/220, 0, 861557248748978761/145200, -581777360925488673666701309/287496000]));
+print "pair 989,660 curve 1356 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2731159550</seed><version>2.29-10</version><time>0.690</time><memory>85.16MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 975,448 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 977,311 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line>pair 989,660 curve 1356 twist -1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 08:07:09 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 1140541088/235, 0, 829362049436122069/165675, 516180344552468132610786272/350402625]));
+print "pair 992,705 curve 1356 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>4203889870</seed><version>2.29-10</version><time>0.110</time><memory>32.09MB</memory><warning>An error occurred. See the output for details.</warning></headers><results><line>pair 992,705 curve 1356 twist 1</line><line></line><line>&gt;&gt; print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E</line><line>                                                                            ^</line><line>Runtime error in 'TwoPowerIsogenyDescentRankBound': Curve has more than one 2-torsion point, so a point must be specified (as the second argument)</line><line></line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 08:10:55 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 22397505/28, 0, 166004101113371/784, 407326048776712447395/21952]));
+print "pair 195,28 curve 1356 twist 1";
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 10132529/40, 0, 82450170683041/4800, 604486025919777598289/1728000]));
+print "pair 209,120 curve 1356 twist 1";
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 66088659/136, 0, 1261850332645475/18496, 7417366777694199860625/2515456]));
+print "pair 273,136 curve 1356 twist 1";
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1880685307</seed><version>2.29-10</version><time>0.270</time><memory>32.09MB</memory></headers><results><line>pair 195,28 curve 1356 twist 1</line><line>RankBounds:</line><line>0 0</line><line>pair 209,120 curve 1356 twist 1</line><line>RankBounds:</line><line>0 0</line><line>pair 273,136 curve 1356 twist 1</line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 08:13:03 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -5256265071765512, 0, 7036076923554014492823487242240, -3573069734018421267607060381898559198226022400]));
+print "pair 287,223 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, 43352380/63, 0, 1541224306863613/11907, 49675535902632452995540/6751269]));
+print "pair 340,189 curve 1356 twist 1";
+print "RankBounds:"; print RankBounds(E);
+E := MinimalModel(EllipticCurve([0, -137448982823432, 0, 6726552354879971376696041472, -116583958478838730438599006300314429030400]));
+print "pair 343,151 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>811121553</seed><version>2.29-10</version><time>3.080</time><memory>85.16MB</memory></headers><results><line>pair 287,223 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line>pair 340,189 curve 1356 twist 1</line><line>RankBounds:</line><line>0 0</line><line>pair 343,151 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 5, 3, 2 ]</line><line>[ 1, 1 ]</line><line>RankBounds:</line><line>0 0</line><line></line></results></calculator>
+
+=== 2026-11-23 08:16:09 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -1009757692084, 0, 338614348320196994855040, -37715077134989265635530017861657600]));
+print "pair 761,79 curve 1356 twist -1";
+print "RankBounds:"; print RankBounds(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>844806471</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line>pair 761,79 curve 1356 twist -1</line><line>RankBounds:</line></results></calculator>
+
+=== 2026-11-23 08:18:27 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, -1009757692084, 0, 338614348320196994855040, -37715077134989265635530017861657600]));
+print "pair 761,79 curve 1356 twist -1";
+pts := [P : P in DivisionPoints(E!0, 2) | P ne E!0];
+for P in pts do print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E, P); end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1981730131</seed><version>2.29-10</version><time>5.710</time><memory>64.12MB</memory></headers><results><line>pair 761,79 curve 1356 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 2 [ 2, 2, 1, 1, 1 ]</line><line>[ 4, 4, 3, 3, 3 ]</line><line>TwoPowerIsogenyDescentRankBound: 2 [ 1, 1, 0, 0, 0 ]</line><line>[ 5, 5, 4, 4, 4 ]</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 4, 4, 3, 1 ]</line><line>[ 2, 2, 1 ]</line><line></line></results></calculator>
+

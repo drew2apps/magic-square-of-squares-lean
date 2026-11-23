@@ -13,7 +13,7 @@ then  sigma(P) = -P + T  or  P + T  with T torsion in E(K), and sigma(s0) = -s0 
 torsion point T: a polynomial equation for x = x(P), solved over K for every T.  Every rational t found is tested in the
 five-form system.
 
-usage: second_descent.py [--all] m,n [m,n ...]      one JSON line per ratio (--all: do not stop at the first curve that closes)
+usage: second_descent.py [--all] m,n [m,n ...]      one JSON line per ratio (--all: run all 24 curves; otherwise stop at the first that closes)
        second_descent.py --summary FILE [FILE ...]   summary of JSON lines"""
 import sys, json
 from math import isqrt, gcd
@@ -52,15 +52,26 @@ def summary(files):
     print('closed directly: %d (square type %d, other type %d)' % (len(closed), sum(p in closed for p in sq), len(closed) - sum(p in closed for p in sq)))
     by = {}; ts = {}; deg = 0; rn = {}; tw = {}
     for p in closed:
-        c = R[p]['curves'][-1]; by[c['curve']] = by.get(c['curve'], 0) + 1; rn[c['rank0_rootno']] = rn.get(c['rank0_rootno'], 0) + 1
+        c = [c for c in R[p]['curves'] if c['curve'] == R[p]['by']][0]; by[c['curve']] = by.get(c['curve'], 0) + 1; rn[c['rank0_rootno']] = rn.get(c['rank0_rootno'], 0) + 1
         tw[c['rank0_twist']] = tw.get(c['rank0_twist'], 0) + 1
         for t, v in c['rational_t'].items(): ts[t + ': ' + v] = ts.get(t + ': ' + v, 0) + 1
         deg += bool(c.get('degenerate_found_by_equations'))
-    print('closing curve:', ', '.join('%s %d' % kv for kv in sorted(by.items())))
+    print('closing curve (the first in the order of the family):', ', '.join('%s %d' % kv for kv in sorted(by.items())))
     print('summand of rank 0: E(Q) in %d, E^(-1)(Q) in %d; root number of that curve:' % (tw.get(1, 0), tw.get(-1, 0)), ', '.join('%+d in %d' % kv for kv in sorted(rn.items())))
     print('rational t returned by the equations, with the result of the five-form test:', ', '.join('%s (%d)' % kv for kv in sorted(ts.items())))
     print('square type: t = 1 and t = -1 both returned by the equations in %d of %d closed' % (deg, sum(p in closed for p in sq)))
     print('closed, directly or through the partner: %d of %d' % (len(full), len(R)))
+    allc = [(p, c) for p in closed for c in R[p]['curves'] if c['status'] == 'closed']
+    if len(allc) > len(closed):
+        nc = {}
+        for p, c in allc: nc[p] = nc.get(p, 0) + 1
+        other = set(t + ': ' + v for p, c in allc for t, v in c['rational_t'].items())
+        print('all curves were run: %d curves close a ratio, on %d ratios; ratios closed by 1, 2, 3, ... curves: %s; rational t over all of them: %s' % (len(allc), len(nc), [sum(1 for v in nc.values() if v == k) for k in range(1, max(nc.values()) + 1)], ', '.join(sorted(other))))
+        print('root numbers of all rank-0 curves used:', ', '.join('%+d in %d' % (k, sum(1 for p, c in allc if c['rank0_rootno'] == k)) for k in sorted(set(c['rank0_rootno'] for p, c in allc))))
+    idc = [c for r in R.values() for c in r['curves'] if c['status'] == 'equation identically satisfied']
+    print('curves where the equation is an identity for some torsion point: %d, all even quartics: %s; torsion points with an identity on each: %s' % (len(idc), all(c['even_quartic'] for c in idc), sorted(set(c['identity_torsion'] for c in idc))))
+    ev = [c for r in R.values() for c in r['curves'] if c['curve'] in ('1234', '1256', '3456') and 'rational_t' in c]
+    print('even quartics that reached the equation step without an identity: %d' % len(ev))
     print('not closed (%d):' % (len(R) - len(full)), ' '.join('%d,%d' % p for p in sorted(R) if p not in full))
     print('of these, partner outside the list (m > 1000, not run):', ' '.join('%d,%d' % p for p in sorted(R) if p not in full and partner(*p) not in R))
 
@@ -117,7 +128,7 @@ def weierstrass(Q, r):
     A, B, Cc, E0 = cub[3], cub[2], cub[1], cub[0]
     return EllipticCurve(QQ, [0, B, 0, A*Cc, A*A*E0]), A
 
-def try_curve(m, n, name, Q, r, d_given=None):
+def try_curve(m, n, name, Q, r, d_given=None, bounds_given=None):
     out = dict(curve=name)
     Ssq = isqrt(m*m + n*n)**2 == m*m + n*n
     # the two degenerate solutions: t = 1, -1 (s = -i, i) or t = 0, infinity (s = 0, infinity)
@@ -125,12 +136,13 @@ def try_curve(m, n, name, Q, r, d_given=None):
     if d_given is None and (cls[0] is None or cls[0] != cls[1]): out['status'] = 'class not rational or not the same at the two degenerate solutions'; return out
     d = cls[0] if d_given is None else QQ(d_given); out['d'] = str(d)
     E, A = weierstrass(d*Q, r); Em, _ = weierstrass(-d*Q, r)
-    rp, rm = bounds(E), bounds(Em); out['rank_bounds'] = [rp, rm]
+    rp, rm = bounds_given or (bounds(E), bounds(Em)); out['rank_bounds'] = [rp, rm]      # bounds_given: lvalue_close.py
     if rp != 0 and rm != 0: out['status'] = 'no summand of rank 0'; return out
     E0 = E if rp == 0 else Em; out['rank0_curve'] = [str(c) for c in E0.a_invariants()]; out['rank0_twist'] = 1 if rp == 0 else -1
     out['rank0_rootno'] = int(pari(E0).ellrootno()); out['rank0_torsion'] = [int(c) for c in E0.torsion_subgroup().invariants()]
     EK = E.change_ring(K); R = PolynomialRing(K, 'x'); x = R.gen(); a2 = EK.a2(); f = x**3 + a2*x**2 + EK.a4()*x + EK.a6()
     tors = EK.torsion_points(); out['torsion_K'] = len(tors) + 1 if not any(T.is_zero() for T in tors) else len(tors)
+    identity = 0
     cand = set([K(r), K(0), K(1), K(-1)])                # s-values of special points (P = O; not needed otherwise, harmless)
     def add_x(xv):
         if xv != 0: cand.add(r + A/xv)                   # x = 0 is s = infinity, t = infinity: never a non-degenerate solution
@@ -142,8 +154,14 @@ def try_curve(m, n, name, Q, r, d_given=None):
         Dn = 2*r*x + A                                   # s(P') = -s(P)  <=>  x(P') = g(x) = -A x/(2 r x + A)
         hD = (-A*x + (a2 + x + x0)*Dn)*(x - x0)**2       # x(P + T) = lambda^2 - a2 - x - x0, lambda = (y - y0)/(x - x0)
         pol = (f*Dn - hD) if y0 == 0 else (((f + y0**2)*Dn - hD)**2 - 4*y0**2*f*Dn**2)
-        if pol == 0: out['status'] = 'equation identically satisfied'; return out
+        if pol == 0: identity += 1; continue             # no condition on P from this T; see below
         for rt, _ in pol.roots(): add_x(rt)
+    if identity:
+        # For some torsion point the equation holds for every P, so a solution with that T is not constrained and the curve
+        # cannot close the ratio, whatever the other torsion points give.  This happens exactly for the quartics that are
+        # even in s: s -> -s is then an automorphism of the curve, of the form P -> P + T1 or P -> -P + T2.
+        out['identity_torsion'] = identity; out['even_quartic'] = bool(Q(sq) == Q(-sq))
+        out['status'] = 'equation identically satisfied'; return out
     ts = {}
     for s in cand:
         t = I*s
