@@ -1,8 +1,15 @@
 name: CI
 
+# Two levels.  Every push to main runs `build` (Lean, the axiom audit, the generated files, the C searches) and `quick`
+# (the checkers that read committed transcripts and a few small reruns): about 20 minutes, most of it Lean.
+# The three long jobs (`four-points`, `descents`, `twist-search`, about 65 minutes) regenerate every committed output.
+# They run on a pull request, on a tag, when the workflow is started by hand (Actions, CI, "Run workflow"), and on a push
+# whose commit message contains [full ci].  A green mark on a push without [full ci] therefore says less than a green
+# mark on a full run: the long jobs show as skipped.  A release is made only from a commit with a full green run.
 on:
   push:
     branches: [main]
+    tags: ['v*']
   pull_request:
   workflow_dispatch:
 
@@ -15,7 +22,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py scripts/gauss_descent/*.py scripts/second_descent/*.py
+          python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py scripts/gauss_descent/*.py scripts/second_descent/*.py scripts/hill/*.py
           python3 scripts/g1_full/check_evidence.py
           python3 scripts/g1_full/check_evidence.py --negative > /tmp/negative.out
           grep -q '^negative tests: 520 altered records, all rejected' /tmp/negative.out
@@ -50,10 +57,44 @@ jobs:
           diff <(sort audit.txt) <(sort scripts/audit_output.txt)
           echo "::notice title=Axiom audit::$(grep '^AUDIT OK:' audit.txt)"
 
+  quick:
+    # On every push: what can be checked in a few minutes.  The transcripts of Magma against the committed outputs, the
+    # counts, and a small rerun of each program, compared with the first lines of the committed files.
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: transcript checkers, counts, and a small rerun of each descent program
+        shell: bash
+        run: |
+          set -e -o pipefail
+          pip install -q -r scripts/g1_full/requirements.txt
+          cd scripts/gauss_descent
+          python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt
+          python3 twocover_check.py | diff - twocover_check.txt
+          python3 subsets.py 4,3 15,8 | diff - <(head -n 2 subsets.txt)
+          cd ../second_descent
+          python3 magma_check.py | diff - magma_check.txt
+          python3 tally.py second_123.jsonl lvalue_open.jsonl | diff - tally.txt
+          python3 second_descent.py --summary second_123.jsonl | diff - second_summary.txt
+          python3 wide.py --summary wide_1000_2000.jsonl | diff - wide_summary.txt
+          python3 second_descent.py --all 15,8 21,20 23,7 | diff - <(head -n 3 second_123.jsonl)
+          python3 lproof.py 1e7 second_123.jsonl | grep -v "PARI stack" | head -n 5 | diff - <(head -n 5 lproof.txt)
+          cd ../gauss_descent
+          python3 subsets_summary.py | diff - subsets_summary.txt
+          cd ../hill
+          python3 hill_identity.py | diff - hill_identity.txt
+          python3 hill_check.py | diff - hill_check.txt
+          python3 ap_relaxed.py 250 | diff - ap_relaxed_250.txt
+
   four-points:
     # The four-point argument (FOUR_POINTS.md) run as a program, not only checked through its records:
     # the model and the identities with m, n as indeterminates; every record of dm4.py regenerated with PARI and Sage
     # and compared with the committed one; Proposition 1 on actual rational points of quadratic twists.
+    if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -87,6 +128,7 @@ jobs:
   descents:
     # GAUSS_DESCENT.md and SECOND_DESCENT.md are experiments, not counted in the census. This job reruns the second descent
     # (all 24 curves on the 123 ratios), its controls, and the tests of the first descent on real numbers.
+    if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -118,6 +160,7 @@ jobs:
           python3 hilbert_check.py 3000 | diff - hilbert_check.txt
           python3 subsets.py 4,3 15,8 59,56 820,799 889,320 | diff - subsets.txt
           python3 twocover_check.py | diff - twocover_check.txt
+          python3 subsets.py $(python3 -c "import math; print(' '.join('%d,%d' % (m, n) for m in range(2, 10) for n in range(1, m) if math.gcd(m, n) == 1))") | diff - <(head -n 27 subsets_small.txt)
           python3 gd_control.py 1 100 | diff - gd_control.txt
           python3 scan.py 1000 1100 ../g1_full/modp_classes.txt /tmp/scan_list.txt | sed 's/  \[[0-9]* s\]$//' | diff - scan_1000_1100.txt
           diff /tmp/scan_list.txt <(awk -F'[, ]' '$1 <= 1100' scan_certificates.txt)
@@ -125,6 +168,7 @@ jobs:
 
   twist-search:
     # scripts/search/twist_search.txt: no t0 = p/q != 1 with m, p, q <= 400 at which all four points are rational on a twist.
+    if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:

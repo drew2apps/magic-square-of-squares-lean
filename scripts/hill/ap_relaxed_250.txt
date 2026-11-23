@@ -1,0 +1,3 @@
+shapes with q < p <= 250: 12707 values of w
+self-test, the planted progression is found: True
+three distinct values in arithmetic progression: 0

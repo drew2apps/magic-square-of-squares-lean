@@ -1,0 +1,6 @@
+the square of 1..9 (roots sqrt 1 .. sqrt 9): (29) holds to 30 digits: yes; (30): yes; h(alpha_i) in arithmetic progression: yes; beta_1 = 1.489245; alpha = 9.8990, 21.9545, 33.9706
+random real square 1: (29) holds to 30 digits: yes; (30): yes; h(alpha_i) in arithmetic progression: yes; beta_1 = 1.668868; alpha = 6.5609, 18.2730, 29.9087
+random real square 2: (29) holds to 30 digits: yes; (30): yes; h(alpha_i) in arithmetic progression: yes; beta_1 = 1.391147; alpha = 9.2136, 17.8309, 26.4140
+random real square 3: (29) holds to 30 digits: yes; (30): yes; h(alpha_i) in arithmetic progression: yes; beta_1 = 1.275031; alpha = 145.0498, 235.8082, 326.5652
+random real square 4: (29) holds to 30 digits: yes; (30): yes; h(alpha_i) in arithmetic progression: yes; beta_1 = 1.071514; alpha = 78.2907, 89.8889, 101.4867
+random real square 5: (29) holds to 30 digits: yes; (30): yes; h(alpha_i) in arithmetic progression: yes; beta_1 = 1.435815; alpha = 8.0176, 16.5288, 24.9963

@@ -24,15 +24,15 @@ def sub(m, n, pmax=200):
     for p in sorted(set([q for q in bad if q <= 20000] + [q for q in gd.PR if q <= pmax])):
         k = 5 if p > 50 else max(5, 8 if p == 2 else 6)
         L, W = gd.local_set(m, n, p, k); cd = [[L.cls(x) for x in d] for d in D]
-        idxs = []
+        idxs = {}                                            # many local patterns allow the same candidates: keep each list once
         for w in W:
-            idx = [[i for i, c in enumerate(cd[j]) if gd.match(c, w[j])] for j in range(5)]
-            idxs.append(idx)
+            idx = tuple(tuple(i for i, c in enumerate(cd[j]) if gd.match(c, w[j])) for j in range(5))
+            idxs[idx] = 1
         for T in subsets:
             if T in dead: continue
             al = np.zeros(masks[T].shape, dtype=bool)
             for idx in idxs:
-                if all(idx[j] for j in T): al[np.ix_(*[idx[j] for j in T])] = True
+                if all(idx[j] for j in T): al[np.ix_(*[list(idx[j]) for j in T])] = True
             masks[T] &= al
             if not masks[T].any(): dead[T] = p
     orbits = {}

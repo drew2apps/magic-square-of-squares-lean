@@ -185,7 +185,7 @@ Nine ratios with `m ≤ 1000` that the rank-1 method leaves open are closed (`dm
 
 `H*` is the threshold between lists (A) and (B), `c*` the bound of Proposition 2 or 3 at `H*`. In rank 2 the enumeration for list (B) finds no lattice vector other than 0: `c*` is below the minimum of the height on the lattice spanned by the basis (for comparison, the basis vectors have the heights in the third column; this is a statement about the certified basis, not about the lower bound `λ`, which is much smaller), so list (B) consists of the 4 torsion points. The largest of `eL`, `eU`, `κ` is 95.7; the points in (A) have `ĥ(2Q − R0)` up to about 4400. A run takes 15 to 60 seconds.
 
-The method does not apply to the other 26 open ratios: for 22 of them the upper bound for the rank of `E` is 4 or more, for (609,200) and its partner (809,409) the bounds are `[3, 5]`, and for (820,799) and (889,320) the bound is 2 but only one point of infinite order is known.
+The method does not apply to the other 26 ratios that are left after it (two of them, (820,799) and (889,320), are closed since by a two-cover descent, `GAUSS_DESCENT.md`): for 22 of them the upper bound for the rank of `E` is 4 or more, for (609,200) and its partner (809,409) the bounds are `[3, 5]`, and for (820,799) and (889,320) the bound is 2 but only one point of infinite order is known.
 
 ## 11. Tests
 

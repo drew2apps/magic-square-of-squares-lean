@@ -1,0 +1,7 @@
+ap_relaxed.py 1000 0 0.29 and ap_relaxed.py 1000 0.29 1 (two parts, run on 23 November 2026; not rerun in CI):
+shapes with q < p <= 1000: 202861 values of w; rows 0 to 0.29 of the list
+self-test: the planted progression starts in another part of the list
+three distinct values in arithmetic progression: 0
+shapes with q < p <= 1000: 202861 values of w; rows 0.29 to 1 of the list
+self-test, the planted progression is found: True
+three distinct values in arithmetic progression: 0

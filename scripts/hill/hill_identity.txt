@@ -1,0 +1,4 @@
+RHS(29) - RHS(30) = 0
+(LHS(29) - RHS(29)) / (2 h(alpha_2) - h(alpha_1) - h(alpha_3)) = 2*N_2**2*N_3*alpha_3d*(N_3 + 2*alpha_3d)*(N_3 + 4*alpha_3d)
+that quotient minus 4 N_2^2 N_3^2 alpha_3n alpha_3d = 0
+bracket of (30) minus (beta_1n^2 alpha_1n^2 - beta_1d^2 alpha_1d^2) = 0

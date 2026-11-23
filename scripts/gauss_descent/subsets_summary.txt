@@ -1,0 +1,14 @@
+149 coprime ratios m > n >= 1 with m <= 22
+m^2 + n^2 neither: 143 ratios; every set of k forms empty, k = 5, 4, 3, 2: 143, 143, 132, 0
+m^2 + n^2 square: 4 ratios; every set of k forms empty, k = 5, 4, 3, 2: 0, 0, 0, 0
+m^2 + n^2 twice a square: 2 ratios; every set of k forms empty, k = 5, 4, 3, 2: 0, 0, 0, 0
+ratios of the first kind with a set of three forms that is not empty: 11
+  (4,1), t = 5/3: F0, G4, GL are squares; edge roots [7, 17, 17, 23] (two equal: a degenerate square); the descent leaves a tuple for every subset of these: True
+  (4,1), t = -5/3: F0, G4, GU are squares; edge roots [7, 17, 17, 23] (two equal: a degenerate square); the descent leaves a tuple for every subset of these: True
+  (4,1), t = 3/5: F8, G4, GL are squares; edge roots [7, 17, 17, 23] (two equal: a degenerate square); the descent leaves a tuple for every subset of these: True
+  (4,1), t = -3/5: F8, G4, GU are squares; edge roots [7, 17, 17, 23] (two equal: a degenerate square); the descent leaves a tuple for every subset of these: True
+  (5,3), t = 4/1: F0, G4, GL are squares; edge roots [7, 17, 17, 23] (two equal: a degenerate square); the descent leaves a tuple for every subset of these: True
+  (5,3), t = -4/1: F0, G4, GU are squares; edge roots [7, 17, 17, 23] (two equal: a degenerate square); the descent leaves a tuple for every subset of these: True
+  (5,3), t = 1/4: F8, G4, GL are squares; edge roots [7, 17, 17, 23] (two equal: a degenerate square); the descent leaves a tuple for every subset of these: True
+  (5,3), t = -1/4: F8, G4, GU are squares; edge roots [7, 17, 17, 23] (two equal: a degenerate square); the descent leaves a tuple for every subset of these: True
+rational points with |u|, v <= 200 at which two or more forms are squares: 1060; subsets of forms that are squares at such a point: 614; of these with an empty descent set: 0

@@ -2,7 +2,7 @@
 
 **Status.** An experiment made after release 0.4.0. Nothing here is counted in the census, in the README numbers or in any release. It rests on the first descent of `GAUSS_DESCENT.md`, which is itself unreviewed, on rank bounds computed by PARI, and on torsion and polynomial roots over `ℚ(i)` computed by Sage. Nobody other than the author of the scripts (an AI model) has read the argument. Treat every number below as a claim to be checked.
 
-**What it would give, if both descents are right.** Of the 26 ratios of the census (`m ≤ 1000`) that are open, 2 have no degenerate solution and are eliminated by the first descent (and, independently, by Magma's two-cover descent; `GAUSS_DESCENT.md`, section 4). Of the other 24, this second step closes 22: 20 with rank bounds from descents, and (440,279) with its partner (719,161) with a rank 0 that is read from an `L`-value (section 6). Two are left, one pair of partners: **(627,364) and (991,263)**. The smallest open `m` would be 627.
+**What it would give, if both descents are right.** Of the 26 ratios (`m ≤ 1000`) that the methods with elliptic curves leave, 2 have no degenerate solution; they are eliminated by the first descent and, independently, by Magma's two-cover descent, on which the census now counts them as closed (`GAUSS_DESCENT.md`, section 4). Of the other 24, the open ones, this second step closes 22: 20 with rank bounds from descents, and (440,279) with its partner (719,161) with a rank 0 that is read from an `L`-value (section 6). Two are left, one pair of partners: **(627,364) and (991,263)**. The smallest open `m` would be 627.
 
 ## 1. Where the first descent stops
 
@@ -59,12 +59,12 @@ If no rational `t0` passes the five-form test except the degenerate ones, the ra
 
 Run on the 123 ratios of the list of 157 that have a degenerate solution: 74 with `S` a square, 49 with `S` twice a square (`second_123.jsonl`, `second_summary.txt`). All 24 curves were run on every ratio, also after a curve had closed it.
 
-- Closed directly: 89 (60 and 29). With partners: **101 of 123**.
+- Closed by a rank bound 0 from descent: 89 directly (60 and 29), **101 of 123** with partners. With the four closures from an `L`-value of section 6 added: 93 directly, **108 of 123** with partners (`tally.txt`, which is the count to quote).
 - The first curve that closed, in the order of the family: `L1·L3·L5·L6` in 59 cases (`Y² = (m − ns)(n + ms)(1 − s²)`, `d = 1` for the square type), `q₊·L1·L4` in 17, `q₊·L2·L3` in 13. In all, 127 curves close a ratio: 57 ratios are closed by one curve, 26 by two, 6 by three, and they agree.
 - The equation is an identity for a torsion point on 110 curves, all of them even quartics; no even quartic reaches the equation step without one. So no closure was missed by stopping early.
 - The summand of rank 0 was `E(ℚ)` in 38 cases and `E⁽⁻¹⁾(ℚ)` in 51.
 - The only rational `t` returned by the equations, on all 127 curves, were `0`, `1`, `−1`. None is a non-degenerate solution.
-- Not closed: 22 ratios. On the curves of each, and of the partner when it is in the list, no usable summand has rank bound 0.
+- Not closed by descent bounds: 22 ratios (15 after the `L`-values). On the curves of each, and of the partner when it is in the list, no usable summand has rank bound 0.
 
 Against the census. 99 of the 123 were already closed there (rank-1 method or the four-point tier); the second descent closes 81 of these again by a different route, and fails on 18. Of the **24 open ratios with a degenerate solution it closes 20**:
 
@@ -133,4 +133,4 @@ Where the last pair could go next, not done:
     python3 wide.py 1000 2000 ../g1_full/modp_classes.txt          # beyond the census, about 70 minutes; wide_1000_2000.jsonl
     python3 kclose.py 440,279 719,161 627,364 991,263              # section 6
 
-CI runs all of these on every commit, in a job of its own, and compares each output with the committed file. Magma itself is not run in CI: the requests were sent to the public calculator by hand, and `magma_check.py` checks that the transcripts contain every closing curve with the answer 0.
+The full CI run (job `descents`: on a pull request, a tag, by hand, or with `[full ci]` in the commit message; see the README) runs all of these and compares each output with the committed file; the job `quick`, on every push, reruns three ratios and five `L`-values and the checkers. Committed outputs that no CI job regenerates: `kclose_open4.txt`; the wide runs beyond the first five ratios (`wide_*.jsonl`, their `L`-value files and tallies); `magma_last_raw.txt`, which also has no checker and is quoted by hand in section 6; in `scripts/gauss_descent`, `subsets_34.txt`, `real_points_681.txt` and the scan beyond `m = 1100`. They are data, reproducible with the commands given, and an error in them would not be caught automatically. Magma itself is not run in CI: the requests were sent to the public calculator by hand, and `magma_check.py` checks that the transcripts contain every closing curve with the answer 0.
