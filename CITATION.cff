@@ -11,7 +11,7 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.24435351
     description: "Zenodo concept DOI; resolves to the latest archived version"
-version: 0.4.0
+version: 0.5.0
 date-released: 2026-11-23
 abstract: >-
   Lean 4 proofs of the known necessary conditions and reformulations for a 3x3 magic square of
@@ -23,8 +23,10 @@ abstract: >-
   one of them is a square and the other is twice a square. One edge root exceeds 500 (far below
   published search bounds). Computed and not formalized: a census of the ratios with m <= 1000
   (of 425 ratios left by congruences, 268 are closed by rank 0 and 122 by rank 1; 9 more by an
-  argument with four maps that has not been reviewed; 26 were open at release 0.4.0, and 24 are
-  open at the current head, where 2 more are closed by a two-cover descent run in Magma).
+  argument with four maps that has not been reviewed; 2 more, counted apart, by a two-cover descent
+  run in Magma; 24 are open). The repository also contains experiments that are not counted in
+  the census and that nobody has reviewed: two descents over the Gaussian integers and a proposed
+  proof for the last pair of ratios left by them.
   The problem itself is not solved, and no novelty is claimed.
   The Lean code and the text were written with Claude, an AI model made by Anthropic.
 keywords:

@@ -1,6 +1,6 @@
 # The 3×3 magic square of squares: a statement on the centre, a machine-checked reduction, and a computed census
 
-Drew Carlson. 23 November 2026, release 0.4.0.
+Drew Carlson. 23 November 2026, release 0.5.0.
 Repository: https://github.com/drew2apps/magic-square-of-squares-lean. Archive: https://doi.org/10.5281/zenodo.24435351.
 
 The Lean code and this text were written with Claude, an AI model made by Anthropic. I am not a number theorist. Nobody else has checked the mathematics outside Lean. This note says what is proved, what is only computed, and what is unchecked, so that someone who knows the subject can check it.
