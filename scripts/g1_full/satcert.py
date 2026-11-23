@@ -17,7 +17,16 @@ Functionals used, for a prime q of good reduction (q odd, q not dividing al be (
           P -> the discrete logarithm of (N/p) (P mod q) in it;  N is counted naively here;
   p = 2:  P -> the quadratic character modulo q of x(P) - e, for e = 0 and e = al  (the 2-descent map; at a point
           with x = e the value is the character of (e - e')(e - e'') for the other two roots).
-A certificate is, for each prime p, the list of primes q used."""
+A certificate is, for each prime p, the list of primes q used.  The verifier checks itself that every q is an odd
+prime of good reduction (trial division), counts #E(F_q) itself, and recomputes every value.
+
+Why a functional vanishes on p E(Q): reduction modulo q is a group homomorphism E(Q) -> E(F_q), since the model has
+good reduction at q.  For p odd, (N/p) kills p E(F_q) because N kills E(F_q), and the image lies in the subgroup of
+order p, which is cyclic because p divides N only once; the discrete logarithm identifies it with Z/p.  For p = 2 the
+map x - e modulo squares is the classical 2-descent homomorphism E(F_q) -> F_q^*/squares, which kills 2 E(F_q).
+The torsion subgroup: check_evidence.py confirms that the listed torsion points are all of it by comparing their
+number with the gcd of #E(F_q) over good primes q >= 17.  (The torsion subgroup of E(Q) has order at most 16 by
+Mazur's theorem, so its order is prime to q, and torsion of order prime to q injects into E(F_q).)"""
 from fractions import Fraction as Fr
 
 def primes_upto(n):
@@ -30,7 +39,19 @@ def leg(a, q):
     a %= q
     return 0 if a == 0 else (1 if pow(a, (q - 1) // 2, q) == 1 else -1)
 
-def good(al, be, q): return q > 2 and (al * be * (al - be)) % q != 0
+def is_prime(q):
+    """Trial division (the auxiliary primes are small)."""
+    if q < 2 or (q % 2 == 0 and q != 2): return False
+    d = 3
+    while d * d <= q:
+        if q % d == 0: return False
+        d += 2
+    return True
+
+def good(al, be, q):
+    """q is an odd prime at which Y^2 = x (x - al)(x - be) has good reduction (the model is integral, so it is then
+    minimal at q and its reduction is the reduction of the curve)."""
+    return q > 2 and is_prime(q) and (al * be * (al - be)) % q != 0
 
 def count(al, be, q):
     """#E(F_q), by summing the quadratic character."""

@@ -1,0 +1,5 @@
+# Python packages for dm4.py, dm4_identities.py and dm4_twist.py (CI job four-points). cypari2 2.2.9 contains PARI 2.17.4.
+passagemath-schemes==10.8.14
+passagemath-singular==10.8.14
+passagemath-symbolics==10.8.14
+cypari2==2.2.9

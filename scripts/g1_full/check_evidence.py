@@ -195,10 +195,11 @@ def check4(j, new, fresh=False):
     gT = [(Fr(a), Fr(b)) for a, b in j['G_T']]; tT = [(Fr(a), Fr(b)) for a, b in j['tors_T']]
     assert len(gT) == r and len(tT) == j['ntors'] - 1 and len(set(tT)) == len(tT) and all(satcert.on_curve(P, al, be) for P in gT + tT + [(Fr(j['R0_T'][0]), Fr(j['R0_T'][1]))]), of
     assert all((Fr(e), Fr(0)) in tT for e in (0, al, be)), of
-    g = 0                                                # the torsion subgroup injects into E(F_q) for odd q of good reduction
-    for q in satcert.primes_upto(200):
-        if satcert.good(al, be, q): g = math.gcd(g, satcert.count(al, be, q))
+    g = 0                                                # #E(Q)_tors <= 16 (Mazur), so for a good prime q >= 17 its order is prime
+    for q in satcert.primes_upto(400):                   # to q, and torsion of order prime to q injects into E(F_q)
+        if q >= 17 and satcert.good(al, be, q): g = math.gcd(g, satcert.count(al, be, q))
     assert g == j['ntors'], (of, g)                      # so tors_T is the whole torsion subgroup (without the origin)
+    assert all(satcert.is_prime(int(p)) and all(satcert.good(al, be, q) for q in qs) for p, qs in j['sat'].items()), of
     assert satcert.verify(j['sat'], al, be, gT, tT, j['kmax']), of
     # -- the two lists: the integer vectors, counted again by a different enumeration (Fincke-Pohst, exact)
     G0i = [[int(v) for v in row] for row in j['G0_2e60']]
@@ -230,6 +231,34 @@ assert len(still) == 26 and not (still & closed) and (still | closed) == all157
 listed = set(pairs(l.split()[0])[0] for l in cl if l and not l.startswith('#') and len(l.split()) == 4)
 assert listed == closed
 assert set(pairs(l.split()[0])[0] for l in cl if l and not l.startswith('#') and len(l.split()) == 4 and l.split()[2] == 'E0L4') == closed4
+if '--negative' in sys.argv:
+    # Negative tests: a record that is altered in one place must be rejected by check4.
+    import copy
+    def must_fail(j, change, label):
+        k = copy.deepcopy(j); change(k)
+        try: check4(k, tuple(k['pair']) in closed4, fresh=True)
+        except AssertionError: return
+        raise SystemExit('negative test not caught: %s for %s' % (label, j['pair']))
+    def double_first(k):
+        al, be = (int(v) for v in k['roots']); x, y = Fr(k['G_T'][0][0]), Fr(k['G_T'][0][1]); a2, a4 = -(al + be), al * be
+        l = (3 * x * x + 2 * a2 * x + a4) / (2 * y); x3 = l * l - a2 - 2 * x; k['G_T'][0] = [str(x3), str(l * (x - x3) - y)]
+    def composite(k):
+        p = sorted(k['sat'], key=int)[-1]; k['sat'][p] = [q * 3 for q in k['sat'][p]]
+    ntest = 0
+    for j in log4 + cross4[:6]:
+        check4(j, tuple(j['pair']) in closed4, fresh=True)
+        must_fail(j, double_first, 'first basis point doubled (index 2)')
+        must_fail(j, lambda k: k['sat'].__setitem__('2', k['sat']['2'][:1]), 'certificate for 2 shortened')
+        must_fail(j, lambda k: k['sat'].pop(sorted(k['sat'], key=int)[-1]), 'certificate for the largest prime removed')
+        must_fail(j, composite, 'auxiliary moduli not prime')
+        must_fail(j, lambda k: k.__setitem__('kmax', k['kmax'] - 2), 'index bound lowered')
+        must_fail(j, lambda k: k.__setitem__('tors_T', k['tors_T'][:-1]), 'a torsion point missing')
+        must_fail(j, lambda k: k['lists']['A'].__setitem__('vectors', k['lists']['A']['vectors'] - 1), 'vector count of list A')
+        must_fail(j, lambda k: k['lists']['B'].__setitem__('threshold', str(int(k['lists']['B']['threshold']) // 2)), 'threshold of list B halved')
+        must_fail(j, lambda k: k.__setitem__('lam_used', k['lam']), 'height lower bound without the margin')
+        must_fail(j, lambda k: k.__setitem__('cstar', k['cstar'] * 0.99), 'cstar lowered')
+        ntest += 10
+    print('negative tests: %d altered records, all rejected' % ntest)
 if '--dm4' in sys.argv:
     # CI: records just produced by dm4.py (a file of JSON lines) get the same checks as the stored ones and must agree
     # with them in everything that does not depend on the choice of basis.

@@ -17,6 +17,9 @@ jobs:
           set -e
           python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py
           python3 scripts/g1_full/check_evidence.py
+          python3 scripts/g1_full/check_evidence.py --negative > /tmp/negative.out
+          grep -q '^negative tests: 150 altered records, all rejected' /tmp/negative.out
+          test "$(cat MagicSquareOfSquares/*.lean | grep -c '^theorem \|^private theorem ')" = "$(cat scripts/declared_theorems.txt)"
           python3 scripts/g1_full/octic_check.py > /tmp/octic.out
           diff /tmp/octic.out <(tail -n +2 scripts/g1_full/octic_check.txt)
           python3 scripts/g1_full/height_sides.py > /tmp/height_sides.out
@@ -58,12 +61,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: dm4_identities.py, dm4.py on all 52 pairs, dm4_twist.py
+      - name: dm4_identities.py, dm4.py on all 52 pairs, dm4_twist.py on 12 pairs
         shell: bash
         run: |
           set -e -o pipefail
-          pip install -q passagemath-schemes==10.8.14 passagemath-singular==10.8.14 passagemath-symbolics==10.8.14 cypari2==2.2.9
+          pip install -q -r scripts/g1_full/requirements.txt
           cd scripts/g1_full
+          python3 dm4_twist.py 72,65 137,7 425,168 593,257 920,129 740,539 828,173 840,83 923,757 15,8 21,20 41,1 3 400 > /tmp/dm4_twist.out &
+          TWIST=$!
           python3 dm4_identities.py | tee /tmp/dm4_identities.out
           diff <(sed 's/ *\[[0-9]* s\]//' /tmp/dm4_identities.out) <(sed 's/ *\[[0-9]* s\]//' dm4_identities.txt)
           mkdir /tmp/fresh
@@ -71,5 +76,29 @@ jobs:
           cat /tmp/fresh/*.jsonl > /tmp/dm4_fresh.jsonl
           test "$(wc -l < /tmp/dm4_fresh.jsonl)" = 52
           python3 check_evidence.py --dm4 /tmp/dm4_fresh.jsonl
-          python3 dm4_twist.py 72,65 2 100 | tee /tmp/dm4_twist.out
-          grep -q "^4 configurations on twists, 0 outside the bounds" /tmp/dm4_twist.out
+          wait $TWIST
+          diff <(sed 's/   \[[0-9]* s\]$//' /tmp/dm4_twist.out) dm4_twist.txt
+          grep -q "^72 configurations on twists, 0 outside the bounds" /tmp/dm4_twist.out
+
+  twist-search:
+    # scripts/search/twist_search.txt: no t0 = p/q != 1 with m, p, q <= 400 at which all four points are rational on a twist.
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: twist_find to 400
+        shell: bash
+        run: |
+          set -e
+          gcc -O2 -Wall -Wextra -Werror -o /tmp/twist_find scripts/search/twist_find.c -lm
+          /tmp/twist_find 400 400 2 200 > /tmp/tw1.out &
+          P1=$!
+          /tmp/twist_find 400 400 201 283 > /tmp/tw2.out &
+          P2=$!
+          /tmp/twist_find 400 400 284 346 > /tmp/tw3.out &
+          P3=$!
+          /tmp/twist_find 400 400 347 400 > /tmp/tw4.out &
+          P4=$!
+          wait $P1; wait $P2; wait $P3; wait $P4
+          test ! -s /tmp/tw1.out && test ! -s /tmp/tw2.out && test ! -s /tmp/tw3.out && test ! -s /tmp/tw4.out
+          grep -qx 'twist_find 400 400: 0 solutions' scripts/search/twist_search.txt

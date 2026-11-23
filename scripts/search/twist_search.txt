@@ -5,4 +5,7 @@
 # are both squares (that is, F0 F8 and GL GU are squares at t0).  p = q always works (the degenerate t0 = 1).
 # Result, 2026-11-22: no solution with m, p, q <= 400.  So the lattice step (Propositions 2 and 3 of FOUR_POINTS.md)
 # cannot be tested on an actual configuration of four rational points; Proposition 1 can, on two points (dm4_twist.py).
+# Run: gcc 13 -O2, two processes (m = 2..283 and m = 284..400), about 9 CPU minutes in all; both printed nothing.
+# CI repeats the search in four processes and requires empty output. With the condition p != q removed, the program
+# prints the degenerate solutions (2 1 1 1, 3 1 1 1, 3 2 1 1, ...), which is how it was tested.
 twist_find 400 400: 0 solutions
