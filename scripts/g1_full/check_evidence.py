@@ -195,10 +195,21 @@ def check4(j, new, fresh=False):
     gT = [(Fr(a), Fr(b)) for a, b in j['G_T']]; tT = [(Fr(a), Fr(b)) for a, b in j['tors_T']]
     assert len(gT) == r and len(tT) == j['ntors'] - 1 and len(set(tT)) == len(tT) and all(satcert.on_curve(P, al, be) for P in gT + tT + [(Fr(j['R0_T'][0]), Fr(j['R0_T'][1]))]), of
     assert all((Fr(e), Fr(0)) in tT for e in (0, al, be)), of
+    def addT(P, Q):                                      # the group law of Y^2 = x (x - al)(x - be) over Q; None is the origin
+        if P is None: return Q
+        if Q is None: return P
+        (x1, y1), (x2, y2) = P, Q
+        if x1 == x2:
+            if y1 + y2 == 0: return None
+            l = (3 * x1 * x1 - 2 * (al + be) * x1 + al * be) / (2 * y1)
+        else: l = (y2 - y1) / (x2 - x1)
+        x3 = l * l + (al + be) - x1 - x2; return (x3, l * (x1 - x3) - y1)
+    grp = set(tT) | {None}                               # the listed points with the origin are closed under addition: a finite
+    assert all(addT(P, Q) in grp for P in grp for Q in grp), of      # subgroup, so every listed point is a torsion point
     g = 0                                                # #E(Q)_tors <= 16 (Mazur), so for a good prime q >= 17 its order is prime
     for q in satcert.primes_upto(400):                   # to q, and torsion of order prime to q injects into E(F_q)
         if q >= 17 and satcert.good(al, be, q): g = math.gcd(g, satcert.count(al, be, q))
-    assert g == j['ntors'], (of, g)                      # so tors_T is the whole torsion subgroup (without the origin)
+    assert g == j['ntors'], (of, g)                      # the torsion subgroup has order dividing g, and ntors points of it are listed
     assert all(satcert.is_prime(int(p)) and all(satcert.good(al, be, q) for q in qs) for p, qs in j['sat'].items()), of
     assert satcert.verify(j['sat'], al, be, gT, tT, j['kmax']), of
     # -- the two lists: the integer vectors, counted again by a different enumeration (Fincke-Pohst, exact)
@@ -245,7 +256,7 @@ if '--negative' in sys.argv:
     def composite(k):
         p = sorted(k['sat'], key=int)[-1]; k['sat'][p] = [q * 3 for q in k['sat'][p]]
     ntest = 0
-    for j in log4 + cross4[:6]:
+    for j in log4 + cross4:
         check4(j, tuple(j['pair']) in closed4, fresh=True)
         must_fail(j, double_first, 'first basis point doubled (index 2)')
         must_fail(j, lambda k: k['sat'].__setitem__('2', k['sat']['2'][:1]), 'certificate for 2 shortened')

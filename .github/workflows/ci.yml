@@ -18,7 +18,7 @@ jobs:
           python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py
           python3 scripts/g1_full/check_evidence.py
           python3 scripts/g1_full/check_evidence.py --negative > /tmp/negative.out
-          grep -q '^negative tests: 150 altered records, all rejected' /tmp/negative.out
+          grep -q '^negative tests: 520 altered records, all rejected' /tmp/negative.out
           test "$(cat MagicSquareOfSquares/*.lean | grep -c '^theorem \|^private theorem ')" = "$(cat scripts/declared_theorems.txt)"
           python3 scripts/g1_full/octic_check.py > /tmp/octic.out
           diff /tmp/octic.out <(tail -n +2 scripts/g1_full/octic_check.txt)
