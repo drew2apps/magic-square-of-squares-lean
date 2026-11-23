@@ -88,7 +88,9 @@ jobs:
           python3 lproof.py 1e7 second_123.jsonl | grep -v "PARI stack" | head -n 5 | diff - <(head -n 5 lproof.txt)
           # LAST_PAIR.md, the fast parts (the two sieves are in the job last-pair of the full run)
           python3 lemma2_general.py | grep -v "PARI stack" | diff - lemma2_general.txt
-          python3 degenerate_section.py | grep -v "PARI stack" | diff - degenerate_section.txt
+          python3 degenerate_section.py /tmp/degenerate_section_polys.txt | grep -v "PARI stack" | diff - degenerate_section.txt
+          diff /tmp/degenerate_section_polys.txt degenerate_section_polys.txt
+          python3 wide_open.py | diff - route_wide_summary.txt
           grep -q "G has infinite order for every other rational tau: True$" degenerate_section.txt
           grep -q "^all identities hold: True$" lemma2_general.txt
           python3 height_enclosure.py 627,364 521266 | grep -v "PARI stack" | diff - height_enclosure_627_364.txt

@@ -10,7 +10,9 @@ specialisation is a homomorphism and a multiple of G specialises to O exactly wh
 order k, one of these would vanish at tau0:   y(jG) for k = 2j;   x((j+1)G) - x(jG) for k = 2j + 1.
 The program prints the rational roots of the discriminant and of the numerators of these functions for k = 2, ..., 10, 12.
 If they are only 0, 1, -1 (m n (m^2 - n^2) = 0, no ratio), G has infinite order for every ratio, and E1 has rank at least 1.
-usage: degenerate_section.py"""
+With a file name as argument, the ten polynomials are written to it in factored form.
+usage: degenerate_section.py [polynomials.txt]"""
+import sys
 from second_descent import *
 from sage.rings.fraction_field import FractionField
 Rt = PolynomialRing(QQ, 'tau'); tau = Rt.gen(); F = FractionField(Rt)
@@ -33,8 +35,16 @@ tests = {2: num(mult[1][1]), 3: num(mult[2][0] - mult[1][0]), 4: num(mult[2][1])
          7: num(mult[4][0] - mult[3][0]), 8: num(mult[4][1]), 9: num(mult[5][0] - mult[4][0]), 10: num(mult[5][1]), 12: num(mult[6][1])}
 bad = set(x for x, _ in Rt(E.discriminant()).roots(QQ))
 print('rational roots of the discriminant:', sorted(bad))
+import cypari2
+pari = cypari2.Pari(); pari.allocatemem(2*10**9)
+cert = open(sys.argv[1], 'w') if len(sys.argv) > 1 else None
 for k, f in sorted(tests.items()):
     assert f != 0
     rts = sorted(x for x, _ in f.roots(QQ)); bad |= set(rts)
-    print('order %d: a polynomial of degree %d in tau, rational roots %s' % (k, f.degree(), rts))
+    fac = f.factor(); degs = sorted(g.degree() for g, _ in fac)                      # Sage (FLINT)
+    pf = pari(str(f)).factor(); pdegs = sorted(int(pari.poldegree(g)) for g in pf[0])   # PARI, a second program
+    lin = sorted(-g[0]/g[1] for g, _ in fac if g.degree() == 1)
+    assert degs == pdegs and lin == rts
+    print('order %d: a polynomial of degree %d in tau, rational roots %s; degrees of its irreducible factors (Sage and PARI agree): %s' % (k, f.degree(), rts, degs))
+    if cert: cert.write('order %d\n%s\n\n' % (k, fac))
 print('rational tau that are not excluded:', sorted(bad), '; G has infinite order for every other rational tau:', sorted(bad) == [-1, 0, 1])

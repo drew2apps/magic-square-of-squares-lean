@@ -20,7 +20,8 @@ deg(A) <= 2 (4 + 4) = 16 by the parallelogram law for degrees, the same for B, a
 printed for deg C <= 192, twice that, to show how little depends on it.
 
 Arithmetic.  Everything that enters a bound is a rational number and is computed exactly: every log of an integer is replaced by
-(number of bits) * L2 with L2 = 0.6931471806 > log 2, log 3 by 1.0987, and the constants of the paper are decimal fractions.  The
+(number of bits) * L2 with L2 = 0.6931471806 > log 2, log 3 by 1.0987, and the constants of the paper (72.251, 6.019, 3.724, 4.015, 2.919, 3.21) are taken exactly as the decimal numbers printed
+there: no rounding of them is made here, and whether they are the right numbers is a question about the reading of the paper.  The
 comparisons (the bound for a, b against the range of the sieve) are made on these exact rationals; printed values are rounded up.
 The canonical height of G enters through a proved rational lower bound (height_enclosure.py: exact doubling and the
 height-difference bounds of Cremona, Prickett and Siksek); PARI's floating-point value is only compared with it.
@@ -39,7 +40,7 @@ m, n = (int(v) for v in sys.argv[1].split(',')); d = int(sys.argv[2]); amax = in
 fam = family(m, n); (Q1, r1), (Q2, r2) = fam['+13'], fam['+24']
 R = PolynomialRing(K, 't'); t = R.gen()
 f = [(d*Q1.change_ring(K))(-I*t), (d*Q1.change_ring(K))(I*t), (d*Q2.change_ring(K))(-I*t), (d*Q2.change_ring(K))(I*t)]
-L2 = QQ(6931471806)/10**10; L3 = QQ(10987)/10**4; dec = lambda x: QQ(int(round(x*1000)))/1000                # the decimal constants of the paper, as rationals
+L2 = QQ(6931471806)/10**10; L3 = QQ(10987)/10**4; dec = lambda x: QQ(int(x.replace('.', '')))/10**len(x.split('.')[1])   # a decimal constant of the paper, given as a string, as the exact rational it denotes
 def up(v, k=1): return float(ceil(QQ(v)*10**k))/10**k                 # a decimal rounded up, for printing
 def sci(v):
     v = QQ(v); e = len(str(int(floor(v)))) - 1; mant = ceil(v/QQ(10)**(e - 4))
@@ -63,10 +64,10 @@ def one(Q, r):
     assert iso(E.lift_x(E.division_polynomial(2).roots(QQ)[0][0]))[0] == alpha*E.division_polynomial(2).roots(QQ)[0][0] + beta   # the formula for x on the short model, on the point of order 2
     HX = hq(alpha*A0) + hq(r) + hq(beta) + 2*L2
     j = Es.j_invariant(); D = -16*(4*A**3 + 27*B**2); hinf = hq(j)                                    # hinf(j) <= hW(j)
-    c1g = (ulog(D) + hinf)/4 + hq(j)/8 + (ulog(A) + ulog(B))/2 + dec(3.724)
-    c2g = (ulog(D) + hinf)/4 + (ulog(A) + ulog(B))/2 + dec(4.015)
-    c1q = (ulog(D) + hinf)/4 + hq(j)/8 + ulog(abs(A) + abs(B) + 3)/2 + dec(2.919)                       # the first of the two expressions of Table 1; the minimum is not needed
-    c2q = (ulog(D) + hinf)/4 + ulog(abs(A) + abs(B) + 3)/2 + dec(3.21)
+    c1g = (ulog(D) + hinf)/4 + hq(j)/8 + (ulog(A) + ulog(B))/2 + dec('3.724')
+    c2g = (ulog(D) + hinf)/4 + (ulog(A) + ulog(B))/2 + dec('4.015')
+    c1q = (ulog(D) + hinf)/4 + hq(j)/8 + ulog(abs(A) + abs(B) + 3)/2 + dec('2.919')                       # the first of the two expressions of Table 1; the minimum is not needed
+    c2q = (ulog(D) + hinf)/4 + ulog(abs(A) + abs(B) + 3)/2 + dec('3.21')
     Kpt = QQ(3)/2*HX + ulog(1 + abs(A) + abs(B))/2 + L3/2 + c2g
     return dict(E=E, Es=Es, iso=iso, A=A, B=B, HX=HX, c1g=c1g, c2g=c2g, c1q=c1q, c2q=c2q, Kpt=Kpt, A0=A0)
 c = one(Q1, r1); c2_ = one(Q2, r2)
@@ -74,12 +75,12 @@ print('E1: HX = %.2f, c1 (general) = %.2f, c2 (general) = %.2f, c1 (over Q) = %.
 print('E2: HX = %.2f, c1 (general) = %.2f, c2 (general) = %.2f; bound for h^ of a point above a root of unity: %.1f' % (up(c2_['HX'], 2), up(c2_['c1g'], 2), up(c2_['c2g'], 2), up(c2_['Kpt'])))
 mu = 4*c['Kpt'] + 4*c2_['Kpt'] + c['c1g'] + c2_['c1g']
 print('mu2(C) <= 4 * %.1f + 4 * %.1f + %.2f + %.2f = %.1f  (the points of C above the roots of unity)' % (up(c['Kpt']), up(c2_['Kpt']), up(c['c1g'], 2), up(c2_['c1g'], 2), up(mu)))
-C1 = dec(72.251)
+C1 = dec('72.251')
 bounds = {}
 for deg in (96, 192):
     h2C = 2*deg*mu
     for name, c1, c2 in (('constants over Q', c['c1q'], c['c2q']), ('general constants', c['c1g'], c['c2g'])):
-        C2 = C1*(dec(6.019) + 4*c1); C3 = 4*c2; bounds[(deg, name)] = C1*h2C*deg + C2*deg*deg + C3
+        C2 = C1*(dec('6.019') + 4*c1); C3 = 4*c2; bounds[(deg, name)] = C1*h2C*deg + C2*deg*deg + C3
         print('(T) with deg C <= %d, h2(C) <= %s and the %s: C2 = %.1f, C3 = %.1f; every point of C of rank at most 1 has h^ <= %s' % (deg, sci(h2C), name, up(C2), up(C3), sci(bounds[(deg, name)])))
 # real values: the point G of the degenerate solution (t = 1, a root of unity) against (P) and against the bound for mu
 conj = [a for a in K.automorphisms() if a(I) == -I][0]; E1 = c['E']; EK = E1.change_ring(K)
