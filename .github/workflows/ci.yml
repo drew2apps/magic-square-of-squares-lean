@@ -158,6 +158,8 @@ jobs:
           python3 tally.py second_123.jsonl lvalue_open.jsonl | diff - tally.txt
           python3 wide.py 1000 1020 ../g1_full/modp_classes.txt | diff - <(head -n 5 wide_1000_2000.jsonl)
           python3 wide.py --summary wide_1000_2000.jsonl | diff - wide_summary.txt
+          python3 fibre.py 627,364 521266 | grep -v "PARI stack" | diff - fibre_627_364.txt
+          python3 mw_sieve.py 627,364 521266 1000000 10009 20089 30013 40009 | grep -v "PARI stack" | diff - mw_sieve_627_364.txt
           cd ../gauss_descent
           python3 real_points.py 300 $(cat pairs157.txt) | diff - real_points_157.txt
           python3 local_points.py $(cat pairs157.txt) | diff - local_points_157.txt
