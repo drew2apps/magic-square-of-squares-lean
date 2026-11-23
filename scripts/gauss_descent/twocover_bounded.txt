@@ -1,0 +1,10 @@
+(15,8) F0.GL.GU, PrimeBound 200: set returned by Magma 11, of these with the three norms square 2; first descent: 2
+(820,799) F0.F8.G4, PrimeBound 200: Magma did not finish
+(889,320) F0.GL.GU, PrimeBound 200: Magma did not finish
+(889,320) F0.GL.GU, PrimeBound 200: Magma did not finish
+(889,320) F0.F8.GL, PrimeBound 200: Magma did not finish
+(59,56) F0.GL.GU, PrimeBound 200: Magma did not finish
+(541,476) F0.F8.G4, PrimeBound 200: Magma did not finish
+(15,8) F0.GL.GU, PrimeBound 200 PrimeCutoff 1000: set returned by Magma 58, of these with the three norms square 4; first descent: 2
+(820,799) F0.F8.G4, PrimeBound 200 PrimeCutoff 1000: set returned by Magma 12, of these with the three norms square 4; first descent: 0
+9 requests, 3 finished; curves with an empty set: none

@@ -14,6 +14,29 @@ triple; a ratio for which no request was finished is named.  Magma is not run he
 usage: twocover_check.py [raw file [subsets file ...]]"""
 import sys, re
 NAMES = ['F0', 'F8', 'G4', 'GL', 'GU']
+if len(sys.argv) > 1 and sys.argv[1] == '--bounded':
+    # Requests with TwoCoverDescent(H : PrimeBound := B [, PrimeCutoff := C]): fewer primes are used for the local conditions, so the
+    # set returned contains the fake 2-Selmer set and may be larger.  If it is empty, the curve has no rational point.  A set that is
+    # not empty says nothing new.  Controls: curves with a rational point must keep a non-empty set with 2 compatible elements.
+    ours = {}
+    for l in [x for f in ('subsets.txt', 'subsets_34.txt') for x in open(f)]:
+        pair, rest = l.split(':', 1); m, n = (int(v) for v in pair.strip('() ').split(','))
+        for item in rest.split(): k, v = item.split('='); ours[(m, n, k)] = int(v.split('/')[-1])
+    blocks = open(sys.argv[2] if len(sys.argv) > 2 else 'magma_twocover_bounded_raw.txt').read().split('=== ')[1:]; empty = set(); fin = 0
+    for block in blocks:
+        inp, resp = block.split('--- response\n', 1)
+        mn = re.search(r'm := (\d+); n := (\d+);', inp); ts = re.search(r'for T in \[\[([\d,]+)\]\] do', inp); par = re.search(r'TwoCoverDescent\(H : (.*?)\)', inp)
+        key = (int(mn.group(1)), int(mn.group(2)), '.'.join(NAMES[int(j) - 1] for j in ts.group(1).split(','))); par = par.group(1).replace(' := ', ' ').replace(',', '')
+        lines = re.findall(r'<line>(.*?)</line>', resp, re.S)
+        sel = [int(l.split(':')[1]) for l in lines if l.startswith('fake 2-Selmer set:')]; cnt = [int(l.split(':')[1]) for l in lines if l.startswith('elements at which')]
+        assert any(l.startswith('ratio %d %d forms' % key[:2]) for l in lines) or not sel
+        if not cnt: print('(%d,%d) %s, %s: Magma did not finish' % (key + (par,))); continue
+        fin += 1; o = ours.get(key)
+        if o: assert sel[0] > 0 and cnt[0] >= o, 'a curve with tuples left by the first descent lost them'       # the bounded set contains the true one
+        if sel[0] == 0: empty.add(key)
+        print('(%d,%d) %s, %s: set returned by Magma %d, of these with the three norms square %d; first descent: %s%s' % (key + (par, sel[0], cnt[0], o, '  EMPTY: no rational point' if sel[0] == 0 else '')))
+    print('%d requests, %d finished; curves with an empty set: %s' % (len(blocks), fin, ' '.join('(%d,%d) %s' % k for k in sorted(empty)) or 'none'))
+    sys.exit(0)
 raw = open(sys.argv[1] if len(sys.argv) > 1 else 'magma_twocover_raw.txt').read()
 ours = {}
 for l in [x for f in (sys.argv[2:] or ['subsets.txt', 'subsets_34.txt']) for x in open(f)]:

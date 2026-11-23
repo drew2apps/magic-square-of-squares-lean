@@ -2,7 +2,9 @@ name: CI
 
 # Two levels.  Every push to main runs `build` (Lean, the axiom audit, the generated files, the C searches) and `quick`
 # (the checkers that read committed transcripts and a few small reruns): about 20 minutes, most of it Lean.
-# The three long jobs (`four-points`, `descents`, `twist-search`, about 65 minutes) regenerate every committed output.
+# The three long jobs (`four-points`, `descents`, `twist-search`, about 65 minutes) regenerate the main computed records
+# and stated samples of the others.  They do not regenerate everything: SECOND_DESCENT.md, section 8, lists the committed
+# outputs that no job reruns (the wide runs, the scan beyond 1100, the 681-ratio real-point run and others).
 # They run on a pull request, on a tag, when the workflow is started by hand (Actions, CI, "Run workflow"), and on a push
 # whose commit message contains [full ci].  A green mark on a push without [full ci] therefore says less than a green
 # mark on a full run: the long jobs show as skipped.  A release is made only from a commit with a full green run.
@@ -75,6 +77,7 @@ jobs:
           cd scripts/gauss_descent
           python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt
           python3 twocover_check.py | diff - twocover_check.txt
+          python3 twocover_check.py --bounded | diff - twocover_bounded.txt
           python3 subsets.py 4,3 15,8 | diff - <(head -n 2 subsets.txt)
           cd ../second_descent
           python3 magma_check.py | diff - magma_check.txt
@@ -89,6 +92,7 @@ jobs:
           python3 hill_identity.py | diff - hill_identity.txt
           python3 hill_check.py | diff - hill_check.txt
           python3 ap_relaxed.py 250 | diff - ap_relaxed_250.txt
+          gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c && /tmp/ap_exact 250 | diff - ap_exact_250.txt
 
   four-points:
     # The four-point argument (FOUR_POINTS.md) run as a program, not only checked through its records:
@@ -165,6 +169,8 @@ jobs:
           python3 scan.py 1000 1100 ../g1_full/modp_classes.txt /tmp/scan_list.txt | sed 's/  \[[0-9]* s\]$//' | diff - scan_1000_1100.txt
           diff /tmp/scan_list.txt <(awk -F'[, ]' '$1 <= 1100' scan_certificates.txt)
           python3 gd_check.py --pmax=100 $(cat pairs_scan_high.txt) | diff - gd_check_scan_high.txt
+          cd ../hill
+          gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c && /tmp/ap_exact 1000 | diff - ap_exact_1000.txt
 
   twist-search:
     # scripts/search/twist_search.txt: no t0 = p/q != 1 with m, p, q <= 400 at which all four points are rational on a twist.

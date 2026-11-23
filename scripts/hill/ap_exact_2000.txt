@@ -1,0 +1,3 @@
+shapes with q < p <= 2000: 811155 distinct values of w, 328985811435 pairs, each looked up exactly modulo 2^61 - 1
+self-test, the planted progression is found: yes
+candidates (to be confirmed in exact arithmetic): 0
