@@ -477,4 +477,142 @@ theorem fourPoint_rank3_bound {N1 N2 N3 N4 g12 g13 g42 g43 x y κ L e u1 u4 v2 v
   exact (fourPoint_blocks_not_both_definite hw r1 r4 r2 r3 hg12 hg13 hg42 hg43
     (by linarith) (by linarith) (not_le.mp hx) (not_le.mp hy)).elim
 
+/-! ## The common factor in Lemma C and the lower bounds of Lemmas A and B
+
+`FOUR_POINTS.md`, Section 3. The fractions of the three identities are not in lowest terms; these
+theorems bound what can cancel, and give the lower bounds for the heights that follow. -/
+
+/-- A common divisor of `2a²` and `bc` divides `2·gcd(a, b)²·gcd(a, c)²` (natural numbers). -/
+theorem gcd_two_sq_mul_dvd (a b c : ℕ) :
+    Nat.gcd (2 * a ^ 2) (b * c) ∣ 2 * Nat.gcd a b ^ 2 * Nat.gcd a c ^ 2 := by
+  have sq : ∀ d : ℕ, Nat.gcd (a ^ 2) d ∣ Nat.gcd a d ^ 2 := by
+    intro d
+    have h : Nat.gcd d (a * a) ∣ Nat.gcd d a * Nat.gcd d a := Nat.gcd_mul_right_dvd_mul_gcd d a a
+    rw [Nat.gcd_comm (a ^ 2) d, Nat.gcd_comm a d, pow_two, pow_two]
+    exact h
+  have h1 : Nat.gcd (2 * a ^ 2) (b * c) ∣ Nat.gcd (b * c) 2 * Nat.gcd (b * c) (a ^ 2) := by
+    rw [Nat.gcd_comm (2 * a ^ 2) (b * c)]
+    exact Nat.gcd_mul_right_dvd_mul_gcd (b * c) 2 (a ^ 2)
+  have h2 : Nat.gcd (b * c) 2 ∣ 2 := Nat.gcd_dvd_right _ _
+  have h3 : Nat.gcd (b * c) (a ^ 2) ∣ Nat.gcd a b ^ 2 * Nat.gcd a c ^ 2 := by
+    rw [Nat.gcd_comm (b * c) (a ^ 2)]
+    exact (Nat.gcd_mul_right_dvd_mul_gcd (a ^ 2) b c).trans (Nat.mul_dvd_mul (sq b) (sq c))
+  have h4 : Nat.gcd (b * c) 2 * Nat.gcd (b * c) (a ^ 2)
+      ∣ 2 * (Nat.gcd a b ^ 2 * Nat.gcd a c ^ 2) := Nat.mul_dvd_mul h2 h3
+  rw [mul_assoc]
+  exact h1.trans h4
+
+/-- Integers: if every common divisor of `P` and `A` divides `R0` and every common divisor of `P`
+and `B` divides `R1`, then a common divisor of `2P²` and `AB` divides `2·R0²·R1²`. -/
+theorem dvd_two_sq_mul_of_common {g P A B R0 R1 : ℤ} (h1 : g ∣ 2 * P ^ 2) (h2 : g ∣ A * B)
+    (hA : ∀ d : ℤ, d ∣ P → d ∣ A → d ∣ R0) (hB : ∀ d : ℤ, d ∣ P → d ∣ B → d ∣ R1) :
+    g ∣ 2 * R0 ^ 2 * R1 ^ 2 := by
+  have hg : g ∣ ((Int.gcd (2 * P ^ 2) (A * B) : ℕ) : ℤ) := Int.dvd_coe_gcd h1 h2
+  have e1 : (2 * P ^ 2).natAbs = 2 * P.natAbs ^ 2 := by
+    rw [Int.natAbs_mul, Int.natAbs_pow]; rfl
+  have e2 : (A * B).natAbs = A.natAbs * B.natAbs := Int.natAbs_mul A B
+  have hnat : Int.gcd (2 * P ^ 2) (A * B) ∣ 2 * Int.gcd P A ^ 2 * Int.gcd P B ^ 2 := by
+    show Nat.gcd (2 * P ^ 2).natAbs (A * B).natAbs
+      ∣ 2 * Nat.gcd P.natAbs A.natAbs ^ 2 * Nat.gcd P.natAbs B.natAbs ^ 2
+    rw [e1, e2]
+    exact gcd_two_sq_mul_dvd _ _ _
+  have hA' : ((Int.gcd P A : ℕ) : ℤ) ∣ R0 :=
+    hA _ (Int.gcd_dvd_left (a := P) (b := A)) (Int.gcd_dvd_right (a := P) (b := A))
+  have hB' : ((Int.gcd P B : ℕ) : ℤ) ∣ R1 :=
+    hB _ (Int.gcd_dvd_left (a := P) (b := B)) (Int.gcd_dvd_right (a := P) (b := B))
+  have hcast : ((Int.gcd (2 * P ^ 2) (A * B) : ℕ) : ℤ)
+      ∣ 2 * ((Int.gcd P A : ℕ) : ℤ) ^ 2 * ((Int.gcd P B : ℕ) : ℤ) ^ 2 := by
+    have h := Int.natCast_dvd_natCast.mpr hnat
+    push_cast at h
+    exact h
+  exact hg.trans (hcast.trans (mul_dvd_mul (mul_dvd_mul (dvd_refl 2) (pow_dvd_pow_of_dvd hA' 2))
+    (pow_dvd_pow_of_dvd hB' 2)))
+
+/-- **Lemma C, the common factor.** For coprime `p`, `q`, a common divisor of `2Π²` and `Ψ0·Ψ`
+divides `2·R0²·R1²` with `R0 = m²n²(m⁸ + 14m⁴n⁴ + n⁸)`, `R1 = (m² − n²)²(m⁸ + 14m⁴n⁴ + n⁸)`. -/
+theorem fourPoint_lemmaC_dvd {m n p q g : ℤ} (hpq : IsCoprime p q)
+    (h1 : g ∣ 2 * (2 * m * n * (n ^ 2 * p ^ 2 - m ^ 2 * q ^ 2) + (m ^ 4 - n ^ 4) * p * q) ^ 2)
+    (h2 : g ∣ (m ^ 2 * q ^ 2 + n ^ 2 * p ^ 2)
+        * ((m ^ 2 + n ^ 2) * (p ^ 2 + q ^ 2) - 4 * m * n * p * q)) :
+    g ∣ 2 * (m ^ 2 * n ^ 2 * (m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8)) ^ 2
+        * ((m ^ 2 - n ^ 2) ^ 2 * (m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8)) ^ 2 :=
+  dvd_two_sq_mul_of_common h1 h2 (fun _ a b => fourPoint_res_psi0_dvd hpq a b)
+    (fun _ a b => fourPoint_res_psi_dvd hpq a b)
+
+/-- **Lemma A, the lower bound.** If `g > 0` divides `64m⁴n⁴` (as every common factor does, by
+`fourPoint_pm_dvd`) and `N` is the numerator `32m²n²Ψ0` divided by `g`, then
+`max(p², q²) ≤ 2m²·N`. Here `m > n > 0`. -/
+theorem fourPoint_pm_lower {m n p q g N : ℤ} (hn : 0 < n) (hnm : n < m) (hg : 0 < g)
+    (hgd : g ∣ 64 * m ^ 4 * n ^ 4)
+    (hN : g * N = 32 * m ^ 2 * n ^ 2 * (m ^ 2 * q ^ 2 + n ^ 2 * p ^ 2)) :
+    p ^ 2 ≤ 2 * m ^ 2 * N ∧ q ^ 2 ≤ 2 * m ^ 2 * N := by
+  have hm : 0 < m := lt_trans hn hnm
+  have hK : 0 < 64 * m ^ 4 * n ^ 4 := by positivity
+  have hgle : g ≤ 64 * m ^ 4 * n ^ 4 := Int.le_of_dvd hK hgd
+  have hR : 0 ≤ 32 * m ^ 2 * n ^ 2 * (m ^ 2 * q ^ 2 + n ^ 2 * p ^ 2) := by positivity
+  have hN0 : 0 ≤ N := by
+    rcases le_or_gt 0 N with h | h
+    · exact h
+    · exfalso
+      have := mul_pos hg (neg_pos.mpr h)
+      linarith
+  have h64 : g * N ≤ 64 * m ^ 4 * n ^ 4 * N := mul_le_mul_of_nonneg_right hgle hN0
+  have hc : 0 < 32 * m ^ 2 * n ^ 4 := by positivity
+  have hmn : 0 ≤ m ^ 2 - n ^ 2 := by nlinarith
+  constructor
+  · have h0 : 0 ≤ 32 * m ^ 2 * n ^ 2 * (m ^ 2 * q ^ 2) := by positivity
+    have h : 32 * m ^ 2 * n ^ 4 * p ^ 2 ≤ 32 * m ^ 2 * n ^ 4 * (2 * m ^ 2 * N) := by linarith
+    exact le_of_mul_le_mul_left h hc
+  · have h0 : 0 ≤ 32 * m ^ 2 * n ^ 2 * (n ^ 2 * p ^ 2) := by positivity
+    have h1 : 0 ≤ 32 * m ^ 2 * n ^ 2 * q ^ 2 * (m ^ 2 - n ^ 2) :=
+      mul_nonneg (by positivity) hmn
+    have h : 32 * m ^ 2 * n ^ 4 * q ^ 2 ≤ 32 * m ^ 2 * n ^ 4 * (2 * m ^ 2 * N) := by linarith
+    exact le_of_mul_le_mul_left h hc
+
+/-- **Lemma B, the lower bound.** If `g > 0` divides `16(m² − n²)⁴` (as every common factor does,
+by `fourPoint_inv_dvd`) and `N` is the numerator `2(m² − n²)²Ψ` divided by `g`, then
+`max(p², q²) ≤ 8(m + n)²·N`. Here `m > n > 0`. -/
+theorem fourPoint_inv_lower {m n p q g N : ℤ} (hn : 0 < n) (hnm : n < m) (hg : 0 < g)
+    (hgd : g ∣ 16 * (m ^ 2 - n ^ 2) ^ 4)
+    (hN : g * N = 2 * (m ^ 2 - n ^ 2) ^ 2
+        * ((m ^ 2 + n ^ 2) * (p ^ 2 + q ^ 2) - 4 * m * n * p * q)) :
+    p ^ 2 ≤ 8 * (m + n) ^ 2 * N ∧ q ^ 2 ≤ 8 * (m + n) ^ 2 * N := by
+  have hm : 0 < m := lt_trans hn hnm
+  have hd : 0 < m - n := sub_pos.mpr hnm
+  have hs : 0 < m ^ 2 - n ^ 2 := by nlinarith
+  have hK : 0 < 16 * (m ^ 2 - n ^ 2) ^ 4 := mul_pos (by norm_num) (pow_pos hs 4)
+  have hgle : g ≤ 16 * (m ^ 2 - n ^ 2) ^ 4 := Int.le_of_dvd hK hgd
+  have hsq : 0 ≤ (m ^ 2 - n ^ 2) ^ 2 := sq_nonneg _
+  have hpq2 : 0 ≤ 2 * m * n * (p - q) ^ 2 :=
+    mul_nonneg (mul_nonneg (mul_nonneg (by norm_num) hm.le) hn.le) (sq_nonneg _)
+  have hR : 0 ≤ 2 * (m ^ 2 - n ^ 2) ^ 2
+      * ((m ^ 2 + n ^ 2) * (p ^ 2 + q ^ 2) - 4 * m * n * p * q) := by
+    have e : (m ^ 2 + n ^ 2) * (p ^ 2 + q ^ 2) - 4 * m * n * p * q
+        = (m - n) ^ 2 * (p ^ 2 + q ^ 2) + 2 * m * n * (p - q) ^ 2 := by ring
+    rw [e]
+    exact mul_nonneg (mul_nonneg (by norm_num) hsq)
+      (add_nonneg (mul_nonneg (sq_nonneg _) (add_nonneg (sq_nonneg _) (sq_nonneg _))) hpq2)
+  have hN0 : 0 ≤ N := by
+    rcases le_or_gt 0 N with h | h
+    · exact h
+    · exfalso
+      have := mul_pos hg (neg_pos.mpr h)
+      linarith
+  have h16 : g * N ≤ 16 * (m ^ 2 - n ^ 2) ^ 4 * N := mul_le_mul_of_nonneg_right hgle hN0
+  have hc : 0 < 2 * (m ^ 2 - n ^ 2) ^ 2 * (m - n) ^ 2 :=
+    mul_pos (mul_pos (by norm_num) (pow_pos hs 2)) (pow_pos hd 2)
+  have hA : 0 ≤ 2 * (m ^ 2 - n ^ 2) ^ 2 * (2 * m * n * (p - q) ^ 2) :=
+    mul_nonneg (mul_nonneg (by norm_num) hsq) hpq2
+  constructor
+  · have h0 : 0 ≤ 2 * (m ^ 2 - n ^ 2) ^ 2 * ((m - n) ^ 2 * q ^ 2) :=
+      mul_nonneg (mul_nonneg (by norm_num) hsq) (mul_nonneg (sq_nonneg _) (sq_nonneg _))
+    have h : 2 * (m ^ 2 - n ^ 2) ^ 2 * (m - n) ^ 2 * p ^ 2
+        ≤ 2 * (m ^ 2 - n ^ 2) ^ 2 * (m - n) ^ 2 * (8 * (m + n) ^ 2 * N) := by linarith
+    exact le_of_mul_le_mul_left h hc
+  · have h0 : 0 ≤ 2 * (m ^ 2 - n ^ 2) ^ 2 * ((m - n) ^ 2 * p ^ 2) :=
+      mul_nonneg (mul_nonneg (by norm_num) hsq) (mul_nonneg (sq_nonneg _) (sq_nonneg _))
+    have h : 2 * (m ^ 2 - n ^ 2) ^ 2 * (m - n) ^ 2 * q ^ 2
+        ≤ 2 * (m ^ 2 - n ^ 2) ^ 2 * (m - n) ^ 2 * (8 * (m + n) ^ 2 * N) := by linarith
+    exact le_of_mul_le_mul_left h hc
+
 end G1

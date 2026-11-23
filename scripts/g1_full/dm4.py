@@ -58,18 +58,27 @@ criterion) and eps = r delta / mu:  v^T G v >= (1 - eps) v^T G0 v for all real v
 are therefore supersets of the sets of the argument.  Floating point is used only to choose (the basis, k, mu, Hstar)
 and for the diagnostic comparison of N(a) - H with [-eL, eU]; each choice is verified exactly where it matters.
 
-Taken from other software without a check here: PARI's upper bound for the rank (ellrank), its saturation
-(ellsaturation) and group law; Sage's lower bound lambda for the canonical height of non-torsion points
-(height_function().min), whose floating-point value is used as an exact number; Kodaira symbols and Tamagawa numbers
-(local_data) inside BUP.  The rank must equal the number r = 1, 2 or 3 of independent points found (PARI's lower bound
-is not used: it can rest on parity).  The index of the points in E(Q)/torsion is at most sqrt(gamma^r Reg' / lambda^r),
-gamma^r = 1, 4/3, 2 (Hermite), with Reg' bounded above from the enclosure; saturation is done up to that bound.
+Taken from other software without a check here: PARI's upper bound for the rank (ellrank) and its group law; Sage's
+lower bound lambda for the canonical height of non-torsion points (height_function().min, documented as rigorous),
+used 1% below the value returned; Kodaira symbols and Tamagawa numbers (local_data) inside BUP.  The rank must equal
+the number r = 1, 2 or 3 of independent points found (PARI's lower bound is not used: it can rest on parity).  The
+index of the points in E(Q)/torsion is at most sqrt(gamma^r Reg' / lambda^r), gamma^r = 1, 4/3, 2 (Hermite), with Reg'
+bounded above from the enclosure.  PARI's ellsaturation saturates up to that bound; that the resulting basis is
+saturated at every prime up to the bound is then certified by reduction modulo auxiliary primes (satcert.py), and the
+certificate is written into the record (sat) with the basis and the torsion points on E_T (G_T, tors_T), the rational
+Gram matrix (G0_2e60) and the thresholds and vector counts of the two lists (lists), so that check_evidence.py can
+verify the saturation and count the vectors again without PARI or Sage.
 usage: dm4.py [-v] [--Hstar=H] [--upper=N] m,n [m,n ...]      (needs passagemath-schemes, passagemath-symbolics, cypari2; 15 to 60 seconds per pair)"""
 import sys, json, math, time, os
 from fractions import Fraction as Fr
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sage.all__sagemath_schemes import *
 from dm import classify_t, tight_bounds, issq
+import satcert
+try:
+    from sage.env import SAGE_VERSION
+except Exception:
+    SAGE_VERSION = 'unknown'
 from hbounds import height_bounds_exact, ln_bounds, LN2     # exact BUP, U for an integral model; rational enclosures of logarithms
 
 def ln_int_bounds(v):
@@ -189,6 +198,7 @@ def dm4(m, n, Hstar=None, verbose=False):
     if r not in (1, 2, 3): out['status'] = 'upper bound for the rank is not 1, 2 or 3'; return out
     from cypari2 import Pari
     pari = Pari(); Ep = Em.pari_curve()
+    out['software'] = 'PARI %s (cypari2), Sage library %s' % ('.'.join(str(v) for v in pari.version()), SAGE_VERSION)
     R0 = phi(toET(E0([-a2, a1*a2 - a3])))
     cand = [R0]
     for pp in range(-60, 61):                           # rational points of C above t of small height
@@ -220,7 +230,8 @@ def dm4(m, n, Hstar=None, verbose=False):
     out['rank'] = r                                     # r independent points and the upper bound r
     lam = float(Em.height_function().min(0.01, 20))
     if lam <= 0: out['status'] = 'no height lower bound'; return out
-    lamq = Fr(lam)                                      # the exact value of that float
+    lamq = Fr(lam) * Fr(99, 100)                        # the exact value of that float, lowered by 1%: Sage documents its value as a
+                                                        # proved lower bound; the margin covers any rounding in how it is printed or stored
     # ---- exact arithmetic from here on: constants, enclosures of height matrices, the two lists
     BUP, U = height_bounds_exact([0, -(al + be), 0, al*be, 0], ET)          # fractions
     Aq = QQ(-(al + be)); Bq = QQ(al*be); b2 = 4*Aq; b4 = 2*Bq; b8 = -Bq*Bq
@@ -247,7 +258,7 @@ def dm4(m, n, Hstar=None, verbose=False):
     lo0, hi0 = gram_enclosure(basis); reg0 = det_iv(lo0, hi0)
     if not reg0.lo > 0: out['status'] = 'independence of the points not certified'; return out
     herm = {1: Fr(1), 2: Fr(4, 3), 3: Fr(2)}[r]         # gamma_r^r (Hermite): Reg >= lam^r / gamma_r^r
-    kmax = int(math.floor(math.sqrt(float(reg0.hi * herm) / lam**r))) + 1
+    kmax = int(math.floor(math.sqrt(float(reg0.hi * herm) / float(lamq)**r))) + 1
     while not kmax * kmax * lamq**r >= reg0.hi * herm: kmax += 1          # index^2 <= Reg' gamma^r / lam^r <= kmax^2, exactly
     sat = pari.ellsaturation(Ep, [[P[0], P[1]] for P in basis], kmax)
     gens = [Em([QQ(P[0]), QQ(P[1])]) for P in sat]
@@ -280,14 +291,23 @@ def dm4(m, n, Hstar=None, verbose=False):
     if not eps <= Fr(1, 100): out['status'] = 'Gram matrix not enclosed tightly enough'; return out
     G0inv = matrix(QQ, [[QQ(int(v.numerator)) / QQ(int(v.denominator)) for v in row] for row in G0]).inverse()
     G0inv_d = [Fr(int(G0inv[i, i].numerator()), int(G0inv[i, i].denominator())) for i in range(r)]
-    out['gens'] = 'points saturated at primes <= %d (height lower bound %.4f, regulator of the points before saturation at most %.3f)' % (kmax, lam, float(reg0.hi)); out['kmax'] = kmax; out['lam'] = lam; out['reg0'] = float(reg0.hi)
+    out['gens'] = 'points saturated at primes <= %d (height lower bound %.4f, regulator of the points before saturation at most %.3f)' % (kmax, lam, float(reg0.hi)); out['kmax'] = kmax; out['lam'] = lam; out['lam_used'] = float(lamq); out['reg0'] = float(reg0.hi)
     out['min_model'] = [str(v) for v in Em.ainvs()]; out['G'] = [[str(P[0]), str(P[1])] for P in gens]; out['gram'] = Gm; out['reg'] = reg
     out['R0'] = [str(R0[0]), str(R0[1])]
     out['gram_check'] = dict(max_deviation=float(delta), mu=float(mu), relative=float(eps))
     tors = Em.torsion_points(); out['ntors'] = len(tors)
+    # ---- a certificate that the basis is saturated at every prime <= kmax, by reduction modulo auxiliary primes (satcert.py,
+    #      pure Python; independent of PARI's ellsaturation, which produced the basis)
+    frp = lambda P: [str(QQ(P[0])), str(QQ(P[1]))]
+    gT = [psi(P) for P in gens]; tT = [psi(P) for P in tors if not P.is_zero()]
+    out['G_T'] = [frp(P) for P in gT]; out['tors_T'] = [frp(P) for P in tT]; out['R0_T'] = frp(psi(R0)); out['roots'] = [str(al), str(be)]
+    cert = satcert.certificate(int(al), int(be), [(Fr(a), Fr(b)) for a, b in out['G_T']], [(Fr(a), Fr(b)) for a, b in out['tors_T']], kmax)
+    if cert is None: out['status'] = 'no saturation certificate found'; return out
+    out['sat'] = cert
     import itertools
     G0i = [[int(G0[i][j] * one60) for j in range(r)] for i in range(r)]       # G0 is dyadic: these are integers
-    def box(bound, centre2=None):
+    out['G0_2e60'] = [[str(v) for v in row] for row in G0i]; out['lists'] = {}
+    def box(bound, centre2=None, name=None):
         """All integer vectors c with (c - centre2/2)^T G (c - centre2/2) <= bound for the true height matrix G
         (centre2 an integer vector, default 0): a superset, listed with the rational centre matrix G0 and the bound
         divided by 1 - eps.  Integer arithmetic: with u = 2c - centre2 the condition is u^T G0 u <= 4 bound/(1 - eps)."""
@@ -296,9 +316,11 @@ def dm4(m, n, Hstar=None, verbose=False):
         for i in range(r):
             sh = sqrt_hi(bp * G0inv_d[i])               # |c_i - centre2_i/2|^2 <= bp (G0^-1)_ii
             rng.append(range(int(math.floor(Fr(centre2[i], 2) - sh)), int(math.ceil(Fr(centre2[i], 2) + sh)) + 1))
+        nv = 0
         for cvec in itertools.product(*rng):
             u = [2*cvec[i] - centre2[i] for i in range(r)]
-            if sum(G0i[i][j]*u[i]*u[j] for i in range(r) for j in range(r)) <= thr: yield cvec
+            if sum(G0i[i][j]*u[i]*u[j] for i in range(r) for j in range(r)) <= thr: nv += 1; yield cvec
+        if name: out['lists'][name] = dict(bound=float(bound), centre2=list(centre2), threshold=str(thr), vectors=nv)
     def comb(cvec):
         P = Em(0)
         for cc, g in zip(cvec, gens): P = P + cc*g
@@ -360,18 +382,19 @@ def dm4(m, n, Hstar=None, verbose=False):
             if str(tf) not in verdicts: verdicts[str(tf)] = classify_t(m, n, tf)
     for tt in (0, 1, -1, t1, 1/t1): test_t(QQ(tt))
     # ---- (A) all Q with hhat(2Q - R0) <= 4 (Hstar + eU), that is, (c - rho/2)^T G (c - rho/2) <= Hstar + eU
-    obs = [0.0, 0.0]; na = 0
-    for cvec in box(Hstar + eU, list(rho)):
+    obs = [0.0, 0.0]; na = 0; samples = []
+    for cvec in box(Hstar + eU, list(rho), 'A'):
         Q = comb(cvec); u = [2*cvec[i] - rho[i] for i in range(r)]
         Na = sum(Gm[i][j]*u[i]*u[j] for i in range(r) for j in range(r)) / 4
         for Tt in tors:
             na += 1; tq = t_of(Q + Tt); test_t(tq)
+            if tq is not None and tq != 0 and na % 7 == 3 and len(samples) < 40: samples.append(Q + Tt)
             if tq is not None and tq != 0:              # numerical check of the bounds for N(a) on actual points
                 dv = Na - hQ(tq); obs[0] = min(obs[0], dv); obs[1] = max(obs[1], dv)
     out['nA'] = na; out['observed N(a) - H'] = obs
     if not (-float(eL) <= obs[0] and obs[1] <= float(eU)): out['status'] = 'observed N(a) - H outside the bounds'; return out
     # ---- (B) all z with hhat(z) <= cstar, and the equation t(Q - z) t(Q) = -1
-    zs = [comb(cvec) + Tt for cvec in box(cs) for Tt in tors]
+    zs = [comb(cvec) + Tt for cvec in box(cs, None, 'B') for Tt in tors]
     out['nz'] = len(zs)
     qt = qpoly(t)
     class F2:                                   # alpha + beta*y in Q(t)[y]/(y^2 - q(t))
@@ -403,7 +426,12 @@ def dm4(m, n, Hstar=None, verbose=False):
     for Qs, zs_ in ((gens[0] + gl + (gens[0] if r == 1 else 0*gl), gens[0]), (2*gens[0] - gl + tors[1] + (3*gens[0] if r == 1 else 0*gl), gl + tors[2 % len(tors)]), (3*gl + tors[3 % len(tors)], tors[1])):
         ta, tb = t_of(Qs), t_of(Qs - zs_)
         assert ta is not None and tb is not None and ta in solve(zs_, ta*tb), 'solver self-test'
-    out['solver_selftest'] = 'ok'
+    nself = 3; znz = [z for z in zs if not z.is_zero()]
+    for i, Qs in enumerate(samples):                    # the same test on points of list (A) and points z of list (B)
+        zs_ = znz[(5*i + 1) % len(znz)]; ta, tb = t_of(Qs), t_of(Qs - zs_)
+        if ta is None or tb is None: continue
+        assert ta in solve(zs_, ta*tb), 'solver self-test'; nself += 1
+    out['solver_selftest'] = 'ok (%d pairs)' % nself
     nroots = 0
     for z in zs:
         for w in [z, -z, z + R0, z - R0, R0 - z, -z - R0] + [z + P for P in two] + [P for P in two]: test_t(t_of(w))     # the special positions

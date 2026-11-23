@@ -1,0 +1,8 @@
+# Search for rational configurations of all four points of the four-point argument on a quadratic twist
+# (scripts/search/twist_find.c).  For coprime m > n >= 1 and coprime p, q >= 1, p != q, the four points above
+# t0, -t0, 1/t0, -1/t0 with t0 = p/q are rational on one quadratic twist of y^2 = F0 GL exactly when
+#     (m^2 q^2 + n^2 p^2)(n^2 q^2 + m^2 p^2)   and   (S T)^2 - (4 m n p q)^2,   S = m^2 + n^2, T = p^2 + q^2,
+# are both squares (that is, F0 F8 and GL GU are squares at t0).  p = q always works (the degenerate t0 = 1).
+# Result, 2026-11-22: no solution with m, p, q <= 400.  So the lattice step (Propositions 2 and 3 of FOUR_POINTS.md)
+# cannot be tested on an actual configuration of four rational points; Proposition 1 can, on two points (dm4_twist.py).
+twist_find 400 400: 0 solutions

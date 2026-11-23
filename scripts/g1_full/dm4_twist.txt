@@ -1,0 +1,85 @@
+pair (72,65): bounds over the algebraic closure: N(a) - H in [-61.7, 19.6], |<a1,a2>| <= 32.8, |<a1,a3>| <= 32.4; record: [-61.7, 19.6], kappa 32.8
+  pm  H =   14.717  N(a1) - H =   8.278  N(a2) - H =   9.328  pairing =   0.127  (each +- 0.001)  inside
+  pm  H =   14.717  N(a1) - H =   8.297  N(a2) - H =   9.336  pairing =   0.081  (each +- 0.001)  inside
+  pm  H =   66.362  N(a1) - H =   7.198  N(a2) - H =   8.675  pairing =   5.400  (each +- 0.001)  inside
+  pm  H =   66.362  N(a1) - H =   6.137  N(a2) - H =   7.615  pairing =   6.465  (each +- 0.001)  inside
+  pm  H =  147.028  N(a1) - H =   8.158  N(a2) - H =   9.398  pairing =   0.075  (each +- 0.001)  inside
+  pm  H =  147.028  N(a1) - H =   8.145  N(a2) - H =   9.393  pairing =   0.109  (each +- 0.001)  inside
+pair (137,7): bounds over the algebraic closure: N(a) - H in [-66.2, 21.2], |<a1,a2>| <= 33.9, |<a1,a3>| <= 35.3; record: [-66.2, 21.2], kappa 35.3
+  pm  H =   27.427  N(a1) - H =   6.826  N(a2) - H =   8.008  pairing =  -0.321  (each +- 0.001)  inside
+  pm  H =   27.427  N(a1) - H =   4.993  N(a2) - H =   6.188  pairing =   1.508  (each +- 0.001)  inside
+  pm  H =  102.757  N(a1) - H =   7.782  N(a2) - H =   8.844  pairing =   4.679  (each +- 0.001)  inside
+  pm  H =  102.757  N(a1) - H =   6.412  N(a2) - H =   7.482  pairing =   6.047  (each +- 0.001)  inside
+  pm  H =  230.839  N(a1) - H =   7.374  N(a2) - H =   7.618  pairing =  -0.097  (each +- 0.001)  inside
+  pm  H =  230.839  N(a1) - H =   6.387  N(a2) - H =   6.631  pairing =   0.890  (each +- 0.001)  inside
+  inv H =   18.968  N(a1) - H =   4.824  N(a2) - H =   4.494  pairing =  -6.350  (each +- 0.001)  inside
+  inv H =   65.335  N(a1) - H =   7.078  N(a2) - H =   8.381  pairing =   0.075  (each +- 0.001)  inside
+  inv H =  151.089  N(a1) - H =   6.729  N(a2) - H =   4.313  pairing =  -5.585  (each +- 0.001)  inside
+pair (425,168): bounds over the algebraic closure: N(a) - H in [-83.3, 26.2], |<a1,a2>| <= 43.0, |<a1,a3>| <= 43.5; record: [-83.3, 26.2], kappa 43.5
+  inv H =   10.639  N(a1) - H =  11.382  N(a2) - H =  10.064  pairing =  -5.579  (each +- 0.002)  inside
+  inv H =   48.432  N(a1) - H =   8.902  N(a2) - H =  10.386  pairing =   0.104  (each +- 0.002)  inside
+  inv H =  108.310  N(a1) - H =  12.001  N(a2) - H =   9.760  pairing =  -5.395  (each +- 0.002)  inside
+pair (593,257): bounds over the algebraic closure: N(a) - H in [-87.8, 27.6], |<a1,a2>| <= 45.1, |<a1,a3>| <= 45.6; record: [-87.8, 27.6], kappa 45.6
+  pm  H =   14.647  N(a1) - H =  11.137  N(a2) - H =   8.813  pairing =   0.557  (each +- 0.002)  inside
+  pm  H =   14.647  N(a1) - H =  10.807  N(a2) - H =   8.551  pairing =   0.916  (each +- 0.002)  inside
+  pm  H =   49.926  N(a1) - H =  10.614  N(a2) - H =  12.022  pairing =   6.161  (each +- 0.002)  inside
+  pm  H =   49.926  N(a1) - H =  10.454  N(a2) - H =  11.912  pairing =   6.329  (each +- 0.002)  inside
+  pm  H =  112.457  N(a1) - H =   9.256  N(a2) - H =  10.838  pairing =   0.706  (each +- 0.002)  inside
+  pm  H =  112.457  N(a1) - H =   9.296  N(a2) - H =  10.864  pairing =   0.664  (each +- 0.002)  inside
+pair (920,129): bounds over the algebraic closure: N(a) - H in [-92.7, 28.9], |<a1,a2>| <= 47.1, |<a1,a3>| <= 48.0; record: [-92.7, 28.9], kappa 48.0
+pair (740,539): bounds over the algebraic closure: N(a) - H in [-92.5, 28.7], |<a1,a2>| <= 47.5, |<a1,a3>| <= 47.6; record: [-92.5, 28.7], kappa 47.6
+pair (828,173): bounds over the algebraic closure: N(a) - H in [-91.6, 28.6], |<a1,a2>| <= 46.7, |<a1,a3>| <= 47.5; record: [-91.6, 28.6], kappa 47.5
+  pm  H =   19.963  N(a1) - H =  13.421  N(a2) - H =   8.861  pairing =   1.134  (each +- 0.002)  inside
+  pm  H =   19.963  N(a1) - H =  13.134  N(a2) - H =   8.612  pairing =   1.416  (each +- 0.002)  inside
+  pm  H =   82.997  N(a1) - H =  13.091  N(a2) - H =  13.259  pairing =   7.123  (each +- 0.002)  inside
+  pm  H =   82.997  N(a1) - H =  10.057  N(a2) - H =  10.184  pairing =  10.160  (each +- 0.002)  inside
+  pm  H =  186.338  N(a1) - H =  12.664  N(a2) - H =   7.990  pairing =   1.831  (each +- 0.002)  inside
+  pm  H =  186.338  N(a1) - H =  13.431  N(a2) - H =   8.748  pairing =   1.038  (each +- 0.002)  inside
+  pm  H =    9.952  N(a1) - H =  11.502  N(a2) - H =  11.668  pairing =   3.204  (each +- 0.002)  inside
+  pm  H =    9.952  N(a1) - H =  13.415  N(a2) - H =  13.539  pairing =   1.295  (each +- 0.002)  inside
+  pm  H =   52.172  N(a1) - H =  11.656  N(a2) - H =  11.829  pairing =   8.612  (each +- 0.002)  inside
+  pm  H =   52.172  N(a1) - H =  11.914  N(a2) - H =  12.059  pairing =   8.357  (each +- 0.002)  inside
+  pm  H =  114.763  N(a1) - H =  11.854  N(a2) - H =  11.887  pairing =   2.790  (each +- 0.002)  inside
+  pm  H =  114.763  N(a1) - H =  12.691  N(a2) - H =  12.756  pairing =   1.966  (each +- 0.002)  inside
+  inv H =   27.533  N(a1) - H =   6.424  N(a2) - H =  10.974  pairing =   5.053  (each +- 0.002)  inside
+  inv H =  100.398  N(a1) - H =  11.368  N(a2) - H =   9.042  pairing =   0.036  (each +- 0.002)  inside
+  inv H =  229.039  N(a1) - H =   4.369  N(a2) - H =   7.745  pairing =   4.998  (each +- 0.002)  inside
+pair (840,83): bounds over the algebraic closure: N(a) - H in [-91.2, 28.5], |<a1,a2>| <= 46.3, |<a1,a3>| <= 47.3; record: [-91.2, 28.5], kappa 47.3
+pair (923,757): bounds over the algebraic closure: N(a) - H in [-95.7, 29.7], |<a1,a2>| <= 49.0, |<a1,a3>| <= 48.9; record: [-95.7, 29.7], kappa 49.0
+pair (15,8): bounds over the algebraic closure: N(a) - H in [-38.9, 13.0], |<a1,a2>| <= 21.7, |<a1,a3>| <= 22.0; record: [-38.9, 13.0], kappa 22.0
+  pm  H =    2.833  N(a1) - H =   5.321  N(a2) - H =   4.817  pairing =  -1.474  (each +- 0.001)  inside
+  pm  H =    2.833  N(a1) - H =   3.896  N(a2) - H =   4.727  pairing =  -1.314  (each +- 0.001)  inside
+  pm  H =    6.572  N(a1) - H =   3.348  N(a2) - H =   3.885  pairing =   1.628  (each +- 0.001)  inside
+  pm  H =    6.572  N(a1) - H =   4.769  N(a2) - H =   5.258  pairing =   1.802  (each +- 0.001)  inside
+  pm  H =   19.025  N(a1) - H =   4.250  N(a2) - H =   5.270  pairing =  -1.165  (each +- 0.001)  inside
+  pm  H =   19.025  N(a1) - H =   4.526  N(a2) - H =   4.252  pairing =  -1.521  (each +- 0.001)  inside
+  pm  H =    5.666  N(a1) - H =   5.460  N(a2) - H =   5.576  pairing =   0.855  (each +- 0.001)  inside
+  pm  H =    5.666  N(a1) - H =   5.182  N(a2) - H =   5.331  pairing =   1.199  (each +- 0.001)  inside
+  pm  H =   21.279  N(a1) - H =   4.368  N(a2) - H =   4.595  pairing =   3.856  (each +- 0.001)  inside
+  pm  H =   21.279  N(a1) - H =   3.793  N(a2) - H =   4.076  pairing =   4.481  (each +- 0.001)  inside
+  pm  H =   48.223  N(a1) - H =   5.365  N(a2) - H =   5.693  pairing =   0.871  (each +- 0.001)  inside
+  pm  H =   48.223  N(a1) - H =   5.139  N(a2) - H =   5.532  pairing =   1.133  (each +- 0.001)  inside
+  inv H =    5.247  N(a1) - H =   3.370  N(a2) - H =   3.125  pairing =   1.130  (each +- 0.001)  inside
+  inv H =   15.735  N(a1) - H =   3.814  N(a2) - H =   5.325  pairing =   0.201  (each +- 0.001)  inside
+  inv H =   37.955  N(a1) - H =   2.426  N(a2) - H =   3.098  pairing =  -1.688  (each +- 0.001)  inside
+pair (21,20): bounds over the algebraic closure: N(a) - H in [-45.0, 14.7], |<a1,a2>| <= 25.0, |<a1,a3>| <= 24.1; record: [-45.0, 14.7], kappa 25.0
+  pm  H =   14.727  N(a1) - H =   5.825  N(a2) - H =   6.901  pairing =   2.595  (each +- 0.001)  inside
+  pm  H =   14.727  N(a1) - H =   5.124  N(a2) - H =   6.204  pairing =   3.315  (each +- 0.001)  inside
+  pm  H =   57.086  N(a1) - H =   5.336  N(a2) - H =   7.044  pairing =   1.769  (each +- 0.001)  inside
+  pm  H =   57.086  N(a1) - H =   3.286  N(a2) - H =   4.996  pairing =   2.219  (each +- 0.001)  inside
+  pm  H =  128.444  N(a1) - H =   5.227  N(a2) - H =   7.071  pairing =   2.576  (each +- 0.001)  inside
+  pm  H =  128.444  N(a1) - H =   4.535  N(a2) - H =   6.378  pairing =   3.266  (each +- 0.001)  inside
+  inv H =    9.081  N(a1) - H =   5.808  N(a2) - H =   4.703  pairing =   3.746  (each +- 0.001)  inside
+  inv H =   37.932  N(a1) - H =   3.931  N(a2) - H =   5.552  pairing =   0.168  (each +- 0.001)  inside
+  inv H =   84.943  N(a1) - H =   5.565  N(a2) - H =   4.460  pairing =   4.056  (each +- 0.001)  inside
+pair (41,1): bounds over the algebraic closure: N(a) - H in [-49.5, 16.4], |<a1,a2>| <= 25.7, |<a1,a3>| <= 27.4; record: [-49.5, 16.4], kappa 27.4
+  pm  H =    9.885  N(a1) - H =   5.770  N(a2) - H =   4.972  pairing =   0.969  (each +- 0.001)  inside
+  pm  H =    9.885  N(a1) - H =   7.081  N(a2) - H =   6.278  pairing =  -0.340  (each +- 0.001)  inside
+  pm  H =   37.932  N(a1) - H =   7.084  N(a2) - H =   7.089  pairing =   3.393  (each +- 0.001)  inside
+  pm  H =   37.932  N(a1) - H =   6.147  N(a2) - H =   6.157  pairing =   4.329  (each +- 0.001)  inside
+  pm  H =   85.748  N(a1) - H =   5.626  N(a2) - H =   6.442  pairing =   0.373  (each +- 0.001)  inside
+  pm  H =   85.748  N(a1) - H =   6.287  N(a2) - H =   7.099  pairing =  -0.287  (each +- 0.001)  inside
+  inv H =   14.440  N(a1) - H =   5.798  N(a2) - H =   3.614  pairing =  -0.799  (each +- 0.001)  inside
+  inv H =   56.151  N(a1) - H =   4.256  N(a2) - H =   5.245  pairing =  -2.536  (each +- 0.001)  inside
+  inv H =  127.106  N(a1) - H =   6.293  N(a2) - H =   4.710  pairing =  -1.286  (each +- 0.001)  inside
+72 configurations on twists, 0 outside the bounds; largest |N(a) - H| = 13.539, largest |pairing| = 10.160

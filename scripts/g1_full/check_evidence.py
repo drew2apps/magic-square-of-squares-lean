@@ -22,6 +22,8 @@
    lower bound. dm4_cross.jsonl: the same checks for 43 pairs of dm_evidence.txt that dm4.py closes a second time.
 This does not check the heights, the ranks, or that the points generate."""
 import ast, math, os, re, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import satcert
 from fractions import Fraction as Fr
 here = os.path.dirname(os.path.abspath(__file__))
 
@@ -123,6 +125,28 @@ def same_curve(c46a, c46b):
     if c4a == 0 or c6a == 0 or c4b == 0 or c6b == 0: return False
     u2 = (c6a / c6b) / (c4a / c4b)
     return issq(u2) and u2 * u2 == c4a / c4b
+def isqrt_up(q):
+    """An integer >= sqrt(q), q a non-negative fraction."""
+    v = math.isqrt(q.numerator // q.denominator + 1) + 1
+    return v
+def count_vectors(M, thr, s):
+    """The number of integer vectors c with u^T M u <= thr, u = 2c - s (M a positive definite integer matrix).
+    Exact: M = L^T D L by rational elimination, u^T M u = sum_i d_i (u_i + sum_{k>i} l_ik u_k)^2, coordinates from the last."""
+    r = len(M); A = [[Fr(v) for v in row] for row in M]; d = [None] * r; l = [[Fr(0)] * r for _ in range(r)]
+    for i in range(r):
+        d[i] = A[i][i]; assert d[i] > 0
+        for k in range(i + 1, r): l[i][k] = A[i][k] / d[i]
+        for a in range(i + 1, r):
+            for b in range(i + 1, r): A[a][b] -= d[i] * l[i][a] * l[i][b]
+    def rec(i, u, rem):
+        if i < 0: return 1
+        off = sum(l[i][k] * u[k] for k in range(i + 1, r)); w = isqrt_up(rem / d[i]); tot = 0
+        lo = math.floor((-off - w + s[i]) / 2) - 1; hi = math.ceil((-off + w + s[i]) / 2) + 1
+        for c in range(lo, hi + 1):
+            u[i] = 2 * c - s[i]; t = d[i] * (u[i] + off) ** 2
+            if t <= rem: tot += rec(i - 1, u, rem - t)
+        return tot
+    return rec(r - 1, [0] * r, Fr(thr))
 def check4(j, new, fresh=False):
     """One record of dm4.py. new = True: a closure of the census (rank 2 or 3, pair not closed otherwise);
     new = False: a second closure of a pair that dm_evidence.txt already closes (rank 1, 2 or 3)."""
@@ -160,10 +184,31 @@ def check4(j, new, fresh=False):
     else:
         assert L > 2 * kap, of
         cs = 4 * kap + (ee * ee + 16 * kap * ee) / (4 * (L - kap))
-    assert abs(cs - j['cstar']) < 1e-9 * cs and j['solver_selftest'] == 'ok', of
+    assert abs(cs - j['cstar']) < 1e-9 * cs and j['solver_selftest'].startswith('ok'), of
     gc = j['gram_check']; assert 0 < gc['mu'] and 0 <= gc['relative'] <= 0.01 and j['arithmetic'].startswith('exact'), of
     assert abs(gc['relative'] - r * gc['max_deviation'] / gc['mu']) <= 1e-6 * gc['relative'] + 1e-15, of
     assert -eL <= j['observed N(a) - H'][0] and j['observed N(a) - H'][1] <= eU, of
+    # -- the basis: bound on the index, and the saturation certificate (satcert.py; nothing from PARI or Sage is used here)
+    herm = {1: 1.0, 2: 4.0 / 3, 3: 2.0}[r]
+    assert 0 < j['lam_used'] <= 0.99 * j['lam'] * (1 + 1e-12) and j['kmax'] ** 2 * j['lam_used'] ** r >= j['reg0'] * herm * (1 - 1e-12), of
+    al, be = (int(v) for v in j['roots']); assert mdl == [0, -(al + be), 0, al * be, 0] and al != be and al * be != 0, of
+    gT = [(Fr(a), Fr(b)) for a, b in j['G_T']]; tT = [(Fr(a), Fr(b)) for a, b in j['tors_T']]
+    assert len(gT) == r and len(tT) == j['ntors'] - 1 and len(set(tT)) == len(tT) and all(satcert.on_curve(P, al, be) for P in gT + tT + [(Fr(j['R0_T'][0]), Fr(j['R0_T'][1]))]), of
+    assert all((Fr(e), Fr(0)) in tT for e in (0, al, be)), of
+    g = 0                                                # the torsion subgroup injects into E(F_q) for odd q of good reduction
+    for q in satcert.primes_upto(200):
+        if satcert.good(al, be, q): g = math.gcd(g, satcert.count(al, be, q))
+    assert g == j['ntors'], (of, g)                      # so tors_T is the whole torsion subgroup (without the origin)
+    assert satcert.verify(j['sat'], al, be, gT, tT, j['kmax']), of
+    # -- the two lists: the integer vectors, counted again by a different enumeration (Fincke-Pohst, exact)
+    G0i = [[int(v) for v in row] for row in j['G0_2e60']]
+    assert all(abs(G0i[a][b] / 2.0 ** 60 - j['gram'][a][b]) <= j['gram_check']['max_deviation'] + 1e-9 for a in range(r) for b in range(r)), of
+    for name, bound in (('A', H + eU), ('B', cs)):
+        L4 = j['lists'][name]; thr = int(L4['threshold'])
+        assert abs(L4['bound'] - bound) < 1e-9 * bound and thr >= 4 * bound / (1 - gc['relative']) * 2.0 ** 60 * (1 - 1e-9), (of, name)
+        assert L4['centre2'] == (j['rho'] if name == 'A' else [0] * r), (of, name)
+        assert count_vectors(G0i, thr, L4['centre2']) == L4['vectors'], (of, name)
+    assert j['nA'] == j['lists']['A']['vectors'] * j['ntors'] and j['nz'] == j['lists']['B']['vectors'] * j['ntors'], of
     return of, r
 log4 = [json.loads(l) for l in open(os.path.join(here, 'dm4_log.jsonl'))]
 closed4 = set(); ranks4 = {2: 0, 3: 0}

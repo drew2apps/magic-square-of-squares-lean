@@ -30,6 +30,8 @@ jobs:
           gcc -O2 -Wall -Wextra -Werror -o /tmp/ratio_pairs scripts/search/ratio_pairs.c -lm
           for H in 100 400; do grep -qxF "$(/tmp/ratio_pairs $H scripts/g1_full/modp_classes.txt)" scripts/search/ratio_pairs.txt; done
           grep -qxF "$(python3 scripts/search/ratio_pairs_brute.py 50 scripts/g1_full/modp_classes.txt)" scripts/search/ratio_pairs.txt
+          gcc -O2 -Wall -Wextra -Werror -o /tmp/twist_find scripts/search/twist_find.c -lm
+          test -z "$(/tmp/twist_find 80 80)"
           python3 scripts/g1_full/gen_lean.py
           python3 scripts/g1_full/gen_census1000.py
           python3 scripts/g1_full/gen_sizecheck.py
@@ -47,15 +49,16 @@ jobs:
 
   four-points:
     # The four-point argument (FOUR_POINTS.md) run as a program, not only checked through its records:
-    # the model and the identities with m, n as indeterminates, and dm4.py on two pairs (rank 2 and rank 3).
+    # the model and the identities with m, n as indeterminates; every record of dm4.py regenerated with PARI and Sage
+    # and compared with the committed one; Proposition 1 on actual rational points of quadratic twists.
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: dm4_identities.py and dm4.py on (840,83) and (72,65)
+      - name: dm4_identities.py, dm4.py on all 52 pairs, dm4_twist.py
         shell: bash
         run: |
           set -e -o pipefail
@@ -63,5 +66,10 @@ jobs:
           cd scripts/g1_full
           python3 dm4_identities.py | tee /tmp/dm4_identities.out
           diff <(sed 's/ *\[[0-9]* s\]//' /tmp/dm4_identities.out) <(sed 's/ *\[[0-9]* s\]//' dm4_identities.txt)
-          python3 dm4.py 840,83 72,65 > /tmp/dm4_fresh.jsonl
+          mkdir /tmp/fresh
+          grep -v '#' dm4_pairs.txt | xargs -P 4 -I{} sh -c 'python3 dm4.py {} > /tmp/fresh/{}.jsonl'
+          cat /tmp/fresh/*.jsonl > /tmp/dm4_fresh.jsonl
+          test "$(wc -l < /tmp/dm4_fresh.jsonl)" = 52
           python3 check_evidence.py --dm4 /tmp/dm4_fresh.jsonl
+          python3 dm4_twist.py 72,65 2 100 | tee /tmp/dm4_twist.out
+          grep -q "^4 configurations on twists, 0 outside the bounds" /tmp/dm4_twist.out

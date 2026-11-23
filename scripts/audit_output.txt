@@ -2,17 +2,22 @@ G1.abs_add_abs_sq_le
 G1.bilinear_abs_le
 G1.binary_form_pos
 G1.dvd_of_dvd_mul_pow_of_isCoprime
+G1.dvd_two_sq_mul_of_common
 G1.excess_eq_zero
 G1.fourPoint_block_bound
 G1.fourPoint_blocks_not_both_definite
 G1.fourPoint_inv_dvd
 G1.fourPoint_inv_fraction
+G1.fourPoint_inv_lower
+G1.fourPoint_lemmaC_dvd
 G1.fourPoint_pm_dvd
 G1.fourPoint_pm_fraction
+G1.fourPoint_pm_lower
 G1.fourPoint_rank2_bound
 G1.fourPoint_rank3_bound
 G1.fourPoint_res_psi0_dvd
 G1.fourPoint_res_psi_dvd
+G1.gcd_two_sq_mul_dvd
 MagicSquareOfSquares.G1.FullSquares.diagonal
 MagicSquareOfSquares.G1.IntSq.abs_left
 MagicSquareOfSquares.G1.IntSq.abs_right
@@ -262,4 +267,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 627 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 632 theorems (including auxiliary ones), standard axioms only
