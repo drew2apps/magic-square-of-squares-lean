@@ -72,6 +72,8 @@ For the two open ratios, the number of tuples left after each prime:
 
 So in every case computed, the descent set is the set of degenerate solutions. If that held for all `m, n`, the ratio `(b + d) : (h + f)` of a magic square of squares would always have `m² + n²` a square or twice a square, the exceptional case of Theorem 3′ of `PAPER.md`. We have no proof, and we do not expect a uniform one from this method: the sets `D_j` depend on the primes of `m`, `n`, `m² − n²`, and what the computation shows is the usual experience that such a descent set is empty unless there is a rational point. It is a statement ratio by ratio.
 
+The ratios with a trivial point are taken one step further in `SECOND_DESCENT.md`, which uses the two tuples left here.
+
 ## 4. Checks made
 
 - **A system with a solution is never excluded** (`gd_control.py`). For random `m, n, u, v`, let `c_j` be the squarefree part of `N(ℓ_j(u, v))`. The system "`N(ℓ_j) ∈ c_j·ℚ²`" has the solution `(u, v)`, and the Lemma gives its sets `D_j`. In 100 such systems (two runs) the tuple of the solution survived every prime, and 1 or 2 tuples were left in all. This tests the Lemma (a wrong support would lose the true tuple), the choice between `π` and `π̄`, and the agreement between the global and the local classes. The rule of the Lemma, applied to the real constants, gives exactly the sets of Section 1.

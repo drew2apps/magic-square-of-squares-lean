@@ -15,7 +15,7 @@ jobs:
         shell: bash
         run: |
           set -e
-          python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py scripts/gauss_descent/*.py
+          python3 -m py_compile scripts/g1_full/*.py scripts/search/*.py scripts/gauss_descent/*.py scripts/second_descent/*.py
           python3 scripts/g1_full/check_evidence.py
           python3 scripts/g1_full/check_evidence.py --negative > /tmp/negative.out
           grep -q '^negative tests: 520 altered records, all rejected' /tmp/negative.out
@@ -61,7 +61,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.13'
-      - name: dm4_identities.py, dm4.py on all 52 pairs, dm4_twist.py on 12 pairs
+      - name: dm4_identities.py, dm4.py on all 52 pairs, dm4_twist.py on 12 pairs, the two descents
         shell: bash
         run: |
           set -e -o pipefail
@@ -83,6 +83,14 @@ jobs:
           wait $TWIST
           diff <(sed 's/   \[[0-9]* s\]$//' /tmp/dm4_twist.out) dm4_twist.txt
           grep -q "^72 configurations on twists, 0 outside the bounds" /tmp/dm4_twist.out
+          # SECOND_DESCENT.md (experiment): the 123 ratios with a degenerate solution, the summary and the controls
+          cd ../second_descent
+          python3 second_descent.py $(cat pairs123.txt) | diff - second_123.jsonl
+          python3 second_descent.py --summary second_123.jsonl | diff - second_summary.txt
+          python3 second_control.py | diff - second_control.txt
+          python3 degenerate_tuples.py pairs123.txt | diff - degenerate_tuples.txt
+          python3 lcheck.py 3e9 second_123.jsonl | tee /tmp/lcheck.out
+          grep -q "^checked 27 of 89" /tmp/lcheck.out
 
   twist-search:
     # scripts/search/twist_search.txt: no t0 = p/q != 1 with m, p, q <= 400 at which all four points are rational on a twist.

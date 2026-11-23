@@ -1,0 +1,10 @@
+123 ratios: 74 with m^2+n^2 a square, 49 with twice a square
+statuses: closed 89, open 34
+closed directly: 89 (square type 60, other type 29)
+closing curve: +14 17, +23 13, 1356 59
+summand of rank 0: E(Q) in 38, E^(-1)(Q) in 51; root number of that curve: +1 in 89
+rational t returned by the equations, with the result of the five-form test: -1: degenerate (60), -1: no (29), 0: degenerate (29), 0: no (60), 1: degenerate (60), 1: no (29)
+square type: t = 1 and t = -1 both returned by the equations in 60 of 60 closed
+closed, directly or through the partner: 101 of 123
+not closed (22): 99,20 119,79 253,204 425,168 440,279 457,49 593,257 612,35 627,364 647,577 660,259 672,185 719,161 777,464 779,660 812,645 857,487 912,215 919,401 920,129 987,884 991,263
+of these, partner outside the list (m > 1000, not run): 777,464 779,660 812,645 912,215 920,129 987,884

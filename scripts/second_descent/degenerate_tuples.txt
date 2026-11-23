@@ -1,0 +1,2 @@
+123 ratios; pattern of equal classes (a0, a8, g4, gL, gU) at the two degenerate solutions: {(True, True, False, False, False): 74, (False, False, False, True, True): 49}
+ratios where the two degenerate solutions have the same tuple: []

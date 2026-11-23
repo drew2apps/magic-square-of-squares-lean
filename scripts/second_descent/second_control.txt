@@ -1,0 +1,4 @@
+polynomial identity (4, 3) : 4 torsion points checked, ratio 1 each time
+polynomial identity (91, 60) : 4 torsion points checked, ratio 1 each time
+polynomial identity (15, 8) : 4 torsion points checked, ratio 1 each time
+polynomial identity (572, 555) : 4 torsion points checked, ratio 1 each time
