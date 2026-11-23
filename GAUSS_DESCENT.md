@@ -68,6 +68,8 @@ For the two open ratios, the number of tuples left after each prime:
 
 **More ratios** (`gauss_descent_notrivial_1000.txt`, `small_all_60.txt`). Of the coprime pairs with `m ≤ 1000`, 987 avoid the 484 residue classes of `modp_classes.txt` (a superset of the 425 of the census, which also uses the prime 2 and the classes with `p | n`). 681 of them have `m² + n²` neither a square nor twice a square, and **for all 681 no tuple is left**, each time after primes up to 37 at most (353 at 2, 163 at 5, 3 at 7, 79 at 13, 43 at 17, 3 at 19, 31 at 29, 6 at 37). For every coprime pair with `m ≤ 60` (1101 pairs) the set is empty unless `m² + n²` is a square or twice a square, and then it has exactly 2 elements.
 
+**Beyond the census** (`scan.py`, `scan_1000_5000.txt`; first implementation only). For `1000 < m ≤ 5000`, 20,117 coprime pairs avoid the 484 residue classes; 1,217 have a trivial point and were not run; **the other 18,900 all have an empty descent set**, each after primes up to 97 at most. With the 681 above: for `m ≤ 5000`, no ratio that avoids the 484 classes and has `m² + n²` neither a square nor twice a square is left. If the experiment is right, this is a statement about every magic square of squares with `m ≤ 5000`, obtained without any elliptic curve; the census with ranks stops at 1000.
+
 So in every case computed, the descent set is the set of degenerate solutions. If that held for all `m, n`, the ratio `(b + d) : (h + f)` of a magic square of squares would always have `m² + n²` a square or twice a square, the exceptional case of Theorem 3′ of `PAPER.md`. We have no proof, and we do not expect a uniform one from this method: the sets `D_j` depend on the primes of `m`, `n`, `m² − n²`, and what the computation shows is the usual experience that such a descent set is empty unless there is a rational point. It is a statement ratio by ratio.
 
 ## 4. Checks made
@@ -94,6 +96,7 @@ python3 gauss_descent.py --pmax=200 $(cat pairs157.txt)   # all 157, about 10 mi
 python3 gd_control.py 1 60                         # the control with known solutions
 python3 gd_check.py $(cat pairs34.txt)            # the second implementation on the 34 ratios, under 2 minutes
 python3 small_all.py 60                            # every coprime pair with m <= 60
+python3 scan.py 1000 2000                          # the ratios with 1000 < m <= 2000 that avoid the 484 classes, about 2 minutes
 ```
 
 Needs Python with numpy only.
