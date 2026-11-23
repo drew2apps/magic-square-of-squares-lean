@@ -44,3 +44,24 @@ jobs:
           diff <(grep '^AUDIT OK:' audit.txt) scripts/audit_line.txt
           diff <(sort audit.txt) <(sort scripts/audit_output.txt)
           echo "::notice title=Axiom audit::$(grep '^AUDIT OK:' audit.txt)"
+
+  four-points:
+    # The four-point argument (FOUR_POINTS.md) run as a program, not only checked through its records:
+    # the model and the identities with m, n as indeterminates, and dm4.py on two pairs (rank 2 and rank 3).
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: dm4_identities.py and dm4.py on (840,83) and (72,65)
+        shell: bash
+        run: |
+          set -e -o pipefail
+          pip install -q passagemath-schemes==10.8.14 passagemath-singular==10.8.14 passagemath-symbolics==10.8.14 cypari2==2.2.9
+          cd scripts/g1_full
+          python3 dm4_identities.py | tee /tmp/dm4_identities.out
+          diff <(sed 's/ *\[[0-9]* s\]//' /tmp/dm4_identities.out) <(sed 's/ *\[[0-9]* s\]//' dm4_identities.txt)
+          python3 dm4.py 840,83 72,65 > /tmp/dm4_fresh.jsonl
+          python3 check_evidence.py --dm4 /tmp/dm4_fresh.jsonl

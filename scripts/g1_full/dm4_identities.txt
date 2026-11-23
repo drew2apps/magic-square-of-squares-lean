@@ -1,0 +1,9 @@
+a1 = 6*m^2 - 2*n^2 
+a2 = 5*m^4 - 2*m^2*n^2 + n^4 
+a3 = 32*m^6 - 32*m^4*n^2 
+a4 = -32*m^8 + 32*m^6*n^2 + 32*m^4*n^4 - 32*m^2*n^6
+2-division polynomial factors: (4) * (X + 4*m^4 - 4*m^3*n - 4*m^2*n^2 + 4*m*n^3) * (X + 4*m^4 + 4*m^3*n - 4*m^2*n^2 - 4*m*n^3) * (X + 6*m^4 + 2*n^4)
+model: Y^2 = x (x - 2A)(x - 2B), A B = m^8 + 14 m^4 n^4 + n^8   [0 s]
+(I0)   True [0 s]
+(I+-)  True True [0 s]
+(Iinv) True True [2 s]

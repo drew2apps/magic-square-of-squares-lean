@@ -29,18 +29,18 @@ and for every rational point P of E_T:  -U <= h(x(P)) - hhat(P) <= BUP  (Cremona
 in exact arithmetic as in height_certify.py).  Hence
     N(a_i) in [H - eL, H + eU],  eL = (BUP - lo4)/4, eU = (up4 + U)/4,
     |<a1, a2>|, |<a3, a4>| <= kappa_pm,   |<a1, a3>|, |<a2, a4>| <= kappa_inv,   kappa = (BUP + U + width)/4.
-If the rank is 2, a1, a2, a4 are linearly dependent, so their Gram determinant vanishes:
-    N2 (N1 N4 - <a1,a4>^2) <= kappa^2 (sqrt N1 + sqrt N4)^2,
-and z = a1 - a4 or z = a1 + a4 (a point of E(Q): Q1 - Q4 or Q1 + Q4 - R0) has
-    hhat(z) <= cstar(H) = (sqrt(H + eU) - sqrt(H - eL))^2 + 8 kappa^2 (H + eU) / (H - eL)^2,
-which decreases with H.
+If the rank is at most 2, a1, a2, a4 are linearly dependent, so their Gram determinant vanishes. With x = <a1, a4>:
+    N2 (N1 N4 - x^2) = N1 <a2,a4>^2 + N4 <a1,a2>^2 - 2 <a1,a2> <a2,a4> x <= kappa^2 (N1 + N4 + 2|x|).
+The number N1 + N4 - 2|x| is the height of z = a1 - a4 or of z = a1 + a4, a point of E(Q) (Q1 - Q4 or Q1 + Q4 - R0), and
+    (N1 + N4 - 2|x|)(N1 + N4 + 2|x|) = (N1 - N4)^2 + 4 (N1 N4 - x^2),  |N1 - N4| <= e := eL + eU,  N1 + N4 + 2|x| >= 2 (H - eL),
+so  hhat(z) <= cstar(H) = (e^2/2 + 4 kappa^2) / (H - eL)   for H > eL                    (Lean: G1.fourPoint_rank2_bound).
 If the rank is 3, the Gram matrix of a1, a4, a2, a3 is singular; in blocks [[A, B], [B^T, D]] (A for a1, a4; D for
-a2, a3) every entry of B is one of the four bounded products, and a kernel vector gives
-    lambda_min(A) lambda_min(D) <= |B|^2 <= 4 kappa^2,
-so lambda_min(A) <= 2 kappa or lambda_min(D) <= 2 kappa, and z = a1 -+ a4 or z = a2 -+ a3 has
-    hhat(z) <= cstar(H) = (sqrt(H + eU) - sqrt(H - eL))^2 + 8 kappa (H + eU) / ((H - eL) + sqrt((H - eL)^2 - 4 kappa (H + eU))),
-which decreases to 4 kappa.  For z = a2 -+ a3 the equation below holds for Q2, whose t is -t0; both signs of every
-candidate are tested.  So for any Hstar: either
+a2, a3) every entry of B is one of the four bounded products.  A kernel vector shows that A - 2 kappa and D - 2 kappa
+are not both positive definite (Lean: G1.fourPoint_blocks_not_both_definite), so x^2 >= (N1 - 2 kappa)(N4 - 2 kappa)
+or the same for y = <a2, a3>; then |x| >= H - eL - 2 kappa, and as above
+    hhat(z) <= cstar(H) = 4 kappa + (e^2 + 16 kappa e) / (4 (H - eL - kappa))   for H - eL > 2 kappa   (Lean: G1.fourPoint_rank3_bound)
+for z = a1 -+ a4 or z = a2 -+ a3.  For z = a2 -+ a3 the equation below holds for Q2, whose t is -t0; both signs of
+every candidate are tested.  Both bounds visibly decrease with H.  So for any Hstar: either
     (A) H < Hstar:  hhat(2 Q1 - R0) <= 4 (Hstar + eU), finitely many Q1, all listed; or
     (B) hhat(z) <= cstar(Hstar): finitely many z, and for each the equation t(Q - z) t(Q) = -1 on E,
         which has finitely many solutions; its rational solutions are found from a polynomial in t.
@@ -49,19 +49,50 @@ Every candidate t0 is tested exactly in the five-form system.
 The argument for rank 2 uses only that three vectors are dependent, so it also covers rank 1 (used as a cross-check of
 the pairs closed by dm3.py).
 
-Needs: the rank r = 1, 2 or 3, as PARI's upper bound (ellrank on the curve and its isogenous curves) together with r
-independent points (PARI's lower bound is not used: it can rest on parity); a basis of E(Q) modulo torsion (the
-points saturated at all primes up to the index bound sqrt(gamma^r Reg' / lambda^r), gamma^r = 1, 4/3 or 2 (Hermite),
-lambda a lower bound for hhat on non-torsion points from Sage's height_function().min); floating-point heights
-with a 2% margin in the two listings, justified by an enclosure of the Gram matrix in exact arithmetic.
-On every listed point the observed N(a) - H is compared with [-eL, eU].
-usage: dm4.py [-v] [--Hstar=H] [--upper=N] m,n [m,n ...]      (needs passagemath-schemes, cypari2; 2 to 45 seconds per pair)"""
+Exact arithmetic.  The constants BUP, U, eL, eU, kappa, cstar are fractions (logarithms are enclosed in rational
+intervals).  The height pairing matrix G of the basis is enclosed entrywise: hhat(P) lies between
+(h(x(2^k P)) - BUP)/4^k and (h(x(2^k P)) + U)/4^k, with 2^k P computed exactly.  With a rational centre G0 of the
+enclosure, delta its half-width, mu a rational number such that G0 - mu is positive definite (checked by Sylvester's
+criterion) and eps = r delta / mu:  v^T G v >= (1 - eps) v^T G0 v for all real v.  So {v^T G v <= b} is contained in
+{v^T G0 v <= b/(1 - eps)}, which is listed exactly (box from the diagonal of the exact inverse of G0).  The two lists
+are therefore supersets of the sets of the argument.  Floating point is used only to choose (the basis, k, mu, Hstar)
+and for the diagnostic comparison of N(a) - H with [-eL, eU]; each choice is verified exactly where it matters.
+
+Taken from other software without a check here: PARI's upper bound for the rank (ellrank), its saturation
+(ellsaturation) and group law; Sage's lower bound lambda for the canonical height of non-torsion points
+(height_function().min), whose floating-point value is used as an exact number; Kodaira symbols and Tamagawa numbers
+(local_data) inside BUP.  The rank must equal the number r = 1, 2 or 3 of independent points found (PARI's lower bound
+is not used: it can rest on parity).  The index of the points in E(Q)/torsion is at most sqrt(gamma^r Reg' / lambda^r),
+gamma^r = 1, 4/3, 2 (Hermite), with Reg' bounded above from the enclosure; saturation is done up to that bound.
+usage: dm4.py [-v] [--Hstar=H] [--upper=N] m,n [m,n ...]      (needs passagemath-schemes, passagemath-symbolics, cypari2; 15 to 60 seconds per pair)"""
 import sys, json, math, time, os
 from fractions import Fraction as Fr
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from sage.all__sagemath_schemes import *
 from dm import classify_t, tight_bounds, issq
-from hbounds import height_bounds                     # exact BUP, U for an integral model
+from hbounds import height_bounds_exact, ln_bounds, LN2     # exact BUP, U for an integral model; rational enclosures of logarithms
+
+def ln_int_bounds(v):
+    """Rational lower and upper bounds for log(v), v a positive integer of any size."""
+    v = int(v); assert v > 0
+    k = v.bit_length() - 1
+    if k <= 200: return ln_bounds(Fr(v))
+    top = v >> (k - 120)                                # v / 2^(k-120) lies in [top, top + 1)
+    a = ln_bounds(Fr(top)); b = ln_bounds(Fr(top + 1)); sh = k - 120
+    return a[0] + sh * LN2[0], b[1] + sh * LN2[1]
+
+def sqrt_hi(q):
+    """A rational number >= sqrt(q), q a non-negative fraction."""
+    q = Fr(q); assert q >= 0
+    return Fr(math.isqrt((q.numerator << 160) // q.denominator) + 1, 1 << 80)
+
+class Iv:
+    """Closed intervals with rational ends: +, -, *."""
+    def __init__(s, lo, hi=None): s.lo = Fr(lo); s.hi = Fr(lo if hi is None else hi); assert s.lo <= s.hi
+    def __add__(s, o): return Iv(s.lo + o.lo, s.hi + o.hi)
+    def __sub__(s, o): return Iv(s.lo - o.hi, s.hi - o.lo)
+    def __mul__(s, o):
+        ps = [s.lo*o.lo, s.lo*o.hi, s.hi*o.lo, s.hi*o.hi]; return Iv(min(ps), max(ps))
 
 Rt = PolynomialRing(QQ, 't'); Kt = FractionField(Rt); t = Kt.gen()
 
@@ -187,15 +218,41 @@ def dm4(m, n, Hstar=None, verbose=False):
         basis = independent(cand)
     if len(basis) != r: out['status'] = '%d independent points not found (found %d)' % (r, len(basis)); return out
     out['rank'] = r                                     # r independent points and the upper bound r
-    reg0 = float(Em.height_pairing_matrix(basis).det())
     lam = float(Em.height_function().min(0.01, 20))
     if lam <= 0: out['status'] = 'no height lower bound'; return out
-    herm = {1: 1.0, 2: 4.0/3, 3: 2.0}[r]                        # gamma_r^r (Hermite): Reg >= lam^r / gamma_r^r
-    kmax = int(math.floor(math.sqrt(reg0 * herm / lam**r))) + 1
+    lamq = Fr(lam)                                      # the exact value of that float
+    # ---- exact arithmetic from here on: constants, enclosures of height matrices, the two lists
+    BUP, U = height_bounds_exact([0, -(al + be), 0, al*be, 0], ET)          # fractions
+    Aq = QQ(-(al + be)); Bq = QQ(al*be); b2 = 4*Aq; b4 = 2*Bq; b8 = -Bq*Bq
+    def enclose(Pm):                                    # an interval with rational ends that contains hhat(Pm)
+        x = QQ(psi(Pm)[0]); hf = float(Pm.height()); k = 0
+        while 4**k * hf < 2e6:
+            x = (x**4 - b4*x*x - b8) / (4*x**3 + b2*x*x + 2*b4*x); k += 1
+        hx = ln_int_bounds(max(abs(int(x.numerator())), int(x.denominator())))
+        return (hx[0] - BUP) / 4**k, (hx[1] + U) / 4**k
+    def gram_enclosure(pts):                            # entrywise enclosure [lo, hi] of the height pairing matrix
+        nn = len(pts); dd = [enclose(P) for P in pts]
+        lo = [[None]*nn for _ in range(nn)]; hi = [[None]*nn for _ in range(nn)]
+        for i in range(nn):
+            lo[i][i], hi[i][i] = dd[i]
+            for j in range(i):
+                ee = enclose(pts[i] + pts[j])
+                lo[i][j] = lo[j][i] = (ee[0] - dd[i][1] - dd[j][1]) / 2; hi[i][j] = hi[j][i] = (ee[1] - dd[i][0] - dd[j][0]) / 2
+        return lo, hi
+    def det_iv(lo, hi):                                 # interval of the determinant, by interval arithmetic
+        M = [[Iv(lo[i][j], hi[i][j]) for j in range(len(lo))] for i in range(len(lo))]
+        if len(M) == 1: return M[0][0]
+        if len(M) == 2: return M[0][0]*M[1][1] - M[0][1]*M[1][0]
+        return (M[0][0]*(M[1][1]*M[2][2] - M[1][2]*M[2][1]) - M[0][1]*(M[1][0]*M[2][2] - M[1][2]*M[2][0]) + M[0][2]*(M[1][0]*M[2][1] - M[1][1]*M[2][0]))
+    lo0, hi0 = gram_enclosure(basis); reg0 = det_iv(lo0, hi0)
+    if not reg0.lo > 0: out['status'] = 'independence of the points not certified'; return out
+    herm = {1: Fr(1), 2: Fr(4, 3), 3: Fr(2)}[r]         # gamma_r^r (Hermite): Reg >= lam^r / gamma_r^r
+    kmax = int(math.floor(math.sqrt(float(reg0.hi * herm) / lam**r))) + 1
+    while not kmax * kmax * lamq**r >= reg0.hi * herm: kmax += 1          # index^2 <= Reg' gamma^r / lam^r <= kmax^2, exactly
     sat = pari.ellsaturation(Ep, [[P[0], P[1]] for P in basis], kmax)
     gens = [Em([QQ(P[0]), QQ(P[1])]) for P in sat]
     def gram_of(g): return [[float(v) for v in row] for row in Em.height_pairing_matrix(g).rows()]
-    for _ in range(200):                                # pairwise size reduction
+    for _ in range(200):                                # pairwise size reduction (floating point; only chooses the basis)
         gens.sort(key=lambda P: float(P.height())); Gm = gram_of(gens); ch = False
         for i in range(r):
             for j in range(i):
@@ -203,79 +260,83 @@ def dm4(m, n, Hstar=None, verbose=False):
                 if k: gens[i] = gens[i] - k*gens[j]; ch = True; break
             if ch: break
         if not ch: break
-    Gm = gram_of(gens); GM = matrix(RDF, Gm); reg = float(GM.det()); Ginv = GM.inverse()
-    out['gens'] = 'points saturated at primes <= %d (height lower bound %.4f, regulator of the points before saturation %.3f)' % (kmax, lam, reg0); out['kmax'] = kmax; out['lam'] = lam; out['reg0'] = reg0
+    Gm = gram_of(gens); reg = float(matrix(RDF, Gm).det())
+    lo1, hi1 = gram_enclosure(gens)
+    one60 = 1 << 60
+    G0 = [[Fr(int(math.floor((lo1[i][j] + hi1[i][j]) / 2 * one60)), one60) for j in range(r)] for i in range(r)]      # a dyadic centre
+    for i in range(r):
+        for j in range(i): G0[i][j] = G0[j][i]
+    delta = max(max(hi1[i][j] - G0[i][j], G0[i][j] - lo1[i][j]) for i in range(r) for j in range(r))
+    assert all(lo1[i][j] <= Fr(Gm[i][j]) <= hi1[i][j] for i in range(r) for j in range(r))       # the floating-point matrix lies in the enclosure
+    mu = Fr(min(float(v) for v in matrix(RDF, Gm).eigenvalues()) * 0.99)
+    def det_fr(M):
+        if len(M) == 1: return M[0][0]
+        if len(M) == 2: return M[0][0]*M[1][1] - M[0][1]*M[1][0]
+        return (M[0][0]*(M[1][1]*M[2][2] - M[1][2]*M[2][1]) - M[0][1]*(M[1][0]*M[2][2] - M[1][2]*M[2][0]) + M[0][2]*(M[1][0]*M[2][1] - M[1][1]*M[2][0]))
+    Gmu = [[G0[i][j] - (mu if i == j else 0) for j in range(r)] for i in range(r)]
+    if not (mu > 0 and all(det_fr([row[:k] for row in Gmu[:k]]) > 0 for k in range(1, r + 1))):     # G0 - mu is positive definite (Sylvester)
+        out['status'] = 'centre matrix not positive definite'; return out
+    eps = r * delta / mu                                # v^T G v >= (1 - eps) v^T G0 v for the true matrix G and every real v
+    if not eps <= Fr(1, 100): out['status'] = 'Gram matrix not enclosed tightly enough'; return out
+    G0inv = matrix(QQ, [[QQ(int(v.numerator)) / QQ(int(v.denominator)) for v in row] for row in G0]).inverse()
+    G0inv_d = [Fr(int(G0inv[i, i].numerator()), int(G0inv[i, i].denominator())) for i in range(r)]
+    out['gens'] = 'points saturated at primes <= %d (height lower bound %.4f, regulator of the points before saturation at most %.3f)' % (kmax, lam, float(reg0.hi)); out['kmax'] = kmax; out['lam'] = lam; out['reg0'] = float(reg0.hi)
     out['min_model'] = [str(v) for v in Em.ainvs()]; out['G'] = [[str(P[0]), str(P[1])] for P in gens]; out['gram'] = Gm; out['reg'] = reg
     out['R0'] = [str(R0[0]), str(R0[1])]
+    out['gram_check'] = dict(max_deviation=float(delta), mu=float(mu), relative=float(eps))
     tors = Em.torsion_points(); out['ntors'] = len(tors)
     import itertools
-    def box(bound, centre=None):                        # all integer vectors c with (c - centre)^T Gram (c - centre) <= bound
-        centre = centre or [0.0]*r
-        rng = [range(int(math.floor(centre[i] - math.sqrt(bound*float(Ginv[i, i])))) , int(math.ceil(centre[i] + math.sqrt(bound*float(Ginv[i, i])))) + 1) for i in range(r)]
+    G0i = [[int(G0[i][j] * one60) for j in range(r)] for i in range(r)]       # G0 is dyadic: these are integers
+    def box(bound, centre2=None):
+        """All integer vectors c with (c - centre2/2)^T G (c - centre2/2) <= bound for the true height matrix G
+        (centre2 an integer vector, default 0): a superset, listed with the rational centre matrix G0 and the bound
+        divided by 1 - eps.  Integer arithmetic: with u = 2c - centre2 the condition is u^T G0 u <= 4 bound/(1 - eps)."""
+        centre2 = centre2 or [0]*r; bp = Fr(bound) / (1 - eps); rng = []
+        thr = (4 * bp * one60).numerator // (4 * bp * one60).denominator      # floor: u^T G0i u is an integer
+        for i in range(r):
+            sh = sqrt_hi(bp * G0inv_d[i])               # |c_i - centre2_i/2|^2 <= bp (G0^-1)_ii
+            rng.append(range(int(math.floor(Fr(centre2[i], 2) - sh)), int(math.ceil(Fr(centre2[i], 2) + sh)) + 1))
         for cvec in itertools.product(*rng):
-            dlt = [cvec[i] - centre[i] for i in range(r)]
-            if sum(Gm[i][j]*dlt[i]*dlt[j] for i in range(r) for j in range(r)) <= bound: yield cvec
+            u = [2*cvec[i] - centre2[i] for i in range(r)]
+            if sum(G0i[i][j]*u[i]*u[j] for i in range(r) for j in range(r)) <= thr: yield cvec
     def comb(cvec):
         P = Em(0)
         for cc, g in zip(cvec, gens): P = P + cc*g
         return P
     rho = None
-    for cvec in box(float(R0.height())*1.01 + 0.01):
+    for cvec in box(enclose(R0)[1]):
         if (R0 - comb(cvec)).has_finite_order(): rho = cvec
     if rho is None: out['status'] = 'R0 not in the group generated'; return out
     out['rho'] = list(rho)
-    # ---- constants
-    BUP, U = height_bounds([0, -(al + be), 0, al*be, 0], ET)
-    # enclosures of the Gram matrix in exact arithmetic (doubling on E_T), to justify the 2% margin of the listings
-    Aq = QQ(-(al + be)); Bq = QQ(al*be); b2 = 4*Aq; b4 = 2*Bq; b8 = -Bq*Bq
-    def enclose(Pm):
-        x = QQ(psi(Pm)[0]); hf = float(Pm.height()); k = 0
-        while 4**k * hf < 2e6:
-            x = (x**4 - b4*x*x - b8) / (4*x**3 + b2*x*x + 2*b4*x); k += 1
-        hx = math.log(max(abs(int(x.numerator())), int(x.denominator())))
-        return (hx - BUP) / 4**k - 1e-9, (hx + U) / 4**k + 1e-9
-    encl = {}
-    for i in range(r):
-        encl[(i, i)] = enclose(gens[i])
-        assert encl[(i, i)][0] <= Gm[i][i] <= encl[(i, i)][1]
-    dev = max(max(abs(Gm[i][i] - encl[(i, i)][0]), abs(Gm[i][i] - encl[(i, i)][1])) for i in range(r))
-    for i in range(r):
-        for j in range(i):
-            e = enclose(gens[i] + gens[j])
-            plo = (e[0] - encl[(i, i)][1] - encl[(j, j)][1]) / 2; phi_ = (e[1] - encl[(i, i)][0] - encl[(j, j)][0]) / 2
-            assert plo <= Gm[i][j] <= phi_
-            dev = max(dev, abs(Gm[i][j] - plo), abs(Gm[i][j] - phi_))
-    lmin = min(float(v) for v in matrix(RDF, Gm).eigenvalues())
-    out['gram_check'] = dict(max_deviation=dev, smallest_eigenvalue=lmin, relative=r*dev/lmin)
-    if not r*dev/lmin <= 0.015: out['status'] = 'Gram matrix not enclosed tightly enough'; return out
+    # ---- the constants of the argument, as fractions (upper bounds for eL, eU, kappa)
+    octic = m**8 + 14*m**4*n**4 + n**8
+    res0 = m*m*n*n*octic; res1 = (m*m - n*n)**2*octic   # the resultants of Pi with Psi0 and Psi (G1.fourPoint_res_psi0_dvd, G1.fourPoint_res_psi_dvd)
     Rpq = PolynomialRing(ZZ, 'p'); p = Rpq.gen()
     Pi_p = 2*m*n*(n*n*p**2 - m*m) + (m**4 - n**4)*p; Psi0_p = n*n*p**2 + m*m; Psi_p = S*p**2 - 4*m*n*p + S
-    res0 = abs(int(Pi_p.resultant(Psi0_p))); res1 = abs(int(Pi_p.resultant(Psi_p)))
-    assert res0 > 0 and res1 > 0
-    lo4 = math.log(n*n*(m - n)**2) - math.log(2) - 2*math.log(res0) - 2*math.log(res1)
-    up4 = math.log(2) + 2*math.log(2*m**3*n + m**4 - n**4)
-    wpm = math.log(32*m*m*n*n*S) + math.log(2*m*m)
-    winv = math.log(4*(m*m - n*n)**2*(m + n)**2) + math.log(8*(m + n)**2)
-    eL = (BUP - lo4) / 4; eU = (up4 + U) / 4
+    assert res0 == abs(int(Pi_p.resultant(Psi0_p))) and res1 == abs(int(Pi_p.resultant(Psi_p))) and res0 > 0 and res1 > 0
+    lnlo = lambda v: ln_int_bounds(v)[0]; lnhi = lambda v: ln_int_bounds(v)[1]
+    lo4 = lnlo(n*n*(m - n)**2) - lnhi(2*res0**2*res1**2)
+    up4 = lnhi(2*(2*m**3*n + m**4 - n**4)**2)
+    wpm = lnhi(32*m*m*n*n*S) + lnhi(2*m*m)
+    winv = lnhi(4*(m*m - n*n)**2*(m + n)**2) + lnhi(8*(m + n)**2)
+    eL = (BUP - lo4) / 4; eU = (up4 + U) / 4; ee = eL + eU
     kap = (BUP + U + max(wpm, winv)) / 4
     if r <= 2:                                          # three vectors in a space of dimension at most 2
-        def cstar(H): return (math.sqrt(H + eU) - math.sqrt(H - eL))**2 + 8*kap*kap*(H + eU) / (H - eL)**2
-        def valid(H): return (H - eL)**3 >= 4*kap*kap*(H + eU)
-        target = 0.9 * min(Gm[i][i] for i in range(r))  # below the smallest height of a basis vector
+        def cstar(H): return (ee*ee/2 + 4*kap*kap) / (H - eL)
+        def valid(H): return H > eL
+        target = Fr(9, 10) * min(lo1[i][i] for i in range(r))       # below the smallest height of a basis vector
+        guess = eL + (ee*ee/2 + 4*kap*kap) / target
     else:
-        def cstar(H):
-            L = H - eL; Uu = H + eU
-            return (math.sqrt(Uu) - math.sqrt(L))**2 + 8*kap*Uu / (L + math.sqrt(L*L - 4*kap*Uu))
-        def valid(H): return H > eL and (H - eL)**2 > 4*kap*(H + eU)
-        target = 4.6 * kap                              # the limit of cstar is 4 kappa
-    if Hstar is None:
-        Hstar = eL + 10.0
-        while not valid(Hstar) or cstar(Hstar) >= target: Hstar *= 1.05
-    assert valid(Hstar)
-    cs = cstar(Hstar)
-    for k in range(1, 400):                             # cstar decreases beyond Hstar (checked on a grid)
-        assert cstar(Hstar * 1.05**k) <= cs + 1e-9
-    out.update(BUP=BUP, U=U, res=[str(res0), str(res1)], lo4=lo4, up4=up4, wpm=wpm, winv=winv, eL=eL, eU=eU, kappa=kap, Hstar=Hstar, cstar=cs)
+        def cstar(H): return 4*kap + (ee*ee + 16*kap*ee) / (4*(H - eL - kap))
+        def valid(H): return H - eL > 2*kap
+        guess = eL + kap + (ee*ee + 16*kap*ee) / (Fr(12, 5)*kap)    # then cstar = 4.6 kappa
+    if Hstar is None: Hstar = int(math.ceil(guess)) + 1
+    Hstar = Fr(Hstar)
+    if not valid(Hstar): out['status'] = 'Hstar too small'; return out
+    cs = cstar(Hstar)                                   # cstar decreases with H (see the header), so it bounds hhat(z) for every H >= Hstar
+    fl = lambda v: float(v)
+    out.update(BUP=fl(BUP), U=fl(U), res=[str(res0), str(res1)], lo4=fl(lo4), up4=fl(up4), wpm=fl(wpm), winv=fl(winv), eL=fl(eL), eU=fl(eU), kappa=fl(kap), Hstar=fl(Hstar), cstar=fl(cs))
+    out['arithmetic'] = 'exact (rational) for the constants, the enclosures of the height matrices and the two lists'
     # ---- the inverse map E -> t
     A1c = 4*q0**2; B1c = 2*d; A2c = d**2 - 4*q0**2*c; B2c = -4*q0**2*b; C2c = -4*q0**2*a; denc = A2c*B1c - A1c*B2c
     assert denc != 0
@@ -298,10 +359,9 @@ def dm4(m, n, Hstar=None, verbose=False):
             tf = Fr(sgn*int(QQ(tt).numerator()), int(QQ(tt).denominator()))
             if str(tf) not in verdicts: verdicts[str(tf)] = classify_t(m, n, tf)
     for tt in (0, 1, -1, t1, 1/t1): test_t(QQ(tt))
-    # ---- (A) all Q with hhat(2Q - R0) <= 4 (Hstar + eU)
-    bound = 4 * (Hstar + eU) * 1.02 + 1
+    # ---- (A) all Q with hhat(2Q - R0) <= 4 (Hstar + eU), that is, (c - rho/2)^T G (c - rho/2) <= Hstar + eU
     obs = [0.0, 0.0]; na = 0
-    for cvec in box(bound / 4, [rho[i] / 2.0 for i in range(r)]):       # (2c - rho)^T G (2c - rho) <= bound
+    for cvec in box(Hstar + eU, list(rho)):
         Q = comb(cvec); u = [2*cvec[i] - rho[i] for i in range(r)]
         Na = sum(Gm[i][j]*u[i]*u[j] for i in range(r) for j in range(r)) / 4
         for Tt in tors:
@@ -309,10 +369,9 @@ def dm4(m, n, Hstar=None, verbose=False):
             if tq is not None and tq != 0:              # numerical check of the bounds for N(a) on actual points
                 dv = Na - hQ(tq); obs[0] = min(obs[0], dv); obs[1] = max(obs[1], dv)
     out['nA'] = na; out['observed N(a) - H'] = obs
-    if not (-eL <= obs[0] and obs[1] <= eU): out['status'] = 'observed N(a) - H outside the bounds'; return out
+    if not (-float(eL) <= obs[0] and obs[1] <= float(eU)): out['status'] = 'observed N(a) - H outside the bounds'; return out
     # ---- (B) all z with hhat(z) <= cstar, and the equation t(Q - z) t(Q) = -1
-    boundz = cs * 1.02 + 0.01
-    zs = [comb(cvec) + Tt for cvec in box(boundz) for Tt in tors]
+    zs = [comb(cvec) + Tt for cvec in box(cs) for Tt in tors]
     out['nz'] = len(zs)
     qt = qpoly(t)
     class F2:                                   # alpha + beta*y in Q(t)[y]/(y^2 - q(t))

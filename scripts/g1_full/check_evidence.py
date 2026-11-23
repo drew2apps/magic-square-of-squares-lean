@@ -123,12 +123,12 @@ def same_curve(c46a, c46b):
     if c4a == 0 or c6a == 0 or c4b == 0 or c6b == 0: return False
     u2 = (c6a / c6b) / (c4a / c4b)
     return issq(u2) and u2 * u2 == c4a / c4b
-def check4(j, new):
+def check4(j, new, fresh=False):
     """One record of dm4.py. new = True: a closure of the census (rank 2 or 3, pair not closed otherwise);
     new = False: a second closure of a pair that dm_evidence.txt already closes (rank 1, 2 or 3)."""
     m, n = j['pair']; of = (m, n); S = m * m + n * n; r = j['rank']
     assert j['status'] == 'closed' and of in all157 and j['rank_bounds'][1] == r and r in ((2, 3) if new else (1, 2, 3)), of
-    assert (of not in closed) if new else (of in closed), of
+    assert fresh or ((of not in closed) if new else (of in closed)), of
     for tt, verdict in j['t'].items():
         assert verdict == 'degenerate' and classify_t(m, n, Fr(tt)) == 'degenerate', (of, tt)
     mdl = [Fr(z) for z in j['model']]; mn = [Fr(z) for z in j['min_model']]
@@ -140,7 +140,7 @@ def check4(j, new):
     g = j['gram']; assert len(g) == r and len(j['G']) == r
     det = g[0][0] if r == 1 else g[0][0] * g[1][1] - g[0][1] ** 2 if r == 2 else (g[0][0] * (g[1][1] * g[2][2] - g[1][2] ** 2) - g[0][1] * (g[0][1] * g[2][2] - g[1][2] * g[0][2]) + g[0][2] * (g[0][1] * g[1][2] - g[1][1] * g[0][2]))
     assert g[0][0] > 0 and (r == 1 or g[0][0] * g[1][1] - g[0][1] ** 2 > 0) and det > 0 and abs(det - j['reg']) < 1e-6 * det, of
-    assert j['kmax'] >= math.sqrt(j['reg0'] * {1: 1.0, 2: 4.0 / 3, 3: 2.0}[r] / j['lam'] ** r) and j['lam'] > 0 and j['reg0'] >= j['reg'] * (1 - 1e-9), of
+    assert j['kmax'] >= math.sqrt(j['reg0'] * {1: 1.0, 2: 4.0 / 3, 3: 2.0}[r] / j['lam'] ** r) and j['lam'] > 0 and j['reg0'] >= j['reg'], of
     Pi = (2 * m * n ** 3, m ** 4 - n ** 4, -2 * m ** 3 * n); Psi0 = (n * n, 0, m * m); Psi = (S, -4 * m * n, S)
     r0, r1 = abs(res2(Pi, Psi0)), abs(res2(Pi, Psi)); assert [str(r0), str(r1)] == j['res'] and r0 > 0 and r1 > 0, of
     octic = m ** 8 + 14 * m ** 4 * n ** 4 + n ** 8
@@ -152,13 +152,17 @@ def check4(j, new):
     BUP, U = j['BUP'], j['U']; eL = (BUP - lo4) / 4; eU = (up4 + U) / 4; kap = (BUP + U + max(wpm, winv)) / 4
     for name, v in (('lo4', lo4), ('up4', up4), ('wpm', wpm), ('winv', winv), ('eL', eL), ('eU', eU), ('kappa', kap)):
         assert abs(v - j[name]) < 1e-9 * max(1, abs(v)), (of, name)
-    H = j['Hstar']; L = H - eL; Uu = H + eU
+    H = j['Hstar']; L = H - eL; ee = eL + eU
+    # the bounds of G1.fourPoint_rank2_bound and G1.fourPoint_rank3_bound (FOUR_POINTS.md, Propositions 2 and 3)
     if r <= 2:
-        cs = (math.sqrt(Uu) - math.sqrt(L)) ** 2 + 8 * kap * kap * Uu / L ** 2; assert L > 0 and L ** 3 >= 4 * kap * kap * Uu, of
+        assert L > 0, of
+        cs = (ee * ee / 2 + 4 * kap * kap) / L
     else:
-        assert L > 0 and L * L > 4 * kap * Uu, of
-        cs = (math.sqrt(Uu) - math.sqrt(L)) ** 2 + 8 * kap * Uu / (L + math.sqrt(L * L - 4 * kap * Uu))
-    assert abs(cs - j['cstar']) < 1e-9 * cs and j['gram_check']['relative'] <= 0.015 and j['solver_selftest'] == 'ok', of
+        assert L > 2 * kap, of
+        cs = 4 * kap + (ee * ee + 16 * kap * ee) / (4 * (L - kap))
+    assert abs(cs - j['cstar']) < 1e-9 * cs and j['solver_selftest'] == 'ok', of
+    gc = j['gram_check']; assert 0 < gc['mu'] and 0 <= gc['relative'] <= 0.01 and j['arithmetic'].startswith('exact'), of
+    assert abs(gc['relative'] - r * gc['max_deviation'] / gc['mu']) <= 1e-6 * gc['relative'] + 1e-15, of
     assert -eL <= j['observed N(a) - H'][0] and j['observed N(a) - H'][1] <= eU, of
     return of, r
 log4 = [json.loads(l) for l in open(os.path.join(here, 'dm4_log.jsonl'))]
@@ -181,4 +185,19 @@ assert len(still) == 26 and not (still & closed) and (still | closed) == all157
 listed = set(pairs(l.split()[0])[0] for l in cl if l and not l.startswith('#') and len(l.split()) == 4)
 assert listed == closed
 assert set(pairs(l.split()[0])[0] for l in cl if l and not l.startswith('#') and len(l.split()) == 4 and l.split()[2] == 'E0L4') == closed4
-print('check_evidence OK: classify_t tests pass; 157 = 131 closed (91 E04, 25 D1, 6 E0L, 9 E0L with four points) + 26 open')
+if '--dm4' in sys.argv:
+    # CI: records just produced by dm4.py (a file of JSON lines) get the same checks as the stored ones and must agree
+    # with them in everything that does not depend on the choice of basis.
+    fresh = [json.loads(l) for l in open(sys.argv[sys.argv.index('--dm4') + 1]) if l.strip()]
+    assert fresh, 'no fresh records'
+    stored = dict((tuple(j['pair']), j) for j in log4 + cross4)
+    for j in fresh:
+        of = tuple(j['pair']); assert of in stored, of
+        check4(j, of in closed4, fresh=True); k = stored[of]
+        for name in ('status', 'rank', 'rank_bounds', 'model', 'min_model', 'res', 't', 'ntors'):
+            assert j[name] == k[name], (of, name)
+        for name in ('BUP', 'U', 'eL', 'eU', 'kappa'):
+            assert abs(j[name] - k[name]) < 1e-9 * abs(k[name]), (of, name)
+        assert abs(j['reg'] - k['reg']) < 1e-6 * k['reg'], of
+    print('fresh dm4 records agree with the stored ones:', ' '.join('(%d,%d)' % tuple(j['pair']) for j in fresh))
+print('check_evidence OK: classify_t tests pass; 157 = 122 closed on curves of rank 1 (91 E04, 25 D1, 6 E0L) + 9 closed with four points on E0L (a separate, unreviewed tier) + 26 open')

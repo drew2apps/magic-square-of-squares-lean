@@ -1,6 +1,6 @@
-# Bounds from Magma (public calculator, version 2.29-10, 2026-11-22, 21:15 to 22:39 UTC) for the D1 and E04 curves of the 36 pairs
-# that were open at release 0.3.4 and of their partners (46 pairs; the order of the requests). TwoPowerIsogenyDescentRankBound,
-# as in magma_check.py. "?" = no answer (time limit). The run was stopped after 30 of the 46 E04 curves.
+# Bounds from Magma (public calculator, version 2.29-10, 2026-11-22, 21:15 to 22:39 and 23:41 to 23:57 UTC) for the D1 and E04 curves
+# of the 36 pairs that were open at release 0.3.4 and of their partners (46 pairs; the order of the requests).
+# TwoPowerIsogenyDescentRankBound, as in magma_check.py. "?" = no answer (time limit; the D1 curve of 840,83 was asked twice).
 # Verbatim requests and responses: magma_open_raw.txt. Only the D1 curve of 1389,59 has a bound below 2.
 724,665 D1 rank <= 2
 1389,59 D1 rank <= 1
@@ -78,3 +78,19 @@
 1127,17 E04 rank <= 2
 608,105 E04 rank <= 2
 713,503 E04 rank <= 2
+609,200 E04 rank <= 2
+809,409 E04 rank <= 2
+627,364 E04 rank <= 2
+991,263 E04 rank <= 3
+680,111 E04 rank <= 2
+791,569 E04 rank <= 2
+741,580 E04 rank <= 2
+1321,161 E04 rank <= 2
+760,39 E04 rank <= 2
+799,721 E04 rank <= 2
+861,620 E04 rank <= 2
+1481,241 E04 rank <= 2
+920,129 E04 rank <= 2
+1049,791 E04 rank <= 2
+945,248 E04 rank <= 2
+1193,697 E04 rank <= 2
