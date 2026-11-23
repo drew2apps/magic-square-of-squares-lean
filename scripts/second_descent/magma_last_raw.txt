@@ -1,0 +1,51 @@
+=== 2026-11-23 08:51:58 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 1, 0, 2886129688298164378106722684590591, 148998179056972314020148649018293041677827927734271]));
+print "pair 627,364 curve +14 twist 1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2848004677</seed><version>2.29-10</version><time>5.879</time><memory>64.12MB</memory></headers><results><line>pair 627,364 curve +14 twist 1</line><line>TwoPowerIsogenyDescentRankBound: 2 [ 6, 4, 3, 3, 3 ]</line><line>[ 2, 2, 1, 1, 1 ]</line><line></line></results></calculator>
+
+=== 2026-11-23 08:54:11 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 1, 0, -9021844464060727080567249465409409, -1065536839977348440557569074642072134560212252985729]));
+print "pair 627,364 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1110110252</seed><version>2.29-10</version><time>7.320</time><memory>64.12MB</memory></headers><results><line>pair 627,364 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 2 [ 7, 5, 5, 3, 3 ]</line><line>[ 1, 1, 1, 1, 1 ]</line><line></line></results></calculator>
+
+=== 2026-11-23 08:56:23 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 1, 0, 2886129688298164378106722684590591, 148998179056972314020148649018293041677827927734271]));
+print "pair 991,263 curve +14 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1413277367</seed><version>2.29-10</version><time>5.990</time><memory>64.12MB</memory></headers><results><line>pair 991,263 curve +14 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 2 [ 6, 4, 3, 3, 3 ]</line><line>[ 2, 2, 1, 1, 1 ]</line><line></line></results></calculator>
+
+=== 2026-11-23 08:58:36 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0, 1, 0, -9021844464060727080567249465409409, -1065536839977348440557569074642072134560212252985729]));
+print "pair 991,263 curve +23 twist -1";
+print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E);
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>828264419</seed><version>2.29-10</version><time>7.330</time><memory>64.12MB</memory></headers><results><line>pair 991,263 curve +23 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 2 [ 7, 5, 5, 3, 3 ]</line><line>[ 1, 1, 1, 1, 1 ]</line><line></line></results></calculator>
+
+=== 2026-11-23 09:00:49 UTC
+--- input
+SetColumns(0);
+E := MinimalModel(EllipticCurve([0,-491040,0,-13400146081,0]));
+print "pair 440,279 curve 1356 twist -1";
+pts := [P : P in DivisionPoints(E!0, 2) | P ne E!0];
+for P in pts do print "TwoPowerIsogenyDescentRankBound:", TwoPowerIsogenyDescentRankBound(E, P); end for;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>57441612</seed><version>2.29-10</version><time>6.969</time><memory>64.12MB</memory></headers><results><line>pair 440,279 curve 1356 twist -1</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 2, 2, 2, 2, 1 ]</line><line>[ 2, 2, 2, 2, 1 ]</line><line>TwoPowerIsogenyDescentRankBound: 2 [ 0, 0, 0, 0, 0 ]</line><line>[ 4, 4, 4, 4, 4 ]</line><line>TwoPowerIsogenyDescentRankBound: 0 [ 2, 2, 2, 2, 1 ]</line><line>[ 2, 2, 2, 2, 1 ]</line><line></line></results></calculator>
+

@@ -1,0 +1,5 @@
+302 ratios with a degenerate solution that avoid the 484 classes, m from 1009 to 1999
+first descent: exactly 2 tuples left, those of the two degenerate solutions, for 302 of 302; the same for all 92 partners that were run
+second descent: closed 210, closed by partner 47, open 45
+rational t returned by the equations: -1: degenerate, -1: no, 0: degenerate, 0: no, 1: degenerate, 1: no
+not closed (45): 1015,192 1044,517 1049,791 1064,423 1088,735 1100,141 1103,529 1107,476 1127,697 1160,441 1161,560 1200,49 1207,823 1219,1140 1241,313 1241,959 1249,1151 1305,592 1332,1045 1395,532 1487,641 1505,312 1561,73 1561,527 1583,631 1591,240 1600,399 1601,719 1612,285 1617,656 1672,1575 1687,23 1721,601 1785,688 1817,1193 1823,353 1831,1351 1833,344 1836,427 1871,103 1897,713 1897,1327 1900,819 1927,863 1999,1201

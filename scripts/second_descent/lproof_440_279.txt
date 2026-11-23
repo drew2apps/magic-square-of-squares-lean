@@ -1,0 +1,1 @@
+(440,279), curve y^2 = x(x - 719^2)(x + 161^2), the twist by -1 of the Frey curve: {"conductor": "1.93e+09", "root_number": 1, "terms": 402483, "L": "1.104924974026", "tail_bound": "2.8e-21", "positive": true, "L_over_Omega": "256.000000000"}

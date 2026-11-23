@@ -100,8 +100,6 @@ jobs:
           set -e -o pipefail
           pip install -q -r scripts/g1_full/requirements.txt
           cd scripts/second_descent
-          python3 lcheck.py 1e14 second_123.jsonl > /tmp/lcheck.out &
-          LCHECK=$!
           python3 second_descent.py --all $(cat pairs123.txt) | diff - second_123.jsonl
           python3 second_descent.py --summary second_123.jsonl | diff - second_summary.txt
           python3 second_control.py | diff - second_control.txt
@@ -109,16 +107,21 @@ jobs:
           (for k in 1 3 5 7; do python3 planted.py 30 60 $k | grep -v "^m:n"; done) | diff - planted.txt
           python3 magma_check.py | diff - magma_check.txt
           python3 kdescent_test.py 1 300 | diff - kdescent_test.txt
+          python3 lproof.py 1e14 second_123.jsonl | grep -v "PARI stack" | diff - lproof.txt
+          python3 lvalue_close.py 1e13 $(python3 -c "import json; print(' '.join('%d,%d' % tuple(json.loads(l)['pair']) for l in open('second_123.jsonl') if json.loads(l)['status'] == 'open'))") | grep '^{' | diff - lvalue_open.jsonl
+          python3 tally.py second_123.jsonl lvalue_open.jsonl | diff - tally.txt
+          python3 wide.py 1000 1020 ../g1_full/modp_classes.txt | diff - <(head -n 5 wide_1000_2000.jsonl)
+          python3 wide.py --summary wide_1000_2000.jsonl | diff - wide_summary.txt
           cd ../gauss_descent
           python3 real_points.py 300 $(cat pairs157.txt) | diff - real_points_157.txt
           python3 local_points.py $(cat pairs157.txt) | diff - local_points_157.txt
           python3 hilbert_check.py 3000 | diff - hilbert_check.txt
+          python3 subsets.py 4,3 15,8 59,56 820,799 889,320 | diff - subsets.txt
+          python3 twocover_check.py | diff - twocover_check.txt
           python3 gd_control.py 1 100 | diff - gd_control.txt
           python3 scan.py 1000 1100 ../g1_full/modp_classes.txt /tmp/scan_list.txt | sed 's/  \[[0-9]* s\]$//' | diff - scan_1000_1100.txt
           diff /tmp/scan_list.txt <(awk -F'[, ]' '$1 <= 1100' scan_certificates.txt)
-          python3 gd_check.py $(cat pairs_scan_high.txt) | diff - gd_check_scan_high.txt
-          wait $LCHECK
-          diff /tmp/lcheck.out lcheck.txt
+          python3 gd_check.py --pmax=100 $(cat pairs_scan_high.txt) | diff - gd_check_scan_high.txt
 
   twist-search:
     # scripts/search/twist_search.txt: no t0 = p/q != 1 with m, p, q <= 400 at which all four points are rational on a twist.
