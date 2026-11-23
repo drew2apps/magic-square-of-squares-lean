@@ -14,4 +14,5 @@ G is not divisible by 19 in E1(Q) modulo torsion: shown modulo 73
 pairs 0 <= a, b <= 596309 allowed by p = 10009 and 20089: 332928
   after p = 30013: 23
   after p = 40009: 1
+test of the lifting: 5 pairs planted up to 596309 by adding their residues to the local sets; all of them returned: True; returned beyond them and the pairs left: []
 left: [(1, 1)]

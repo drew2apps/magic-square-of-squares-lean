@@ -79,31 +79,39 @@ for l in (2, 3, 5, 7, 11, 13, 17, 19):
         Gp, Tp = red(e, G), red(e, T)
         if all(not X.division_points(l) for X in ((Gp, Gp + Tp) if l == 2 else (Gp,))): ok = True; break
     print('G is not divisible by %d in E1(Q) modulo torsion: %s' % (l, 'shown modulo %d' % p if ok else 'NOT SHOWN'), flush=True)
-(o1, S1), (o2, S2) = loc[primes[0]], loc[primes[1]]
-if gcd(o1, o2) != 1:                                      # the two orders are not coprime: lift from the first prime only, in a smaller range
-    N = min(N, 30000); cand = set((a, b) for (a0, b0) in S1 for a in range(a0, N + 1, o1) for b in range(b0, N + 1, o1))
-    print('the orders of G modulo %d and %d are not coprime: lifting from the first prime only (a simpler path than for coprime orders), range %d' % (primes[0], primes[1], N), flush=True)
-    print('pairs 0 <= a, b <= %d allowed by p = %d: %d' % (N, primes[0], len(cand)), flush=True)
-    for p in primes[1:]:
+def lift(loc, N, say=True):
+    """The pairs 0 <= a, b <= N whose residues lie in every local set of loc, and the range actually covered."""
+    (o1, S1), (o2, S2) = loc[primes[0]], loc[primes[1]]
+    if gcd(o1, o2) != 1:                                  # the two orders are not coprime: lift from the first prime only, in a smaller range
+        N = min(N, 30000); cand = set((a, b) for (a0, b0) in S1 for a in range(a0, N + 1, o1) for b in range(b0, N + 1, o1))
+        if say: print('the orders of G modulo %d and %d are not coprime: lifting from the first prime only (a simpler path than for coprime orders), range %d' % (primes[0], primes[1], N), flush=True)
+        if say: print('pairs 0 <= a, b <= %d allowed by p = %d: %d' % (N, primes[0], len(cand)), flush=True)
+        rest = primes[1:]
+    else:
+        M = o1*o2; inv = pow(o1, -1, o2); N = min(N, M - 1); cand = set()
+        crt = lambda x1, x2: x1 + o1*(((x2 - x1)*inv) % o2)
+        B2 = {}; A1s = {}
+        for (a2, b2) in S2: B2.setdefault(a2, []).append(b2)
+        for (a1, b1) in S1: A1s.setdefault(a1, []).append(b1)
+        for a1, b1s in A1s.items():
+            for a2, b2s in B2.items():
+                a = crt(a1, a2)
+                if a > N: continue
+                for b1 in b1s:
+                    for b2 in b2s:
+                        b = crt(b1, b2)
+                        if b <= N: cand.add((a, b))
+        if say: print('pairs 0 <= a, b <= %d allowed by p = %d and %d: %d' % (N, primes[0], primes[1], len(cand)), flush=True)
+        rest = primes[2:]
+    for p in rest:
         o, Sp = loc[p]; cand = set(c for c in cand if (c[0] % o, c[1] % o) in Sp)
-        print('  after p = %d: %d' % (p, len(cand)), flush=True)
-    print('left:', sorted(cand)[:40]); sys.exit(0)
-M = o1*o2; inv = pow(o1, -1, o2); N = min(N, M - 1); cand = set()
-B2 = {}
-for (a2, b2) in S2: B2.setdefault(a2, []).append(b2)
-crt = lambda x1, x2: x1 + o1*(((x2 - x1)*inv) % o2)
-A1s = {}
-for (a1, b1) in S1: A1s.setdefault(a1, []).append(b1)
-for a1, b1s in A1s.items():
-    for a2, b2s in B2.items():
-        a = crt(a1, a2)
-        if a > N: continue
-        for b1 in b1s:
-            for b2 in b2s:
-                b = crt(b1, b2)
-                if b <= N: cand.add((a, b))
-print('pairs 0 <= a, b <= %d allowed by p = %d and %d: %d' % (N, primes[0], primes[1], len(cand)), flush=True)
-for p in primes[2:]:
-    o, Sp = loc[p]; cand = set(c for c in cand if (c[0] % o, c[1] % o) in Sp)
-    print('  after p = %d: %d' % (p, len(cand)), flush=True)
-print('left:', sorted(cand)[:40])
+        if say: print('  after p = %d: %d' % (p, len(cand)), flush=True)
+    return sorted(cand), N
+left, N = lift(loc, N)
+# A test of the lifting itself: pairs spread over the range are planted by adding their residues to every local set; the
+# lifting has to return each of them, and nothing else but them and what was left before.
+plant = sorted(set([(2, 1), (N, 3), (N//2 + 7, N - 5), (31337 % N, 4242421 % N), (loc[primes[0]][0] + 1, N - 2)]))
+left2, _ = lift({p: (o, Sp | set((a % o, b % o) for (a, b) in plant)) for p, (o, Sp) in loc.items()}, N, say=False)
+print('test of the lifting: %d pairs planted up to %d by adding their residues to the local sets; all of them returned: %s; returned beyond them and the pairs left: %s' % (
+    len(plant), N, all(x in left2 for x in plant), sorted(set(left2) - set(plant) - set(left))[:10]))
+print('left:', left[:40])

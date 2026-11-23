@@ -16,4 +16,5 @@ pairs 0 <= a, b <= 30000 allowed by p = 10009: 1273021
   after p = 20089: 905
   after p = 30013: 3
   after p = 40009: 1
+test of the lifting: 5 pairs planted up to 30000 by adding their residues to the local sets; all of them returned: True; returned beyond them and the pairs left: []
 left: [(1, 1)]

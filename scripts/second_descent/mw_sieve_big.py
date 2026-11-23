@@ -74,23 +74,35 @@ import numpy as np, time
 loc = {}
 for p in primes:
     t0 = time.time(); loc[p] = local(p); print('p = %d: order of G %d, pairs allowed %d of %d' % (p, loc[p][0], len(loc[p][1]), loc[p][0]**2), flush=True)
-(o1, S1), (o2, S2) = loc[primes[0]], loc[primes[1]]; assert gcd(o1, o2) == 1; M = o1*o2; inv = pow(o1, -1, o2)
-crt = lambda x1, x2: x1 + o1*(((x2 - x1)*inv) % o2)
-base = sorted(set((crt(a1, a2), crt(b1, b2)) for (a1, b1) in S1 for (a2, b2) in S2))
-A0 = np.array([x[0] for x in base], dtype=np.int64); B0 = np.array([x[1] for x in base], dtype=np.int64)
-print('pairs modulo %d allowed by the first two primes: %d; lifting to 0 <= a, b < %d' % (M, len(base), L*M), flush=True)
-def table(p):
-    o, Sp = loc[p]; T = np.zeros((o, o), dtype=bool)
-    for (a, b) in Sp: T[a, b] = True
-    return o, T
-o3, T3 = table(primes[2]); lift = (M*np.arange(L, dtype=np.int64)); sa = []; sb = []
-for c in range(0, len(base), 500):
-    a = A0[c:c+500, None] + lift[None, :]; b = B0[c:c+500, None] + lift[None, :]
-    hit = T3[(a % o3)[:, :, None], (b % o3)[:, None, :]]
-    ii, jj, kk = np.nonzero(hit); sa.append(a[ii, jj]); sb.append(b[ii, kk])
-sa = np.concatenate(sa); sb = np.concatenate(sb)
-print('  after p = %d: %d' % (primes[2], len(sa)), flush=True)
-for p in primes[3:]:
-    o, T = table(p); keep = T[sa % o, sb % o]; sa, sb = sa[keep], sb[keep]
-    print('  after p = %d: %d' % (p, len(sa)), flush=True)
-print('left:', sorted(zip(sa.tolist(), sb.tolist()))[:40])
+def lift_all(loc, say=True):
+    """The pairs 0 <= a, b < L*o1*o2 whose residues lie in every local set of loc."""
+    (o1, S1), (o2, S2) = loc[primes[0]], loc[primes[1]]; assert gcd(o1, o2) == 1; M = o1*o2; inv = pow(o1, -1, o2)
+    crt = lambda x1, x2: x1 + o1*(((x2 - x1)*inv) % o2)
+    base = sorted(set((crt(a1, a2), crt(b1, b2)) for (a1, b1) in S1 for (a2, b2) in S2))
+    A0 = np.array([x[0] for x in base], dtype=np.int64); B0 = np.array([x[1] for x in base], dtype=np.int64)
+    if say: print('pairs modulo %d allowed by the first two primes: %d; lifting to 0 <= a, b < %d' % (M, len(base), L*M), flush=True)
+    def table(p):
+        o, Sp = loc[p]; T = np.zeros((o, o), dtype=bool)
+        for (a, b) in Sp: T[a, b] = True
+        return o, T
+    o3, T3 = table(primes[2]); lift = (M*np.arange(L, dtype=np.int64)); sa = []; sb = []
+    for c in range(0, len(base), 500):
+        a = A0[c:c+500, None] + lift[None, :]; b = B0[c:c+500, None] + lift[None, :]
+        hit = T3[(a % o3)[:, :, None], (b % o3)[:, None, :]]
+        ii, jj, kk = np.nonzero(hit); sa.append(a[ii, jj]); sb.append(b[ii, kk])
+    sa = np.concatenate(sa); sb = np.concatenate(sb)
+    if say: print('  after p = %d: %d' % (primes[2], len(sa)), flush=True)
+    for p in primes[3:]:
+        o, T = table(p); keep = T[sa % o, sb % o]; sa, sb = sa[keep], sb[keep]
+        if say: print('  after p = %d: %d' % (p, len(sa)), flush=True)
+    return sorted(zip(sa.tolist(), sb.tolist())), M
+left, M = lift_all(loc)
+print('left:', left[:40])
+# A test of the lifting itself: pairs spread over the whole range are planted by adding their residues to every local set;
+# the lifting has to return each of them (and may return nothing else but them and what was left before).
+top = L*M - 1
+plant = sorted(set([(2, 1), (M - 1, M + 1), (31337 % top, 4242421 % top), (top, 3), (top // 2 + 7, top - 5), (12345678 % top, (5*top) // 6)]))
+loc2 = {p: (o, Sp | set((a % o, b % o) for (a, b) in plant)) for p, (o, Sp) in loc.items()}
+left2, _ = lift_all(loc2, say=False)
+print('test of the lifting: %d pairs planted up to %d by adding their residues to the local sets; all of them returned: %s; returned beyond them and the pairs left above: %s' % (
+    len(plant), top, all(x in left2 for x in plant), sorted(set(left2) - set(plant) - set(left))[:10]))

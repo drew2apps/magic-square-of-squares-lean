@@ -11,3 +11,4 @@ pairs modulo 596310 allowed by the first two primes: 332928; lifting to 0 <= a, 
   after p = 50021: 1
   after p = 60013: 1
 left: [(1, 1)]
+test of the lifting: 6 pairs planted up to 59630999 by adding their residues to the local sets; all of them returned: True; returned beyond them and the pairs left above: []

@@ -37,7 +37,7 @@ def one(item):
     rng = [int(x) for l in sv for x in re.findall(r'^pairs 0 <= a, b <= (\d+)', l)][0]
     one_prime = any('first prime only' in l for l in sv)
     ce, err = run(['closure_estimate.py', mn, str(d), str(rng)])
-    b96 = [int(x) for l in ce for x in re.findall(r'a, b <= (\d+) \(deg C <= 96\)', l)]
+    b96 = [int(x) for l in ce for x in re.findall(r'deg C <= 96: every solution has a, b <= (\d+)', l)]
     if not b96: return out + 'generator: %s; closure_estimate failed' % gen
     inb = [pq for pq in left if max(pq) <= b96[0]]
     fb, err = run(['fibre.py', mn, str(d)])

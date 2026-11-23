@@ -33,3 +33,21 @@ lo, hi := RankBounds(E); print "RankBounds", lo, hi;
 <?xml version="1.0"?>
 <calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2898492860</seed><version>2.29-10</version><time>3.439</time><memory>85.16MB</memory></headers><results><line>RankBounds 1 1</line><line></line></results></calculator>
 
+=== 2026-11-23 20:41:45 UTC
+--- input
+SetColumns(0);
+E := EllipticCurve([0, 1, 0, 15223208213202973031750280786182975, 372517508636065850025943055293341065999858640587423]);
+G := E![83214074135015341, 47069367709023802879687500];
+T, mp := TorsionSubgroup(E);
+S := Saturation([G], 200);
+inf := [P : P in S | Order(P) eq 0];
+print "Saturation([G], 200) returns", #S, "points;", #inf, "of infinite order";
+print "every point of infinite order returned is G or -G plus a torsion point:", forall{P : P in inf | exists{t : t in T | P eq G + mp(t) or P eq -G + mp(t)}};
+print "every other point returned is a torsion point:", forall{P : P in S | Order(P) eq 0 or exists{t : t in T | P eq mp(t)}};
+S2 := Saturation([G], 1000);
+inf2 := [P : P in S2 | Order(P) eq 0];
+print "with the primes up to 1000:", #S2, "points;", #inf2, "of infinite order; G or -G plus torsion:", forall{P : P in inf2 | exists{t : t in T | P eq G + mp(t) or P eq -G + mp(t)}};
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>961995525</seed><version>2.29-10</version><time>0.270</time><memory>32.09MB</memory></headers><results><line>Saturation([G], 200) returns 2 points; 1 of infinite order</line><line>every point of infinite order returned is G or -G plus a torsion point: true</line><line>every other point returned is a torsion point: true</line><line>with the primes up to 1000: 2 points; 1 of infinite order; G or -G plus torsion: true</line><line></line></results></calculator>
+
