@@ -1,0 +1,4 @@
+magic (627,364): random points at the primes [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 53]: 43228 at which every form has the class of a rational number; outside the allowed set: 0
+magic (820,799): random points at the primes [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 53]: 37855 at which every form has the class of a rational number; outside the allowed set: 0
+magic (15,8): random points at the primes [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 53]: 35864 at which every form has the class of a rational number; outside the allowed set: 0
+magic (247,96): random points at the primes [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 53]: 38007 at which every form has the class of a rational number; outside the allowed set: 0

@@ -100,6 +100,16 @@ jobs:
           test "$(cat cover_820_799.txt cover_889_320.txt | grep -c "^left: \[\] (no class is possible")" = 2
           python3 cover_descent.py 627,364 selftest | diff - cover_selftest_627_364.txt
           python3 cover_summary.py cover_34.txt cover_123.txt | diff - cover_summary.txt
+          # section 12: one class for each form; all lists, under a second per ratio
+          python3 tuple_descent.py magic 627,364 | diff - tuple_627_364.txt
+          (for r in 627,364 820,799 15,8 247,96; do python3 tuple_descent.py magic $r selftest; done) | diff - tuple_selftest.txt
+          test "$(grep -c "outside the allowed set: 0$" tuple_selftest.txt)" = 4
+          python3 tuple_descent.py batch magic ../gauss_descent/pairs34.txt 2 | diff - tuple_34.txt
+          python3 tuple_descent.py batch magic ../second_descent/pairs123.txt 2 | diff - tuple_123.txt
+          python3 tuple_descent.py batch magic ../gauss_descent/pairs_notrivial_1000.txt 2 | diff - tuple_681.txt
+          python3 tuple_descent.py batch magic pairs_route_wide.txt 2 | diff - tuple_route_wide.txt
+          test "$(cat tuple_34.txt tuple_681.txt | grep -c "nothing is left$")" = 715
+          test "$(cat tuple_123.txt tuple_route_wide.txt | grep -c "exactly the known points$")" = 138
           cd ../second_descent
           grep -q "G has infinite order for every other rational tau: True$" degenerate_section.txt
           grep -q "^all identities hold: True$" lemma2_general.txt

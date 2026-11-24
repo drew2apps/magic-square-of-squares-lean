@@ -1,0 +1,15 @@
+(1064,423): 65536 tuples; good primes up to 150; known: [(2, 1, 641, 1487), (2, 1, 2974, 1282)]; left: [(2, 1, 641, 1487), (2, 1, 2974, 1282)]; exactly the known points
+(1332,1045): 1048576 tuples; good primes up to 150; known: [(2, 1, 287, 2377), (2, 1, 4754, 574)]; left: [(2, 1, 287, 2377), (2, 1, 4754, 574)]; exactly the known points
+(1395,532): 1048576 tuples; good primes up to 150; known: [(1, 2, 863, 1927), (1, 2, 3854, 1726)]; left: [(1, 2, 863, 1927), (1, 2, 3854, 1726)]; exactly the known points
+(1785,688): 262144 tuples; good primes up to 150; known: [(1, 2, 1097, 2473), (1, 2, 4946, 2194)]; left: [(1, 2, 1097, 2473), (1, 2, 4946, 2194)]; exactly the known points
+(2015,1632): 1048576 tuples; good primes up to 150; known: [(1, 2, 383, 3647), (1, 2, 7294, 766)]; left: [(1, 2, 383, 3647), (1, 2, 7294, 766)]; exactly the known points
+(2107,276): 65536 tuples; good primes up to 150; known: [(1, 2, 1831, 2383), (1, 2, 4766, 3662)]; left: [(1, 2, 1831, 2383), (1, 2, 4766, 3662)]; exactly the known points
+(2108,195): 1048576 tuples; good primes up to 150; known: [(2, 1, 94, 3826), (2, 1, 1913, 47)]; left: [(2, 1, 94, 3826), (2, 1, 1913, 47)]; exactly the known points
+(2135,1248): 1048576 tuples; good primes up to 1500; known: [(1, 2, 887, 3383), (1, 2, 6766, 1774)]; left: [(1, 2, 887, 3383), (1, 2, 6766, 1774)]; exactly the known points
+(2331,1300): 262144 tuples; good primes up to 150; known: [(1, 2, 1031, 3631), (1, 2, 7262, 2062)]; left: [(1, 2, 1031, 3631), (1, 2, 7262, 2062)]; exactly the known points
+(2752,825): 1048576 tuples; good primes up to 150; known: [(2, 1, 146, 3854), (2, 1, 1927, 73)]; left: [(2, 1, 146, 3854), (2, 1, 1927, 73)]; exactly the known points
+(2765,2508): 1048576 tuples; good primes up to 1500; known: [(1, 2, 257, 5273), (1, 2, 10546, 514)]; left: [(1, 2, 257, 5273), (1, 2, 10546, 514)]; exactly the known points
+(2867,756): 65536 tuples; good primes up to 150; known: [(1, 2, 2111, 3623), (1, 2, 7246, 4222)]; left: [(1, 2, 2111, 3623), (1, 2, 7246, 4222)]; exactly the known points
+(2365,588): 262144 tuples; good primes up to 150; known: [(1, 2, 1777, 2953), (1, 2, 5906, 3554)]; left: [(1, 2, 1777, 2953), (1, 2, 5906, 3554)]; exactly the known points
+(2405,1428): 1048576 tuples; good primes up to 150; known: [(1, 2, 977, 3833), (1, 2, 7666, 1954)]; left: [(1, 2, 977, 3833), (1, 2, 7666, 1954)]; exactly the known points
+(2640,511): 1048576 tuples; good primes up to 150; known: [(2, 1, 2129, 3151), (2, 1, 6302, 4258)]; left: [(2, 1, 2129, 3151), (2, 1, 6302, 4258)]; exactly the known points

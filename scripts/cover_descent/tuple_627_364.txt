@@ -1,0 +1,5 @@
+magic (627,364): classes for each form: [64, 64, 8, 8]; tuples: 262144
+classes of the known points: [(1, 2, 263, 991), (1, 2, 1982, 526)]
+tuples left: 2: [(1, 2, 263, 991), (1, 2, 1982, 526)]
+products of the tuples left (the class d of section 11): [521266]
+exactly the known points
