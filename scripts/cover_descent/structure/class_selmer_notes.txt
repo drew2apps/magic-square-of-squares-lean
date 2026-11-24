@@ -11,3 +11,8 @@ octic: 792 pairs (prime below 3000, root of the octic); a point of first order f
     such points among the p + 1 points of the line is 0.0822, at p = 73.
 on the 21,104 ratios with m <= 5000 of LAST_PAIR.md, section 12, the test at 2 and at every prime below 100 of
     (m^2+n^2)(octic): no point at 2 for 10,258; at 5 for 5,456; at 13 for 2,608; at no other prime.
+Since a review of 0b34613 the lines for 2, for e = 1 at 5 and 13, and for the octic are recomputed by class_gaps.py
+    (parts 5, 2 and 3), and COMPLETE.md, section 7, has proofs of the last two (Propositions A and B).
+The other lines (5 and 13 with e >= 2, sampled modulo 5^5 and 13^3; 17 and 29; the 21,104 ratios) come from programs that
+    were not kept and are informational only: class_selmer.py does not use them (for e >= 2 it runs its own test modulo
+    5^3 and 13^2, which can only allow too much).

@@ -177,6 +177,17 @@ jobs:
           pip install -q sympy==1.14.0
           python3 class_selmer.py | diff - class_selmer.txt
           grep -qx '  the criterion and the local test at the primes below 620 leave the same classes for 425 ratios of 425' class_selmer.txt
+          # review of 0b34613: Propositions A and B of COMPLETE.md, the rule at 2, the rows E, the weakness of Passes
+          python3 class_gaps.py | diff - class_gaps.txt
+          test "$(grep -c 'points where every form could be a q-adic square: 0$' class_gaps.txt)" = 2
+          grep -q 'not of the shape used (four points, two forms each, full product a square): 0; with 16N below 2q - 76 - 42 sqrt(q): 0;' class_gaps.txt
+          grep -q 'all = +-1 (mod 8): True; ' class_gaps.txt && grep -q 'differs from the rule "4 | mn or m = +-n (mod 8)": 0$' class_gaps.txt
+          test "$(grep -c 'p times each product a square in Z_p\[i\]: True; the point in X_p: False$' class_gaps.txt)" = 6
+          # the four-class descent on the 997 ratios of COMPLETE.md, section 7, test 4 (about a minute)
+          cd ..
+          python3 tuple_descent.py batch magic structure/class_selmer_997.txt 4 | diff - tuple_selmer_997.txt
+          test "$(grep -c 'nothing is left$' tuple_selmer_997.txt)" = 997
+          cd structure
           grep -q '^1. random points with a class: 211894; outside the set of Theorem C: 0$' class_local.txt && grep -q 'not as the proof says: 0$' class_local.txt && grep -q 'different from the table of Theorem C: 0$' class_local.txt
           grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete.txt
           python3 class_complete_random.py 200 1500 3000 | diff - class_complete_random.txt
@@ -402,6 +413,19 @@ jobs:
           python3 class_two.py | diff - class_two.txt
           # the checks for Theorem C (COMPLETE.md): exact p-adic classes; about three minutes
           python3 class_local.py | diff - class_local.txt
+          # COMPLETE.md, section 7 (review of 0b34613): the table of Theorem C' in full (enumeration to 4400; about four
+          # minutes) and the criterion on every coprime ratio with m <= 5000 and on the lists of LAST_PAIR.md, section 12
+          python3 class_good.py | diff - class_good.txt
+          git diff --exit-code class_good_table.txt
+          pip install -q cypari2==2.2.9      # faster factoring for class_selmer.py; the output is the same with sympy
+          python3 class_selmer.py --all 5000 | diff - class_selmer_all_5000.txt
+          python3 class_selmer.py --lists | diff - class_selmer_lists.txt
+          python3 class_selmer_linalg.py 5000 1000 | diff - class_selmer_linalg.txt
+          # a sample of 40 of the 997 by exhaustion (tuple_bruteforce.py: no valuations, no code shared with tuple_descent.py)
+          cd ..
+          cat structure/tuple_bruteforce_997_sample.txt | xargs -P 4 -I{} sh -c 'echo "({}) $(python3 tuple_bruteforce.py magic {} 150 5000 | tail -1)"' | LC_ALL=C sort | diff - structure/tuple_bruteforce_997_sample_out.txt
+          test "$(grep -c 'kept at every prime: 0: \[\]$' structure/tuple_bruteforce_997_sample_out.txt)" = 40
+          cd structure
           cd ../fourth
           python3 compare.py | sed 's/  \[[0-9]*s\]$//' | diff - compare_out.txt
           python3 attack.py | sed 's/ [0-9]*s$//' | diff - attack_out.txt

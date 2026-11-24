@@ -24,8 +24,7 @@ theorem pass_odd_valuation_gen {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m1 n u1
     (hn : ¬(p : ℤ) ∣ n) (hω0 : ¬(p : ℤ) ∣ ω0) (hω : ω0 ^ 2 ≡ m1 ^ 2 + (n * u1) ^ 2 [ZMOD p])
     (hr : r ^ 2 ≡ 2 [ZMOD p]) (ht : t ^ 2 ≡ d1 * (2 * n * (ω0 + m1)) [ZMOD p])
     (ht0 : ¬(p : ℤ) ∣ t) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool,
-      GSqM ((p : ℤ) ^ (k + 1)) ((p : ℤ) * d1) (Q ((p : ℤ) * m1) n ((p : ℤ) * u1) 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) ((p : ℤ) * d1) ((p : ℤ) * m1) n ((p : ℤ) * u1) 1 := by
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
   have h2 := not_dvd_two_of_odd hp hp2
   have hp0 : (p : ℤ) ≡ 0 [ZMOD p] := Int.modEq_zero_iff_dvd.mpr dvd_rfl
@@ -119,15 +118,19 @@ theorem pass_odd_valuation_gen {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m1 n u1
       _ = (p : ℤ) * d1 * ρ ^ 2 * x ^ 2 := by ring
       _ ≡ (p : ℤ) * d1 * ρ ^ 2 * (d1 * (16 * D1)) [ZMOD (p : ℤ) ^ (k + 1)] := hx.mul_left _
       _ = (ρ * d1) ^ 2 * (16 * ((p : ℤ) * D1)) := by ring
-  exact fun f => gsqM_class h0.symm h8.symm hL.symm hU.symm hd f
+  exact ⟨(p : ℤ) * ω, w8, wL, wU, ⟨h0.symm, h8.symm, hL.symm, hU.symm⟩,
+    ⟨not_cube_dvd_mul hp' (not_dvd_of_modEq cω hω0),
+      not_cube_dvd (not_dvd_of_modEq c8 hn),
+      not_cube_dvd (not_dvd_of_modEq cL (not_dvd_mul_of_prime hp' hn hr0)),
+      not_cube_dvd (not_dvd_of_modEq cU (not_dvd_mul_of_prime hp' hn hr0))⟩,
+    fun f => gsqM_class h0.symm h8.symm hL.symm hU.symm hd f⟩
 
 /-- The point `(0, 1)`: for `m = p·m₁` with `p ∤ m₁`, the classes `p·d₁` with `d₁ · n·m₁` a
 nonzero square modulo `p` pass. -/
 theorem prime_mul_passes_at_zero_one {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m1 n r t d1 : ℤ}
     (hn : ¬(p : ℤ) ∣ n) (hm1 : ¬(p : ℤ) ∣ m1) (hr : r ^ 2 ≡ 2 [ZMOD p])
     (ht : t ^ 2 ≡ d1 * (n * m1) [ZMOD p]) (ht0 : ¬(p : ℤ) ∣ t) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool,
-      GSqM ((p : ℤ) ^ (k + 1)) ((p : ℤ) * d1) (Q ((p : ℤ) * m1) n ((p : ℤ) * 0) 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) ((p : ℤ) * d1) ((p : ℤ) * m1) n ((p : ℤ) * 0) 1 := by
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
   have h2 := not_dvd_two_of_odd hp hp2
   have hω : m1 ^ 2 ≡ m1 ^ 2 + (n * 0) ^ 2 [ZMOD p] := by
@@ -144,8 +147,7 @@ theorem prime_mul_passes_at_zero_one {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m
 `−d` pass together. -/
 theorem prime_mul_unit_passes_seven_mod_eight {p : ℕ} (hp : p.Prime) (h7 : p % 8 = 7)
     {m1 n d1 : ℤ} (hn : ¬(p : ℤ) ∣ n) (hm1 : ¬(p : ℤ) ∣ m1) (hd1 : ¬(p : ℤ) ∣ d1) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool,
-      GSqM ((p : ℤ) ^ (k + 1)) ((p : ℤ) * d1) (Q ((p : ℤ) * m1) n ((p : ℤ) * 0) 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) ((p : ℤ) * d1) ((p : ℤ) * m1) n ((p : ℤ) * 0) 1 := by
   have : Fact p.Prime := ⟨hp⟩
   have hp2 : p ≠ 2 := by omega
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
@@ -172,8 +174,7 @@ theorem prime_mul_unit_passes_seven_mod_eight {p : ℕ} (hp : p.Prime) (h7 : p %
       exact mul_ne_zero (by norm_num) hc0
     obtain ⟨t, ht, ht0⟩ := exists_int_sq_of_isSquare (p := p)
       ((quadraticChar_one_iff_isSquare hna0).mp hq) hna0
-    intro f
-    have h5 := (prime_mul_passes_at_zero_one hp hp2 (d1 := -d1) hn hm1 hr ht ht0 k f).neg_left
+    have h5 := (prime_mul_passes_at_zero_one hp hp2 (d1 := -d1) hn hm1 hr ht ht0 k).neg
     have e : -((p : ℤ) * -d1) = (p : ℤ) * d1 := by ring
     rwa [e] at h5
 
@@ -182,7 +183,7 @@ every power of 5. By the law at 5 (`class_mod_five`) these are the only classes 
 25 does not divide `mn(m² − n²)`. -/
 theorem passes_at_five {m n d : ℤ} (hm : (5 : ℤ) ∣ m) (hn : ¬(5 : ℤ) ∣ n)
     (hd : d % 5 = 2 ∨ d % 5 = 3) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool, GSqM ((5 : ℤ) ^ (k + 1)) d (Q m n 1 1 f) := by
+    ClassAt ((5 : ℤ) ^ (k + 1)) ((5 : ℤ) ^ 3) d m n 1 1 := by
   have hp : Nat.Prime 5 := by norm_num
   have h1 : ¬((5 : ℕ) : ℤ) ∣ 1 := by norm_num
   have h2 : ¬((5 : ℕ) : ℤ) ∣ 2 := by norm_num
@@ -198,11 +199,9 @@ theorem passes_at_five {m n d : ℤ} (hm : (5 : ℤ) ∣ m) (hn : ¬(5 : ℤ) �
       push_cast
       omega
   obtain ⟨t, ht, ht0⟩ := key
-  obtain ⟨_, _, _, _, _, _, _, _, g⟩ := pass_first_order hp (by norm_num) (u := 1) (v := 1)
+  have h5 := pass_first_order hp (by norm_num) (u := 1) (v := 1)
     (s := 2) (t := t) (m := m) (n := n) (d := d) (by exact_mod_cast hm) (by exact_mod_cast hn)
     h1 h1 (by norm_num) hs h2 ht ht0 k
-  intro f
-  have h5 := g f
   exact_mod_cast h5
 
 /-- **Every class `p · (unit)` passes at a prime `p ≡ 1 (mod 8)` dividing `m` exactly once**, at
@@ -211,8 +210,8 @@ point is `(0, 1)`; otherwise `ω₀ = m₁(λ² + 1)/(2λ)`, `n·u₁ = m₁(λ�
 `d₁ · 2n(ω₀ + m₁) = (λ + 1)²`. -/
 theorem prime_mul_unit_passes_one_mod_eight {p : ℕ} (hp : p.Prime) (h18 : p % 8 = 1)
     {m1 n d1 : ℤ} (hn : ¬(p : ℤ) ∣ n) (hm1 : ¬(p : ℤ) ∣ m1) (hd1 : ¬(p : ℤ) ∣ d1) (k : ℕ) :
-    ∃ u1 : ℤ, ∀ f : Bool × Bool × Bool,
-      GSqM ((p : ℤ) ^ (k + 1)) ((p : ℤ) * d1) (Q ((p : ℤ) * m1) n ((p : ℤ) * u1) 1 f) := by
+    ∃ u1 : ℤ, ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) ((p : ℤ) * d1)
+      ((p : ℤ) * m1) n ((p : ℤ) * u1) 1 := by
   have : Fact p.Prime := ⟨hp⟩
   have hp2 : p ≠ 2 := by omega
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp

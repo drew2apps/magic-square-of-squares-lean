@@ -18,6 +18,11 @@ G1.fourPoint_rank3_bound
 G1.fourPoint_res_psi0_dvd
 G1.fourPoint_res_psi_dvd
 G1.gcd_two_sq_mul_dvd
+MagicSquareOfSquares.CoverDescent.ClassAt.gsq
+MagicSquareOfSquares.CoverDescent.ClassAt.neg
+MagicSquareOfSquares.CoverDescent.ClassAt.rot
+MagicSquareOfSquares.CoverDescent.ClassAt.swap
+MagicSquareOfSquares.CoverDescent.ClassAt.unscale
 MagicSquareOfSquares.CoverDescent.GSq.conj
 MagicSquareOfSquares.CoverDescent.GSq.mul
 MagicSquareOfSquares.CoverDescent.GSq.neg_left
@@ -168,11 +173,15 @@ MagicSquareOfSquares.CoverDescent.no_point_of_entry4
 MagicSquareOfSquares.CoverDescent.no_point_of_entry8
 MagicSquareOfSquares.CoverDescent.no_point_of_mem_structZero
 MagicSquareOfSquares.CoverDescent.no_point_of_structOk
+MagicSquareOfSquares.CoverDescent.not_cube_dvd
+MagicSquareOfSquares.CoverDescent.not_cube_dvd_mul
 MagicSquareOfSquares.CoverDescent.not_dvd_mul_of_prime
+MagicSquareOfSquares.CoverDescent.not_dvd_of_modEq
 MagicSquareOfSquares.CoverDescent.not_dvd_two_of_odd
 MagicSquareOfSquares.CoverDescent.not_five_dvd_both
 MagicSquareOfSquares.CoverDescent.not_gsq_of_kills
 MagicSquareOfSquares.CoverDescent.not_gsq_of_killsE
+MagicSquareOfSquares.CoverDescent.not_passes_three
 MagicSquareOfSquares.CoverDescent.not_two_dvd_both
 MagicSquareOfSquares.CoverDescent.nrm_Q
 MagicSquareOfSquares.CoverDescent.nrm_congr
@@ -530,4 +539,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 1128 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 1139 theorems (including auxiliary ones), standard axioms only

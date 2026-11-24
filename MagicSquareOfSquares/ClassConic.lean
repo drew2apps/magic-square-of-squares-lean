@@ -385,7 +385,7 @@ theorem unit_passes_of_conic (h14 : p % 4 = 1)
     (hcon : ∀ {c : ℤ}, c = 1 ∨ c = -1 →
       ∃ v : ZMod p, χ (2 * (1 + v ^ 2)) = 1 ∧ χ (2 * v) = c) {m n d : ℤ}
     (hm : (p : ℤ) ∣ m) (hn : ¬(p : ℤ) ∣ n) (hd : ¬(p : ℤ) ∣ d) (k : ℕ) :
-    ∃ v : ℤ, ∀ f : Bool × Bool × Bool, GSqM ((p : ℤ) ^ (k + 1)) d (Q m n 1 v f) := by
+    ∃ v : ℤ, ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) d m n 1 v := by
   have hp : p.Prime := Fact.out
   have hp2 : p ≠ 2 := by omega
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
@@ -443,16 +443,15 @@ theorem unit_passes_of_conic (h14 : p % 4 = 1)
     ring
   obtain ⟨t, ht, ht0⟩ := exists_int_sq_of_isSquare (p := p) (c := d * (2 * 1 * v))
     (by rw [ed]; exact (quadraticChar_one_iff_isSquare hne').mp hq) (by rw [ed]; exact hne')
-  obtain ⟨_, _, _, _, _, _, _, _, g⟩ := pass_first_order hp hp2 (u := 1) (v := v) (s := s)
-    (t := t) hm hn h1 hv0 huv hs hs0 ht ht0 k
-  exact ⟨v, g⟩
+  exact ⟨v, pass_first_order hp hp2 (u := 1) (v := v) (s := s)
+    (t := t) hm hn h1 hv0 huv hs hs0 ht ht0 k⟩
 
 /-- **Every unit class passes at a prime `p ≡ 1 (mod 4)`, `p ≥ 37`, dividing `m`**: a `d` not
 divisible by `p` passes at some point `(1, v)` modulo every power of `p`. This is section 4.2 of
 `COMPLETE.md` with `pass_first_order`. -/
 theorem unit_passes_of_one_mod_four (h14 : p % 4 = 1) (hbig : 37 ≤ p) {m n d : ℤ}
     (hm : (p : ℤ) ∣ m) (hn : ¬(p : ℤ) ∣ n) (hd : ¬(p : ℤ) ∣ d) (k : ℕ) :
-    ∃ v : ℤ, ∀ f : Bool × Bool × Bool, GSqM ((p : ℤ) ^ (k + 1)) d (Q m n 1 v f) :=
+    ∃ v : ℤ, ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) d m n 1 v :=
   unit_passes_of_conic h14 (fun hc => exists_conic_point h14 hbig hc) hm hn hd k
 
 end Jacobsthal
@@ -503,7 +502,7 @@ false when 25 does not divide `m` (the law at 5, `class_mod_five`). With
 theorem unit_passes_of_one_mod_four_ne_five {p : ℕ} (hp : p.Prime) (h14 : p % 4 = 1)
     (h5 : p ≠ 5) {m n d : ℤ} (hm : (p : ℤ) ∣ m) (hn : ¬(p : ℤ) ∣ n) (hd : ¬(p : ℤ) ∣ d)
     (k : ℕ) :
-    ∃ v : ℤ, ∀ f : Bool × Bool × Bool, GSqM ((p : ℤ) ^ (k + 1)) d (Q m n 1 v f) := by
+    ∃ v : ℤ, ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) d m n 1 v := by
   by_cases hbig : 37 ≤ p
   · have : Fact p.Prime := ⟨hp⟩
     exact unit_passes_of_one_mod_four h14 hbig hm hn hd k

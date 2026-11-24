@@ -269,6 +269,38 @@ theorem exists_sq_modEq_pow {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {a c : ℤ}
       have h1 := hxc.add h0
       rwa [add_zero] at h1
 
+/-! ### Points of `X_p` modulo a power of `p`, with their class -/
+
+/-- `d` is the class of the point `(u, v)` modulo `M`: the four norms have square roots modulo
+`M`, none of them divisible by `q`, and `d` times each of the eight products is a Gaussian square
+modulo `M`. It is used with `M = p^(k+1)`, for every `k`, and `q = p³`. The roots, with the bound
+on their valuation, are what the last condition alone does not give: at a prime `≡ 3 (mod 4)` the
+eight products can pass at a point where a norm is not a square (`COMPLETE.md`, section 5; the
+first version of `Passes` in `ClassTable.lean` had only the last condition). -/
+def ClassAt (M q d m n u v : ℤ) : Prop :=
+  ∃ w0 w8 wL wU : ℤ,
+    (nrm (P0 m n u v) ≡ w0 ^ 2 [ZMOD M] ∧ nrm (P8 m n u v) ≡ w8 ^ 2 [ZMOD M] ∧
+      nrm (PL m n u v) ≡ wL ^ 2 [ZMOD M] ∧ nrm (PU m n u v) ≡ wU ^ 2 [ZMOD M]) ∧
+    (¬q ∣ w0 ∧ ¬q ∣ w8 ∧ ¬q ∣ wL ∧ ¬q ∣ wU) ∧
+    ∀ f : Bool × Bool × Bool, GSqM M d (Q m n u v f)
+
+theorem ClassAt.gsq {M q d m n u v : ℤ} (h : ClassAt M q d m n u v) (f : Bool × Bool × Bool) :
+    GSqM M d (Q m n u v f) := by
+  obtain ⟨_, _, _, _, _, _, g⟩ := h
+  exact g f
+
+theorem not_dvd_of_modEq {q x c : ℤ} (h : x ≡ c [ZMOD q]) (hc : ¬q ∣ c) : ¬q ∣ x :=
+  fun hd => hc (Int.modEq_zero_iff_dvd.mp (h.symm.trans (Int.modEq_zero_iff_dvd.mpr hd)))
+
+theorem not_cube_dvd {q x : ℤ} (hx : ¬q ∣ x) : ¬q ^ 3 ∣ x :=
+  fun h => hx (dvd_trans (dvd_pow_self q (by norm_num)) h)
+
+theorem not_cube_dvd_mul {q x : ℤ} (hq : Prime q) (hx : ¬q ∣ x) : ¬q ^ 3 ∣ q * x := by
+  intro h
+  have e : q ^ 3 = q * q ^ 2 := by ring
+  rw [e] at h
+  exact hx (dvd_trans (dvd_pow_self q two_ne_zero) ((mul_dvd_mul_iff_left hq.ne_zero).mp h))
+
 /-! ### Points of first order (section 4.1 of `COMPLETE.md`) -/
 
 /-- **Points of first order.** Let `p` be an odd prime dividing `m` and not `n`, and `u, v` units
@@ -279,12 +311,7 @@ theorem pass_first_order {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m n u v s t d
     (hm : (p : ℤ) ∣ m) (hn : ¬(p : ℤ) ∣ n) (hu : ¬(p : ℤ) ∣ u) (hv : ¬(p : ℤ) ∣ v)
     (huv : ¬(p : ℤ) ∣ u + v) (hs : s ^ 2 ≡ 2 * (u ^ 2 + v ^ 2) [ZMOD p]) (hs0 : ¬(p : ℤ) ∣ s)
     (ht : t ^ 2 ≡ d * (2 * u * v) [ZMOD p]) (ht0 : ¬(p : ℤ) ∣ t) (k : ℕ) :
-    ∃ w0 w8 wL wU : ℤ,
-      nrm (P0 m n u v) ≡ w0 ^ 2 [ZMOD (p : ℤ) ^ (k + 1)] ∧
-      nrm (P8 m n u v) ≡ w8 ^ 2 [ZMOD (p : ℤ) ^ (k + 1)] ∧
-      nrm (PL m n u v) ≡ wL ^ 2 [ZMOD (p : ℤ) ^ (k + 1)] ∧
-      nrm (PU m n u v) ≡ wU ^ 2 [ZMOD (p : ℤ) ^ (k + 1)] ∧
-      ∀ f : Bool × Bool × Bool, GSqM ((p : ℤ) ^ (k + 1)) d (Q m n u v f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) d m n u v := by
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
   have h2 := not_dvd_two_of_odd hp hp2
   have hm0 : m ≡ 0 [ZMOD p] := Int.modEq_zero_iff_dvd.mpr hm
@@ -356,21 +383,24 @@ theorem pass_first_order {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m n u v s t d
       _ ≡ d * ρ ^ 2 * (d * (16 * clsD m n u v w0 w8 wL wU)) [ZMOD (p : ℤ) ^ (k + 1)] :=
           hx.mul_left _
       _ = (ρ * d) ^ 2 * (16 * clsD m n u v w0 w8 wL wU) := by ring
-  exact ⟨w0, w8, wL, wU, h0.symm, h8.symm, hL.symm, hU.symm,
+  exact ⟨w0, w8, wL, wU, ⟨h0.symm, h8.symm, hL.symm, hU.symm⟩,
+    ⟨not_cube_dvd (not_dvd_of_modEq c0 (not_dvd_mul_of_prime hp' hn hu)),
+      not_cube_dvd (not_dvd_of_modEq c8 (not_dvd_mul_of_prime hp' hn hv)),
+      not_cube_dvd (not_dvd_of_modEq cL (not_dvd_mul_of_prime hp' hn hs0)),
+      not_cube_dvd (not_dvd_of_modEq cU (not_dvd_mul_of_prime hp' hn hs0))⟩,
     fun f => gsqM_class h0.symm h8.symm hL.symm hU.symm hd f⟩
 
 /-- **The class 2 is never excluded at an odd prime of `m`**: at `(u, v) = (1, 1)`, modulo every
 power of `p`. -/
 theorem two_passes {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m n : ℤ} (hm : (p : ℤ) ∣ m)
     (hn : ¬(p : ℤ) ∣ n) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool, GSqM ((p : ℤ) ^ (k + 1)) 2 (Q m n 1 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) 2 m n 1 1 := by
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
   have h2 := not_dvd_two_of_odd hp hp2
   have h1 : ¬(p : ℤ) ∣ 1 := fun h => hp'.not_isUnit (isUnit_of_dvd_one h)
-  obtain ⟨_, _, _, _, _, _, _, _, g⟩ := pass_first_order hp hp2 (u := 1) (v := 1) (s := 2) (t := 2)
+  exact pass_first_order hp hp2 (u := 1) (v := 1) (s := 2) (t := 2)
     (d := 2) hm hn h1 h1 (by norm_num; exact h2) (by norm_num) h2
     (by norm_num) h2 k
-  exact g
 
 /-! ### Classes of odd valuation (section 4.3 of `COMPLETE.md`, the case `p² | m`) -/
 
@@ -381,13 +411,7 @@ backwards: a prime `≡ ±1 (mod 8)` can divide the class. -/
 theorem pass_odd_valuation {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m2 n u1 r t d1 : ℤ}
     (hn : ¬(p : ℤ) ∣ n) (hu : ¬(p : ℤ) ∣ u1) (hr : r ^ 2 ≡ 2 [ZMOD p])
     (ht : t ^ 2 ≡ d1 * (2 * u1) [ZMOD p]) (ht0 : ¬(p : ℤ) ∣ t) (k : ℕ) :
-    ∃ w0 w8 wL wU : ℤ,
-      nrm (P0 ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * u1) 1) ≡ w0 ^ 2 [ZMOD (p : ℤ) ^ (k + 1)] ∧
-      nrm (P8 ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * u1) 1) ≡ w8 ^ 2 [ZMOD (p : ℤ) ^ (k + 1)] ∧
-      nrm (PL ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * u1) 1) ≡ wL ^ 2 [ZMOD (p : ℤ) ^ (k + 1)] ∧
-      nrm (PU ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * u1) 1) ≡ wU ^ 2 [ZMOD (p : ℤ) ^ (k + 1)] ∧
-      ∀ f : Bool × Bool × Bool,
-        GSqM ((p : ℤ) ^ (k + 1)) ((p : ℤ) * d1) (Q ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * u1) 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) ((p : ℤ) * d1) ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * u1) 1 := by
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
   have h2 := not_dvd_two_of_odd hp hp2
   have hp0 : (p : ℤ) ≡ 0 [ZMOD p] := Int.modEq_zero_iff_dvd.mpr dvd_rfl
@@ -487,21 +511,23 @@ theorem pass_odd_valuation {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m2 n u1 r t
       _ = (p : ℤ) * d1 * ρ ^ 2 * x ^ 2 := by ring
       _ ≡ (p : ℤ) * d1 * ρ ^ 2 * (d1 * (16 * D1)) [ZMOD (p : ℤ) ^ (k + 1)] := hx.mul_left _
       _ = (ρ * d1) ^ 2 * (16 * ((p : ℤ) * D1)) := by ring
-  exact ⟨(p : ℤ) * ω0, w8, wL, wU, h0.symm, h8.symm, hL.symm, hU.symm,
+  exact ⟨(p : ℤ) * ω0, w8, wL, wU, ⟨h0.symm, h8.symm, hL.symm, hU.symm⟩,
+    ⟨not_cube_dvd_mul hp' (not_dvd_of_modEq cω (not_dvd_mul_of_prime hp' hn hu)),
+      not_cube_dvd (not_dvd_of_modEq c8 hn),
+      not_cube_dvd (not_dvd_of_modEq cL (not_dvd_mul_of_prime hp' hn hr0)),
+      not_cube_dvd (not_dvd_of_modEq cU (not_dvd_mul_of_prime hp' hn hr0))⟩,
     fun f => gsqM_class h0.symm h8.symm hL.symm hU.symm hd f⟩
 
 /-- **The class `2p` is never excluded at an odd prime `p` with `p² | m` modulo which 2 is a
 square**: at `(u, v) = (p, 1)`, modulo every power of `p`. -/
 theorem two_mul_prime_passes {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m2 n r : ℤ}
     (hn : ¬(p : ℤ) ∣ n) (hr : r ^ 2 ≡ 2 [ZMOD p]) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool,
-      GSqM ((p : ℤ) ^ (k + 1)) ((p : ℤ) * 2) (Q ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * 1) 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) ((p : ℤ) * 2) ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * 1) 1 := by
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
   have h2 := not_dvd_two_of_odd hp hp2
   have h1 : ¬(p : ℤ) ∣ 1 := fun h => hp'.not_isUnit (isUnit_of_dvd_one h)
-  obtain ⟨_, _, _, _, _, _, _, _, g⟩ := pass_odd_valuation hp hp2 (u1 := 1) (d1 := 2) (t := 2)
+  exact pass_odd_valuation hp hp2 (u1 := 1) (d1 := 2) (t := 2)
     (m2 := m2) hn h1 hr (by norm_num) h2 k
-  exact g
 
 /-! ### Two rows of the table of Theorem C, lower bounds, with no further hypothesis -/
 
@@ -515,28 +541,32 @@ theorem GSqM.neg_left {M d : ℤ} {p : ℤ × ℤ} (h : GSqM M d p) : GSqM M (-d
       _ ≡ -(2 * a * b) [ZMOD M] := f.neg
       _ = 2 * b * -a := by ring
 
+theorem ClassAt.neg {M q d m n u v : ℤ} (h : ClassAt M q d m n u v) :
+    ClassAt M q (-d) m n u v := by
+  obtain ⟨w0, w8, wL, wU, hr, hn, g⟩ := h
+  exact ⟨w0, w8, wL, wU, hr, hn, fun f => (g f).neg_left⟩
+
 /-- **Every class `p · (unit)` passes** at an odd prime `p` modulo which 2 is a square, when
 `p² | m`: `d = p·d₁` passes at `(u, v) = (2p·d₁, 1)` modulo every power of `p`. -/
 theorem prime_mul_unit_passes {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {m2 n r d1 : ℤ}
     (hn : ¬(p : ℤ) ∣ n) (hd1 : ¬(p : ℤ) ∣ d1) (hr : r ^ 2 ≡ 2 [ZMOD p]) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool, GSqM ((p : ℤ) ^ (k + 1)) ((p : ℤ) * d1)
-      (Q ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * (2 * d1)) 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) ((p : ℤ) * d1)
+      ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * (2 * d1)) 1 := by
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
   have h2 := not_dvd_two_of_odd hp hp2
   have hu : ¬(p : ℤ) ∣ 2 * d1 := not_dvd_mul_of_prime hp' h2 hd1
   have ht : (2 * d1) ^ 2 ≡ d1 * (2 * (2 * d1)) [ZMOD p] := by
     have e : (2 * d1) ^ 2 = d1 * (2 * (2 * d1)) := by ring
     rw [e]
-  obtain ⟨_, _, _, _, _, _, _, _, g⟩ := pass_odd_valuation hp hp2 (u1 := 2 * d1) (d1 := d1)
+  exact pass_odd_valuation hp hp2 (u1 := 2 * d1) (d1 := d1)
     (t := 2 * d1) (m2 := m2) hn hu hr ht hu k
-  exact g
 
 /-- **Every unit class passes** at a prime `p ≡ 3 (mod 4)` dividing `m`: a `d` not divisible by `p`
 passes at `(u, v) = (1, 1)` modulo every power of `p` (`d` or `−d` is twice a square modulo `p`,
 and `d`, `−d` pass together). With Theorem E this is the row `p ≡ 3 (mod 8)` of the table. -/
 theorem unit_passes_of_three_mod_four {p : ℕ} (hp : p.Prime) (h3 : p % 4 = 3) {m n d : ℤ}
     (hm : (p : ℤ) ∣ m) (hn : ¬(p : ℤ) ∣ n) (hd : ¬(p : ℤ) ∣ d) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool, GSqM ((p : ℤ) ^ (k + 1)) d (Q m n 1 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) d m n 1 1 := by
   have : Fact p.Prime := ⟨hp⟩
   have hp2 : p ≠ 2 := by omega
   have hp' : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
@@ -568,9 +598,8 @@ theorem unit_passes_of_three_mod_four {p : ℕ} (hp : p.Prime) (h3 : p % 4 = 3) 
       have e : d * (2 * 1 * 1) = 2 * d := by ring
       rw [e]
       exact ht
-    obtain ⟨_, _, _, _, _, _, _, _, g⟩ := pass_first_order hp hp2 (u := 1) (v := 1) (s := 2)
+    exact pass_first_order hp hp2 (u := 1) (v := 1) (s := 2)
       hm hn h1 h1 h11 hs h2 ht' ht0 k
-    exact g
   · have hm1 : quadraticChar (ZMod p) (-1) = -1 := by
       rw [quadraticChar_neg_one_iff_not_isSquare, ZMod.exists_sq_eq_neg_one_iff]
       omega
@@ -590,10 +619,8 @@ theorem unit_passes_of_three_mod_four {p : ℕ} (hp : p.Prime) (h3 : p % 4 = 3) 
       have e : -d * (2 * 1 * 1) = -(2 * d) := by ring
       rw [e]
       exact ht
-    obtain ⟨_, _, _, _, _, _, _, _, g⟩ := pass_first_order hp hp2 (u := 1) (v := 1) (s := 2)
-      (d := -d) hm hn h1 h1 h11 hs h2 ht' ht0 k
-    intro f
-    have h5 := (g f).neg_left
+    have h5 := (pass_first_order hp hp2 (u := 1) (v := 1) (s := 2)
+      (d := -d) hm hn h1 h1 h11 hs h2 ht' ht0 k).neg
     rwa [neg_neg] at h5
 
 theorem exists_sq_modEq_two {p : ℕ} (hp : p.Prime) (h8 : p % 8 = 1 ∨ p % 8 = 7) :
@@ -613,8 +640,8 @@ with `p ∤ d₁` passes modulo every power of `p`. With `unit_passes_of_three_m
 row `p ≡ 7 (mod 8)` of the table of Theorem C when `p² | m`: both classes occur. -/
 theorem prime_mul_unit_passes_mod_eight {p : ℕ} (hp : p.Prime) (h8 : p % 8 = 1 ∨ p % 8 = 7)
     {m2 n d1 : ℤ} (hn : ¬(p : ℤ) ∣ n) (hd1 : ¬(p : ℤ) ∣ d1) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool, GSqM ((p : ℤ) ^ (k + 1)) ((p : ℤ) * d1)
-      (Q ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * (2 * d1)) 1 f) := by
+    ClassAt ((p : ℤ) ^ (k + 1)) ((p : ℤ) ^ 3) ((p : ℤ) * d1)
+      ((p : ℤ) ^ 2 * m2) n ((p : ℤ) * (2 * d1)) 1 := by
   obtain ⟨r, hr⟩ := exists_sq_modEq_two hp h8
   exact prime_mul_unit_passes hp (by omega) hn hd1 hr k
 

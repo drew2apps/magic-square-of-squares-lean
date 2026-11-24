@@ -28,7 +28,7 @@ theorem five_pass_aux {m n v d AL AU c0 c8 cL cU g : ℤ}
     (hg : g ^ 2 ≡ d * (16 * ((c0 + m * v) * (c8 + n * v) * (10 * cL + (m + n) * (1 - v)) *
       (10 * cU + (m - n) * (1 - v)))) [ZMOD ((5 : ℕ) : ℤ)])
     (hgu : ¬((5 : ℕ) : ℤ) ∣ g) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool, GSqM (((5 : ℕ) : ℤ) ^ (k + 1)) d (Q m n 1 v f) := by
+    ClassAt (((5 : ℕ) : ℤ) ^ (k + 1)) (((5 : ℕ) : ℤ) ^ 3) d m n 1 v := by
   have hp : Nat.Prime 5 := by norm_num
   have hp2 : (5 : ℕ) ≠ 2 := by norm_num
   have hp' : Prime (((5 : ℕ) : ℤ)) := Nat.prime_iff_prime_int.mp hp
@@ -67,7 +67,16 @@ theorem five_pass_aux {m n v d AL AU c0 c8 cL cU g : ℤ}
       _ ≡ d * ρ ^ 2 * (d * (16 * clsD m n 1 v w0 w8 (10 * ωL) (10 * ωU)))
           [ZMOD ((5 : ℕ) : ℤ) ^ (k + 1)] := hx.mul_left _
       _ = (ρ * d) ^ 2 * (16 * clsD m n 1 v w0 w8 (10 * ωL) (10 * ωU)) := by ring
-  exact fun f => gsqM_class hw0.symm hw8.symm hwL.symm hwU.symm hd f
+  have eL10 : 10 * ωL = ((5 : ℕ) : ℤ) * (2 * ωL) := by push_cast; ring
+  have eU10 : 10 * ωU = ((5 : ℕ) : ℤ) * (2 * ωU) := by push_cast; ring
+  have h52 : ¬((5 : ℕ) : ℤ) ∣ 2 := by norm_num
+  refine ⟨w0, w8, 10 * ωL, 10 * ωU, ⟨hw0.symm, hw8.symm, hwL.symm, hwU.symm⟩,
+    ⟨not_cube_dvd (not_dvd_of_modEq k0 h0), not_cube_dvd (not_dvd_of_modEq k8 h8), ?_, ?_⟩,
+    fun f => gsqM_class hw0.symm hw8.symm hwL.symm hwU.symm hd f⟩
+  · rw [eL10]
+    exact not_cube_dvd_mul hp' (not_dvd_mul_of_prime hp' h52 (not_dvd_of_modEq kL hL))
+  · rw [eU10]
+    exact not_cube_dvd_mul hp' (not_dvd_mul_of_prime hp' h52 (not_dvd_of_modEq kU hU))
 
 theorem exists_sqrt_mod_five {d : ℤ} (hd : d % 5 = 1 ∨ d % 5 = 4) :
     ∃ t : ℤ, t ^ 2 ≡ d [ZMOD ((5 : ℕ) : ℤ)] ∧ ¬((5 : ℕ) : ℤ) ∣ t := by
@@ -85,7 +94,7 @@ theorem exists_sqrt_mod_five {d : ℤ} (hd : d % 5 = 1 ∨ d % 5 = 4) :
 every power of 5. -/
 theorem class_one_passes_at_five_of_125 {m3 n d : ℤ} (hn : ¬(5 : ℤ) ∣ n)
     (hd : d % 5 = 1 ∨ d % 5 = 4) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool, GSqM ((5 : ℤ) ^ (k + 1)) d (Q (125 * m3) n 1 7 f) := by
+    ClassAt ((5 : ℤ) ^ (k + 1)) ((5 : ℤ) ^ 3) d (125 * m3) n 1 7 := by
   have hp' : Prime (((5 : ℕ) : ℤ)) := Nat.prime_iff_prime_int.mp (by norm_num)
   have h5n : ¬((5 : ℕ) : ℤ) ∣ n := by exact_mod_cast hn
   obtain ⟨t, ht, ht0⟩ := exists_sqrt_mod_five hd
@@ -109,15 +118,13 @@ theorem class_one_passes_at_five_of_125 {m3 n d : ℤ} (hn : ¬(5 : ℤ) ∣ n)
     (Int.modEq_iff_dvd.mpr ⟨3125 * m3 ^ 2 - 14 * m3 * n, by push_cast; ring⟩) h5n
     (Int.modEq_iff_dvd.mpr ⟨3125 * m3 ^ 2 + 14 * m3 * n, by push_cast; ring⟩) h5n
     hg (not_dvd_mul_of_prime hp' (not_dvd_mul_of_prime hp' h5n h5n) ht0) k
-  intro f
-  have h := key f
-  exact_mod_cast h
+  exact_mod_cast key
 
 /-- **The class 1 at 5 when `m = 25·m₁` and `m₁·n` is a nonzero square modulo 5**: every
 `d ≡ ±1 (mod 5)` passes at `(1, 57)` modulo every power of 5. -/
 theorem class_one_passes_at_five_of_25 {m1 n τ d : ℤ} (hn : ¬(5 : ℤ) ∣ n)
     (hτ : τ ^ 2 ≡ m1 * n [ZMOD 5]) (hτ0 : ¬(5 : ℤ) ∣ τ) (hd : d % 5 = 1 ∨ d % 5 = 4) (k : ℕ) :
-    ∀ f : Bool × Bool × Bool, GSqM ((5 : ℤ) ^ (k + 1)) d (Q (25 * m1) n 1 57 f) := by
+    ClassAt ((5 : ℤ) ^ (k + 1)) ((5 : ℤ) ^ 3) d (25 * m1) n 1 57 := by
   have hp' : Prime (((5 : ℕ) : ℤ)) := Nat.prime_iff_prime_int.mp (by norm_num)
   have h5n : ¬((5 : ℕ) : ℤ) ∣ n := by exact_mod_cast hn
   have h5τ : ¬((5 : ℕ) : ℤ) ∣ τ := by exact_mod_cast hτ0
@@ -156,9 +163,7 @@ theorem class_one_passes_at_five_of_25 {m1 n τ d : ℤ} (hn : ¬(5 : ℤ) ∣ n
     (Int.modEq_iff_dvd.mpr ⟨125 * m1 ^ 2, by simp only [nrm, P8]; push_cast; ring⟩) h57
     eL h5τ eU h2τ
     hg (not_dvd_mul_of_prime hp' (not_dvd_mul_of_prime hp' h5n h5n) ht0) k
-  intro f
-  have h := key f
-  exact_mod_cast h
+  exact_mod_cast key
 
 /-- **The class 1 at 5 when `m = 25·m₁` and `m₁·n` is a non-residue modulo 5** (in the form
 `3·m₁·n ≡ τ²`): every `d ≡ ±1 (mod 5)` passes modulo every power of 5 at a point `(1, v)`, where
@@ -166,7 +171,7 @@ theorem class_one_passes_at_five_of_25 {m1 n τ d : ℤ} (hn : ¬(5 : ℤ) ∣ n
 theorem class_one_passes_at_five_of_25_nonres {m1 n τ d : ℤ} (hn : ¬(5 : ℤ) ∣ n)
     (hτ : τ ^ 2 ≡ 3 * (m1 * n) [ZMOD 5]) (hτ0 : ¬(5 : ℤ) ∣ τ) (hd : d % 5 = 1 ∨ d % 5 = 4)
     (k : ℕ) :
-    ∃ v : ℤ, ∀ f : Bool × Bool × Bool, GSqM ((5 : ℤ) ^ (k + 1)) d (Q (25 * m1) n 1 v f) := by
+    ∃ v : ℤ, ClassAt ((5 : ℤ) ^ (k + 1)) ((5 : ℤ) ^ 3) d (25 * m1) n 1 v := by
   have hp : Nat.Prime 5 := by norm_num
   have hp2 : (5 : ℕ) ≠ 2 := by norm_num
   have hp' : Prime (((5 : ℕ) : ℤ)) := Nat.prime_iff_prime_int.mp hp
@@ -311,8 +316,16 @@ theorem class_one_passes_at_five_of_25_nonres {m1 n τ d : ℤ} (hn : ¬(5 : ℤ
       _ ≡ d * ρ ^ 2 * (d * (16 * clsD (25 * m1) n 1 v w0 w8 25 (5 * ωU)))
           [ZMOD ((5 : ℕ) : ℤ) ^ (k + 1)] := hx.mul_left _
       _ = (ρ * d) ^ 2 * (16 * clsD (25 * m1) n 1 v w0 w8 25 (5 * ωU)) := by ring
-  refine ⟨v, fun f => ?_⟩
-  have h := gsqM_class hw0.symm hw8.symm hGL hwU.symm hdd f
-  exact_mod_cast h
+  have h25 : ¬((5 : ℕ) : ℤ) ^ 3 ∣ 25 := by norm_num
+  have hU5 : ¬((5 : ℕ) : ℤ) ^ 3 ∣ 5 * ωU := by
+    have e5 : 5 * ωU = ((5 : ℕ) : ℤ) * ωU := by norm_num
+    rw [e5]
+    exact not_cube_dvd_mul hp' (not_dvd_of_modEq kU (not_dvd_mul_of_prime hp' (by norm_num) h5τ))
+  have h : ClassAt (((5 : ℕ) : ℤ) ^ (k + 1)) (((5 : ℕ) : ℤ) ^ 3) d (25 * m1) n 1 v :=
+    ⟨w0, w8, 25, 5 * ωU, ⟨hw0.symm, hw8.symm, hGL, hwU.symm⟩,
+      ⟨not_cube_dvd (not_dvd_of_modEq k0 h5n),
+        not_cube_dvd (not_dvd_of_modEq k8 (not_dvd_mul_of_prime hp' h5n h5v)), h25, hU5⟩,
+      fun f => gsqM_class hw0.symm hw8.symm hGL hwU.symm hdd f⟩
+  exact ⟨v, by exact_mod_cast h⟩
 
 end MagicSquareOfSquares.CoverDescent
