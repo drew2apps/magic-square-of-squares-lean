@@ -162,6 +162,7 @@ jobs:
           python3 third_compare.py @../../gauss_descent/pairs34.txt @pairs_123.txt @pairs_other.txt | diff - third_compare.txt
           grep -qx 'the descent is sound (every class with an explicit local point is allowed): 3024 of 3024' third_compare.txt
           grep -qx 'no pair where the descent rejects a class that has an explicit local point' third_compare.txt
+          cd ../../rational_distance
           cd ../cover_descent
           cd ../second_descent
           grep -q "G has infinite order for every other rational tau: True$" degenerate_section.txt
