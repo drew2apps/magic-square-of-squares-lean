@@ -1,0 +1,5 @@
+ratios 425, candidates 92752, bound 100
+excluded by the laws (restricted to primes < 100): 91525; by the local tests at the bad primes < 100: 91470
+excluded locally at a bad prime but allowed by the laws: 0
+  by prime: []
+excluded by a law but not by the local test at the precision used: {'E': 55}

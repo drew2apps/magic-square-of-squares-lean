@@ -20,7 +20,7 @@ Not part of the library: nothing here is counted among its theorems.  CI runs th
    refused when the prime does not exclude the class, when `p` is composite, 2 or `≡ 3 (mod 4)`.
 5. Certificates with four classes (`entryOk4`): a line dropped, a line that cannot be read, another
    ratio, a missing prime, and a ratio that has a solution are refused.
-6. The class from its structure alone (`structOk`): another class, a prime less, a prime that does
+6. The class from its structure alone (`structOk`, with the law at 5; `structZero`): another class, a prime less, a prime that does
    not divide `(m² + n²)(m⁸ + 14m⁴n⁴ + n⁸)`, a composite number, a missing prime are refused.
 7. The earlier checker `entryOk` (all products of the primes as candidates) is still in the
    library; a certificate written for one checker is refused by the other.
@@ -152,9 +152,9 @@ example : entryOk4 masks (4, 3, [2, 3, 7], [(2, 3), (5, 1), (13, 1), (17, 1), (2
 
 /-! ## 6. The class from its structure alone -/
 
-example : structTable.length = 150 := by decide +kernel
+example : structTable.length = 185 := by decide +kernel
 example : (structTable.map fun e => (e.1, e.2.1)).Nodup := by decide +kernel
-/-- All 150 are of the two degenerate types (a solution exists; the table gives its class). -/
+/-- All 185 are of the two degenerate types (a solution exists; the table gives its class). -/
 example : ∀ e ∈ structTable, (e.1, e.2.1) ∈ exceptions := by decide +kernel
 example : (627, 364, 521266) ∈ structTable.map (fun e => (e.1, e.2.1, e.2.2.2.1)) ∧
     (991, 263, 521266) ∈ structTable.map (fun e => (e.1, e.2.1, e.2.2.2.1)) := by decide +kernel
@@ -172,6 +172,21 @@ example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263, 991], 521266, [5, 29, 3
   decide +kernel
 example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263], 521266, [5, 29, 37]) = false := by
   decide +kernel
+
+/-- The ratios excluded by the theorems on the class alone: 67 of the 119, each once, all among the
+ratios of the two tables of certificates. -/
+example : structZero.length = 67 := by decide +kernel
+example : (structZero.map fun e => (e.1, e.2.1)).Nodup := by decide +kernel
+example : ∀ e ∈ structZero, (e.1, e.2.1) ∈ ratios ∧ e.2.2.2.1 = 0 := by decide +kernel
+example : structOk (308, 213, [2, 3, 5, 7, 11, 19, 71, 521], 0, [13, 17, 73]) = true := by decide +kernel
+/-- One prime less: a candidate is left. A ratio with a solution, `4 : 3`: never excluded. -/
+example : structOk (308, 213, [2, 3, 5, 7, 11, 19, 71, 521], 0, [13, 17]) = false := by decide +kernel
+example : structOk (4, 3, [2, 3, 7], 0, [5]) = false := by decide +kernel
+/-- The law at 5 is used: for `m, n` with 5 dividing `mn(m − n)(m + n)` once, a candidate `≡ ±1 (mod 5)`
+needs no prime (`exact5`), and with 25 dividing it the law says nothing. -/
+example : exact5 308 213 = true ∧ exact5 4 3 = false ∧ exact5 25 1 = false ∧ exact5 26 1 = false := by
+  decide +kernel
+example : law5Check = true := law5Check_eq
 
 /-! ## 7. The earlier checker -/
 

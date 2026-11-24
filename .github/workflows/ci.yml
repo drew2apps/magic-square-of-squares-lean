@@ -172,6 +172,8 @@ jobs:
           python3 class_struct.py | diff - class_struct.txt
           grep -q 'no candidate passes E, F, G, O: 54$' class_struct.txt
           python3 class_law5.py | diff - class_law5.txt
+          python3 class_complete.py | diff - class_complete.txt
+          grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete.txt
           grep -qx '(point, d = ±1 mod 5) tested: 1920000; passing: 0' class_law5.txt
           grep -q 'candidates that pass for (627,364): \[521266\]; for (991,263): \[521266\]$' class_struct.txt
           test "$(grep -c 'odd among them 0$' class_fg.txt)" = 2 && test "$(grep -c 'non-residues among them 0$' class_fg.txt)" = 4

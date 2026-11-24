@@ -25,7 +25,7 @@ Everything is done in integer coordinates; no Gaussian integers, no unique facto
   solution.
 * `no_point_of_entry`: if every product of the primes of `2mn(m − n)(m + n)` is excluded by some
   modulus, there is no solution at all.
-* `exists_class_struct`: **for coprime `m, n` the class `d` has three more properties, for every
+* `exists_class_struct`: **for coprime `m, n` the class `d` has these properties, for every
   ratio:** its odd prime factors are `≡ ±1 (mod 8)` (`mod_eight_of_dv`), it is even
   (`two_dvd_class`), it is a square modulo every odd prime dividing `m² + n²`
   (`isSquare_class_mod`), and modulo every odd prime dividing `m⁸ + 14m⁴n⁴ + n⁸`
@@ -34,8 +34,11 @@ Everything is done in integer coordinates; no Gaussian integers, no unique facto
   Euler in the two residue fields above `p`; no mask, so `p` may be large.
 * `entryOk8`, `no_point_of_entry8`: the certificates of the table, with the candidates that the
   first of the three properties leaves and with lines of both kinds.
-* `structOk`, `class_of_structOk`: for a ratio where those properties leave one candidate, the class
-  of every solution is that candidate; no local computation at the points.
+* `class_mod_five`: **if 5 divides `mn(m − n)(m + n)` and 25 does not, the class is not
+  `≡ ±1 (mod 5)`** (a complete check modulo 25 on pairs in normal form, `law5Check`).
+* `structOk`, `class_of_structOk`, `no_point_of_structOk`: for a ratio where those properties leave
+  one candidate, the class of every solution is that candidate; where they leave none, there is no
+  solution; no local computation at the points.
 * `exists_classes4`, `recs4`, `entryOk4`, `no_point_of_entry4`: the same with one class for each
   of the four forms, for the ratios where one class is not enough.
 
@@ -1563,6 +1566,156 @@ theorem iotaOf_spec {p io : ℕ} (h : iotaOf p = some io) : io * io % p = p - 1 
   have h2 := List.mem_of_find?_eq_some h
   exact ⟨by simpa using h1, List.mem_range.mp h2⟩
 
+/-! ### The class modulo 5 -/
+
+theorem GSq.scale4 {d x y : ℤ} (l : ℤ) (h : GSq d x y) : GSq d (l ^ 4 * x) (l ^ 4 * y) := by
+  obtain ⟨a, b, ha, hb⟩ := h
+  exact ⟨l ^ 2 * a, l ^ 2 * b, by linear_combination l ^ 4 * ha, by linear_combination l ^ 4 * hb⟩
+
+theorem Q_scale (l k m n u v : ℤ) (f : Bool × Bool × Bool) :
+    Q (l * m) (l * n) (k * u) (k * v) f =
+      ((l * k) ^ 4 * (Q m n u v f).1, (l * k) ^ 4 * (Q m n u v f).2) := by
+  obtain ⟨a, b, c⟩ := f
+  cases a <;> cases b <;> cases c <;>
+    simp only [Q, gm, cj, cjIf, P0, P8, PL, PU, if_true, if_false, Bool.false_eq_true, Prod.mk.injEq] <;>
+    constructor <;> ring
+
+/-- The residues `±1 (mod 5)` modulo 25. -/
+def ds5 : List ℕ := [1, 4, 6, 9, 11, 14, 16, 19, 21, 24]
+
+/-- A pair modulo 25 in the normal form `(1, t)` or `(5s, 1)`. -/
+def norm5 (a b : ℕ) : Bool := a == 1 || (b == 1 && a % 5 == 0)
+
+/-- 5 divides `ab(a − b)(a + b)` and 25 does not. -/
+def exact5 (a b : ℕ) : Bool :=
+  res 25 ((a : ℤ) * b * (a - b) * (a + b)) != 0 && res 25 ((a : ℤ) * b * (a - b) * (a + b)) % 5 == 0
+
+/-- The check behind `class_mod_five`: modulo 25, for `(m, n)` and `(u, v)` in normal form with 5
+dividing `mn(m − n)(m + n)` exactly once, no `d ≡ ±1 (mod 5)` passes on the eight products. -/
+def law5Check : Bool :=
+  (List.range 25).all fun m => (List.range 25).all fun n =>
+    !norm5 m n || !exact5 m n ||
+      (List.range 25).all fun u => (List.range 25).all fun v =>
+        !norm5 u v || dsOk 25 (gMask 25) ds5 (flags.map fun f => resQ 25 (Q m n u v f))
+
+theorem law5Check_eq : law5Check = true := by decide +kernel
+
+theorem inv25 : ∀ r < 25, r % 5 ≠ 0 → ∃ l < 25, l * r % 25 = 1 := by decide
+
+theorem not_five_dvd_both {x y : ℤ} (h : IsCoprime x y) : ¬((5 : ℤ) ∣ x ∧ (5 : ℤ) ∣ y) := by
+  rintro ⟨hx, hy⟩
+  obtain ⟨a, b, hab⟩ := h
+  have h1 : (5 : ℤ) ∣ a * x + b * y := dvd_add (Dvd.dvd.mul_left hx a) (Dvd.dvd.mul_left hy b)
+  rw [hab] at h1
+  omega
+
+/-- A pair of integers not both divisible by 5 is, up to a factor prime to 5, congruent modulo 25
+to a pair in normal form. -/
+theorem exists_norm5 {x y : ℤ} (h : ¬((5 : ℤ) ∣ x ∧ (5 : ℤ) ∣ y)) :
+    ∃ (l : ℤ) (a b : ℕ), IsCoprime l 25 ∧ a < 25 ∧ b < 25 ∧ norm5 a b = true ∧
+      (a : ℤ) ≡ l * x [ZMOD ((25 : ℕ) : ℤ)] ∧ (b : ℤ) ≡ l * y [ZMOD ((25 : ℕ) : ℤ)] := by
+  have hM : 0 < 25 := by norm_num
+  have key : ∀ z : ℤ, ¬(5 : ℤ) ∣ z → ∃ l : ℤ, IsCoprime l 25 ∧ l * z ≡ 1 [ZMOD ((25 : ℕ) : ℤ)] := by
+    intro z hz
+    have c := res_cast hM z
+    have hlt := res_lt hM z
+    have hr : res 25 z % 5 ≠ 0 := by
+      have := c.dvd
+      omega
+    obtain ⟨l, _, hl⟩ := inv25 (res 25 z) hlt hr
+    have e1 : ((l : ℤ) * (res 25 z : ℤ)) ≡ 1 [ZMOD ((25 : ℕ) : ℤ)] := by
+      have : ((l * res 25 z : ℕ) : ℤ) % ((25 : ℕ) : ℤ) = 1 := by exact_mod_cast hl
+      unfold Int.ModEq
+      rw [← Nat.cast_mul, this]
+      rfl
+    have e2 : (l : ℤ) * z ≡ 1 [ZMOD ((25 : ℕ) : ℤ)] := ((c.symm).mul_left _).trans e1
+    refine ⟨l, ?_, e2⟩
+    obtain ⟨t, ht⟩ := e2.symm.dvd
+    exact ⟨z, -t, by push_cast at ht; linear_combination ht⟩
+  by_cases hx : (5 : ℤ) ∣ x
+  · have hy : ¬(5 : ℤ) ∣ y := fun hy => h ⟨hx, hy⟩
+    obtain ⟨l, hl, e⟩ := key y hy
+    have c := res_cast hM (l * x)
+    refine ⟨l, res 25 (l * x), 1, hl, res_lt hM _, by norm_num, ?_, c, by exact_mod_cast e.symm⟩
+    have h5 : res 25 (l * x) % 5 = 0 := by
+      have h1 := c.dvd
+      have h2 : (5 : ℤ) ∣ l * x := Dvd.dvd.mul_left hx l
+      omega
+    simp [norm5, h5]
+  · obtain ⟨l, hl, e⟩ := key x hx
+    exact ⟨l, 1, res 25 (l * y), hl, by norm_num, res_lt hM _, by simp [norm5],
+      by exact_mod_cast e.symm, res_cast hM (l * y)⟩
+
+/-- **The class modulo 5.** For coprime `m, n` and coprime `u, v`, if 5 divides `mn(m − n)(m + n)`
+and 25 does not, then a `d` such that `d` times each of the eight products is a Gaussian square is
+not `≡ ±1 (mod 5)`. The four forms need not be squares. -/
+theorem class_mod_five {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    (h5 : (5 : ℤ) ∣ m * n * (m - n) * (m + n)) (h25 : ¬(25 : ℤ) ∣ m * n * (m - n) * (m + n))
+    {d : ℕ} (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) : d % 5 ≠ 1 ∧ d % 5 ≠ 4 := by
+  by_contra hd
+  have hM : 0 < 25 := by norm_num
+  obtain ⟨l, a, b, hl, ha, hb, hab, ca, cb⟩ := exists_norm5 (not_five_dvd_both hmn)
+  obtain ⟨k, s, t, _, hs, ht, hst, cs, ct⟩ := exists_norm5 (not_five_dvd_both hcop)
+  have h := law5Check_eq
+  unfold law5Check at h
+  rw [List.all_eq_true] at h
+  have h1 := h a (List.mem_range.mpr ha)
+  rw [List.all_eq_true] at h1
+  have h2 := h1 b (List.mem_range.mpr hb)
+  -- 5 divides `ab(a − b)(a + b)` exactly once
+  have hex : exact5 a b = true := by
+    have c1 : (a : ℤ) * b * (a - b) * (a + b) ≡ l ^ 4 * (m * n * (m - n) * (m + n)) [ZMOD ((25 : ℕ) : ℤ)] := by
+      have e : l ^ 4 * (m * n * (m - n) * (m + n)) = (l * m) * (l * n) * (l * m - l * n) * (l * m + l * n) := by
+        ring
+      rw [e]
+      gcongr
+    have c2 := (res_cast hM ((a : ℤ) * b * (a - b) * (a + b))).trans c1
+    have h3 := c2.dvd
+    have h4 : (5 : ℤ) ∣ l ^ 4 * (m * n * (m - n) * (m + n)) := Dvd.dvd.mul_left h5 _
+    have h6 : ¬(25 : ℤ) ∣ l ^ 4 * (m * n * (m - n) * (m + n)) := by
+      intro h7
+      exact h25 ((hl.pow_left (m := 4)).symm.dvd_of_dvd_mul_left h7)
+    unfold exact5
+    simp only [Bool.and_eq_true, bne_iff_ne, ne_eq, beq_iff_eq]
+    push_cast at h3
+    constructor <;> omega
+  rw [hab, hex] at h2
+  simp only [Bool.not_true, Bool.false_or, List.all_eq_true] at h2
+  have h4 := h2 s (List.mem_range.mpr hs) t (List.mem_range.mpr ht)
+  rw [hst] at h4
+  simp only [Bool.not_true, Bool.false_or] at h4
+  have hmem : d % 25 ∈ ds5 := by
+    have h7 : d % 5 = 1 ∨ d % 5 = 4 := by omega
+    have : d % 25 = 1 ∨ d % 25 = 4 ∨ d % 25 = 6 ∨ d % 25 = 9 ∨ d % 25 = 11 ∨ d % 25 = 14 ∨
+        d % 25 = 16 ∨ d % 25 = 19 ∨ d % 25 = 21 ∨ d % 25 = 24 := by omega
+    rcases this with h | h | h | h | h | h | h | h | h | h <;> simp [ds5, h]
+  have o : ((flags.map fun f => resQ 25 (Q (a : ℤ) b s t f)).all
+      fun q => gOkN 25 (gMask 25) (d % 25) q) = true := by
+    rw [List.all_eq_true]
+    intro q hq
+    rw [List.mem_map] at hq
+    obtain ⟨f, _, rfl⟩ := hq
+    obtain ⟨q1, q2⟩ := Q_congr4 ca cb cs ct f
+    rw [gOkN_mod, gOkN_eq hM]
+    have g' : GSqP d (Q (l * m) (l * n) (k * u) (k * v) f) := by
+      rw [Q_scale]
+      exact GSq.scale4 (l * k) (g f)
+    exact gOk_of_GSqP hM g' q1 q2
+  unfold dsOk at h4
+  rw [List.all_eq_true] at h4
+  have := h4 (d % 25) hmem
+  rw [o] at this
+  simp at this
+
+theorem exact5_spec {a b : ℕ} (h : exact5 a b = true) :
+    (5 : ℤ) ∣ (a : ℤ) * b * (a - b) * (a + b) ∧ ¬(25 : ℤ) ∣ (a : ℤ) * b * (a - b) * (a + b) := by
+  unfold exact5 at h
+  simp only [Bool.and_eq_true, bne_iff_ne, ne_eq, beq_iff_eq] at h
+  have c := (res_cast (M := 25) (by norm_num) ((a : ℤ) * b * (a - b) * (a + b))).dvd
+  have hlt := res_lt (M := 25) (by norm_num) ((a : ℤ) * b * (a - b) * (a + b))
+  push_cast at c
+  constructor <;> omega
+
 /-! ### The structure of the class, for every ratio -/
 
 /-- **The class of a solution, with what is known about it for every ratio.** For coprime `m, n`
@@ -1570,7 +1723,7 @@ and coprime `u, v` at which the four forms are squares there is a `d > 0` withou
 such that `d` times each of the eight products is a Gaussian square, and:
 every prime factor of `d` divides `2mn(m − n)(m + n)`; every odd prime factor of `d` is
 `≡ ±1 (mod 8)`; `d` is even; `d` is a square modulo every odd prime dividing `m² + n²` or
-`m⁸ + 14m⁴n⁴ + n⁸`. -/
+`m⁸ + 14m⁴n⁴ + n⁸`; and `d ≡ ±2 (mod 5)` if 5 divides `mn(m − n)(m + n)` and 25 does not. -/
 theorem exists_class_struct {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
     (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
     (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
@@ -1583,11 +1736,19 @@ theorem exists_class_struct {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCopr
       (∀ p : ℕ, p.Prime → p ≠ 2 → (p : ℤ) ∣ m ^ 2 + n ^ 2 → IsSquare (d : ZMod p)) ∧
       (∀ p : ℕ, p.Prime → p ≠ 2 → (p : ℤ) ∣ m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8 →
         IsSquare (d : ZMod p)) ∧
+      ((5 : ℤ) ∣ m * n * (m - n) * (m + n) → ¬(25 : ℤ) ∣ m * n * (m - n) * (m + n) →
+        d % 5 = 2 ∨ d % 5 = 3) ∧
       ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f) := by
   obtain ⟨d, hd, hns, hsup, hE, g⟩ := exists_class_prod8 hmn hcop h0 h8 hL hU n0 n8 nL nU
-  exact ⟨d, hd, hns, hsup, hE, two_dvd_class hmn hcop h0 h8 hL hU g,
+  refine ⟨d, hd, hns, hsup, hE, two_dvd_class hmn hcop h0 h8 hL hU g,
     fun p hp hp2 hdvd => isSquare_class_mod hmn hcop hp hp2 hdvd g,
-    fun p hp hp2 hdvd => isSquare_class_mod_octic hmn hcop hp hp2 hdvd g, g⟩
+    fun p hp hp2 hdvd => isSquare_class_mod_octic hmn hcop hp hp2 hdvd g, fun h5 h25 => ?_, g⟩
+  have h1 := class_mod_five hmn hcop h5 h25 g
+  have h2 : ¬5 ∣ d := by
+    intro h
+    have := hE 5 (by norm_num) h
+    omega
+  omega
 
 /-! ### The candidates and the certificate -/
 
@@ -1898,7 +2059,8 @@ theorem no_point_of_entry8 {masks : List (ℕ × ℕ × ℕ)} (hmasks : MasksOk 
 /-- An entry `(m, n, ps, d0, qs)`: `m, n` coprime; `ps` lists primes, among them every prime factor
 of `2mn(m − n)(m + n)`; `qs` lists odd primes dividing `(m² + n²)(m⁸ + 14m⁴n⁴ + n⁸)`; and every
 candidate (a product of the primes of `ps` that are 2 or `≡ ±1 (mod 8)`) other than `d0` is odd,
-or is not a square modulo one of the primes of `qs` (by Euler's criterion). -/
+or is `≡ ±1 (mod 5)` while 5 divides `mn(m − n)(m + n)` and 25 does not, or is not a square modulo
+one of the primes of `qs` (by Euler's criterion). With `d0 = 0`: no candidate is left. -/
 def structOk (e : ℕ × ℕ × List ℕ × ℕ × List ℕ) : Bool :=
   decide (0 < e.2.1) && decide (e.2.1 < e.1) && decide (Nat.Coprime e.1 e.2.1) &&
     e.2.2.1.all isPrime &&
@@ -1906,16 +2068,15 @@ def structOk (e : ℕ × ℕ × List ℕ × ℕ × List ℕ) : Bool :=
     e.2.2.2.2.all (fun p => isPrime p && decide (p ≠ 2) &&
       decide (p ∣ (e.1 ^ 2 + e.2.1 ^ 2) * (e.1 ^ 8 + 14 * e.1 ^ 4 * e.2.1 ^ 4 + e.2.1 ^ 8))) &&
     (prods (e.2.2.1.filter keep8)).all (fun d => d == e.2.2.2.1 || d % 2 == 1 ||
+      (exact5 e.1 e.2.1 && (d % 5 == 1 || d % 5 == 4)) ||
       e.2.2.2.2.any fun p => !eul p (d % p))
 
-/-- **The class of a solution, from the theorems on its structure alone.** If `structOk` holds
-for `(m, n, ps, d0, qs)`, then at every solution on the four forms (any coprime `u, v`, the degenerate
-solutions included) `d0` times each of the eight products is a Gaussian square: the class is `d0`. No local computation at the points is used. -/
-theorem class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : structOk e = true) {u v : ℤ}
+/-- The two statements below together: at a solution, `d0` is positive and is the class. -/
+theorem pos_class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : structOk e = true) {u v : ℤ}
     (hcop : IsCoprime u v)
     (h0 : ∃ w, nrm (P0 e.1 e.2.1 u v) = w ^ 2) (h8 : ∃ w, nrm (P8 e.1 e.2.1 u v) = w ^ 2)
     (hL : ∃ w, nrm (PL e.1 e.2.1 u v) = w ^ 2) (hU : ∃ w, nrm (PU e.1 e.2.1 u v) = w ^ 2) :
-    ∀ f : Bool × Bool × Bool, GSqP (e.2.2.2.1 : ℤ) (Q e.1 e.2.1 u v f) := by
+    0 < e.2.2.2.1 ∧ ∀ f : Bool × Bool × Bool, GSqP (e.2.2.2.1 : ℤ) (Q e.1 e.2.1 u v f) := by
   obtain ⟨m, n, ps, d0, qs⟩ := e
   unfold structOk at he
   simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true] at he
@@ -1969,7 +2130,7 @@ theorem class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : 
     by_cases h : u - v = 0
     · exact Or.inr (mul_ne_zero hmn1 (by omega))
     · exact Or.inl (mul_ne_zero hmn0 h)
-  obtain ⟨d, hd, hns, hsup, hE, h2, hG, hO, g⟩ := exists_class_struct
+  obtain ⟨d, hd, hns, hsup, hE, h2, hG, hO, h5m, g⟩ := exists_class_struct
     (Nat.isCoprime_iff_coprime.mpr hmn) hcop h0 h8 hL hU
     n0 n8 nL nU
   have hmem : d ∈ prods (ps.filter keep8) := by
@@ -1982,12 +2143,19 @@ theorem class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : 
     · simp [h]
   have h3 := hall d hmem
   rcases (Bool.or_eq_true _ _).mp h3 with h4 | h4
-  · rcases (Bool.or_eq_true _ _).mp h4 with h5 | h5
-    · have h6 : d = d0 := beq_iff_eq.mp h5
-      rw [← h6]
-      exact g
+  · rcases (Bool.or_eq_true _ _).mp h4 with h4 | h4
+    · rcases (Bool.or_eq_true _ _).mp h4 with h5 | h5
+      · have h6 : d = d0 := beq_iff_eq.mp h5
+        rw [← h6]
+        exact ⟨hd, g⟩
+      · exfalso
+        have h6 : d % 2 = 1 := beq_iff_eq.mp h5
+        omega
     · exfalso
-      have h6 : d % 2 = 1 := beq_iff_eq.mp h5
+      simp only [Bool.and_eq_true, Bool.or_eq_true, beq_iff_eq] at h4
+      obtain ⟨hx, h6⟩ := h4
+      obtain ⟨x5, x25⟩ := exact5_spec hx
+      have := h5m x5 x25
       omega
   · exfalso
     obtain ⟨p, hp, hne⟩ := List.any_eq_true.mp h4
@@ -2009,6 +2177,26 @@ theorem class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : 
       ring
     rw [h8'] at hne
     exact Bool.false_ne_true hne
+
+/-- **The class of a solution, from the theorems on its structure alone.** If `structOk` holds
+for `(m, n, ps, d0, qs)`, then at every solution on the four forms (any coprime `u, v`, the degenerate
+solutions included) `d0` times each of the eight products is a Gaussian square: the class is `d0`. No local computation at the points is used. -/
+theorem class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : structOk e = true) {u v : ℤ}
+    (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 e.1 e.2.1 u v) = w ^ 2) (h8 : ∃ w, nrm (P8 e.1 e.2.1 u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL e.1 e.2.1 u v) = w ^ 2) (hU : ∃ w, nrm (PU e.1 e.2.1 u v) = w ^ 2) :
+    ∀ f : Bool × Bool × Bool, GSqP (e.2.2.2.1 : ℤ) (Q e.1 e.2.1 u v f) :=
+  (pos_class_of_structOk he hcop h0 h8 hL hU).2
+
+/-- **No solution, from the theorems on the class alone.** If `structOk` holds for
+`(m, n, ps, 0, qs)`, no candidate is left, and the four forms are squares at no coprime `u, v`.
+No local computation at the points is used. -/
+theorem no_point_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : structOk e = true)
+    (hz : e.2.2.2.1 = 0) {u v : ℤ} (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 e.1 e.2.1 u v) = w ^ 2) (h8 : ∃ w, nrm (P8 e.1 e.2.1 u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL e.1 e.2.1 u v) = w ^ 2) (hU : ∃ w, nrm (PU e.1 e.2.1 u v) = w ^ 2) : False := by
+  have := (pos_class_of_structOk he hcop h0 h8 hL hU).1
+  omega
 
 /-! ### Four classes, one for each form -/
 
