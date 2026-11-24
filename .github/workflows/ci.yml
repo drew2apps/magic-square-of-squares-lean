@@ -8,6 +8,8 @@ name: CI
 # They run on a pull request, on a tag, when the workflow is started by hand (Actions, CI, "Run workflow"), and on a push
 # whose commit message contains [full ci].  A green mark on a push without [full ci] therefore says less than a green
 # mark on a full run: the long jobs show as skipped.  A release is made only from a commit with a full green run.
+# The three actions are pinned by commit hash (the tag they had on 24 November 2026 is in the comment); Python packages by
+# version.  REPRODUCE.md lists every pin and what is not pinned.
 on:
   push:
     branches: [main]
@@ -19,7 +21,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Generated Lean files match their generators
         shell: bash
         run: |
@@ -49,7 +51,7 @@ jobs:
           python3 scripts/g1_full/gen_sizecheck.py
           python3 scripts/cover_descent/lean_cert.py
           git diff --exit-code
-      - uses: leanprover/lean-action@v1
+      - uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1
       - name: Axiom audit
         shell: bash
         run: |
@@ -59,6 +61,11 @@ jobs:
           diff <(grep '^AUDIT OK:' audit.txt) scripts/audit_line.txt
           diff <(sort audit.txt) <(sort scripts/audit_output.txt)
           echo "::notice title=Axiom audit::$(grep '^AUDIT OK:' audit.txt)"
+      - name: The count 328 + 97 = 425, and forged certificates are refused
+        shell: bash
+        run: |
+          set -e -o pipefail
+          lake env lean scripts/CoverDescentChecks.lean
 
   quick:
     # On every push: what can be checked in a few minutes.  The transcripts of Magma against the committed outputs, the
@@ -66,10 +73,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.13'
+      - name: every file has the hash listed in MANIFEST.sha256, and no file is unlisted
+        shell: bash
+        run: python3 scripts/verify_manifest.py
       - name: transcript checkers, counts, and a small rerun of each descent program
         shell: bash
         run: |
@@ -139,6 +149,19 @@ jobs:
           python3 rd.py curve | diff - rd_curve.txt
           test "$(grep -c "equal: True$" rd_curve.txt)" = 22
           python3 rd.py control | diff - rd_control.txt
+          python3 rd_prop1.py | diff - rd_prop1.txt
+          grep -qx 'PROP1 OK' rd_prop1.txt
+          python3 si_criterion_test.py 4 2>/dev/null | tail -2 > /tmp/si.txt
+          grep -q 'with all hypotheses (would contradict the criterion): 0$' /tmp/si.txt && grep -q 'with all hypotheses (would contradict the criterion): 0$' si_criterion_test.txt
+          grep -q 'lower bound 1 and upper bound 1 for the rank$' /tmp/si.txt && grep -q 'lower bound 1 and upper bound 1 for the rank$' si_criterion_test.txt
+          test "$(grep -c 'the descent set is inside the exhaustion set: True' rd_exhaust.txt)" = 6
+          pip install -q numpy==2.5.5
+          cd ../cover_descent/third
+          python3 third_run.py @pairs_other.txt 150 | diff - third_other.txt
+          python3 third_run.py "627,364 991,263 820,799 889,320" 150 | diff - <(grep -E '^\((627,364|991,263)\)' third_123.txt; grep -E '^\((820,799|889,320)\)' third_34.txt)
+          python3 third_compare.py @../../gauss_descent/pairs34.txt @pairs_123.txt @pairs_other.txt | diff - third_compare.txt
+          grep -qx 'the descent is sound (every class with an explicit local point is allowed): 3024 of 3024' third_compare.txt
+          grep -qx 'no pair where the descent rejects a class that has an explicit local point' third_compare.txt
           cd ../cover_descent
           cd ../second_descent
           grep -q "G has infinite order for every other rational tau: True$" degenerate_section.txt
@@ -164,8 +187,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.13'
       - name: dm4_identities.py, dm4.py on all 52 pairs, dm4_twist.py on 12 pairs, the Gaussian descent on the 157 ratios
@@ -198,8 +221,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.13'
       - name: second descent on 123 ratios, planted points, L-values, Magma transcripts; Lemma, local sets and labels on real points
@@ -245,15 +268,15 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.13'
       - name: generator, constants, sieves to 596,309 and to 59,631,000, fibre, planted control
         shell: bash
         run: |
           set -e -o pipefail
-          pip install -q -r scripts/g1_full/requirements.txt numpy
+          pip install -q -r scripts/g1_full/requirements.txt numpy==2.5.5
           cd scripts/second_descent
           f() { grep -v "PARI stack" || true; }
           python3 saturation.py 627,364 521266 | f | diff - saturation_627_364.txt
@@ -292,7 +315,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: twist_find to 400
         shell: bash
         run: |
@@ -315,10 +338,10 @@ jobs:
     # full (18,900 + 1,523 ratios) and compared with the committed files; and the rational-distance scan to denominator 300.
     if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
     runs-on: ubuntu-latest
-    timeout-minutes: 90
+    timeout-minutes: 120
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
         with:
           python-version: '3.13'
       - name: tuple descent to 5000, in full; rational distance to 300
@@ -332,3 +355,8 @@ jobs:
           cd ../rational_distance
           python3 rd.py scan 2 300 | diff - rd_scan_2_300.txt
           python3 rd.py scan 1 60 3 | diff - rd_scan_outside_60.txt
+          python3 rd_exhaust.py 1,3 2,5 3,7 1,8 7,16 26,225 | diff - rd_exhaust.txt
+          pip install -q numpy==2.5.5
+          cd ../cover_descent/third
+          python3 third_run.py @../../gauss_descent/pairs34.txt 150 | diff - third_34.txt
+          python3 third_run.py @pairs_123.txt 150 | diff - third_123.txt

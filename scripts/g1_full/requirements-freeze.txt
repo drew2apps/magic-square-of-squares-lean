@@ -1,0 +1,34 @@
+# pip freeze of a fresh Python 3.13 environment on Linux x86_64 after
+#   pip install -r scripts/g1_full/requirements.txt numpy
+# on 24 November 2026.  Informational: CI installs from requirements.txt, which pins the four top-level packages;
+# the transitive dependencies below are whatever pip resolves on the day (note the pre-release of gmpy2).
+conway-polynomials==0.10
+cypari2==2.2.9
+cysignals==1.13.1
+Cython==3.3.1
+fpylll==0.6.4
+gmpy2==2.4.0a1
+memory_allocator==0.1.4
+mpmath==1.3.0
+numpy==2.5.5
+packaging==26.4
+passagemath-categories==10.8.14
+passagemath-environment==10.8.14
+passagemath-flint==10.8.14
+passagemath-glpk==10.8.14
+passagemath-gsl==10.8.14
+passagemath-modules==10.8.14
+passagemath-ntl==10.8.14
+passagemath-objects==10.8.14
+passagemath-pari==10.8.14
+passagemath-polyhedra==10.8.14
+passagemath-ppl==0.8.10.3
+passagemath-schemes==10.8.14
+passagemath-singular==10.8.14
+passagemath-symbolics==10.8.14
+pexpect==4.9.0
+platformdirs==4.14.8
+ptyprocess==0.7.0
+scipy==1.18.1
+sympy==1.14.0
+typing_extensions==4.16.0

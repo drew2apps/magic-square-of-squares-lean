@@ -1,0 +1,9 @@
+(1) Y^2 = X(aX + b)(cX + d) on C: identity checked
+(2) kappa^2 X(aX + b)(cX + d) = x^3 - x with x = kappa(X - beta/2), kappa = -(1 + i), beta = 1 - i: identity checked
+(3) seven affine points of y^2 = x^3 - x over Q(i) checked; with O that is 8
+    points of y^2 = x^3 - x over F_5: 8
+    points of y^2 = x^3 - x over F_13: 8
+(4) X-coordinates of the affine points: x = 0 -> X = 1/2 - 1/2*i (not a square); x = 1 -> X = 0 (a square); x = -1 -> X = 1 - i (not a square); x = i -> X = -i (not a square); x = -i -> X = 1 (a square)
+    X = 0 gives w1 = 0 and w3^2 = i w2^2; X = oo gives w2 = 0 and w3^2 = (1 - i) w1^2: i and 1 - i are not squares of Q(i)
+    so every point of C over Q(i) has w1^2 = w2^2: the eight points (1 : +-1 : +-1 : +-1), where w3^2 = w4^2 = w1^2 too
+PROP1 OK

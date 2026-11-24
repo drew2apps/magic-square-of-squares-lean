@@ -1,0 +1,2 @@
+curves E_n of rank 1 used (n odd squarefree below 400, x-coordinate of the point PARI returns at most 60 characters long): 72; ordered pairs of dependent points tested (multiples up to 4): 17280; pairs with the Kummer hypothesis: 608; with all hypotheses (would contradict the criterion): 0
+E_199 (the open line y = 26/225 of rd_scan_2_300.txt): PARI ellrank gives lower bound 1 and upper bound 1 for the rank
