@@ -47,6 +47,7 @@ MagicSquareOfSquares.CoverDescent.chunk7_ok
 MagicSquareOfSquares.CoverDescent.chunk8_ok
 MagicSquareOfSquares.CoverDescent.chunk9_ok
 MagicSquareOfSquares.CoverDescent.class_mod_five
+MagicSquareOfSquares.CoverDescent.class_mod_sixteen
 MagicSquareOfSquares.CoverDescent.class_of_mem_structTable
 MagicSquareOfSquares.CoverDescent.class_of_structOk
 MagicSquareOfSquares.CoverDescent.coveredBy.eq_def
@@ -72,6 +73,7 @@ MagicSquareOfSquares.CoverDescent.exists_foldl_line4
 MagicSquareOfSquares.CoverDescent.exists_gsq_of_norm
 MagicSquareOfSquares.CoverDescent.exists_inv
 MagicSquareOfSquares.CoverDescent.exists_line4
+MagicSquareOfSquares.CoverDescent.exists_norm2
 MagicSquareOfSquares.CoverDescent.exists_norm5
 MagicSquareOfSquares.CoverDescent.exists_nosq
 MagicSquareOfSquares.CoverDescent.exists_rec4
@@ -82,6 +84,7 @@ MagicSquareOfSquares.CoverDescent.gOkN_mod
 MagicSquareOfSquares.CoverDescent.gOk_of
 MagicSquareOfSquares.CoverDescent.gOk_of_GSqP
 MagicSquareOfSquares.CoverDescent.inv25
+MagicSquareOfSquares.CoverDescent.inv64
 MagicSquareOfSquares.CoverDescent.iotaOf_spec
 MagicSquareOfSquares.CoverDescent.iota_sq
 MagicSquareOfSquares.CoverDescent.isEmpty_false_of_mem
@@ -90,6 +93,7 @@ MagicSquareOfSquares.CoverDescent.isSquare_class_mod_R1
 MagicSquareOfSquares.CoverDescent.isSquare_class_mod_R2
 MagicSquareOfSquares.CoverDescent.isSquare_class_mod_octic
 MagicSquareOfSquares.CoverDescent.isSquare_of_mul_sq
+MagicSquareOfSquares.CoverDescent.law16Check_eq
 MagicSquareOfSquares.CoverDescent.law5Check_eq
 MagicSquareOfSquares.CoverDescent.mask101
 MagicSquareOfSquares.CoverDescent.mask109
@@ -103,6 +107,7 @@ MagicSquareOfSquares.CoverDescent.mask41
 MagicSquareOfSquares.CoverDescent.mask5
 MagicSquareOfSquares.CoverDescent.mask53
 MagicSquareOfSquares.CoverDescent.mask61
+MagicSquareOfSquares.CoverDescent.mask64c
 MagicSquareOfSquares.CoverDescent.mask73
 MagicSquareOfSquares.CoverDescent.mask8
 MagicSquareOfSquares.CoverDescent.mask89
@@ -128,8 +133,10 @@ MagicSquareOfSquares.CoverDescent.no_point_of_structOk
 MagicSquareOfSquares.CoverDescent.not_five_dvd_both
 MagicSquareOfSquares.CoverDescent.not_gsq_of_kills
 MagicSquareOfSquares.CoverDescent.not_gsq_of_killsE
+MagicSquareOfSquares.CoverDescent.not_two_dvd_both
 MagicSquareOfSquares.CoverDescent.nrm_congr
 MagicSquareOfSquares.CoverDescent.nrm_congr4
+MagicSquareOfSquares.CoverDescent.nrm_scale
 MagicSquareOfSquares.CoverDescent.pick.eq_def
 MagicSquareOfSquares.CoverDescent.pointOkE_false
 MagicSquareOfSquares.CoverDescent.pointOk_false
@@ -455,4 +462,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 969 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 987 theorems (including auxiliary ones), standard axioms only

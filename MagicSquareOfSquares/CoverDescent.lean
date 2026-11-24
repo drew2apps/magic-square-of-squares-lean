@@ -36,6 +36,8 @@ Everything is done in integer coordinates; no Gaussian integers, no unique facto
   first of the three properties leaves and with lines of both kinds.
 * `class_mod_five`: **if 5 divides `mn(m − n)(m + n)` and 25 does not, the class is not
   `≡ ±1 (mod 5)`** (a complete check modulo 25 on pairs in normal form, `law5Check`).
+* `class_mod_sixteen`: any `d` with the property of the eight products at a solution is
+  `≡ 0, 2, 8, 14 (mod 16)` (a check modulo 64 on pairs in normal form, `law16Check`).
 * `structOk`, `class_of_structOk`, `no_point_of_structOk`: for a ratio where those properties leave
   one candidate, the class of every solution is that candidate; where they leave none, there is no
   solution; no local computation at the points.
@@ -1716,6 +1718,143 @@ theorem exact5_spec {a b : ℕ} (h : exact5 a b = true) :
   push_cast at c
   constructor <;> omega
 
+/-! ### The class modulo 16 -/
+
+theorem nrm_scale (l k m n u v : ℤ) :
+    nrm (P0 (l * m) (l * n) (k * u) (k * v)) = (l * k) ^ 2 * nrm (P0 m n u v) ∧
+    nrm (P8 (l * m) (l * n) (k * u) (k * v)) = (l * k) ^ 2 * nrm (P8 m n u v) ∧
+    nrm (PL (l * m) (l * n) (k * u) (k * v)) = (l * k) ^ 2 * nrm (PL m n u v) ∧
+    nrm (PU (l * m) (l * n) (k * u) (k * v)) = (l * k) ^ 2 * nrm (PU m n u v) := by
+  refine ⟨?_, ?_, ?_, ?_⟩ <;> simp only [nrm, P0, P8, PL, PU] <;> ring
+
+/-- The pairs modulo 64 in the normal form `(1, t)` or `(2s, 1)`. -/
+def normList : List (ℕ × ℕ) :=
+  (List.range 64).map (fun t => (1, t)) ++ (List.range 32).map (fun s => (2 * s, 1))
+
+/-- At the point `(m, n, u, v)` modulo 64, every `d` that passes on the eight products is
+`≡ 0, 2, 8, 14 (mod 16)`. -/
+def law16Pt (G m n u v : ℕ) : Bool :=
+  (List.range 64).all fun d => (d % 16 == 0 || d % 16 == 2 || d % 16 == 8 || d % 16 == 14) ||
+    !((flags.map fun f => resQ 64 (Q m n u v f)).all fun q => gOkN 64 G d q)
+
+/-- The check behind `class_mod_sixteen`: modulo 64, for `(m, n)` and `(u, v)` in normal form at
+which the four forms are squares. -/
+def law16Check (S G : ℕ) : Bool :=
+  normList.all fun mn => normList.all fun uv =>
+    !formsOk mn.1 mn.2 64 S uv.1 uv.2 || law16Pt G mn.1 mn.2 uv.1 uv.2
+
+/-- The squares and the Gaussian squares modulo 64, as bit masks (`sMask 64`, `gMask 64`). -/
+def sq64 : ℕ := 0x202021202030213
+def gs64 : ℕ := 0x101010101010101000000000000000010101010101010100000000100000001101010101010101000000000000000000101010101010101044004400440044001010101010101010000000000000000101010101010101000010000000100001010101010101010000000000000000001010101010101014004400440044005010101010101010100000000000000001010101010101010000100000001000010101010101010100000000000000000010101010101010104400440044004400101010101010101000000000000000010101010101010100000000100000001101010101010101000000000000000000101010101010101400441044104400401010101010101010000000000000000101010101010101000000001000000011010101010101010000000000000000001010101010101010440044004400440010101010101010100000000000000001010101010101010000100000001000010101010101010100000000000000000010101010101010140044004400440050101010101010101000000000000000010101010101010100001000000010000101010101010101000000000000000000101010101010101044004400440044001010101010101010000000000000000101010101010101000000001000000011010101010101010000000000000000001010101010101014104400540044105
+
+theorem mask64c : sq64 = sMask 64 ∧ gs64 = gMask 64 := by decide +kernel
+
+theorem law16Check_eq : law16Check sq64 gs64 = true := by decide +kernel
+
+theorem inv64 : ∀ r < 64, r % 2 ≠ 0 → ∃ l < 64, l * r % 64 = 1 := by decide +kernel
+
+theorem not_two_dvd_both {x y : ℤ} (h : IsCoprime x y) : ¬((2 : ℤ) ∣ x ∧ (2 : ℤ) ∣ y) := by
+  rintro ⟨hx, hy⟩
+  obtain ⟨a, b, hab⟩ := h
+  have h1 : (2 : ℤ) ∣ a * x + b * y := dvd_add (Dvd.dvd.mul_left hx a) (Dvd.dvd.mul_left hy b)
+  rw [hab] at h1
+  omega
+
+/-- A pair of integers not both even is, up to an odd factor, congruent modulo 64 to a pair in
+normal form. -/
+theorem exists_norm2 {x y : ℤ} (h : ¬((2 : ℤ) ∣ x ∧ (2 : ℤ) ∣ y)) :
+    ∃ (l : ℤ) (a b : ℕ), (a, b) ∈ normList ∧
+      (a : ℤ) ≡ l * x [ZMOD ((64 : ℕ) : ℤ)] ∧ (b : ℤ) ≡ l * y [ZMOD ((64 : ℕ) : ℤ)] := by
+  have hM : 0 < 64 := by norm_num
+  have key : ∀ z : ℤ, ¬(2 : ℤ) ∣ z → ∃ l : ℤ, l * z ≡ 1 [ZMOD ((64 : ℕ) : ℤ)] := by
+    intro z hz
+    have c := res_cast hM z
+    have hlt := res_lt hM z
+    have hr : res 64 z % 2 ≠ 0 := by
+      have := c.dvd
+      omega
+    obtain ⟨l, _, hl⟩ := inv64 (res 64 z) hlt hr
+    have e1 : ((l : ℤ) * (res 64 z : ℤ)) ≡ 1 [ZMOD ((64 : ℕ) : ℤ)] := by
+      have : ((l * res 64 z : ℕ) : ℤ) % ((64 : ℕ) : ℤ) = 1 := by exact_mod_cast hl
+      unfold Int.ModEq
+      rw [← Nat.cast_mul, this]
+      rfl
+    exact ⟨l, ((c.symm).mul_left _).trans e1⟩
+  by_cases hx : (2 : ℤ) ∣ x
+  · have hy : ¬(2 : ℤ) ∣ y := fun hy => h ⟨hx, hy⟩
+    obtain ⟨l, e⟩ := key y hy
+    have c := res_cast hM (l * x)
+    refine ⟨l, res 64 (l * x), 1, ?_, c, by exact_mod_cast e.symm⟩
+    have hlt := res_lt hM (l * x)
+    have h2 : res 64 (l * x) % 2 = 0 := by
+      have h1 := c.dvd
+      have h2 : (2 : ℤ) ∣ l * x := Dvd.dvd.mul_left hx l
+      omega
+    unfold normList
+    refine List.mem_append_right _ (List.mem_map.mpr ⟨res 64 (l * x) / 2, List.mem_range.mpr (by omega), ?_⟩)
+    rw [Prod.mk.injEq]
+    exact ⟨by omega, rfl⟩
+  · obtain ⟨l, e⟩ := key x hx
+    refine ⟨l, 1, res 64 (l * y), ?_, by exact_mod_cast e.symm, res_cast hM (l * y)⟩
+    unfold normList
+    exact List.mem_append_left _ (List.mem_map.mpr ⟨res 64 (l * y), List.mem_range.mpr (res_lt hM _), rfl⟩)
+
+/-- **The class modulo 16.** For coprime `m, n` and coprime `u, v` at which the four forms are
+squares, a `d` such that `d` times each of the eight products is a Gaussian square is
+`≡ 0, 2, 8` or `14 (mod 16)`; without a square factor, `≡ ±2 (mod 16)`. A check modulo 64. -/
+theorem class_mod_sixteen {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    {d : ℕ} (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) :
+    d % 16 = 0 ∨ d % 16 = 2 ∨ d % 16 = 8 ∨ d % 16 = 14 := by
+  have hM : 0 < 64 := by norm_num
+  obtain ⟨l, a, b, hab, ca, cb⟩ := exists_norm2 (not_two_dvd_both hmn)
+  obtain ⟨k, s, t, hst, cs, ct⟩ := exists_norm2 (not_two_dvd_both hcop)
+  have h : law16Check (sMask 64) (gMask 64) = true := by
+    rw [← mask64c.1, ← mask64c.2]
+    exact law16Check_eq
+  unfold law16Check at h
+  rw [List.all_eq_true] at h
+  have h1 := h (a, b) hab
+  rw [List.all_eq_true] at h1
+  have h4 := h1 (s, t) hst
+  dsimp only at h4
+  obtain ⟨c0, c8, cL, cU⟩ := nrm_congr4 ca cb cs ct
+  obtain ⟨e0, e8, eL, eU⟩ := nrm_scale l k m n u v
+  obtain ⟨w0, hw0⟩ := h0
+  obtain ⟨w8, hw8⟩ := h8
+  obtain ⟨wL, hwL⟩ := hL
+  obtain ⟨wU, hwU⟩ := hU
+  have f0 : nrm (P0 (l * m) (l * n) (k * u) (k * v)) = (l * k * w0) ^ 2 := by rw [e0, hw0]; ring
+  have f8 : nrm (P8 (l * m) (l * n) (k * u) (k * v)) = (l * k * w8) ^ 2 := by rw [e8, hw8]; ring
+  have fL : nrm (PL (l * m) (l * n) (k * u) (k * v)) = (l * k * wL) ^ 2 := by rw [eL, hwL]; ring
+  have fU : nrm (PU (l * m) (l * n) (k * u) (k * v)) = (l * k * wU) ^ 2 := by rw [eU, hwU]; ring
+  have f : formsOk (a : ℤ) b 64 (sMask 64) s t = true := by
+    unfold formsOk
+    rw [sqOk_of hM (w := l * k * w0) (f0 ▸ c0), sqOk_of hM (w := l * k * w8) (f8 ▸ c8),
+      sqOk_of hM (w := l * k * wL) (fL ▸ cL), sqOk_of hM (w := l * k * wU) (fU ▸ cU)]
+    rfl
+  rw [f] at h4
+  simp only [Bool.not_true, Bool.false_or] at h4
+  have o : ((flags.map fun f => resQ 64 (Q (a : ℤ) b s t f)).all
+      fun q => gOkN 64 (gMask 64) (d % 64) q) = true := by
+    rw [List.all_eq_true]
+    intro q hq
+    rw [List.mem_map] at hq
+    obtain ⟨f, _, rfl⟩ := hq
+    obtain ⟨q1, q2⟩ := Q_congr4 ca cb cs ct f
+    rw [gOkN_mod, gOkN_eq hM]
+    have g' : GSqP d (Q (l * m) (l * n) (k * u) (k * v) f) := by
+      rw [Q_scale]
+      exact GSq.scale4 (l * k) (g f)
+    exact gOk_of_GSqP hM g' q1 q2
+  unfold law16Pt at h4
+  rw [List.all_eq_true] at h4
+  have h5 := h4 (d % 64) (List.mem_range.mpr (Nat.mod_lt _ hM))
+  rw [o] at h5
+  simp only [Bool.not_true, Bool.or_false, Bool.or_eq_true, beq_iff_eq] at h5
+  omega
+
 /-! ### The structure of the class, for every ratio -/
 
 /-- **The class of a solution, with what is known about it for every ratio.** For coprime `m, n`
@@ -1723,7 +1862,9 @@ and coprime `u, v` at which the four forms are squares there is a `d > 0` withou
 such that `d` times each of the eight products is a Gaussian square, and:
 every prime factor of `d` divides `2mn(m − n)(m + n)`; every odd prime factor of `d` is
 `≡ ±1 (mod 8)`; `d` is even; `d` is a square modulo every odd prime dividing `m² + n²` or
-`m⁸ + 14m⁴n⁴ + n⁸`; and `d ≡ ±2 (mod 5)` if 5 divides `mn(m − n)(m + n)` and 25 does not. -/
+`m⁸ + 14m⁴n⁴ + n⁸`; and `d ≡ ±2 (mod 5)` if 5 divides `mn(m − n)(m + n)` and 25 does not. Also
+`d ≡ ±2 (mod 16)`, which follows from the first two properties but is proved for every `d` with the
+property of the eight products (`class_mod_sixteen`). -/
 theorem exists_class_struct {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
     (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
     (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
@@ -1732,7 +1873,7 @@ theorem exists_class_struct {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCopr
     ∃ d : ℕ, 0 < d ∧ NoSq d ∧
       (∀ p : ℕ, p.Prime → p ∣ d → (p : ℤ) ∣ 2 * m * n * (m - n) * (m + n)) ∧
       (∀ p : ℕ, p.Prime → p ∣ d → p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧
-      2 ∣ d ∧
+      2 ∣ d ∧ (d % 16 = 2 ∨ d % 16 = 14) ∧
       (∀ p : ℕ, p.Prime → p ≠ 2 → (p : ℤ) ∣ m ^ 2 + n ^ 2 → IsSquare (d : ZMod p)) ∧
       (∀ p : ℕ, p.Prime → p ≠ 2 → (p : ℤ) ∣ m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8 →
         IsSquare (d : ZMod p)) ∧
@@ -1740,7 +1881,11 @@ theorem exists_class_struct {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCopr
         d % 5 = 2 ∨ d % 5 = 3) ∧
       ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f) := by
   obtain ⟨d, hd, hns, hsup, hE, g⟩ := exists_class_prod8 hmn hcop h0 h8 hL hU n0 n8 nL nU
-  refine ⟨d, hd, hns, hsup, hE, two_dvd_class hmn hcop h0 h8 hL hU g,
+  have h16 : d % 16 = 2 ∨ d % 16 = 14 := by
+    have h1 := class_mod_sixteen hmn hcop h0 h8 hL hU g
+    have h4 : ¬4 ∣ d := hns 2 Nat.prime_two
+    omega
+  refine ⟨d, hd, hns, hsup, hE, two_dvd_class hmn hcop h0 h8 hL hU g, h16,
     fun p hp hp2 hdvd => isSquare_class_mod hmn hcop hp hp2 hdvd g,
     fun p hp hp2 hdvd => isSquare_class_mod_octic hmn hcop hp hp2 hdvd g, fun h5 h25 => ?_, g⟩
   have h1 := class_mod_five hmn hcop h5 h25 g
@@ -2130,7 +2275,7 @@ theorem pos_class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (h
     by_cases h : u - v = 0
     · exact Or.inr (mul_ne_zero hmn1 (by omega))
     · exact Or.inl (mul_ne_zero hmn0 h)
-  obtain ⟨d, hd, hns, hsup, hE, h2, hG, hO, h5m, g⟩ := exists_class_struct
+  obtain ⟨d, hd, hns, hsup, hE, h2, _, hG, hO, h5m, g⟩ := exists_class_struct
     (Nat.isCoprime_iff_coprime.mpr hmn) hcop h0 h8 hL hU
     n0 n8 nL nU
   have hmem : d ∈ prods (ps.filter keep8) := by

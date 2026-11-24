@@ -173,6 +173,7 @@ jobs:
           grep -q 'no candidate passes E, F, G, O: 54$' class_struct.txt
           python3 class_law5.py | diff - class_law5.txt
           python3 class_complete.py | diff - class_complete.txt
+          grep -q '^1. random points with a class: 211894; outside the set of Theorem C: 0$' class_local.txt && grep -q 'not as the proof says: 0$' class_local.txt && grep -q 'different from the table of Theorem C: 0$' class_local.txt
           grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete.txt
           python3 class_complete_random.py 200 1500 3000 | diff - class_complete_random.txt
           grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete_random.txt && grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete_random_20000.txt
@@ -395,6 +396,8 @@ jobs:
           python3 third_run.py @pairs_123.txt 150 | diff - third_123.txt
           cd ../structure
           python3 class_two.py | diff - class_two.txt
+          # the checks for Theorem C (COMPLETE.md): exact p-adic classes; about three minutes
+          python3 class_local.py | diff - class_local.txt
           cd ../fourth
           python3 compare.py | sed 's/  \[[0-9]*s\]$//' | diff - compare_out.txt
           python3 attack.py | sed 's/ [0-9]*s$//' | diff - attack_out.txt

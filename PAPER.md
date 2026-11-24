@@ -25,7 +25,7 @@ This note does not solve the problem. It contains:
 
 ## 2. Proved in Lean
 
-Lean 4 with Mathlib, 477 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures. The library also contains the nine necessary conditions listed on Wikipedia (most of them are in Rabern 2003) and the classical reformulations: three arithmetic progressions of squares with a common difference, rational right triangles of equal area, and points on the curves `y² = x³ − n²x`.
+Lean 4 with Mathlib, 484 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures. The library also contains the nine necessary conditions listed on Wikipedia (most of them are in Rabern 2003) and the classical reformulations: three arithmetic progressions of squares with a common difference, rational right triangles of equal area, and points on the curves `y² = x³ − n²x`.
 
 ### 2.1 The centre
 

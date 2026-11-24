@@ -1,0 +1,6 @@
+1. random points with a class: 211894; outside the set of Theorem C: 0
+   classes seen, by (p mod 8, kind, exponent if p = 5): [((1, 'other', 0), ['1']), ((1, 'supp', 0), ['1', 'e', 'ep', 'p']), ((3, 'supp', 0), ['1']), ((5, 'other', 0), ['1']), ((5, 'supp', 0), ['1', 'e']), ((5, 'supp', 1), ['e']), ((5, 'supp', 2), ['1', 'e']), ((7, 'supp', 0), ['1', 'p'])]
+2. points of the proof: first order 1728, u = p u1 with e >= 2: 990, with e = 1: 11208, p = 5 with 25 dividing: 9 ratios; not as the proof says: 0
+3. primes = 1 mod 4 below 5000: 329; with one value of chi(2v) only: [5]
+4. modulo 64, pairs in normal form: 1024 points with the four norms squares; residues of d modulo 16 that pass somewhere: [0, 2, 8, 14]
+5. cases 180; image modulo p^K different from the table of Theorem C: 0
