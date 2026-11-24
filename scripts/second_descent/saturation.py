@@ -20,11 +20,12 @@ rk = pari.ellrank(em, 2); tors = Em.torsion_points(); T = [P for P in tors if no
 print('minimal model %s; G = (%s, %s)' % (list(Em.a_invariants()), Gm[0], Gm[1]))
 print('rank bounds (PARI ellrank): %d, %d; torsion points other than O: %d' % (int(rk[0]), int(rk[1]), len(T)))
 hG = float(pari.ellheight(em, [pari(str(Gm[0])), pari(str(Gm[1]))])); hS = float(Gm.height())
-lam = float(Em.height_function().min(.01, 30))
+lam = float(Em.height_function().min(.01, 30))            # Sage returns a double; float() does not change it
+_n, _d = lam.as_integer_ratio(); lamQ = QQ(int(_n))/QQ(int(_d))   # the exact value of that double
 from height_enclosure import enclose
 _lo, _hi, _, _ = enclose(Em, QQ(Gm[0])); assert _lo <= hG <= _hi
 hup = QQ(int(_hi.numerator))/QQ(int(_hi.denominator))       # a proved upper bound for h(G) (height_enclosure.py)
-lamlow = QQ(int(floor(lam*10**6)))/10**6/2                  # HALF of Sage's bound, rounded down: room for its conversion to a float
+lamlow = QQ(floor(lamQ*10**6))/10**6/2                     # HALF of the number Sage returns, rounded down, in exact rationals
 kmax = isqrt(int(floor(hup/lamlow)))
 print('h(G) = %.6f (PARI), %.6f (Sage); lower bound for the height of a point of infinite order (Sage): %.6f; with half of it, an index k has k^2 <= %.4f/%.6f, k <= %d' % (hG, hS, lam, ceil(float(hup)*10**4)/10**4, float(lamlow), kmax))
 D = ZZ(Em.discriminant()); den = ZZ(QQ(Gm[0]).denominator())
@@ -53,5 +54,5 @@ for l in prime_range(2, 200):
     allok = allok and ok is not None
     if l <= max(kmax, 19) or ok is None: print('G is not %d times a point plus torsion: %s' % (l, 'shown modulo %d' % ok if ok else 'NOT SHOWN'))
 need = hup/211**2
-print('the same for every prime up to 199: %s; so G generates as soon as the points of infinite order have height above %.6f, and Sage\'s bound is %d times that' % (allok, ceil(float(need)*10**6)/10**6, int(lam/float(need))))
+print('the same for every prime up to 199: %s; so G generates as soon as the points of infinite order have height above %.6f, and Sage\'s bound is %d times that' % (allok, ceil(float(need)*10**6)/10**6, int(floor(lamQ/need))))
 print('G generates E1(Q) modulo torsion, given the rank bound and the lower bound for the height: %s' % (allok and kmax < 211))

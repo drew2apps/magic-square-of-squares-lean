@@ -1,0 +1,3 @@
+wrong rule (units of Z_2[i] compared modulo 4, not 8), prime 2: 6763 values tested, disagreements: 3010
+wrong rule (residue symbol reversed), primes 3, 5, 7: 21189 values tested, disagreements: 14309
+the rules of the program: 34484 values tested, disagreements: 0

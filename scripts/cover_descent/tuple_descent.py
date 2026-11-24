@@ -23,7 +23,7 @@ Systems:  magic m,n   the four forms F0, F8, GL, GU of the family (classes d0, d
           cuboid m,n  the three forms t^2 + a^2, t^2 + b^2, t^2 + c^2 for the Pythagorean triple (a, b, c) =
                       (m^2 - n^2, 2 m n, m^2 + n^2): a perfect cuboid with this face.
 usage: tuple_descent.py magic|cuboid m,n [largest good prime, default 150]
-       tuple_descent.py magic|cuboid m,n selftest
+       tuple_descent.py magic|cuboid m,n selftest | neartest | oracle
        tuple_descent.py batch magic|cuboid pairs.txt jobs [first [last]]     one line per ratio; the file has one ratio m,n at the
                                                                             start of each line, or ratios separated by spaces on one line"""
 import sys
@@ -57,7 +57,7 @@ class Local:
             self.iota, self.M = r, M
     def cls(self, z, k):
         """(dead, determined, label): the class of gamma = z on a disc of radius p^k, as a label of dlabel; dead if the class is
-        constant and is not the class of a rational number."""
+        constant and is not the class of a rational number.  When it is not determined, label is None or a hint (p = 1 mod 4)."""
         p = self.p
         if z == (0, 0): return False, False, None
         if self.kind == 2:
@@ -72,9 +72,13 @@ class Local:
         out = []
         for s in (1, -1):
             w = (z[0] + s*self.iota*z[1]) % self.M; v = vp(w, p)
-            if v is None or v >= k: return False, False, None
-            out.append((v % 2, leg(w//p**v, p)))
-        return (out[0] != out[1]), True, out[0]                     # the same rational d has to work at both primes above p
+            if v is None: return False, False, None                 # beyond the precision of iota
+            out.append(None if v >= k else (v % 2, leg(w//p**v, p)))
+        # The same rational d has to work at both primes above p.  If only one component is constant on the disc, the class is
+        # not determined yet, but a rational class on the disc can only be the class of that component: it is returned as a
+        # hint, which allowed() uses at the largest depth in place of "every class" (LAST_PAIR.md, section 14, R4).
+        if out[0] is None or out[1] is None: return False, False, (out[1] if out[0] is None else out[0])
+        return (out[0] != out[1]), True, out[0]
     def dlabel(self, d):
         if self.kind == 2: return key2((d, 0))[1]
         v = vp(d, self.p)
@@ -92,7 +96,7 @@ class Local:
             if any(r[0] for r in res): continue
             if all(r[1] for r in res): out.add(tuple(r[2] for r in res)); continue
             if k < K: stack += [(c, t0 + j*p**k, k + 1) for j in range(p)]; continue
-            out |= set(product(*[[r[2]] if r[1] else every for r in res]))
+            out |= set(product(*[[r[2]] if (r[1] or r[2] is not None) else every for r in res]))     # r[2] without r[1]: the hint of cls
         # The integers (u, v) are (t, 1) or (1, t) times a p-adic unit, and the forms are linear: all classes are multiplied
         # by the class of that unit.  Units of Z_p are squares in Q_p(i) when p = 3 mod 4; otherwise there is one more class.
         if self.kind == 1: out |= set(tuple((l[0], 1 - l[1]) for l in t) for t in out)
@@ -180,6 +184,56 @@ def selftest(forms, primes, samples=20000, seed=1):
             hits += 1; fails += tuple(r[2] for r in res) not in al
     return hits, fails
 
+def neartest(forms, primes, depth=6, samples=60, seed=2):
+    """Points close to the zeros of the forms and to infinity, where the classes change: for p = 1 mod 4 each linear form
+    has a zero t* in Q_p (in both embeddings); the points t* + p^j r, j = 1..depth, and (1, p^j r), are tested like the
+    random points of selftest.  Returns (points tested, failures)."""
+    import random
+    rnd = random.Random(seed); hits = fails = 0
+    for p in primes:
+        L = Local(forms, p, 12 if p == 2 else 6); al = L.allowed(); starts = [(0, 0), (1, 0)]
+        if L.kind == 1:
+            M = L.M
+            for al_, be in forms:
+                for sgn in (1, -1):
+                    a = (al_[0] + sgn*L.iota*al_[1]) % M; b = (be[0] + sgn*L.iota*be[1]) % M
+                    if a % p: starts.append((0, (-b*pow(a, -1, M)) % M))
+                    elif b % p: starts.append((1, (-a*pow(b, -1, M)) % M))
+        for c, t0 in starts:
+            for j in range(1, depth + 1):
+                for _ in range(samples):
+                    t = t0 + p**j*rnd.randrange(1, 10**6)
+                    u, v = (t, 1) if c == 0 else (1, t)
+                    if c == 1 and t % p: continue
+                    res = [L.cls((a[0]*u + b[0]*v, a[1]*u + b[1]*v), 10**6) for a, b in forms]
+                    if any(r[0] or not r[1] for r in res): continue
+                    hits += 1; fails += tuple(r[2] for r in res) not in al
+    return hits, fails
+
+def oracle(forms, primes=((2, 6), (3, 4), (5, 3), (7, 3), (13, 2)), samples=3000, seed=3):
+    """A second implementation of the local classes, by brute force.  For p^N small, the set of all squares w^2 in
+    Z[i]/(p^N) is listed.  For random (u, v) and each form, the rational classes d (four representatives) with
+    d gamma(u, v) a square modulo p^N are found from that list, when the valuation of gamma is small enough for the
+    congruence to decide (Hensel); the program's own label has to name exactly these d.  Returns (values tested, failures)."""
+    import random
+    rnd = random.Random(seed); tested = fails = 0
+    for p, N in primes:
+        M = p**N; SQ = set(((x*x - y*y) % M, (2*x*y) % M) for x in range(M) for y in range(M))
+        L = Local(forms, p, 12 if p == 2 else 6)
+        nonres = next(r for r in range(2, p) if pow(r, (p - 1)//2, p) == p - 1) if p > 2 else None
+        reps = [1, 2, 3, 6] if p == 2 else [1, nonres, p, p*nonres]
+        for _ in range(samples):
+            u, v = rnd.randrange(-10**6, 10**6), rnd.randrange(1, 10**6)
+            if gcd(u, v) != 1: continue
+            for a, b in forms:
+                z = (a[0]*u + b[0]*v, a[1]*u + b[1]*v); nz = z[0]*z[0] + z[1]*z[1]
+                if nz == 0 or vp(nz, p) > (N - 4 if p == 2 else N - 2): continue      # the congruence modulo p^N decides
+                good = [d for d in reps if ((d*z[0]) % M, (d*z[1]) % M) in SQ]
+                dead, det, lab = L.cls(z, 10**6); tested += 1
+                mine = [] if dead else [d for d in reps if L.dlabel(d) == lab]
+                fails += sorted(good) != sorted(mine)
+    return tested, fails
+
 def line(kind, m, n, pmax=150):
     forms, sup, known = (magic if kind == 'magic' else cuboid)(m, n)
     S, used, sizes = descend(forms, sup, known, pmax)
@@ -196,6 +250,15 @@ if __name__ == '__main__':
         lo = int(sys.argv[5]) if len(sys.argv) > 5 else 0; hi = int(sys.argv[6]) if len(sys.argv) > 6 else len(pairs)
         with Pool(int(sys.argv[4])) as pool:
             for out in pool.imap(_job, [(kind, a) for a in pairs[lo:hi]], chunksize=8): print(out, flush=True)
+        sys.exit(0)
+    if len(sys.argv) > 3 and sys.argv[3] in ('neartest', 'oracle'):
+        m, n = (int(x) for x in sys.argv[2].split(',')); forms, sup, known = (magic if sys.argv[1] == 'magic' else cuboid)(m, n)
+        if sys.argv[3] == 'neartest':
+            pr = [2, 5, 13, 17, 29, 37, 41, 53, 61]; hits, fails = neartest(forms, pr)
+            print('%s (%d,%d): points near the zeros of the forms and near infinity, at the primes %s: %d tested; outside the allowed set: %d' % (sys.argv[1], m, n, pr, hits, fails))
+        else:
+            tested, fails = oracle(forms)
+            print('%s (%d,%d): local classes against a list of all squares modulo 2^6, 3^4, 5^3, 7^3, 13^2: %d values of forms tested; disagreements: %d' % (sys.argv[1], m, n, tested, fails))
         sys.exit(0)
     if len(sys.argv) > 3 and sys.argv[3] == 'selftest':
         m, n = (int(x) for x in sys.argv[2].split(',')); forms, sup, known = (magic if sys.argv[1] == 'magic' else cuboid)(m, n)

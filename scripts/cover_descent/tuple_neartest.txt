@@ -1,0 +1,8 @@
+magic (627,364): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 2294 tested; outside the allowed set: 0
+magic (627,364): local classes against a list of all squares modulo 2^6, 3^4, 5^3, 7^3, 13^2: 34484 values of forms tested; disagreements: 0
+magic (820,799): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 5641 tested; outside the allowed set: 0
+magic (820,799): local classes against a list of all squares modulo 2^6, 3^4, 5^3, 7^3, 13^2: 33878 values of forms tested; disagreements: 0
+magic (440,279): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 2154 tested; outside the allowed set: 0
+magic (440,279): local classes against a list of all squares modulo 2^6, 3^4, 5^3, 7^3, 13^2: 33512 values of forms tested; disagreements: 0
+magic (4,3): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 2481 tested; outside the allowed set: 0
+magic (4,3): local classes against a list of all squares modulo 2^6, 3^4, 5^3, 7^3, 13^2: 34179 values of forms tested; disagreements: 0

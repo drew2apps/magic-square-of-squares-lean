@@ -100,16 +100,31 @@ jobs:
           test "$(cat cover_820_799.txt cover_889_320.txt | grep -c "^left: \[\] (no class is possible")" = 2
           python3 cover_descent.py 627,364 selftest | diff - cover_selftest_627_364.txt
           python3 cover_summary.py cover_34.txt cover_123.txt | diff - cover_summary.txt
+          # the same local eliminations by exhaustion over all points modulo p^N (no code shared with cover_descent.py), prime by prime
+          python3 cover_certificate.py 627,364 | diff - cover_certificate_627_364.txt
+          grep -q "^left by the descent: \[521266\]; left by the exhaustion: \[521266\];" cover_certificate_627_364.txt
           # section 12: one class for each form; all lists, under a second per ratio
           python3 tuple_descent.py magic 627,364 | diff - tuple_627_364.txt
           (for r in 627,364 820,799 15,8 247,96; do python3 tuple_descent.py magic $r selftest; done) | diff - tuple_selftest.txt
           test "$(grep -c "outside the allowed set: 0$" tuple_selftest.txt)" = 4
+          # tests of the local class rules (LAST_PAIR.md, section 14): points near the zeros of the forms; a second implementation with lists of squares; two wrong rules that it has to catch
+          (for r in 627,364 820,799 440,279 4,3; do python3 tuple_descent.py magic $r neartest; python3 tuple_descent.py magic $r oracle; done) | diff - tuple_neartest.txt
+          test "$(grep -c "outside the allowed set: 0$\|disagreements: 0$" tuple_neartest.txt)" = 8
+          python3 tuple_mutation.py | diff - tuple_mutation.txt
+          python3 tuple_bruteforce.py magic 627,364 | diff - tuple_bruteforce_627_364.txt
+          grep -q "^kept at every prime: 2: \[(1, 2, 263, 991), (1, 2, 1982, 526)\]$" tuple_bruteforce_627_364.txt
           python3 tuple_descent.py batch magic ../gauss_descent/pairs34.txt 2 | diff - tuple_34.txt
           python3 tuple_descent.py batch magic ../second_descent/pairs123.txt 2 | diff - tuple_123.txt
           python3 tuple_descent.py batch magic ../gauss_descent/pairs_notrivial_1000.txt 2 | diff - tuple_681.txt
           python3 tuple_descent.py batch magic pairs_route_wide.txt 2 | diff - tuple_route_wide.txt
           test "$(cat tuple_34.txt tuple_681.txt | grep -c "nothing is left$")" = 715
           test "$(cat tuple_123.txt tuple_route_wide.txt | grep -c "exactly the known points$")" = 138
+          # every ratio with m <= 5000 that avoids the 484 classes: the first lines are rerun, the counts are checked on the whole files
+          python3 tuple_descent.py batch magic ../gauss_descent/scan_certificates.txt 2 0 300 | diff - <(head -n 300 tuple_scan_5000.txt)
+          python3 tuple_descent.py batch magic pairs_trivial_5000.txt 2 0 60 | diff - <(head -n 60 tuple_trivial_5000.txt)
+          test "$(wc -l < tuple_scan_5000.txt)" = 18900 && test "$(grep -c "nothing is left$" tuple_scan_5000.txt)" = 18900
+          test "$(wc -l < tuple_trivial_5000.txt)" = 1523 && test "$(grep -c "exactly the known points$" tuple_trivial_5000.txt)" = 1523
+          diff <(cut -d: -f1 tuple_scan_5000.txt | tr -d '()') <(cut -d' ' -f1 ../gauss_descent/scan_certificates.txt)
           cd ../second_descent
           grep -q "G has infinite order for every other rational tau: True$" degenerate_section.txt
           grep -q "^all identities hold: True$" lemma2_general.txt
@@ -246,6 +261,7 @@ jobs:
           python3 route_all.py 4 two_map_scope_wide_twist.txt | diff - route_twist.txt
           # the cover descent on the 157 ratios of the census list
           (cd ../cover_descent && python3 cover_batch.py ../gauss_descent/pairs34.txt 4 | diff - cover_34.txt && python3 cover_batch.py ../second_descent/pairs123.txt 4 | diff - cover_123.txt)
+          (cd ../cover_descent && for r in 820_799 889_320; do python3 cover_certificate.py $(echo $r | tr _ ,) | diff - cover_certificate_$r.txt && grep -q "^left by the descent: \[\]; left by the exhaustion: \[\];" cover_certificate_$r.txt || exit 1; done)
           test "$(grep -c "no class is possible" ../cover_descent/cover_34.txt)" = 34
           test "$(grep -c "generator: True; .*within the bound: \[(1, 1)\]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1$" route_wide.txt)" = 12
           test "$(grep -c "generator: True; .*within the bound: \[(1, 1)\]; range covers the bound: True; fibre over a = 1 or b = 1: rational t = -1, 1$" route_all.txt)" = 24

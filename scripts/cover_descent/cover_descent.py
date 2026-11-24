@@ -13,8 +13,11 @@ Support.  Each of the four forms is the norm of a linear form over Z[i]:  F0 = N
 GL = N((1 + i)(m u - n v + i (m v - n u))),  GU = N((1 + i)(m u + n v + i (m v + n u))),  and A B is, up to a unit and a
 power of 1 + i, the product of two of these linear forms and the conjugates of the two others.  If F is a square and
 gamma is its linear form, an odd prime p can divide the squarefree part of the class of gamma only if a prime above p
-divides gamma and its conjugate, and then p | 2 m n (for F0, F8) or p | 2 (m^2 - n^2) (for GL, GU); these divisibilities
-are in Lean (GaussDescent.lean).  So d is a product of primes dividing 2 m n (m^2 - n^2): a finite set P.
+divides gamma and its conjugate (unique factorisation in Z[i]: Lemma S2 of LAST_PAIR.md, section 11; on paper, NOT in
+Lean), and then p | 2 m n (for F0, F8) or p | 2 (m^2 - n^2) (for GL, GU) (the common divisors: Lemma S3; these four
+statements are in Lean, GaussDescent.lean).  So d is a product of primes dividing 2 m n (m^2 - n^2): a finite set P.
+The thresholds of qclass and kclass are proved in LAST_PAIR.md, section 14; cover_bruteforce.py reaches the same sets by
+exhaustion, without them.
 
 Local test.  For a prime p, d can be the class of a rational point only if there is a (u : v) in P^1(Q_p) with
     F0, F8, GL, GU squares in Q_p,   d A B and d A B' squares in Q_p(i) (in both factors, if p = 1 mod 4).
