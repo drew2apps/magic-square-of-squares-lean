@@ -29,3 +29,5 @@ import MagicSquareOfSquares.GaussDescent
 import MagicSquareOfSquares.CoverDescent
 import MagicSquareOfSquares.CoverDescentTable
 import MagicSquareOfSquares.ClassLocal
+import MagicSquareOfSquares.ClassConic
+import MagicSquareOfSquares.ClassOdd
