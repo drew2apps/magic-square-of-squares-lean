@@ -1,0 +1,5 @@
+m in (0, 1250]: coprime ratios 475305; no local point somewhere 470914; points everywhere but no class 3951; a class, m^2+n^2 a square or twice a square 380; a class, neither 60
+m in (1250, 2500]: coprime ratios 1424572; no local point somewhere 1411474; points everywhere but no class 12526; a class, m^2+n^2 a square or twice a square 381; a class, neither 191
+m in (2500, 3750]: coprime ratios 2375296; no local point somewhere 2353521; points everywhere but no class 21069; a class, m^2+n^2 a square or twice a square 384; a class, neither 322
+m in (3750, 5000]: coprime ratios 3325284; no local point somewhere 3294409; points everywhere but no class 30073; a class, m^2+n^2 a square or twice a square 378; a class, neither 424
+the ratios with a class and m^2+n^2 neither a square nor twice a square, m <= 400: (291,224) (292,133) (308,185) (340,53) (393,287)

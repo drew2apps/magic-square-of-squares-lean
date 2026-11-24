@@ -173,6 +173,10 @@ jobs:
           grep -q 'no candidate passes E, F, G, O: 54$' class_struct.txt
           python3 class_law5.py | diff - class_law5.txt
           python3 class_complete.py | diff - class_complete.txt
+          python3 class_good.py --check 700
+          pip install -q sympy==1.14.0
+          python3 class_selmer.py | diff - class_selmer.txt
+          grep -qx '  the criterion and the local test at the primes below 620 leave the same classes for 425 ratios of 425' class_selmer.txt
           grep -q '^1. random points with a class: 211894; outside the set of Theorem C: 0$' class_local.txt && grep -q 'not as the proof says: 0$' class_local.txt && grep -q 'different from the table of Theorem C: 0$' class_local.txt
           grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete.txt
           python3 class_complete_random.py 200 1500 3000 | diff - class_complete_random.txt

@@ -1,0 +1,13 @@
+Facts about bad primes without a local point, quoted in COMPLETE.md, section 7. Each line was computed on 24 November 2026
+with the functions survivors (lean_cert.py) and tables, image (class_good.py); the two short programs are not kept as files.
+
+2:  having a point modulo 64 depends on (m, n) modulo 8; classes with a point: 24 of 48;
+    up to signs: (0,1) (0,3) (1,0) (1,1) (1,4) (3,0) (3,3) (3,4) (4,1) (4,3); a sample of 300 pairs modulo 128: no difference.
+5:  ratios modulo 3125 by the valuation e of m^2+n^2: e = 1: no point for 1000 of 1000; e = 2: 0 of 200; e = 3: 0 of 40;
+    e = 4: 0 of 8; e >= 5: 0 of 2.   (Having a point modulo 3125 does not show that there is a 5-adic point.)
+13: ratios modulo 2197: e = 1: no point for 312 of 312; e = 2: 0 of 24; e >= 3: 0 of 2.
+17, 29: ratios modulo 289, 841 with the prime dividing m^2+n^2: none without a point.
+octic: 792 pairs (prime below 3000, root of the octic); a point of first order for every one; the smallest proportion of
+    such points among the p + 1 points of the line is 0.0822, at p = 73.
+on the 21,104 ratios with m <= 5000 of LAST_PAIR.md, section 12, the test at 2 and at every prime below 100 of
+    (m^2+n^2)(octic): no point at 2 for 10,258; at 5 for 5,456; at 13 for 2,608; at no other prime.

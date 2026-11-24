@@ -1,0 +1,5 @@
+p = 1 (mod 4), up to 4400: 40 primes with a row, the last one 617; ratios mod p: no point 36, only residues 484, only non-residues 332
+p = 3 (mod 4), up to 1200: 8 primes with a row, the last one 151; ratios mod p without a point: 84
+the primes: 7 17 23 29 31 37 41 47 53 61 73 79 89 97 101 103 109 113 127 137 149 151 157 173 181 193 197 229 233 241 257 269 277 281 293 313 317 349 353 373 389 401 409 421 433 457 569 617
+check 1, against the test modulo p^2 of lean_cert.py, p = 13, 17, 29, 37, 41: cases 132, different 0
+check 2, exact classes at integer points (all residues of u, and points with a norm divisible by p^2), for the 40 primes = 1 (mod 4) of the table: cases 196, different 0

@@ -24,9 +24,10 @@ Toward Theorem C of `COMPLETE.md`, whose proof is by hand. What is here, in Lean
   a prime `p ≡ ±1 (mod 8)` with `p² | m`).
 
 "Passes modulo every power of `p`" is what a `p`-adic point with that class amounts to; the step
-from all powers to a `p`-adic point is not here. Also not here: the conic and the bound of Hasse
-(4.2), the case `p ∥ m` of 4.3, the prime 5 (4.4), the reduction from `n, m ± n` to `m`, and the
-upper bounds for `p`-adic points.
+from all powers to a `p`-adic point is not in Lean. In later files: the conic of 4.2, by an identity
+of Jacobsthal in place of the bound of Hasse (`ClassConic.lean`); the case `p ∥ m` of 4.3
+(`ClassOdd.lean`); the prime 5 (`ClassFive.lean`); the reduction from `n, m ± n` to `m`
+(`ClassTable.lean`). Not in Lean: the upper bounds for `p`-adic points.
 -/
 
 namespace MagicSquareOfSquares.CoverDescent

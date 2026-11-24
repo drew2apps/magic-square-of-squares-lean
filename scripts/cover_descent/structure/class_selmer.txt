@@ -1,0 +1,6 @@
+the 425 ratios of exceptions1000, every squarefree product of the primes of 2mn(m^2-n^2) as a candidate:
+  the criterion and the local test at the primes below 620 leave the same classes for 425 ratios of 425
+  m^2+n^2 neither, 0 classes: 115 ratios
+  m^2+n^2 neither, 1 class: 4 ratios
+  m^2+n^2 square or twice a square, 1 class: 300 ratios
+  m^2+n^2 square or twice a square, 2 classes: 6 ratios
