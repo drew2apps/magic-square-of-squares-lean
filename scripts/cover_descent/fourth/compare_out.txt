@@ -1,0 +1,43 @@
+magic (627,364): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(1, 2, 263, 991), (1, 2, 1982, 526)] ; U==repo: True ; known [(1, 2, 263, 991), (1, 2, 1982, 526)]
+magic (820,799): final  L 0  repo(local sets) 0  U 0 ; repo descend(61): 0 [] ; U==repo: True ; known []
+magic (889,320): final  L 0  repo(local sets) 0  U 0 ; repo descend(61): 0 [] ; U==repo: True ; known []
+magic (15,8): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(1, 2, 7, 23), (1, 2, 46, 14)] ; U==repo: True ; known [(1, 2, 7, 23), (1, 2, 46, 14)]
+magic (7,1): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(2, 14, 1, 2), (7, 1, 1, 2)] ; U==repo: True ; known [(2, 14, 1, 2), (7, 1, 1, 2)]
+magic (4,3): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(2, 1, 1, 7), (2, 1, 14, 2)] ; U==repo: True ; known [(2, 1, 1, 7), (2, 1, 14, 2)]
+magic (12,5): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(2, 1, 7, 17), (2, 1, 34, 14)] ; U==repo: True ; known [(2, 1, 7, 17), (2, 1, 34, 14)]
+magic (777,464): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(1, 2, 313, 1241), (1, 2, 2482, 626)] ; U==repo: True ; known [(1, 2, 313, 1241), (1, 2, 2482, 626)]
+magic (957,124): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(1, 2, 17, 1081), (1, 2, 2162, 34)] ; U==repo: True ; known [(1, 2, 17, 1081), (1, 2, 2162, 34)]
+magic (791,569): final  L 4  repo(local sets) 4  U 4 ; repo descend(61): 4 [(2, 900158, 1, 2), (791, 569, 1, 2), (1138, 1582, 1, 2)] ; U==repo: True ; known [(791, 569, 1, 2), (1138, 1582, 1, 2)]
+magic (868,765): final  L 4  repo(local sets) 4  U 4 ; repo descend(61): 4 [(2, 1, 2, 336398), (2, 1, 103, 1633), (2, 1, 3266, 206)] ; U==repo: True ; known [(2, 1, 103, 1633), (2, 1, 3266, 206)]
+magic (989,660): final  L 4  repo(local sets) 4  U 4 ; repo descend(61): 4 [(1, 2, 14, 155006), (1, 2, 329, 1649), (1, 2, 3298, 658)] ; U==repo: True ; known [(1, 2, 329, 1649), (1, 2, 3298, 658)]
+magic (220,21): final  L 4  repo(local sets) 4  U 4 ; repo descend(61): 4 [(2, 1, 199, 241), (2, 1, 241, 199), (2, 1, 398, 482)] ; U==repo: True ; known [(2, 1, 199, 241), (2, 1, 482, 398)]
+magic (209,120): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(1, 2, 89, 329), (1, 2, 658, 178)] ; U==repo: True ; known [(1, 2, 89, 329), (1, 2, 658, 178)]
+magic (884,387): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(2, 1, 497, 1271), (2, 1, 2542, 994)] ; U==repo: True ; known [(2, 1, 497, 1271), (2, 1, 2542, 994)]
+magic (809,409): final  L 2  repo(local sets) 2  U 2 ; repo descend(61): 2 [(809, 409, 2, 1), (818, 1618, 2, 1)] ; U==repo: True ; known [(809, 409, 2, 1), (818, 1618, 2, 1)]
+magic (899,724): final  L 0  repo(local sets) 0  U 0 ; repo descend(61): 0 [] ; U==repo: True ; known []
+rd 1/3: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 2/5: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 3/7: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 1/8: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 7/16: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 26/225: final  L 12  repo 12  U 12 (non-constant in U: 8) ; repo descend(61) on my forms: 12 ; U==repo: True
+rd 7/30: final  L 4  repo 4  U 4 (non-constant in U: 0) ; repo descend(61) on my forms: 4 ; U==repo: True
+rd 17/40: final  L 4  repo 4  U 4 (non-constant in U: 0) ; repo descend(61) on my forms: 4 ; U==repo: True
+rd 23/48: final  L 4  repo 4  U 4 (non-constant in U: 0) ; repo descend(61) on my forms: 4 ; U==repo: True
+rd 2/9: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 3/10: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 4/11: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 7/15: final  L 4  repo 4  U 4 (non-constant in U: 0) ; repo descend(61) on my forms: 4 ; U==repo: True
+rd 7/17: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 1/18: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 6/23: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 14/31: final  L 2  repo 2  U 2 (non-constant in U: 0) ; repo descend(61) on my forms: 2 ; U==repo: True
+rd 7/24: final  L 4  repo 4  U 4 (non-constant in U: 0) ; repo descend(61) on my forms: 4 ; U==repo: True
+rd 31/72: final  L 4  repo 4  U 4 (non-constant in U: 0) ; repo descend(61) on my forms: 4 ; U==repo: True
+cuboid (15,8): final  L 12  repo 12  U 12 ; repo descend(61), 3 forms: 12 ; U==repo: True
+cuboid (3,2): final  L 4  repo 4  U 4 ; repo descend(61), 3 forms: 4 ; U==repo: True
+cuboid (2,1): final  L 4  repo 4  U 4 ; repo descend(61), 3 forms: 4 ; U==repo: True
+STAT {'cases': 723, 'L_in_R': 723, 'R_in_U': 723, 'U_in_R': 722, 'all3': 722, 'exactLU': 722}
+BUGS []
+R not inside U (repo weaker than exhaustion): []
+U not inside R (the exhaustion keeps a tuple that the descent removes): [('magic(820,799)', 1619, 'N=1', 'exhaustion keeps 16, descent allows 1, with witness 1')]

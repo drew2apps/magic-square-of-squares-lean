@@ -1,0 +1,6 @@
+F, modulo 8: points 512, classes that pass 2048, odd among them 0
+F, modulo 16: points 8192, classes that pass 65536, odd among them 0
+G, modulo 5: points 128, classes (units at 5) that pass 256, non-residues among them 0
+G, modulo 25: points 3200, classes (units at 5) that pass 32000, non-residues among them 0
+G, modulo 13: points 1152, classes (units at 13) that pass 6912, non-residues among them 0
+G, modulo 17: points 3072, classes (units at 17) that pass 24576, non-residues among them 0

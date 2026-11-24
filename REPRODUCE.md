@@ -41,7 +41,7 @@ python3 scripts/verify_manifest.py
 pip install --no-index --find-links wheels -r scripts/g1_full/requirements.txt sympy==1.14.0 python-flint==0.9.0 numpy==2.5.5
 lake build                                        # every Lean proof, about 20 minutes with the Mathlib cache
 lake env lean scripts/Audit.lean                  # axioms of every theorem; ends with AUDIT OK
-lake env lean scripts/CoverDescentChecks.lean     # the count 328 + 97 = 425, and forged certificates refused
+lake env lean scripts/CoverDescentChecks.lean     # the count 310 + 115 = 425, and forged certificates refused
 ```
 
 ## 4. The computations

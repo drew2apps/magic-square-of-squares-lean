@@ -4,7 +4,7 @@
 
 **The problem.** Is there a triangle with rational sides, rational medians and rational area (a Heron triangle with three rational medians, a "perfect triangle")? It is open (Guy, *Unsolved Problems in Number Theory*, D21). Triangles with rational sides, area and **two** rational medians exist (Buchholz and Rathbun).
 
-**Prior work, as far as we looked.** A. Hone, *Heron triangles and the hunt for unicorns* (arXiv:2401.05581, 2024; read in part) calls the non-existence a longstanding conjecture and says that the proofs in the literature have turned out to be incorrect. M. Makhul (arXiv:1910.06888; abstract) proves finiteness for a fixed angle. An unrefereed preprint claims non-existence (arXiv:2111.05118; not read). We made about ten searches and did not find the formulation below or a census of this kind; that is weak evidence, and the reformulation with five collinear points may well be folklore. No priority is claimed.
+**Prior work, as far as we looked.** A. Hone, *Heron triangles and the hunt for unicorns* (arXiv:2401.05581, 2024; read in part) calls the non-existence a longstanding conjecture and says that the proofs in the literature have turned out to be incorrect. M. Makhul (arXiv:1910.06888; abstract) proves finiteness for a fixed angle. A preprint of L. Shihaliev claims non-existence by an elementary identity and a descent (arXiv:2111.05118, first version 2021, thirteenth version July 2026; we read the abstract and a few lines, and have not checked it; the arXiv page gives no journal). S. Ismail, *Perfect triangles on the curve `C₄`* (J. Aust. Math. Soc., 2019; abstract), searches one of the eight curves of Buchholz and Rathbun that carry the Heron triangles with two rational medians. **This note proves nothing about the problem as a whole and does not depend on any of these.** We made about ten searches and did not find the formulation below or a census of this kind; that is weak evidence, and the reformulation with five collinear points may well be folklore. No priority is claimed.
 
 ## 1. Five norms
 
@@ -24,13 +24,16 @@ Here the rank 0 is PARI's (two curves of conductor 24 and 48, which are in every
 
 On the line `y = r/s`, with `x = u/v`, the five numbers are, up to the factor `sv`, linear forms in `(u, v)` over `ℤ[i]` whose classes are supported on the primes of `2rs`; `scripts/perfect_triangle/pt.py` gives them to `tuple_descent.py`. The point at infinity of the line always leaves the tuples `g·(1, 1, 1, 1, 2)`. `y = r/s` is twice the area divided by the square of the side taken as base, and with the longest side as base `y ≤ √3/2`.
 
-- **Every line `y = r/s` with `0 < r/s ≤ 0.867` and `s ≤ 200`: 10,604 lines, and on every one of them the only tuples left are of the shape `g·(1, 1, 1, 1, 2)`** (`pt_scan_200.txt`). By Proposition T there is then no perfect triangle on the line. Unlike the unit square, where one line in 13,698 stayed open, no line is left here; a run to `s ≤ 300` was in progress when this was written and had found no exception up to `s = 260` (not committed).
-- **So, if the experiment is right: in a perfect triangle, for the longest side `c`, the number `2·Area/c²` in lowest terms has denominator above 200.** This is a restriction of a different kind from a bound on the sides: each line contains infinitely many rational triangles.
+- **Every line `y = r/s` with `0 < r/s ≤ 0.867` and `s ≤ 200`: 10,604 lines, and on every one of them the only tuples left are of the shape `g·(1, 1, 1, 1, 2)`** (`pt_scan_200.txt`). By Proposition T there is then no perfect triangle on the line. Unlike the unit square, where one line in 13,698 stayed open, no line is left here. The same run to `s ≤ 300`: 23,754 lines, no exception (`pt_scan_300.txt`; about 16 minutes; committed as an output, not rerun by CI, whose job `scan-5000` reruns the part to 200).
+- **So, if the experiment is right: in a perfect triangle, for the longest side `c`, the number `2·Area/c²` in lowest terms has denominator above 300.** This is a census of lines, of the same kind as the census of ratios for the magic square, and not a step towards a proof: nothing says that the next line behaves in the same way.
+- *Read as three separate things:* a theorem with a short proof that rests on two ranks from PARI (Proposition T); a computation, line by line, that is only as good as the program of `LAST_PAIR.md`, section 12; and the consequence above, which needs both. This is a restriction of a different kind from a bound on the sides: each line contains infinitely many rational triangles.
 - **Control with real triangles** (`pt_control.py`, `pt_control.txt`): for five Heron triangles with two rational medians, placed so that the first four numbers have square norms, the first step with four forms keeps the tuple of the real point, five times of five; its four classes are never equal; and the fifth form removes it.
 
 ## 3. What it rests on, and what could be wrong
 
-- The first step is the program of `LAST_PAIR.md`, section 12, with the tests listed there and in section 16. No exhaustion has been run on this system.
+- The first step is the program of `LAST_PAIR.md`, section 12, with the tests listed there and in section 16. **No exhaustion has been run on the system of five forms**: the exhaustion programs and the two reviewer implementations handle four forms. The four-form subsystems are of the kind compared there, but the five-form run itself has no independent check.
+- `pt_tors.txt` lists each value of `X` once for each point of the group that has it (a point and its negative have the same `X`), which is why values repeat; the six values of `z` are `0, ∞, 2, 1, −1, 1/2`, all rational, so none is a triangle.
+- The numbers of points over `F₅` and `F₁₃` used for the torsion (8 and 16) are counted by plain enumeration in `pt_count.py` (`pt_count.txt`).
 - The support of the classes: a common divisor of a form `s(u − av) + irv` and its conjugate divides `2s(u − av)` and `2rv`, hence `2rs` (for `2z − 1`, `4rs`), when `u, v` are coprime. Three lines, not in Lean.
 - Proposition T rests on PARI for two ranks.
 - The second step uses only the equality of four of the five classes; the other four quadruples of the five numbers give curves of rank at least 1 over `ℚ(i)` (`pt_second.txt`) and are not used.
@@ -45,4 +48,5 @@ python3 pt.py scan 1 200 0.867 > pt_scan_200.txt      # about 15 minutes
 python3 pt_second.py 2>/dev/null | grep -v "PARI stack" > pt_second.txt     # needs cypari2
 python3 pt_tors.py 2>/dev/null | grep -v "PARI stack" > pt_tors.txt
 python3 pt_control.py > pt_control.txt
+python3 pt_count.py > pt_count.txt
 ```

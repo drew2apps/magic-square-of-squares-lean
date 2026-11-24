@@ -25,6 +25,14 @@ Everything is done in integer coordinates; no Gaussian integers, no unique facto
   solution.
 * `no_point_of_entry`: if every product of the primes of `2mn(m − n)(m + n)` is excluded by some
   modulus, there is no solution at all.
+* `exists_class_struct`: **for coprime `m, n` the class `d` has three more properties, for every
+  ratio:** its odd prime factors are `≡ ±1 (mod 8)` (`mod_eight_of_dv`), it is even
+  (`two_dvd_class`), and it is a square modulo every odd prime dividing `m² + n²`
+  (`isSquare_class_mod`).
+* `killsE`, `not_gsq_of_killsE`: a second check, modulo an odd prime `p`, by the criterion of
+  Euler in the two residue fields above `p`; no mask, so `p` may be large.
+* `entryOk8`, `no_point_of_entry8`: the certificates of the table, with the candidates that the
+  first of the three properties leaves and with lines of both kinds.
 
 The certificates and the statements about magic squares are in `CoverDescentTable.lean`.
 -/
@@ -315,6 +323,254 @@ theorem exists_class_prod {m n u v : ℤ} (hcop : IsCoprime u v)
     apply GSq.reduce e he
     rw [← e1]
     exact GSqP.gm (GSqP.gm (GSqP.gm g0 (GSqP.cjIf g8 f.1)) (GSqP.cjIf gL f.2.1)) (GSqP.cjIf gU f.2.2)
+
+/-! ### The primes of the class: Theorem E -/
+
+/-- `p` divides both coordinates of a pair. -/
+def Dv (p : ℕ) (q : ℤ × ℤ) : Prop := (p : ℤ) ∣ q.1 ∧ (p : ℤ) ∣ q.2
+
+/-- The class of a solution, with the reason for each of its primes: a prime dividing it is 2 or
+divides both coordinates of one of the four pairs. -/
+theorem exists_class_core {m n u v : ℤ}
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    (n0 : (P0 m n u v).1 ≠ 0 ∨ (P0 m n u v).2 ≠ 0) (n8 : (P8 m n u v).1 ≠ 0 ∨ (P8 m n u v).2 ≠ 0)
+    (nL : (PL m n u v).1 ≠ 0 ∨ (PL m n u v).2 ≠ 0) (nU : (PU m n u v).1 ≠ 0 ∨ (PU m n u v).2 ≠ 0) :
+    ∃ d : ℕ, 0 < d ∧ NoSq d ∧
+      (∀ p : ℕ, p.Prime → p ∣ d → p = 2 ∨ Dv p (P0 m n u v) ∨ Dv p (P8 m n u v) ∨
+        Dv p (PL m n u v) ∨ Dv p (PU m n u v)) ∧
+      ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f) := by
+  obtain ⟨w0, hw0⟩ := h0
+  obtain ⟨w8, hw8⟩ := h8
+  obtain ⟨wL, hwL⟩ := hL
+  obtain ⟨wU, hwU⟩ := hU
+  obtain ⟨d0, hd0, g0, s0⟩ := exists_class hw0 n0
+  obtain ⟨d8, hd8, g8, s8⟩ := exists_class hw8 n8
+  obtain ⟨dL, hdL, gL, sL⟩ := exists_class hwL nL
+  obtain ⟨dU, hdU, gU, sU⟩ := exists_class hwU nU
+  have hN : 0 < d0 * d8 * dL * dU := Nat.mul_pos (Nat.mul_pos (Nat.mul_pos hd0 hd8) hdL) hdU
+  obtain ⟨d, e, hd, he, hde, hns⟩ := exists_nosq _ hN
+  have e1 : (d0 : ℤ) * d8 * dL * dU = (d : ℤ) * (e : ℤ) ^ 2 := by exact_mod_cast hde
+  refine ⟨d, hd, hns, ?_, ?_⟩
+  · intro p hp hpd
+    have hpN : p ∣ d0 * d8 * dL * dU := by
+      rw [hde]
+      exact Dvd.dvd.mul_right hpd _
+    rcases (Nat.Prime.dvd_mul hp).mp hpN with h3 | h3
+    · rcases (Nat.Prime.dvd_mul hp).mp h3 with h4 | h4
+      · rcases (Nat.Prime.dvd_mul hp).mp h4 with h5 | h5
+        · rcases s0 p hp h5 with h | h
+          · exact Or.inl h
+          · exact Or.inr (Or.inl h)
+        · rcases s8 p hp h5 with h | h
+          · exact Or.inl h
+          · exact Or.inr (Or.inr (Or.inl h))
+      · rcases sL p hp h4 with h | h
+        · exact Or.inl h
+        · exact Or.inr (Or.inr (Or.inr (Or.inl h)))
+    · rcases sU p hp h3 with h | h
+      · exact Or.inl h
+      · exact Or.inr (Or.inr (Or.inr (Or.inr h)))
+  · intro f
+    apply GSq.reduce e he
+    rw [← e1]
+    exact GSqP.gm (GSqP.gm (GSqP.gm g0 (GSqP.cjIf g8 f.1)) (GSqP.cjIf gL f.2.1)) (GSqP.cjIf gU f.2.2)
+
+/-- If twice a nonzero square is a square modulo an odd prime `p`, then `p ≡ ±1 (mod 8)`. -/
+theorem mod_eight_of_two_sq {p : ℕ} [Fact p.Prime] (hp2 : p ≠ 2) {a w : ZMod p} (ha : a ≠ 0)
+    (h : w ^ 2 = 2 * a ^ 2) : p % 8 = 1 ∨ p % 8 = 7 := by
+  apply (ZMod.exists_sq_eq_two_iff hp2).mp
+  refine ⟨w / a, ?_⟩
+  field_simp
+  linear_combination -h
+
+/-- **Theorem E.** Let `m, n` be coprime and `u, v` coprime, with `F0` and `GL` squares. An odd
+prime that divides both coordinates of one of the four pairs is `≡ ±1 (mod 8)`: at such a point one
+of the two forms is congruent to twice a nonzero square. -/
+theorem mod_eight_of_dv {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (hL : ∃ w, nrm (PL m n u v) = w ^ 2)
+    {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2)
+    (h : Dv p (P0 m n u v) ∨ Dv p (P8 m n u v) ∨ Dv p (PL m n u v) ∨ Dv p (PU m n u v)) :
+    p % 8 = 1 ∨ p % 8 = 7 := by
+  have : Fact p.Prime := ⟨hp⟩
+  obtain ⟨w0, hw0⟩ := h0
+  obtain ⟨wL, hwL⟩ := hL
+  have z : ∀ x : ℤ, (p : ℤ) ∣ x → ((x : ℤ) : ZMod p) = 0 := fun x hx =>
+    (ZMod.intCast_zmod_eq_zero_iff_dvd x p).mpr hx
+  have e0 : ((m : ZMod p) * v) ^ 2 + ((n : ZMod p) * u) ^ 2 = (w0 : ZMod p) ^ 2 := by
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hw0
+    simp only [nrm, P0] at h1
+    push_cast at h1
+    exact h1
+  have eL : (((m : ZMod p) + n) * (u - v)) ^ 2 + (((m : ZMod p) - n) * (u + v)) ^ 2 =
+      (wL : ZMod p) ^ 2 := by
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hwL
+    simp only [nrm, PL] at h1
+    push_cast at h1
+    exact h1
+  have hmn' : ¬((m : ZMod p) = 0 ∧ (n : ZMod p) = 0) := by
+    rintro ⟨hm, hn⟩
+    obtain ⟨a, b, hab⟩ := hmn
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hab
+    push_cast at h1
+    rw [hm, hn, mul_zero, mul_zero, add_zero] at h1
+    exact zero_ne_one h1
+  have hcop' : ¬((u : ZMod p) = 0 ∧ (v : ZMod p) = 0) := by
+    rintro ⟨hu, hv⟩
+    obtain ⟨a, b, hab⟩ := hcop
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hab
+    push_cast at h1
+    rw [hu, hv, mul_zero, mul_zero, add_zero] at h1
+    exact zero_ne_one h1
+  have two_ne : (2 : ZMod p) ≠ 0 := by
+    intro h2
+    have h3 : ((2 : ℕ) : ZMod p) = 0 := by exact_mod_cast h2
+    have h4 : p ∣ 2 := (ZMod.natCast_eq_zero_iff 2 p).mp h3
+    have h5 : p ≤ 2 := Nat.le_of_dvd (by norm_num) h4
+    have h6 := hp.two_le
+    omega
+  have half : ∀ x y : ZMod p, x + y = 0 → x - y = 0 → x = 0 ∧ y = 0 := by
+    intro x y h1 h2
+    have hx : (2 : ZMod p) * x = 0 := by linear_combination h1 + h2
+    have hx' : x = 0 := (mul_eq_zero.mp hx).resolve_left two_ne
+    refine ⟨hx', ?_⟩
+    rw [hx', zero_add] at h1
+    exact h1
+  rcases h with ⟨hx, hy⟩ | ⟨hx, hy⟩ | ⟨hx, hy⟩ | ⟨hx, hy⟩
+  · -- (m v, n u)
+    have h1 := z _ hx
+    have h2 := z _ hy
+    simp only [P0] at h1 h2
+    push_cast at h1 h2
+    rcases mul_eq_zero.mp h1 with hm | hv
+    · rcases mul_eq_zero.mp h2 with hn | hu
+      · exact absurd ⟨hm, hn⟩ hmn'
+      · have hn : (n : ZMod p) ≠ 0 := fun hn => hmn' ⟨hm, hn⟩
+        have hv : (v : ZMod p) ≠ 0 := fun hv => hcop' ⟨hu, hv⟩
+        refine mod_eight_of_two_sq (w := (wL : ZMod p)) hp2 (mul_ne_zero hn hv) ?_
+        rw [← eL, hm, hu]
+        ring
+    · rcases mul_eq_zero.mp h2 with hn | hu
+      · have hm : (m : ZMod p) ≠ 0 := fun hm => hmn' ⟨hm, hn⟩
+        have hu : (u : ZMod p) ≠ 0 := fun hu => hcop' ⟨hu, hv⟩
+        refine mod_eight_of_two_sq (w := (wL : ZMod p)) hp2 (mul_ne_zero hm hu) ?_
+        rw [← eL, hn, hv]
+        ring
+      · exact absurd ⟨hu, hv⟩ hcop'
+  · -- (n v, m u)
+    have h1 := z _ hx
+    have h2 := z _ hy
+    simp only [P8] at h1 h2
+    push_cast at h1 h2
+    rcases mul_eq_zero.mp h1 with hn | hv
+    · rcases mul_eq_zero.mp h2 with hm | hu
+      · exact absurd ⟨hm, hn⟩ hmn'
+      · have hm : (m : ZMod p) ≠ 0 := fun hm => hmn' ⟨hm, hn⟩
+        have hv : (v : ZMod p) ≠ 0 := fun hv => hcop' ⟨hu, hv⟩
+        refine mod_eight_of_two_sq (w := (wL : ZMod p)) hp2 (mul_ne_zero hm hv) ?_
+        rw [← eL, hn, hu]
+        ring
+    · rcases mul_eq_zero.mp h2 with hm | hu
+      · have hn : (n : ZMod p) ≠ 0 := fun hn => hmn' ⟨hm, hn⟩
+        have hu : (u : ZMod p) ≠ 0 := fun hu => hcop' ⟨hu, hv⟩
+        refine mod_eight_of_two_sq (w := (wL : ZMod p)) hp2 (mul_ne_zero hn hu) ?_
+        rw [← eL, hm, hv]
+        ring
+      · exact absurd ⟨hu, hv⟩ hcop'
+  · -- ((m + n)(u − v), (m − n)(u + v))
+    have h1 := z _ hx
+    have h2 := z _ hy
+    simp only [PL] at h1 h2
+    push_cast at h1 h2
+    rcases mul_eq_zero.mp h1 with hA | hA
+    · rcases mul_eq_zero.mp h2 with hB | hB
+      · exact absurd (half _ _ hA hB) hmn'
+      · have hn : (n : ZMod p) = -m := by linear_combination hA
+        have hv : (v : ZMod p) = -u := by linear_combination hB
+        have hm : (m : ZMod p) ≠ 0 := fun hm => hmn' ⟨hm, by rw [hn, hm, neg_zero]⟩
+        have hu : (u : ZMod p) ≠ 0 := fun hu => hcop' ⟨hu, by rw [hv, hu, neg_zero]⟩
+        refine mod_eight_of_two_sq (w := (w0 : ZMod p)) hp2 (mul_ne_zero hm hu) ?_
+        rw [← e0, hn, hv]
+        ring
+    · rcases mul_eq_zero.mp h2 with hB | hB
+      · have hn : (n : ZMod p) = m := by linear_combination -hB
+        have hv : (v : ZMod p) = u := by linear_combination -hA
+        have hm : (m : ZMod p) ≠ 0 := fun hm => hmn' ⟨hm, by rw [hn, hm]⟩
+        have hu : (u : ZMod p) ≠ 0 := fun hu => hcop' ⟨hu, by rw [hv, hu]⟩
+        refine mod_eight_of_two_sq (w := (w0 : ZMod p)) hp2 (mul_ne_zero hm hu) ?_
+        rw [← e0, hn, hv]
+        ring
+      · exact absurd (half _ _ hB hA) hcop'
+  · -- ((m − n)(u − v), (m + n)(u + v))
+    have h1 := z _ hx
+    have h2 := z _ hy
+    simp only [PU] at h1 h2
+    push_cast at h1 h2
+    rcases mul_eq_zero.mp h1 with hA | hA
+    · rcases mul_eq_zero.mp h2 with hB | hB
+      · exact absurd (half _ _ hB hA) hmn'
+      · have hn : (n : ZMod p) = m := by linear_combination -hA
+        have hv : (v : ZMod p) = -u := by linear_combination hB
+        have hm : (m : ZMod p) ≠ 0 := fun hm => hmn' ⟨hm, by rw [hn, hm]⟩
+        have hu : (u : ZMod p) ≠ 0 := fun hu => hcop' ⟨hu, by rw [hv, hu, neg_zero]⟩
+        refine mod_eight_of_two_sq (w := (w0 : ZMod p)) hp2 (mul_ne_zero hm hu) ?_
+        rw [← e0, hn, hv]
+        ring
+    · rcases mul_eq_zero.mp h2 with hB | hB
+      · have hn : (n : ZMod p) = -m := by linear_combination hB
+        have hv : (v : ZMod p) = u := by linear_combination -hA
+        have hm : (m : ZMod p) ≠ 0 := fun hm => hmn' ⟨hm, by rw [hn, hm, neg_zero]⟩
+        have hu : (u : ZMod p) ≠ 0 := fun hu => hcop' ⟨hu, by rw [hv, hu]⟩
+        refine mod_eight_of_two_sq (w := (w0 : ZMod p)) hp2 (mul_ne_zero hm hu) ?_
+        rw [← e0, hn, hv]
+        ring
+      · exact absurd (half _ _ hB hA) hcop'
+
+/-- **The class of a solution, with Theorem E.** For coprime `m, n`: the class `d` of
+`exists_class_prod`, and in addition every prime dividing `d` is 2 or `≡ ±1 (mod 8)`. -/
+theorem exists_class_prod8 {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    (n0 : (P0 m n u v).1 ≠ 0 ∨ (P0 m n u v).2 ≠ 0) (n8 : (P8 m n u v).1 ≠ 0 ∨ (P8 m n u v).2 ≠ 0)
+    (nL : (PL m n u v).1 ≠ 0 ∨ (PL m n u v).2 ≠ 0) (nU : (PU m n u v).1 ≠ 0 ∨ (PU m n u v).2 ≠ 0) :
+    ∃ d : ℕ, 0 < d ∧ NoSq d ∧
+      (∀ p : ℕ, p.Prime → p ∣ d → (p : ℤ) ∣ 2 * m * n * (m - n) * (m + n)) ∧
+      (∀ p : ℕ, p.Prime → p ∣ d → p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧
+      ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f) := by
+  obtain ⟨d, hd, hns, hcore, g⟩ := exists_class_core h0 h8 hL hU n0 n8 nL nU
+  obtain ⟨a, b, hab⟩ := hcop
+  have two_dvd : (2 : ℤ) ∣ 2 * m * n * (m - n) * (m + n) := ⟨m * n * (m - n) * (m + n), by ring⟩
+  refine ⟨d, hd, hns, ?_, ?_, g⟩
+  · intro p hp hpd
+    rcases hcore p hp hpd with rfl | ⟨hx, hy⟩ | ⟨hx, hy⟩ | ⟨hx, hy⟩ | ⟨hx, hy⟩
+    · exact_mod_cast two_dvd
+    · apply dvd_bad_of_dvd_mn
+      have e2 : m * n = b * n * (m * v) + a * m * (n * u) := by
+        linear_combination (-(m * n)) * hab
+      rw [e2]
+      exact dvd_add (Dvd.dvd.mul_left hx _) (Dvd.dvd.mul_left hy _)
+    · apply dvd_bad_of_dvd_mn
+      have e2 : m * n = b * m * (n * v) + a * n * (m * u) := by
+        linear_combination (-(m * n)) * hab
+      rw [e2]
+      exact dvd_add (Dvd.dvd.mul_left hx _) (Dvd.dvd.mul_left hy _)
+    · apply dvd_bad_of_dvd_diff
+      have e2 : 2 * (m + n) * (m - n) =
+          (a - b) * (m - n) * ((m + n) * (u - v)) + (a + b) * (m + n) * ((m - n) * (u + v)) := by
+        linear_combination (-(2 * (m + n) * (m - n))) * hab
+      rw [e2]
+      exact dvd_add (Dvd.dvd.mul_left hx _) (Dvd.dvd.mul_left hy _)
+    · apply dvd_bad_of_dvd_diff
+      have e2 : 2 * (m + n) * (m - n) =
+          (a - b) * (m + n) * ((m - n) * (u - v)) + (a + b) * (m - n) * ((m + n) * (u + v)) := by
+        linear_combination (-(2 * (m + n) * (m - n))) * hab
+      rw [e2]
+      exact dvd_add (Dvd.dvd.mul_left hx _) (Dvd.dvd.mul_left hy _)
+  · intro p hp hpd
+    by_cases hp2 : p = 2
+    · exact Or.inl hp2
+    · exact Or.inr (mod_eight_of_dv hmn ⟨a, b, hab⟩ h0 hL hp hp2
+        ((hcore p hp hpd).resolve_left hp2))
 
 /-! ### The finite check -/
 
@@ -619,6 +875,407 @@ theorem not_gsq_of_kills {m n : ℤ} {M p k S G : ℕ} {ds : List ℕ} (hp : p.P
     rw [key] at h3
     exact Bool.false_ne_true h3
 
+/-! ### The class is even -/
+
+theorem nrm_congr4 {M : ℕ} {m n u v m' n' u' v' : ℤ} (hm : m ≡ m' [ZMOD M]) (hn : n ≡ n' [ZMOD M])
+    (hu : u ≡ u' [ZMOD M]) (hv : v ≡ v' [ZMOD M]) :
+    nrm (P0 m n u v) ≡ nrm (P0 m' n' u' v') [ZMOD M] ∧ nrm (P8 m n u v) ≡ nrm (P8 m' n' u' v') [ZMOD M] ∧
+    nrm (PL m n u v) ≡ nrm (PL m' n' u' v') [ZMOD M] ∧ nrm (PU m n u v) ≡ nrm (PU m' n' u' v') [ZMOD M] := by
+  refine ⟨?_, ?_, ?_, ?_⟩ <;> dsimp only [nrm, P0, P8, PL, PU] <;> gcongr
+
+theorem Q_congr4 {M : ℕ} {m n u v m' n' u' v' : ℤ} (hm : m ≡ m' [ZMOD M]) (hn : n ≡ n' [ZMOD M])
+    (hu : u ≡ u' [ZMOD M]) (hv : v ≡ v' [ZMOD M]) (f : Bool × Bool × Bool) :
+    (Q m n u v f).1 ≡ (Q m' n' u' v' f).1 [ZMOD M] ∧ (Q m n u v f).2 ≡ (Q m' n' u' v' f).2 [ZMOD M] := by
+  obtain ⟨a, b, c⟩ := f
+  cases a <;> cases b <;> cases c <;> constructor <;>
+    dsimp only [Q, gm, cj, cjIf, P0, P8, PL, PU] <;> simp only [if_true, if_false, Bool.false_eq_true] <;>
+    gcongr
+
+theorem gOkN_mod (M G d : ℕ) (q : ℕ × ℕ) : gOkN M G (d % M) q = gOkN M G d q := by
+  unfold gOkN
+  rw [Nat.mod_mul_mod, Nat.mod_mul_mod]
+
+/-- The check behind `two_dvd_class`: modulo 8, at every `(m, n, u, v)` with `m, n` not both even
+and `u, v` not both even, the four forms are not all squares, or no odd `d` passes. -/
+def evenCheck : Bool :=
+  (List.range 8).all fun m => (List.range 8).all fun n => (List.range 8).all fun u =>
+    (List.range 8).all fun v =>
+      (m % 2 == 0 && n % 2 == 0) || (u % 2 == 0 && v % 2 == 0) ||
+        !formsOk m n 8 (sMask 8) u v ||
+        dsOk 8 (gMask 8) [1, 3, 5, 7] (flags.map fun f => resQ 8 (Q m n u v f))
+
+theorem evenCheck_eq : evenCheck = true := by decide +kernel
+
+/-- **The class is even.** For coprime `m, n` and coprime `u, v` at which the four forms are
+squares, a `d` such that `d` times each of the eight products is a Gaussian square is even. No
+condition on the ratio. -/
+theorem two_dvd_class {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    {d : ℕ} (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) : 2 ∣ d := by
+  by_contra hd
+  have hM : 0 < 8 := by norm_num
+  have cm := res_cast hM m
+  have cn := res_cast hM n
+  have cu := res_cast hM u
+  have cv := res_cast hM v
+  have h := evenCheck_eq
+  unfold evenCheck at h
+  rw [List.all_eq_true] at h
+  have h1 := h (res 8 m) (List.mem_range.mpr (res_lt hM m))
+  rw [List.all_eq_true] at h1
+  have h2 := h1 (res 8 n) (List.mem_range.mpr (res_lt hM n))
+  rw [List.all_eq_true] at h2
+  have h3 := h2 (res 8 u) (List.mem_range.mpr (res_lt hM u))
+  rw [List.all_eq_true] at h3
+  have h4 := h3 (res 8 v) (List.mem_range.mpr (res_lt hM v))
+  obtain ⟨c0, c8, cL, cU⟩ := nrm_congr4 cm cn cu cv
+  obtain ⟨w0, hw0⟩ := h0
+  obtain ⟨w8, hw8⟩ := h8
+  obtain ⟨wL, hwL⟩ := hL
+  obtain ⟨wU, hwU⟩ := hU
+  have f : formsOk (res 8 m) (res 8 n) 8 (sMask 8) (res 8 u) (res 8 v) = true := by
+    unfold formsOk
+    rw [sqOk_of hM (w := w0) (hw0 ▸ c0), sqOk_of hM (w := w8) (hw8 ▸ c8),
+      sqOk_of hM (w := wL) (hwL ▸ cL), sqOk_of hM (w := wU) (hwU ▸ cU)]
+    rfl
+  have hmem : d % 8 ∈ [1, 3, 5, 7] := by
+    have : d % 8 = 1 ∨ d % 8 = 3 ∨ d % 8 = 5 ∨ d % 8 = 7 := by omega
+    rcases this with h | h | h | h <;> simp [h]
+  have o : ((flags.map fun f => resQ 8 (Q (res 8 m) (res 8 n) (res 8 u) (res 8 v) f)).all
+      fun q => gOkN 8 (gMask 8) (d % 8) q) = true := by
+    rw [List.all_eq_true]
+    intro q hq
+    rw [List.mem_map] at hq
+    obtain ⟨f, _, rfl⟩ := hq
+    obtain ⟨q1, q2⟩ := Q_congr4 cm cn cu cv f
+    rw [gOkN_mod, gOkN_eq hM]
+    exact gOk_of_GSqP hM (g f) q1 q2
+  have nd : dsOk 8 (gMask 8) [1, 3, 5, 7]
+      (flags.map fun f => resQ 8 (Q (res 8 m) (res 8 n) (res 8 u) (res 8 v) f)) = false := by
+    rw [Bool.eq_false_iff]
+    intro hall
+    unfold dsOk at hall
+    rw [List.all_eq_true] at hall
+    have := hall (d % 8) hmem
+    rw [o] at this
+    simp at this
+  have e8 : ∀ {x : ℤ}, ((res 8 x : ℕ) : ℤ) ≡ x [ZMOD ((8 : ℕ) : ℤ)] → res 8 x % 2 = 0 → (2 : ℤ) ∣ x := by
+    intro x hx h2
+    have := Int.ModEq.dvd hx
+    omega
+  have bA : (res 8 m % 2 == 0 && res 8 n % 2 == 0) = false := by
+    rw [Bool.eq_false_iff]
+    intro h
+    simp only [Bool.and_eq_true, beq_iff_eq] at h
+    exact Int.prime_two.not_isUnit (hmn.isUnit_of_dvd' (e8 cm h.1) (e8 cn h.2))
+  have bB : (res 8 u % 2 == 0 && res 8 v % 2 == 0) = false := by
+    rw [Bool.eq_false_iff]
+    intro h
+    simp only [Bool.and_eq_true, beq_iff_eq] at h
+    exact Int.prime_two.not_isUnit (hcop.isUnit_of_dvd' (e8 cu h.1) (e8 cv h.2))
+  rw [bA, bB, f, nd] at h4
+  exact absurd h4 (by decide)
+
+/-! ### The class modulo the primes of `m² + n²` -/
+
+theorem isSquare_of_mul_sq {F : Type*} [Field F] {d s t : F} (hs : s ≠ 0) (h : d * s ^ 2 = t ^ 2) :
+    IsSquare d :=
+  ⟨t / s, by field_simp; linear_combination h⟩
+
+/-- **The class is a square modulo every odd prime dividing `m² + n²`.** For coprime `m, n` and
+coprime `u, v`, a `d` such that `d` times each of the eight products is a Gaussian square is a
+square modulo `p`, for every odd prime `p` dividing `m² + n²`. No condition on the ratio, and the
+four forms need not be squares. -/
+theorem isSquare_class_mod {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) (hdvd : (p : ℤ) ∣ m ^ 2 + n ^ 2)
+    {d : ℕ} (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) : IsSquare (d : ZMod p) := by
+  have : Fact p.Prime := ⟨hp⟩
+  have hS : (m : ZMod p) ^ 2 + (n : ZMod p) ^ 2 = 0 := by
+    have h1 := (ZMod.intCast_zmod_eq_zero_iff_dvd _ p).mpr hdvd
+    push_cast at h1
+    exact h1
+  have hmn' : ¬((m : ZMod p) = 0 ∧ (n : ZMod p) = 0) := by
+    rintro ⟨hm, hn⟩
+    obtain ⟨a, b, hab⟩ := hmn
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hab
+    push_cast at h1
+    rw [hm, hn, mul_zero, mul_zero, add_zero] at h1
+    exact zero_ne_one h1
+  have hcop' : ¬((u : ZMod p) = 0 ∧ (v : ZMod p) = 0) := by
+    rintro ⟨hu, hv⟩
+    obtain ⟨a, b, hab⟩ := hcop
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hab
+    push_cast at h1
+    rw [hu, hv, mul_zero, mul_zero, add_zero] at h1
+    exact zero_ne_one h1
+  have hn : (n : ZMod p) ≠ 0 := by
+    intro h0
+    apply hmn'
+    refine ⟨?_, h0⟩
+    rw [h0] at hS
+    have : (m : ZMod p) ^ 2 = 0 := by linear_combination hS
+    exact pow_eq_zero_iff (two_ne_zero) |>.mp this
+  have two_ne : (2 : ZMod p) ≠ 0 := by
+    intro h2
+    have h3 : ((2 : ℕ) : ZMod p) = 0 := by exact_mod_cast h2
+    rw [ZMod.natCast_eq_zero_iff] at h3
+    have := (Nat.prime_dvd_prime_iff_eq hp Nat.prime_two).mp h3
+    exact hp2 this
+  obtain ⟨ι, hι, hm⟩ : ∃ ι : ZMod p, ι ^ 2 = -1 ∧ (m : ZMod p) = ι * n := by
+    refine ⟨m / n, ?_, (div_mul_cancel₀ (m : ZMod p) hn).symm⟩
+    rw [div_pow, div_eq_iff (pow_ne_zero 2 hn)]
+    linear_combination hS
+  have r8 : (-8 * ι : ZMod p) = (2 * (1 - ι)) ^ 2 := by linear_combination (-4) * hι
+  have hι1 : (1 - ι : ZMod p) ≠ 0 := by
+    intro h1
+    have h2 : ι = 1 := by linear_combination -h1
+    rw [h2] at hι
+    apply two_ne
+    linear_combination hι
+  have hpm : (u : ZMod p) + v ≠ 0 ∨ (u : ZMod p) - v ≠ 0 := by
+    by_contra hc
+    rw [not_or, not_not, not_not] at hc
+    obtain ⟨c1, c2⟩ := hc
+    apply hcop'
+    have hu2 : (2 : ZMod p) * u = 0 := by linear_combination c1 + c2
+    have hv2 : (2 : ZMod p) * v = 0 := by linear_combination c1 - c2
+    exact ⟨(mul_eq_zero.mp hu2).resolve_left two_ne, (mul_eq_zero.mp hv2).resolve_left two_ne⟩
+  have huv : (u : ZMod p) ≠ 0 ∨ (v : ZMod p) ≠ 0 := by
+    by_contra hc
+    rw [not_or, not_not, not_not] at hc
+    exact hcop' hc
+  -- the two products used, read in `ZMod p`
+  obtain ⟨a1, b1, ha1, hb1⟩ := g (true, false, true)
+  obtain ⟨a2, b2, ha2, hb2⟩ := g (true, true, false)
+  have ha1' := congrArg (Int.cast : ℤ → ZMod p) ha1
+  have hb1' := congrArg (Int.cast : ℤ → ZMod p) hb1
+  have ha2' := congrArg (Int.cast : ℤ → ZMod p) ha2
+  have hb2' := congrArg (Int.cast : ℤ → ZMod p) hb2
+  dsimp only [Q, gm, cj, cjIf, P0, P8, PL, PU] at ha1' hb1' ha2' hb2'
+  simp only [if_true, if_false, Bool.false_eq_true] at ha1' hb1' ha2' hb2'
+  push_cast at ha1' hb1' ha2' hb2'
+  rw [hm] at ha1' hb1' ha2' hb2'
+  set D : ZMod p := (d : ZMod p) with hD
+  set N : ZMod p := (n : ZMod p)
+  set U : ZMod p := (u : ZMod p)
+  set V : ZMod p := (v : ZMod p)
+  rcases hpm with hp1 | hp1 <;> rcases huv with hq1 | hq1
+  · -- u + v and u
+    refine isSquare_of_mul_sq (s := 2 * (1 - ι) * N ^ 2 * (U + V) * U) (t := (a2 : ZMod p) + ι * b2)
+      (mul_ne_zero (mul_ne_zero (mul_ne_zero (mul_ne_zero two_ne hι1) (pow_ne_zero 2 hn)) hp1) hq1) ?_
+    have key : D * (-8 * ι * N ^ 4 * (U + V) ^ 2 * U ^ 2) = ((a2 : ZMod p) + ι * b2) ^ 2 := by
+      linear_combination ha2' + ι * hb2' + (-(D * (6*N^4*U^4*ι - 2*N^4*U^3*V*ι^3 + 10*N^4*U^3*V*ι + 4*N^4*U^2*V^2*ι - 2*N^4*U*V^3*ι^3 + 2*N^4*U*V^3*ι - 2*N^4*V^4*ι)) - (b2 : ZMod p) ^ 2) * hι
+    linear_combination key - (D * N ^ 4 * (U + V) ^ 2 * U ^ 2) * r8
+  · -- u + v and v
+    refine isSquare_of_mul_sq (s := 2 * (1 - ι) * N ^ 2 * (U + V) * V) (t := (a1 : ZMod p) + ι * b1)
+      (mul_ne_zero (mul_ne_zero (mul_ne_zero (mul_ne_zero two_ne hι1) (pow_ne_zero 2 hn)) hp1) hq1) ?_
+    have key : D * (-8 * ι * N ^ 4 * (U + V) ^ 2 * V ^ 2) = ((a1 : ZMod p) + ι * b1) ^ 2 := by
+      linear_combination ha1' + ι * hb1' + (-(D * (-2*N^4*U^4*ι - 2*N^4*U^3*V*ι^3 + 2*N^4*U^3*V*ι + 4*N^4*U^2*V^2*ι - 2*N^4*U*V^3*ι^3 + 10*N^4*U*V^3*ι + 6*N^4*V^4*ι)) - (b1 : ZMod p) ^ 2) * hι
+    linear_combination key - (D * N ^ 4 * (U + V) ^ 2 * V ^ 2) * r8
+  · -- u - v and u
+    refine isSquare_of_mul_sq (s := 2 * (1 - ι) * N ^ 2 * (U - V) * U) (t := (a1 : ZMod p) - ι * b1)
+      (mul_ne_zero (mul_ne_zero (mul_ne_zero (mul_ne_zero two_ne hι1) (pow_ne_zero 2 hn)) hp1) hq1) ?_
+    have key : D * (-8 * ι * N ^ 4 * (U - V) ^ 2 * U ^ 2) = ((a1 : ZMod p) - ι * b1) ^ 2 := by
+      linear_combination ha1' - ι * hb1' + (-(D * (6*N^4*U^4*ι + 2*N^4*U^3*V*ι^3 - 10*N^4*U^3*V*ι + 4*N^4*U^2*V^2*ι + 2*N^4*U*V^3*ι^3 - 2*N^4*U*V^3*ι - 2*N^4*V^4*ι)) - (b1 : ZMod p) ^ 2) * hι
+    linear_combination key - (D * N ^ 4 * (U - V) ^ 2 * U ^ 2) * r8
+  · -- u - v and v
+    refine isSquare_of_mul_sq (s := 2 * (1 - ι) * N ^ 2 * (U - V) * V) (t := (a2 : ZMod p) - ι * b2)
+      (mul_ne_zero (mul_ne_zero (mul_ne_zero (mul_ne_zero two_ne hι1) (pow_ne_zero 2 hn)) hp1) hq1) ?_
+    have key : D * (-8 * ι * N ^ 4 * (U - V) ^ 2 * V ^ 2) = ((a2 : ZMod p) - ι * b2) ^ 2 := by
+      linear_combination ha2' - ι * hb2' + (-(D * (-2*N^4*U^4*ι + 2*N^4*U^3*V*ι^3 - 2*N^4*U^3*V*ι + 4*N^4*U^2*V^2*ι + 2*N^4*U*V^3*ι^3 - 10*N^4*U*V^3*ι + 6*N^4*V^4*ι)) - (b2 : ZMod p) ^ 2) * hι
+    linear_combination key - (D * N ^ 4 * (U - V) ^ 2 * V ^ 2) * r8
+
+/-! ### Lines by Euler's criterion, for primes too large for a mask -/
+
+/-- A necessary condition for `x` to be a square modulo the odd prime `p`:
+`x^((p − 1)/2)` is `0` or `1` modulo `p`. -/
+def eul (p x : ℕ) : Bool := decide (x ^ ((p - 1) / 2) % p ≤ 1)
+
+theorem eul_of_sq {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {x : ℕ} {c : ZMod p}
+    (h : (x : ZMod p) = c ^ 2) : eul p x = true := by
+  have : Fact p.Prime := ⟨hp⟩
+  have hodd : 2 * ((p - 1) / 2) = p - 1 := by
+    have := hp.eq_two_or_odd
+    have := hp.two_le
+    omega
+  have key : ((x ^ ((p - 1) / 2) : ℕ) : ZMod p) = c ^ (p - 1) := by
+    push_cast
+    rw [h, ← pow_mul, hodd]
+  unfold eul
+  rw [decide_eq_true_eq]
+  by_cases hc : c = 0
+  · have h0 : ((x ^ ((p - 1) / 2) : ℕ) : ZMod p) = ((0 : ℕ) : ZMod p) := by
+      rw [key, hc, zero_pow (by have := hp.two_le; omega)]
+      simp
+    have h1 := (ZMod.natCast_eq_natCast_iff _ _ _).mp h0
+    unfold Nat.ModEq at h1
+    rw [h1]
+    simp
+  · have h0 : ((x ^ ((p - 1) / 2) : ℕ) : ZMod p) = ((1 : ℕ) : ZMod p) := by
+      rw [key, ZMod.pow_card_sub_one_eq_one hc]
+      simp
+    have h1 := (ZMod.natCast_eq_natCast_iff _ _ _).mp h0
+    unfold Nat.ModEq at h1
+    rw [h1, Nat.mod_eq_of_lt hp.one_lt]
+
+theorem res_zmod {p : ℕ} (hp0 : 0 < p) (z : ℤ) : ((res p z : ℕ) : ZMod p) = (z : ZMod p) := by
+  have h := (ZMod.intCast_eq_intCast_iff _ _ _).mpr (res_cast hp0 z)
+  rw [Int.cast_natCast] at h
+  exact h
+
+def formsOkE (m n : ℤ) (p : ℕ) (u v : ℤ) : Bool :=
+  eul p (res p (nrm (P0 m n u v))) && eul p (res p (nrm (P8 m n u v))) &&
+    eul p (res p (nrm (PL m n u v))) && eul p (res p (nrm (PU m n u v)))
+
+/-- `d` times the pair `q` (residues modulo `p`), read in the two residue fields above `p`:
+`io` is a square root of `−1` modulo `p`. -/
+def gOkE (p io d : ℕ) (q : ℕ × ℕ) : Bool :=
+  eul p (d * (q.1 + io * q.2) % p) && eul p (d * (q.1 + (p - io) * q.2) % p)
+
+def dsOkE (p io : ℕ) (ds : List ℕ) (qs : List (ℕ × ℕ)) : Bool :=
+  ds.all fun d => !(qs.all fun q => gOkE p io d q)
+
+def pointOkE (m n : ℤ) (p io : ℕ) (ds : List ℕ) (u v : ℤ) : Bool :=
+  !formsOkE m n p u v || dsOkE p io ds (flags.map fun f => resQ p (Q m n u v f))
+
+/-- The check `pointOkE` at every point of the projective line modulo `p`. -/
+def killsE (m n : ℤ) (p io : ℕ) (ds : List ℕ) : Bool :=
+  ((List.range p).all fun v => pointOkE m n p io ds 1 v) && pointOkE m n p io ds 0 1
+
+theorem iota_sq {p io : ℕ} (hp : 1 ≤ p) (h : io * io % p = p - 1) : (io : ZMod p) * io = -1 := by
+  have h1 : ((io * io % p : ℕ) : ZMod p) = ((p - 1 : ℕ) : ZMod p) := by rw [h]
+  rw [ZMod.natCast_mod, Nat.cast_sub hp, ZMod.natCast_self] at h1
+  push_cast at h1
+  rw [h1]
+  ring
+
+theorem eul_comp {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) {j : ℕ} (hj : (j : ZMod p) * j = -1) {d : ℕ}
+    {q : ℤ × ℤ} (h : GSqP d q) : eul p (d * (res p q.1 + j * res p q.2) % p) = true := by
+  obtain ⟨a, b, ha, hb⟩ := h
+  have ha' : (d : ZMod p) * (q.1 : ZMod p) = (a : ZMod p) ^ 2 - (b : ZMod p) ^ 2 := by
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) ha
+    push_cast at h1
+    exact h1
+  have hb' : (d : ZMod p) * (q.2 : ZMod p) = 2 * (a : ZMod p) * (b : ZMod p) := by
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hb
+    push_cast at h1
+    exact h1
+  apply eul_of_sq hp hp2 (c := (a : ZMod p) + j * b)
+  rw [ZMod.natCast_mod]
+  push_cast
+  rw [res_zmod hp.pos, res_zmod hp.pos]
+  linear_combination ha' + (j : ZMod p) * hb' - (b : ZMod p) ^ 2 * hj
+
+theorem pointOkE_false {m n : ℤ} {p io : ℕ} {ds : List ℕ} (hp : p.Prime) (hp2 : p ≠ 2)
+    (hio : io * io % p = p - 1) (hlt : io < p) {d : ℕ} (hd : d ∈ ds) {u v : ℤ}
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) {u' v' : ℤ}
+    (cu : u' ≡ u [ZMOD p]) (cv : v' ≡ v [ZMOD p]) : pointOkE m n p io ds u' v' = false := by
+  obtain ⟨c0, c8, cL, cU⟩ := nrm_congr (m := m) (n := n) cu cv
+  obtain ⟨w0, hw0⟩ := h0
+  obtain ⟨w8, hw8⟩ := h8
+  obtain ⟨wL, hwL⟩ := hL
+  obtain ⟨wU, hwU⟩ := hU
+  have sq : ∀ {z z' w : ℤ}, z' ≡ z [ZMOD p] → z = w ^ 2 → eul p (res p z') = true := by
+    intro z z' w hc hz
+    apply eul_of_sq hp hp2 (c := (w : ZMod p))
+    rw [res_zmod hp.pos, (ZMod.intCast_eq_intCast_iff _ _ _).mpr hc, hz]
+    exact Int.cast_pow w 2
+  have f : formsOkE m n p u' v' = true := by
+    unfold formsOkE
+    rw [sq c0 hw0, sq c8 hw8, sq cL hwL, sq cU hwU]
+    rfl
+  have hj1 := iota_sq (p := p) hp.one_lt.le hio
+  have hj2 : ((p - io : ℕ) : ZMod p) * ((p - io : ℕ) : ZMod p) = -1 := by
+    rw [Nat.cast_sub hlt.le, ZMod.natCast_self, zero_sub, neg_mul_neg]
+    exact hj1
+  have o : ((flags.map fun f => resQ p (Q m n u' v' f)).all fun q => gOkE p io d q) = true := by
+    rw [List.all_eq_true]
+    intro q hq
+    rw [List.mem_map] at hq
+    obtain ⟨f, _, rfl⟩ := hq
+    obtain ⟨q1, q2⟩ := Q_congr (m := m) (n := n) cu cv f
+    have e1 : res p (Q m n u' v' f).1 = res p (Q m n u v f).1 := res_congr q1
+    have e2 : res p (Q m n u' v' f).2 = res p (Q m n u v f).2 := res_congr q2
+    unfold gOkE resQ
+    dsimp only
+    rw [e1, e2, eul_comp hp hp2 hj1 (g f), eul_comp hp hp2 hj2 (g f)]
+    rfl
+  unfold pointOkE
+  rw [f, Bool.not_true, Bool.false_or, Bool.eq_false_iff]
+  intro hall
+  unfold dsOkE at hall
+  rw [List.all_eq_true] at hall
+  have := hall d hd
+  rw [o] at this
+  simp at this
+
+/-- If the check succeeds, no `d` of the list is the class of a solution. -/
+theorem not_gsq_of_killsE {m n : ℤ} {p io : ℕ} {ds : List ℕ} (hp : p.Prime) (hp2 : p ≠ 2)
+    (hio : io * io % p = p - 1) (hlt : io < p) (hk : killsE m n p io ds = true)
+    {d : ℕ} (hd : d ∈ ds) {u v : ℤ} (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) : False := by
+  have hM : 0 < p := hp.pos
+  have hpi : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
+  unfold killsE at hk
+  rw [Bool.and_eq_true, List.all_eq_true] at hk
+  obtain ⟨hk1, hk2⟩ := hk
+  by_cases hu : (p : ℤ) ∣ u
+  · have hv : ¬(p : ℤ) ∣ v := fun hv => hpi.not_isUnit (hcop.isUnit_of_dvd' hu hv)
+    obtain ⟨l, hl⟩ := exists_inv (k := 1) hp hv
+    rw [pow_one] at hl
+    obtain ⟨s0, s8, sL, sU⟩ := scale_sq l h0 h8 hL hU
+    have cu : (0 : ℤ) ≡ l * u [ZMOD p] := by
+      rw [Int.modEq_iff_dvd, sub_zero]
+      exact Dvd.dvd.mul_left hu l
+    have key := pointOkE_false (ds := ds) hp hp2 hio hlt hd s0 s8 sL sU
+      (fun f => scale_gsq l f (g f)) cu hl.symm
+    rw [key] at hk2
+    exact Bool.false_ne_true hk2
+  · obtain ⟨l, hl⟩ := exists_inv (k := 1) hp hu
+    rw [pow_one] at hl
+    obtain ⟨s0, s8, sL, sU⟩ := scale_sq l h0 h8 hL hU
+    have key := pointOkE_false (ds := ds) hp hp2 hio hlt hd s0 s8 sL sU
+      (fun f => scale_gsq l f (g f)) hl.symm (res_cast hM (l * v))
+    have h3 := hk1 (res p (l * v)) (List.mem_range.mpr (res_lt hM _))
+    rw [key] at h3
+    exact Bool.false_ne_true h3
+
+/-- A square root of `−1` modulo `p`, by search. -/
+def iotaOf (p : ℕ) : Option ℕ := (List.range p).find? fun j => j * j % p == p - 1
+
+theorem iotaOf_spec {p io : ℕ} (h : iotaOf p = some io) : io * io % p = p - 1 ∧ io < p := by
+  unfold iotaOf at h
+  have h1 := List.find?_some h
+  have h2 := List.mem_of_find?_eq_some h
+  exact ⟨by simpa using h1, List.mem_range.mp h2⟩
+
+/-! ### The structure of the class, for every ratio -/
+
+/-- **The class of a solution, with what is known about it for every ratio.** For coprime `m, n`
+and coprime `u, v` at which the four forms are squares there is a `d > 0` without square factors
+such that `d` times each of the eight products is a Gaussian square, and:
+every prime factor of `d` divides `2mn(m − n)(m + n)`; every odd prime factor of `d` is
+`≡ ±1 (mod 8)`; `d` is even; `d` is a square modulo every odd prime dividing `m² + n²`. -/
+theorem exists_class_struct {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    (n0 : (P0 m n u v).1 ≠ 0 ∨ (P0 m n u v).2 ≠ 0) (n8 : (P8 m n u v).1 ≠ 0 ∨ (P8 m n u v).2 ≠ 0)
+    (nL : (PL m n u v).1 ≠ 0 ∨ (PL m n u v).2 ≠ 0) (nU : (PU m n u v).1 ≠ 0 ∨ (PU m n u v).2 ≠ 0) :
+    ∃ d : ℕ, 0 < d ∧ NoSq d ∧
+      (∀ p : ℕ, p.Prime → p ∣ d → (p : ℤ) ∣ 2 * m * n * (m - n) * (m + n)) ∧
+      (∀ p : ℕ, p.Prime → p ∣ d → p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧
+      2 ∣ d ∧
+      (∀ p : ℕ, p.Prime → p ≠ 2 → (p : ℤ) ∣ m ^ 2 + n ^ 2 → IsSquare (d : ZMod p)) ∧
+      ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f) := by
+  obtain ⟨d, hd, hns, hsup, hE, g⟩ := exists_class_prod8 hmn hcop h0 h8 hL hU n0 n8 nL nU
+  exact ⟨d, hd, hns, hsup, hE, two_dvd_class hmn hcop h0 h8 hL hU g,
+    fun p hp hp2 hdvd => isSquare_class_mod hmn hcop hp hp2 hdvd g, g⟩
+
 /-! ### The candidates and the certificate -/
 
 /-- All products of sublists of `ps`. -/
@@ -827,5 +1484,100 @@ theorem no_point_of_entry {masks : List (ℕ × ℕ × ℕ)} (hmasks : MasksOk m
     have h3 := hmasks _ (mem_of_findMask hfind)
     exact not_gsq_of_kills (prime_of_isPrime hp) rfl hk0 h3.1 h3.2 hk hdc hcop h0 h8 hL hU g
   · exact Bool.false_ne_true h2
+
+/-! ### Certificates with Theorem E: fewer candidates; lines of two kinds -/
+
+/-- One line of a certificate, of one of two kinds. `(p, k, c)` with `k > 0`: as `lineOk`, modulo
+`p^k` with the masks. `(p, 0, c)`: modulo the odd prime `p`, by Euler's criterion in the two
+residue fields above `p` (`killsE`); no mask is needed, so `p` may be large. -/
+def lineOkX (masks : List (ℕ × ℕ × ℕ)) (m n : ℤ) (cands : List ℕ) (c : ℕ × ℕ × ℕ) : Bool :=
+  if c.2.1 = 0 then
+    match iotaOf c.1 with
+    | some io => isPrime c.1 && decide (c.1 ≠ 2) && killsE m n c.1 io (pick cands c.2.2)
+    | none => false
+  else lineOk masks m n cands c
+
+
+/-- The primes that can divide a class: 2 and the primes `≡ ±1 (mod 8)`. -/
+def keep8 (p : ℕ) : Bool := p == 2 || p % 8 == 1 || p % 8 == 7
+
+/-- An entry of the table, checked with the candidates of Theorem E: `(m, n, ps, cert)`, with
+`m, n` coprime; `ps` lists primes, among them every prime factor of `2mn(m − n)(m + n)`; every
+product of those primes of `ps` that are 2 or `≡ ±1 (mod 8)` is excluded by a line (`lineOkX`). -/
+def entryOk8 (masks : List (ℕ × ℕ × ℕ)) (e : ℕ × ℕ × List ℕ × List (ℕ × ℕ × ℕ)) : Bool :=
+  decide (0 < e.2.1) && decide (e.2.1 < e.1) && decide (Nat.Coprime e.1 e.2.1) &&
+    e.2.2.1.all isPrime &&
+    decide (2 * e.1 * e.2.1 * (e.1 - e.2.1) * (e.1 + e.2.1) ∣ e.2.2.1.prod ^ 64) &&
+    e.2.2.2.all (lineOkX masks (e.1 : ℤ) (e.2.1 : ℤ) (prods (e.2.2.1.filter keep8))) &&
+    coveredBy (prods (e.2.2.1.filter keep8)) (e.2.2.2.map fun c => c.2.2)
+
+/-- **No point, from a certificate with the candidates of Theorem E.** -/
+theorem no_point_of_entry8 {masks : List (ℕ × ℕ × ℕ)} (hmasks : MasksOk masks)
+    {e : ℕ × ℕ × List ℕ × List (ℕ × ℕ × ℕ)} (he : entryOk8 masks e = true) {u v : ℤ}
+    (hcop : IsCoprime u v) (hv : v ≠ 0) (huv : u + v ≠ 0)
+    (h0 : ∃ w, nrm (P0 e.1 e.2.1 u v) = w ^ 2) (h8 : ∃ w, nrm (P8 e.1 e.2.1 u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL e.1 e.2.1 u v) = w ^ 2) (hU : ∃ w, nrm (PU e.1 e.2.1 u v) = w ^ 2) : False := by
+  obtain ⟨m, n, ps, cert⟩ := e
+  unfold entryOk8 at he
+  simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true] at he
+  obtain ⟨⟨⟨⟨⟨⟨hn, hnm⟩, hmn⟩, hps⟩, hdvd⟩, hlines⟩, hcov⟩ := he
+  dsimp only at h0 h8 hL hU
+  have hps' : ∀ p ∈ ps, p.Prime := fun p hp => prime_of_isPrime (hps p hp)
+  have hps8 : ∀ p ∈ ps.filter keep8, p.Prime := fun p hp => hps' p (List.mem_filter.mp hp).1
+  have hm0 : (m : ℤ) ≠ 0 := by
+    have : 0 < m := by omega
+    exact_mod_cast this.ne'
+  have hn0 : (n : ℤ) ≠ 0 := by exact_mod_cast hn.ne'
+  have hmn0 : (m : ℤ) - n ≠ 0 := by
+    have : (n : ℤ) < m := by exact_mod_cast hnm
+    intro h
+    omega
+  have hbad : ∀ q : ℕ, q.Prime → (q : ℤ) ∣ 2 * (m : ℤ) * n * (m - n) * (m + n) → q ∈ ps := by
+    intro q hq hdiv
+    have e1 : (2 * (m : ℤ) * n * (m - n) * (m + n)) = ((2 * m * n * (m - n) * (m + n) : ℕ) : ℤ) := by
+      push_cast [Nat.cast_sub hnm.le]
+      ring
+    rw [e1] at hdiv
+    have h1 : q ∣ 2 * m * n * (m - n) * (m + n) := Int.natCast_dvd_natCast.mp hdiv
+    exact mem_of_prime_dvd_prod hps' hq (hq.dvd_of_dvd_pow (dvd_trans h1 hdvd))
+  obtain ⟨d, hd, hns, hsup, hE, g⟩ := exists_class_prod8 (Nat.isCoprime_iff_coprime.mpr hmn)
+    hcop h0 h8 hL hU
+    (Or.inl (by dsimp only [P0]; exact mul_ne_zero hm0 hv))
+    (Or.inl (by dsimp only [P8]; exact mul_ne_zero hn0 hv))
+    (Or.inr (by dsimp only [PL]; exact mul_ne_zero hmn0 huv))
+    (Or.inr (by
+      dsimp only [PU]
+      refine mul_ne_zero ?_ huv
+      have : (0 : ℤ) < (m : ℤ) + n := by positivity
+      exact this.ne'))
+  have hmem : d ∈ prods (ps.filter keep8) := by
+    refine mem_prods _ hps8 d hd hns (fun q hq hqd => ?_)
+    refine List.mem_filter.mpr ⟨hbad q hq (hsup q hq hqd), ?_⟩
+    unfold keep8
+    rcases hE q hq hqd with h | h | h
+    · simp [h]
+    · simp [h]
+    · simp [h]
+  obtain ⟨k0, hk0, hdc⟩ := mem_pick_of_coveredBy _ _ hcov d hmem
+  rw [List.mem_map] at hk0
+  obtain ⟨c, hc, rfl⟩ := hk0
+  have h2 := hlines c hc
+  unfold lineOkX at h2
+  split at h2
+  · split at h2
+    · rename_i io hfind
+      simp only [Bool.and_eq_true, decide_eq_true_eq] at h2
+      obtain ⟨⟨hp, hp2⟩, hk⟩ := h2
+      obtain ⟨hio, hlt⟩ := iotaOf_spec hfind
+      exact not_gsq_of_killsE (prime_of_isPrime hp) hp2 hio hlt hk hdc hcop h0 h8 hL hU g
+    · exact Bool.false_ne_true h2
+  · unfold lineOk at h2
+    split at h2
+    · rename_i S G hfind
+      simp only [Bool.and_eq_true, decide_eq_true_eq] at h2
+      obtain ⟨⟨hp, hk0⟩, hk⟩ := h2
+      have h3 := hmasks _ (mem_of_findMask hfind)
+      exact not_gsq_of_kills (prime_of_isPrime hp) rfl hk0 h3.1 h3.2 hk hdc hcop h0 h8 hL hU g
+    · exact Bool.false_ne_true h2
 
 end MagicSquareOfSquares.CoverDescent

@@ -1,0 +1,6 @@
+mutation 'hint with the residue symbol reversed': 24 (base, prime) pairs; allowed set changes at 8, strictly larger at 8, a tuple with a witness is rejected at 0, a tuple that the exhaustion removes is allowed at 8
+   changes (base, prime, size before, size after): [((15, 8), 5, 8, 12), ((15, 8), 13, 6, 8), ((15, 8), 29, 4, 6), ((3, 2), 5, 8, 12), ((3, 2), 29, 4, 6), ((2, 1), 13, 6, 8), ((2, 1), 41, 4, 6), ((2, 1), 61, 6, 8)]
+   rejected witnesses at: []
+mutation 'hint dropped': 24 (base, prime) pairs; allowed set changes at 24, strictly larger at 24, a tuple with a witness is rejected at 0, a tuple that the exhaustion removes is allowed at 24
+   changes (base, prime, size before, size after): [((15, 8), 5, 8, 44), ((15, 8), 13, 6, 36), ((15, 8), 17, 12, 44), ((15, 8), 29, 4, 34), ((15, 8), 37, 8, 44), ((15, 8), 41, 6, 34), ((15, 8), 53, 8, 44), ((15, 8), 61, 8, 44), ((3, 2), 5, 8, 44), ((3, 2), 13, 6, 34), ((3, 2), 17, 4, 32), ((3, 2), 29, 4, 34)]
+   rejected witnesses at: []

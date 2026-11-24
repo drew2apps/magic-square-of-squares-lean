@@ -1,0 +1,3 @@
+#E(F_5) = 8
+#E(F_13) = 16
+5 and 13 split in Q(i), so the residue fields of Q(i) above them are F_5 and F_13; the torsion of E over Q(i) injects into both groups, so its order divides gcd(8, 16) = 8, and E has 8 torsion points over Q already (pt_tors.txt).

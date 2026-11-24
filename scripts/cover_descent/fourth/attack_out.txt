@@ -1,0 +1,7 @@
+random: {'cases': 1200, 'L_in_R': 1200, 'R_in_U': 1200, 'U_in_R': 1200, 'all3': 1185} 0
+designed: {'cases': 1452, 'L_in_R': 1452, 'R_in_U': 1452, 'U_in_R': 1452, 'all3': 1432} 0
+planted points: 1500 (system,prime) checks at primes <100, rejected by repo: 0
+ALL: {'cases': 1752, 'L_in_R': 1752, 'R_in_U': 1752, 'U_in_R': 1752, 'all3': 1732}
+BUGS: []
+R not in U: 0 []
+U not in R: 0

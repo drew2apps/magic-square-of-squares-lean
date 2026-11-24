@@ -1,6 +1,6 @@
 # Ledger: what each claim of this repository rests on
 
-One page for a reader who wants to know, for any sentence in this repository, which kind of sentence it is. Written by Claude (an AI model made by Anthropic), directed by Drew (`drew2apps`), on 24 November 2026, after a review of commit `9d59c67`. **No human mathematician has verified anything here**; the first column says what a reader would have to trust.
+One page for a reader who wants to know, for any sentence in this repository, which kind of sentence it is. Written by Claude (an AI model made by Anthropic), directed by Drew (`drew2apps`), on 24 November 2026, after a review of commit `9d59c67`. Dates in this repository are in UTC (a commit made on the evening of 23 November in the Americas is dated 24 November here). **No human mathematician has verified anything here**; the first column says what a reader would have to trust.
 
 The problem is open and is not solved here. No novelty is claimed for the methods; they are classical (congruences, descent on norms, ranks of elliptic curves, Demjanenko–Manin, Mordell–Weil sieve). Where a statement may be new it is in tier C or D and says so.
 
@@ -24,9 +24,10 @@ The problem is open and is not solved here. No novelty is claimed for the method
 | The ratio `m : n` avoids 484 residue classes at 34 primes; for `m ≤ 1000` it is one of 425 pairs (`IsMSS.ratio_ne_of_le_1000`) | `G1Full`, `G1FullCertificates`, `G1Census1000`, `G1Bridge` | 0.5.0 |
 | One edge root exceeds 500 | `G1Size`, `G1SizeCheck` | 0.5.0 |
 | Algebraic identities behind the tiers B and C (no curve, no height, no rank is in Lean) | `G1Relations`, `G1FourPoints`, `GaussDescent`, `SevenSquares` | 0.5.0 |
-| **For 97 of the 425 pairs there is no magic square of squares with that ratio; 328 pairs are left** (`IsMSS.ratio_ne_of_coverDescent`, `IsMSS.ratio_ne_of_le_1000_descent`) | `CoverDescent`, `CoverDescentTable`; `LAST_PAIR.md` §15 | **not released** (after 0.5.0) |
+| **For 115 of the 425 pairs there is no magic square of squares with that ratio; 310 pairs are left**, 306 with `m² + n²` a square or twice a square and 4 others (`IsMSS.ratio_ne_of_coverDescent`, `IsMSS.ratio_ne_of_le_1000_descent`) | `CoverDescent`, `CoverDescentTable`; `LAST_PAIR.md` §15 | **not released** (after 0.5.0) |
+| **The class of a solution, for every ratio** (coprime `m, n`): its primes divide `2mn(m² − n²)`; its odd primes are `≡ ±1 (mod 8)` (Theorem E); it is even (F); it is a square modulo every odd prime dividing `m² + n²` (G) (`exists_class_struct`; `mod_eight_of_dv`, `two_dvd_class`, `isSquare_class_mod`) | `CoverDescent`; `LAST_PAIR.md` §17 | **not released** (after 0.5.0) |
 
-The 97 are exclusions with a proof in Lean, not new closures: all 97 were already closed in tier B. The exact statements and their hypotheses (`h + f ≠ 0`, `b ≠ d`; entries not assumed distinct) are spelled out in `LAST_PAIR.md` §15. `scripts/CoverDescentChecks.lean` (run by CI, not part of the library) checks the count `328 + 97 = 425` and that forged certificates are refused.
+The 115 are exclusions with a proof in Lean, not new closures: all 115 were already closed in tier B. The exact statements and their hypotheses (`h + f ≠ 0`, `b ≠ d`; entries not assumed distinct) are spelled out in `LAST_PAIR.md` §15. `scripts/CoverDescentChecks.lean` (run by CI, not part of the library) checks the count `310 + 115 = 425`, the list of the four pairs without a certificate that are not of the degenerate types, and that forged certificates are refused.
 
 CI on every push: `lake build`, the axiom audit of every theorem (`scripts/Audit.lean`, compared with `scripts/audit_output.txt`), the generated Lean files against their generators, the count of declared theorems.
 
@@ -46,9 +47,9 @@ The census changes only by a decision of the repository owner. Nothing in tiers 
 
 | Claim | Where | Independent checks that exist |
 |---|---|---|
-| Theorem D: a solution on the four forms has one squarefree class `d`, supported on the primes of `2mn(m² − n²)`, that passes every local test (Lemmas S1, S2, S3) | `LAST_PAIR.md` §11 | **The existence and support of the class are in Lean for every ratio** (`CoverDescent.exists_class_prod`, stated for all `m, n`, in integer coordinates, with no unique factorisation; tier A). What is not in Lean beyond the 97 ratios is the local computation that says which classes remain, (627,364) included, and the identification of the Lean statement with the prose form of S1 and S2 |
-| Theorem E: every odd prime dividing the class is `≡ ±1 (mod 8)`, for every ratio | `LAST_PAIR.md` §17 | A twelve-line proof by hand; against the exhaustion on 3,043 ratios, no exception. Not in Lean yet |
-| The local rules R1 to R5 (when a `p`-adic class is determined) | `LAST_PAIR.md` §14 | Mutation tests (`tuple_mutation.py`); two exhaustion programs with no shared code; a third implementation of the one-class test written from the prose by a separate reviewer instance (`scripts/cover_descent/third/`), with witnesses: no class with a witness rejected at 3,024 pairs, and the proving inclusion at 3,006; a fourth, of the four-class test, by another instance, on 2,475 pairs (§16; its programs are not in the repository). Rule R4's hint is not exercised by these tests |
+| Theorem D: a solution on the four forms has one squarefree class `d`, supported on the primes of `2mn(m² − n²)`, that passes every local test (Lemmas S1, S2, S3) | `LAST_PAIR.md` §11 | **The existence and support of the class are in Lean for every ratio** (`CoverDescent.exists_class_prod`, stated for all `m, n`, in integer coordinates, with no unique factorisation; tier A). What is not in Lean beyond the 115 ratios is the local computation that says which classes remain, (627,364) included, and the identification of the Lean statement with the prose form of S1 and S2 |
+| Theorems E, F, G on the class (hand proofs) | `LAST_PAIR.md` §17 | **In Lean (tier A above)**, each with a different proof route from the hand proof for F (a check of 4,096 cases modulo 8 by the kernel). Tests: the exhaustion on 3,043 ratios and a brute force over all residues (`class_fg.py`), no exception. Not read by a person |
+| The local rules R1 to R5 (when a `p`-adic class is determined) | `LAST_PAIR.md` §14 | Mutation tests (`tuple_mutation.py`); two exhaustion programs with no shared code; a third implementation of the one-class test written from the prose by a separate reviewer instance (`scripts/cover_descent/third/`), with witnesses: no class with a witness rejected at 3,024 pairs, and the proving inclusion at 3,006; a fourth, of the four-class test, by another instance, on 2,475 pairs (§16; `scripts/cover_descent/fourth/`; one pair where the exhaustion is the weaker side, named there). Rule R4's hint: a wrong hint is noticed by the comparison with the exhaustion on the cuboid system (8 of 24 pairs; all 24 if the hint is dropped), and by no test with witnesses (`mut_hint.py`) |
 | Theorem A: for (627,364), `d = 521266`, the only solutions are the degenerate ones (seven lemmas; Mordell–Weil sieve and an explicit height bound) | `LAST_PAIR.md` §1–8 | Tests on planted points; rests on tier E (CVV constants, CPS bounds, Sage's height bound 0.045162) |
 | Theorem C: the degenerate section has infinite order for every `τ ≠ 0, ±1` | `LAST_PAIR.md` §9 | Ten factored polynomials, checked by program |
 | The four-point form of Demjanenko–Manin | `FOUR_POINTS.md` | Lean has the divisibility statements and two lattice inequalities only |
@@ -90,7 +91,7 @@ The census changes only by a decision of the repository owner. Nothing in tiers 
 
 ## What would raise a tier
 
-- C → checked: a person reads S1/S2 (one page) and §14; or S1/S2 for all ratios go into Lean (the route of §15 already avoids them for 97).
+- C → checked: a person reads S1/S2 (one page) and §14; or S1/S2 for all ratios go into Lean (the route of §15 already avoids them for 115).
 - (627,364) and (991,263): a reading of Theorem A, in particular the application of Checcoli–Veneziano–Viada; a certified replacement for Sage's 0.045162.
-- B → A for more ratios: certificates with larger moduli for the 22 non-degenerate pairs that have none.
+- B → A for more ratios: for the 4 non-degenerate pairs without a certificate the descent with one class cannot conclude (§15); a checker for four classes in Lean would be needed. For the 306 others a class always survives, and Lean would need the second step (Theorem A) or ranks.
 - Integrity of a copy: `python3 scripts/verify_manifest.py` (see `REPRODUCE.md`).
