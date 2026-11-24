@@ -26,3 +26,5 @@ import MagicSquareOfSquares.G1Relations
 import MagicSquareOfSquares.SevenSquares
 import MagicSquareOfSquares.G1FourPoints
 import MagicSquareOfSquares.GaussDescent
+import MagicSquareOfSquares.CoverDescent
+import MagicSquareOfSquares.CoverDescentTable

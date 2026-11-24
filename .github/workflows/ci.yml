@@ -2,7 +2,7 @@ name: CI
 
 # Two levels.  Every push to main runs `build` (Lean, the axiom audit, the generated files, the C searches) and `quick`
 # (the checkers that read committed transcripts and a few small reruns): about 20 minutes, most of it Lean.
-# The three long jobs (`four-points`, `descents`, `twist-search`, about 65 minutes) regenerate the main computed records
+# The long jobs (`four-points`, `descents`, `last-pair`, `twist-search`, `scan-5000`, about 65 minutes) regenerate the main computed records
 # and stated samples of the others.  They do not regenerate everything: SECOND_DESCENT.md, section 8, lists the committed
 # outputs that no job reruns (the wide runs, the scan beyond 1100, the 681-ratio real-point run and others).
 # They run on a pull request, on a tag, when the workflow is started by hand (Actions, CI, "Run workflow"), and on a push
@@ -47,6 +47,7 @@ jobs:
           python3 scripts/g1_full/gen_lean.py
           python3 scripts/g1_full/gen_census1000.py
           python3 scripts/g1_full/gen_sizecheck.py
+          python3 scripts/cover_descent/lean_cert.py
           git diff --exit-code
       - uses: leanprover/lean-action@v1
       - name: Axiom audit
@@ -103,6 +104,8 @@ jobs:
           # the same local eliminations by exhaustion over all points modulo p^N (no code shared with cover_descent.py), prime by prime
           python3 cover_certificate.py 627,364 | diff - cover_certificate_627_364.txt
           grep -q "^left by the descent: \[521266\]; left by the exhaustion: \[521266\];" cover_certificate_627_364.txt
+          # the two methods end with the same set, but not with the same set at every prime: 17 of 18 for (627,364) and (820,799), 18 of 18 for (889,320)
+          test "$(grep -c "the same set$" cover_certificate_627_364.txt)" = 17 && test "$(grep -c "the same set$" cover_certificate_820_799.txt)" = 17 && test "$(grep -c "the same set$" cover_certificate_889_320.txt)" = 18
           # section 12: one class for each form; all lists, under a second per ratio
           python3 tuple_descent.py magic 627,364 | diff - tuple_627_364.txt
           (for r in 627,364 820,799 15,8 247,96; do python3 tuple_descent.py magic $r selftest; done) | diff - tuple_selftest.txt
@@ -111,6 +114,9 @@ jobs:
           (for r in 627,364 820,799 440,279 4,3; do python3 tuple_descent.py magic $r neartest; python3 tuple_descent.py magic $r oracle; done) | diff - tuple_neartest.txt
           test "$(grep -c "outside the allowed set: 0$\|disagreements: 0$" tuple_neartest.txt)" = 8
           python3 tuple_mutation.py | diff - tuple_mutation.txt
+          # the same test near the zeros of the forms on twelve more ratios and four bases of the cuboid system (the rule R4 of section 14)
+          (for r in 15,8 247,96 440,99 991,263 889,320 724,665 1073,264 4664,873 4828,3885 2365,588 308,185 493,123; do python3 tuple_descent.py magic $r neartest; done; for r in 15,8 17,16 19,16 26,23; do python3 tuple_descent.py cuboid $r neartest; done) | diff - tuple_neartest_more.txt
+          test "$(grep -c "outside the allowed set: 0$" tuple_neartest_more.txt)" = 16
           python3 tuple_bruteforce.py magic 627,364 | diff - tuple_bruteforce_627_364.txt
           grep -q "^kept at every prime: 2: \[(1, 2, 263, 991), (1, 2, 1982, 526)\]$" tuple_bruteforce_627_364.txt
           python3 tuple_descent.py batch magic ../gauss_descent/pairs34.txt 2 | diff - tuple_34.txt
@@ -125,6 +131,15 @@ jobs:
           test "$(wc -l < tuple_scan_5000.txt)" = 18900 && test "$(grep -c "nothing is left$" tuple_scan_5000.txt)" = 18900
           test "$(wc -l < tuple_trivial_5000.txt)" = 1523 && test "$(grep -c "exactly the known points$" tuple_trivial_5000.txt)" = 1523
           diff <(cut -d: -f1 tuple_scan_5000.txt | tr -d '()') <(cut -d' ' -f1 ../gauss_descent/scan_certificates.txt)
+          # RATIONAL_DISTANCE.md: the lines with denominator up to 40, the curve, the control with three distances; counts of the whole files
+          cd ../rational_distance
+          python3 rd.py scan 2 40 | head -n 244 | diff - <(head -n 244 rd_scan_2_300.txt)
+          test "$(grep -c " equal$" rd_scan_2_300.txt)" = 13697 && test "$(grep -c "MIXED" rd_scan_2_300.txt)" = 1 && grep -q "^26/225 12 MIXED" rd_scan_2_300.txt
+          test "$(grep -c " equal$" rd_scan_outside_60.txt)" = 2204
+          python3 rd.py curve | diff - rd_curve.txt
+          test "$(grep -c "equal: True$" rd_curve.txt)" = 22
+          python3 rd.py control | diff - rd_control.txt
+          cd ../cover_descent
           cd ../second_descent
           grep -q "G has infinite order for every other rational tau: True$" degenerate_section.txt
           grep -q "^all identities hold: True$" lemma2_general.txt
@@ -294,3 +309,26 @@ jobs:
           wait $P1; wait $P2; wait $P3; wait $P4
           test ! -s /tmp/tw1.out && test ! -s /tmp/tw2.out && test ! -s /tmp/tw3.out && test ! -s /tmp/tw4.out
           grep -qx 'twist_find 400 400: 0 solutions' scripts/search/twist_search.txt
+
+  scan-5000:
+    # LAST_PAIR.md, section 12: the four-class descent on EVERY ratio with m <= 5000 that avoids the 484 classes, rerun in
+    # full (18,900 + 1,523 ratios) and compared with the committed files; and the rational-distance scan to denominator 300.
+    if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: tuple descent to 5000, in full; rational distance to 300
+        shell: bash
+        run: |
+          set -e -o pipefail
+          pip install -q sympy==1.14.0
+          cd scripts/cover_descent
+          python3 tuple_descent.py batch magic ../gauss_descent/scan_certificates.txt 4 | diff - tuple_scan_5000.txt
+          python3 tuple_descent.py batch magic pairs_trivial_5000.txt 4 | diff - tuple_trivial_5000.txt
+          cd ../rational_distance
+          python3 rd.py scan 2 300 | diff - rd_scan_2_300.txt
+          python3 rd.py scan 1 60 3 | diff - rd_scan_outside_60.txt

@@ -1,0 +1,2 @@
+points (a/c, b/c), c < 400, with rational distances to (0,0), (1,0), (0,1): 14, the first: [(84, 80, 45), (80, 84, 45), (45, 24, 52), (24, 45, 52)]
+the tuple of the point is kept by the first step on its line (three forms): 14 of 14; points whose three classes are equal: 0

@@ -1,0 +1,16 @@
+magic (15,8): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 2526 tested; outside the allowed set: 0
+magic (247,96): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 2514 tested; outside the allowed set: 0
+magic (440,99): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 1807 tested; outside the allowed set: 0
+magic (991,263): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 6579 tested; outside the allowed set: 0
+magic (889,320): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 2301 tested; outside the allowed set: 0
+magic (724,665): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 3594 tested; outside the allowed set: 0
+magic (1073,264): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 3247 tested; outside the allowed set: 0
+magic (4664,873): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 2852 tested; outside the allowed set: 0
+magic (4828,3885): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 2435 tested; outside the allowed set: 0
+magic (2365,588): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 1821 tested; outside the allowed set: 0
+magic (308,185): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 3947 tested; outside the allowed set: 0
+magic (493,123): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 5895 tested; outside the allowed set: 0
+cuboid (15,8): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 9342 tested; outside the allowed set: 0
+cuboid (17,16): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 8952 tested; outside the allowed set: 0
+cuboid (19,16): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 8612 tested; outside the allowed set: 0
+cuboid (26,23): points near the zeros of the forms and near infinity, at the primes [2, 5, 13, 17, 29, 37, 41, 53, 61]: 8664 tested; outside the allowed set: 0

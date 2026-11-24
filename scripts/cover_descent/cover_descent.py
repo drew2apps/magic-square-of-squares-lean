@@ -110,7 +110,7 @@ def run(m, n, pmax=150, K=None, verbose=True):
     S, D = m*m + n*n, m*m - n*n
     P = sorted(set([2]) | set(q for x in (m, n, m - n, m + n) for q in factorint(abs(x))))
     sqf = lambda x: int(__import__('math').prod(q for q, e in factorint(x).items() if e % 2))
-    issq = lambda x: int(x**0.5 + 0.5)**2 == x
+    issq = lambda x: __import__('math').isqrt(x)**2 == x
     known = {}
     if issq(S): known['t = 1, -1'] = sqf(2*abs(D))
     if issq(2*S): known['t = 0, infinity'] = sqf(S*m*n)
