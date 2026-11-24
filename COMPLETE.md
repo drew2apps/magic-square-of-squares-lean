@@ -1,6 +1,6 @@
 # The class at the bad primes: a complete description (Theorem C)
 
-**Status.** A proof by hand, written on 24 November 2026 by an AI model (Claude) in the session that also wrote `CLASS.md`. **No person has read it.** It is not in Lean, except the statements marked "Lean". Every step that is a computation is repeated by `scripts/cover_descent/structure/class_local.py` (exact `p`-adic classes of points, not a test modulo small powers), and section 6 says what that program does and does not check. Experiments: nothing here is counted in the census, and nothing here shows that a magic square of squares does or does not exist.
+**Status.** A proof by hand, written on 24 November 2026 by an AI model (Claude) in the session that also wrote `CLASS.md`. **No person has read it.** Part of it is in Lean (section 5 says exactly which part); the theorem as stated is not. Every step that is a computation is repeated by `scripts/cover_descent/structure/class_local.py` (exact `p`-adic classes of points, not a test modulo small powers), and section 6 says what that program does and does not check. Experiments: nothing here is counted in the census, and nothing here shows that a magic square of squares does or does not exist.
 
 It answers the question left open in `CLASS.md`, section 3 (there a conjecture, in commit `8cc39fd`): **at the primes of bad reduction, the five laws on the class are the whole local information.**
 
@@ -109,7 +109,18 @@ For `e = 1` none of this is possible (`GL` or `GU` gets odd valuation), in accor
 
 ## 5. What is in Lean
 
-For integer points: Theorems 1 to 5b of `CLASS.md` and F′ (`exists_class_struct`, `class_mod_five`, `class_mod_sixteen`). Not in Lean: Lemma 1 over `ℤ_p`, the transfer of the upper bounds to `p`-adic points, and all of section 4.
+`MagicSquareOfSquares/ClassLocal.lean` (since 24 November 2026), besides the theorems for integer points (1 to 5b of `CLASS.md`, and F′):
+
+- **Lemma 1 over the integers, both directions** (`class_iff`; `gsqP_class`, `class_unique`): at a solution on the four forms with roots `w_j` of the norms, none zero, a `d ≠ 0` has the property of the eight products if and only if `d·D` or `−d·D` is a square, `D = ∏ (w_j + x_j)`. So the class of a solution is given by a formula.
+- **The same identity modulo any `M`** (`gsqM_class`): roots of the four norms modulo `M` and `d ≡ σ²·16D (mod M)` give `d·Q_f ≡ (a + ib)² (mod M)` for the eight products. This is the form in which the lower bounds are proved.
+- **Hensel's lemma for squares** modulo powers of an odd prime, by induction (`exists_sq_modEq_pow`).
+- **Section 4.1 for every power of `p`** (`pass_first_order`): `p` odd, `p | m`, `p ∤ n`, `u, v, u + v` units, `2(u² + v²)` a nonzero square modulo `p`. Then every `d` with `d·2uv` a nonzero square modulo `p` passes at `(u, v)` modulo `p^k` for all `k`: the four norms have square roots and `d` times each product is a Gaussian square. (The case `p | u + v` of 4.1 is not in Lean.)
+- **Section 4.3, the case `p² | m`, for every power of `p`** (`pass_odd_valuation`): if 2 is a square modulo `p`, every `d = p·d₁` with `d₁·2u₁` a nonzero square modulo `p` passes at `(p·u₁, 1)`.
+- **Two statements with no hypothesis on a point.** `unit_passes_of_three_mod_four`: at a prime `p ≡ 3 (mod 4)` dividing `m`, every `d` prime to `p` passes at `(1, 1)` modulo every power of `p`. `prime_mul_unit_passes_mod_eight`: at a prime `p ≡ ±1 (mod 8)` with `p² | m`, every `d = p·d₁`, `p ∤ d₁`, passes at `(2p·d₁, 1)`. Together with Theorem E for integer points these are the rows `p ≡ 3 (mod 8)` and (when `p² | m`) `p ≡ 7 (mod 8)` of the table, in the sense below.
+
+**In what sense.** Lean's statements say "passes modulo `p^k` for every `k`" at a fixed integer point. A `p`-adic point of `X_p` with that class gives this, and conversely by compactness; the converse step is not in Lean, and Lean has no statement about `ℤ_p` here. The upper bounds in Lean are for integer solutions only.
+
+**Not in Lean:** the conic and the bound of Hasse (4.2); the case `p ∥ m` of 4.3; the prime 5 (4.4); the reduction from `p | n`, `p | m ± n` to `p | m`; the rows for `p = 2` and for the primes of `(m² + n²)W` as statements about local points; the transfer of the upper bounds to `p`-adic points. An estimate, not a promise: 4.3 for `p ∥ m` and 4.4 are of the same kind as what is done and a few hundred lines each; 4.2 needs a bound for the character sum of `y² = v³ + v` (Jacobsthal's elementary proof would do) and is the largest piece.
 
 ## 6. What the program checks
 

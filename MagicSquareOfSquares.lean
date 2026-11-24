@@ -28,3 +28,4 @@ import MagicSquareOfSquares.G1FourPoints
 import MagicSquareOfSquares.GaussDescent
 import MagicSquareOfSquares.CoverDescent
 import MagicSquareOfSquares.CoverDescentTable
+import MagicSquareOfSquares.ClassLocal
