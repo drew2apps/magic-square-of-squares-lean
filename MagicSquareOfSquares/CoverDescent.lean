@@ -1909,10 +1909,10 @@ def structOk (e : ℕ × ℕ × List ℕ × ℕ × List ℕ) : Bool :=
       e.2.2.2.2.any fun p => !eul p (d % p))
 
 /-- **The class of a solution, from the theorems on its structure alone.** If `structOk` holds
-for `(m, n, ps, d0, qs)`, then at every solution on the four forms `d0` times each of the eight
-products is a Gaussian square: the class is `d0`. No local computation at the points is used. -/
+for `(m, n, ps, d0, qs)`, then at every solution on the four forms (any coprime `u, v`, the degenerate
+solutions included) `d0` times each of the eight products is a Gaussian square: the class is `d0`. No local computation at the points is used. -/
 theorem class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : structOk e = true) {u v : ℤ}
-    (hcop : IsCoprime u v) (hv : v ≠ 0) (huv : u + v ≠ 0)
+    (hcop : IsCoprime u v)
     (h0 : ∃ w, nrm (P0 e.1 e.2.1 u v) = w ^ 2) (h8 : ∃ w, nrm (P8 e.1 e.2.1 u v) = w ^ 2)
     (hL : ∃ w, nrm (PL e.1 e.2.1 u v) = w ^ 2) (hU : ∃ w, nrm (PU e.1 e.2.1 u v) = w ^ 2) :
     ∀ f : Bool × Bool × Bool, GSqP (e.2.2.2.1 : ℤ) (Q e.1 e.2.1 u v f) := by
@@ -1939,16 +1939,39 @@ theorem class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : 
     rw [e1] at hdiv
     have h1 : q ∣ 2 * m * n * (m - n) * (m + n) := Int.natCast_dvd_natCast.mp hdiv
     exact mem_of_prime_dvd_prod hps' hq (hq.dvd_of_dvd_pow (dvd_trans h1 hdvd))
+  have hmn1 : (m : ℤ) + n ≠ 0 := by
+    have : (0 : ℤ) < (m : ℤ) + n := by positivity
+    exact this.ne'
+  -- the four pairs are not `(0, 0)`: `u, v` are not both zero
+  have huv0 : u ≠ 0 ∨ v ≠ 0 := by
+    by_contra h
+    rw [not_or, not_not, not_not] at h
+    obtain ⟨a, b, hab⟩ := hcop
+    rw [h.1, h.2, mul_zero, mul_zero, add_zero] at hab
+    exact zero_ne_one hab
+  have n0 : (P0 (m : ℤ) n u v).1 ≠ 0 ∨ (P0 (m : ℤ) n u v).2 ≠ 0 := by
+    dsimp only [P0]
+    rcases huv0 with h | h
+    · exact Or.inr (mul_ne_zero hn0 h)
+    · exact Or.inl (mul_ne_zero hm0 h)
+  have n8 : (P8 (m : ℤ) n u v).1 ≠ 0 ∨ (P8 (m : ℤ) n u v).2 ≠ 0 := by
+    dsimp only [P8]
+    rcases huv0 with h | h
+    · exact Or.inr (mul_ne_zero hm0 h)
+    · exact Or.inl (mul_ne_zero hn0 h)
+  have nL : (PL (m : ℤ) n u v).1 ≠ 0 ∨ (PL (m : ℤ) n u v).2 ≠ 0 := by
+    dsimp only [PL]
+    by_cases h : u - v = 0
+    · exact Or.inr (mul_ne_zero hmn0 (by omega))
+    · exact Or.inl (mul_ne_zero hmn1 h)
+  have nU : (PU (m : ℤ) n u v).1 ≠ 0 ∨ (PU (m : ℤ) n u v).2 ≠ 0 := by
+    dsimp only [PU]
+    by_cases h : u - v = 0
+    · exact Or.inr (mul_ne_zero hmn1 (by omega))
+    · exact Or.inl (mul_ne_zero hmn0 h)
   obtain ⟨d, hd, hns, hsup, hE, h2, hG, hO, g⟩ := exists_class_struct
     (Nat.isCoprime_iff_coprime.mpr hmn) hcop h0 h8 hL hU
-    (Or.inl (by dsimp only [P0]; exact mul_ne_zero hm0 hv))
-    (Or.inl (by dsimp only [P8]; exact mul_ne_zero hn0 hv))
-    (Or.inr (by dsimp only [PL]; exact mul_ne_zero hmn0 huv))
-    (Or.inr (by
-      dsimp only [PU]
-      refine mul_ne_zero ?_ huv
-      have : (0 : ℤ) < (m : ℤ) + n := by positivity
-      exact this.ne'))
+    n0 n8 nL nU
   have hmem : d ∈ prods (ps.filter keep8) := by
     refine mem_prods _ hps8 d hd hns (fun q hq hqd => ?_)
     refine List.mem_filter.mpr ⟨hbad q hq (hsup q hq hqd), ?_⟩

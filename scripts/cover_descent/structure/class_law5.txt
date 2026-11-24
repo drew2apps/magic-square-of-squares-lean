@@ -1,0 +1,4 @@
+pairs (m, n) modulo 25 with 5 exactly dividing one of m, n, m-n, m+n: 320
+(point, d = ±1 mod 5) tested: 1920000; passing: 0
+points at which some d = ±2 mod 5 passes: 64000
+the same in the form of the Lean checker (projective points, norms squares): no d = ±1 mod 5 survives for any pair: True

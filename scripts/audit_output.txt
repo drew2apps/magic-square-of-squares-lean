@@ -136,7 +136,23 @@ MagicSquareOfSquares.CoverDescent.res_zmod
 MagicSquareOfSquares.CoverDescent.scale_gsq
 MagicSquareOfSquares.CoverDescent.scale_sq
 MagicSquareOfSquares.CoverDescent.sqOk_of
-MagicSquareOfSquares.CoverDescent.structTable_classes
+MagicSquareOfSquares.CoverDescent.structChunk0_ok
+MagicSquareOfSquares.CoverDescent.structChunk10_ok
+MagicSquareOfSquares.CoverDescent.structChunk11_ok
+MagicSquareOfSquares.CoverDescent.structChunk12_ok
+MagicSquareOfSquares.CoverDescent.structChunk13_ok
+MagicSquareOfSquares.CoverDescent.structChunk14_ok
+MagicSquareOfSquares.CoverDescent.structChunk1_ok
+MagicSquareOfSquares.CoverDescent.structChunk2_ok
+MagicSquareOfSquares.CoverDescent.structChunk3_ok
+MagicSquareOfSquares.CoverDescent.structChunk4_ok
+MagicSquareOfSquares.CoverDescent.structChunk5_ok
+MagicSquareOfSquares.CoverDescent.structChunk6_ok
+MagicSquareOfSquares.CoverDescent.structChunk7_ok
+MagicSquareOfSquares.CoverDescent.structChunk8_ok
+MagicSquareOfSquares.CoverDescent.structChunk9_ok
+MagicSquareOfSquares.CoverDescent.structTable_last_pair
+MagicSquareOfSquares.CoverDescent.structTable_length
 MagicSquareOfSquares.CoverDescent.structTable_ok
 MagicSquareOfSquares.CoverDescent.table4_ok
 MagicSquareOfSquares.CoverDescent.table_ok
@@ -414,4 +430,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 872 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 905 theorems (including auxiliary ones), standard axioms only

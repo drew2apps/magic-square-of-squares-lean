@@ -152,8 +152,12 @@ example : entryOk4 masks (4, 3, [2, 3, 7], [(2, 3), (5, 1), (13, 1), (17, 1), (2
 
 /-! ## 6. The class from its structure alone -/
 
-example : structTable.map (fun e => (e.1, e.2.1, e.2.2.2.1)) =
-    [(627, 364, 521266), (991, 263, 521266)] := by decide +kernel
+example : structTable.length = 150 := by decide +kernel
+example : (structTable.map fun e => (e.1, e.2.1)).Nodup := by decide +kernel
+/-- All 150 are of the two degenerate types (a solution exists; the table gives its class). -/
+example : ∀ e ∈ structTable, (e.1, e.2.1) ∈ exceptions := by decide +kernel
+example : (627, 364, 521266) ∈ structTable.map (fun e => (e.1, e.2.1, e.2.2.2.1)) ∧
+    (991, 263, 521266) ∈ structTable.map (fun e => (e.1, e.2.1, e.2.2.2.1)) := by decide +kernel
 example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263, 991], 521266, [5, 29, 37]) = true := by
   decide +kernel
 /-- Another class; one prime less (then two candidates are left); a prime that divides neither

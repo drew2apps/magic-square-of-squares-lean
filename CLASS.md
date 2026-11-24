@@ -1,6 +1,6 @@
 # The class of a solution: what is proved for every ratio
 
-Two pages, without the history. Written by Claude (an AI model made by Anthropic), directed by Drew (`drew2apps`), 24 November 2026. Every statement below is a theorem of `MagicSquareOfSquares/CoverDescent.lean` or `CoverDescentTable.lean` (Lean 4 with Mathlib, no `sorry`, no `native_decide`, the three standard axioms), and each has a proof by hand in `LAST_PAIR.md`, section 17. **No mathematician has read any of it.** The problem of the 3×3 magic square of squares is open and is not solved here. The methods are classical (a 2-descent written with norms; quadratic residues); we do not know whether the statements are new, and we claim only that they are proved and checked.
+Two pages, without the history. Written by Claude (an AI model made by Anthropic), directed by Drew (`drew2apps`), 24 November 2026. Every statement below is a theorem of `MagicSquareOfSquares/CoverDescent.lean` or `CoverDescentTable.lean` (Lean 4 with Mathlib, no `sorry`, no `native_decide`, the three standard axioms). Theorems 2 to 5 also have a proof by hand in `LAST_PAIR.md`, section 17; Theorem 1 in sections 11 and 15; Theorems 6 and 7 are finite checks by the kernel on top of them. **No mathematician has read any of it.** The problem of the 3×3 magic square of squares is open and is not solved here. The methods are classical (a 2-descent written with norms; quadratic residues); we do not know whether the statements are new, and we claim only that they are proved and checked.
 
 ## 1. Setting
 
@@ -14,19 +14,19 @@ For an integer `d`, "`d` times `x + iy` is a Gaussian square" means `d·x = a² 
 
 ## 2. The theorems
 
-**Theorem 1 (the class exists, and where its primes are).** At a solution on the four forms there is an integer `d > 0` without square factors such that `d` times each of the eight products is a Gaussian square, and every prime factor of `d` divides `2mn(m − n)(m + n)`. — `exists_class_prod`, for all integers `m, n`.
+**Theorem 1 (the class exists, and where its primes are).** At a solution on the four forms there is an integer `d > 0` without square factors such that `d` times each of the eight products is a Gaussian square, and every prime factor of `d` divides `2mn(m − n)(m + n)`. — `exists_class_prod`. (In Lean the hypotheses are: `u, v` coprime, the four norms squares, and none of the four pairs is `(0, 0)`, which holds for `m > n > 0` as soon as `u, v` are not both 0; `m, n` need not be coprime for this one.) Such a `d` is unique (two of them have a quotient that is a rational square in `ℚ(i)`, hence `±` a rational square); Lean does not state the uniqueness and does not need it, because Theorems 3, 4, 5 are proved for every `d` with the property of the eight products.
 
 This is the step that a 2-descent usually takes from unique factorisation in `ℤ[i]`. Here it is one identity (if `x² + y² = w²` then `2(x + w)(x + iy) = (x + w + iy)²`) and two divisibility lemmas, and it is in Lean. The list of candidates for `d` is therefore produced inside Lean: a checker receives a list of primes, and the kernel verifies that it contains every prime of `2mn(m − n)(m + n)`.
 
-**Theorem 2 (E).** Every odd prime factor of `d` is `≡ ±1 (mod 8)`. — `mod_eight_of_dv`. Uses: `F0` and `GL` squares; `m, n` coprime; `u, v` coprime.
+**Theorem 2 (E).** The `d` of Theorem 1 can be taken with every odd prime factor `≡ ±1 (mod 8)` (and it is the same `d`, by the uniqueness). — `exists_class_prod8`; the step is `mod_eight_of_dv`: an odd prime dividing both coordinates of one of the four pairs is `≡ ±1 (mod 8)`, which uses `F0` and `GL` squares and both coprimalities.
 
 **Theorem 3 (F).** `d` is even. — `two_dvd_class`. Uses: the four forms squares; the eight products; both coprimalities.
 
-**Theorem 4 (G).** `d` is a square modulo every odd prime dividing `m² + n²`. — `isSquare_class_mod`. Uses: the eight products and both coprimalities only.
+**Theorem 4 (G).** `d` is a square modulo every odd prime dividing `m² + n²`. — `isSquare_class_mod`. Uses: both coprimalities and the eight products only (in fact one of them, `P0·conj(P8)·PL·conj(PU)`; Lean's proof uses two).
 
-**Theorem 5 (O).** `d` is a square modulo every odd prime dividing `m⁸ + 14m⁴n⁴ + n⁸`. — `isSquare_class_mod_octic`. Uses: the eight products and both coprimalities only.
+**Theorem 5 (O).** `d` is a square modulo every odd prime dividing `m⁸ + 14m⁴n⁴ + n⁸`. — `isSquare_class_mod_octic`. Uses: both coprimalities and one of the eight products only (`P0·P8·PL·PU` for a prime of one quartic factor of the octic, `P0·P8·conj(PL)·conj(PU)` for the other).
 
-Together: `exists_class_struct`. Theorems 3, 4 and 5 hold for any `d` with the property of the eight products, not only for the one of Theorem 1. The octic is, up to constants, the product of the resultants of `F0, F8` with `GL, GU`; its primes do not divide `2mn(m² − n²)(m² + n²)`.
+Together: `exists_class_struct` (with the hypotheses of Theorem 1 and `m, n` coprime). Theorems 3, 4 and 5 hold for any `d` with the property of the eight products, not only for the one of Theorem 1. In Lean "a square modulo `p`" is `IsSquare (d : ZMod p)`, which is also true when `p` divides `d`; for the `d` of Theorem 1 that does not happen (an odd prime of `m² + n²` or of the octic divides none of `2, m, n, m ± n`), so it means that `d` is a quadratic residue. Each of the four resultants of `F0` or `F8` with `GL` or `GU` is 4 times the octic `W` (and the resultants of `F0` with `F8` and of `GL` with `GU` are `(m² − n²)²(m² + n²)²` and `1024·m²n²(m² + n²)²`, which is where `m² + n²` comes from); the odd primes of `W` do not divide `mn(m² − n²)(m² + n²)`. It is Klein's octahedral invariant: the Hessian of `f = mn(m⁴ − n⁴)`, with `W³ − 108f⁴` a square, and the discriminant of `F0·F8·GL·GU` is `2⁴⁸(fW)⁸`. So its primes are primes of bad reduction of the curves of the problem, where a condition is to be expected; Theorems 4 and 5 say what the condition is.
 
 **The criterion.** So a solution on the four forms gives a set `S` of primes `≡ ±1 (mod 8)` dividing `mn(m² − n²)` with
 
@@ -34,19 +34,22 @@ Together: `exists_class_struct`. Theorems 3, 4 and 5 hold for any `d` with the p
 
 a system of linear equations over `𝔽₂`. If it has no solution, the ratio `m : n` does not occur. If it has exactly one, the class of every solution is known.
 
-**Theorem 6 (the last pair).** For `m : n = 627 : 364` and for `991 : 263`, at every solution on the four forms `521266` times each of the eight products is a Gaussian square. — `class_of_mem_structTable`. The proof is Theorems 1 to 5 and three primes: 5 and 29 divide `m² + n²`, 37 divides the octic, and of the eight even candidates only `521266 = 2·263·991` is a square modulo all three.
+**Theorem 6 (the class, for 150 ratios with a degenerate solution; the last pair).** For `m : n = 627 : 364` and for `991 : 263`, at every solution on the four forms, the degenerate ones included (any coprime `u, v` with the four norms squares), `521266` times each of the eight products is a Gaussian square. — `class_of_mem_structTable`, `structTable_last_pair`. The proof is Theorems 1 to 5 and three primes: 5 and 29 divide `m² + n²`, 37 divides the octic, and of the eight even candidates only `521266 = 2·263·991` is a square modulo all three. The same theorem covers 150 of the 306 ratios to 1000 for which `m² + n²` is a square or twice a square (`structTable`, with the class of each): for these the criterion leaves one candidate, with primes below 10⁵, and the kernel checks it (`structOk`: the primes are primes, they divide `(m² + n²)(m⁸ + 14m⁴n⁴ + n⁸)`, and every other candidate fails Euler's criterion at one of them).
 
 **Theorem 7 (ratios to 1000).** In a 3×3 magic square of squares (rows, columns and both diagonals of the nine squares with one sum; entries not assumed distinct) with `h + f ≠ 0`, `b ≠ d` and `(b + d)·n = (h + f)·m` for coprime `1 ≤ n < m ≤ 1000`, the number `m² + n²` is a square or twice a square. — `IsMSS.ratio_norm_sq_or_two_sq_of_le_1000`.
 
+The theorem is about the one ratio `(b + d) : (h + f)` with the signs and the order as written (`0 < n < m`); the roots may have any signs, so it applies after a change of signs of `b, d, h, f`, but that reduction is not part of the statement. It is not vacuous: the squares built from three squares in arithmetic progression (entries not distinct) satisfy the hypotheses (a reviewer's example: rows 25 1 49 / 49 25 1 / 1 49 25).
+
 Theorem 7 is a finite statement. Its proof: congruences leave 425 ratios (`G1.exceptions1000`, in release 0.5.0); for the 119 of them with `m² + n²` neither a square nor twice a square the kernel checks a certificate that no class is possible: for 115 with one class `d` (Theorems 1 and 2, then finitely many points modulo small prime powers, or modulo a prime by Euler's criterion), for 4 with one class for each of the four pairs (`exists_classes4`). For the 306 other ratios a degenerate solution exists (for instance `u = v` when `m² + n²` is a square) and no such certificate can.
 
-## 3. What the criterion decides, computed (not in Lean except Theorem 6)
+## 3. What the criterion decides, computed (in Lean: Theorem 6 only)
 
 `scripts/cover_descent/structure/class_struct.py`, with the primes of the octic below 10⁵:
 
 - Of the 119 ratios of Theorem 7, **54 are excluded by the criterion alone**. For the other 65 the certificate needs a small prime outside the criterion, which we do not explain.
-- Of the 306 ratios with a degenerate solution, the system is solvable for all (as it must be), and **for 150 it has exactly one solution**: the class of any solution is that of the degenerate one.
-- For random coprime ratios with `m` between 10² and 10⁶ the criterion excludes about four in five, most of them by Theorem 4 at a prime `≡ 5 (mod 8)`, which is a condition already known from the fifth form. We have no theorem and no conjecture about the proportion.
+- Of the 306 ratios with a degenerate solution, the system is solvable for all (as it must be), and **for 150 it has exactly one solution**: the class of any solution is that of the degenerate one (these 150 are Theorem 6, in Lean).
+- With the octic factored completely the 54 become 58, and with one more law, at the prime 5 (if 5 divides one of `m, n, m ± n` exactly once, `d` is a non-residue modulo 5; proved by a complete check modulo 25, `class_law5.py`; not in Lean), 71.
+- On random ratios with complete factorisations the criterion excludes about half of those that survive every congruence condition of the repository, with no visible trend from 10³ to 10⁶ (`LAST_PAIR.md`, section 17). We have no theorem about the proportion.
 
 ## 4. What this is not
 
@@ -56,4 +59,4 @@ Theorem 7 is a finite statement. Its proof: congruences leave 425 ratios (`G1.ex
 
 ## 5. For a reader with one hour
 
-Theorem 5 is the least expected and has a short proof: `LAST_PAIR.md`, section 17, "Theorem O", fifteen lines and two polynomial identities. Theorem 4 is of the same kind and shorter. If either is wrong, or is in the literature, we would like to know.
+Theorem 5 has a short proof: `LAST_PAIR.md`, section 17, "Theorem O", fifteen lines and two polynomial identities. Theorem 4 is of the same kind and shorter. In the language of the subject these are local conditions of a two-cover descent at primes of bad reduction, made explicit for this family; the conditions that remain, at small primes of good reduction, are the usual ones and have no such law. If either theorem is wrong, or is in the literature, we would like to know.
