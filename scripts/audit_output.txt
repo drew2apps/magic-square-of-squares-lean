@@ -26,6 +26,7 @@ MagicSquareOfSquares.CoverDescent.GSq.support
 MagicSquareOfSquares.CoverDescent.GSqP.cj
 MagicSquareOfSquares.CoverDescent.GSqP.cjIf
 MagicSquareOfSquares.CoverDescent.GSqP.gm
+MagicSquareOfSquares.CoverDescent.P_congr
 MagicSquareOfSquares.CoverDescent.Q_congr
 MagicSquareOfSquares.CoverDescent.Q_congr4
 MagicSquareOfSquares.CoverDescent.chunk0_ok
@@ -43,7 +44,10 @@ MagicSquareOfSquares.CoverDescent.chunk6_ok
 MagicSquareOfSquares.CoverDescent.chunk7_ok
 MagicSquareOfSquares.CoverDescent.chunk8_ok
 MagicSquareOfSquares.CoverDescent.chunk9_ok
+MagicSquareOfSquares.CoverDescent.class_of_mem_structTable
+MagicSquareOfSquares.CoverDescent.class_of_structOk
 MagicSquareOfSquares.CoverDescent.coveredBy.eq_def
+MagicSquareOfSquares.CoverDescent.dedupL.eq_def
 MagicSquareOfSquares.CoverDescent.dvd_bad_of_dvd_diff
 MagicSquareOfSquares.CoverDescent.dvd_bad_of_dvd_mn
 MagicSquareOfSquares.CoverDescent.dvd_both
@@ -51,15 +55,22 @@ MagicSquareOfSquares.CoverDescent.dvd_of_sq_dvd
 MagicSquareOfSquares.CoverDescent.eul_comp
 MagicSquareOfSquares.CoverDescent.eul_of_sq
 MagicSquareOfSquares.CoverDescent.evenCheck_eq
+MagicSquareOfSquares.CoverDescent.exceptions_degenerate
 MagicSquareOfSquares.CoverDescent.exceptions_length
 MagicSquareOfSquares.CoverDescent.exists_class
 MagicSquareOfSquares.CoverDescent.exists_class_core
+MagicSquareOfSquares.CoverDescent.exists_class_nosq
 MagicSquareOfSquares.CoverDescent.exists_class_prod
 MagicSquareOfSquares.CoverDescent.exists_class_prod8
 MagicSquareOfSquares.CoverDescent.exists_class_struct
+MagicSquareOfSquares.CoverDescent.exists_classes4
+MagicSquareOfSquares.CoverDescent.exists_foldl_line4
 MagicSquareOfSquares.CoverDescent.exists_gsq_of_norm
 MagicSquareOfSquares.CoverDescent.exists_inv
+MagicSquareOfSquares.CoverDescent.exists_line4
 MagicSquareOfSquares.CoverDescent.exists_nosq
+MagicSquareOfSquares.CoverDescent.exists_rec4
+MagicSquareOfSquares.CoverDescent.exists_step4
 MagicSquareOfSquares.CoverDescent.findMask.eq_def
 MagicSquareOfSquares.CoverDescent.gOkN_eq
 MagicSquareOfSquares.CoverDescent.gOkN_mod
@@ -67,7 +78,11 @@ MagicSquareOfSquares.CoverDescent.gOk_of
 MagicSquareOfSquares.CoverDescent.gOk_of_GSqP
 MagicSquareOfSquares.CoverDescent.iotaOf_spec
 MagicSquareOfSquares.CoverDescent.iota_sq
+MagicSquareOfSquares.CoverDescent.isEmpty_false_of_mem
 MagicSquareOfSquares.CoverDescent.isSquare_class_mod
+MagicSquareOfSquares.CoverDescent.isSquare_class_mod_R1
+MagicSquareOfSquares.CoverDescent.isSquare_class_mod_R2
+MagicSquareOfSquares.CoverDescent.isSquare_class_mod_octic
 MagicSquareOfSquares.CoverDescent.isSquare_of_mul_sq
 MagicSquareOfSquares.CoverDescent.mask101
 MagicSquareOfSquares.CoverDescent.mask109
@@ -86,7 +101,9 @@ MagicSquareOfSquares.CoverDescent.mask8
 MagicSquareOfSquares.CoverDescent.mask89
 MagicSquareOfSquares.CoverDescent.mask97
 MagicSquareOfSquares.CoverDescent.masks_ok
+MagicSquareOfSquares.CoverDescent.mem_dedupL
 MagicSquareOfSquares.CoverDescent.mem_flags
+MagicSquareOfSquares.CoverDescent.mem_inter
 MagicSquareOfSquares.CoverDescent.mem_of_findMask
 MagicSquareOfSquares.CoverDescent.mem_of_prime_dvd_prod
 MagicSquareOfSquares.CoverDescent.mem_pick_of_coveredBy
@@ -94,8 +111,10 @@ MagicSquareOfSquares.CoverDescent.mem_prods
 MagicSquareOfSquares.CoverDescent.mod_eight_of_dv
 MagicSquareOfSquares.CoverDescent.mod_eight_of_two_sq
 MagicSquareOfSquares.CoverDescent.no_fullSquares_of_entry
+MagicSquareOfSquares.CoverDescent.no_fullSquares_of_entry4
 MagicSquareOfSquares.CoverDescent.no_fullSquares_of_mem_ratios
 MagicSquareOfSquares.CoverDescent.no_point_of_entry
+MagicSquareOfSquares.CoverDescent.no_point_of_entry4
 MagicSquareOfSquares.CoverDescent.no_point_of_entry8
 MagicSquareOfSquares.CoverDescent.not_gsq_of_kills
 MagicSquareOfSquares.CoverDescent.not_gsq_of_killsE
@@ -117,8 +136,12 @@ MagicSquareOfSquares.CoverDescent.res_zmod
 MagicSquareOfSquares.CoverDescent.scale_gsq
 MagicSquareOfSquares.CoverDescent.scale_sq
 MagicSquareOfSquares.CoverDescent.sqOk_of
+MagicSquareOfSquares.CoverDescent.structTable_classes
+MagicSquareOfSquares.CoverDescent.structTable_ok
+MagicSquareOfSquares.CoverDescent.table4_ok
 MagicSquareOfSquares.CoverDescent.table_ok
 MagicSquareOfSquares.CoverDescent.testBit_foldl_or
+MagicSquareOfSquares.CoverDescent.two_cast_dvd
 MagicSquareOfSquares.CoverDescent.two_dvd_class
 MagicSquareOfSquares.G1.FullSquares.diagonal
 MagicSquareOfSquares.G1.IntSq.abs_left
@@ -299,6 +322,7 @@ MagicSquareOfSquares.IsMSS.ratio_ne_of_coverDescent
 MagicSquareOfSquares.IsMSS.ratio_ne_of_le_1000
 MagicSquareOfSquares.IsMSS.ratio_ne_of_le_1000_descent
 MagicSquareOfSquares.IsMSS.ratio_ne_of_le_200
+MagicSquareOfSquares.IsMSS.ratio_norm_sq_or_two_sq_of_le_1000
 MagicSquareOfSquares.IsMSS.ratio_not_in_class
 MagicSquareOfSquares.IsMSS.rotate
 MagicSquareOfSquares.IsMSS.sq_emod_24
@@ -390,4 +414,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 832 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 872 theorems (including auxiliary ones), standard axioms only

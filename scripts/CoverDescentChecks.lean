@@ -6,9 +6,10 @@ import MagicSquareOfSquares.CoverDescentTable
 Not part of the library: nothing here is counted among its theorems.  CI runs this file with
 `lake env lean scripts/CoverDescentChecks.lean`; it fails if any check below fails.
 
-1. The count "115 of the 425": the table has 115 pairs, without repetition, all of them among the
-   425 pairs of `G1.exceptions1000`; so the 310 pairs of `CoverDescent.exceptions` are exactly the
-   other ones. Of the 310, 306 have `m² + n²` a square or twice a square, and 4 do not.
+1. The count "119 of the 425": the two tables have 119 pairs (115 with one class, 4 with four
+   classes), without repetition, all of them among the 425 pairs of `G1.exceptions1000`; so the
+   306 pairs of `CoverDescent.exceptions` are exactly the other ones, and the 119 are exactly the
+   pairs of the 425 for which `m² + n²` is neither a square nor twice a square.
 2. Which named ratios are in the table and which are not.
 3. Forged certificates are refused by the checker `entryOk8` (the one the table uses: candidates
    are the products of 2 and of the primes `≡ ±1 (mod 8)`, by `exists_class_prod8`), and a forged
@@ -17,7 +18,11 @@ Not part of the library: nothing here is counted among its theorems.  CI runs th
    hold, a class that no line excludes, a wrong ratio, a missing prime, an unknown modulus.
 4. A line of the second kind, `(p, 0, c)` (Euler's criterion modulo a prime `p ≡ 1 (mod 4)`), is
    refused when the prime does not exclude the class, when `p` is composite, 2 or `≡ 3 (mod 4)`.
-5. The earlier checker `entryOk` (all products of the primes as candidates) is still in the
+5. Certificates with four classes (`entryOk4`): a line dropped, a line that cannot be read, another
+   ratio, a missing prime, and a ratio that has a solution are refused.
+6. The class from its structure alone (`structOk`): another class, a prime less, a prime that does
+   not divide `(m² + n²)(m⁸ + 14m⁴n⁴ + n⁸)`, a composite number, a missing prime are refused.
+7. The earlier checker `entryOk` (all products of the primes as candidates) is still in the
    library; a certificate written for one checker is refused by the other.
 -/
 
@@ -25,7 +30,8 @@ open MagicSquareOfSquares MagicSquareOfSquares.CoverDescent
 
 /-! ## 1. The count -/
 
-example : ratios.length = 115 := by decide +kernel
+example : ratios.length = 119 := by decide +kernel
+example : table.length = 115 ∧ table4.length = 4 := by decide +kernel
 example : ratios.Nodup := by decide +kernel
 example : ∀ x ∈ ratios, x ∈ G1.exceptions1000 := by decide +kernel
 example : G1.exceptions1000.length = 425 := by decide +kernel
@@ -44,15 +50,14 @@ example : (388, 287) ∈ ratios ∧ (457, 100) ∈ ratios ∧ (557, 357) ∈ rat
     (576, 257) ∈ ratios ∧ (595, 533) ∈ ratios ∧ (644, 535) ∈ ratios ∧ (675, 101) ∈ ratios ∧
     (784, 391) ∈ ratios ∧ (788, 91) ∈ ratios ∧ (833, 319) ∈ ratios ∧ (879, 697) ∈ ratios := by
   decide +kernel
-/-- The four ratios that still have no certificate (one class is left: 82, 238, 238, 82). -/
-example : (308, 185) ∉ ratios ∧ (340, 53) ∉ ratios ∧ (393, 287) ∉ ratios ∧ (493, 123) ∉ ratios := by
+/-- The four ratios for which one class is not enough have a certificate with four classes. -/
+example : table4.map (fun e => (e.1, e.2.1)) = [(308, 185), (340, 53), (393, 287), (493, 123)] := by
   decide +kernel
-/-- The pairs that are left: 306 with `m² + n²` a square or twice a square, and those four. -/
-example : (exceptions.filter fun x =>
-    !(Nat.sqrt (x.1 ^ 2 + x.2 ^ 2) ^ 2 == x.1 ^ 2 + x.2 ^ 2) &&
-    !(Nat.sqrt (2 * (x.1 ^ 2 + x.2 ^ 2)) ^ 2 == 2 * (x.1 ^ 2 + x.2 ^ 2))) =
-    [(308, 185), (340, 53), (393, 287), (493, 123)] := by decide +kernel
-/-- No pair of the table has `m² + n²` a square or twice a square (the two types with a
+/-- The 119 are exactly the pairs of the 425 with `m² + n²` neither a square nor twice a square. -/
+example : ∀ x ∈ G1.exceptions1000, (x ∈ ratios ↔
+    ¬(Nat.sqrt (x.1 ^ 2 + x.2 ^ 2) ^ 2 = x.1 ^ 2 + x.2 ^ 2) ∧
+    ¬(Nat.sqrt (2 * (x.1 ^ 2 + x.2 ^ 2)) ^ 2 = 2 * (x.1 ^ 2 + x.2 ^ 2))) := by decide +kernel
+/-- No pair of the tables has `m² + n²` a square or twice a square (the two types with a
 degenerate solution, for which no certificate can exist). -/
 example : ∀ x ∈ ratios, ¬(Nat.sqrt (x.1 ^ 2 + x.2 ^ 2) ^ 2 = x.1 ^ 2 + x.2 ^ 2) ∧
     ¬(Nat.sqrt (2 * (x.1 ^ 2 + x.2 ^ 2)) ^ 2 = 2 * (x.1 ^ 2 + x.2 ^ 2)) := by decide +kernel
@@ -122,7 +127,49 @@ example : entryOk8 masks (784, 391, [2, 3, 5, 7, 17, 23, 47, 131], [(2, 3, 0xfff
 example : entryOk8 masks (784, 391, [2, 3, 5, 7, 17, 23, 47, 131], [(2, 3, 0xffff), (13, 1, 0xaa550000), (29, 1, 0x5a00000), (37, 1, 0x40020000), (41, 1, 0x80000), (239, 0, 0x10000000)]) = false := by decide +kernel
 example : entryOk8 masks (784, 391, [2, 3, 5, 7, 17, 23, 47, 131], [(2, 3, 0xffff), (13, 1, 0xaa550000), (29, 1, 0x5a00000), (37, 1, 0x40020000), (41, 1, 0x80000), (233, 0, 0)]) = false := by decide +kernel
 
-/-! ## 5. The earlier checker -/
+/-! ## 5. Certificates with four classes -/
+
+/-- A genuine entry of `table4`. -/
+def genuine4 : ℕ × ℕ × List ℕ × List (ℕ × ℕ) :=
+  (308, 185, [2, 3, 5, 7, 11, 17, 29, 37, 41], [(2, 3), (5, 1), (13, 1), (29, 1)])
+
+example : genuine4 ∈ table4 := by decide +kernel
+example : entryOk4 masks genuine4 = true := by decide +kernel
+/-- With one line less tuples are left; with a line that cannot be read (a modulus without a mask,
+an exponent 0, a composite number) the same; the certificate of another ratio; a prime left out. -/
+example : entryOk4 masks (308, 185, genuine4.2.2.1, [(2, 3), (5, 1), (13, 1)]) = false := by
+  decide +kernel
+example : entryOk4 masks (308, 185, genuine4.2.2.1, [(2, 3), (5, 1), (13, 1), (7, 1)]) = false := by
+  decide +kernel
+example : entryOk4 masks (308, 185, genuine4.2.2.1, [(2, 3), (5, 1), (13, 1), (29, 0)]) = false := by
+  decide +kernel
+example : entryOk4 masks (308, 187, genuine4.2.2.1, genuine4.2.2.2) = false := by decide +kernel
+example : entryOk4 masks (308, 185, [2, 3, 5, 7, 11, 17, 29, 37], genuine4.2.2.2) = false := by
+  decide +kernel
+/-- A ratio with a solution, `(4, 3)`: with all the lines used in `table4` a tuple is left. -/
+example : entryOk4 masks (4, 3, [2, 3, 7], [(2, 3), (5, 1), (13, 1), (17, 1), (29, 1)]) = false := by
+  decide +kernel
+
+/-! ## 6. The class from its structure alone -/
+
+example : structTable.map (fun e => (e.1, e.2.1, e.2.2.2.1)) =
+    [(627, 364, 521266), (991, 263, 521266)] := by decide +kernel
+example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263, 991], 521266, [5, 29, 37]) = true := by
+  decide +kernel
+/-- Another class; one prime less (then two candidates are left); a prime that divides neither
+`m² + n²` nor the octic (41); a composite number; a prime of `2mn(m² − n²)` left out. -/
+example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263, 991], 2, [5, 29, 37]) = false := by
+  decide +kernel
+example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263, 991], 521266, [5, 29]) = false := by
+  decide +kernel
+example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263, 991], 521266, [5, 29, 37, 41]) = false := by
+  decide +kernel
+example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263, 991], 521266, [5, 29, 37, 25]) = false := by
+  decide +kernel
+example : structOk (627, 364, [2, 3, 7, 11, 13, 19, 263], 521266, [5, 29, 37]) = false := by
+  decide +kernel
+
+/-! ## 7. The earlier checker -/
 
 /-- A certificate over all products of the primes (an entry of the table of the previous
 version, which `entryOk` accepted with the masks of that table). -/

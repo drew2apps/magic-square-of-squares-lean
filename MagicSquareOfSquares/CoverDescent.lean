@@ -27,12 +27,17 @@ Everything is done in integer coordinates; no Gaussian integers, no unique facto
   modulus, there is no solution at all.
 * `exists_class_struct`: **for coprime `m, n` the class `d` has three more properties, for every
   ratio:** its odd prime factors are `≡ ±1 (mod 8)` (`mod_eight_of_dv`), it is even
-  (`two_dvd_class`), and it is a square modulo every odd prime dividing `m² + n²`
-  (`isSquare_class_mod`).
+  (`two_dvd_class`), it is a square modulo every odd prime dividing `m² + n²`
+  (`isSquare_class_mod`), and modulo every odd prime dividing `m⁸ + 14m⁴n⁴ + n⁸`
+  (`isSquare_class_mod_octic`).
 * `killsE`, `not_gsq_of_killsE`: a second check, modulo an odd prime `p`, by the criterion of
   Euler in the two residue fields above `p`; no mask, so `p` may be large.
 * `entryOk8`, `no_point_of_entry8`: the certificates of the table, with the candidates that the
   first of the three properties leaves and with lines of both kinds.
+* `structOk`, `class_of_structOk`: for a ratio where those properties leave one candidate, the class
+  of every solution is that candidate; no local computation at the points.
+* `exists_classes4`, `recs4`, `entryOk4`, `no_point_of_entry4`: the same with one class for each
+  of the four forms, for the ratios where one class is not enough.
 
 The certificates and the statements about magic squares are in `CoverDescentTable.lean`.
 -/
@@ -1086,6 +1091,310 @@ theorem isSquare_class_mod {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCopri
       linear_combination ha2' - ι * hb2' + (-(D * (-2*N^4*U^4*ι + 2*N^4*U^3*V*ι^3 - 2*N^4*U^3*V*ι + 4*N^4*U^2*V^2*ι + 2*N^4*U*V^3*ι^3 - 10*N^4*U*V^3*ι + 6*N^4*V^4*ι)) - (b2 : ZMod p) ^ 2) * hι
     linear_combination key - (D * N ^ 4 * (U - V) ^ 2 * V ^ 2) * r8
 
+/-! ### The class modulo the primes of `m⁸ + 14m⁴n⁴ + n⁸` -/
+
+/-! `m⁸ + 14m⁴n⁴ + n⁸ = R₁·R₂` with `R₂ = m⁴ + 2m³n + 2m²n² − 2mn³ + n⁴` and `R₁` the same with
+`−n`. With `A = m² + n²` and `J = m² + 2mn − n²`: `J² + A² = 2R₂` and `R₂ = (m² − n²)² + 2mnJ`.
+Modulo a prime `p` of `R₂` the four linear forms are proportional in pairs in each of the two
+residue fields above `p`, and one of the eight products, `X + iY`, satisfies
+`d·((m² − n²)·G₀·G₈)² = ((Aa + Jb)·mn·A)²` and `d·(J(m² − n²)·H₀·H₈)² = (A(Aa − Jb)·mn·A)²`
+modulo `p`, where `G₀ = A·mv + J·nu`, `G₈ = A·nv + J·mu` and `H₀`, `H₈` are the same with `−J`.
+`G₀G₈` and `H₀H₈` do not both vanish modulo `p` when `u, v` are coprime. -/
+
+theorem isSquare_class_mod_R2 {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2)
+    (hdvd : (p : ℤ) ∣ m ^ 4 + 2 * m ^ 3 * n + 2 * m ^ 2 * n ^ 2 - 2 * m * n ^ 3 + n ^ 4)
+    {d : ℕ} (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) : IsSquare (d : ZMod p) := by
+  have : Fact p.Prime := ⟨hp⟩
+  have hmn' : ¬((m : ZMod p) = 0 ∧ (n : ZMod p) = 0) := by
+    rintro ⟨hm, hn⟩
+    obtain ⟨a, b, hab⟩ := hmn
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hab
+    push_cast at h1
+    rw [hm, hn, mul_zero, mul_zero, add_zero] at h1
+    exact zero_ne_one h1
+  have hcop' : ¬((u : ZMod p) = 0 ∧ (v : ZMod p) = 0) := by
+    rintro ⟨hu, hv⟩
+    obtain ⟨a, b, hab⟩ := hcop
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hab
+    push_cast at h1
+    rw [hu, hv, mul_zero, mul_zero, add_zero] at h1
+    exact zero_ne_one h1
+  have two_ne : (2 : ZMod p) ≠ 0 := by
+    intro h2
+    have h3 : ((2 : ℕ) : ZMod p) = 0 := by exact_mod_cast h2
+    rw [ZMod.natCast_eq_zero_iff] at h3
+    exact hp2 ((Nat.prime_dvd_prime_iff_eq hp Nat.prime_two).mp h3)
+  have hR := (ZMod.intCast_zmod_eq_zero_iff_dvd _ p).mpr hdvd
+  push_cast at hR
+  obtain ⟨a, b, ha, hb⟩ := g (false, false, false)
+  have ha' := congrArg (Int.cast : ℤ → ZMod p) ha
+  have hb' := congrArg (Int.cast : ℤ → ZMod p) hb
+  dsimp only [Q, gm, cj, cjIf, P0, P8, PL, PU] at ha' hb'
+  simp only [if_false, Bool.false_eq_true] at ha' hb'
+  push_cast at ha' hb'
+  set D : ZMod p := (d : ZMod p)
+  set M : ZMod p := (m : ZMod p)
+  set N : ZMod p := (n : ZMod p)
+  set U : ZMod p := (u : ZMod p)
+  set V : ZMod p := (v : ZMod p)
+  have hN : N ≠ 0 := by
+    intro h
+    apply hmn'
+    refine ⟨?_, h⟩
+    have h4 : M ^ 4 = 0 := by
+      rw [h] at hR
+      linear_combination hR
+    exact pow_eq_zero_iff (by norm_num) |>.mp h4
+  have hM : M ≠ 0 := by
+    intro h
+    apply hmn'
+    refine ⟨h, ?_⟩
+    have h4 : N ^ 4 = 0 := by
+      rw [h] at hR
+      linear_combination hR
+    exact pow_eq_zero_iff (by norm_num) |>.mp h4
+  have hE : M ^ 2 - N ^ 2 ≠ 0 := by
+    intro h
+    have h4 : (2 * M * N) ^ 2 = 0 := by linear_combination hR - (M ^ 2 - N ^ 2 + 2 * M * N) * h
+    exact mul_ne_zero (mul_ne_zero two_ne hM) hN (pow_eq_zero_iff (by norm_num) |>.mp h4)
+  have hA : M ^ 2 + N ^ 2 ≠ 0 := by
+    intro h
+    have hJ2 : (M ^ 2 + 2 * M * N - N ^ 2) ^ 2 = 0 := by linear_combination 2 * hR - (M ^ 2 + N ^ 2) * h
+    have hJ := pow_eq_zero_iff (by norm_num) |>.mp hJ2
+    apply hE
+    have h6 : 2 * N * (M - N) = 0 := by linear_combination hJ - h
+    have h7 := (mul_eq_zero.mp h6).resolve_left (mul_ne_zero two_ne hN)
+    have h8' : M = N := by linear_combination h7
+    rw [h8']
+    ring
+  have hJ : M ^ 2 + 2 * M * N - N ^ 2 ≠ 0 := by
+    intro h
+    have h2 : (M ^ 2 + N ^ 2) ^ 2 = 0 := by linear_combination 2 * hR - (M ^ 2 + 2 * M * N - N ^ 2) * h
+    exact hA (pow_eq_zero_iff (by norm_num) |>.mp h2)
+  by_cases hz : ((M ^ 2 + N ^ 2) * (M * V) + (M ^ 2 + 2 * M * N - N ^ 2) * (N * U)) * ((M ^ 2 + N ^ 2) * (N * V) + (M ^ 2 + 2 * M * N - N ^ 2) * (M * U)) = 0
+  · -- the point is at a common zero of two of the forms: the other residue field
+    have hAAJ : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 + 2 * M * N - N ^ 2) ≠ 0 := mul_ne_zero (pow_ne_zero 2 hA) hJ
+    have hH : ((M ^ 2 + N ^ 2) * (M * V) - (M ^ 2 + 2 * M * N - N ^ 2) * (N * U)) * ((M ^ 2 + N ^ 2) * (N * V) - (M ^ 2 + 2 * M * N - N ^ 2) * (M * U)) ≠ 0 := by
+      intro hH
+      apply hcop'
+      rcases mul_eq_zero.mp hz with h1 | h1 <;> rcases mul_eq_zero.mp hH with h2 | h2
+      · have eU : (M ^ 2 + 2 * M * N - N ^ 2) * N * U * 2 = 0 := by linear_combination h1 - h2
+        have eV : (M ^ 2 + N ^ 2) * M * V * 2 = 0 := by linear_combination h1 + h2
+        exact ⟨by simpa [hJ, hN, two_ne] using eU, by simpa [hA, hM, two_ne] using eV⟩
+      · have eU : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 + 2 * M * N - N ^ 2) * U = 0 := by linear_combination ((M ^ 2 + N ^ 2) * N) * h1 - ((M ^ 2 + N ^ 2) * M) * h2
+        have eV : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 + 2 * M * N - N ^ 2) * V = 0 := by linear_combination ((M ^ 2 + 2 * M * N - N ^ 2) * M) * h1 + ((M ^ 2 + 2 * M * N - N ^ 2) * N) * h2
+        exact ⟨(mul_eq_zero.mp eU).resolve_left hAAJ, (mul_eq_zero.mp eV).resolve_left hAAJ⟩
+      · have eU : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 + 2 * M * N - N ^ 2) * U = 0 := by linear_combination ((M ^ 2 + N ^ 2) * M) * h1 - ((M ^ 2 + N ^ 2) * N) * h2
+        have eV : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 + 2 * M * N - N ^ 2) * V = 0 := by linear_combination ((M ^ 2 + 2 * M * N - N ^ 2) * N) * h1 + ((M ^ 2 + 2 * M * N - N ^ 2) * M) * h2
+        exact ⟨(mul_eq_zero.mp eU).resolve_left hAAJ, (mul_eq_zero.mp eV).resolve_left hAAJ⟩
+      · have eU : (M ^ 2 + 2 * M * N - N ^ 2) * M * U * 2 = 0 := by linear_combination h1 - h2
+        have eV : (M ^ 2 + N ^ 2) * N * V * 2 = 0 := by linear_combination h1 + h2
+        exact ⟨by simpa [hJ, hM, two_ne] using eU, by simpa [hA, hN, two_ne] using eV⟩
+    have key : D * ((M ^ 2 + 2 * M * N - N ^ 2) * (M ^ 2 - N ^ 2) * (((M ^ 2 + N ^ 2) * (M * V) - (M ^ 2 + 2 * M * N - N ^ 2) * (N * U)) *
+        ((M ^ 2 + N ^ 2) * (N * V) - (M ^ 2 + 2 * M * N - N ^ 2) * (M * U)))) ^ 2 =
+        ((M ^ 2 + N ^ 2) * ((M ^ 2 + N ^ 2) * (a : ZMod p) - (M ^ 2 + 2 * M * N - N ^ 2) * (b : ZMod p)) * M * N * (M ^ 2 + N ^ 2)) ^ 2 := by
+      linear_combination ((M ^ 2 + N ^ 2) ^ 6 * M ^ 2 * N ^ 2) * ha' -
+        ((M ^ 2 + N ^ 2) ^ 5 * M ^ 2 * N ^ 2 * (M ^ 2 + 2 * M * N - N ^ 2)) * hb' +
+        (
+          D*M^16*U^2*V^2 - 2*D*M^15*N*U^3*V + 6*D*M^15*N*U^2*V^2 - 2*D*M^15*N*U*V^3 +
+          D*M^14*N^2*U^4 - 14*D*M^14*N^2*U^3*V + 6*D*M^14*N^2*U^2*V^2 - 10*D*M^14*N^2*U*V^3 +
+          D*M^14*N^2*V^4 + 8*D*M^13*N^3*U^4 - 42*D*M^13*N^3*U^3*V + 14*D*M^13*N^3*U^2*V^2 +
+          6*D*M^13*N^3*U*V^3 + 30*D*M^12*N^4*U^4 + 44*D*M^12*N^4*U^3*V + 16*D*M^12*N^4*U^2*V^2
+          - 28*D*M^12*N^4*U*V^3 - 2*D*M^12*N^4*V^4 - 8*D*M^11*N^5*U^4 + 14*D*M^11*N^5*U^3*V -
+          58*D*M^11*N^5*U^2*V^2 + 30*D*M^11*N^5*U*V^3 - 145*D*M^10*N^6*U^4 +
+          46*D*M^10*N^6*U^3*V + 26*D*M^10*N^6*U^2*V^2 - 22*D*M^10*N^6*U*V^3 - 17*D*M^10*N^6*V^4
+          - 16*D*M^9*N^7*U^4 + 54*D*M^9*N^7*U^3*V - 66*D*M^9*N^7*U^2*V^2 + 22*D*M^9*N^7*U*V^3 +
+          164*D*M^8*N^8*U^4 - 24*D*M^8*N^8*U^3*V + 30*D*M^8*N^8*U^2*V^2 - 8*D*M^8*N^8*U*V^3 -
+          28*D*M^8*N^8*V^4 + 16*D*M^7*N^9*U^4 - 54*D*M^7*N^9*U^3*V + 66*D*M^7*N^9*U^2*V^2 -
+          22*D*M^7*N^9*U*V^3 - 145*D*M^6*N^10*U^4 + 46*D*M^6*N^10*U^3*V + 26*D*M^6*N^10*U^2*V^2
+          - 22*D*M^6*N^10*U*V^3 - 17*D*M^6*N^10*V^4 + 8*D*M^5*N^11*U^4 - 14*D*M^5*N^11*U^3*V +
+          58*D*M^5*N^11*U^2*V^2 - 30*D*M^5*N^11*U*V^3 + 30*D*M^4*N^12*U^4 + 44*D*M^4*N^12*U^3*V
+          + 16*D*M^4*N^12*U^2*V^2 - 28*D*M^4*N^12*U*V^3 - 2*D*M^4*N^12*V^4 - 8*D*M^3*N^13*U^4 +
+          42*D*M^3*N^13*U^3*V - 14*D*M^3*N^13*U^2*V^2 - 6*D*M^3*N^13*U*V^3 + D*M^2*N^14*U^4 -
+          14*D*M^2*N^14*U^3*V + 6*D*M^2*N^14*U^2*V^2 - 10*D*M^2*N^14*U*V^3 + D*M^2*N^14*V^4 +
+          2*D*M*N^15*U^3*V - 6*D*M*N^15*U^2*V^2 + 2*D*M*N^15*U*V^3 + D*N^16*U^2*V^2 -
+          2*M^10*N^2*(b : ZMod p)^2 - 8*M^8*N^4*(b : ZMod p)^2 - 12*M^6*N^6*(b : ZMod p)^2 -
+          8*M^4*N^8*(b : ZMod p)^2 - 2*M^2*N^10*(b : ZMod p)^2
+        ) * hR
+    exact isSquare_of_mul_sq (mul_ne_zero (mul_ne_zero hJ hE) hH) key
+  · have key : D * ((M ^ 2 - N ^ 2) * (((M ^ 2 + N ^ 2) * (M * V) + (M ^ 2 + 2 * M * N - N ^ 2) * (N * U)) *
+        ((M ^ 2 + N ^ 2) * (N * V) + (M ^ 2 + 2 * M * N - N ^ 2) * (M * U)))) ^ 2 =
+        (((M ^ 2 + N ^ 2) * (a : ZMod p) + (M ^ 2 + 2 * M * N - N ^ 2) * (b : ZMod p)) * M * N * (M ^ 2 + N ^ 2)) ^ 2 := by
+      linear_combination (M ^ 2 * N ^ 2 * (M ^ 2 + N ^ 2) ^ 4) * ha' +
+        (M ^ 2 * N ^ 2 * (M ^ 2 + N ^ 2) ^ 3 * (M ^ 2 + 2 * M * N - N ^ 2)) * hb' +
+        (
+          D*M^12*U^2*V^2 + 2*D*M^11*N*U^3*V + 2*D*M^11*N*U^2*V^2 + 2*D*M^11*N*U*V^3 +
+          D*M^10*N^2*U^4 + 10*D*M^10*N^2*U^3*V + 4*D*M^10*N^2*U^2*V^2 - 2*D*M^10*N^2*U*V^3 +
+          D*M^10*N^2*V^4 + 8*D*M^9*N^3*U^4 - 10*D*M^9*N^3*U^3*V + 6*D*M^9*N^3*U^2*V^2 +
+          6*D*M^9*N^3*U*V^3 + 4*D*M^8*N^4*U^4 + 8*D*M^8*N^4*U^3*V - 9*D*M^8*N^4*U^2*V^2 -
+          8*D*M^8*N^4*U*V^3 + 4*D*M^8*N^4*V^4 - 24*D*M^7*N^5*U^4 - 12*D*M^7*N^5*U^3*V +
+          4*D*M^7*N^5*U^2*V^2 + 4*D*M^7*N^5*U*V^3 + 6*D*M^6*N^6*U^4 - 4*D*M^6*N^6*U^3*V -
+          24*D*M^6*N^6*U^2*V^2 - 12*D*M^6*N^6*U*V^3 + 6*D*M^6*N^6*V^4 + 24*D*M^5*N^7*U^4 +
+          12*D*M^5*N^7*U^3*V - 4*D*M^5*N^7*U^2*V^2 - 4*D*M^5*N^7*U*V^3 + 4*D*M^4*N^8*U^4 +
+          8*D*M^4*N^8*U^3*V - 9*D*M^4*N^8*U^2*V^2 - 8*D*M^4*N^8*U*V^3 + 4*D*M^4*N^8*V^4 -
+          8*D*M^3*N^9*U^4 + 10*D*M^3*N^9*U^3*V - 6*D*M^3*N^9*U^2*V^2 - 6*D*M^3*N^9*U*V^3 +
+          D*M^2*N^10*U^4 + 10*D*M^2*N^10*U^3*V + 4*D*M^2*N^10*U^2*V^2 - 2*D*M^2*N^10*U*V^3 +
+          D*M^2*N^10*V^4 - 2*D*M*N^11*U^3*V - 2*D*M*N^11*U^2*V^2 - 2*D*M*N^11*U*V^3 +
+          D*N^12*U^2*V^2 - 2*M^6*N^2*(b : ZMod p)^2 - 4*M^4*N^4*(b : ZMod p)^2 - 2*M^2*N^6*(b :
+          ZMod p)^2
+        ) * hR
+    exact isSquare_of_mul_sq (mul_ne_zero hE hz) key
+
+theorem isSquare_class_mod_R1 {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2)
+    (hdvd : (p : ℤ) ∣ m ^ 4 - 2 * m ^ 3 * n + 2 * m ^ 2 * n ^ 2 + 2 * m * n ^ 3 + n ^ 4)
+    {d : ℕ} (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) : IsSquare (d : ZMod p) := by
+  have : Fact p.Prime := ⟨hp⟩
+  have hmn' : ¬((m : ZMod p) = 0 ∧ (n : ZMod p) = 0) := by
+    rintro ⟨hm, hn⟩
+    obtain ⟨a, b, hab⟩ := hmn
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hab
+    push_cast at h1
+    rw [hm, hn, mul_zero, mul_zero, add_zero] at h1
+    exact zero_ne_one h1
+  have hcop' : ¬((u : ZMod p) = 0 ∧ (v : ZMod p) = 0) := by
+    rintro ⟨hu, hv⟩
+    obtain ⟨a, b, hab⟩ := hcop
+    have h1 := congrArg (Int.cast : ℤ → ZMod p) hab
+    push_cast at h1
+    rw [hu, hv, mul_zero, mul_zero, add_zero] at h1
+    exact zero_ne_one h1
+  have two_ne : (2 : ZMod p) ≠ 0 := by
+    intro h2
+    have h3 : ((2 : ℕ) : ZMod p) = 0 := by exact_mod_cast h2
+    rw [ZMod.natCast_eq_zero_iff] at h3
+    exact hp2 ((Nat.prime_dvd_prime_iff_eq hp Nat.prime_two).mp h3)
+  have hR := (ZMod.intCast_zmod_eq_zero_iff_dvd _ p).mpr hdvd
+  push_cast at hR
+  obtain ⟨a, b, ha, hb⟩ := g (false, true, true)
+  have ha' := congrArg (Int.cast : ℤ → ZMod p) ha
+  have hb' := congrArg (Int.cast : ℤ → ZMod p) hb
+  dsimp only [Q, gm, cj, cjIf, P0, P8, PL, PU] at ha' hb'
+  simp only [if_true, if_false, Bool.false_eq_true] at ha' hb'
+  push_cast at ha' hb'
+  set D : ZMod p := (d : ZMod p)
+  set M : ZMod p := (m : ZMod p)
+  set N : ZMod p := (n : ZMod p)
+  set U : ZMod p := (u : ZMod p)
+  set V : ZMod p := (v : ZMod p)
+  have hN : N ≠ 0 := by
+    intro h
+    apply hmn'
+    refine ⟨?_, h⟩
+    have h4 : M ^ 4 = 0 := by
+      rw [h] at hR
+      linear_combination hR
+    exact pow_eq_zero_iff (by norm_num) |>.mp h4
+  have hM : M ≠ 0 := by
+    intro h
+    apply hmn'
+    refine ⟨h, ?_⟩
+    have h4 : N ^ 4 = 0 := by
+      rw [h] at hR
+      linear_combination hR
+    exact pow_eq_zero_iff (by norm_num) |>.mp h4
+  have hE : M ^ 2 - N ^ 2 ≠ 0 := by
+    intro h
+    have h4 : (2 * M * N) ^ 2 = 0 := by linear_combination hR - (M ^ 2 - N ^ 2 - 2 * M * N) * h
+    exact mul_ne_zero (mul_ne_zero two_ne hM) hN (pow_eq_zero_iff (by norm_num) |>.mp h4)
+  have hA : M ^ 2 + N ^ 2 ≠ 0 := by
+    intro h
+    have hJ2 : (M ^ 2 - 2 * M * N - N ^ 2) ^ 2 = 0 := by linear_combination 2 * hR - (M ^ 2 + N ^ 2) * h
+    have hJ := pow_eq_zero_iff (by norm_num) |>.mp hJ2
+    apply hE
+    have h6 : 2 * N * (M + N) = 0 := by linear_combination h - hJ
+    have h7 := (mul_eq_zero.mp h6).resolve_left (mul_ne_zero two_ne hN)
+    have h8' : M = -N := by linear_combination h7
+    rw [h8']
+    ring
+  have hJ : M ^ 2 - 2 * M * N - N ^ 2 ≠ 0 := by
+    intro h
+    have h2 : (M ^ 2 + N ^ 2) ^ 2 = 0 := by linear_combination 2 * hR - (M ^ 2 - 2 * M * N - N ^ 2) * h
+    exact hA (pow_eq_zero_iff (by norm_num) |>.mp h2)
+  by_cases hz : ((M ^ 2 + N ^ 2) * (M * V) + (M ^ 2 - 2 * M * N - N ^ 2) * (N * U)) * ((M ^ 2 + N ^ 2) * (N * V) + (M ^ 2 - 2 * M * N - N ^ 2) * (M * U)) = 0
+  · -- the point is at a common zero of two of the forms: the other residue field
+    have hAAJ : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 - 2 * M * N - N ^ 2) ≠ 0 := mul_ne_zero (pow_ne_zero 2 hA) hJ
+    have hH : ((M ^ 2 + N ^ 2) * (M * V) - (M ^ 2 - 2 * M * N - N ^ 2) * (N * U)) * ((M ^ 2 + N ^ 2) * (N * V) - (M ^ 2 - 2 * M * N - N ^ 2) * (M * U)) ≠ 0 := by
+      intro hH
+      apply hcop'
+      rcases mul_eq_zero.mp hz with h1 | h1 <;> rcases mul_eq_zero.mp hH with h2 | h2
+      · have eU : (M ^ 2 - 2 * M * N - N ^ 2) * N * U * 2 = 0 := by linear_combination h1 - h2
+        have eV : (M ^ 2 + N ^ 2) * M * V * 2 = 0 := by linear_combination h1 + h2
+        exact ⟨by simpa [hJ, hN, two_ne] using eU, by simpa [hA, hM, two_ne] using eV⟩
+      · have eU : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 - 2 * M * N - N ^ 2) * U = 0 := by linear_combination ((M ^ 2 + N ^ 2) * N) * h1 - ((M ^ 2 + N ^ 2) * M) * h2
+        have eV : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 - 2 * M * N - N ^ 2) * V = 0 := by linear_combination ((M ^ 2 - 2 * M * N - N ^ 2) * M) * h1 + ((M ^ 2 - 2 * M * N - N ^ 2) * N) * h2
+        exact ⟨(mul_eq_zero.mp eU).resolve_left hAAJ, (mul_eq_zero.mp eV).resolve_left hAAJ⟩
+      · have eU : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 - 2 * M * N - N ^ 2) * U = 0 := by linear_combination ((M ^ 2 + N ^ 2) * M) * h1 - ((M ^ 2 + N ^ 2) * N) * h2
+        have eV : (M ^ 2 + N ^ 2) ^ 2 * (M ^ 2 - 2 * M * N - N ^ 2) * V = 0 := by linear_combination ((M ^ 2 - 2 * M * N - N ^ 2) * N) * h1 + ((M ^ 2 - 2 * M * N - N ^ 2) * M) * h2
+        exact ⟨(mul_eq_zero.mp eU).resolve_left hAAJ, (mul_eq_zero.mp eV).resolve_left hAAJ⟩
+      · have eU : (M ^ 2 - 2 * M * N - N ^ 2) * M * U * 2 = 0 := by linear_combination h1 - h2
+        have eV : (M ^ 2 + N ^ 2) * N * V * 2 = 0 := by linear_combination h1 + h2
+        exact ⟨by simpa [hJ, hM, two_ne] using eU, by simpa [hA, hN, two_ne] using eV⟩
+    have key : D * ((M ^ 2 - 2 * M * N - N ^ 2) * (M ^ 2 - N ^ 2) * (((M ^ 2 + N ^ 2) * (M * V) - (M ^ 2 - 2 * M * N - N ^ 2) * (N * U)) *
+        ((M ^ 2 + N ^ 2) * (N * V) - (M ^ 2 - 2 * M * N - N ^ 2) * (M * U)))) ^ 2 =
+        ((M ^ 2 + N ^ 2) * ((M ^ 2 + N ^ 2) * (a : ZMod p) - (M ^ 2 - 2 * M * N - N ^ 2) * (b : ZMod p)) * M * N * (M ^ 2 + N ^ 2)) ^ 2 := by
+      linear_combination ((M ^ 2 + N ^ 2) ^ 6 * M ^ 2 * N ^ 2) * ha' -
+        ((M ^ 2 + N ^ 2) ^ 5 * M ^ 2 * N ^ 2 * (M ^ 2 - 2 * M * N - N ^ 2)) * hb' +
+        (
+          D*M^16*U^2*V^2 - 2*D*M^15*N*U^3*V - 6*D*M^15*N*U^2*V^2 - 2*D*M^15*N*U*V^3 +
+          D*M^14*N^2*U^4 + 14*D*M^14*N^2*U^3*V + 6*D*M^14*N^2*U^2*V^2 + 10*D*M^14*N^2*U*V^3 +
+          D*M^14*N^2*V^4 - 8*D*M^13*N^3*U^4 - 42*D*M^13*N^3*U^3*V - 14*D*M^13*N^3*U^2*V^2 +
+          6*D*M^13*N^3*U*V^3 + 30*D*M^12*N^4*U^4 - 44*D*M^12*N^4*U^3*V + 16*D*M^12*N^4*U^2*V^2
+          + 28*D*M^12*N^4*U*V^3 - 2*D*M^12*N^4*V^4 + 8*D*M^11*N^5*U^4 + 14*D*M^11*N^5*U^3*V +
+          58*D*M^11*N^5*U^2*V^2 + 30*D*M^11*N^5*U*V^3 - 145*D*M^10*N^6*U^4 -
+          46*D*M^10*N^6*U^3*V + 26*D*M^10*N^6*U^2*V^2 + 22*D*M^10*N^6*U*V^3 - 17*D*M^10*N^6*V^4
+          + 16*D*M^9*N^7*U^4 + 54*D*M^9*N^7*U^3*V + 66*D*M^9*N^7*U^2*V^2 + 22*D*M^9*N^7*U*V^3 +
+          164*D*M^8*N^8*U^4 + 24*D*M^8*N^8*U^3*V + 30*D*M^8*N^8*U^2*V^2 + 8*D*M^8*N^8*U*V^3 -
+          28*D*M^8*N^8*V^4 - 16*D*M^7*N^9*U^4 - 54*D*M^7*N^9*U^3*V - 66*D*M^7*N^9*U^2*V^2 -
+          22*D*M^7*N^9*U*V^3 - 145*D*M^6*N^10*U^4 - 46*D*M^6*N^10*U^3*V + 26*D*M^6*N^10*U^2*V^2
+          + 22*D*M^6*N^10*U*V^3 - 17*D*M^6*N^10*V^4 - 8*D*M^5*N^11*U^4 - 14*D*M^5*N^11*U^3*V -
+          58*D*M^5*N^11*U^2*V^2 - 30*D*M^5*N^11*U*V^3 + 30*D*M^4*N^12*U^4 - 44*D*M^4*N^12*U^3*V
+          + 16*D*M^4*N^12*U^2*V^2 + 28*D*M^4*N^12*U*V^3 - 2*D*M^4*N^12*V^4 + 8*D*M^3*N^13*U^4 +
+          42*D*M^3*N^13*U^3*V + 14*D*M^3*N^13*U^2*V^2 - 6*D*M^3*N^13*U*V^3 + D*M^2*N^14*U^4 +
+          14*D*M^2*N^14*U^3*V + 6*D*M^2*N^14*U^2*V^2 + 10*D*M^2*N^14*U*V^3 + D*M^2*N^14*V^4 +
+          2*D*M*N^15*U^3*V + 6*D*M*N^15*U^2*V^2 + 2*D*M*N^15*U*V^3 + D*N^16*U^2*V^2 -
+          2*M^10*N^2*(b : ZMod p)^2 - 8*M^8*N^4*(b : ZMod p)^2 - 12*M^6*N^6*(b : ZMod p)^2 -
+          8*M^4*N^8*(b : ZMod p)^2 - 2*M^2*N^10*(b : ZMod p)^2
+        ) * hR
+    exact isSquare_of_mul_sq (mul_ne_zero (mul_ne_zero hJ hE) hH) key
+  · have key : D * ((M ^ 2 - N ^ 2) * (((M ^ 2 + N ^ 2) * (M * V) + (M ^ 2 - 2 * M * N - N ^ 2) * (N * U)) *
+        ((M ^ 2 + N ^ 2) * (N * V) + (M ^ 2 - 2 * M * N - N ^ 2) * (M * U)))) ^ 2 =
+        (((M ^ 2 + N ^ 2) * (a : ZMod p) + (M ^ 2 - 2 * M * N - N ^ 2) * (b : ZMod p)) * M * N * (M ^ 2 + N ^ 2)) ^ 2 := by
+      linear_combination (M ^ 2 * N ^ 2 * (M ^ 2 + N ^ 2) ^ 4) * ha' +
+        (M ^ 2 * N ^ 2 * (M ^ 2 + N ^ 2) ^ 3 * (M ^ 2 - 2 * M * N - N ^ 2)) * hb' +
+        (
+          D*M^12*U^2*V^2 + 2*D*M^11*N*U^3*V - 2*D*M^11*N*U^2*V^2 + 2*D*M^11*N*U*V^3 +
+          D*M^10*N^2*U^4 - 10*D*M^10*N^2*U^3*V + 4*D*M^10*N^2*U^2*V^2 + 2*D*M^10*N^2*U*V^3 +
+          D*M^10*N^2*V^4 - 8*D*M^9*N^3*U^4 - 10*D*M^9*N^3*U^3*V - 6*D*M^9*N^3*U^2*V^2 +
+          6*D*M^9*N^3*U*V^3 + 4*D*M^8*N^4*U^4 - 8*D*M^8*N^4*U^3*V - 9*D*M^8*N^4*U^2*V^2 +
+          8*D*M^8*N^4*U*V^3 + 4*D*M^8*N^4*V^4 + 24*D*M^7*N^5*U^4 - 12*D*M^7*N^5*U^3*V -
+          4*D*M^7*N^5*U^2*V^2 + 4*D*M^7*N^5*U*V^3 + 6*D*M^6*N^6*U^4 + 4*D*M^6*N^6*U^3*V -
+          24*D*M^6*N^6*U^2*V^2 + 12*D*M^6*N^6*U*V^3 + 6*D*M^6*N^6*V^4 - 24*D*M^5*N^7*U^4 +
+          12*D*M^5*N^7*U^3*V + 4*D*M^5*N^7*U^2*V^2 - 4*D*M^5*N^7*U*V^3 + 4*D*M^4*N^8*U^4 -
+          8*D*M^4*N^8*U^3*V - 9*D*M^4*N^8*U^2*V^2 + 8*D*M^4*N^8*U*V^3 + 4*D*M^4*N^8*V^4 +
+          8*D*M^3*N^9*U^4 + 10*D*M^3*N^9*U^3*V + 6*D*M^3*N^9*U^2*V^2 - 6*D*M^3*N^9*U*V^3 +
+          D*M^2*N^10*U^4 - 10*D*M^2*N^10*U^3*V + 4*D*M^2*N^10*U^2*V^2 + 2*D*M^2*N^10*U*V^3 +
+          D*M^2*N^10*V^4 - 2*D*M*N^11*U^3*V + 2*D*M*N^11*U^2*V^2 - 2*D*M*N^11*U*V^3 +
+          D*N^12*U^2*V^2 - 2*M^6*N^2*(b : ZMod p)^2 - 4*M^4*N^4*(b : ZMod p)^2 - 2*M^2*N^6*(b :
+          ZMod p)^2
+        ) * hR
+    exact isSquare_of_mul_sq (mul_ne_zero hE hz) key
+
+/-- **The class modulo the primes of the octic.** For coprime `m, n` and coprime `u, v`, a `d` such
+that `d` times each of the eight products is a Gaussian square is a square modulo every odd prime
+dividing `m⁸ + 14m⁴n⁴ + n⁸`. No condition on the ratio, and the four forms need not be squares. -/
+theorem isSquare_class_mod_octic {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    {p : ℕ} (hp : p.Prime) (hp2 : p ≠ 2) (hdvd : (p : ℤ) ∣ m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8)
+    {d : ℕ} (g : ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f)) : IsSquare (d : ZMod p) := by
+  have e : m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8 =
+      (m ^ 4 - 2 * m ^ 3 * n + 2 * m ^ 2 * n ^ 2 + 2 * m * n ^ 3 + n ^ 4) *
+      (m ^ 4 + 2 * m ^ 3 * n + 2 * m ^ 2 * n ^ 2 - 2 * m * n ^ 3 + n ^ 4) := by ring
+  rw [e] at hdvd
+  rcases (Nat.prime_iff_prime_int.mp hp).dvd_or_dvd hdvd with h | h
+  · exact isSquare_class_mod_R1 hmn hcop hp hp2 h g
+  · exact isSquare_class_mod_R2 hmn hcop hp hp2 h g
+
 /-! ### Lines by Euler's criterion, for primes too large for a mask -/
 
 /-- A necessary condition for `x` to be a square modulo the odd prime `p`:
@@ -1260,7 +1569,8 @@ theorem iotaOf_spec {p io : ℕ} (h : iotaOf p = some io) : io * io % p = p - 1 
 and coprime `u, v` at which the four forms are squares there is a `d > 0` without square factors
 such that `d` times each of the eight products is a Gaussian square, and:
 every prime factor of `d` divides `2mn(m − n)(m + n)`; every odd prime factor of `d` is
-`≡ ±1 (mod 8)`; `d` is even; `d` is a square modulo every odd prime dividing `m² + n²`. -/
+`≡ ±1 (mod 8)`; `d` is even; `d` is a square modulo every odd prime dividing `m² + n²` or
+`m⁸ + 14m⁴n⁴ + n⁸`. -/
 theorem exists_class_struct {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
     (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
     (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
@@ -1271,10 +1581,13 @@ theorem exists_class_struct {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCopr
       (∀ p : ℕ, p.Prime → p ∣ d → p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧
       2 ∣ d ∧
       (∀ p : ℕ, p.Prime → p ≠ 2 → (p : ℤ) ∣ m ^ 2 + n ^ 2 → IsSquare (d : ZMod p)) ∧
+      (∀ p : ℕ, p.Prime → p ≠ 2 → (p : ℤ) ∣ m ^ 8 + 14 * m ^ 4 * n ^ 4 + n ^ 8 →
+        IsSquare (d : ZMod p)) ∧
       ∀ f : Bool × Bool × Bool, GSqP d (Q m n u v f) := by
   obtain ⟨d, hd, hns, hsup, hE, g⟩ := exists_class_prod8 hmn hcop h0 h8 hL hU n0 n8 nL nU
   exact ⟨d, hd, hns, hsup, hE, two_dvd_class hmn hcop h0 h8 hL hU g,
-    fun p hp hp2 hdvd => isSquare_class_mod hmn hcop hp hp2 hdvd g, g⟩
+    fun p hp hp2 hdvd => isSquare_class_mod hmn hcop hp hp2 hdvd g,
+    fun p hp hp2 hdvd => isSquare_class_mod_octic hmn hcop hp hp2 hdvd g, g⟩
 
 /-! ### The candidates and the certificate -/
 
@@ -1579,5 +1892,520 @@ theorem no_point_of_entry8 {masks : List (ℕ × ℕ × ℕ)} (hmasks : MasksOk 
       have h3 := hmasks _ (mem_of_findMask hfind)
       exact not_gsq_of_kills (prime_of_isPrime hp) rfl hk0 h3.1 h3.2 hk hdc hcop h0 h8 hL hU g
     · exact Bool.false_ne_true h2
+
+/-! ### The class from its structure alone -/
+
+/-- An entry `(m, n, ps, d0, qs)`: `m, n` coprime; `ps` lists primes, among them every prime factor
+of `2mn(m − n)(m + n)`; `qs` lists odd primes dividing `(m² + n²)(m⁸ + 14m⁴n⁴ + n⁸)`; and every
+candidate (a product of the primes of `ps` that are 2 or `≡ ±1 (mod 8)`) other than `d0` is odd,
+or is not a square modulo one of the primes of `qs` (by Euler's criterion). -/
+def structOk (e : ℕ × ℕ × List ℕ × ℕ × List ℕ) : Bool :=
+  decide (0 < e.2.1) && decide (e.2.1 < e.1) && decide (Nat.Coprime e.1 e.2.1) &&
+    e.2.2.1.all isPrime &&
+    decide (2 * e.1 * e.2.1 * (e.1 - e.2.1) * (e.1 + e.2.1) ∣ e.2.2.1.prod ^ 64) &&
+    e.2.2.2.2.all (fun p => isPrime p && decide (p ≠ 2) &&
+      decide (p ∣ (e.1 ^ 2 + e.2.1 ^ 2) * (e.1 ^ 8 + 14 * e.1 ^ 4 * e.2.1 ^ 4 + e.2.1 ^ 8))) &&
+    (prods (e.2.2.1.filter keep8)).all (fun d => d == e.2.2.2.1 || d % 2 == 1 ||
+      e.2.2.2.2.any fun p => !eul p (d % p))
+
+/-- **The class of a solution, from the theorems on its structure alone.** If `structOk` holds
+for `(m, n, ps, d0, qs)`, then at every solution on the four forms `d0` times each of the eight
+products is a Gaussian square: the class is `d0`. No local computation at the points is used. -/
+theorem class_of_structOk {e : ℕ × ℕ × List ℕ × ℕ × List ℕ} (he : structOk e = true) {u v : ℤ}
+    (hcop : IsCoprime u v) (hv : v ≠ 0) (huv : u + v ≠ 0)
+    (h0 : ∃ w, nrm (P0 e.1 e.2.1 u v) = w ^ 2) (h8 : ∃ w, nrm (P8 e.1 e.2.1 u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL e.1 e.2.1 u v) = w ^ 2) (hU : ∃ w, nrm (PU e.1 e.2.1 u v) = w ^ 2) :
+    ∀ f : Bool × Bool × Bool, GSqP (e.2.2.2.1 : ℤ) (Q e.1 e.2.1 u v f) := by
+  obtain ⟨m, n, ps, d0, qs⟩ := e
+  unfold structOk at he
+  simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true] at he
+  obtain ⟨⟨⟨⟨⟨⟨hn, hnm⟩, hmn⟩, hps⟩, hdvd⟩, hqs⟩, hall⟩ := he
+  dsimp only at h0 h8 hL hU ⊢
+  have hps' : ∀ p ∈ ps, p.Prime := fun p hp => prime_of_isPrime (hps p hp)
+  have hps8 : ∀ p ∈ ps.filter keep8, p.Prime := fun p hp => hps' p (List.mem_filter.mp hp).1
+  have hm0 : (m : ℤ) ≠ 0 := by
+    have : 0 < m := by omega
+    exact_mod_cast this.ne'
+  have hn0 : (n : ℤ) ≠ 0 := by exact_mod_cast hn.ne'
+  have hmn0 : (m : ℤ) - n ≠ 0 := by
+    have : (n : ℤ) < m := by exact_mod_cast hnm
+    intro h
+    omega
+  have hbad : ∀ q : ℕ, q.Prime → (q : ℤ) ∣ 2 * (m : ℤ) * n * (m - n) * (m + n) → q ∈ ps := by
+    intro q hq hdiv
+    have e1 : (2 * (m : ℤ) * n * (m - n) * (m + n)) = ((2 * m * n * (m - n) * (m + n) : ℕ) : ℤ) := by
+      push_cast [Nat.cast_sub hnm.le]
+      ring
+    rw [e1] at hdiv
+    have h1 : q ∣ 2 * m * n * (m - n) * (m + n) := Int.natCast_dvd_natCast.mp hdiv
+    exact mem_of_prime_dvd_prod hps' hq (hq.dvd_of_dvd_pow (dvd_trans h1 hdvd))
+  obtain ⟨d, hd, hns, hsup, hE, h2, hG, hO, g⟩ := exists_class_struct
+    (Nat.isCoprime_iff_coprime.mpr hmn) hcop h0 h8 hL hU
+    (Or.inl (by dsimp only [P0]; exact mul_ne_zero hm0 hv))
+    (Or.inl (by dsimp only [P8]; exact mul_ne_zero hn0 hv))
+    (Or.inr (by dsimp only [PL]; exact mul_ne_zero hmn0 huv))
+    (Or.inr (by
+      dsimp only [PU]
+      refine mul_ne_zero ?_ huv
+      have : (0 : ℤ) < (m : ℤ) + n := by positivity
+      exact this.ne'))
+  have hmem : d ∈ prods (ps.filter keep8) := by
+    refine mem_prods _ hps8 d hd hns (fun q hq hqd => ?_)
+    refine List.mem_filter.mpr ⟨hbad q hq (hsup q hq hqd), ?_⟩
+    unfold keep8
+    rcases hE q hq hqd with h | h | h
+    · simp [h]
+    · simp [h]
+    · simp [h]
+  have h3 := hall d hmem
+  rcases (Bool.or_eq_true _ _).mp h3 with h4 | h4
+  · rcases (Bool.or_eq_true _ _).mp h4 with h5 | h5
+    · have h6 : d = d0 := beq_iff_eq.mp h5
+      rw [← h6]
+      exact g
+    · exfalso
+      have h6 : d % 2 = 1 := beq_iff_eq.mp h5
+      omega
+  · exfalso
+    obtain ⟨p, hp, hne⟩ := List.any_eq_true.mp h4
+    obtain ⟨⟨hpp, hp2⟩, hdv⟩ := hqs p hp
+    have hp' := prime_of_isPrime hpp
+    have hdvZ : (p : ℤ) ∣ ((m : ℤ) ^ 2 + (n : ℤ) ^ 2) *
+        ((m : ℤ) ^ 8 + 14 * (m : ℤ) ^ 4 * (n : ℤ) ^ 4 + (n : ℤ) ^ 8) := by
+      have h7 := Int.natCast_dvd_natCast.mpr hdv
+      push_cast at h7
+      exact h7
+    have hsq : IsSquare (d : ZMod p) := by
+      rcases (Nat.prime_iff_prime_int.mp hp').dvd_or_dvd hdvZ with h7 | h7
+      · exact hG p hp' hp2 h7
+      · exact hO p hp' hp2 h7
+    obtain ⟨r, hr⟩ := hsq
+    have h8' : eul p (d % p) = true := by
+      apply eul_of_sq hp' hp2 (c := r)
+      rw [ZMod.natCast_mod, hr]
+      ring
+    rw [h8'] at hne
+    exact Bool.false_ne_true hne
+
+/-! ### Four classes, one for each form -/
+
+/-- As `exists_class`, keeping the fact that `d` has no square factor. -/
+theorem exists_class_nosq {x y w : ℤ} (h : x ^ 2 + y ^ 2 = w ^ 2) (hne : x ≠ 0 ∨ y ≠ 0) :
+    ∃ d : ℕ, 0 < d ∧ NoSq d ∧ GSq d x y ∧
+      ∀ p : ℕ, p.Prime → p ∣ d → p = 2 ∨ ((p : ℤ) ∣ x ∧ (p : ℤ) ∣ y) := by
+  obtain ⟨k, hk, hg⟩ := exists_gsq_of_norm h hne
+  obtain ⟨d, e, hd, he, hde, hns⟩ := exists_nosq k hk
+  have hg' : GSq (d : ℤ) x y := by
+    apply GSq.reduce e he
+    have e1 : ((k : ℕ) : ℤ) = (d : ℤ) * (e : ℤ) ^ 2 := by exact_mod_cast hde
+    rw [← e1]
+    exact hg
+  refine ⟨d, hd, hns, hg', ?_⟩
+  intro p hp hpd
+  by_cases hp2 : p = 2
+  · exact Or.inl hp2
+  · exact Or.inr (hg'.support hp hp2 hpd (hns p hp))
+
+theorem two_cast_dvd (x : ℤ) : ((2 : ℕ) : ℤ) ∣ 2 * x := by
+  rw [Nat.cast_ofNat]
+  exact dvd_mul_right 2 x
+
+/-- **Four classes.** For coprime `m, n` and coprime `u, v` at which the four forms are squares,
+each of the four pairs has its own class: a positive integer without square factors that makes
+the pair a Gaussian square, whose prime factors are 2 or `≡ ±1 (mod 8)` and divide `2mn` (for
+`P0`, `P8`) or `2(m + n)(m − n)` (for `PL`, `PU`). -/
+theorem exists_classes4 {m n u v : ℤ} (hmn : IsCoprime m n) (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    (n0 : (P0 m n u v).1 ≠ 0 ∨ (P0 m n u v).2 ≠ 0) (n8 : (P8 m n u v).1 ≠ 0 ∨ (P8 m n u v).2 ≠ 0)
+    (nL : (PL m n u v).1 ≠ 0 ∨ (PL m n u v).2 ≠ 0) (nU : (PU m n u v).1 ≠ 0 ∨ (PU m n u v).2 ≠ 0) :
+    ∃ d0 d8 dL dU : ℕ,
+      (0 < d0 ∧ NoSq d0 ∧ GSqP d0 (P0 m n u v) ∧ ∀ p : ℕ, p.Prime → p ∣ d0 →
+        (p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧ (p : ℤ) ∣ 2 * (m * n)) ∧
+      (0 < d8 ∧ NoSq d8 ∧ GSqP d8 (P8 m n u v) ∧ ∀ p : ℕ, p.Prime → p ∣ d8 →
+        (p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧ (p : ℤ) ∣ 2 * (m * n)) ∧
+      (0 < dL ∧ NoSq dL ∧ GSqP dL (PL m n u v) ∧ ∀ p : ℕ, p.Prime → p ∣ dL →
+        (p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧ (p : ℤ) ∣ 2 * ((m + n) * (m - n))) ∧
+      (0 < dU ∧ NoSq dU ∧ GSqP dU (PU m n u v) ∧ ∀ p : ℕ, p.Prime → p ∣ dU →
+        (p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧ (p : ℤ) ∣ 2 * ((m + n) * (m - n))) := by
+  obtain ⟨w0, hw0⟩ := h0
+  obtain ⟨w8, hw8⟩ := h8
+  obtain ⟨wL, hwL⟩ := hL
+  obtain ⟨wU, hwU⟩ := hU
+  obtain ⟨d0, hd0, hs0, g0, s0⟩ := exists_class_nosq hw0 n0
+  obtain ⟨d8, hd8, hs8, g8, s8⟩ := exists_class_nosq hw8 n8
+  obtain ⟨dL, hdL, hsL, gL, sL⟩ := exists_class_nosq hwL nL
+  obtain ⟨dU, hdU, hsU, gU, sU⟩ := exists_class_nosq hwU nU
+  obtain ⟨a, b, hab⟩ := hcop
+  have E := fun (p : ℕ) (hp : p.Prime) (hp2 : p ≠ 2)
+      (h : Dv p (P0 m n u v) ∨ Dv p (P8 m n u v) ∨ Dv p (PL m n u v) ∨ Dv p (PU m n u v)) =>
+    mod_eight_of_dv hmn ⟨a, b, hab⟩ ⟨w0, hw0⟩ ⟨wL, hwL⟩ hp hp2 h
+  refine ⟨d0, d8, dL, dU, ⟨hd0, hs0, g0, ?_⟩, ⟨hd8, hs8, g8, ?_⟩, ⟨hdL, hsL, gL, ?_⟩,
+    ⟨hdU, hsU, gU, ?_⟩⟩
+  · intro p hp hpd
+    by_cases hp2 : p = 2
+    · subst hp2
+      exact ⟨Or.inl rfl, two_cast_dvd _⟩
+    · have hD := (s0 p hp hpd).resolve_left hp2
+      refine ⟨Or.inr (E p hp hp2 (Or.inl hD)), Dvd.dvd.mul_left ?_ 2⟩
+      obtain ⟨hx, hy⟩ := hD
+      have e2 : m * n = b * n * (m * v) + a * m * (n * u) := by
+        linear_combination (-(m * n)) * hab
+      rw [e2]
+      exact dvd_add (Dvd.dvd.mul_left hx _) (Dvd.dvd.mul_left hy _)
+  · intro p hp hpd
+    by_cases hp2 : p = 2
+    · subst hp2
+      exact ⟨Or.inl rfl, two_cast_dvd _⟩
+    · have hD := (s8 p hp hpd).resolve_left hp2
+      refine ⟨Or.inr (E p hp hp2 (Or.inr (Or.inl hD))), Dvd.dvd.mul_left ?_ 2⟩
+      obtain ⟨hx, hy⟩ := hD
+      have e2 : m * n = b * m * (n * v) + a * n * (m * u) := by
+        linear_combination (-(m * n)) * hab
+      rw [e2]
+      exact dvd_add (Dvd.dvd.mul_left hx _) (Dvd.dvd.mul_left hy _)
+  · intro p hp hpd
+    by_cases hp2 : p = 2
+    · subst hp2
+      exact ⟨Or.inl rfl, two_cast_dvd _⟩
+    · have hD := (sL p hp hpd).resolve_left hp2
+      refine ⟨Or.inr (E p hp hp2 (Or.inr (Or.inr (Or.inl hD)))), ?_⟩
+      obtain ⟨hx, hy⟩ := hD
+      have e2 : 2 * ((m + n) * (m - n)) =
+          (a - b) * (m - n) * ((m + n) * (u - v)) + (a + b) * (m + n) * ((m - n) * (u + v)) := by
+        linear_combination (-(2 * (m + n) * (m - n))) * hab
+      rw [e2]
+      exact dvd_add (Dvd.dvd.mul_left hx _) (Dvd.dvd.mul_left hy _)
+  · intro p hp hpd
+    by_cases hp2 : p = 2
+    · subst hp2
+      exact ⟨Or.inl rfl, two_cast_dvd _⟩
+    · have hD := (sU p hp hpd).resolve_left hp2
+      refine ⟨Or.inr (E p hp hp2 (Or.inr (Or.inr (Or.inr hD)))), ?_⟩
+      obtain ⟨hx, hy⟩ := hD
+      have e2 : 2 * ((m + n) * (m - n)) =
+          (a - b) * (m + n) * ((m - n) * (u - v)) + (a + b) * (m - n) * ((m + n) * (u + v)) := by
+        linear_combination (-(2 * (m + n) * (m - n))) * hab
+      rw [e2]
+      exact dvd_add (Dvd.dvd.mul_left hx _) (Dvd.dvd.mul_left hy _)
+
+theorem P_congr {M : ℕ} {m n u v u' v' : ℤ} (hu : u ≡ u' [ZMOD M]) (hv : v ≡ v' [ZMOD M]) :
+    ((P0 m n u v).1 ≡ (P0 m n u' v').1 [ZMOD M] ∧ (P0 m n u v).2 ≡ (P0 m n u' v').2 [ZMOD M]) ∧
+    ((P8 m n u v).1 ≡ (P8 m n u' v').1 [ZMOD M] ∧ (P8 m n u v).2 ≡ (P8 m n u' v').2 [ZMOD M]) ∧
+    ((PL m n u v).1 ≡ (PL m n u' v').1 [ZMOD M] ∧ (PL m n u v).2 ≡ (PL m n u' v').2 [ZMOD M]) ∧
+    ((PU m n u v).1 ≡ (PU m n u' v').1 [ZMOD M] ∧ (PU m n u v).2 ≡ (PU m n u' v').2 [ZMOD M]) := by
+  refine ⟨⟨?_, ?_⟩, ⟨?_, ?_⟩, ⟨?_, ?_⟩, ⟨?_, ?_⟩⟩ <;> dsimp only [P0, P8, PL, PU] <;> gcongr
+
+/-- The candidates for the classes of `P0`, `P8`. -/
+def candA (m n : ℕ) (ps : List ℕ) : List ℕ :=
+  prods (ps.filter fun p => keep8 p && decide (p ∣ 2 * (m * n)))
+
+/-- The candidates for the classes of `PL`, `PU`. -/
+def candB (m n : ℕ) (ps : List ℕ) : List ℕ :=
+  prods (ps.filter fun p => keep8 p && decide (p ∣ 2 * ((m + n) * (m - n))))
+
+/-- Four lists of classes, one for each form. -/
+abbrev Box := List ℕ × List ℕ × List ℕ × List ℕ
+
+/-- The tuple `t` has each of its four classes in the list of the box. -/
+abbrev In4 (t : ℕ × ℕ × ℕ × ℕ) (b : Box) : Prop :=
+  t.1 ∈ b.1 ∧ t.2.1 ∈ b.2.1 ∧ t.2.2.1 ∈ b.2.2.1 ∧ t.2.2.2 ∈ b.2.2.2
+
+/-- The classes of the lists `A`, `A`, `B`, `B` that make the four pairs Gaussian squares at the
+pair of residues `(u, v)` modulo `M`. -/
+def rec4 (m n : ℤ) (M G : ℕ) (A B : List ℕ) (u v : ℤ) : Box :=
+  (A.filter fun d => gOkN M G d (resQ M (P0 m n u v)),
+   A.filter fun d => gOkN M G d (resQ M (P8 m n u v)),
+   B.filter fun d => gOkN M G d (resQ M (PL m n u v)),
+   B.filter fun d => gOkN M G d (resQ M (PU m n u v)))
+
+/-- The same elements, without repetitions. -/
+def dedupL : List Box → List Box
+  | [] => []
+  | x :: l => if (dedupL l).contains x then dedupL l else x :: dedupL l
+
+theorem mem_dedupL {x : Box} : ∀ {l : List Box}, x ∈ l → x ∈ dedupL l := by
+  intro l
+  induction l with
+  | nil =>
+    intro h
+    exact h
+  | cons y l ih =>
+    intro h
+    rw [dedupL]
+    rcases List.mem_cons.mp h with rfl | h'
+    · split
+      · rename_i hc
+        simpa using hc
+      · exact List.mem_cons_self
+    · split
+      · exact ih h'
+      · exact List.mem_cons_of_mem _ (ih h')
+
+/-- The boxes of all pairs of residues `(u, v)` modulo `M`, a power of `p`, not both divisible by
+`p`, at which the four forms are squares modulo `M`; each box once. -/
+def recs4 (m n : ℤ) (M p S G : ℕ) (A B : List ℕ) : List Box :=
+  dedupL ((List.range M).flatMap fun u => (List.range M).filterMap fun v =>
+    if !(u % p == 0 && v % p == 0) && formsOk m n M S u v then some (rec4 m n M G A B u v)
+    else none)
+
+/-- The classes of a solution are in one of the boxes, modulo every prime power. -/
+theorem exists_rec4 {m n : ℤ} {M p k : ℕ} (hp : p.Prime) (hpM : M = p ^ k) (hk0 : 0 < k)
+    {u v : ℤ} (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    {d0 d8 dL dU : ℕ} (g0 : GSqP d0 (P0 m n u v)) (g8 : GSqP d8 (P8 m n u v))
+    (gL : GSqP dL (PL m n u v)) (gU : GSqP dU (PU m n u v))
+    {A B : List ℕ} (hd0 : d0 ∈ A) (hd8 : d8 ∈ A) (hdL : dL ∈ B) (hdU : dU ∈ B) :
+    ∃ r ∈ recs4 m n M p (sMask M) (gMask M) A B, In4 (d0, d8, dL, dU) r := by
+  have hM : 0 < M := by
+    rw [hpM]
+    exact pow_pos hp.pos k
+  have cu := res_cast hM u
+  have cv := res_cast hM v
+  obtain ⟨c0, c8, cL, cU⟩ := nrm_congr (m := m) (n := n) cu cv
+  obtain ⟨⟨a0, b0⟩, ⟨a8, b8⟩, ⟨aL, bL⟩, ⟨aU, bU⟩⟩ := P_congr (m := m) (n := n) cu cv
+  obtain ⟨w0, hw0⟩ := h0
+  obtain ⟨w8, hw8⟩ := h8
+  obtain ⟨wL, hwL⟩ := hL
+  obtain ⟨wU, hwU⟩ := hU
+  have f : formsOk m n M (sMask M) (res M u) (res M v) = true := by
+    unfold formsOk
+    rw [sqOk_of hM (w := w0) (hw0 ▸ c0), sqOk_of hM (w := w8) (hw8 ▸ c8),
+      sqOk_of hM (w := wL) (hwL ▸ cL), sqOk_of hM (w := wU) (hwU ▸ cU)]
+    rfl
+  have hpi : Prime (p : ℤ) := Nat.prime_iff_prime_int.mp hp
+  have hpM' : (p : ℤ) ∣ (M : ℤ) := by
+    rw [hpM]
+    push_cast
+    exact dvd_pow_self _ hk0.ne'
+  have e : ∀ {x : ℤ}, ((res M x : ℕ) : ℤ) ≡ x [ZMOD (M : ℤ)] → res M x % p = 0 → (p : ℤ) ∣ x := by
+    intro x hx h2
+    have h3 : (p : ℤ) ∣ ((res M x : ℕ) : ℤ) := by exact_mod_cast Nat.dvd_of_mod_eq_zero h2
+    have h4 : (M : ℤ) ∣ x - (res M x : ℕ) := Int.ModEq.dvd hx
+    have h5 := dvd_add (dvd_trans hpM' h4) h3
+    rwa [sub_add_cancel] at h5
+  have nb : (res M u % p == 0 && res M v % p == 0) = false := by
+    rw [Bool.eq_false_iff]
+    intro h
+    simp only [Bool.and_eq_true, beq_iff_eq] at h
+    exact hpi.not_isUnit (hcop.isUnit_of_dvd' (e cu h.1) (e cv h.2))
+  have hc : (!(res M u % p == 0 && res M v % p == 0) &&
+      formsOk m n M (sMask M) (res M u) (res M v)) = true := by
+    rw [nb, f]
+    rfl
+  refine ⟨rec4 m n M (gMask M) A B (res M u) (res M v), ?_, ?_⟩
+  · unfold recs4
+    apply mem_dedupL
+    rw [List.mem_flatMap]
+    refine ⟨res M u, List.mem_range.mpr (res_lt hM u), ?_⟩
+    rw [List.mem_filterMap]
+    exact ⟨res M v, List.mem_range.mpr (res_lt hM v), if_pos hc⟩
+  · refine ⟨List.mem_filter.mpr ⟨hd0, ?_⟩, List.mem_filter.mpr ⟨hd8, ?_⟩,
+      List.mem_filter.mpr ⟨hdL, ?_⟩, List.mem_filter.mpr ⟨hdU, ?_⟩⟩
+    · show gOkN M (gMask M) d0 _ = true
+      rw [gOkN_eq hM]
+      exact gOk_of_GSqP hM g0 a0 b0
+    · show gOkN M (gMask M) d8 _ = true
+      rw [gOkN_eq hM]
+      exact gOk_of_GSqP hM g8 a8 b8
+    · show gOkN M (gMask M) dL _ = true
+      rw [gOkN_eq hM]
+      exact gOk_of_GSqP hM gL aL bL
+    · show gOkN M (gMask M) dU _ = true
+      rw [gOkN_eq hM]
+      exact gOk_of_GSqP hM gU aU bU
+
+/-- The elements of `l` that are in `l'`. -/
+def inter (l l' : List ℕ) : List ℕ := l.filter fun x => l'.contains x
+
+theorem mem_inter {x : ℕ} {l l' : List ℕ} (h : x ∈ l) (h' : x ∈ l') : x ∈ inter l l' := by
+  unfold inter
+  rw [List.mem_filter]
+  exact ⟨h, by simpa using h'⟩
+
+theorem isEmpty_false_of_mem {x : ℕ} {l : List ℕ} (h : x ∈ l) : l.isEmpty = false := by
+  cases l with
+  | nil => simp at h
+  | cons a t => rfl
+
+def inter4 (b r : Box) : Box :=
+  (inter b.1 r.1, inter b.2.1 r.2.1, inter b.2.2.1 r.2.2.1, inter b.2.2.2 r.2.2.2)
+
+def nonempty4 (b : Box) : Bool :=
+  !b.1.isEmpty && !b.2.1.isEmpty && !b.2.2.1.isEmpty && !b.2.2.2.isEmpty
+
+/-- Intersect every box with every box of `rs`, and keep the results in which no list is empty. -/
+def step4 (boxes rs : List Box) : List Box :=
+  boxes.flatMap fun b => rs.filterMap fun r =>
+    if nonempty4 (inter4 b r) then some (inter4 b r) else none
+
+theorem exists_step4 {t : ℕ × ℕ × ℕ × ℕ} {boxes rs : List Box} (hb : ∃ b ∈ boxes, In4 t b)
+    (hr : ∃ r ∈ rs, In4 t r) : ∃ c ∈ step4 boxes rs, In4 t c := by
+  obtain ⟨b, hb, h1, h2, h3, h4⟩ := hb
+  obtain ⟨r, hr, k1, k2, k3, k4⟩ := hr
+  have hin : In4 t (inter4 b r) :=
+    ⟨mem_inter h1 k1, mem_inter h2 k2, mem_inter h3 k3, mem_inter h4 k4⟩
+  have hne : nonempty4 (inter4 b r) = true := by
+    obtain ⟨i1, i2, i3, i4⟩ := hin
+    unfold nonempty4
+    rw [isEmpty_false_of_mem i1, isEmpty_false_of_mem i2, isEmpty_false_of_mem i3,
+      isEmpty_false_of_mem i4]
+    rfl
+  refine ⟨inter4 b r, ?_, hin⟩
+  unfold step4
+  rw [List.mem_flatMap]
+  refine ⟨b, hb, ?_⟩
+  rw [List.mem_filterMap]
+  exact ⟨r, hr, if_pos hne⟩
+
+/-- One line `(p, k)` of a certificate with four classes: intersect the boxes with the boxes of
+the points modulo `p^k`. A line that cannot be read changes nothing. -/
+def line4 (masks : List (ℕ × ℕ × ℕ)) (m n : ℤ) (A B : List ℕ) (boxes : List Box) (c : ℕ × ℕ) :
+    List Box :=
+  match findMask (c.1 ^ c.2) masks with
+  | some (S, G) =>
+    if isPrime c.1 && decide (0 < c.2) then step4 boxes (recs4 m n (c.1 ^ c.2) c.1 S G A B)
+    else boxes
+  | none => boxes
+
+theorem exists_line4 {masks : List (ℕ × ℕ × ℕ)} (hmasks : MasksOk masks) {m n : ℤ}
+    {u v : ℤ} (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    {d0 d8 dL dU : ℕ} (g0 : GSqP d0 (P0 m n u v)) (g8 : GSqP d8 (P8 m n u v))
+    (gL : GSqP dL (PL m n u v)) (gU : GSqP dU (PU m n u v))
+    {A B : List ℕ} (hd0 : d0 ∈ A) (hd8 : d8 ∈ A) (hdL : dL ∈ B) (hdU : dU ∈ B)
+    (boxes : List Box) (c : ℕ × ℕ) (hb : ∃ b ∈ boxes, In4 (d0, d8, dL, dU) b) :
+    ∃ b ∈ line4 masks m n A B boxes c, In4 (d0, d8, dL, dU) b := by
+  unfold line4
+  split
+  · rename_i S G hfind
+    split
+    · rename_i hc
+      simp only [Bool.and_eq_true, decide_eq_true_eq] at hc
+      obtain ⟨hS, hG⟩ : S = sMask (c.1 ^ c.2) ∧ G = gMask (c.1 ^ c.2) :=
+        hmasks _ (mem_of_findMask hfind)
+      subst hS hG
+      exact exists_step4 hb (exists_rec4 (prime_of_isPrime hc.1) rfl hc.2 hcop h0 h8 hL hU
+        g0 g8 gL gU hd0 hd8 hdL hdU)
+    · exact hb
+  · exact hb
+
+theorem exists_foldl_line4 {masks : List (ℕ × ℕ × ℕ)} (hmasks : MasksOk masks) {m n : ℤ}
+    {u v : ℤ} (hcop : IsCoprime u v)
+    (h0 : ∃ w, nrm (P0 m n u v) = w ^ 2) (h8 : ∃ w, nrm (P8 m n u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL m n u v) = w ^ 2) (hU : ∃ w, nrm (PU m n u v) = w ^ 2)
+    {d0 d8 dL dU : ℕ} (g0 : GSqP d0 (P0 m n u v)) (g8 : GSqP d8 (P8 m n u v))
+    (gL : GSqP dL (PL m n u v)) (gU : GSqP dU (PU m n u v))
+    {A B : List ℕ} (hd0 : d0 ∈ A) (hd8 : d8 ∈ A) (hdL : dL ∈ B) (hdU : dU ∈ B) :
+    ∀ (cs : List (ℕ × ℕ)) (boxes : List Box), (∃ b ∈ boxes, In4 (d0, d8, dL, dU) b) →
+      ∃ b ∈ cs.foldl (line4 masks m n A B) boxes, In4 (d0, d8, dL, dU) b := by
+  intro cs
+  induction cs with
+  | nil =>
+    intro boxes hb
+    exact hb
+  | cons c cs ih =>
+    intro boxes hb
+    rw [List.foldl_cons]
+    exact ih _ (exists_line4 hmasks hcop h0 h8 hL hU g0 g8 gL gU hd0 hd8 hdL hdU boxes c hb)
+
+/-- An entry with four classes: `(m, n, ps, lines)`, with `m, n` coprime; `ps` lists primes, among
+them every prime factor of `2mn(m − n)(m + n)`; after the lines no box of candidates is left. -/
+def entryOk4 (masks : List (ℕ × ℕ × ℕ)) (e : ℕ × ℕ × List ℕ × List (ℕ × ℕ)) : Bool :=
+  decide (0 < e.2.1) && decide (e.2.1 < e.1) && decide (Nat.Coprime e.1 e.2.1) &&
+    e.2.2.1.all isPrime &&
+    decide (2 * e.1 * e.2.1 * (e.1 - e.2.1) * (e.1 + e.2.1) ∣ e.2.2.1.prod ^ 64) &&
+    (e.2.2.2.foldl
+      (line4 masks (e.1 : ℤ) (e.2.1 : ℤ) (candA e.1 e.2.1 e.2.2.1) (candB e.1 e.2.1 e.2.2.1))
+      [(candA e.1 e.2.1 e.2.2.1, candA e.1 e.2.1 e.2.2.1, candB e.1 e.2.1 e.2.2.1,
+        candB e.1 e.2.1 e.2.2.1)]).isEmpty
+
+/-- **No point, from a certificate with four classes.** -/
+theorem no_point_of_entry4 {masks : List (ℕ × ℕ × ℕ)} (hmasks : MasksOk masks)
+    {e : ℕ × ℕ × List ℕ × List (ℕ × ℕ)} (he : entryOk4 masks e = true) {u v : ℤ}
+    (hcop : IsCoprime u v) (hv : v ≠ 0) (huv : u + v ≠ 0)
+    (h0 : ∃ w, nrm (P0 e.1 e.2.1 u v) = w ^ 2) (h8 : ∃ w, nrm (P8 e.1 e.2.1 u v) = w ^ 2)
+    (hL : ∃ w, nrm (PL e.1 e.2.1 u v) = w ^ 2) (hU : ∃ w, nrm (PU e.1 e.2.1 u v) = w ^ 2) : False := by
+  obtain ⟨m, n, ps, cert⟩ := e
+  unfold entryOk4 at he
+  simp only [Bool.and_eq_true, decide_eq_true_eq, List.all_eq_true] at he
+  obtain ⟨⟨⟨⟨⟨hn, hnm⟩, hmn⟩, hps⟩, hdvd⟩, hemp⟩ := he
+  dsimp only at h0 h8 hL hU hemp
+  have hps' : ∀ p ∈ ps, p.Prime := fun p hp => prime_of_isPrime (hps p hp)
+  have hm0 : (m : ℤ) ≠ 0 := by
+    have : 0 < m := by omega
+    exact_mod_cast this.ne'
+  have hn0 : (n : ℤ) ≠ 0 := by exact_mod_cast hn.ne'
+  have hmn0 : (m : ℤ) - n ≠ 0 := by
+    have : (n : ℤ) < m := by exact_mod_cast hnm
+    intro h
+    omega
+  have hbad : ∀ q : ℕ, q.Prime → (q : ℤ) ∣ 2 * (m : ℤ) * n * (m - n) * (m + n) → q ∈ ps := by
+    intro q hq hdiv
+    have e1 : (2 * (m : ℤ) * n * (m - n) * (m + n)) = ((2 * m * n * (m - n) * (m + n) : ℕ) : ℤ) := by
+      push_cast [Nat.cast_sub hnm.le]
+      ring
+    rw [e1] at hdiv
+    have h1 : q ∣ 2 * m * n * (m - n) * (m + n) := Int.natCast_dvd_natCast.mp hdiv
+    exact mem_of_prime_dvd_prod hps' hq (hq.dvd_of_dvd_pow (dvd_trans h1 hdvd))
+  obtain ⟨d0, d8, dL, dU, ⟨hd0, hs0, g0, t0⟩, ⟨hd8, hs8, g8, t8⟩, ⟨hdL, hsL, gL, tL⟩,
+      ⟨hdU, hsU, gU, tU⟩⟩ := exists_classes4 (Nat.isCoprime_iff_coprime.mpr hmn) hcop h0 h8 hL hU
+    (Or.inl (by dsimp only [P0]; exact mul_ne_zero hm0 hv))
+    (Or.inl (by dsimp only [P8]; exact mul_ne_zero hn0 hv))
+    (Or.inr (by dsimp only [PL]; exact mul_ne_zero hmn0 huv))
+    (Or.inr (by
+      dsimp only [PU]
+      refine mul_ne_zero ?_ huv
+      have : (0 : ℤ) < (m : ℤ) + n := by positivity
+      exact this.ne'))
+  have hA : ∀ d : ℕ, 0 < d → NoSq d → (∀ p : ℕ, p.Prime → p ∣ d →
+      (p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧ (p : ℤ) ∣ 2 * ((m : ℤ) * n)) → d ∈ candA m n ps := by
+    intro d hd hns ht
+    unfold candA
+    refine mem_prods _ (fun p hp => hps' p (List.mem_filter.mp hp).1) d hd hns (fun q hq hqd => ?_)
+    obtain ⟨h8', hdv⟩ := ht q hq hqd
+    refine List.mem_filter.mpr ⟨hbad q hq ?_, ?_⟩
+    · have e2 : 2 * (m : ℤ) * n * (m - n) * (m + n) = (2 * ((m : ℤ) * n)) * ((m - n) * (m + n)) := by
+        ring
+      rw [e2]
+      exact Dvd.dvd.mul_right hdv _
+    · have hnat : q ∣ 2 * (m * n) := by exact_mod_cast hdv
+      rw [Bool.and_eq_true, decide_eq_true_eq]
+      refine ⟨?_, hnat⟩
+      unfold keep8
+      rcases h8' with h | h | h <;> simp [h]
+  have hB : ∀ d : ℕ, 0 < d → NoSq d → (∀ p : ℕ, p.Prime → p ∣ d →
+      (p = 2 ∨ p % 8 = 1 ∨ p % 8 = 7) ∧ (p : ℤ) ∣ 2 * (((m : ℤ) + n) * (m - n))) →
+      d ∈ candB m n ps := by
+    intro d hd hns ht
+    unfold candB
+    refine mem_prods _ (fun p hp => hps' p (List.mem_filter.mp hp).1) d hd hns (fun q hq hqd => ?_)
+    obtain ⟨h8', hdv⟩ := ht q hq hqd
+    refine List.mem_filter.mpr ⟨hbad q hq ?_, ?_⟩
+    · have e2 : 2 * (m : ℤ) * n * (m - n) * (m + n) = (2 * (((m : ℤ) + n) * (m - n))) * (m * n) := by
+        ring
+      rw [e2]
+      exact Dvd.dvd.mul_right hdv _
+    · have e3 : ((2 * ((m + n) * (m - n)) : ℕ) : ℤ) = 2 * (((m : ℤ) + n) * (m - n)) := by
+        push_cast [Nat.cast_sub hnm.le]
+        ring
+      have hnat : q ∣ 2 * ((m + n) * (m - n)) := by
+        rw [← e3] at hdv
+        exact Int.natCast_dvd_natCast.mp hdv
+      rw [Bool.and_eq_true, decide_eq_true_eq]
+      refine ⟨?_, hnat⟩
+      unfold keep8
+      rcases h8' with h | h | h <;> simp [h]
+  have hfin := exists_foldl_line4 hmasks hcop h0 h8 hL hU g0 g8 gL gU (hA d0 hd0 hs0 t0)
+    (hA d8 hd8 hs8 t8) (hB dL hdL hsL tL) (hB dU hdU hsU tU) cert
+    [(candA m n ps, candA m n ps, candB m n ps, candB m n ps)]
+    ⟨(candA m n ps, candA m n ps, candB m n ps, candB m n ps), List.mem_singleton.mpr rfl,
+      hA d0 hd0 hs0 t0, hA d8 hd8 hs8 t8, hB dL hdL hsL tL, hB dU hdU hsU tU⟩
+  rw [List.isEmpty_iff] at hemp
+  rw [hemp] at hfin
+  obtain ⟨b, hb, _⟩ := hfin
+  simp at hb
 
 end MagicSquareOfSquares.CoverDescent

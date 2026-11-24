@@ -1,0 +1,4 @@
+python3 pt.py scan 1 300 0.867   (about 16 minutes; the 23,755 lines of output are not committed)
+last line: lines y = r/s, 1 <= s <= 300, 0 < r/s <= 0.867: 23754 lines; tuples left (number: lines): [(1, 6), (2, 12549), (4, 10439), (8, 760)]; lines with a tuple not of the shape g*(1,1,1,1,2): 0 []
+sha256 of the whole output: 440ae09db15bb33b15cc179d1d2ffc779f9cbe21d79f3ae2eb329070a12989ad
+first 10,604 lines: identical to those of pt_scan_200.txt

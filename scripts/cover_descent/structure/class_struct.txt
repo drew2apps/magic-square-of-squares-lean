@@ -1,0 +1,5 @@
+pairs with m^2 + n^2 neither a square nor twice a square: 119
+class 2 excluded by G: 10; by G or O: 112; smallest prime of the octic that excludes it (prime: pairs): [(13, 80), (37, 7), (61, 3), (109, 3), (157, 1), (277, 1), (349, 1), (397, 1), (613, 1), (2269, 2), (56197, 2)]
+no candidate passes E, F, G: 0; no candidate passes E, F, G, O: 54
+the 306 pairs of the two degenerate types (a solution exists, so a candidate must pass): number of candidates that pass E, F, G, O (number: pairs): [(1, 150), (2, 112), (4, 34), (8, 9), (32, 1)]
+candidates that pass for (627,364): [521266]; for (991,263): [521266]

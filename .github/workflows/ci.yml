@@ -61,7 +61,7 @@ jobs:
           diff <(grep '^AUDIT OK:' audit.txt) scripts/audit_line.txt
           diff <(sort audit.txt) <(sort scripts/audit_output.txt)
           echo "::notice title=Axiom audit::$(grep '^AUDIT OK:' audit.txt)"
-      - name: The count 310 + 115 = 425, and forged certificates are refused
+      - name: The count 306 + 119 = 425, and forged certificates are refused
         shell: bash
         run: |
           set -e -o pipefail
@@ -168,6 +168,10 @@ jobs:
           grep -q 'of these divisible by q: 0;' class_structure_100.txt && grep -q 'of these not = 2 mod 4: 0$' class_structure_100.txt && grep -q 'of these with (d/p) = -1: 0$' class_structure_100.txt
           # Theorems F and G of LAST_PAIR.md, section 17, by brute force over all residues
           python3 class_fg.py | diff - class_fg.txt
+          # what Theorems E, F, G, O decide by themselves (CLASS.md, section 3)
+          python3 class_struct.py | diff - class_struct.txt
+          grep -q 'no candidate passes E, F, G, O: 54$' class_struct.txt
+          grep -q 'candidates that pass for (627,364): \[521266\]; for (991,263): \[521266\]$' class_struct.txt
           test "$(grep -c 'odd among them 0$' class_fg.txt)" = 2 && test "$(grep -c 'non-residues among them 0$' class_fg.txt)" = 4
           # the four-class comparison of a second reviewer (rerun in the job scan-5000): the committed outputs say what the text says
           cd ../fourth
@@ -183,7 +187,6 @@ jobs:
           python3 pt_control.py | diff - pt_control.txt
           python3 pt_count.py | diff - pt_count.txt
           grep -qx '#E(F_5) = 8' pt_count.txt && grep -qx '#E(F_13) = 16' pt_count.txt
-          test "$(grep -c ' degenerate-only$' pt_scan_300.txt)" = 23754 && head -n 10604 pt_scan_300.txt | diff - <(head -n 10604 pt_scan_200.txt)
           test "$(grep -c 'kept by the 4-form first step: True' pt_control.txt)" = 5
           cd ../rational_distance
           cd ../cover_descent

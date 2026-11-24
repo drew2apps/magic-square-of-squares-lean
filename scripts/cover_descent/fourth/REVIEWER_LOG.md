@@ -36,7 +36,7 @@ The 8 cases with L != U were all weaknesses of MY witness search (e.g. (627,364)
 ambiguous at u=-v mod 991 since 991*g is 0 mod 991^2, and my walk only went deeper, not sideways; the missing tuple is
 that of the known point t=-1).  After fixing the walk (start one level up), the gap cases are re-run below.
 
-## Step 3 rerun after the walk fix (compare_out2.txt)
+## Step 3 rerun after the walk fix (compare_out2.txt; in the repository this run is `compare_out.txt`, where the one pair is named: magic (820,799) at 1619. Note added when the log was committed.)
 723 cases: L in R 723, R in U 723, U in R 722, L=R=U 722.  The one remaining case has L subset R, R strictly inside U
 (my exhaustion at its N weaker than the repo there; not identified individually).  No rejected certified tuple.
 

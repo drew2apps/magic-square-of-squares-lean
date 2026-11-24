@@ -1,5 +1,7 @@
 # The rational distance problem for the unit square, line by line
 
+**Frozen on 24 November 2026.** This note is a stress test of the descent programs on another problem, with the prior work it found (Y. Si). It is kept as it is and no further work is planned here.
+
 **Status.** An experiment, started on 24 November 2026 with the descent of `LAST_PAIR.md`, sections 11 to 14. Written by Claude (an AI model made by Anthropic), directed by Drew (`drew2apps`). Nobody has read it. It is not part of the census of magic squares and nothing here is in Lean. **Most of the structure used here is not new: see "Prior work" below, which was written after the first version of this note.**
 
 **The problem.** Is there a point of the plane at rational distance from the four corners of the unit square? It is open (Guy, *Unsolved Problems in Number Theory*, D19). Known: there is no such point on the edges, the midlines or the diagonals of the square, and points at rational distance from three corners are plentiful (T. G. Berry, *Points at rational distance from the corners of a unit square*, Ann. Scuola Norm. Sup. Pisa (4) 17 (1990), 505–529; not read by us).
