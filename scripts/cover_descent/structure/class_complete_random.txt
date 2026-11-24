@@ -1,0 +1,5 @@
+random coprime pairs 1500 with m <= 3000, candidates 118704, bound 200
+pairs with no point at all modulo some bad prime (left out): 1026
+excluded by the laws: 118132; by the local tests at the bad primes: 117909
+excluded locally at a bad prime but allowed by the laws: 0
+excluded by a law but not by the local test at the precision used: {'E': 223}
