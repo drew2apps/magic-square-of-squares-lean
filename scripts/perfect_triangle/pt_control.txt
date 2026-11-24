@@ -1,0 +1,25 @@
+triangle (73, 51, 26) rational median to side: {73: True, 51: True, 26: False} 16*Area^2 square: True
+  z = -513/338 + 210/169 i; norms square (z, z-1, z+1, z-2, 2z-1): [True, True, True, True, False]
+  tuple of the real point (4 forms): (3, 1, 35, 1); kept by the 4-form first step: True (of 6 left; candidates 1048576)
+  squarefree part of d1 d2 d3 d4: 105
+  5-form first step on this line: 2 left: [(1, 1, 1, 1, 2), (13, 13, 13, 13, 26)]
+triangle (626, 875, 291) rational median to side: {626: True, 875: True, 291: False} 16*Area^2 square: True
+  z = 76405/28227 + 12320/9409 i; norms square (z, z-1, z+1, z-2, 2z-1): [True, True, True, True, False]
+  tuple of the real point (4 forms): (35, 2, 22, 1); kept by the 4-form first step: True (of 10 left; candidates 1048576)
+  squarefree part of d1 d2 d3 d4: 385
+  5-form first step on this line: 2 left: [(1, 1, 1, 1, 2), (97, 97, 97, 97, 194)]
+triangle (4368, 1241, 3673) rational median to side: {4368: True, 1241: True, 3673: False} 16*Area^2 square: True
+  z = -2024207/13490929 + 4084080/13490929 i; norms square (z, z-1, z+1, z-2, 2z-1): [True, True, True, True, False]
+  tuple of the real point (4 forms): (17, 546, 2, 55); kept by the 4-form first step: True (of 18 left; candidates 4294967296)
+  squarefree part of d1 d2 d3 d4: 255255
+  5-form first step on this line: 2 left: [(1, 1, 1, 1, 2), (3673, 3673, 3673, 3673, 7346)]
+triangle (14791, 14384, 11257) rational median to side: {14791: True, 14384: True, 11257: False} 16*Area^2 square: True
+  z = 57422912/126720049 + 151396560/126720049 i; norms square (z, z-1, z+1, z-2, 2z-1): [True, True, True, True, False]
+  tuple of the real point (4 forms): (62, 7, 1, 114); kept by the 4-form first step: True (of 10 left; candidates 4294967296)
+  squarefree part of d1 d2 d3 d4: 12369
+  5-form first step on this line: 2 left: [(1, 1, 1, 1, 2), (11257, 11257, 11257, 11257, 22514)]
+triangle (28779, 13816, 15155) rational median to side: {28779: True, 13816: True, 15155: False} 16*Area^2 square: True
+  z = -5823928/6562115 + 39072/187489 i; norms square (z, z-1, z+1, z-2, 2z-1): [True, True, True, True, False]
+  tuple of the real point (4 forms): (22, 3, 37, 2); kept by the 4-form first step: True (of 10 left; candidates 1048576)
+  squarefree part of d1 d2 d3 d4: 1221
+  5-form first step on this line: 2 left: [(1, 1, 1, 1, 2), (433, 433, 433, 433, 866)]

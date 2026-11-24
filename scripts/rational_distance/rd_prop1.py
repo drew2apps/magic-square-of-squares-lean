@@ -9,7 +9,7 @@
     over F_13 (the residue fields of Q(i) at the primes above 5 and 13).
 (4) The X-coordinates of the eight points are oo, beta/2, 0, beta, -i, 1.  X = (w1/w2)^2 has to be a square of Q(i):
     of the five finite values only 0 and 1 are squares, and X = 0, X = oo need i or 1 - i to be a square.
-No Jacobian and no computer algebra system is used; sympy only expands polynomials.  Prints one line per step and
+No Jacobian and no elliptic-curve package is used; sympy expands the two polynomial identities, the rest is fractions.  Prints one line per step and
 'PROP1 OK' at the end; any failure is an AssertionError."""
 from fractions import Fraction as F
 from math import isqrt

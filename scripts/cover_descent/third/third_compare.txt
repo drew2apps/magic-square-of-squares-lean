@@ -1,5 +1,6 @@
 pairs (ratio, prime): 3024 (168 ratios, the 18 primes up to 61)
-the descent is sound (every class with an explicit local point is allowed): 3024 of 3024
+witness test (every class with an explicit local point found is allowed by the descent): 3024 of 3024
 the descent allows exactly the certified set: 2915; third.py brackets the truth exactly (upper = lower): 2959
 the descent allows strictly more than the exhaustion keeps: 63; strictly less (and still all certified classes): 18
+the stronger inclusion (every class kept by the exhaustion is allowed by the descent, which proves that no class with a local point is rejected at that pair): 3006 of 3024; descent = exhaustion: 2943; neither set contains the other: 0
 no pair where the descent rejects a class that has an explicit local point

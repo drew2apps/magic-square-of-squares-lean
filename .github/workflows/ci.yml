@@ -160,9 +160,19 @@ jobs:
           python3 third_run.py @pairs_other.txt 150 | diff - third_other.txt
           python3 third_run.py "627,364 991,263 820,799 889,320" 150 | diff - <(grep -E '^\((627,364|991,263)\)' third_123.txt; grep -E '^\((820,799|889,320)\)' third_34.txt)
           python3 third_compare.py @../../gauss_descent/pairs34.txt @pairs_123.txt @pairs_other.txt | diff - third_compare.txt
-          grep -qx 'the descent is sound (every class with an explicit local point is allowed): 3024 of 3024' third_compare.txt
+          grep -qx 'witness test (every class with an explicit local point found is allowed by the descent): 3024 of 3024' third_compare.txt
           grep -qx 'no pair where the descent rejects a class that has an explicit local point' third_compare.txt
-          cd ../../rational_distance
+          cd ../structure
+          python3 class_structure.py 2 100 | diff - class_structure_100.txt
+          grep -q 'of these divisible by q: 0;' class_structure_100.txt && grep -q 'of these not = 2 mod 4: 0$' class_structure_100.txt && grep -q 'of these with (d/p) = -1: 0$' class_structure_100.txt
+          cd ../../perfect_triangle
+          python3 pt.py scan 1 25 0.867 | head -n -1 | diff - <(head -n 174 pt_scan_200.txt)
+          test "$(grep -c ' degenerate-only$' pt_scan_200.txt)" = 10604 && test "$(wc -l < pt_scan_200.txt)" = 10605
+          python3 pt_second.py 2>/dev/null | grep -v "PARI stack" | diff - pt_second.txt
+          grep -q '^{z, z-1, z+1, z-2}: D=+1: cond 24, rank bounds \[0, 0\], torsion \[4, 2\] | D=-1: cond 48, rank bounds \[0, 0\]' pt_second.txt
+          python3 pt_control.py | diff - pt_control.txt
+          test "$(grep -c 'kept by the 4-form first step: True' pt_control.txt)" = 5
+          cd ../rational_distance
           cd ../cover_descent
           cd ../second_descent
           grep -q "G has infinite order for every other rational tau: True$" degenerate_section.txt
@@ -339,7 +349,7 @@ jobs:
     # full (18,900 + 1,523 ratios) and compared with the committed files; and the rational-distance scan to denominator 300.
     if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
@@ -361,3 +371,7 @@ jobs:
           cd ../cover_descent/third
           python3 third_run.py @../../gauss_descent/pairs34.txt 150 | diff - third_34.txt
           python3 third_run.py @pairs_123.txt 150 | diff - third_123.txt
+          cd ../structure
+          python3 class_two.py | diff - class_two.txt
+          cd ../../perfect_triangle
+          python3 pt.py scan 1 200 0.867 | diff - pt_scan_200.txt

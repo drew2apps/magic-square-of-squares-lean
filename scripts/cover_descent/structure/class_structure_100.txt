@@ -1,0 +1,4 @@
+coprime ratios with 2 <= m <= 100: 3043
+(E) classes kept by the exhaustion at an odd prime q = +-3 mod 8 (q <= 61) of mn(m^2 - n^2): 245848; of these divisible by q: 0; pairs (ratio, q) skipped because q^2 divides one of m, n, m - n, m + n: 1492
+(2) classes allowed at 2: 21732; of these not = 2 mod 4: 0
+(S) classes allowed at an odd prime p < 400 dividing m^2 + n^2 to an odd power: 62504; of these with (d/p) = -1: 0
