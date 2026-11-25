@@ -86,6 +86,7 @@ jobs:
           set -e -o pipefail
           pip install -q -r scripts/g1_full/requirements.txt
           pip install -q sympy==1.14.0
+          python3 scripts/g1_full/check_sigma.py | diff - scripts/g1_full/check_sigma.txt
           cd scripts/gauss_descent
           python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt
           python3 twocover_check.py | diff - twocover_check.txt
@@ -179,6 +180,10 @@ jobs:
           grep -qx '  the criterion and the local test at the primes below 620 leave the same classes for 425 ratios of 425' class_selmer.txt
           # review of 0b34613: Propositions A and B of COMPLETE.md, the rule at 2, the rows E, the weakness of Passes
           python3 class_gaps.py | diff - class_gaps.txt
+          # review of 7b4ff7a: the first definition of Passes lets the class p through at p = 3 (mod 8) (a control that
+          # the test of passes_tight.py, rerun in full in scan-5000, can fail)
+          python3 passes_tight.py --weak | diff - passes_tight_weak.txt
+          grep -q '^first definition (no roots), cases 10; classes outside the row that pass: 20; ' passes_tight_weak.txt
           test "$(grep -c 'points where every form could be a q-adic square: 0$' class_gaps.txt)" = 2
           grep -q 'not of the shape used (four points, two forms each, full product a square): 0; with 16N below 2q - 76 - 42 sqrt(q): 0;' class_gaps.txt
           grep -q 'all = +-1 (mod 8): True; ' class_gaps.txt && grep -q 'differs from the rule "4 | mn or m = +-n (mod 8)": 0$' class_gaps.txt
@@ -262,6 +267,15 @@ jobs:
           wait $TWIST
           diff <(sed 's/   \[[0-9]* s\]$//' /tmp/dm4_twist.out) dm4_twist.txt
           grep -q "^72 configurations on twists, 0 outside the bounds" /tmp/dm4_twist.out
+      - name: dm_sigma.py on the seven ratios it closes (G1_FULL_SYSTEM.md, the curves of F0*F8*GL; review of 7b4ff7a)
+        shell: bash
+        run: |
+          set -e -o pipefail
+          cd scripts/g1_full
+          python3 dm_sigma.py --effort=4 91,60 209,120 420,341 572,555 608,105 680,111 741,580 > /tmp/sigma_fresh.jsonl
+          python3 check_sigma.py /tmp/sigma_fresh.jsonl | tee /tmp/sigma_check.txt
+          grep -q "^of the 24 open ratios of the census: 12 closed" /tmp/sigma_check.txt
+          grep -q "^OK$" /tmp/sigma_check.txt
 
   descents:
     # GAUSS_DESCENT.md and SECOND_DESCENT.md are experiments, not counted in the census. This job reruns the second descent
@@ -382,6 +396,33 @@ jobs:
           test ! -s /tmp/tw1.out && test ! -s /tmp/tw2.out && test ! -s /tmp/tw3.out && test ! -s /tmp/tw4.out
           grep -qx 'twist_find 400 400: 0 solutions' scripts/search/twist_search.txt
 
+  scan-15000:
+    # COMPLETE.md, section 7, test 7 (review of 7b4ff7a): the criterion by linear algebra on every coprime ratio with
+    # 5000 < m <= 15000, and the four-class descent on every ratio of that range that is not of the two degenerate types
+    # and keeps a class.
+    if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.13'
+      - name: criterion and four-class descent, 5000 < m <= 15000
+        shell: bash
+        run: |
+          set -e -o pipefail
+          pip install -q sympy==1.14.0 cypari2==2.2.9
+          cd scripts/cover_descent/structure
+          python3 class_selmer_linalg.py 10000 0 --from 5000 --list /tmp/a.txt > /tmp/sa.txt &
+          python3 class_selmer_linalg.py 15000 0 --from 10000 --list /tmp/b.txt > /tmp/sb.txt &
+          wait
+          cat /tmp/sa.txt /tmp/sb.txt | diff - class_selmer_linalg_15000.txt
+          cat /tmp/a.txt /tmp/b.txt | diff - class_selmer_15000_list.txt
+          cd ..
+          python3 tuple_descent.py batch magic structure/class_selmer_15000_list.txt 4 | diff - tuple_selmer_15000.txt
+          test "$(grep -c 'nothing is left$' tuple_selmer_15000.txt)" = "$(wc -l < structure/class_selmer_15000_list.txt)"
+
   scan-5000:
     # LAST_PAIR.md, section 12: the four-class descent on EVERY ratio with m <= 5000 that avoids the 484 classes, rerun in
     # full (18,900 + 1,523 ratios) and compared with the committed files; and the rational-distance scan to denominator 300.
@@ -425,6 +466,11 @@ jobs:
           cd ..
           cat structure/tuple_bruteforce_997_sample.txt | xargs -P 4 -I{} sh -c 'echo "({}) $(python3 tuple_bruteforce.py magic {} 150 5000 | tail -1)"' | LC_ALL=C sort | diff - structure/tuple_bruteforce_997_sample_out.txt
           test "$(grep -c 'kept at every prime: 0: \[\]$' structure/tuple_bruteforce_997_sample_out.txt)" = 40
+          # review of 7b4ff7a: the repaired Passes against the table in both directions at finite powers (three minutes),
+          # and the four-class descent with the bad primes only (COMPLETE.md, section 7, test 6)
+          python3 structure/passes_tight.py | diff - structure/passes_tight.txt
+          grep -qx 'cases 23; classes outside the row that pass: 0; classes of the row that do not pass: 0' structure/passes_tight.txt
+          python3 tuple_badprimes.py structure/class_selmer_997.txt | diff - tuple_badprimes_997.txt
           cd structure
           cd ../fourth
           python3 compare.py | sed 's/  \[[0-9]*s\]$//' | diff - compare_out.txt

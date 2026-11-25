@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Checks written for the review of commit 0b34613 (COMPLETE.md, sections 5 and 7).  Python only; about two minutes.
+"""Checks written for the review of commit 0b34613 (COMPLETE.md, sections 5 and 7).  Python, and sympy for part 6; about ten seconds.
 
 1. The first version of the Lean predicate `Passes` (ClassTable.lean; only the eight products) was weaker than "d is the class of a point of X_p": for p = 3 (mod 8)
    dividing m and d = p there is a point (u, v) (for p exactly dividing m, the point (0, 1)) at which d times each of the
@@ -9,7 +9,8 @@
    certificate: at every (u, v) modulo q^2, not both divisible by q, some form is a non-residue unit or has valuation 1.
 3. Proposition B of section 7: at a prime q of the octic, the eight roots of the forms are four points, each a root of
    exactly two forms, and the number N of t in F_q at which the four forms are nonzero squares satisfies
-   16 N >= 2q - 76 - 42 sqrt(q).  Checked for every (prime q < 3000, root of the octic); the bound is positive from 521.
+   16 N >= 2q - 76 - 42 sqrt(q).  Checked for every (prime q < 3000, root of the octic); the bound is positive from
+   q = 515, so for every prime q >= 521.
 4. The rows E of class_good_table.txt (no point at a good prime) are all at primes = +-1 (mod 8), and at a good prime
    = +-3 (mod 8) one of the points t = 1, t = 0 is a point, for every ratio (p < 1200).
 5. The rule at 2 used by class_selmer.py: a point modulo 64 exists exactly when 4 | mn or m = +-n (mod 8), for every

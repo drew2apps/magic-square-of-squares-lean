@@ -1,0 +1,716 @@
+{"pair": [4, 3], "curve": "E+", "A_digits": 6, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [4, 3], "curve": "E-", "A_digits": 4, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [7, 1], "curve": "E+", "A_digits": 6, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [7, 1], "curve": "E-", "A_digits": 6, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [12, 5], "curve": "E+", "A_digits": 8, "rank": [1, 1], "G": "-4826640", "hG": 1.7742422542047587, "hG_enclosure": [1.771715405232142, 1.7771289861713413], "B": 44.34805505391936, "hj": 94.66799375515711, "logK": 17.31251860022995, "amax": 60, "ntors": 2, "sat": "<= 18", "lam": 0.005745457526584007, "max |h - hhat| on the list": 19.858304215024873, "ncand": 124, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [12, 5], "curve": "E-", "A_digits": 7, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [15, 8], "curve": "E+", "A_digits": 9, "rank": [1, 1], "G": "-22333920", "hG": 1.9463329701400491, "hG_enclosure": [1.943614118274483, 1.9495464089090186], "B": 48.59732487811505, "hj": 104.19647154425455, "logK": 18.990136191836395, "amax": 60, "ntors": 2, "sat": "<= 9", "lam": 0.027478555922054875, "max |h - hhat| on the list": 21.777021012527257, "ncand": 124, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [15, 8], "curve": "E-", "A_digits": 8, "rank": [1, 1], "G": "-22333920", "hG": 2.118833859546796, "hG_enclosure": [2.1160640170486236, 2.1217760505666767], "B": 46.79297857988816, "hj": 101.17771133466705, "logK": 16.61096827980304, "amax": 53, "ntors": 2, "sat": "<= 20", "lam": 0.005325979159169985, "max |h - hhat| on the list": 20.285225296751378, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.6"}
+{"pair": [17, 7], "curve": "E+", "A_digits": 9, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [17, 7], "curve": "E-", "A_digits": 8, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
+{"pair": [21, 20], "curve": "E+", "A_digits": 10, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [21, 20], "curve": "E-", "A_digits": 7, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [23, 7], "curve": "E+", "A_digits": 10, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [23, 7], "curve": "E-", "A_digits": 9, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [24, 7], "curve": "E+", "A_digits": 10, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [24, 7], "curve": "E-", "A_digits": 9, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [31, 17], "curve": "E+", "A_digits": 11, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [31, 17], "curve": "E-", "A_digits": 10, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [35, 12], "curve": "E+", "A_digits": 11, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [35, 12], "curve": "E-", "A_digits": 10, "rank": [1, 1], "G": "-2486213520", "hG": 2.594891106036595, "hG_enclosure": [2.5915720372750743, 2.59869555256592], "B": 58.35583726261014, "hj": 128.58327891902962, "logK": 22.10095444456373, "amax": 54, "ntors": 2, "sat": "<= 20", "lam": 0.0065075265073274305, "max |h - hhat| on the list": 26.46283695409693, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [40, 9], "curve": "E+", "A_digits": 11, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [40, 9], "curve": "E-", "A_digits": 11, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [41, 1], "curve": "E+", "A_digits": 11, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [41, 1], "curve": "E-", "A_digits": 11, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [45, 28], "curve": "E+", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [45, 28], "curve": "E-", "A_digits": 10, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [47, 23], "curve": "E+", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [47, 23], "curve": "E-", "A_digits": 11, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [49, 31], "curve": "E+", "A_digits": 12, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [49, 31], "curve": "E-", "A_digits": 11, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [55, 48], "curve": "E+", "A_digits": 13, "rank": [0, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [55, 48], "curve": "E-", "A_digits": 10, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [56, 33], "curve": "E+", "A_digits": 12, "rank": [1, 1], "G": "-63930266400", "hG": 2.8392399869209575, "hG_enclosure": [2.8354058407253864, 2.843786980972331], "B": 68.65830090296842, "hj": 151.8789984101667, "logK": 27.06111618017379, "amax": 58, "ntors": 2, "sat": "<= 9", "lam": 0.04237772640957051, "max |h - hhat| on the list": 31.724263658410564, "ncand": 120, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [56, 33], "curve": "E-", "A_digits": 11, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [60, 11], "curve": "E+", "A_digits": 12, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [60, 11], "curve": "E-", "A_digits": 12, "rank": [1, 1], "G": "34175747760", "hG": 2.882205673713322, "hG_enclosure": [2.8782428812833936, 2.8862802896930844], "B": 65.84244969218841, "hj": 146.9503778266793, "logK": 25.61343041406447, "amax": 55, "ntors": 2, "sat": "<= 22", "lam": 0.00613120984699053, "max |h - hhat| on the list": 29.93536183066044, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [63, 16], "curve": "E+", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [63, 16], "curve": "E-", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [71, 49], "curve": "E+", "A_digits": 13, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [71, 49], "curve": "E-", "A_digits": 12, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [72, 65], "curve": "E+", "A_digits": 13, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [72, 65], "curve": "E-", "A_digits": 11, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [73, 17], "curve": "E+", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [73, 17], "curve": "E-", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [77, 36], "curve": "E+", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [77, 36], "curve": "E-", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [79, 47], "curve": "E+", "A_digits": 13, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [79, 47], "curve": "E-", "A_digits": 12, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [80, 39], "curve": "E+", "A_digits": 13, "rank": [1, 1], "G": "482309056320", "hG": 3.051835962632052, "hG_enclosure": [3.047715182790524, 3.05667447100785], "B": 73.39448907633746, "hj": 164.0179329133408, "logK": 28.899086826272633, "amax": 58, "ntors": 2, "sat": "<= 9", "lam": 0.042839189594665025, "max |h - hhat| on the list": 33.96624542859331, "ncand": 120, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [80, 39], "curve": "E-", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [84, 13], "curve": "E+", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [84, 13], "curve": "E-", "A_digits": 13, "rank": [1, 1], "G": "217345455600", "hG": 3.094044839963122, "hG_enclosure": [3.0900675685820502, 3.0987148373268516], "B": 70.83842555741178, "hj": 159.09353705291826, "logK": 27.682259141167588, "amax": 55, "ntors": 2, "sat": "<= 24", "lam": 0.005839558439261907, "max |h - hhat| on the list": 32.9887425860702, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [89, 23], "curve": "E+", "A_digits": 13, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [89, 23], "curve": "E-", "A_digits": 13, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
+{"pair": [91, 60], "curve": "E+", "A_digits": 14, "rank": [1, 1], "G": "-1214630748240", "hG": 3.183538703030099, "hG_enclosure": [3.1792987832215123, 3.188594472073937], "B": 76.15028307906607, "hj": 169.07174683747684, "logK": 30.186245563666624, "amax": 58, "ntors": 2, "sat": "<= 9", "lam": 0.048521316283310245, "max |h - hhat| on the list": 35.53057878017853, "ncand": 120, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [91, 60], "curve": "E-", "A_digits": 12, "rank": [1, 1], "G": "-1214630748240", "hG": 3.3755538020104487, "hG_enclosure": [3.371253818593716, 3.380369912815403], "B": 74.67904386406263, "hj": 168.45495720737307, "logK": 27.01966029901413, "amax": 53, "ntors": 2, "sat": "<= 26", "lam": 0.005354898699333128, "max |h - hhat| on the list": 33.40306387320652, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [97, 71], "curve": "E+", "A_digits": 14, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
+{"pair": [97, 71], "curve": "E-", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [99, 20], "curve": "E+", "A_digits": 13, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [99, 20], "curve": "E-", "A_digits": 13, "rank": [1, 1], "G": "759524839920", "hG": 3.224254345006635, "hG_enclosure": [3.219932204345881, 3.2288917189652104], "B": 73.3963437615449, "hj": 164.98906386541725, "logK": 28.585672133420513, "amax": 55, "ntors": 2, "sat": "<= 24", "lam": 0.0056835675339130705, "max |h - hhat| on the list": 34.136912667449906, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [103, 7], "curve": "E+", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [103, 7], "curve": "E-", "A_digits": 13, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [105, 88], "curve": "E+", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [105, 88], "curve": "E-", "A_digits": 12, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [112, 15], "curve": "E+", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [112, 15], "curve": "E-", "A_digits": 13, "rank": [1, 1], "G": "1057064809920", "hG": 3.2767347185593754, "hG_enclosure": [3.272519081481815, 3.2816896864904184], "B": 75.12559623048111, "hj": 169.49992148285142, "logK": 29.44526759297667, "amax": 55, "ntors": 2, "sat": "<= 25", "lam": 0.005591980319268244, "max |h - hhat| on the list": 35.10568340046075, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [113, 41], "curve": "E+", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [113, 41], "curve": "E-", "A_digits": 13, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [117, 44], "curve": "E+", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [117, 44], "curve": "E-", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [119, 41], "curve": "E+", "A_digits": 14, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
+{"pair": [119, 41], "curve": "E-", "A_digits": 13, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [119, 79], "curve": "E+", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [119, 79], "curve": "E-", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [120, 119], "curve": "E+", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [120, 119], "curve": "E-", "A_digits": 10, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [127, 97], "curve": "E+", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [127, 97], "curve": "E-", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [132, 85], "curve": "E+", "A_digits": 15, "rank": [1, 1], "G": "11282614376880", "hG": 3.4267991806732097, "hG_enclosure": [3.4221434485003828, 3.4321171939022967], "B": 81.70492233248011, "hj": 182.60486579717062, "logK": 32.371072289594075, "amax": 58, "ntors": 2, "sat": "<= 9", "lam": 0.052060212058619444, "max |h - hhat| on the list": 38.147135151808925, "ncand": 120, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [132, 85], "curve": "E-", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [137, 7], "curve": "E+", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [137, 7], "curve": "E-", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [140, 51], "curve": "E+", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.7"}
+{"pair": [140, 51], "curve": "E-", "A_digits": 14, "rank": [1, 1], "G": "-10778395459440", "hG": 3.5290985295640507, "hG_enclosure": [3.52445551549476, 3.534131436716407], "B": 79.26514664773093, "hj": 178.77465215552675, "logK": 30.379352324366263, "amax": 54, "ntors": 2, "sat": "<= 26", "lam": 0.005354898699333128, "max |h - hhat| on the list": 36.700996712390406, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [143, 24], "curve": "E+", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [143, 24], "curve": "E-", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [144, 17], "curve": "E+", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [144, 17], "curve": "E-", "A_digits": 14, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [151, 31], "curve": "E+", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [151, 31], "curve": "E-", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [153, 104], "curve": "E+", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [153, 104], "curve": "E-", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [156, 133], "curve": "E+", "A_digits": 15, "rank": [1, 1], "G": "23182999803600", "hG": 3.605949165543556, "hG_enclosure": [3.60118672987175, 3.611602142685866], "B": 85.32306177324023, "hj": 190.04671587632572, "logK": 34.011187653898396, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.05555555555555555, "max |h - hhat| on the list": 40.17378986613676, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [156, 133], "curve": "E-", "A_digits": 13, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [161, 73], "curve": "E+", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [161, 73], "curve": "E-", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [161, 127], "curve": "E+", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [161, 127], "curve": "E-", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [165, 52], "curve": "E+", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [165, 52], "curve": "E-", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [167, 119], "curve": "E+", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [167, 119], "curve": "E-", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [168, 95], "curve": "E+", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [168, 95], "curve": "E-", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [171, 140], "curve": "E+", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [171, 140], "curve": "E-", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [176, 57], "curve": "E+", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [176, 57], "curve": "E-", "A_digits": 14, "rank": [1, 1], "G": "38079729441600", "hG": 3.66282609050915, "hG_enclosure": [3.6581804588990288, 3.6682495742478087], "B": 82.48619293720338, "hj": 186.49857280856128, "logK": 31.82596464765631, "amax": 54, "ntors": 2, "sat": "<= 27", "lam": 0.005183707389900225, "max |h - hhat| on the list": 38.298102311269304, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [180, 19], "curve": "E+", "A_digits": 15, "rank": [1, 1], "G": "-14358934008720", "hG": 3.5567706908398145, "hG_enclosure": [3.5521639334536204, 3.5621877116059943], "B": 82.11479062425093, "hj": 186.13796619366795, "logK": 32.766892135632204, "amax": 56, "ntors": 2, "sat": "<= 27", "lam": 0.005183707389900225, "max |h - hhat| on the list": 38.93839739491705, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [180, 19], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [187, 84], "curve": "E+", "A_digits": 15, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [187, 84], "curve": "E-", "A_digits": 14, "rank": [1, 1], "G": "-73704689612400", "hG": 3.7619729394170007, "hG_enclosure": [3.7570677907954955, 3.7673345369741535], "B": 84.10518469556517, "hj": 190.51784531924082, "logK": 31.94779225413285, "amax": 54, "ntors": 2, "sat": "<= 28", "lam": 0.005072631229793913, "max |h - hhat| on the list": 38.80776087532209, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [191, 89], "curve": "E+", "A_digits": 15, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [191, 89], "curve": "E-", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [193, 17], "curve": "E+", "A_digits": 15, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [193, 17], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [195, 28], "curve": "E+", "A_digits": 15, "rank": [2, 4], "status": "rank not 1", "sec": "0.6"}
+{"pair": [195, 28], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [199, 161], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [199, 161], "curve": "E-", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [208, 105], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [208, 105], "curve": "E-", "A_digits": 15, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [209, 120], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [209, 120], "curve": "E-", "A_digits": 15, "rank": [1, 1], "G": "170611190423520", "hG": 3.8933302224125867, "hG_enclosure": [3.888376956421542, 3.8989452493371513], "B": 86.57545556466891, "hj": 196.76948598711448, "logK": 32.302754834546825, "amax": 53, "ntors": 2, "sat": "<= 29", "lam": 0.004831334638096965, "max |h - hhat| on the list": 39.45795406426441, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [217, 47], "curve": "E+", "A_digits": 15, "rank": [4, 4], "status": "rank not 1", "sec": "0.2"}
+{"pair": [217, 47], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [217, 113], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [217, 113], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [220, 21], "curve": "E+", "A_digits": 15, "rank": [1, 1], "G": "43286914791120", "hG": 3.689304710457614, "hG_enclosure": [3.6844013020292743, 3.6947952847615038], "B": 85.14750654242215, "hj": 193.55084810825957, "logK": 33.94853903417222, "amax": 56, "ntors": 2, "sat": "<= 82", "lam": 0.005017988913114745, "max |h - hhat| on the list": 40.36723345969267, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [220, 21], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [221, 60], "curve": "E+", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [221, 60], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.5"}
+{"pair": [223, 167], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [223, 167], "curve": "E-", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [224, 207], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [224, 207], "curve": "E-", "A_digits": 14, "rank": [0, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [231, 160], "curve": "E+", "A_digits": 16, "rank": [1, 1], "G": "-324070649696640", "hG": 3.814990525405329, "hG_enclosure": [3.8099703480004283, 3.8209702679418243], "B": 90.111344159917, "hj": 202.04771136878225, "logK": 35.877128158425606, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.05833022698892706, "max |h - hhat| on the list": 42.38690642653091, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [231, 160], "curve": "E-", "A_digits": 15, "rank": [1, 1], "G": "324070649696640", "hG": 4.010206287830433, "hG_enclosure": [4.005102868186391, 4.015952847955862], "B": 88.88303427150184, "hj": 202.63084709726985, "logK": 32.46507279253753, "amax": 53, "ntors": 2, "sat": "<= 30", "lam": 0.004478596782662034, "max |h - hhat| on the list": 40.00920156448774, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [233, 119], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [233, 119], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [239, 1], "curve": "E+", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [239, 1], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [240, 161], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [240, 161], "curve": "E-", "A_digits": 15, "rank": [1, 3], "status": "rank not 1", "sec": "0.8"}
+{"pair": [241, 199], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [241, 199], "curve": "E-", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [247, 96], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [247, 96], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [252, 115], "curve": "E+", "A_digits": 16, "rank": [1, 1], "G": "-447202828764720", "hG": 3.8105918268304193, "hG_enclosure": [3.8055643248241005, 3.816594873184367], "B": 90.36225216730215, "hj": 204.91728251602797, "logK": 35.69308808197839, "amax": 57, "ntors": 2, "sat": "<= 10", "lam": 0.04522298394048188, "max |h - hhat| on the list": 42.30919515368282, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [252, 115], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [253, 204], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [253, 204], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [255, 32], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [255, 32], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [257, 49], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [257, 49], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [260, 69], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [260, 69], "curve": "E-", "A_digits": 15, "rank": [0, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [263, 73], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [263, 73], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [264, 23], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [264, 23], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [271, 103], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [271, 103], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [272, 225], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [272, 225], "curve": "E-", "A_digits": 15, "rank": [2, 4], "status": "rank not 1", "sec": "0.6"}
+{"pair": [273, 136], "curve": "E+", "A_digits": 16, "rank": [0, 2], "status": "rank not 1", "sec": "0.5"}
+{"pair": [273, 136], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [275, 252], "curve": "E+", "A_digits": 17, "rank": [0, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [275, 252], "curve": "E-", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [281, 161], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [281, 161], "curve": "E-", "A_digits": 15, "rank": [4, 4], "status": "rank not 1", "sec": "0.2"}
+{"pair": [285, 68], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [285, 68], "curve": "E-", "A_digits": 16, "rank": [1, 1], "G": "509780764182480", "hG": 3.945371620480573, "hG_enclosure": [3.9403206148580345, 3.951229015407666], "B": 89.36161730258064, "hj": 203.15857635529812, "logK": 34.86677950426908, "amax": 55, "ntors": 2, "sat": "<= 29", "lam": 0.004779291565119896, "max |h - hhat| on the list": 41.92337300192548, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [287, 223], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [287, 223], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [287, 241], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [287, 241], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [288, 175], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [288, 175], "curve": "E-", "A_digits": 15, "rank": [2, 4], "status": "rank not 1", "sec": "0.6"}
+{"pair": [289, 23], "curve": "E+", "A_digits": 16, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
+{"pair": [289, 23], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [299, 180], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [299, 180], "curve": "E-", "A_digits": 15, "rank": [1, 1], "G": "1494641420279280", "hG": 4.144274817039771, "hG_enclosure": [4.139022690092887, 4.150269390174934], "B": 92.13296707213519, "hj": 210.18616579832417, "logK": 34.36482903615266, "amax": 53, "ntors": 2, "sat": "<= 31", "lam": 0.004454409778051314, "max |h - hhat| on the list": 42.08462492131275, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [304, 297], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [304, 297], "curve": "E-", "A_digits": 13, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [308, 75], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [308, 75], "curve": "E-", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [311, 31], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [311, 31], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [312, 25], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [312, 25], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [313, 103], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [313, 103], "curve": "E-", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [323, 36], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [323, 36], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [325, 228], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [325, 228], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [329, 89], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [329, 89], "curve": "E-", "A_digits": 16, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [329, 191], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [329, 191], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [337, 287], "curve": "E+", "A_digits": 17, "rank": [4, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [337, 287], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [340, 189], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [340, 189], "curve": "E-", "A_digits": 16, "rank": [0, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [343, 151], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [343, 151], "curve": "E-", "A_digits": 16, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [345, 152], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [345, 152], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.5"}
+{"pair": [351, 280], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [351, 280], "curve": "E-", "A_digits": 15, "rank": [1, 1], "G": "-3550630906761120", "hG": 4.3294871866189375, "hG_enclosure": [4.323885806562722, 4.335592930169335], "B": 95.90475658536944, "hj": 219.70820444789084, "logK": 34.339745666171545, "amax": 53, "ntors": 2, "sat": "<= 32", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 43.01689740629354, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [352, 135], "curve": "E+", "A_digits": 17, "rank": [1, 1], "G": "-2855011216337280", "hG": 4.0222116132839565, "hG_enclosure": [4.016922992511669, 4.028483794718253], "B": 94.706091676331, "hj": 215.6411829534459, "logK": 37.49180335707711, "amax": 57, "ntors": 2, "sat": "<= 30", "lam": 0.0045519486511276545, "max |h - hhat| on the list": 44.33747800770652, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [352, 135], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [353, 217], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [353, 217], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [357, 76], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [357, 76], "curve": "E-", "A_digits": 16, "rank": [1, 1], "G": "1759226445404400", "hG": 4.0841209795718045, "hG_enclosure": [4.0789285804390065, 4.090240054672114], "B": 92.66359691761598, "hj": 211.18222991884767, "logK": 36.26259311411735, "amax": 55, "ntors": 2, "sat": "<= 30", "lam": 0.0045766652821738335, "max |h - hhat| on the list": 43.559850467485376, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [359, 287], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [359, 287], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [360, 319], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [360, 319], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [364, 27], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [364, 27], "curve": "E-", "A_digits": 16, "rank": [1, 1], "G": "690108737900400", "hG": 4.035673324002513, "hG_enclosure": [4.030433839998986, 4.041756945762405], "B": 92.75888241392714, "hj": 212.13573619007462, "logK": 36.62604963615458, "amax": 56, "ntors": 2, "sat": "<= 30", "lam": 0.004527365504138666, "max |h - hhat| on the list": 43.826331276773715, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [367, 137], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [367, 137], "curve": "E-", "A_digits": 16, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [377, 336], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [377, 336], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [380, 261], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [380, 261], "curve": "E-", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [383, 233], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [383, 233], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [391, 71], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [391, 71], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [391, 120], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [391, 120], "curve": "E-", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [391, 337], "curve": "E+", "A_digits": 18, "rank": [4, 4], "status": "rank not 1", "sec": "0.2"}
+{"pair": [391, 337], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [396, 203], "curve": "E+", "A_digits": 17, "rank": [1, 1], "G": "7361314430223600", "hG": 4.123646907295949, "hG_enclosure": [4.118179508567386, 4.130089107007817], "B": 97.56343042401484, "hj": 221.8616304069192, "logK": 38.56911468601575, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.06091272676757648, "max |h - hhat| on the list": 45.805588136122424, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [396, 203], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [399, 40], "curve": "E+", "A_digits": 17, "rank": [1, 1], "G": "-1617858713919840", "hG": 4.086808588194847, "hG_enclosure": [4.08149973867531, 4.092982610093189], "B": 94.06768265526917, "hj": 214.89814089584593, "logK": 37.53113889649651, "amax": 56, "ntors": 2, "sat": "<= 31", "lam": 0.004502915120316006, "max |h - hhat| on the list": 44.76450637495327, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [399, 40], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "-1617858713919840", "hG": 4.108826738252474, "hG_enclosure": [4.103559194513475, 4.115052227508259], "B": 94.15092629326335, "hj": 215.34713417589919, "logK": 37.12878484732273, "amax": 55, "ntors": 2, "sat": "<= 31", "lam": 0.004478596782662034, "max |h - hhat| on the list": 44.45277349074985, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.7"}
+{"pair": [401, 79], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [401, 79], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [403, 396], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [403, 396], "curve": "E-", "A_digits": 14, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [408, 145], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [408, 145], "curve": "E-", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [409, 137], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [409, 137], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [416, 87], "curve": "E+", "A_digits": 17, "rank": [1, 1], "G": "4327273226640000", "hG": 4.121932500777971, "hG_enclosure": [4.116693095901181, 4.128193012754044], "B": 94.20731885864794, "hj": 212.9366581395503, "logK": 38.03583137701704, "amax": 56, "ntors": 2, "sat": "<= 62", "lam": 0.0011075883493024236, "max |h - hhat| on the list": 45.245315276348265, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [416, 87], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [420, 29], "curve": "E+", "A_digits": 17, "rank": [1, 1], "G": "1515983832469680", "hG": 4.116073090206062, "hG_enclosure": [4.110765634385054, 4.1223476091327385], "B": 94.87953713303781, "hj": 217.17016908736096, "logK": 37.770871471333926, "amax": 56, "ntors": 2, "sat": "<= 31", "lam": 0.0044303533972096945, "max |h - hhat| on the list": 45.091480808017195, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [420, 29], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.5"}
+{"pair": [420, 341], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [420, 341], "curve": "E-", "A_digits": 16, "rank": [1, 1], "G": "10080218336662320", "hG": 4.454278501072671, "hG_enclosure": [4.448536062189111, 4.4605843351677565], "B": 98.69945224107101, "hj": 226.43910979425624, "logK": 35.29886718143986, "amax": 53, "ntors": 2, "sat": "<= 33", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 44.261989631314236, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.5"}
+{"pair": [425, 168], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.7"}
+{"pair": [425, 168], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.5"}
+{"pair": [431, 17], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [431, 17], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [433, 281], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [433, 281], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [435, 308], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [435, 308], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [437, 84], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [437, 84], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [439, 359], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [439, 359], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [440, 279], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [440, 279], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [449, 391], "curve": "E+", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [449, 391], "curve": "E-", "A_digits": 16, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [456, 217], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [456, 217], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [457, 49], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [457, 49], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [459, 220], "curve": "E+", "A_digits": 18, "rank": [1, 1], "G": "-16982381685543120", "hG": 4.214814527222963, "hG_enclosure": [4.2091059002949365, 4.221256562687218], "B": 99.53822631756883, "hj": 226.81197108665722, "logK": 39.35732868243937, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.060256575678517166, "max |h - hhat| on the list": 46.76860302322257, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [459, 220], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "16982381685543120", "hG": 4.374658057504464, "hG_enclosure": [4.369131277094007, 4.381065100921638], "B": 97.76188479595355, "hj": 223.36269429445463, "logK": 37.269013531185, "amax": 54, "ntors": 2, "sat": "<= 33", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 45.3554356470093, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [460, 429], "curve": "E+", "A_digits": 18, "rank": [1, 1], "G": "8606763331005840", "hG": 4.353749976791899, "hG_enclosure": [4.347962912141083, 4.360474092057961], "B": 102.49158587906382, "hj": 231.7323884389024, "logK": 40.74301385894946, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.06751374222113715, "max |h - hhat| on the list": 48.401670061242825, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [460, 429], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [463, 113], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [463, 113], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [465, 368], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [465, 368], "curve": "E-", "A_digits": 16, "rank": [0, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [468, 155], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [468, 155], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "-13751933555702160", "hG": 4.318215228675887, "hG_enclosure": [4.312692889892037, 4.324557228107435], "B": 97.19265866054252, "hj": 221.79190337624382, "logK": 37.680737438370954, "amax": 54, "ntors": 2, "sat": "<= 32", "lam": 0.004478596782662034, "max |h - hhat| on the list": 45.37763690462634, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [475, 132], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.8"}
+{"pair": [475, 132], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "-12691243648129200", "hG": 4.303620405831705, "hG_enclosure": [4.29816343611308, 4.310024940348916], "B": 97.16944269997404, "hj": 221.79188475270604, "logK": 37.86379195162253, "amax": 55, "ntors": 2, "sat": "<= 95", "lam": 0.0004843289957656987, "max |h - hhat| on the list": 45.65072119721685, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [476, 93], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [476, 93], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "-9077043363032400", "hG": 4.268200504843123, "hG_enclosure": [4.262758019316857, 4.274590898682286], "B": 96.93494776158725, "hj": 221.512894733527, "logK": 38.018959903231114, "amax": 55, "ntors": 2, "sat": "<= 32", "lam": 0.0043354200596847385, "max |h - hhat| on the list": 45.663735635842386, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [479, 119], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [479, 119], "curve": "E-", "A_digits": 17, "rank": [5, 5], "status": "rank not 1", "sec": "0.0"}
+{"pair": [480, 31], "curve": "E+", "A_digits": 17, "rank": [1, 1], "G": "-3159514235230080", "hG": 4.2041662920575105, "hG_enclosure": [4.198709931625059, 4.210536770216063], "B": 96.88546173749818, "hj": 222.01786823809002, "logK": 38.562502621950344, "amax": 56, "ntors": 2, "sat": "<= 32", "lam": 0.004358960961891288, "max |h - hhat| on the list": 46.06085667554248, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [480, 31], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [483, 44], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [483, 44], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [487, 217], "curve": "E+", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [487, 217], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [493, 276], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [493, 276], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [497, 47], "curve": "E+", "A_digits": 17, "rank": [4, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [497, 47], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [497, 193], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [497, 193], "curve": "E-", "A_digits": 17, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
+{"pair": [503, 329], "curve": "E+", "A_digits": 18, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [503, 329], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [511, 271], "curve": "E+", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [511, 271], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [511, 449], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [511, 449], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [513, 184], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [513, 184], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [520, 231], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [520, 231], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "33762735572485920", "hG": 4.441457415759224, "hG_enclosure": [4.435816931103704, 4.447952609015263], "B": 99.41547345149499, "hj": 227.25209469455385, "logK": 38.094669473850075, "amax": 54, "ntors": 2, "sat": "<= 33", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 46.3105581995772, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
+{"pair": [521, 353], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [521, 353], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [525, 92], "curve": "E+", "A_digits": 18, "rank": [1, 1], "G": "-14663397256762800", "hG": 4.2756137079852, "hG_enclosure": [4.270178348105035, 4.282065266837161], "B": 97.37763825356984, "hj": 220.58980710573124, "logK": 39.35011810559404, "amax": 55, "ntors": 2, "sat": "<= 32", "lam": 0.004358960961891288, "max |h - hhat| on the list": 46.930720717875374, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.5"}
+{"pair": [525, 92], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "14663397256762800", "hG": 4.324701790764076, "hG_enclosure": [4.319190449105383, 4.331197550996645], "B": 98.36217869322633, "hj": 225.03957356967604, "logK": 38.64185551378825, "amax": 55, "ntors": 2, "sat": "<= 32", "lam": 0.0044303533972096945, "max |h - hhat| on the list": 45.83461992895536, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [527, 23], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [527, 23], "curve": "E-", "A_digits": 17, "rank": [4, 4], "status": "rank not 1", "sec": "0.2"}
+{"pair": [527, 336], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [527, 336], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [527, 439], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [527, 439], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [528, 455], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [528, 455], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [529, 151], "curve": "E+", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [529, 151], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [532, 165], "curve": "E+", "A_digits": 18, "rank": [0, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [532, 165], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "27865369132875120", "hG": 4.393932268293918, "hG_enclosure": [4.388305781293034, 4.400392236363786], "B": 99.01223993960161, "hj": 226.16963938358248, "logK": 38.48727901693817, "amax": 54, "ntors": 2, "sat": "<= 33", "lam": 0.004219608888821072, "max |h - hhat| on the list": 46.502337346704735, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [544, 33], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [544, 33], "curve": "E-", "A_digits": 17, "rank": [2, 4], "status": "rank not 1", "sec": "0.8"}
+{"pair": [551, 240], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [551, 240], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [552, 385], "curve": "E+", "A_digits": 18, "rank": [1, 1], "G": "-60248465352509280", "hG": 4.397276627981861, "hG_enclosure": [4.391539333517644, 4.404132874910768], "B": 103.1662910924799, "hj": 233.287550761229, "logK": 41.118642244175646, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.06751374222113715, "max |h - hhat| on the list": 48.79451102967869, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [552, 385], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [553, 97], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [553, 97], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [553, 263], "curve": "E+", "A_digits": 18, "rank": [3, 5], "status": "rank not 1", "sec": "0.4"}
+{"pair": [553, 263], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [561, 400], "curve": "E+", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.8"}
+{"pair": [561, 400], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [569, 383], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [569, 383], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [572, 315], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [572, 315], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [572, 555], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [572, 555], "curve": "E-", "A_digits": 15, "rank": [1, 1], "G": "15453913728293040", "hG": 4.712117988935587, "hG_enclosure": [4.705809998221064, 4.718566610831513], "B": 104.50217050479334, "hj": 240.50804048790678, "logK": 33.77613976439319, "amax": 52, "ntors": 2, "sat": "<= 57", "lam": 0.001452005364272219, "max |h - hhat| on the list": 44.47563043499258, "ncand": 108, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [575, 48], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [575, 48], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [577, 511], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [577, 511], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [589, 300], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [589, 300], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [593, 257], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [593, 257], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [595, 468], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [595, 468], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [599, 193], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [599, 193], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [600, 481], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [600, 481], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [601, 7], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [601, 7], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [607, 343], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [607, 343], "curve": "E-", "A_digits": 17, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
+{"pair": [608, 105], "curve": "E+", "A_digits": 18, "rank": [1, 1], "G": "34864280951122560", "hG": 4.373339931839611, "hG_enclosure": [4.367771805713658, 4.3799387402082255], "B": 99.67152737950008, "hj": 226.28197746229066, "logK": 40.22473329757003, "amax": 55, "ntors": 2, "sat": "<= 33", "lam": 0.004106891357584516, "max |h - hhat| on the list": 48.00140143986391, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [608, 105], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [609, 200], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [609, 200], "curve": "E-", "A_digits": 18, "rank": [0, 4], "status": "rank not 1", "sec": "0.6"}
+{"pair": [612, 35], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [612, 35], "curve": "E-", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.7"}
+{"pair": [617, 433], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [617, 433], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [621, 100], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [621, 100], "curve": "E-", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [623, 313], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [623, 313], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [623, 527], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [623, 527], "curve": "E-", "A_digits": 17, "rank": [4, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [624, 407], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [624, 407], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [627, 364], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [627, 364], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [629, 540], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "97144445910561840", "hG": 4.5374607044760396, "hG_enclosure": [4.531544453966389, 4.5445235028595325], "B": 106.3243685326348, "hj": 240.51036238497352, "logK": 42.39498290460521, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.0701220750219028, "max |h - hhat| on the list": 50.41544738678749, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [629, 540], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "97144445910561840", "hG": 4.739919660741714, "hG_enclosure": [4.733859159248301, 4.74668846883962], "B": 105.09770417209197, "hj": 241.85994500467405, "logK": 37.24444772112535, "amax": 53, "ntors": 2, "sat": "<= 34", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 46.804411969078274, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.7"}
+{"pair": [631, 71], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [631, 71], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [641, 119], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [641, 119], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [644, 333], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "137000154864510000", "hG": 4.448870883921356, "hG_enclosure": [4.442951100127855, 4.455754757996081], "B": 104.88756525649768, "hj": 239.40906627394176, "logK": 41.49995428462415, "amax": 57, "ntors": 2, "sat": "<= 17", "lam": 0.0165167654861489, "max |h - hhat| on the list": 49.38903819137886, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [644, 333], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [647, 577], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [647, 577], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [651, 260], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [651, 260], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [660, 259], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [660, 259], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "126664830216410640", "hG": 4.57603962920315, "hG_enclosure": [4.570205932629744, 4.582740440953373], "B": 102.6826921871639, "hj": 235.0048278946235, "logK": 39.62963932186154, "amax": 54, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 48.02237832687268, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [663, 616], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [663, 616], "curve": "E-", "A_digits": 16, "rank": [2, 4], "status": "rank not 1", "sec": "0.7"}
+{"pair": [665, 432], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "184703151935090880", "hG": 4.506515037288502, "hG_enclosure": [4.500586234392155, 4.513522086051627], "B": 105.97049679440121, "hj": 240.7701337025475, "logK": 42.09025616820974, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.06899210067074911, "max |h - hhat| on the list": 50.05735361924599, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [665, 432], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.8"}
+{"pair": [667, 156], "curve": "E+", "A_digits": 18, "rank": [0, 4], "status": "rank not 1", "sec": "0.6"}
+{"pair": [667, 156], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [672, 185], "curve": "E+", "A_digits": 18, "rank": [1, 1], "G": "-100826880832567680", "hG": 4.44443069764709, "hG_enclosure": [4.438694837113754, 4.4512734815976405], "B": 103.04425561199557, "hj": 235.56430090792176, "logK": 41.08031184135755, "amax": 56, "ntors": 2, "sat": "<= 32", "lam": 0.004358960961891288, "max |h - hhat| on the list": 48.91540890161514, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [672, 185], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [673, 239], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [673, 239], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [675, 52], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [675, 52], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "-29145190792863600", "hG": 4.448722441964077, "hG_enclosure": [4.44274603044455, 4.45520007781797], "B": 102.02355608306807, "hj": 234.3577646038197, "logK": 40.3260724903439, "amax": 56, "ntors": 2, "sat": "<= 32", "lam": 0.0044303533972096945, "max |h - hhat| on the list": 48.35885008738666, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [679, 41], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [679, 41], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [679, 239], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [679, 239], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [680, 111], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [680, 111], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "-64508816837381280", "hG": 4.491924994690082, "hG_enclosure": [4.48599733512904, 4.498475498594443], "B": 102.22111510858092, "hj": 234.36532745582366, "logK": 40.21502031342719, "amax": 55, "ntors": 2, "sat": "<= 33", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 48.301743413319855, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [684, 37], "curve": "E+", "A_digits": 18, "rank": [1, 1], "G": "-22158405488192400", "hG": 4.437794994088462, "hG_enclosure": [4.432042467909253, 4.4445184291015005], "B": 102.20307408689708, "hj": 234.84792504341513, "logK": 40.66524798873869, "amax": 56, "ntors": 2, "sat": "<= 34", "lam": 0.003997184826225634, "max |h - hhat| on the list": 48.63802069398662, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [684, 37], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [697, 329], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [697, 329], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [697, 367], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [697, 367], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [697, 696], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [697, 696], "curve": "E-", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [700, 429], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [700, 429], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "-247722167075182800", "hG": 4.716055675957496, "hG_enclosure": [4.710103856579946, 4.722917036839855], "B": 104.9655726891782, "hj": 241.01493695348245, "logK": 39.432624440689004, "amax": 53, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 48.33530565278579, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [703, 504], "curve": "E+", "A_digits": 19, "rank": [0, 2], "status": "rank not 1", "sec": "0.5"}
+{"pair": [703, 504], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [713, 41], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [713, 41], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [713, 216], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "-157865751212450400", "hG": 4.485471038221871, "hG_enclosure": [4.479665774683779, 4.492403026675195], "B": 104.34356831367802, "hj": 238.80929222312764, "logK": 41.508048712265804, "amax": 56, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 49.450501033954424, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [713, 216], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [713, 503], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [713, 503], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [719, 161], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [719, 161], "curve": "E-", "A_digits": 18, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [721, 521], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [721, 521], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [721, 647], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [721, 647], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [725, 108], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [725, 108], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [727, 623], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [727, 623], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [728, 615], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [728, 615], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.9"}
+{"pair": [736, 273], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.5"}
+{"pair": [736, 273], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "-231372598162742400", "hG": 4.638601439127872, "hG_enclosure": [4.632718377536569, 4.645437573050949], "B": 104.19564965380391, "hj": 238.61293631294953, "logK": 40.32448334042199, "amax": 54, "ntors": 2, "sat": "<= 33", "lam": 0.0044303533972096945, "max |h - hhat| on the list": 48.80273741474775, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [741, 580], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "323753247458506320", "hG": 4.621377803918469, "hG_enclosure": [4.615425295839814, 4.628497479870528], "B": 107.0873315796017, "hj": 240.66398844533163, "logK": 43.14635552850606, "amax": 56, "ntors": 2, "sat": "<= 9", "lam": 0.07127055644882102, "max |h - hhat| on the list": 51.355955307299155, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [741, 580], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [743, 127], "curve": "E+", "A_digits": 18, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
+{"pair": [743, 127], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [748, 195], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [748, 195], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "181799218686125040", "hG": 4.598561008899141, "hG_enclosure": [4.592710826181789, 4.605395520517754], "B": 103.91301600022291, "hj": 238.01564216873365, "logK": 40.61812655851425, "amax": 55, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 48.99999301974344, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [751, 289], "curve": "E+", "A_digits": 19, "rank": [4, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [751, 289], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [756, 533], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [756, 533], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [759, 280], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "276890402597534880", "hG": 4.532766348208758, "hG_enclosure": [4.526786408165003, 4.539735445100269], "B": 106.07851057369535, "hj": 242.97097816493792, "logK": 42.06151801155231, "amax": 57, "ntors": 2, "sat": "<= 35", "lam": 0.0038693984117912934, "max |h - hhat| on the list": 50.00647537213081, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [759, 280], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [760, 39], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [760, 39], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [761, 79], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [761, 79], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [769, 217], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [769, 217], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [775, 168], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [775, 168], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [777, 464], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "458788230413486400", "hG": 4.594845882667289, "hG_enclosure": [4.58876668730065, 4.6019678535459665], "B": 108.1439538816318, "hj": 246.56974787277946, "logK": 42.86537970632881, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.06974337539026061, "max |h - hhat| on the list": 51.00477204863091, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [777, 464], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "458788230413486400", "hG": 4.778836023816775, "hG_enclosure": [4.772759899381545, 4.785751288063602], "B": 106.4254560834058, "hj": 244.47449025716293, "logK": 40.1104405169999, "amax": 54, "ntors": 2, "sat": "<= 34", "lam": 0.004358960961891288, "max |h - hhat| on the list": 49.0636519091986, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.5"}
+{"pair": [779, 660], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "367113727199733360", "hG": 4.676265805027158, "hG_enclosure": [4.670135751497258, 4.68348580359183], "B": 109.36362675872219, "hj": 247.6843228665052, "logK": 43.643853047553286, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.07243784806621865, "max |h - hhat| on the list": 51.93575741842142, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [779, 660], "curve": "E-", "A_digits": 17, "rank": [1, 1], "G": "367113727199733360", "hG": 4.878617332077022, "hG_enclosure": [4.872401618611074, 4.885612472254858], "B": 108.22331304987807, "hj": 249.34748050616517, "logK": 38.65869262000161, "amax": 53, "ntors": 2, "sat": "<= 34", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 48.504304569278474, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [780, 451], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "-462630934062176880", "hG": 4.592144496516204, "hG_enclosure": [4.586120131117176, 4.599317825466399], "B": 108.115512108843, "hj": 246.67706838956175, "logK": 42.83147964392215, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.06936672095495582, "max |h - hhat| on the list": 50.94364946710448, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [780, 451], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [780, 731], "curve": "E+", "A_digits": 20, "rank": [0, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [780, 731], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [783, 56], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "65924290668045600", "hG": 4.531809861867124, "hG_enclosure": [4.525993044641648, 4.538715313123941], "B": 104.22082340693703, "hj": 239.56946572051996, "logK": 41.51345064518394, "amax": 56, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 49.661403196051424, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [783, 56], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [791, 311], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [791, 311], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [791, 569], "curve": "E+", "A_digits": 19, "rank": [5, 5], "status": "rank not 1", "sec": "0.1"}
+{"pair": [791, 569], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [799, 7], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [799, 7], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [799, 721], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [799, 721], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [800, 369], "curve": "E+", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.8"}
+{"pair": [800, 369], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.8"}
+{"pair": [805, 348], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [805, 348], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "-454129599750293040", "hG": 4.727197048874489, "hG_enclosure": [4.721219160549143, 4.734146154767297], "B": 105.89793663511423, "hj": 242.7861396323826, "logK": 40.74168911239703, "amax": 54, "ntors": 2, "sat": "<= 36", "lam": 0.003827717303152225, "max |h - hhat| on the list": 49.51798299616104, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [809, 409], "curve": "E+", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [809, 409], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [812, 645], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [812, 645], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "-548162435536156560", "hG": 4.887390907777226, "hG_enclosure": [4.8810800482470285, 4.89431991927], "B": 108.46102342018449, "hj": 249.83734390875108, "logK": 39.39863081887151, "amax": 53, "ntors": 2, "sat": "<= 34", "lam": 0.004358960961891288, "max |h - hhat| on the list": 49.181111355361736, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [816, 287], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.9"}
+{"pair": [816, 287], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [817, 744], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [817, 744], "curve": "E-", "A_digits": 17, "rank": [0, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [823, 511], "curve": "E+", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [823, 511], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [825, 232], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [825, 232], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "-352446538272074400", "hG": 4.673174604328515, "hG_enclosure": [4.667235848901022, 4.680109901852237], "B": 105.46424177635058, "hj": 241.69308808178334, "logK": 41.17043483350646, "amax": 55, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 49.676359072073865, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [828, 205], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "317929348199831760", "hG": 4.58234078108303, "hG_enclosure": [4.576456681502608, 4.589356366335173], "B": 105.67421814837014, "hj": 241.59501010966497, "logK": 42.26177748932589, "amax": 56, "ntors": 2, "sat": "<= 33", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 50.378446496783, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [828, 205], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [833, 97], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [833, 97], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [833, 617], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [833, 617], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [836, 123], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [836, 123], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [837, 116], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "190539500248515600", "hG": 4.584387653166544, "hG_enclosure": [4.578477820507193, 4.591296901499416], "B": 105.01391148829653, "hj": 240.46548515374246, "logK": 42.06287067785699, "amax": 56, "ntors": 2, "sat": "<= 66", "lam": 0.0010663893542594356, "max |h - hhat| on the list": 50.206362654796976, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [837, 116], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [839, 727], "curve": "E+", "A_digits": 20, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [839, 727], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [840, 41], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [840, 41], "curve": "E-", "A_digits": 19, "rank": [1, 1], "G": "-68586369276764640", "hG": 4.580634250830878, "hG_enclosure": [4.574559989630211, 4.58741330401568], "B": 105.29435144576317, "hj": 242.3228064044927, "logK": 41.69138289254423, "amax": 56, "ntors": 2, "sat": "<= 65", "lam": 0.001089740240472822, "max |h - hhat| on the list": 49.992027471603706, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [840, 559], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [840, 559], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [851, 420], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [851, 420], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [855, 832], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [855, 832], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [857, 487], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [857, 487], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [861, 620], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [861, 620], "curve": "E-", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.6"}
+{"pair": [863, 191], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [863, 191], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [864, 473], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [864, 473], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "829116389657001600", "hG": 4.8275649475365, "hG_enclosure": [4.821469990359201, 4.83461549472789], "B": 107.68797178829426, "hj": 247.36462877177908, "logK": 40.89427604577898, "amax": 54, "ntors": 2, "sat": "<= 34", "lam": 0.004358960961891288, "max |h - hhat| on the list": 49.99839020957734, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [868, 765], "curve": "E+", "A_digits": 20, "rank": [1, 1], "G": "598041440642908080", "hG": 4.759837610728715, "hG_enclosure": [4.75353729965299, 4.767143064607369], "B": 111.45842650626656, "hj": 253.0169039236328, "logK": 44.39698545583553, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.07362425795331895, "max |h - hhat| on the list": 52.862913086970366, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
+{"pair": [868, 765], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [881, 799], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [881, 799], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [884, 387], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "804970170812480400", "hG": 4.643986111797812, "hG_enclosure": [4.637895297712317, 4.651204723136832], "B": 109.03081307762818, "hj": 249.81422093083458, "logK": 43.169925308854744, "amax": 57, "ntors": 2, "sat": "<= 36", "lam": 0.003766035979907323, "max |h - hhat| on the list": 51.429274860000305, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [884, 387], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [887, 257], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [887, 257], "curve": "E-", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [889, 31], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [889, 31], "curve": "E-", "A_digits": 19, "rank": [4, 4], "status": "rank not 1", "sec": "0.2"}
+{"pair": [889, 289], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [889, 289], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [897, 496], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "1044425172849240000", "hG": 4.678610599002666, "hG_enclosure": [4.672467749554283, 4.685905109047301], "B": 110.07884896680825, "hj": 251.60156837317749, "logK": 43.59451587496954, "amax": 57, "ntors": 2, "sat": "<= 17", "lam": 0.017625707738774074, "max |h - hhat| on the list": 51.42705577065317, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [897, 496], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.8"}
+{"pair": [899, 60], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "140929231407479760", "hG": 4.622954648860763, "hG_enclosure": [4.616996624376092, 4.629972278278303], "B": 106.29655676691827, "hj": 244.5886738506616, "logK": 42.33209754132012, "amax": 56, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 50.66830572187223, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [899, 60], "curve": "E-", "A_digits": 19, "rank": [1, 1], "G": "140929231407479760", "hG": 4.634882660485279, "hG_enclosure": [4.628925271868613, 4.641903522141409], "B": 106.31782623475544, "hj": 244.7100196457797, "logK": 42.06473680448765, "amax": 56, "ntors": 2, "sat": "<= 32", "lam": 0.004527365504138666, "max |h - hhat| on the list": 50.48692226613275, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [900, 301], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "702055184754596400", "hG": 4.643045318083003, "hG_enclosure": [4.637003997569605, 4.650217223023103], "B": 108.242742915059, "hj": 248.2055251991547, "logK": 42.98974919971957, "amax": 56, "ntors": 2, "sat": "<= 99", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 51.27978499316305, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [900, 301], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [903, 704], "curve": "E+", "A_digits": 20, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [903, 704], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "1066105852123065600", "hG": 4.9527742841301166, "hG_enclosure": [4.946399292500412, 4.95982073202588], "B": 109.9484325926375, "hj": 253.3803488464806, "logK": 40.14554367452224, "amax": 53, "ntors": 2, "sat": "<= 34", "lam": 0.004358960961891288, "max |h - hhat| on the list": 50.005529077326855, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
+{"pair": [911, 391], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [911, 391], "curve": "E-", "A_digits": 19, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [912, 215], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [912, 215], "curve": "E-", "A_digits": 19, "rank": [1, 1], "G": "-540915175060115520", "hG": 4.719533692593292, "hG_enclosure": [4.713541086977312, 4.726578152951081], "B": 106.79964445712048, "hj": 245.01968318408953, "logK": 41.850598311594624, "amax": 55, "ntors": 2, "sat": "<= 33", "lam": 0.0044303533972096945, "max |h - hhat| on the list": 50.47316538656469, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
+{"pair": [919, 401], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [919, 401], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [920, 129], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [920, 129], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [924, 43], "curve": "E+", "A_digits": 19, "rank": [0, 2], "status": "rank not 1", "sec": "0.8"}
+{"pair": [924, 43], "curve": "E-", "A_digits": 19, "rank": [1, 1], "G": "115847393297790000", "hG": 4.642970190862079, "hG_enclosure": [4.636936400135604, 4.649964173209846], "B": 106.72351702418435, "hj": 245.76041470531115, "logK": 42.26758456304195, "amax": 56, "ntors": 2, "sat": "<= 66", "lam": 0.001089740240472822, "max |h - hhat| on the list": 50.65132516139147, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.5"}
+{"pair": [924, 893], "curve": "E+", "A_digits": 20, "rank": [1, 1], "G": "-306977325412203600", "hG": 4.830080761421684, "hG_enclosure": [4.823744927334927, 4.837570629003107], "B": 113.26014806572519, "hj": 257.6466666998314, "logK": 45.030234487229514, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.07483009923516365, "max |h - hhat| on the list": 53.64849194353121, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [924, 893], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [925, 372], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [925, 372], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [928, 585], "curve": "E+", "A_digits": 20, "rank": [1, 1], "G": "1356157521066741120", "hG": 4.72288613243519, "hG_enclosure": [4.716702045915747, 4.730242731859027], "B": 110.92529924735067, "hj": 252.89569338874102, "logK": 44.03133162979752, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.0720466419250561, "max |h - hhat| on the list": 52.42816030632139, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
+{"pair": [928, 585], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [929, 497], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [929, 497], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [937, 167], "curve": "E+", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [937, 167], "curve": "E-", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [943, 553], "curve": "E+", "A_digits": 20, "rank": [2, 4], "status": "rank not 1", "sec": "0.6"}
+{"pair": [943, 553], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [943, 576], "curve": "E+", "A_digits": 20, "rank": [1, 1], "G": "-1478912779111622400", "hG": 4.727833359792849, "hG_enclosure": [4.721626318682368, 4.735188602689938], "B": 111.10223059001389, "hj": 253.53326737508218, "logK": 44.06831182211885, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.0720466419250561, "max |h - hhat| on the list": 52.50176559925103, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.3"}
+{"pair": [943, 576], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [943, 607], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [943, 607], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [945, 248], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [945, 248], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [952, 495], "curve": "E+", "A_digits": 20, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [952, 495], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [953, 721], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [953, 721], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [957, 124], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [957, 124], "curve": "E-", "A_digits": 19, "rank": [1, 1], "G": "-398032868382903600", "hG": 4.705029265608739, "hG_enclosure": [4.6989738453748755, 4.712072011215509], "B": 107.30017456646428, "hj": 246.7435354784508, "logK": 42.32487405080952, "amax": 55, "ntors": 2, "sat": "<= 34", "lam": 0.0042655574170377426, "max |h - hhat| on the list": 50.84631479450127, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
+{"pair": [959, 713], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [959, 713], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [959, 839], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [959, 839], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [960, 799], "curve": "E+", "A_digits": 20, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [960, 799], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [961, 161], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [961, 161], "curve": "E-", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [967, 881], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [967, 881], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [975, 448], "curve": "E+", "A_digits": 20, "rank": [0, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [975, 448], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [977, 311], "curve": "E+", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [977, 311], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [983, 73], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [983, 73], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [987, 884], "curve": "E+", "A_digits": 20, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [987, 884], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [988, 315], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [988, 315], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [989, 660], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [989, 660], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [991, 263], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [991, 263], "curve": "E-", "A_digits": 19, "rank": [4, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [992, 705], "curve": "E+", "A_digits": 20, "rank": [1, 1], "G": "2017928044168794240", "hG": 4.792288453547233, "hG_enclosure": [4.786038152551492, 4.799698618619442], "B": 111.90653802864821, "hj": 253.98220218835078, "logK": 44.67610526353845, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.07362425795331895, "max |h - hhat| on the list": 53.18700749214986, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [992, 705], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [999, 320], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [999, 320], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1009, 463], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1009, 463], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1031, 217], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1031, 217], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1033, 623], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [1033, 623], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1039, 479], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1039, 479], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [1049, 791], "curve": "E+", "A_digits": 20, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [1049, 791], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1057, 593], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1057, 593], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [1063, 127], "curve": "E+", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1063, 127], "curve": "E-", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1081, 119], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1081, 119], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1081, 833], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1081, 833], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1097, 233], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1097, 233], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [1103, 529], "curve": "E+", "A_digits": 20, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1103, 529], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1127, 17], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1127, 17], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1127, 697], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1127, 697], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1129, 271], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1129, 271], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1153, 457], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1153, 457], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [1169, 89], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1169, 89], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1169, 431], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [1169, 431], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1193, 697], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1193, 697], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1201, 599], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1201, 599], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1207, 199], "curve": "E+", "A_digits": 20, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [1207, 199], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
+{"pair": [1231, 329], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1231, 329], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [1241, 313], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1241, 313], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1271, 431], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1271, 431], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1271, 497], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1271, 497], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1279, 47], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1279, 47], "curve": "E-", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1289, 223], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1289, 223], "curve": "E-", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1297, 553], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1297, 553], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [1303, 673], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1303, 673], "curve": "E-", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [1319, 679], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1319, 679], "curve": "E-", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1321, 161], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1321, 161], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1337, 391], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [1337, 391], "curve": "E-", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1343, 113], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1343, 113], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [1393, 1], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1393, 1], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1393, 401], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1393, 401], "curve": "E-", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1399, 281], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1399, 281], "curve": "E-", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1423, 527], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1423, 527], "curve": "E-", "A_digits": 20, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1439, 119], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [1439, 119], "curve": "E-", "A_digits": 20, "rank": [4, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [1447, 457], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1447, 457], "curve": "E-", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1457, 167], "curve": "E+", "A_digits": 20, "rank": [4, 4], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1457, 167], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1481, 241], "curve": "E+", "A_digits": 20, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [1481, 241], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [1511, 49], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1511, 49], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1513, 343], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1513, 343], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [1519, 367], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1519, 367], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1561, 73], "curve": "E+", "A_digits": 20, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
+{"pair": [1561, 73], "curve": "E-", "A_digits": 20, "rank": [4, 4], "status": "rank not 1", "sec": "0.4"}
+{"pair": [1607, 199], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1607, 199], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1633, 103], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1633, 103], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [1649, 329], "curve": "E+", "A_digits": 21, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1649, 329], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1687, 23], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1687, 23], "curve": "E-", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1697, 287], "curve": "E+", "A_digits": 21, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1697, 287], "curve": "E-", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1759, 161], "curve": "E+", "A_digits": 21, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1759, 161], "curve": "E-", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
+{"pair": [1817, 31], "curve": "E+", "A_digits": 21, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [1817, 31], "curve": "E-", "A_digits": 21, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
+{"pair": [1871, 103], "curve": "E+", "A_digits": 21, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [1871, 103], "curve": "E-", "A_digits": 21, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}

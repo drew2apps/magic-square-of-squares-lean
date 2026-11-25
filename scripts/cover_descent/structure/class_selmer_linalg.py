@@ -8,7 +8,9 @@ the kernel of a matrix A, and its size is 2^(number of primes - rank A).  This p
 with m <= H, whether the system is solvable and the dimension of the kernel, and checks the size against class_selmer.py
 for m <= H0.  The conditions are those of class_selmer.py (the function `empty` and the list `cond` of `criterion`).
 
-usage: class_selmer_linalg.py H [H0]      (default H0 = min(H, 1000))
+usage: class_selmer_linalg.py H [H0] [--list FILE] [--from A]     (default H0 = min(H, 1000); with --list, the ratios
+       with m <= H that are not of the two degenerate types and keep a class are written to FILE, one "m,n dim" per
+       line; with --from, only the ratios with A < m <= H are counted)
 """
 import sys, os
 from math import gcd, isqrt, prod
@@ -48,9 +50,12 @@ def solve(P8, cond):
     return solvable, k - rank
 
 if __name__ == '__main__':
-    H = int(sys.argv[1]); H0 = int(sys.argv[2]) if len(sys.argv) > 2 else min(H, 1000)
+    argv = sys.argv[1:]; out = None; A = 1
+    if '--list' in argv: i = argv.index('--list'); out = open(argv[i + 1], 'w'); del argv[i:i + 2]
+    if '--from' in argv: i = argv.index('--from'); A = int(argv[i + 1]); del argv[i:i + 2]
+    H = int(argv[0]); H0 = int(argv[1]) if len(argv) > 1 else min(H, 1000)
     checked = mismatch = 0; dims = {}
-    for m in range(2, H + 1):
+    for m in range(max(2, A + 1), H + 1):
         for n in range(1, m):
             if gcd(m, n) != 1: continue
             sy = system(m, n)
@@ -60,10 +65,11 @@ if __name__ == '__main__':
                 N = m*m + n*n; deg = isqrt(N)**2 == N or isqrt(2*N)**2 == 2*N
                 key = ('degenerate' if deg else 'other', dim if ok else None)
                 dims[key] = dims.get(key, 0) + 1
+                if out and not deg and ok: out.write('%d,%d %d\n' % (m, n, dim))
             if m <= H0:
                 checked += 1; mismatch += size != len(C.criterion(m, n)[0])
     print('coprime ratios with m <= %d: the size 2^dim (or 0) against the classes listed by class_selmer.py: %d ratios, %d different' % (H0, checked, mismatch))
-    print('ratios with m <= %d and a local point everywhere, by type and dimension of the kernel (None = no solution):' % H)
+    print('ratios with %sm <= %d and a local point everywhere, by type and dimension of the kernel (None = no solution):' % ('%d < ' % A if A > 1 else '', H))
     for kind in ('degenerate', 'other'):
         row = sorted((d for t, d in dims if t == kind), key=lambda d: -1 if d is None else d)
         print('  %s: %s' % (kind, ', '.join('%s: %d' % ('none' if d is None else 'dim %d' % d, dims[(kind, d)]) for d in row)))

@@ -1,0 +1,8 @@
+coprime ratios with m <= 0: the size 2^dim (or 0) against the classes listed by class_selmer.py: 0 ratios, 0 different
+ratios with 5000 < m <= 10000 and a local point everywhere, by type and dimension of the kernel (None = no solution):
+  degenerate: dim 0: 1446, dim 1: 75, dim 2: 3
+  other: none: 206341, dim 0: 2969, dim 1: 226, dim 2: 19, dim 3: 2
+coprime ratios with m <= 0: the size 2^dim (or 0) against the classes listed by class_selmer.py: 0 ratios, 0 different
+ratios with 10000 < m <= 15000 and a local point everywhere, by type and dimension of the kernel (None = no solution):
+  degenerate: dim 0: 1450, dim 1: 66, dim 2: 6
+  other: none: 346550, dim 0: 5102, dim 1: 381, dim 2: 39, dim 3: 1

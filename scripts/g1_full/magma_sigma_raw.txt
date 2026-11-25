@@ -1,0 +1,42 @@
+=== [440, 279] E+
+--- input
+E:=EllipticCurve([0, -1, 0, 697354433612429863997469653124479, -13676026103440534616279925913010368746405631620479]); r1,r2:=RankBounds(E); print "RB", r1, r2; if r1 lt r2 then a,b:=MordellWeilShaInformation(E : Silent:=true); print "MWSI", a, b; end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>3602626321</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
+=== [627, 364] E+
+--- input
+E:=EllipticCurve([0, -1, 0, 49898163932746039380512144390223935, -4448551912138071803091728195860140924503628117619775]); r1,r2:=RankBounds(E); print "RB", r1, r2; if r1 lt r2 then a,b:=MordellWeilShaInformation(E : Silent:=true); print "MWSI", a, b; end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2898394413</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== [627, 364] E-
+--- input
+E:=EllipticCurve([0, -1, 0, -22543813857399998311829783934896065, 1373625112462060957182623247169266952994612131302337]); r1,r2:=RankBounds(E); print "RB", r1, r2; if r1 lt r2 then a,b:=MordellWeilShaInformation(E : Silent:=true); print "MWSI", a, b; end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2330450466</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
+=== [760, 39] E+
+--- input
+E:=EllipticCurve([0, -1, 0, -47242015541791416701649013354776961, 4679842972518467075050303978420506723028402174335361]); r1,r2:=RankBounds(E); print "RB", r1, r2; if r1 lt r2 then a,b:=MordellWeilShaInformation(E : Silent:=true); print "MWSI", a, b; end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2196754926</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results/></calculator>
+
+=== [945, 248] E+
+--- input
+E:=EllipticCurve([0, -1, 0, 817141261476628620314123501363562239, 1016517919350494033923672753352045312263884996150468865]); r1,r2:=RankBounds(E); print "RB", r1, r2; if r1 lt r2 then a,b:=MordellWeilShaInformation(E : Silent:=true); print "MWSI", a, b; end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2815083641</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
+=== [945, 248] E-
+--- input
+E:=EllipticCurve([0, -1, 0, -632747706025938703957116072205973761, 409073673937892147718864456679243913791959627121860865]); r1,r2:=RankBounds(E); print "RB", r1, r2; if r1 lt r2 then a,b:=MordellWeilShaInformation(E : Silent:=true); print "MWSI", a, b; end if;
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>258108871</seed><version>2.29-10</version><warning>The computation exceeded the time limit and so was terminated prematurely.</warning></headers><results><line></line><line>WARNING</line><line>Class group unconditional proof is infeasible.</line><line>Hint: to obtain class group proven under GRH, input</line><line>&gt; SetClassGroupBounds("GRH");</line><line>before starting the current calculation.</line><line></line></results></calculator>
+
