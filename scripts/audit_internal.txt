@@ -133,6 +133,7 @@ MagicSquareOfSquares.ClassOdd MagicSquareOfSquares.CoverDescent.prime_mul_unit_p
 MagicSquareOfSquares.ClassOdd MagicSquareOfSquares.CoverDescent.prime_mul_unit_passes_one_mod_eight._proof_1_3
 MagicSquareOfSquares.ClassOdd MagicSquareOfSquares.CoverDescent.prime_mul_unit_passes_seven_mod_eight._proof_1_1
 MagicSquareOfSquares.ClassOdd MagicSquareOfSquares.CoverDescent.prime_mul_unit_passes_seven_mod_eight._proof_1_2
+MagicSquareOfSquares.ClassPadic MagicSquareOfSquares.CoverDescent.PadicClassAt._proof_1
 MagicSquareOfSquares.ClassTable MagicSquareOfSquares.CoverDescent.not_passes_three._proof_1_1
 MagicSquareOfSquares.ClassTable MagicSquareOfSquares.CoverDescent.not_passes_three._proof_1_2
 MagicSquareOfSquares.ClassTable MagicSquareOfSquares.CoverDescent.passes_of_row._proof_1_1
@@ -689,4 +690,4 @@ MagicSquareOfSquares.Triangles _private.MagicSquareOfSquares.Triangles.0.MagicSq
 MagicSquareOfSquares.Triangles _private.MagicSquareOfSquares.Triangles.0.MagicSquareOfSquares.nodup_neg._simp_1_1
 MagicSquareOfSquares.Triangles _private.MagicSquareOfSquares.Triangles.0.MagicSquareOfSquares.triangle_of_progression
 MagicSquareOfSquares.Triangles _private.MagicSquareOfSquares.Triangles.0.MagicSquareOfSquares.triangles_of_pos
-AUDIT INTERNAL: 624 theorems printed by Audit.lean, 691 auxiliary, 1315 in all
+AUDIT INTERNAL: 637 theorems printed by Audit.lean, 692 auxiliary, 1329 in all
