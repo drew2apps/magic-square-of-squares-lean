@@ -1,0 +1,6 @@
+224,207 E-: Magma 2, PARI [2,2], rank_indep (no known points given) 2
+260,69 E-: Magma 2, PARI [0,2], rank_indep (no known points given) 4
+144,17 E-: Magma 3, PARI [1,3], rank_indep (no known points given) 3
+224,207 E+: Magma 3, PARI [1,3], rank_indep (no known points given) 3
+273,136 E+: Magma 2, PARI [2,2], rank_indep (no known points given) 4
+208,105 E-: Magma 3, PARI [1,3], rank_indep (no known points given) 3

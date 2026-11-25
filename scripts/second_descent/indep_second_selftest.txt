@@ -1,0 +1,1 @@
+self-test: 12 random curves y^2 = x((x + a)^2 + b^2): bound >= PARI's lower bound; the images of 4 points found by PARI all survive the second descent

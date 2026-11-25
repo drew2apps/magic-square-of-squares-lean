@@ -33,4 +33,7 @@ import MagicSquareOfSquares.ClassConic
 import MagicSquareOfSquares.ClassOdd
 import MagicSquareOfSquares.ClassFive
 import MagicSquareOfSquares.ClassTable
+import MagicSquareOfSquares.ClassHensel
 import MagicSquareOfSquares.G1Sigma
+import MagicSquareOfSquares.G1SigmaGeneric
+import MagicSquareOfSquares.SecondDescentIdentities

@@ -57,11 +57,12 @@ This does not touch the ratios that are not of the two types (Theorem 7 of `CLAS
 curves `E⁺`, `E⁻`. The reason is computed with exact rationals in `scripts/g1_full/sigma_twice.py` (output
 `sigma_twice.txt`): on both curves of every one of the 127, the point with `z = ±2` (from `t = ±1`, which exists for
 every ratio) and the point `X = 0` (from `t = 0`, which exists exactly when `2(m² + n²)` is a square) are
-independent, so both curves have rank at least 2 and Demjanenko–Manin with one generator cannot apply. This covers
-the 127 ratios to 1000 only. For four of them, (313,103), (503,329), (593,257) and (713,503),
+independent, so both curves have rank at least 2 and Demjanenko–Manin with one generator cannot apply. That
+computation covers the 127 ratios to 1000; the proof for every such ratio is in the next paragraph. For four of them, (313,103), (503,329), (593,257) and (713,503),
 `dm_sigma_306.jsonl` records `E⁻` with the rank bounds `[1, 3]`; the rank is in fact 2 or 3.
 
 For the square type the point at `t = 1` is the same as the universal one (`z = 2`), so only one point is forced,
-and Demjanenko–Manin works whenever the rank is exactly 1. A proof for every twice-square ratio would show that
-the two sections are independent over the function field of the conic `x² + y² = 2z²` and specialise
-injectively; that is not done.
+and Demjanenko–Manin works whenever the rank is exactly 1. For every twice-square ratio, not only the 127, both
+curves have rank at least 2: `UNIFORM_RANK.md` (25 November 2026; a written proof with exact computations, by the
+2-isogeny map and two curves with finitely many rational points, with no specialisation theorem; not read by a
+person). So Demjanenko–Manin with one generator never applies to them.

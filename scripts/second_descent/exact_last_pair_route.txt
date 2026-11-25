@@ -1,0 +1,6 @@
+187,84 d=55826: rank <= 1; hhat(G) in [16.3041, 16.3093]; saturated to 199; heights >= hhat(G)/210^2 (m = 12, search to 74); a, b <= 13444; sieve (10009 20089 30013 40009) to 30000 leaves [(1, 1)] (within the bound: [(1, 1)]); fibre: rational t ['-1', '1'], solutions ['-1', '1']
+  the analogue of Theorem A holds for 187,84 by the exact route: True
+440,279 d=231518: rank <= 3; hhat(G) in [18.9752, 18.9811]; saturated to 199; heights >= hhat(G)/210^2 (m = 12, search to 93); a, b <= 13401; sieve (10009 20089 30013 40009) to 30000 leaves [(1, 1)] (within the bound: [(1, 1)]); fibre: rational t ['-1', '1'], solutions ['-1', '1']
+  the analogue of Theorem A holds for 440,279 by the exact route: False
+420,341 d=120238: rank <= 3; hhat(G) in [18.9751, 18.9810]; saturated to 199; heights >= hhat(G)/210^2 (m = 12, search to 95); a, b <= 13403; sieve (10009 20089 30013 40009) to 30000 leaves [(1, 1)] (within the bound: [(1, 1)]); fibre: rational t ['-1', '1'], solutions ['-1', '1']
+  the analogue of Theorem A holds for 420,341 by the exact route: False

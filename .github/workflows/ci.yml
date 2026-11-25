@@ -92,6 +92,10 @@ jobs:
           python3 scripts/g1_full/sigma_exact.py | diff - scripts/g1_full/sigma_exact.txt
           (cd scripts/second_descent && python3 second_exact.py | diff - second_exact.txt)
           python3 scripts/degenerate_squares.py 1000 | diff - scripts/degenerate_squares.txt
+          python3 scripts/g1_full/sigma_generic.py | diff - scripts/g1_full/sigma_generic.txt
+          (cd scripts/second_descent && python3 exact_last_pair.py | diff - exact_last_pair.txt && python3 exact_last_pair.py --negative | diff - exact_last_pair_negative.txt)
+          (cd scripts/g1_full && python3 rank_indep.py | diff - rank_indep.txt && python3 rank_indep.py --negative | diff - rank_indep_negative.txt)
+          (cd scripts/g1_full && python3 rank_indep_heights.py | diff - rank_indep_heights.txt && python3 rank_indep_heights.py --negative | diff - rank_indep_heights_negative.txt)
           python3 scripts/g1_full/sigma_exact.py --negative | grep -q 'negative tests: 96 altered records, 96 refused'
           cd scripts/gauss_descent
           python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt
@@ -320,6 +324,13 @@ jobs:
           python3 tally.py second_123.jsonl lvalue_open.jsonl | diff - tally.txt
           python3 wide.py 1000 1020 ../g1_full/modp_classes.txt | diff - <(head -n 5 wide_1000_2000.jsonl)
           python3 wide.py --summary wide_1000_2000.jsonl | diff - wide_summary.txt
+          python3 indep_class.py 195,28 223,167 440,279 719,161 627,364 609,200 809,409 861,620 991,263 | diff - indep_class.txt
+          python3 indep_class.py --selftest | diff - indep_class_selftest.txt
+          python3 indep_fourclass.py | diff - indep_fourclass.txt
+          python3 indep_rank.py magma_second_ranks.json | grep -v "PARI stack" | diff - indep_rank.txt
+          python3 indep_rank.py --selftest | grep -v "PARI stack" | diff - indep_rank_selftest.txt
+          python3 indep_second.py | grep -v "PARI stack" | diff - indep_second.txt
+          python3 indep_second.py --selftest | grep -v "PARI stack" | diff - indep_second_selftest.txt
           cd ../gauss_descent
           python3 real_points.py 300 $(cat pairs157.txt) | diff - real_points_157.txt
           python3 local_points.py $(cat pairs157.txt) | diff - local_points_157.txt

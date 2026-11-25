@@ -1,0 +1,6 @@
+  refused: a point off the conic (not a point of the conic)
+  refused: a composite number given as a prime factor of b (('not proved prime', 7756860709839361))
+  refused: a point off the curve (a known point is not on the curve)
+  refused: a factorisation with a prime missing (factorisation does not multiply back)
+  refused: excluding the class of a rational point of E' (the class of a rational point survives the second descent, as it must)
+negative tests: 5 of 5 refused

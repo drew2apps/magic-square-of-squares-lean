@@ -1,0 +1,62 @@
+rank_indep.py --all: exact descent via 2-isogeny and second descent, for every curve of sigma_evidence.txt
+91,60 E+:
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 8, rank <= 5; bad primes [2, 3, 5, 7, 13, 31, 37, 109, 151, 193, 140449, 466537]
+  E: Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 3, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 3, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+91,60 E+: rank <= 1 (exact; lower bound 1 from G of sigma_evidence.txt)
+91,60 E-:
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 8, rank <= 5; bad primes [2, 3, 5, 7, 13, 31, 37, 109, 151, 193, 140449, 466537]
+  E: Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 3, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 3, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+91,60 E-: rank <= 1 (exact; lower bound 1 from G of sigma_evidence.txt)
+209,120 E-:
+  first descent: |Sel(phi)| <= 64, |Sel(phi^)| <= 2, rank <= 5; bad primes [2, 3, 5, 7, 11, 13, 19, 47, 73, 89, 181, 241, 409, 63793, 2057857]
+  E: Selmer 64 classes, known subgroup 4, cosets excluded by the second descent 12, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+  E': Selmer 2 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+209,120 E-: rank <= 3 (exact; lower bound 1 from G of sigma_evidence.txt)
+420,341 E-:
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 8, rank <= 5; bad primes [2, 3, 5, 7, 11, 13, 31, 37, 79, 541, 761, 5737, 322429, 7914050317]
+  E: Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 3, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+420,341 E-: rank <= 3 (exact; lower bound 1 from G of sigma_evidence.txt)
+572,555 E-:
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 2, rank <= 3; bad primes [2, 3, 5, 7, 11, 13, 17, 23, 37, 797, 1117, 4129, 100667209, 350336653]
+  E: Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 3, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 2 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+572,555 E-: rank <= 1 (exact; lower bound 1 from G of sigma_evidence.txt)
+608,105 E+:
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 8, rank <= 5; bad primes [2, 3, 5, 7, 13, 19, 23, 31, 503, 617, 21001, 698557, 99133087201]
+  E: Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 3, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+608,105 E+: rank <= 3 (exact; lower bound 1 from G of sigma_evidence.txt)
+680,111 E-:
+  first descent: |Sel(phi)| <= 32, |Sel(phi^)| <= 4, rank <= 5; bad primes [2, 3, 5, 7, 13, 17, 37, 53, 113, 181, 421, 569, 39313, 2065801, 7460737]
+  E: Selmer 32 classes, known subgroup 4, cosets excluded by the second descent 6, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+680,111 E-: rank <= 3 (exact; lower bound 1 from G of sigma_evidence.txt)
+741,580 E+:
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 2, rank <= 3; bad primes [2, 3, 5, 7, 13, 19, 23, 29, 37, 941, 1321, 87541, 298513, 601264521001]
+  E: Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 3, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 2 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+741,580 E+: rank <= 1 (exact; lower bound 1 from G of sigma_evidence.txt)
+760,39 E+:
+  first descent: |Sel(phi)| <= 32, |Sel(phi^)| <= 4, rank <= 5; bad primes [2, 3, 5, 7, 13, 17, 19, 47, 73, 103, 761, 21757, 23761, 189661, 15552001]
+  E: Selmer 32 classes, known subgroup 4, cosets excluded by the second descent 6, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+760,39 E+: rank <= 3 (exact; lower bound 1 from G of sigma_evidence.txt)
+945,248 E+:
+  first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 16, rank <= 5; bad primes [2, 3, 5, 7, 13, 17, 31, 41, 349, 977, 1193, 1493911429, 100067394997]
+  E: Selmer 8 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  E': Selmer 16 classes, known subgroup 2, cosets excluded by the second descent 6, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+945,248 E+: rank <= 3 (exact; lower bound 1 from G of sigma_evidence.txt)
+72,65 E+:
+  first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 4, rank <= 3; bad primes [2, 3, 5, 7, 13, 97, 137, 79553041, 97505521]
+  E: Selmer 8 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+72,65 E+: rank <= 3 (exact; lower bound 1 from G of sigma_evidence.txt)
+920,129 E+:
+  first descent: |Sel(phi)| <= 32, |Sel(phi^)| <= 4, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 43, 73, 113, 929, 1049, 3613, 6469, 159793, 145585309]
+  E: Selmer 32 classes, known subgroup 4, cosets excluded by the second descent 6, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+920,129 E+: rank <= 3 (exact; lower bound 1 from G of sigma_evidence.txt)
+summary: 91,60 E+ <= 1, 91,60 E- <= 1, 209,120 E- <= 3, 420,341 E- <= 3, 572,555 E- <= 1, 608,105 E+ <= 3, 680,111 E- <= 3, 741,580 E+ <= 1, 760,39 E+ <= 3, 945,248 E+ <= 3, 72,65 E+ <= 3, 920,129 E+ <= 3

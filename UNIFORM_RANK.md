@@ -1,0 +1,93 @@
+# Uniform rank bounds for the curves of `F0·F8·GL`
+
+**Status: tier C of `LEDGER.md`** (a statement with a written proof; not counted in the census). Written by an AI model (Claude, made by Anthropic) on 25 November 2026 (UTC); **not read by a person**. Every computation in the proof is done in exact arithmetic by `scripts/g1_full/sigma_generic.py` (output `scripts/g1_full/sigma_generic.txt`, compared in the CI job `quick`; under a minute, sympy and the standard library only; `--pari` adds the guide lines D5 to D7, output `sigma_generic_pari.txt`, not used in the proof); the theorems it quotes from textbooks are listed in section 7. The polynomial identities over `ℚ` of sections 2 and 3 are in Lean (`MagicSquareOfSquares/G1SigmaGeneric.lean`, 14 theorems proved by `ring`, standard axioms only); the descents, the torsion bounds, the local tests and the identities over `ℚ(i)` are not (section 7). A hostile review by a separate AI agent re-derived every identity and the descent over `ℚ(√2)` with its own code and found no mathematical error; it found that Lemma D is not new (below).
+
+## 1. Statement
+
+For a ratio `(m : n)` let `S = m² + n²` and
+
+    H(m, n) = m⁴ − 2m³n + 2m²n² + 2mn³ + n⁴   ( = u² − uv + v²  with u = m² − n², v = 2mn ).
+
+`E⁺` and `E⁻` are the two elliptic quotients of `y² = F0·F8·GL` of `G1_FULL_SYSTEM.md`, Result 4: `Y² = (z ± 2)·g(z)`, `g(z) = (2Sz − 8mn)(m²n²z² + (m² − n²)²)`, in the Weierstrass model `X = A/(z − z0)` of `sigma_exact.model(m, n, ±2)`.
+
+**Theorem 1 (every ratio).** Let `m, n` be non-zero integers with `m ≠ ±n`. On each of `E⁺`, `E⁻`:
+the point `P` of `t = ±1` (the one with `z = ±2`) is twice a rational point `R`; `E(ℚ)` has exactly one point of order 2, `T`, and no point of order 4; and `R`, hence `P`, has infinite order. So **`rank E±(ℚ) ≥ 1` for every ratio.**
+
+**Theorem 2 (twice a square).** If moreover `m² + n² = 2k²` (coprime `m, n`, so both odd), then on each of `E⁺`, `E⁻` the points `R`, `Q` (the point `X = 0` of `t = 0`) and `T` are linearly independent in `E(ℚ)/2E(ℚ)`. So **`rank E±(ℚ) ≥ 2` for every ratio with `m² + n²` twice a square**, and the argument of Demjanenko and Manin with one generator can never be applied to these curves. Until now this was known for the 127 such ratios with `m ≤ 1000` (`sigma_twice.py`, by enclosing the regulator of `P`, `Q`); `G1_FULL_SYSTEM.md` said a statement for every ratio "would need generic independence over the parametrised family and Silverman's specialisation theorem". The proof below needs neither.
+
+**The square type** (`m² + n²` a square). There is no point with `X = 0`, and the method gives only Theorem 1, `rank ≥ 1`. That is the right answer for this method: PARI's `ellrank` gives rank exactly 1 on `E⁺` of (12,5), with `R` supplied, and rank 2 on its `E⁻`, (12,−5) (guide only, `--pari`).
+
+## 2. The curve and its points
+
+All identities are checked by sympy in general `m, n` (lines A1 to A12 of `sigma_generic.txt`).
+
+- `E⁺: y² = (X + 2S³)·(X² + 16m²n²(m+n)²·X + 16m²n²(m+n)⁴·S²)`, with `A = −4(m+n)²S²` (A1, A4). The model of `E⁻` at `(m, n)` is, coefficient for coefficient, the model of `E⁺` at `(m, −n)` (A2), so everything below is said for `E⁺` and all `m, n`, and `E⁻` is the case `n ↦ −n`.
+- The roots of the cubic are `e = −2S³` and `θ, θ̄` with `θ = 4i·mn(m+n)²(m+in)²` (A3); the quadratic factor has discriminant `−64m²n²(m − n)²(m + n)⁶ < 0` (A4). So `E(ℚ)[2] = {O, T}`, `T = (−2S³, 0)`, and the splitting field of the cubic is `ℚ(i)` for every ratio.
+- `P = (−(m+n)²S², S³(m − n)(m + n)²)` is the image of `z = 2`; `R = (−4mnS(m² − n²), −8mn(m+n)S·H(m, n))` is on the curve and `2R = P` (A5). (`x(P) − e = S²(m − n)²` and `x(P) − θ = (i(m+n)(m+in)²)²` are squares, which is how `R` was found.)
+- The constant term is `a6 = A²·2S·m²n²` (A7), so `X = 0` is the abscissa of a rational point `Q` exactly when `2S` is a square.
+
+## 3. Two maps that kill `2E(ℚ)`
+
+**The 2-isogeny map.** Translate `X = x + e`: the curve becomes `y² = x(x² + ax + b)` with `b = f′(e) = (e − θ)(e − θ̄)`. The map `α: E(ℚ) → ℚ*/ℚ*²`, `α(O) = 1`, `α(T) = b`, `α(X, y) = X − e` otherwise, is a homomorphism whose kernel contains `2E(ℚ)` (Silverman–Tate, *Rational Points on Elliptic Curves*, III.5). Its values (A6, A7):
+
+    α(R) = 2S·H(m, n),    α(T) = 4S²·H(m, n)·H(m, −n),    α(Q) = 2S³,
+    H(m, n)·H(m, −n) = m⁸ + 14m⁴n⁴ + n⁸.
+
+**The halving test.** On `y² = (x − e1)(x − e2)(x − e3)`, `x(2Y) − e1 = ((x − e1)² − (e1 − e2)(e1 − e3))²/(4y²)` (A12). With `e1 = θ`: if `X = 2Y` with `Y ∈ E(ℚ)`, then `x(X) − θ` is a square in `ℚ(i)`. For `Q`: `x(Q) − θ = −θ = (2i(m+n)(m+in))²·(i·mn)` (A8–A9).
+
+## 4. Two curves with finitely many points
+
+**Lemma B** (Euler's case `d = 14` of `x⁴ + dx²y² + y⁴ = z²`; Dickson, *History*, vol. II, p. 635; E. Brown, Glasgow Math. J. 31 (1989) 297–307). If `m⁸ + 14m⁴n⁴ + n⁸` is a square then `mn(m² − n²) = 0`.
+
+*Proof as computed* (Part B). A solution of `X⁴ + 14X²Y² + Y⁴ = Z²` with `Y ≠ 0` gives the point `(X²/Y², XZ/Y³)` on `E_B: y² = x(x² + 14x + 1)`. 2-isogeny descent: the image of `α` lies in `{±1}` and `−1` is excluded 2-adically; the image of `α′` on `y² = x(x² − 28x + 192)` lies in `{±1, ±2, ±3, ±6}`, the negative classes are excluded at the real place, and `1, 2, 3, 6` are the images of `O`, `(8, 16)`, `(0, 0)` and their sum. So `2^rank = 1·4/4`, rank 0. Nagell–Lutz (`y = 0` or `y² | 192`) leaves `O, (0,0), (1, ±4)`. So `X²/Y² ∈ {0, 1}`; with `X = m², Y = n²` this is `m = 0` or `m⁴ = n⁴`.
+
+**Lemma D** (known: see the remark after the proof). The curve of genus 2
+
+    D2:  w² = 2(x² + 1)·H(x, 1) = 2(x² + 1)(x⁴ − 2x³ + 2x² + 2x + 1)
+
+has exactly four rational points, `(±1, ±4)`. Hence: **if `2(m² + n²)·H(m, n)` is a square, with `n ≠ 0`, then `m = ±n`.**
+
+*Proof as computed* (Part C). `x ↦ (x + 1)/(x − 1)` permutes the six branch points, and `(x, w) ↦ ((x+1)/(x−1), 2√2·w/(x − 1)³)` is an involution of `D2` over `F = ℚ(√2)` (`f((x+1)/(x−1))·(x−1)⁶ = 8f(x)`). With `ε = 1 + √2` and `s = (x − 1 − √2)/(x − 1 + √2)` it becomes `s ↦ −s`, and
+
+    (1 − s)⁶ f(x) = 16√2·ε³·(u + 1)(u² + 10u + 1),   u = (s/ε)²     (C1),
+
+so `(s, Y = w(1 − s)³) ↦ (u, Y)` maps `D2` to the elliptic curve `E1: Y² = 16√2ε³(u + 1)(u² + 10u + 1)`, which is `y² = x(x² + 8dx − 8d²)`, `d = 2 + √2`, by `x = 16√2ε³(u + 1)/(4ε)²` (C1; the quadratic twist by `d` of `y² = v(v² + 8v − 8)`). `E1` is not the base change of a curve over `ℚ`, even up to isogeny (the Jacobian of `D2` is simple over `ℚ`), so its rank over `F` cannot be read off from two curves over `ℚ`.
+- *Rank 0* (C2). 2-isogeny descent over `F`, which has class number 1 and units `±ε^k`. For `y² = x(x² + Ax + B)` the image of `α` lies in the classes of divisors of `B` times units (Silverman, *The Arithmetic of Elliptic Curves*, X.4, descent via 2-isogeny over a number field; with class number 1 the classes are those of divisors of `B` times units). Here `E1(F)[2] = ℤ/2`: the quadratic `x² + 8dx − 8d²` has discriminant `96d²`, not a square in `F` since `√6 ∉ F`. For `E1`, `B = −16ε²`: candidates `±1, ±ε, ±√2, ±ε√2`; all but `±1` have no point over the completion at `√2`. For the isogenous curve, `B′ = 192ε²`: sixteen candidates `±ε^a √2^b 3^c`; all but `1, 3` have no point at one of the two real places or at `√2`. `±1` and `1, 3` are the images of the 2-torsion points. So `2^rank = 2·2/4 = 1`.
+- *Torsion* (C3, C4). `E1` has good reduction at the primes of `F` above `5, 7, …, 31`; the numbers of points of the reductions have greatest common divisor 10. Reduction at a prime above `p` is injective on the torsion of order prime to `p`; the two primes above 7 (10 points each) and the prime 11 (100 points) already give `#E1(F) | 10`. The images of the four points `(±1, ±4)` and `T` generate a group of order 10: that is `E1(F)`.
+- *Back to `D2`* (C5). A point of `D2(F)` with `s ≠ ∞` maps to a point of `E1(F)` with `u` a square in `F`. Going through the ten points, the finite abscissas of `D2(F)` are `−1, 0, 1`; `f(0) = 2` is not a rational square, the points at `x = ∞` need `√2`, and `s = ∞` is `x = 1 − √2`. So `D2(ℚ) = {(±1, ±4)}`. (A search of `x = a/b`, `|a|, b ≤ 800`, finds only `x = ±1` (C6); it is a control, not part of the proof.)
+
+*Remark (prior art for Lemma D, found by the review).* `D2` is `ℚ`-isomorphic to `y² = (x² + 1)·H(x, 1)` by `(x, y) ↦ ((x + 1)/(x − 1), 4y/(x − 1)³)` (since `2f((x + 1)/(x − 1))·(x − 1)⁶ = 16f(x)`), and after `x ↦ −x` that curve is the minimal model `y² + (x³ + x² + x + 1)y = −x³ − x` of the genus-2 curve **576.a.576.1 of the LMFDB**, whose page lists exactly four rational points and a Jacobian `J(ℚ) ≅ ℤ/10ℤ` of rank 0 (both identities checked by sympy). Since `J(ℚ)` is finite, the four points are all of them. So Lemma D is known as a database entry; the proof above is an independent one, by hand and exact computation, through `ℚ(√2)`.
+
+## 5. Proofs of the theorems
+
+Write `Γ = E⁺(ℚ)` at `(m, n)`; for `E⁻` replace `n` by `−n` (section 2). `H(m, −n)` is `H` at the ratio `(m, −n)`, which has the same `S`.
+
+*Theorem 1.* `α(T) ≡ m⁸ + 14m⁴n⁴ + n⁸` is not a square (Lemma B), so `T ∉ 2Γ`. As `Γ[2] = {O, T}`, the 2-primary torsion is cyclic with `T` its element of order 2, so it is `{O, T}` (a cyclic group of order 4 or more would make `T` twice a point). Points of odd order lie in `2Γ`. So the torsion of `Γ` lies in `{O, T} + 2Γ`. If `R` were torsion, `α(R)` would be `1` or `α(T)`, that is `2S·H(m, n)` or `2S·H(m, −n)` would be a square (`α(R)α(T) ≡ 2S·H(m,n)²·H(m,−n)`), and Lemma D (at `(m, n)` or `(m, −n)`) would give `m = ±n`. So `R` and `P = 2R` have infinite order.
+
+*Theorem 2.* Now `2S = (2k)²`, so `α(R) ≡ H(m, n)`, `α(T) ≡ H(m, n)·H(m, −n)`, `α(Q) ≡ 1`. None of `H(m, n)`, `H(m, −n)`, `H(m, n)H(m, −n)` is a square: the first two by Lemma D (`2S·H(m, ±n)` would be a square), the third by Lemma B. Suppose `aR + bQ + cT ∈ 2Γ` with `a, b, c ∈ {0, 1}`. Applying `α`: `H(m,n)^(a+c)·H(m,−n)^c` is a square, which forces `a = c = 0`. Then `bQ ∈ 2Γ`; if `b = 1`, the halving test makes `i·mn` a square in `ℚ(i)`. But `(r + si)² = i·q` with `q` rational forces `r² = s²` and `q = ±2r²`, and `mn` is odd. So `a = b = c = 0`: `R, Q, T` are independent in `Γ/2Γ`, which has dimension `rank Γ + dim Γ[2] = rank Γ + 1`. Hence `rank Γ ≥ 2`. ∎
+
+## 6. What else was tried, and what fails
+
+- *The map `α` alone, without Lemma D.* `y² = H(x, 1)` is an elliptic curve of rank 1 (conductor 192, PARI), so `H(m, n)` is a square for infinitely many ratios, for instance (4,1), (5,3), (17,52). On the twice-square ratios with `p, q < 3000` (all of them up to `m ≈ 6·10⁶` in the parametrisation below) it never is; Lemma D is what makes this a theorem, through the factor `2S`, which is a square exactly on the second type.
+- *The `ℚ(i)`-component of the full 2-descent.* On the conic, `m = p² + 2pq − q²`, `n = −p² + 2pq + q²` (every twice-square ratio, with `n` up to sign), the three classes in `ℚ(i)*/ℚ(i)*²` are `mn·pq·W`, `i·mn` and `W·W′` for two quartic forms `W`, `W′` over `ℤ[i]` (A9–A11). Two of the seven products, `i·pq·W` and `i·pq·W′`, reduce (by coprimality and a 2-adic argument) to rational `x` on `y² = W(x, 1)` over `ℚ(i)`; that curve has `j = 4000/9`, four obvious points and torsion of order 2 over `ℚ(i)`, so rank at least 1 there, and this route does not close by itself. The norms of the products are `H(m, ±n)` and `H·H⁻` up to squares, which is the route taken above.
+- *PARI's own lower bound* on `E⁻` of (12,5) is 0 when no point is supplied; with `R` supplied it is 2 (`--pari`). No PARI output is used in the proof.
+
+## 7. What the proof rests on, and how it was checked
+
+*Quoted theorems* (tier E, from textbooks, not re-proved here): Mordell–Weil; the 2-isogeny descent and the formula `2^rank = |α(Γ)|·|α′(Γ′)|/4` (Silverman–Tate, III.4–III.6, over `ℚ`; over `ℚ(√2)` Silverman, *The Arithmetic of Elliptic Curves*, X.4); Nagell–Lutz; injectivity of reduction on the torsion of order prime to `p` at primes of good reduction above `p` (Silverman, *The Arithmetic of Elliptic Curves*, VII.3.1); Hensel's lemma in the form "a unit `≡ 1 (mod 4π)` is a square" for the local tests at `2`, `√2` (`π⁵`) and odd primes (mod `π`).
+
+*The program* (`sigma_generic.py`). Part A: the identities, in general `m, n`, by sympy (`expand` to zero). Part B: Lemma B. Part C: Lemma D; the local solubility of each homogeneous space `N² = δM⁴ + aM²e² + (b/δ)e⁴` is decided by an exact search over residue classes of `ℙ¹` of the completion (a class is decided when every higher Taylor coefficient has valuation at least `v(c₀)` plus `1` at odd primes or `5` at `√2`, or when Hensel gives a root), and at the real places by an exact sign test in `ℚ(√2)`. Part D: the conclusion checked curve by curve from `sigma_exact.model`, independently of the formulas of Part A (for each curve: `P`, `R`, `2R = P`, `Q`, `T`, and for every non-empty product of their classes, that `α` is not a rational square or `x − θ` is not a square in `ℚ(i)`): the 127 ratios of `sigma_twice.py` (254 curves), 200 random twice-square ratios with `m ≤ 10⁶`, 35 square-type ratios with `m < 200` (dimension exactly 2 found), all 1085 coprime ratios with `m < 60` (dimension at least 2). Part E (`--negative`): 84 forged inputs refused (a point `Q` on square-type curves; `R` replaced by `P`; the class of `T` or `Q` replaced by that of `R`; the local test on curves with known points, which must keep their classes; the excluded class `√2` of `E1`); and the local solubility search compared with an independent search for points of small height on 186 random quartics over `ℚ₂`, `ℚ₃`, `ℚ₅` and over `ℚ(√2)` at `√2` and `3` (167 soluble, 19 not): they agree on all (E2). With `--pari`, PARI is run as a guide on the side (D5 to D7): its `ellrank` bounds agree with the bounds proved here, it gives rank `[0, 0]` for the curve of Lemma B, and the Frobenius polynomials of `J(D2)` from its `hyperellcharpoly` at `5, 7, …, 31` are exactly those of the restriction of scalars of `E1` computed from the point counts of Part C (so `E1` is the quotient it should be, by a computation that shares no code with Part C). The same descent over `ℚ(√2)` gives rank 0 for the conjugate of `E1`, and the bound 1 for `y² = v(v² + 8v − 8)` over `ℚ(√2)`, which is the rank 1 + 0 of that curve and of its twist by 2 over `ℚ` by PARI (D7). `lfungenus2` gives `L(J(D2), 1) ≈ 0.224` with conductor 576 (functional equation checked to about 2⁻²⁰⁰ at 60 digits), consistent with rank 0. None of this is used in the proof.
+
+*Lean.* `MagicSquareOfSquares/G1SigmaGeneric.lean` states, over `ℚ` and for arbitrary `m, n`, the identities of section 2 and 3 (the model, `P` and `R` on it, the tangent at `R` meeting the curve again at `−P`, the values of `α`, `Q`, the discriminant of the quadratic factor, `E⁻ = E⁺` at `(m, −n)` on the quartics, the duplication identity, the map of Lemma B in homogeneous form). It was written without a Lean installation and compiled afterwards (two `unfold` lists corrected; the statements unchanged): standard axioms only. The duplication identity is stated over `ℚ`, while the halving test applies it over `ℚ(i)`, and the identities for `θ` (A3, A8, A9) are not in Lean. The descents, the torsion bound and the local tests are not in Lean.
+
+*Not checked by anyone:* everything. The points that most need a reader: the descent over `ℚ(√2)` (the candidate set, the local tests at `√2`, the real places), the claim that the quotient map `D2 → E1` accounts for every point of `D2(F)` (only `s = ∞`, i.e. `x = 1 − √2`, is outside its domain, and there the leading coefficient `16√2ε⁻³` is not a square), and the use of Silverman–Tate's formula over `ℚ(√2)`.
+
+## 8. Relation to other work
+
+- **Kepler71, `RESULT_RANK_TWO_NECESSARY_2026-09-25.md`** (github.com/Kepler71/magic-square-of-squares; read in full, in Russian): if `a + ib + jc` (`i, j ∈ {−1, 0, 1}`) are nine distinct rational squares, then the congruent-number curves `E_b`, `E_c` (`y² = x³ − t²x`) have rank at least 2 and `E_{b±c}` rank at least 1, by three points of `2E_b(ℚ)` with abscissas in arithmetic progression and the primitive-divisor theorem of Voutier–Yabuta (Acta Arith. 151 (2012)) with Verzobio's correction (arXiv:2001.09634). That is a necessary condition on a hypothetical square, on other curves, by another method. The statement here is unconditional, about the auxiliary curves `E±` of the fibres of G1, for every ratio, by a 2-descent, with no primitive-divisor theorem; what the two share is the mechanism that points coming from squares are divisible by 2 (here: `P = 2R` on every fibre).
+- **Silverman's specialisation theorem** gives rank at least 2 for all but finitely many members of a family with two independent sections; here the bound holds for every member, with no exceptional set, because the images under the descent maps are non-squares by Lemmas B and D. Criteria of this kind (injectivity of specialisation at a given `t₀`, read off from 2-descent images, for curves with a rational 2-torsion point) are in I. Gusić and P. Tadić, Glasnik Mat. 47 (2012) 265–275, and *Injectivity of the specialization homomorphism of elliptic curves*, J. Number Theory 148 (2015) 137–152 (abstracts read, not the papers). The difference here is that the images are shown to be non-squares at every point of the family at once, by Lemmas B and D.
+- Lemma B is Euler's. Lemma D is in the LMFDB (curve 576.a.576.1; see the remark in section 4); its proof here through `ℚ(√2)` is independent of that entry. Theorems 1 and 2 were not found anywhere; the search was this repository, the Kepler71 notes, the LMFDB and short web searches, so a reader who knows the literature on these quotients may know more.
+
+## 9. What it changes in the repository
+
+Nothing in the census (no count changes). It replaces "checked for these 127 ratios" in `G1_FULL_SYSTEM.md`, Result 4 (the paragraph on the two degenerate types), by a proof for every ratio of the second type, and it adds that for every ratio the point of `t = ±1` has infinite order and is twice a rational point (so it is never a generator), which `sigma_twice.py` had checked on the 358 curves of the first type.

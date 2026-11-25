@@ -1,0 +1,8 @@
+self-test
+  control 4,3: left 2 (expected 2)  history [('start', 512), (2, 8), (3, 8), (5, 2), (7, 2), (11, 2), (13, 2), (17, 2), (19, 2), (23, 2), (29, 2), (31, 2), (37, 2)]
+  control 15,8: left 2 (expected 2)  history [('start', 8192), (2, 128), (3, 32), (5, 8), (7, 6), (11, 6), (13, 2), (17, 2), (19, 2), (23, 2), (29, 2), (31, 2), (37, 2)]
+  control 820,799: left 0 (expected 0)  history [('start', 1048576), (2, 4096), (3, 1024), (5, 128), (7, 128), (11, 128), (13, 0)]
+  control 889,320: left 0 (expected 0)  history [('start', 1048576), (2, 4096), (3, 1024), (5, 512), (7, 384), (11, 384), (13, 128), (17, 0)]
+  planted systems: 12 of 12 tuples of a real solution survive every prime up to 40 and the bad primes
+  negative test: 4 mutated degenerate tuples of (4,3) (delta_0 * i, delta_8 * 3, delta_L * i, delta_U * i, each a member of D_j) are each removed by the descent; a forged list of tuples is refused
+self-test passed

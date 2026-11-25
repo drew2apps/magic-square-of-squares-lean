@@ -1,0 +1,16 @@
+self-test
+  y^2 = x^3 - 1^2 x: bound 0 (PARI ellrank: 0..0)
+  y^2 = x^3 - 2^2 x: bound 0 (PARI ellrank: 0..0)
+  y^2 = x^3 - 3^2 x: bound 0 (PARI ellrank: 0..0)
+  y^2 = x^3 - 5^2 x: bound 1 (PARI ellrank: 1..1)
+  y^2 = x^3 - 6^2 x: bound 1 (PARI ellrank: 1..1)
+  y^2 = x^3 - 7^2 x: bound 1 (PARI ellrank: 1..1)
+  y^2 = x^3 - 34^2 x: bound 2 (PARI ellrank: 2..2)
+  y^2 = x^3 - 41^2 x: bound 2 (PARI ellrank: 2..2)
+  40 random curves y^2 = x(x^2 + A x + B): bound >= PARI's lower bound for the rank; the images of 26 points found by PARI are all in the Selmer sets
+  negative test: forged exclusions (d = 1, and d = -2 = alpha of the point (-2, 8)) are refused
+  25 random curves y^2 = x(x - e2)(x - e3): dim Sel^2 - 2 equals PARI's R + s (its 2-Selmer bound) every time
+  congruent number curves N = 5, 34, 41 (ranks 1, 2, 2): full 2-descent bounds 1, 2, 2 not below the rank
+  25 random curves y^2 = x((x + a)^2 + b^2): dim Sel^2 - 1 over Q x Q(i) equals PARI's R + s every time
+  negative test: with too few local points the full descents refuse to return a bound
+self-test passed

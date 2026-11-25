@@ -1,0 +1,21 @@
+195,28 at (u,v) = (1,1): four classes (d0, d8, dL, dU) = (1, 2, 334, 223); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 74482 ok; q+L2L3: formula ok, record d = 74482 ok;
+195,28 at (u,v) = (-1,1): four classes (d0, d8, dL, dU) = (1, 2, 223, 334); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 74482 ok; q+L2L3: formula ok, record d = 74482 ok;
+223,167 at (u,v) = (0,1): four classes (d0, d8, dL, dU) = (223, 167, 1, 1); L1L3L5L6: formula ok, record d = 37241 ok; q+L1L4: formula ok, record d = 74482 ok; q+L2L3: formula ok, record d = 74482 ok;
+223,167 at (u,v) = (1,0): four classes (d0, d8, dL, dU) = (334, 446, 1, 1); L1L3L5L6: formula ok, record d = 37241 ok; q+L1L4: formula ok, record d = 74482 ok; q+L2L3: formula ok, record d = 74482 ok;
+440,279 at (u,v) = (1,1): four classes (d0, d8, dL, dU) = (2, 1, 322, 719); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 231518 ok; q+L2L3: formula ok, record d = 231518 ok;
+440,279 at (u,v) = (-1,1): four classes (d0, d8, dL, dU) = (2, 1, 719, 322); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 231518 ok; q+L2L3: formula ok, record d = 231518 ok;
+719,161 at (u,v) = (0,1): four classes (d0, d8, dL, dU) = (719, 161, 2, 2); L1L3L5L6: formula ok, record d = 115759 ok; q+L1L4: formula ok, record d = 231518 ok; q+L2L3: formula ok, record d = 231518 ok;
+719,161 at (u,v) = (1,0): four classes (d0, d8, dL, dU) = (322, 1438, 2, 2); L1L3L5L6: formula ok, record d = 115759 ok; q+L1L4: formula ok, record d = 231518 ok; q+L2L3: formula ok, record d = 231518 ok;
+609,200 at (u,v) = (1,1): four classes (d0, d8, dL, dU) = (1, 2, 818, 809); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 661762 ok; q+L2L3: formula ok, record d = 661762 ok;
+609,200 at (u,v) = (-1,1): four classes (d0, d8, dL, dU) = (1, 2, 809, 818); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 661762 ok; q+L2L3: formula ok, record d = 661762 ok;
+809,409 at (u,v) = (0,1): four classes (d0, d8, dL, dU) = (809, 409, 1, 1); L1L3L5L6: formula ok, record d = 330881 ok; q+L1L4: formula ok, record d = 661762 ok; q+L2L3: formula ok, record d = 661762 ok;
+809,409 at (u,v) = (1,0): four classes (d0, d8, dL, dU) = (818, 1618, 1, 1); L1L3L5L6: formula ok, record d = 330881 ok; q+L1L4: formula ok, record d = 661762 ok; q+L2L3: formula ok, record d = 661762 ok;
+861,620 at (u,v) = (1,1): four classes (d0, d8, dL, dU) = (1, 2, 482, 1481); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 713842 ok; q+L2L3: formula ok, record d = 713842 ok;
+861,620 at (u,v) = (-1,1): four classes (d0, d8, dL, dU) = (1, 2, 1481, 482); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 713842 ok; q+L2L3: formula ok, record d = 713842 ok;
+627,364 at (u,v) = (1,1): four classes (d0, d8, dL, dU) = (1, 2, 526, 991); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 521266 ok; q+L2L3: formula ok, record d = 521266 ok;
+627,364 at (u,v) = (-1,1): four classes (d0, d8, dL, dU) = (1, 2, 991, 526); L1L3L5L6: formula ok, record d = 1 ok; q+L1L4: formula ok, record d = 521266 ok; q+L2L3: formula ok, record d = 521266 ok;
+991,263 at (u,v) = (0,1): four classes (d0, d8, dL, dU) = (991, 263, 1, 1); L1L3L5L6: formula ok, record d = 260633 ok; q+L1L4: formula ok, record d = 521266 ok; q+L2L3: formula ok, record d = 521266 ok;
+991,263 at (u,v) = (1,0): four classes (d0, d8, dL, dU) = (526, 1982, 1, 1); L1L3L5L6: formula ok, record d = 260633 ok; q+L1L4: formula ok, record d = 521266 ok; q+L2L3: formula ok, record d = 521266 ok;
+719,161 at t = 1 and t = -1: 2S N(gamma4) = 2171528 is not a square, so neither is a solution
+the false formula d0 d8 dL dU (no factor 2) fails at 36 of 36 evaluations
+ALL: the class of each quartic is 2S d0 d8 (L1L3L5L6) and 2 d0 d8 dL dU (q+L1L4, q+L2L3), and equals the recorded d, at both degenerate solutions of all nine ratios: True

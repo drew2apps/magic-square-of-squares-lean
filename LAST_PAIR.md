@@ -2,7 +2,7 @@
 
 23 November 2026, after release 0.4.0. Written by Claude (an AI model made by Anthropic), directed by Drew (`drew2apps`).
 
-**Status. Nobody has read this.** It is an argument written out step by step. The numbers that depend on the curves are computed by programs in `scripts/second_descent/`; the constants of the height bound (`C₁ = 72.251` and those inside `c₁`, `c₂`) are copied from one published paper, as read by an automated reader, and the argument depends on that reading. There is a positive control on real points, and two programs for each arithmetic input where that was possible. Until a number theorist has checked it, it is a proposed proof and **the census is not changed**: (627,364) and (991,263) stay open there.
+**Status. Nobody has read this.** It is an argument written out step by step. The numbers that depend on the curves are computed by programs in `scripts/second_descent/`, and since section 18 all of them again in exact arithmetic with no Sage, PARI or Magma (`exact_last_pair.py`), the rank bound and the generator included; the constants of the height bound (`C₁ = 72.251` and those inside `c₁`, `c₂`) are copied from one published paper, as read by an automated reader, and the argument depends on that reading. There is a positive control on real points, and two programs for each arithmetic input where that was possible. Until a number theorist has checked it, it is a proposed proof and **the census is not changed**: (627,364) and (991,263) stay open there.
 
 The file has two parts that should be judged separately.
 
@@ -97,7 +97,7 @@ With Lemmas 3 and 4 and the larger of the two sets of constants, the right side 
 |---|---|---|
 | `ĥ(G)` (PARI, Sage, Magma agree) | 20.006653 | `saturation.py`, `magma_last_pair_raw.txt` |
 | `ĥ(G)`, proved enclosure | between 20.002899 and 20.009091 | `height_enclosure.py` |
-| lower bound for heights on `E₁` | 0.045162 | `saturation.py` |
+| lower bound for heights on `E₁` | 0.045162 (since section 18 not used: an exact search) | `saturation.py`; `exact_last_pair.py` |
 | genus of `W`; branch points | 9; 8 | `closure_estimate.py` |
 | `deg C` | ≤ 96 | Lemma 3 |
 | height of points above roots of unity | ≤ 4051.4 | `closure_estimate.py` |
@@ -125,7 +125,7 @@ With Lemmas 3 and 4 and the larger of the two sets of constants, the right side 
 2. **Lemma 6**, the reduction argument: that the points of the sieve's lists are all the possible reductions (signs, the two embeddings, `t̄ = ∞`, the points with `s = r`), and the identification of `E₂` with the twist. The planted control tests this on real points; it is not a proof.
 3. **Lemma 2**: short, and the genus was wrong once.
 4. **Lemma 4**: the chain of inequalities, in particular the use of (P) for algebraic points and of (Z) with the points above roots of unity.
-5. **Lemma 1**: the lower bound for the height is Sage's (its source and documentation say it is a proved bound for all points of infinite order; the computation behind it is Sage's and was not repeated by hand); the rank bound is PARI's and Magma's; the saturation is checked by two programs.
+5. **Lemma 1**: the lower bound for the height is Sage's (its source and documentation say it is a proved bound for all points of infinite order; the computation behind it is Sage's and was not repeated by hand); the rank bound is PARI's and Magma's; the saturation is checked by two programs. Since section 18 all three are also exact computations with no Sage, PARI or Magma; what remains is the reading of Cremona–Prickett–Siksek and Silverman used for the lower bound.
 6. **For the Corollary only**: that a solution has class `d`. Section 11 gives this as Theorem D. To check there: **Lemma S2**, the support step, with its three cases (it uses unique factorisation in `ℤ[i]` and is on paper only; Lean has the common divisors of Lemma S3 and nothing else of that section); the identity for `A·B` in the setting; that the local programs test what part (c) says; and the thresholds of section 14. Before section 11 the class came from the two descents of `GAUSS_DESCENT.md` and `SECOND_DESCENT.md`, which say the same.
 
 The route has been run on all 24 ratios of square type for which `E₁` has rank exactly 1 (section 6); it gives the known answer on the 23 that are closed by other means. That tests the programs and the constants; it does not test whether the sieve could wrongly remove a true point, which is what the planted control is for, and it does not replace a reader.
@@ -228,7 +228,7 @@ So: **a rational solution gives one of finitely many `d`, and that `d` passes ev
 1. the five forms and the partner map (Lean);
 2. Theorem D, proved on this page. Its part (b) uses unique factorisation in `ℤ[i]` (Lemma S2), which is not in Lean in that form, and the four Lean lemmas of S3. Since section 15 the existence and the support of the class are in Lean by another route, in integer coordinates and without unique factorisation (`CoverDescent.exists_class_prod`, for all `m, n`), and since section 17 the class of this pair is in Lean as well: `521266`, from four theorems on the class and three primes, with no local program (`class_of_mem_structTable`). So items 2 and 3 of this list can be replaced by that Lean statement, up to the identification of its eight products with `Q₁`, `Q₂` (the identity for `A·B` of this section);
 3. the output of the local programs for part (c): seven primes, two programs that agree;
-4. Theorem A, with everything it rests on: the rank bound and the generator (Lemma 1: PARI, Sage, Magma, the saturation), the genus and degree of the curve of solutions (Lemmas 2 and 3), the height bound from the theorem of Checcoli, Veneziano and Viada (Lemmas 4 and 5), the sieve (Lemma 6) and the fibre (Lemma 7).
+4. Theorem A, with everything it rests on: the rank bound and the generator (Lemma 1: PARI, Sage, Magma, the saturation; since section 18 also exact, `exact_last_pair.py`), the genus and degree of the curve of solutions (Lemmas 2 and 3), the height bound from the theorem of Checcoli, Veneziano and Viada (Lemmas 4 and 5), the sieve (Lemma 6) and the fibre (Lemma 7).
 
 **The new descent replaces the route to `d` and nothing else.** `GAUSS_DESCENT.md` and `SECOND_DESCENT.md` are no longer used for this pair; Theorem A is used exactly as before. What is still unread is listed in section 7.
 
@@ -406,3 +406,46 @@ In Lean: `isSquare_class_mod_octic` (`isSquare_class_mod_R1`, `isSquare_class_mo
 **The criterion with the law at 5, and with the octic factored completely** (the same instance and a second one, with PARI; `class_struct.py` uses primes below 10⁵ only): E, F, G, O exclude 58 of the 119; with the law at 5, 71. A second instance measured the criterion E, F, G, O on random ratios with complete factorisations (about 60,000 systems, `m` up to 10¹²): it excludes about 0.83 to 0.86 of all coprime ratios, and **0.50 ± 0.02 of the ratios that survive every congruence condition** of the repository and are not of the degenerate types, with no visible trend between 10³ and 2·10⁶. On 15,332 ratios of the degenerate types up to 2·10¹⁰ the system was always solvable, as it must be. A model with independent symbols fits these numbers to 0.02; we draw no conclusion from it about the limit.
 
 **What is not explained, and what we do not claim.** For the 65 pairs above, and for the scan to 5000, the exclusions still come from small primes one ratio at a time; the sentence of section 12 about the 19,581 ratios remains a census. We have no theorem about the proportion of ratios that the criterion excludes; the measurements are in the paragraph above. (Half of all coprime ratios are excluded by G alone, whenever the odd part of `m² + n²` is `≡ 5 (mod 8)`, which is a known condition. The criterion does not contain the known condition on the fifth form: about one ratio in nine with a prime `≡ 5 (mod 8)` to an odd power in `m² + n²` still has a solvable system.) The earlier sentence of this section, that no statement of density 1 follows from the first descent, was based on the "accident" reading and is withdrawn in that form; we do not know. The family `W₂` and the question of its generic rank (the next computation suggested before) keep their interest only for the ratios where `d = 2` passes G and O.
+
+## 18. Theorem A in exact arithmetic, without Sage, PARI or Magma
+
+Added 25 November 2026. Written by an AI model; not read by a person. `scripts/second_descent/exact_last_pair.py`
+(output `exact_last_pair.txt`; negative tests `exact_last_pair_negative.txt`) recomputes every number of sections 2
+to 8 with Python integers and fractions (Gaussian rationals as pairs of fractions; logarithms enclosed as in
+`sigma_exact.py`; sympy for polynomial algebra over Q and Q(i) and to factor integers). PARI only finds hints (a
+point on a conic, points on the 2-isogenous curve, factorisations), stored in `exact_last_pair_hints.json` and
+checked before use; every prime factor is proved prime; with the import of PARI blocked the output is the same.
+
+- *Lemma 1, rank.* A descent via 2-isogeny (Silverman–Tate, III.4–6; local conditions by the rules of section 14,
+  and at large primes by the roots modulo p) gives |Sel(φ)| = 2 and |Sel(φ̂)| = 64, so rank ≤ 5. A second descent
+  on the quartics C_d (a rational point of the conic N² = dU² + aUV + cV², the two quadratic forms of its
+  parametrisation, and the curves λU = □, λV = □ for λ dividing 2b′N₀) removes all 15 cosets of the subgroup of
+  order 4 that the known points generate: **rank E₁(ℚ) ≤ 1**, with no PARI and no Magma (`scripts/g1_full/rank_indep.py`).
+- *Lemma 1, generator.* Saturation at every prime ≤ 199 by functionals E₁(ℚ) → ℤ/ℓ (for ℓ = 2 by listing 2E₁(𝔽₁₇)).
+  **Sage's bound 0.045162 is not used**: the model is minimal (valuations; at 2 a search over the changes of
+  coordinates with u = 2), 24P lies in E⁰ at every prime (types I_n with n | 8 at the multiplicative primes,
+  additive at 2, 263, 991), on E⁰ everywhere h(x) − ĥ ≤ log⁺|j|/4 + log⁺|b₂/12| + log 2 + 1.946 = 4.444
+  (Cremona–Prickett–Siksek 2006, Theorem 15, the bound of Silverman 1990 that `height_enclosure.py` uses, and their
+  Theorem 2 for points in E⁰, where every local term at a prime is 0), and no point of E₁ has x = a/e² with |a|, e² ≤ 110. So every point of infinite order has ĥ ≥ ĥ(G)/210²,
+  and G generates. On real points: h(x(kG)) − ĥ(kG) ≤ 0.443 for k = 2, 4, 8, 12, 24.
+- *Lemma 1, height.* ĥ(G) ∈ [20.002899, 20.009091] by Silverman's bound alone (no Tate's algorithm).
+- *Lemma 2*: the gcds of the f_i, the eight roots, the square constant, over ℚ(i).
+- *Lemmas 4 and 5*, with CVV's own h_∞(j) = log⁺|j| (where `closure_estimate.py` used the larger h(j)) and enclosed
+  logarithms: c₁ ≤ 197.62, c₂ ≤ 177.86 (general row), μ ≤ 3651.3, h₂(C) ≤ 7.01·10⁵, ĥ(A, B) ≤ 5.39·10⁹,
+  **a, b ≤ 13,406** (26,813 if deg C ≤ 192). The 14,175 of section 4 remains a valid, weaker bound.
+- *Lemma 6*: the residue sets modulo 10009, 20089, 30013, 40009 in pure Python; their sizes are those of
+  `mw_sieve.py` (1,632, 204, 909, 35,858); the lifting to 596,309 leaves (1, 1); planted pairs return.
+- *Lemma 7*: the equation for c = G and G + T, factored over ℚ: t = ±1. *Section 3, end*: t = 0, ∞ are not points.
+- Twenty forged inputs are refused (generators 2G, 3G, 2G + T, and 211·G at the height step; a wrong point or class; sieve moduli 10007, 10011,
+  5; lowered bounds; a forged local set; a non-minimal model; a curve with small points; forged hints of the descent).
+- The same exact route on three ratios closed by other means (`exact_last_pair_route.py`): for (187,84) every step
+  holds; for (440,279) and (420,341) every step agrees with `route_all.txt` except the rank, where the exact descent
+  stops at 3 (PARI: 1). The exact rank bound is a property of the curve of (627,364), not of the method.
+
+So Theorem A no longer uses any output of Sage, PARI or Magma, nor any floating-point number. It rests on: the
+statements of CVV (section 5), of Silverman (1990, Theorem 1) and of Cremona–Prickett–Siksek (the archimedean bound,
+and the vanishing of the local terms on E⁰), the bounds of Kodaira and Néron for component groups, the formula of
+Silverman–Tate for the rank, all read by an AI model; and the prose of Lemmas 2(3), 3 and 6 and of the second
+descent, read by nobody. It is still a proposed proof, and the census is not changed.
+
+A hostile review by a separate AI agent (25 November 2026) reran every script from a clean copy with PARI blocked (identical outputs), stress-tested the descent on 300 curves (100 with PARI rank at least 2, 200 of any rank; the bound never fell below PARI's lower bound, and none of 868 classes of rational points was excluded), checked the constant 4.444 against Cremona–Prickett–Siksek and recomputed the four sieve sets; it found no error in this section. It noted that `genus(C) ≥ 2` for the image curve and `deg C ≤ 96` rest on the prose of section 4, which the script does not check.
