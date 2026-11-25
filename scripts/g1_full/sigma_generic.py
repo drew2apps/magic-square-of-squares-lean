@@ -463,6 +463,18 @@ def part_C():
     # G(s) = 16 sqrt2 eps^3 (u + 1)(u^2 + 10u + 1) with u = (s/eps)^2: check as a polynomial identity in s
     chk = expand(Gs - gt.subs(uu, (ss/eps)**2))
     assert simplify(chk) == 0
+    # the remark after Lemma D: with f0 = f/2, (x, w) -> ((x+1)/(x-1), 2w/(x-1)^3) maps D2 onto y^2 = f0, and
+    # y^2 + h y = -x^3 - x (LMFDB 576.a.576.1) is y^2 = f0(-x) after completing the square
+    f0 = f / 2; hh = xx**3 + xx**2 + xx + 1
+    from sympy import cancel, Rational
+    X1 = (xx + 1)/(xx - 1)
+    assert cancel(f0.subs(xx, X1)*(xx - 1)**6 - 8*f0) == 0
+    # Y = 2w/(x-1)^3 with w^2 = f: Y^2 = 4 f/(x-1)^6 must be f0(X) (this fails for 4w)
+    assert cancel(4*f/(xx - 1)**6 - f0.subs(xx, X1)) == 0 and cancel(16*f/(xx - 1)**6 - f0.subs(xx, X1)) != 0
+    # the points: (-1, +-4) on D2 go to (0, -+1) on y^2 = f0
+    for w0 in (4, -4):
+        assert f.subs(xx, -1) == w0**2 and X1.subs(xx, -1) == 0 and Rational(2*w0, (-1 - 1)**3) == -w0 // 4 and f0.subs(xx, 0) == 1
+    assert expand(hh**2 - 4*xx**3 - 4*xx - f0.subs(xx, -xx)) == 0
     # the chain to the model of the descent: with c = 16 sqrt2 eps^3 = lam^2 d, lam = 4 eps, d = 2 + sqrt2, and
     # v = u + 1, X = c v, x = X/lam^2, (c Y/lam^3)^2 = x (x^2 + 8 d x - 8 d^2) whenever Y^2 = c (u+1)(u^2+10u+1)
     cc = 16*r2*eps**3; lam = 4*eps; dd = 2 + r2
@@ -480,6 +492,10 @@ def part_C():
     k1 = descent_sqrt2(A, B, 'E1 ')
     k2 = descent_sqrt2(Ap, Bp, "E1'")
     assert sorted(k1) == sorted([(0, 0, 0, 0), sclass(B)]) and sorted(k2) == sorted([(0, 0, 0, 0), sclass(Bp)])
+    # the classes +-eps, +-3eps of E1' are excluded above at a real place; they are insoluble at sqrt2 as well
+    Lr2 = Local(R2, 'ram', None)
+    for dl in ((1, 1), (3, 3), (-1, -1), (-3, -3)):
+        Bd = fint(fdiv(Bp, dl)); assert not locally_soluble(Lr2, [dl, (0, 0), Ap, (0, 0), Bd]), dl
     # E1[2](F) = {O, T}: x^2 + A x + B has discriminant A^2 - 4B = Bp, of class (3): not a square; same for E1'
     assert fsqrt(Bp) is None and fsqrt(fsub(fmul(Ap, Ap), fmul((4, 0), Bp))) is None
     say('C2  2-isogeny descent over Q(sqrt2): im(alpha) = {1, B}, im(alpha\') = {1, B\'} (the images of the 2-torsion',

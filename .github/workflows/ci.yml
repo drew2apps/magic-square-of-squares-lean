@@ -108,7 +108,9 @@ jobs:
           python3 second_descent.py --summary second_123.jsonl | diff - second_summary.txt
           python3 wide.py --summary wide_1000_2000.jsonl | diff - wide_summary.txt
           python3 second_descent.py --all 15,8 21,20 23,7 | diff - <(head -n 3 second_123.jsonl)
-          python3 lproof.py 1e7 second_123.jsonl | grep -v "PARI stack" | head -n 5 | diff - <(head -n 5 lproof.txt)
+          # whole output to a file first: head on a live pipe can end it early (SIGPIPE under pipefail)
+          lp=$(mktemp); python3 lproof.py 1e7 second_123.jsonl > "$lp"; grep -v "PARI stack" "$lp" | head -n 5 | diff - <(head -n 5 lproof.txt)
+          test "$(tail -n 1 "$lp")" = "closing curves of conductor up to 1e+07: 5 of 89; L(E,1) > 0 with the error bound for all of them: True"
           # LAST_PAIR.md, the fast parts (the two sieves are in the job last-pair of the full run)
           python3 lemma2_general.py | grep -v "PARI stack" | diff - lemma2_general.txt
           python3 degenerate_section.py /tmp/degenerate_section_polys.txt | grep -v "PARI stack" | diff - degenerate_section.txt
@@ -127,7 +129,9 @@ jobs:
           python3 cover_certificate.py 627,364 | diff - cover_certificate_627_364.txt
           grep -q "^left by the descent: \[521266\]; left by the exhaustion: \[521266\];" cover_certificate_627_364.txt
           # the two methods end with the same set, but not with the same set at every prime: 17 of 18 for (627,364) and (820,799), 18 of 18 for (889,320)
-          test "$(grep -c "the same set$" cover_certificate_627_364.txt)" = 17 && test "$(grep -c "the same set$" cover_certificate_820_799.txt)" = 17 && test "$(grep -c "the same set$" cover_certificate_889_320.txt)" = 18
+          test "$(grep -c "the same set$" cover_certificate_627_364.txt)" = 17
+          test "$(grep -c "the same set$" cover_certificate_820_799.txt)" = 17
+          test "$(grep -c "the same set$" cover_certificate_889_320.txt)" = 18
           # section 12: one class for each form; all lists, under a second per ratio
           python3 tuple_descent.py magic 627,364 | diff - tuple_627_364.txt
           (for r in 627,364 820,799 15,8 247,96; do python3 tuple_descent.py magic $r selftest; done) | diff - tuple_selftest.txt
@@ -150,13 +154,20 @@ jobs:
           # every ratio with m <= 5000 that avoids the 484 classes: the first lines are rerun, the counts are checked on the whole files
           python3 tuple_descent.py batch magic ../gauss_descent/scan_certificates.txt 2 0 300 | diff - <(head -n 300 tuple_scan_5000.txt)
           python3 tuple_descent.py batch magic pairs_trivial_5000.txt 2 0 60 | diff - <(head -n 60 tuple_trivial_5000.txt)
-          test "$(wc -l < tuple_scan_5000.txt)" = 18900 && test "$(grep -c "nothing is left$" tuple_scan_5000.txt)" = 18900
-          test "$(wc -l < tuple_trivial_5000.txt)" = 1523 && test "$(grep -c "exactly the known points$" tuple_trivial_5000.txt)" = 1523
+          test "$(wc -l < tuple_scan_5000.txt)" = 18900
+          test "$(grep -c "nothing is left$" tuple_scan_5000.txt)" = 18900
+          test "$(wc -l < tuple_trivial_5000.txt)" = 1523
+          test "$(grep -c "exactly the known points$" tuple_trivial_5000.txt)" = 1523
           diff <(cut -d: -f1 tuple_scan_5000.txt | tr -d '()') <(cut -d' ' -f1 ../gauss_descent/scan_certificates.txt)
           # RATIONAL_DISTANCE.md: the lines with denominator up to 40, the curve, the control with three distances; counts of the whole files
           cd ../rational_distance
-          python3 rd.py scan 2 40 | head -n 244 | diff - <(head -n 244 rd_scan_2_300.txt)
-          test "$(grep -c " equal$" rd_scan_2_300.txt)" = 13697 && test "$(grep -c "MIXED" rd_scan_2_300.txt)" = 1 && grep -q "^26/225 12 MIXED" rd_scan_2_300.txt
+          # whole output to a file first (head on a live pipe can end it early under pipefail); the summary line is checked too
+          rdo=$(mktemp); python3 rd.py scan 2 40 > "$rdo"; head -n 244 "$rdo" | diff - <(head -n 244 rd_scan_2_300.txt)
+          test "$(wc -l < "$rdo")" = 245
+          test "$(tail -n 1 "$rdo")" = "lines y = r/s with 2 <= s <= 40, 0 < r/s < 1/2: 244; tuples left (number: lines): [(1, 1), (2, 183), (4, 60)]; lines with a tuple whose four classes are not all equal: 0 []"
+          test "$(grep -c " equal$" rd_scan_2_300.txt)" = 13697
+          test "$(grep -c "MIXED" rd_scan_2_300.txt)" = 1
+          grep -q "^26/225 12 MIXED" rd_scan_2_300.txt
           test "$(grep -c " equal$" rd_scan_outside_60.txt)" = 2204
           python3 rd.py curve | diff - rd_curve.txt
           test "$(grep -c "equal: True$" rd_curve.txt)" = 22
@@ -164,8 +175,10 @@ jobs:
           python3 rd_prop1.py | diff - rd_prop1.txt
           grep -qx 'PROP1 OK' rd_prop1.txt
           python3 si_criterion_test.py 4 2>/dev/null | tail -2 > /tmp/si.txt
-          grep -q 'with all hypotheses (would contradict the criterion): 0$' /tmp/si.txt && grep -q 'with all hypotheses (would contradict the criterion): 0$' si_criterion_test.txt
-          grep -q 'lower bound 1 and upper bound 1 for the rank$' /tmp/si.txt && grep -q 'lower bound 1 and upper bound 1 for the rank$' si_criterion_test.txt
+          grep -q 'with all hypotheses (would contradict the criterion): 0$' /tmp/si.txt
+          grep -q 'with all hypotheses (would contradict the criterion): 0$' si_criterion_test.txt
+          grep -q 'lower bound 1 and upper bound 1 for the rank$' /tmp/si.txt
+          grep -q 'lower bound 1 and upper bound 1 for the rank$' si_criterion_test.txt
           test "$(grep -c 'the descent set is inside the exhaustion set: True' rd_exhaust.txt)" = 6
           pip install -q numpy==2.5.5
           cd ../cover_descent/third
@@ -176,7 +189,9 @@ jobs:
           grep -qx 'no pair where the descent rejects a class that has an explicit local point' third_compare.txt
           cd ../structure
           python3 class_structure.py 2 100 | diff - class_structure_100.txt
-          grep -q 'of these divisible by q: 0;' class_structure_100.txt && grep -q 'of these not = 2 mod 4: 0$' class_structure_100.txt && grep -q 'of these with (d/p) = -1: 0$' class_structure_100.txt
+          grep -q 'of these divisible by q: 0;' class_structure_100.txt
+          grep -q 'of these not = 2 mod 4: 0$' class_structure_100.txt
+          grep -q 'of these with (d/p) = -1: 0$' class_structure_100.txt
           # Theorems F and G of LAST_PAIR.md, section 17, by brute force over all residues
           python3 class_fg.py | diff - class_fg.txt
           # what Theorems E, F, G, O decide by themselves (CLASS.md, section 3)
@@ -196,20 +211,25 @@ jobs:
           grep -q '^first definition (no roots), cases 10; classes outside the row that pass: 20; ' passes_tight_weak.txt
           test "$(grep -c 'points where every form could be a q-adic square: 0$' class_gaps.txt)" = 2
           grep -q 'not of the shape used (four points, two forms each, full product a square): 0; with 16N below 2q - 76 - 42 sqrt(q): 0;' class_gaps.txt
-          grep -q 'all = +-1 (mod 8): True; ' class_gaps.txt && grep -q 'differs from the rule "4 | mn or m = +-n (mod 8)": 0$' class_gaps.txt
+          grep -q 'all = +-1 (mod 8): True; ' class_gaps.txt
+          grep -q 'differs from the rule "4 | mn or m = +-n (mod 8)": 0$' class_gaps.txt
           test "$(grep -c 'p times each product a square in Z_p\[i\]: True; the point in X_p: False$' class_gaps.txt)" = 6
           # the four-class descent on the 997 ratios of COMPLETE.md, section 7, test 4 (about a minute)
           cd ..
           python3 tuple_descent.py batch magic structure/class_selmer_997.txt 4 | diff - tuple_selmer_997.txt
           test "$(grep -c 'nothing is left$' tuple_selmer_997.txt)" = 997
           cd structure
-          grep -q '^1. random points with a class: 211894; outside the set of Theorem C: 0$' class_local.txt && grep -q 'not as the proof says: 0$' class_local.txt && grep -q 'different from the table of Theorem C: 0$' class_local.txt
+          grep -q '^1. random points with a class: 211894; outside the set of Theorem C: 0$' class_local.txt
+          grep -q 'not as the proof says: 0$' class_local.txt
+          grep -q 'different from the table of Theorem C: 0$' class_local.txt
           grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete.txt
           python3 class_complete_random.py 200 1500 3000 | diff - class_complete_random.txt
-          grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete_random.txt && grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete_random_20000.txt
+          grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete_random.txt
+          grep -qx 'excluded locally at a bad prime but allowed by the laws: 0' class_complete_random_20000.txt
           grep -qx '(point, d = ±1 mod 5) tested: 1920000; passing: 0' class_law5.txt
           grep -q 'candidates that pass for (627,364): \[521266\]; for (991,263): \[521266\]$' class_struct.txt
-          test "$(grep -c 'odd among them 0$' class_fg.txt)" = 2 && test "$(grep -c 'non-residues among them 0$' class_fg.txt)" = 4
+          test "$(grep -c 'odd among them 0$' class_fg.txt)" = 2
+          test "$(grep -c 'non-residues among them 0$' class_fg.txt)" = 4
           # the four-class comparison of a second reviewer (rerun in the job scan-5000): the committed outputs say what the text says
           cd ../fourth
           grep -q "^STAT {'cases': 723, 'L_in_R': 723, 'R_in_U': 723, 'U_in_R': 722," compare_out.txt
@@ -218,12 +238,14 @@ jobs:
           cd ../structure
           cd ../../perfect_triangle
           python3 pt.py scan 1 25 0.867 | head -n -1 | diff - <(head -n 174 pt_scan_200.txt)
-          test "$(grep -c ' degenerate-only$' pt_scan_200.txt)" = 10604 && test "$(wc -l < pt_scan_200.txt)" = 10605
+          test "$(grep -c ' degenerate-only$' pt_scan_200.txt)" = 10604
+          test "$(wc -l < pt_scan_200.txt)" = 10605
           python3 pt_second.py 2>/dev/null | grep -v "PARI stack" | diff - pt_second.txt
           grep -q '^{z, z-1, z+1, z-2}: D=+1: cond 24, rank bounds \[0, 0\], torsion \[4, 2\] | D=-1: cond 48, rank bounds \[0, 0\]' pt_second.txt
           python3 pt_control.py | diff - pt_control.txt
           python3 pt_count.py | diff - pt_count.txt
-          grep -qx '#E(F_5) = 8' pt_count.txt && grep -qx '#E(F_13) = 16' pt_count.txt
+          grep -qx '#E(F_5) = 8' pt_count.txt
+          grep -qx '#E(F_13) = 16' pt_count.txt
           test "$(grep -c 'kept by the 4-form first step: True' pt_control.txt)" = 5
           cd ../rational_distance
           cd ../cover_descent
@@ -241,7 +263,8 @@ jobs:
           python3 hill_identity.py | diff - hill_identity.txt
           python3 hill_check.py | diff - hill_check.txt
           python3 ap_relaxed.py 250 | diff - ap_relaxed_250.txt
-          gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c && /tmp/ap_exact 250 | diff - ap_exact_250.txt
+          gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c
+          /tmp/ap_exact 250 | diff - ap_exact_250.txt
 
   four-points:
     # The four-point argument (FOUR_POINTS.md) run as a program, not only checked through its records:
@@ -343,7 +366,8 @@ jobs:
           diff /tmp/scan_list.txt <(awk -F'[, ]' '$1 <= 1100' scan_certificates.txt)
           python3 gd_check.py --pmax=100 $(cat pairs_scan_high.txt) | diff - gd_check_scan_high.txt
           cd ../hill
-          gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c && /tmp/ap_exact 1000 | diff - ap_exact_1000.txt
+          gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c
+          /tmp/ap_exact 1000 | diff - ap_exact_1000.txt
 
   last-pair:
     # LAST_PAIR.md: the argument for (627,364) and (991,263). An experiment, not counted in the census. This job reruns every
@@ -415,7 +439,10 @@ jobs:
           /tmp/twist_find 400 400 347 400 > /tmp/tw4.out &
           P4=$!
           wait $P1; wait $P2; wait $P3; wait $P4
-          test ! -s /tmp/tw1.out && test ! -s /tmp/tw2.out && test ! -s /tmp/tw3.out && test ! -s /tmp/tw4.out
+          test ! -s /tmp/tw1.out
+          test ! -s /tmp/tw2.out
+          test ! -s /tmp/tw3.out
+          test ! -s /tmp/tw4.out
           grep -qx 'twist_find 400 400: 0 solutions' scripts/search/twist_search.txt
 
   scan-15000:
