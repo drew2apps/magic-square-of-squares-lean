@@ -51,8 +51,8 @@ The executable specification is `.github/workflows/ci.yml`: every job is plain s
 | Job | What it reruns | Time on GitHub's runner |
 |---|---|---|
 | `build` | Lean; the axiom audit; generated Lean files; the C searches on small ranges | about 20 minutes |
-| `rank` (every push) | The sub-project `lean_rank/`: Lean v4.36.0, Mathlib v4.36.0 and M. Stoll's `EllipticCurves` 2164fb5 built from source; the axioms of its 9 headline theorems; its negative controls and four forged claims refused | about 15 minutes |
-| `quick` | The manifest; the transcript checkers; counts; a small rerun of every descent program; Proposition 1 of the rational distance note | a few minutes |
+| `rank` (every push) | The sub-project `lean_rank/`: Lean v4.36.0, Mathlib v4.36.0 (compiled files from Mathlib's cache) and M. Stoll's `EllipticCurves` 2164fb5 (compiled from source); the axioms of every theorem named by a `#print axioms` line in its files (76 lines, the three standard axioms only, no `sorryAx`); `scripts/RankChecks.lean` and two files of negative controls that must compile (`RankZeroForge`, `RankZeroCensusForge`); four files of forged claims that must fail with 4, 8, 5 and 2 errors (`RankForge`, `FamilyForge`, `LemmaDForge`, `LemmaDBridgeForge`) | 3 minutes at run 2; not yet measured with the modules of run 3 (the job's limit is 150 minutes) |
+| `quick` | The manifest; the transcript checkers; counts; a small rerun of every descent program; Proposition 1 of the rational distance note; the exact checks behind `lean_rank` (the `ℚ(√2)` points of Lemma D, the 2-adic classes of the certificate of `RankZero.lean`) and a regeneration of `RankZeroCensus.lean` by its generator, which must refuse `(15, 8)` | a few minutes |
 | `four-points`, `descents`, `last-pair` | The four-point tier and the two descent experiments in full, stated samples of the rest | up to about an hour each |
 | `scan-5000` | The four-class descent on all 20,423 ratios to 5000; both rational-distance scans and the exhaustion on six lines; the third implementation on the 157 ratios that ranks leave | about an hour |
 | `twist-search` | The C search of twists | minutes |

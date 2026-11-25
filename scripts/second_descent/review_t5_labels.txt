@@ -1,0 +1,29 @@
+1. Products of two M's (general m, n), with s = -i t for the t-column:
+   M1M2 = (m*s - m + I*n*s + I*n)*(m*s + m - I*n*s + I*n)   = -GL/2 in t
+   M1M3 = (m*s - m + I*n*s + I*n)*(m*s + m + I*n*s - I*n)   
+   M1M4 = m**2*s**2 - 2*m**2*s + m**2 + n**2*s**2 + 2*n**2*s + n**2   = q+
+   M2M3 = m**2*s**2 + 2*m**2*s + m**2 + n**2*s**2 - 2*n**2*s + n**2   = q-
+   M2M4 = (m*s - m - I*n*s - I*n)*(m*s + m - I*n*s + I*n)   
+   M3M4 = (m*s - m - I*n*s - I*n)*(m*s + m + I*n*s - I*n)   
+   => with kclose's labels q+ = M1 M4 and q- = M2 M3 (identities in Q(i)[m, n, s]); M1 M2 = -GL/2 at s = -i t.
+   L1 L3 at s = -i t: -I*m**2*t + m*n*t**2 + m*n + I*n**2*t
+2. (627,364): the 210 quartics, rational (up to a constant) in s / in t, and j of the bound-2 ones
+   kdist_627_364.txt: quartics with larger bound 2: ['L1L3M1M2', 'L1L3M3M4', 'L2L4M1M2', 'L2L4M3M4']
+   q+L1L3 = L1L3M1M4 (kclose labels, sorted): bound [11]
+   q-L1L3 = L1L3M2M3 (kclose labels, sorted): bound [11]
+   q+L2L4 = L2L4M1M4 (kclose labels, sorted): bound [11]
+   q-L2L4 = L2L4M2M3 (kclose labels, sorted): bound [11]
+   rational in s: 46 of 210; rational in t: 10 of 210
+   L1L3M1M2: rational in s: False, in t: False; j = 963.589 + 928.209 i  (Im j = 0: False)
+   L1L3M3M4: rational in s: False, in t: False; j = 963.589 + -928.209 i  (Im j = 0: False)
+   L2L4M1M2: rational in s: False, in t: False; j = 963.589 + -928.209 i  (Im j = 0: False)
+   L2L4M3M4: rational in s: False, in t: False; j = 963.589 + 928.209 i  (Im j = 0: False)
+   q+L1L3 = L1L3M1M4: rational in s: True; j in Q: True  (negative control: must be True)
+   q-L1L3 = L1L3M2M3: rational in s: True; j in Q: True  (negative control: must be True)
+   q+L2L4 = L2L4M1M4: rational in s: True; j in Q: True  (negative control: must be True)
+   q-L2L4 = L2L4M2M3: rational in s: True; j in Q: True  (negative control: must be True)
+   j-invariants of the four bound-2 quartics: L1L3M1M2: Re j = 963.589, Im j = 928.209, L1L3M3M4: Re j = 963.589, Im j = -928.209, L2L4M1M2: Re j = 963.589, Im j = -928.209, L2L4M3M4: Re j = 963.589, Im j = 928.209
+CONCLUSION: SECOND_DESCENT.md section 6 identifies L1L3M1M2, L1L3M3M4, L2L4M1M2, L2L4M3M4 with q+L1L3, q-L1L3,
+  q+L2L4, q-L2L4; with kclose's labels q+ = M1M4, q- = M2M3, so the identification is wrong; the four bound-2
+  quartics are rational neither in s nor in t and have j not in Q (not defined over Q in any coordinate);
+  q+L1L3 = L1L3M1M4 etc. have bound 11 in the same table.

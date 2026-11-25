@@ -1,0 +1,52 @@
+# Is there a uniform third section at the square-type ratios? (No: the class 2 lies in Ш at many ratios)
+
+**Status: experiment, not counted, nothing in the census.** The statements of section 1 are tier C of `LEDGER.md` *for the listed curves only* (a written argument, below and in the docstring of the script; every computational step done by an exact script that was run). Written by an AI model (Claude, made by Anthropic) on 25 November 2026 (UTC); **not read by a person**. A separate AI review re-derived the coverings and the restriction on `λ` (which is in fact `v_p(λ) = 0`, not only even) and re-implemented the local tests three ways (`scripts/g1_full/review_t8_rank1.py`): the same results on all 108 curves for the class 2 and on the six rank-1 curves for every coset; no mathematical error.
+
+Script: `scripts/g1_full/square_section.py` (sympy and the standard library; PARI only in the optional control C2, as a guide). Outputs, written only with `--write`: `square_section.txt` (run with `--mmax 300 --bound 60 --controls`, about 5 minutes on two cores), `square_section.tsv` (one line per curve), `square_section_negative.txt` (`--negative`, 10 forged inputs, all refused). It reads `selmer_square_5000.json` (the exact Selmer groups of `SELMER_SQUARE.md`) and imports `sigma_exact.model`; no existing file is changed.
+
+## 1. Results
+
+Notation of `SELMER_SQUARE.md`: `E = E⁺` or `E⁻` at a coprime square-type ratio, `E: y² = x(x² + ax + b)`, `a = −4a₀`, `b = 4a₀² + κ²`, `κ = 4mn(m − n)(m + n)³` (rechecked from the model on every curve), `K = {1, HH⁻, 2H, 2H⁻} = ⟨α(T), α(R)⟩`, and `2 ∈ Sel(E) \ K` (Theorem S1). For a class `d`, `C_d: N² = dM⁴ + aM²e² + (b/d)e⁴`; `d ∈ α(E(ℚ))` iff `C_d(ℚ) ≠ ∅`.
+
+**Answer to the question.** The class 2 is *not* the image of a rational point at every square-type ratio. For 37 of the 108 curves with `m ≤ 300` (both signs; first ones `E⁺` (4,3), `E^±` (15,8), `E⁺` (21,20), `E^±` (56,33), `E^±` (60,11)) the script proves `C_2(ℚ) = ∅`: every 2-covering `D_λ` of `C_2` is insoluble at `ℝ` or at some `ℚ_p`. Since `C_2` is everywhere locally soluble (`2 ∈ Sel(E)`), it is a non-trivial element of the Tate–Shafarevich group (of the 2-isogenous curve, in the kernel of the isogeny to `E`). So a family of points `Q₂(p, q)` with `x(Q₂) − e` equal to 2 times a square of a rational function, specialising to a point other than `O`, `T` at these ratios, does not exist; the "third section" of the question cannot exist in that form.
+
+**Rank exactly 1 at six square-type curves.** On 21 of the 108 curves the script excludes every coset of `K` in `Sel(E)` other than `K` (one class `d` per coset, `C_d(ℚ) = ∅` by the same second descent), so `α(E(ℚ)) = K`. When moreover `Sel(E′) = {±1} = ⟨α′(T′)⟩` (from `selmer_square_5000.json`), `2^rank = |α(E(ℚ))|·|α′(E′(ℚ))|/4 = 4·2/4`, so
+
+    rank E(ℚ) = 1   for  E⁺ (15,8), E⁻ (15,8), E⁺ (56,33), E⁻ (60,11), E⁻ (99,20), E⁺ (180,19).
+
+So **the analogue of Theorem 2 of `UNIFORM_RANK.md` is false for the square type**: rank ≥ 2 fails at these six curves, and Theorem 1 (rank ≥ 1) is sharp there. (PARI's `ellrank`, guide only, also gives `[1, 1]` on the first five; the sixth was not run.) For the other 15 curves with `α(E(ℚ)) = K` the bound is `1 ≤ rank ≤ log₂|Sel(E′)|` (2 or 3 there), and those curves need a descent on `E′` to go further.
+
+**Points.** A point of class 2 was found (box `|s|, |t| ≤ 60` on the covers that are soluble everywhere) on `E⁻` (4,3) (`X = −1968`), `E⁻` (12,5) (`X = 11640720`) and `E⁻` (24,7) (`X = 237904800`), each checked exactly on the curve and in the class 2. On the other 68 curves at least one cover is soluble everywhere and no point was found in the box: for them nothing is claimed (the class may be the image of a large point, or an element of Ш that a second descent cannot see). Among them are all 8 curves with `m ≤ 300` and Selmer bound `s = 2` (e.g. `E⁺` (40,9) and (144,17), where `SELMER_SQUARE.md` §6 has a point of class 2 from PARI), and `E⁺` (12,5), where PARI (guide) reports rank 1 and `dim Ш[2] = 2`: there the class 2 is presumably in Ш, but 4 of the 64 covers are soluble everywhere and the second descent does not decide.
+
+| `m ≤ 300`, 108 curves | class 2: point found | `C_2(ℚ) = ∅` (Ш) | open |
+|---|---|---|---|
+| by Selmer bound `s` = 2 / 3 / 4 / 5 / 6 / 7 | 0 / 2 / 1 / 0 / 0 / 0 | 0 / 5 / 19 / 11 / 2 / 0 | 8 / 19 / 24 / 11 / 5 / 1 |
+
+No curve with `s = 2` has `C_2(ℚ) = ∅` (that would contradict the finiteness of Ш, by the parity remark of `SELMER_SQUARE.md`); the six rank-1 curves have odd `s` (3, 3, 5, 3, 3, 3), as parity requires.
+
+**What is not shown.** That the generic rank of the family over `ℚ(p/q)` is 1: Silverman's specialisation theorem allows finitely many exceptional fibres, so finitely many rank-1 fibres do not exclude a section of class 2 that degenerates (to `O` or `T`) exactly at them; excluding it would need the Mordell–Weil group of the elliptic surface. Nothing is claimed for `m > 300`, for infinitely many ratios, or for the 68 open curves. Step (2) of the task (interpolating a uniform point from found points, images under automorphisms) was not carried out: with three points of class 2 found and 37 curves where none exists, there is nothing uniform to interpolate.
+
+## 2. The second descent (the argument)
+
+`d` positive squarefree, `d | b`, a sum of two squares `d = α² + β²` (all odd primes of `b` are `≡ 1 (mod 4)`, L0.3; `d = 2`: `α = β = 1`). Multiplying `C_d` by `d`:
+
+    d N² = X1² + X2²,   X1 = dM² − 2a₀e²,   X2 = κe²     (as b − a²/4 = κ²).
+
+A rational point has `e ≠ 0` (`N² = dM⁴` has no rational solution for `d ≠ 1`); take `M, e` coprime integers. `w = (X1 + iX2)/(α + iβ)` has norm `N²`, so (Hilbert 90) `X1 + iX2 = λ(α + iβ)(s + it)²` with `λ ∈ ℚ*` and coprime integers `s, t`. **The class of `λ` is supported on the primes of `2dκ`:** for an odd `p ∤ dκ`, `p` inert gives `v_p(gcd(X1, X2)) ≡ v_p(λ) (mod 2)`; `p = ππ̄` split gives `v_p(gcd(X1, X2)) = v_p(λ)` (only one of `π, π̄` can divide `s + it`); and a prime dividing `gcd(X1, X2)` divides `dκ` (a common prime of `e` and `X1` divides `dM²`, so `d`; otherwise it divides `κ`). Negative `v_p(λ)` is excluded the same way. So `λ ∈ Λ_d = {±(squarefree divisors of 2dκ)}` up to squares. With `q1 = α(s² − t²) − 2βst`, `q2 = β(s² − t²) + 2αst`, eliminating `M`, `e` gives the cover
+
+    D_λ:  F1 = λκ·q2(s, t) = (κe)²,   F2 = dλκ·(κ·q1 + 2a₀·q2)(s, t) = (dκM)²,
+
+and `C_d(ℚ) ≠ ∅ ⇒ D_λ(ℚ) ≠ ∅` for some `λ ∈ Λ_d`. For `d = 2` the script also uses the Pythagorean parametrisation `(X1, X2) = λ(s² − t², 2st)` of `2N² = (U+V)² + (U−V)²` and checks that the two give the same set of soluble covers on every curve.
+
+**Local test.** `D_λ(ℚ_p) ≠ ∅` iff some `(s : t) ∈ ℙ¹(ℚ_p)` makes `F1`, `F2` both squares in `ℚ_p` (0 included). The script searches the residue discs of `ℙ¹(ℤ_p)` exhaustively (each form first divided by the largest even power of `p` in its content): a disc is soluble if both values at its integer centre are `p`-adic squares, insoluble if one form has a constant non-square class on it (`F(disc) ⊂ F(centre) + p^{k+c}ℤ_p`, constant class once `k + c ≥ v(F(centre)) + 1`, `+ 3` at 2), refined otherwise (depth cap 60; an undecided disc is never counted as insoluble; none occurred). For primes `p > 200` of `b` not dividing the contents, two exact shortcuts replace the `p + 1` discs: a form `≡ c·L² (mod p)` with `c` a non-residue leaves only the disc at the root of `L`; otherwise a centre with both values non-zero squares mod `p` is found by scanning. Real place: the four real roots of `F1F2` cut `ℙ¹(ℝ)` into four arcs, one rational test point each (exact isolating intervals). Other primes: if `p` is odd, `p ∤ λdκ`, and `F1`, `F2` are separable without common root mod `p`, then `e² = F1, M² = F2` is a smooth genus-1 curve over `𝔽_p`, which has a point (Hasse), and a smooth point lifts; the script asserts that `Res(F1, F2)`, both discriminants and `d` have no prime outside the tested set (the primes of `2mn(m ± n)·k·H·H⁻`, factorisations checked by multiplication).
+
+**Rank 1.** `α(E(ℚ)) ⊃ K` is a group; if it met another coset `cK` of `K` in `Sel(E)` it would contain all of it, so excluding one `d` per coset gives `α(E(ℚ)) = K`. `α′(E′(ℚ)) ⊂ Sel(E′)` and contains `−1 = α′(T′)`. Silverman–Tate III.6.
+
+## 3. How it was checked
+
+- Exact integers and rationals throughout; the model, `a`, `b`, `a₀`, `κ` and `b = 4S²HH⁻` recomputed and asserted on every curve; every found point checked on the original model and in its class.
+- Control C1 (`--controls`): the local solver against a box search on 300 random pairs of forms at `p ∈ {2, 3, 5, 7}`: no case where the solver says insoluble and the box has a point; every soluble answer confirmed by a box point.
+- Control C2 (`--controls`, PARI as a guide, `m ≤ 130`): every coset of `K` hit by the class of a PARI point (or of a product of two) is re-tested; none is declared empty (17 cosets).
+- `--negative` (10 tests, all refused): a ratio not of square type, a forged point, a forged `κ`, the local solver forced to wrong answers both ways, "all covers insoluble" at `E⁻` (12,5) and "`α(E(ℚ)) = K`" at `E⁻` (4,3) (both have a point of class 2), a class that is not a sum of two squares, a Selmer list with the class of `T` removed, a forged real-place answer.
+
+Not checked: the argument has been read by nobody; the reduction to the covers `D_λ`, the good-reduction argument and the rank formula are standard (Silverman–Tate III.6; Cassels, *Lectures on Elliptic Curves*, §§15–18 for second descents) but are written here without a reference check; the rank-1 statement rests on the exact Selmer groups of `SELMER_SQUARE.md` (tier C there). No Lean.

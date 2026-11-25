@@ -1,0 +1,47 @@
+A1  model rebuilt symbolically as sigma_exact.model; e = -2S^3 is a root; a, b = closed forms (E+ and E-)
+A2  b' = a^2 - 4b = -(8mn(m - n)(m + n)^3)^2: Q(E[2]) = Q(i)
+A3  b = 4 S^2 H(m,n) H(m,-n);  H H- = S^4 - 4m^2n^2(m^2 - n^2)^2;  H = m^2(m - n)^2 + n^2(m + n)^2 > 0
+A4  E' 2-division X^2 - 2aX + b' has discriminant 16b: Q(E'[2]) = Q(sqrt(H H-))
+A5  x(2P) = (x^2 - B)^2 / (4 y^2) on y^2 = x(x^2 + Ax + B): 2P = T iff x(P)^2 = B
+A6  e1, e2 = (-a +- ic)/2; translating (e1, 0) to 0 gives B = (e1 - e2) e1 = w; N(w) = c^2 b == H H- (mod squares)
+A7  q in Q* is a square in Q(i) iff q in Q*^2 u -Q*^2; a square of Q(i) has a rational square norm
+PART A conclusion: E+- has a cyclic 4-isogeny over Q(i) (any kernel) or over Q only if H(m,n)H(m,-n) is a
+  rational square; Klagsbrun's case M = M' needs -H H- in Q*^2, which never holds (H H- > 0).
+B  square-type ratios m <= 1000: 179 ratios, 358 curves; on every one: b' = -c^2 (Q(E[2]) = Q(i)), b, -b, H H-, c^2 b not squares; four_isogeny_test empty
+B  twice-type ratios m <= 1000: 127 ratios, 254 curves; on every one: b' = -c^2 (Q(E[2]) = Q(i)), b, -b, H H-, c^2 b not squares; four_isogeny_test empty
+N1  y^2 = x(x^2 + 3x + 1): ['b square: cyclic 4-isogeny over Q']
+N2  y^2 = x(x^2 + 4x + 2): ["b in D Q*^2: M = M' (kernel containing T, over M)"]
+N3  y^2 = x(x^2 - 288x - 31752): ['w = (e1 - e2) e1 is a square in M: kernel containing e1, over M']  (M = Q(sqrt 2), M' = Q(sqrt -2): Klagsbrun's M = M' fails, yet a
+    cyclic 4-isogeny over M exists with kernel containing e1; his Lemma 4.1(ii) needs the kernel to contain T)
+N4  y^2 = x(x^2 + 6x + 25) (b' = -8^2 as in the family, b = 5^2): ['b square: cyclic 4-isogeny over Q', 'w = (e1 - e2) e1 is a square in M: kernel containing e1, over M']
+N5  (4,3) E+ with b forged to 4 S^2 7^2: refused by the per-curve assertions
+negative: 5/5 refused or flagged as they must be
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+PARI (guide only): ellisomat(E, 2) over nfinit(t^2 + 1)
+   square (4,3) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (4,3) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (12,5) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (12,5) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (15,8) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (15,8) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (21,20) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (21,20) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (24,7) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (24,7) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (35,12) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   square (35,12) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (7,1) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (7,1) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (17,7) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (17,7) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (23,7) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (23,7) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (31,17) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (31,17) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (41,1) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (41,1) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (47,23) E+: class size, degrees from E = [4, [1, 2, 2, 2]]
+   twice (47,23) E-: class size, degrees from E = [4, [1, 2, 2, 2]]
+   N2 y^2 = x(x^2 + 4x + 2) over Q(sqrt 2): [6, [1, 2, 4, 4, 2, 2]];  over Q: [2, [1, 2]]
+   N3 y^2 = x(x^2 + -288x + -31752) over Q(sqrt 2): [8, [1, 2, 2, 4, 4, 2, 4, 4]];  over Q: [2, [1, 2]]
+ALL CHECKS PASSED

@@ -1,0 +1,12 @@
+Negative tests
+  refused: ratio (5,2), not of square type
+  refused: forged point M = 1, e = 1 on E+ (12,5)
+  refused: kappa multiplied by 3
+  refused: local solver claims a point on 3(s^2+t^2) = square over Q_3
+  refused: local solver claims no point on s^2 = sq, s^2 + t^2 = sq over Q_5
+  refused: E- (12,5): "all covers insoluble" (a point of class 2 exists)
+  refused: E- (4,3): "alpha(E(Q)) = K" (a point of class 2 exists)
+  refused: class 3 on E+ (12,5) (not a sum of two squares)
+  refused: Sel(E) of E+ (15,8) with the class of T removed
+  refused: real solver claims a point on -s^2 + t^2 >= 0, s^2 - 4t^2 >= 0
+negative tests refused: 10 of 10

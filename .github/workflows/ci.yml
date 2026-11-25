@@ -73,31 +73,50 @@ jobs:
 
   rank:
     # lean_rank/: rank E(Q) >= 2 on the 254 twice-square curves m <= 1000 (UNIFORM_RANK.md, section 7), a sub-project on
-    # Lean v4.36.0 and Mathlib v4.36.0 with Michael Stoll's EllipticCurves 2164fb5 (Mordell-Weil), built from source; it
+    # Lean v4.36.0 and Mathlib v4.36.0 with Michael Stoll's EllipticCurves 2164fb5 (Mordell-Weil; compiled here, Mathlib from its cache); it
     # compiles four modules of the main tree unchanged (srcDir = ".."). The main library stays on v4.33.1.
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1
         with:
           lake-package-directory: lean_rank
-      - name: Axioms of the 9 headline theorems; the checks; forged claims refused
+      - name: Axioms of every headline theorem (the print-axioms lines replayed by lake build), the checks, forged claims refused
         shell: bash
         working-directory: lean_rank
         run: |
           set -e -o pipefail
           lake --version > lakever.txt
           grep -q 'Lean version 4.36.0' lakever.txt
-          lake env lean LeanRank/Rank.lean | tee axioms.txt
-          lake env lean LeanRank/Index.lean | tee -a axioms.txt
-          test "$(grep -c 'depends on axioms' axioms.txt)" = 9
-          test "$(grep -c 'depends on axioms: \[propext, Classical.choice, Quot.sound\]$' axioms.txt)" = 9
-          if grep -q sorryAx axioms.txt; then echo 'sorryAx'; exit 1; fi
+          lake build > build.txt 2>&1 || { cat build.txt; exit 1; }
+          # every `#print axioms` line of LeanRank/*.lean (file and line) is answered in the output of lake build, with the
+          # standard axioms only; no sorry
+          python3 - <<'PY'
+          import glob, re, sys
+          ok = {'propext', 'Classical.choice', 'Quot.sound'}
+          build = open('build.txt').read()
+          src = {(f, i + 1) for f in glob.glob('LeanRank/*.lean')
+                 for i, l in enumerate(open(f).read().split('\n')) if l.startswith('#print axioms ')}
+          pat = re.compile(r'^info: (\S+?):(\d+):\d+: .*(?:depends on axioms: \[(.*)\]|does not depend on any axioms)$', re.M)
+          got, bad = set(), []
+          for m in pat.finditer(build):
+              got.add((m.group(1), int(m.group(2))))
+              if m.group(3) is not None and not set(m.group(3).split(', ')) <= ok:
+                  bad.append(m.group(0))
+          print(len(src), 'print-axioms lines in the sources;', len(got), 'answered by lake build;', len(bad), 'with a non-standard axiom')
+          sys.exit(1 if bad or got != src or 'sorryAx' in build or "declaration uses 'sorry'" in build or 'declaration uses `sorry`' in build else 0)
+          PY
           lake env lean scripts/RankChecks.lean
-          if lake env lean scripts/RankForge.lean > forge.txt 2>&1; then echo 'forged claims accepted'; exit 1; fi
-          test "$(grep -c '^scripts/RankForge.lean:[0-9]*:[0-9]*: error' forge.txt)" = 4
-          for L in 19 23 27 33; do grep -q "^scripts/RankForge.lean:$L:" forge.txt; done
+          lake env lean scripts/RankZeroForge.lean
+          lake env lean scripts/RankZeroCensusForge.lean
+          # each forged claim fails, at its own line, and nothing else fails
+          for spec in 'RankForge:19 23 27 33' 'FamilyForge:20 24 29 34 42 46 64 71' 'LemmaDForge:25 31 52 57 64' 'LemmaDBridgeForge:25 28'; do
+            f=${spec%%:*}; want=${spec#*:}
+            if lake env lean scripts/$f.lean > $f.txt 2>&1; then echo "forged claims accepted in $f"; exit 1; fi
+            got=$(sed -n "s/^scripts\/$f.lean:\([0-9]*\):[0-9]*: error.*/\1/p" $f.txt | tr '\n' ' ')
+            test "$got" = "$want "
+          done
 
   quick:
     # On every push: what can be checked in a few minutes.  The transcripts of Magma against the committed outputs, the
@@ -126,6 +145,17 @@ jobs:
           python3 scripts/g1_full/two_descent_certs.py | diff - scripts/g1_full/two_descent_certs.txt
           # SELMER_SQUARE.md: the forged inputs, and the rule of Proposition S2 against the committed exact descent (about a minute)
           python3 scripts/g1_full/selmer_square.py --negative | diff - scripts/g1_full/selmer_square_negative.txt
+          # SELMER_SQUARE.md: Theorem S1 is not Klagsbrun's obstruction (the part without PARI); SQUARE_SECTION.md: forged inputs
+          python3 scripts/g1_full/klagsbrun_check.py | diff - <(head -n 18 scripts/g1_full/klagsbrun_check.txt; tail -n 1 scripts/g1_full/klagsbrun_check.txt)
+          python3 scripts/g1_full/square_section.py --negative | diff - scripts/g1_full/square_section_negative.txt
+          (cd scripts/second_descent && python3 review_t5_labels.py | diff - review_t5_labels.txt)
+          (cd scripts/g1_full && python3 lemmaD_reduction_check.py | diff - lemmaD_reduction_check.txt)
+          python3 lean_rank/scripts/rank_zero_check.py > rzc.txt
+          test "$(tail -n 1 rzc.txt)" = 'ALL CHECKS PASSED'
+          python3 -I lean_rank/scripts/gen_rank_zero_certs.py rz.lean 4,3 7,1 12,5 24,7 > rzgen.txt
+          diff rz.lean lean_rank/LeanRank/RankZeroCensus.lean
+          if python3 -I lean_rank/scripts/gen_rank_zero_certs.py rzbad.lean 15,8 > rzbad.txt 2>&1; then echo 'generator accepted (15, 8)'; exit 1; fi
+          rm -f rzc.txt rz.lean rzgen.txt rzbad.lean rzbad.txt
           python3 scripts/g1_full/selmer_square_rule.py --max 5000 | diff - scripts/g1_full/selmer_square_rule_5000.txt
           (cd scripts/second_descent && python3 exact_last_pair.py | diff - exact_last_pair.txt && python3 exact_last_pair.py --negative | diff - exact_last_pair_negative.txt)
           (cd scripts/g1_full && python3 rank_indep.py | diff - rank_indep.txt && python3 rank_indep.py --negative | diff - rank_indep_negative.txt && python3 rank_indep.py --all | diff - rank_indep_all.txt)

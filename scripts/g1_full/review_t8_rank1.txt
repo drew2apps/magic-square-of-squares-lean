@@ -1,0 +1,150 @@
+# review_t8_rank1.py --curves 15:-8,56:33,60:-11 --brute --crosscheck
+review_t8_rank1.py: independent second descent on the six rank-1 claims of SQUARE_SECTION.md
+E- (15,8): |Sel(E)| = 16, Sel(E') = [-1, 1], s = 3; 3 non-trivial cosets of K; 46.3s
+    d = 2: 64 covers, survivors []; obstructions at {13: 8, 17: 4, 2: 32, 23: 2, 3: 16, 37: 2}
+    d = 44881: 256 covers, survivors []; obstructions at {13: 16, 17: 8, 2: 128, 23: 4, 3: 64, 37: 4, 5: 32}
+    d = 122161: 256 covers, survivors []; obstructions at {13: 24, 17: 4, 2: 128, 23: 2, 3: 64, 37: 2, 5: 32}
+    d = 10965415682: 1024 covers, survivors []; obstructions at {1213: 2, 13: 96, 17: 16, 2: 512, 23: 8, 3: 256, 37: 6, 5: 128}
+    d = 8177: 512 covers, survivors []; obstructions at {13: 48, 17: 12, 2: 256, 23: 2, 3: 128, 37: 2, 5: 64}
+    d = 536146: 512 covers, survivors []; obstructions at {1213: 2, 13: 48, 17: 12, 2: 256, 23: 2, 3: 128, 5: 64}
+    d = 11821426: 512 covers, survivors []; obstructions at {13: 32, 17: 24, 2: 256, 23: 4, 3: 128, 37: 4, 5: 64}
+    d = 193775537: 512 covers, survivors []; obstructions at {1213: 2, 13: 32, 17: 24, 2: 256, 23: 4, 3: 128, 37: 2, 5: 64}
+    d = 16354: 512 covers, survivors []; obstructions at {13: 48, 17: 12, 2: 256, 23: 2, 3: 128, 37: 2, 5: 64}
+    d = 268073: 512 covers, survivors []; obstructions at {13: 48, 17: 12, 2: 256, 23: 2, 3: 128, 37: 2, 5: 64}
+    d = 5910713: 512 covers, survivors []; obstructions at {13: 32, 17: 24, 2: 256, 23: 4, 3: 128, 37: 2, 5: 64, 9397: 2}
+    d = 387551074: 512 covers, survivors []; obstructions at {13: 32, 17: 24, 2: 256, 23: 4, 3: 128, 37: 2, 5: 64, 9397: 2}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: True
+    brute-force mod p^K certificates (independent of methods S/T): 1088 insoluble covers (one element per coset) certified, 0 not certified []
+E+ (56,33): |Sel(E)| = 64, Sel(E') = [-1, 1], s = 5; 15 non-trivial cosets of K; 1365.5s
+    d = 2: 128 covers, survivors []; obstructions at {13: 8, 2: 64, 23: 4, 3: 32, 397: 2, 5: 16, 73: 2}
+    d = 10284913: 1024 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 32, 2: 512, 23: 16, 3: 256, 397: 2, 5: 128, 601: 2, 73: 8}
+    d = 25416337: 1024 covers, survivors []; obstructions at {109: 2, 11: 64, 13: 32, 2: 512, 23: 16, 3: 256, 397: 2, 5: 128, 73: 12}
+    d = 522809629647362: 8192 covers, survivors []; obstructions at {109: 24, 11: 512, 13: 256, 157: 4, 2: 4096, 23: 128, 3: 2048, 397: 2, 5: 1024, 601: 2, 73: 96}
+    d = 785: 512 covers, survivors []; obstructions at {109: 2, 11: 16, 13: 8, 2: 256, 23: 4, 3: 128, 5: 96, 73: 2}
+    d = 655090: 1024 covers, survivors []; obstructions at {109: 4, 11: 32, 13: 16, 2: 512, 23: 8, 3: 256, 5: 192, 73: 4}
+    d = 39903649090: 4096 covers, survivors []; obstructions at {109: 4, 11: 128, 13: 64, 157: 2, 2: 2048, 23: 32, 3: 1024, 397: 2, 5: 768, 73: 24}
+    d = 8324994102665: 8192 covers, survivors []; obstructions at {109: 12, 11: 256, 13: 128, 2: 4096, 23: 64, 3: 2048, 397: 4, 5: 1536, 73: 48}
+    d = 1570: 512 covers, survivors []; obstructions at {109: 2, 11: 16, 13: 8, 2: 256, 23: 4, 3: 128, 5: 96, 73: 2}
+    d = 327545: 1024 covers, survivors []; obstructions at {109: 4, 11: 32, 13: 16, 2: 512, 23: 8, 3: 256, 5: 192, 73: 4}
+    d = 19951824545: 4096 covers, survivors []; obstructions at {109: 4, 11: 128, 13: 64, 157: 2, 2: 2048, 23: 32, 3: 1024, 397: 2, 5: 768, 73: 24}
+    d = 16649988205330: 8192 covers, survivors []; obstructions at {109: 12, 11: 256, 13: 128, 2: 4096, 23: 64, 3: 2048, 397: 4, 5: 1536, 73: 48}
+    d = 5161: 512 covers, survivors []; obstructions at {11: 32, 13: 24, 157: 2, 2: 256, 23: 4, 3: 128, 5: 64, 73: 2}
+    d = 1664546: 1024 covers, survivors []; obstructions at {109: 2, 11: 64, 13: 48, 2: 512, 23: 8, 3: 256, 5: 128, 73: 6}
+    d = 106160871986: 4096 covers, survivors []; obstructions at {109: 8, 11: 256, 13: 192, 157: 8, 2: 2048, 23: 32, 3: 1024, 5: 512, 73: 16}
+    d = 8559855397249: 8192 covers, survivors []; obstructions at {109: 12, 11: 512, 13: 384, 157: 4, 2: 4096, 23: 64, 3: 2048, 5: 1024, 73: 48}
+    d = 10322: 512 covers, survivors []; obstructions at {11: 32, 13: 24, 157: 2, 2: 256, 23: 4, 3: 128, 5: 64, 73: 2}
+    d = 832273: 1024 covers, survivors []; obstructions at {109: 2, 11: 64, 13: 48, 2: 512, 23: 8, 3: 256, 5: 128, 73: 6}
+    d = 53080435993: 4096 covers, survivors []; obstructions at {109: 8, 11: 256, 13: 192, 157: 8, 2: 2048, 23: 32, 3: 1024, 5: 512, 73: 16}
+    d = 17119710794498: 8192 covers, survivors []; obstructions at {109: 12, 11: 512, 13: 384, 157: 4, 2: 4096, 23: 64, 3: 2048, 5: 1024, 73: 48}
+    d = 39785: 1024 covers, survivors []; obstructions at {11: 32, 13: 16, 157: 2, 2: 512, 23: 8, 3: 256, 5: 192, 73: 6}
+    d = 68880610: 2048 covers, survivors []; obstructions at {11: 64, 13: 32, 157: 4, 2: 1024, 23: 16, 3: 512, 5: 384, 73: 12}
+    d = 379504210: 2048 covers, survivors []; obstructions at {109: 6, 11: 64, 13: 32, 157: 2, 2: 1024, 23: 16, 3: 512, 5: 384, 73: 8}
+    d = 164260911665: 4096 covers, survivors []; obstructions at {109: 8, 11: 128, 13: 64, 157: 8, 2: 2048, 23: 32, 3: 1024, 5: 768, 73: 16}
+    d = 43873: 512 covers, survivors []; obstructions at {109: 4, 13: 32, 2: 256, 23: 16, 3: 128, 5: 64, 73: 12}
+    d = 2498498: 1024 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 32, 2: 512, 23: 16, 3: 256, 5: 128, 73: 12}
+    d = 418499138: 1024 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 32, 157: 4, 2: 512, 23: 16, 3: 256, 5: 128, 73: 8}
+    d = 5958216097: 2048 covers, survivors []; obstructions at {109: 12, 11: 128, 13: 64, 157: 4, 2: 1024, 23: 32, 3: 512, 5: 256, 73: 16}
+    d = 79570: 1024 covers, survivors []; obstructions at {11: 32, 13: 16, 157: 2, 2: 512, 23: 8, 3: 256, 5: 192, 73: 6}
+    d = 34440305: 2048 covers, survivors []; obstructions at {11: 64, 13: 32, 157: 4, 2: 1024, 23: 16, 3: 512, 5: 384, 73: 12}
+    d = 189752105: 2048 covers, survivors []; obstructions at {109: 6, 11: 64, 13: 32, 157: 2, 2: 1024, 23: 16, 3: 512, 5: 384, 73: 8}
+    d = 328521823330: 4096 covers, survivors []; obstructions at {109: 8, 11: 128, 13: 64, 157: 8, 2: 2048, 23: 32, 3: 1024, 5: 768, 73: 16}
+    d = 87746: 512 covers, survivors []; obstructions at {109: 4, 13: 32, 2: 256, 23: 16, 3: 128, 5: 64, 73: 12}
+    d = 1249249: 1024 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 32, 2: 512, 23: 16, 3: 256, 5: 128, 73: 12}
+    d = 209249569: 1024 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 32, 157: 4, 2: 512, 23: 16, 3: 256, 5: 128, 73: 8}
+    d = 11916432194: 2048 covers, survivors []; obstructions at {109: 12, 11: 128, 13: 64, 157: 4, 2: 1024, 23: 32, 3: 512, 5: 256, 73: 16}
+    d = 4051385: 2048 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 48, 2: 1024, 23: 8, 3: 512, 5: 384, 73: 4}
+    d = 1306668610: 4096 covers, survivors []; obstructions at {109: 2, 11: 128, 13: 96, 157: 2, 2: 2048, 23: 16, 3: 1024, 5: 768, 73: 12}
+    d = 3380919490: 4096 covers, survivors []; obstructions at {109: 8, 11: 128, 13: 96, 2: 2048, 23: 16, 3: 1024, 5: 768, 73: 8}
+    d = 272606859785: 8192 covers, survivors []; obstructions at {109: 4, 11: 256, 13: 192, 157: 4, 2: 4096, 23: 32, 3: 2048, 5: 1536, 73: 24}
+    d = 6213545: 2048 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 48, 2: 1024, 23: 8, 3: 512, 5: 384, 73: 4}
+    d = 410660770: 4096 covers, survivors []; obstructions at {109: 2, 11: 128, 13: 96, 2: 2048, 23: 16, 3: 1024, 397: 2, 5: 768, 73: 12}
+    d = 10757641570: 4096 covers, survivors []; obstructions at {109: 4, 11: 128, 13: 96, 157: 4, 2: 2048, 23: 16, 3: 1024, 5: 768, 73: 8}
+    d = 177746414105: 8192 covers, survivors []; obstructions at {11: 256, 13: 192, 157: 4, 2: 4096, 23: 32, 3: 2048, 397: 4, 5: 1536, 73: 24}
+    d = 6852001: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 2: 512, 23: 8, 3: 256, 397: 2, 5: 128, 73: 4, 877: 2}
+    d = 390210626: 2048 covers, survivors []; obstructions at {109: 6, 11: 128, 13: 96, 2: 1024, 23: 16, 3: 512, 5: 256, 73: 8, 877: 2}
+    d = 452857106: 2048 covers, survivors []; obstructions at {109: 4, 11: 128, 13: 96, 2: 1024, 23: 16, 3: 512, 5: 256, 73: 12}
+    d = 6447374089: 4096 covers, survivors []; obstructions at {109: 8, 11: 256, 13: 192, 2: 2048, 23: 32, 3: 1024, 5: 512, 73: 24}
+    d = 8102770: 2048 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 48, 2: 1024, 23: 8, 3: 512, 5: 384, 73: 4}
+    d = 653334305: 4096 covers, survivors []; obstructions at {109: 2, 11: 128, 13: 96, 157: 2, 2: 2048, 23: 16, 3: 1024, 5: 768, 73: 12}
+    d = 1690459745: 4096 covers, survivors []; obstructions at {109: 8, 11: 128, 13: 96, 2: 2048, 23: 16, 3: 1024, 5: 768, 73: 8}
+    d = 545213719570: 8192 covers, survivors []; obstructions at {109: 4, 11: 256, 13: 192, 157: 4, 2: 4096, 23: 32, 3: 2048, 5: 1536, 73: 24}
+    d = 12427090: 2048 covers, survivors []; obstructions at {109: 4, 11: 64, 13: 48, 2: 1024, 23: 8, 3: 512, 5: 384, 73: 4}
+    d = 205330385: 4096 covers, survivors []; obstructions at {109: 2, 11: 128, 13: 96, 2: 2048, 23: 16, 3: 1024, 397: 2, 5: 768, 73: 12}
+    d = 5378820785: 4096 covers, survivors []; obstructions at {109: 4, 11: 128, 13: 96, 157: 4, 2: 2048, 23: 16, 3: 1024, 5: 768, 73: 8}
+    d = 355492828210: 8192 covers, survivors []; obstructions at {11: 256, 13: 192, 157: 4, 2: 4096, 23: 32, 3: 2048, 397: 4, 5: 1536, 73: 24}
+    d = 13704002: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 2: 512, 23: 8, 3: 256, 397: 2, 5: 128, 601: 2, 73: 4}
+    d = 195105313: 2048 covers, survivors []; obstructions at {109: 6, 11: 128, 13: 96, 2: 1024, 23: 16, 3: 512, 397: 2, 5: 256, 73: 8}
+    d = 226428553: 2048 covers, survivors []; obstructions at {109: 4, 11: 128, 13: 96, 2: 1024, 23: 16, 3: 512, 5: 256, 73: 12}
+    d = 12894748178: 4096 covers, survivors []; obstructions at {109: 8, 11: 256, 13: 192, 2: 2048, 23: 32, 3: 1024, 5: 512, 73: 24}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: True
+    brute-force mod p^K certificates (independent of methods S/T): 15488 insoluble covers (one element per coset) certified, 0 not certified []
+E- (60,11): |Sel(E)| = 16, Sel(E') = [-1, 1], s = 3; 3 non-trivial cosets of K; 46.4s
+    d = 2: 128 covers, survivors []; obstructions at {13: 8, 2: 64, 3: 32, 5: 16, 61: 8}
+    d = 9253561: 256 covers, survivors []; obstructions at {13: 16, 2: 128, 3: 64, 5: 32, 61: 16}
+    d = 18438121: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 2: 512, 3: 256, 5: 128, 61: 8, 71: 4, 73: 4}
+    d = 341236554797762: 2048 covers, survivors []; obstructions at {11: 128, 13: 96, 2: 1024, 3: 512, 5: 256, 61: 16, 71: 8, 73: 8}
+    d = 793: 512 covers, survivors []; obstructions at {11: 32, 13: 24, 2: 256, 3: 128, 5: 64, 61: 8}
+    d = 173034674: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 19429: 2, 2: 512, 3: 256, 5: 128, 61: 24, 71: 4, 73: 2}
+    d = 14676147746: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 2: 512, 3: 256, 5: 128, 61: 16}
+    d = 800593455487057: 2048 covers, survivors []; obstructions at {11: 128, 13: 64, 19429: 4, 2: 1024, 3: 512, 5: 256, 61: 48, 71: 8, 73: 4}
+    d = 1586: 512 covers, survivors []; obstructions at {11: 32, 13: 24, 2: 256, 3: 128, 5: 64, 61: 8}
+    d = 86517337: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 2: 512, 3: 256, 5: 128, 61: 24, 71: 4, 73: 4}
+    d = 7338073873: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 2: 512, 3: 256, 5: 128, 61: 16}
+    d = 1601186910974114: 2048 covers, survivors []; obstructions at {11: 128, 13: 64, 2: 1024, 3: 512, 5: 256, 61: 48, 71: 8, 73: 8}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: True
+    brute-force mod p^K certificates (independent of methods S/T): 1152 insoluble covers (one element per coset) certified, 0 not certified []
+ALL SIX RANK-1 CLAIMS CONFIRMED: True
+
+# review_t8_rank1.py --curves 99:-20,180:19,15:8 --brute --crosscheck
+review_t8_rank1.py: independent second descent on the six rank-1 claims of SQUARE_SECTION.md
+E- (99,20): |Sel(E)| = 16, Sel(E') = [-1, 1], s = 3; 3 non-trivial cosets of K; 435.1s
+    d = 2: 256 covers, survivors []; obstructions at {101: 4, 13: 8, 2: 128, 3: 64, 5: 32, 7: 16, 73: 4}
+    d = 66832441: 1024 covers, survivors []; obstructions at {101: 4, 11: 32, 13: 24, 2: 512, 3: 256, 5: 128, 7: 64, 73: 4}
+    d = 141288361: 2048 covers, survivors []; obstructions at {101: 8, 11: 64, 13: 32, 2: 1024, 3: 512, 5: 256, 7: 128, 73: 24}
+    d = 18885292101038402: 8192 covers, survivors []; obstructions at {101: 16, 11: 256, 13: 192, 2: 4096, 3: 2048, 5: 1024, 7: 512, 73: 48}
+    d = 1313: 1024 covers, survivors []; obstructions at {101: 4, 11: 32, 13: 24, 2: 512, 3: 256, 5: 128, 7: 64, 73: 4}
+    d = 1038473314: 1024 covers, survivors []; obstructions at {101: 8, 11: 32, 13: 16, 2: 512, 3: 256, 5: 128, 7: 64, 73: 8}
+    d = 371023235986: 8192 covers, survivors []; obstructions at {101: 16, 11: 256, 13: 192, 2: 4096, 3: 2048, 5: 1024, 7: 512, 73: 48}
+    d = 73362096238649177: 8192 covers, survivors []; obstructions at {101: 32, 11: 256, 13: 128, 2: 4096, 3: 2048, 5: 1024, 7: 512, 73: 96}
+    d = 2626: 1024 covers, survivors []; obstructions at {101: 4, 11: 32, 13: 24, 2: 512, 3: 256, 5: 128, 7: 64, 73: 4}
+    d = 519236657: 1024 covers, survivors []; obstructions at {101: 4, 11: 32, 13: 16, 2: 512, 3: 256, 5: 128, 5140957: 2, 7: 64, 73: 8, 853: 2}
+    d = 185511617993: 8192 covers, survivors []; obstructions at {101: 8, 11: 256, 13: 192, 2: 4096, 2269: 2, 3: 2048, 5: 1024, 7: 512, 73: 48, 853: 6}
+    d = 146724192477298354: 8192 covers, survivors []; obstructions at {101: 16, 11: 256, 13: 128, 2: 4096, 2269: 2, 3: 2048, 5: 1024, 5140957: 2, 7: 512, 73: 96, 853: 12}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: True
+    brute-force mod p^K certificates (independent of methods S/T): 2304 insoluble covers (one element per coset) certified, 0 not certified []
+E+ (180,19): |Sel(E)| = 16, Sel(E') = [-1, 1], s = 3; 3 non-trivial cosets of K; 155.6s
+    d = 2: 256 covers, survivors []; obstructions at {13: 8, 181: 2, 193: 2, 2: 128, 23: 4, 3: 64, 5: 32, 7: 16}
+    d = 854136361: 2048 covers, survivors []; obstructions at {13: 96, 181: 4, 19: 16, 193: 4, 2: 1024, 23: 8, 3: 512, 5: 256, 7: 128}
+    d = 1292429881: 512 covers, survivors []; obstructions at {13: 16, 181: 4, 193: 4, 2: 256, 23: 8, 3: 128, 5: 64, 7: 32}
+    d = 2207822710810006082: 4096 covers, survivors []; obstructions at {13: 192, 181: 8, 19: 32, 193: 8, 2: 2048, 23: 16, 3: 1024, 5: 512, 7: 256}
+    d = 193: 512 covers, survivors []; obstructions at {13: 16, 19: 16, 2: 256, 3: 128, 5: 64, 7: 32}
+    d = 8851154: 1024 covers, survivors []; obstructions at {13: 48, 181: 2, 19: 8, 2: 512, 23: 4, 3: 256, 340429: 2, 5: 128, 7: 64}
+    d = 498877934066: 1024 covers, survivors []; obstructions at {13: 32, 19: 32, 2: 512, 3: 256, 5: 128, 7: 64}
+    d = 5719747955466337: 2048 covers, survivors []; obstructions at {13: 96, 181: 4, 19: 16, 2: 1024, 23: 8, 3: 512, 340429: 4, 5: 256, 7: 128}
+    d = 386: 512 covers, survivors []; obstructions at {13: 16, 19: 16, 2: 256, 3: 128, 5: 64, 7: 32}
+    d = 4425577: 1024 covers, survivors []; obstructions at {13: 48, 181: 2, 19: 8, 193: 2, 2: 512, 23: 4, 3: 256, 5: 128, 7: 64}
+    d = 249438967033: 1024 covers, survivors []; obstructions at {13: 32, 19: 32, 2: 512, 3: 256, 5: 128, 7: 64}
+    d = 11439495910932674: 2048 covers, survivors []; obstructions at {13: 96, 181: 4, 19: 16, 193: 4, 2: 1024, 23: 8, 3: 512, 5: 256, 7: 128}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: True
+    brute-force mod p^K certificates (independent of methods S/T): 1280 insoluble covers (one element per coset) certified, 0 not certified []
+E+ (15,8): |Sel(E)| = 16, Sel(E') = [-1, 1], s = 3; 3 non-trivial cosets of K; 64.9s
+    d = 2: 64 covers, survivors []; obstructions at {13: 4, 17: 2, 2: 32, 3: 16, 37: 2, 7: 8}
+    d = 44881: 256 covers, survivors []; obstructions at {13: 8, 17: 4, 2: 128, 3: 64, 37: 4, 5: 32, 7: 16}
+    d = 122161: 256 covers, survivors []; obstructions at {13: 12, 17: 2, 2: 128, 3: 64, 37: 2, 5: 32, 7: 16}
+    d = 10965415682: 1024 covers, survivors []; obstructions at {1213: 2, 13: 48, 17: 8, 2: 512, 3: 256, 37: 6, 5: 128, 7: 64}
+    d = 8177: 512 covers, survivors []; obstructions at {13: 24, 17: 6, 2: 256, 3: 128, 37: 2, 5: 64, 7: 32}
+    d = 536146: 512 covers, survivors []; obstructions at {1213: 2, 13: 24, 17: 6, 2: 256, 3: 128, 5: 64, 7: 32}
+    d = 11821426: 512 covers, survivors []; obstructions at {13: 16, 17: 12, 2: 256, 3: 128, 37: 4, 5: 64, 7: 32}
+    d = 193775537: 512 covers, survivors []; obstructions at {1213: 2, 13: 16, 17: 12, 2: 256, 3: 128, 37: 2, 5: 64, 7: 32}
+    d = 16354: 512 covers, survivors []; obstructions at {13: 24, 17: 6, 2: 256, 3: 128, 37: 2, 5: 64, 7: 32}
+    d = 268073: 512 covers, survivors []; obstructions at {13: 24, 17: 6, 2: 256, 3: 128, 37: 2, 5: 64, 7: 32}
+    d = 5910713: 512 covers, survivors []; obstructions at {13: 16, 17: 12, 2: 256, 3: 128, 37: 2, 5: 64, 7: 32, 9397: 2}
+    d = 387551074: 512 covers, survivors []; obstructions at {13: 16, 17: 12, 2: 256, 3: 128, 37: 2, 5: 64, 7: 32, 9397: 2}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: True
+    brute-force mod p^K certificates (independent of methods S/T): 1088 insoluble covers (one element per coset) certified, 0 not certified []
+ALL SIX RANK-1 CLAIMS CONFIRMED: True
+
+# PARI ellrank (guide only, not used): /tmp script, ellrank(E, 2)[1..3], ellrootno
+(180, 19) ellrank: [1, 1, 0] rootno: -1
+(60, -11) ellrank: [1, 1, 0] rootno: -1
+(99, -20) ellrank: [1, 1, 0] rootno: -1

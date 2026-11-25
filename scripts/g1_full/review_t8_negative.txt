@@ -1,0 +1,8 @@
+NEGATIVE TESTS
+N1 E- (4,3): point x = 29282 of class 2 on the curve; survivors [-6, 6]: not excluded (correct)
+N2 E- (4,3): the point's lam = 6 (mod squares and sign) is a survivor (correct)
+N3 methods S and T agree on 299 random pairs of forms; no insoluble answer contradicted by a box point
+N4 E+ (15,8) with Sel(E') forged to 4 elements: rank-1 conclusion refused
+N5 forged kappa: refused
+N6 real test: -(s^2 + t^2) refused, s^2 - t^2 accepted
+negative: 6/6 as required

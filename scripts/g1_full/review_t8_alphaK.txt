@@ -1,0 +1,129 @@
+# review_t8_rank1.py --curves 4:3,21:20,77:36,77:-36,91:60,143:-24,165:52,180:-19,195:-28 (alpha(E(Q)) = K check on 9 of t8's other 15 curves; 'RANK EXACTLY 1: False' only because |Sel(E')| > 2 there; the last line does not apply)
+review_t8_rank1.py: independent second descent on the six rank-1 claims of SQUARE_SECTION.md
+E+ (4,3): |Sel(E)| = 16, Sel(E') = [-1, 1, -14, 14], s = 4; 3 non-trivial cosets of K; 4.7s
+    d = 2: 16 covers, survivors []; obstructions at {13: 4, 2: 8, 5: 4}
+    d = 457: 32 covers, survivors []; obstructions at {13: 8, 2: 16, 5: 8}
+    d = 793: 64 covers, survivors []; obstructions at {13: 8, 2: 32, 3: 16, 5: 8}
+    d = 724802: 128 covers, survivors []; obstructions at {13: 16, 2: 64, 3: 32, 5: 16}
+    d = 65: 64 covers, survivors []; obstructions at {13: 4, 2: 32, 3: 16, 5: 12}
+    d = 610: 64 covers, survivors []; obstructions at {2: 32, 3: 16, 5: 12, 61: 4}
+    d = 59410: 128 covers, survivors []; obstructions at {13: 8, 2: 64, 3: 32, 5: 24}
+    d = 139385: 128 covers, survivors []; obstructions at {2: 64, 3: 32, 5: 24, 61: 8}
+    d = 130: 64 covers, survivors []; obstructions at {13: 4, 2: 32, 3: 16, 5: 12}
+    d = 305: 64 covers, survivors []; obstructions at {13: 4, 2: 32, 3: 16, 5: 12}
+    d = 29705: 128 covers, survivors []; obstructions at {13: 8, 2: 64, 3: 32, 5: 24}
+    d = 278770: 128 covers, survivors []; obstructions at {13: 8, 2: 64, 3: 32, 5: 24}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+E+ (21,20): |Sel(E)| = 16, Sel(E') = [-1, 1, -82, 82], s = 4; 3 non-trivial cosets of K; 34.6s
+    d = 2: 64 covers, survivors []; obstructions at {13: 8, 2: 32, 29: 4, 3: 16, 73: 4}
+    d = 672841: 512 covers, survivors []; obstructions at {13: 48, 2: 256, 29: 8, 3: 128, 5: 64, 73: 8}
+    d = 741721: 128 covers, survivors []; obstructions at {13: 16, 2: 64, 29: 8, 3: 32, 73: 8}
+    d = 998120598722: 1024 covers, survivors []; obstructions at {13: 96, 2: 512, 29: 16, 3: 256, 5: 128, 73: 16}
+    d = 20561: 256 covers, survivors []; obstructions at {13: 16, 2: 128, 29: 12, 3: 64, 5: 32, 73: 4}
+    d = 55042: 512 covers, survivors []; obstructions at {13: 48, 2: 256, 29: 16, 3: 128, 5: 64}
+    d = 20412903641: 1024 covers, survivors []; obstructions at {13: 96, 2: 512, 29: 32, 3: 256, 5: 128}
+    d = 30501050962: 512 covers, survivors []; obstructions at {13: 32, 2: 256, 29: 24, 3: 128, 5: 64, 73: 8}
+    d = 27521: 512 covers, survivors []; obstructions at {13: 48, 2: 256, 29: 16, 3: 128, 5: 64}
+    d = 41122: 256 covers, survivors []; obstructions at {13: 16, 2: 128, 29: 12, 3: 64, 5: 32, 709: 4}
+    d = 15250525481: 512 covers, survivors []; obstructions at {13: 32, 2: 256, 29: 24, 3: 128, 5: 64, 709: 8}
+    d = 40825807282: 1024 covers, survivors []; obstructions at {13: 96, 2: 512, 29: 32, 3: 256, 5: 128}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+E+ (77,36): |Sel(E)| = 16, Sel(E') = [-1, 1, -9266, 9266], s = 4; 3 non-trivial cosets of K; 32.0s
+    d = 2: 128 covers, survivors []; obstructions at {13: 8, 17: 4, 2: 64, 3: 32, 37: 4, 5: 16}
+    d = 26515273: 512 covers, survivors []; obstructions at {11: 32, 13: 16, 17: 8, 2: 256, 3: 128, 37: 8, 5: 64}
+    d = 77885977: 512 covers, survivors []; obstructions at {11: 32, 13: 24, 17: 4, 2: 256, 3: 128, 37: 4, 5: 64}
+    d = 4130335886053442: 2048 covers, survivors []; obstructions at {11: 128, 13: 96, 17: 16, 2: 1024, 3: 512, 37: 16, 5: 256}
+    d = 8177: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 17: 12, 2: 512, 3: 256, 37: 4, 5: 128}
+    d = 316750018: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 17: 12, 2: 512, 3: 256, 5: 128, 716629: 4}
+    d = 7536966082: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 17: 24, 2: 512, 3: 256, 37: 4, 5: 128, 5991229: 4}
+    d = 72989303599697: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 17: 24, 2: 512, 3: 256, 5: 128, 5991229: 4, 716629: 4}
+    d = 16354: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 17: 12, 2: 512, 3: 256, 37: 4, 5: 128}
+    d = 158375009: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 17: 12, 2: 512, 3: 256, 37: 4, 5: 128}
+    d = 3768483041: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 17: 24, 2: 512, 3: 256, 37: 8, 5: 128}
+    d = 145978607199394: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 17: 24, 2: 512, 3: 256, 37: 8, 5: 128}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+E- (77,36): |Sel(E)| = 16, Sel(E') = [-1, 1, -9266, 9266], s = 4; 3 non-trivial cosets of K; 13.4s
+    d = 2: 128 covers, survivors []; obstructions at {13: 8, 17: 4, 2: 64, 3: 32, 37: 4, 5: 16}
+    d = 26515273: 512 covers, survivors []; obstructions at {11: 32, 13: 16, 17: 8, 2: 256, 3: 128, 37: 8, 5: 64}
+    d = 77885977: 512 covers, survivors []; obstructions at {11: 32, 13: 24, 17: 4, 2: 256, 3: 128, 37: 4, 5: 64}
+    d = 4130335886053442: 2048 covers, survivors []; obstructions at {11: 128, 13: 96, 17: 16, 2: 1024, 3: 512, 37: 16, 5: 256}
+    d = 8177: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 17: 12, 2: 512, 3: 256, 37: 4, 5: 128}
+    d = 316750018: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 17: 12, 2: 512, 3: 256, 5: 128, 716629: 4}
+    d = 7536966082: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 17: 24, 2: 512, 3: 256, 37: 4, 5: 128, 5991229: 4}
+    d = 72989303599697: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 17: 24, 2: 512, 3: 256, 5: 128, 5991229: 4, 716629: 4}
+    d = 16354: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 17: 12, 2: 512, 3: 256, 37: 4, 5: 128}
+    d = 158375009: 1024 covers, survivors []; obstructions at {11: 64, 13: 48, 17: 12, 2: 512, 3: 256, 37: 4, 5: 128}
+    d = 3768483041: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 17: 24, 2: 512, 3: 256, 37: 8, 5: 128}
+    d = 145978607199394: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 17: 24, 2: 512, 3: 256, 37: 8, 5: 128}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+E+ (91,60): |Sel(E)| = 16, Sel(E') = [-1, 1, -7, 7, -302, 302, -2114, 2114], s = 5; 3 non-trivial cosets of K; 19.1s
+    d = 2: 256 covers, survivors []; obstructions at {109: 8, 193: 8, 2: 128, 3: 64, 31: 16, 5: 32}
+    d = 140449: 512 covers, survivors []; obstructions at {109: 16, 193: 16, 2: 256, 3: 128, 31: 32, 5: 64}
+    d = 90041641: 1024 covers, survivors []; obstructions at {109: 32, 193: 32, 2: 512, 3: 256, 31: 64, 5: 128}
+    d = 25292516873618: 2048 covers, survivors []; obstructions at {109: 64, 193: 64, 2: 1024, 3: 512, 31: 128, 5: 256}
+    d = 193: 512 covers, survivors []; obstructions at {13: 64, 2: 256, 3: 128, 5: 64}
+    d = 933074: 512 covers, survivors []; obstructions at {13: 64, 2: 256, 3: 128, 5: 64}
+    d = 54213314: 1024 covers, survivors []; obstructions at {13: 128, 2: 512, 3: 256, 5: 128}
+    d = 65524655113: 1024 covers, survivors []; obstructions at {13: 128, 2: 512, 3: 256, 5: 128}
+    d = 386: 512 covers, survivors []; obstructions at {13: 64, 2: 256, 3: 128, 5: 64}
+    d = 466537: 512 covers, survivors []; obstructions at {13: 64, 2: 256, 3: 128, 5: 64}
+    d = 27106657: 1024 covers, survivors []; obstructions at {13: 128, 2: 512, 3: 256, 5: 128}
+    d = 131049310226: 1024 covers, survivors []; obstructions at {13: 128, 2: 512, 3: 256, 5: 128}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+E- (143,24): |Sel(E)| = 16, Sel(E') = [-1, 1, -34, 34], s = 4; 3 non-trivial cosets of K; 25.7s
+    d = 2: 256 covers, survivors []; obstructions at {11: 16, 167: 4, 2: 128, 29: 8, 3: 64, 5: 32, 7069: 4}
+    d = 305642353: 1024 covers, survivors []; obstructions at {11: 64, 13: 32, 167: 8, 2: 512, 29: 16, 3: 256, 5: 128, 7069: 8}
+    d = 578458897: 512 covers, survivors []; obstructions at {11: 32, 167: 8, 2: 256, 29: 16, 3: 128, 5: 64, 7069: 8}
+    d = 353603076785729282: 2048 covers, survivors []; obstructions at {11: 128, 13: 64, 167: 16, 2: 1024, 29: 32, 3: 512, 5: 256, 7069: 16}
+    d = 35345: 1024 covers, survivors []; obstructions at {11: 32, 13: 16, 167: 4, 2: 512, 29: 8, 3: 256, 5: 192, 7069: 4}
+    d = 432370: 1024 covers, survivors []; obstructions at {11: 32, 13: 16, 167: 4, 2: 512, 29: 8, 3: 256, 43237: 4, 5: 192}
+    d = 40891259428930: 2048 covers, survivors []; obstructions at {11: 64, 13: 32, 167: 8, 2: 1024, 29: 16, 3: 512, 5: 384, 7069: 8}
+    d = 125054136647945: 2048 covers, survivors []; obstructions at {11: 64, 13: 32, 167: 8, 2: 1024, 29: 16, 3: 512, 43237: 8, 5: 384}
+    d = 70690: 1024 covers, survivors []; obstructions at {11: 32, 13: 16, 167: 4, 2: 512, 29: 8, 3: 256, 5: 192, 7069: 4}
+    d = 216185: 1024 covers, survivors []; obstructions at {11: 32, 13: 16, 167: 4, 2: 512, 29: 8, 3: 256, 5: 192, 7069: 4}
+    d = 20445629714465: 2048 covers, survivors []; obstructions at {11: 64, 13: 32, 167: 8, 2: 1024, 29: 16, 3: 512, 5: 384, 7069: 8}
+    d = 250108273295890: 2048 covers, survivors []; obstructions at {11: 64, 13: 32, 167: 8, 2: 1024, 29: 16, 3: 512, 5: 384, 7069: 8}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+E+ (165,52): |Sel(E)| = 16, Sel(E') = [-1, 1, -49042, 49042], s = 4; 3 non-trivial cosets of K; 111.5s
+    d = 2: 512 covers, survivors []; obstructions at {11: 32, 173: 16, 181: 8, 2: 256, 241: 4, 3: 128, 3697: 4, 5: 64}
+    d = 474964681: 2048 covers, survivors []; obstructions at {11: 128, 173: 64, 181: 32, 2: 1024, 241: 16, 3: 512, 3697: 16, 5: 256}
+    d = 1316525401: 4096 covers, survivors []; obstructions at {11: 256, 13: 128, 173: 64, 181: 48, 2: 2048, 241: 12, 3: 1024, 3697: 4, 5: 512}
+    d = 1250606134228724162: 16384 covers, survivors []; obstructions at {11: 1024, 13: 512, 173: 256, 181: 192, 2: 8192, 241: 48, 3: 4096, 3697: 16, 5: 2048}
+    d = 3697: 1024 covers, survivors []; obstructions at {11: 64, 13: 64, 2: 512, 3: 256, 5: 128}
+    d = 256946: 1024 covers, survivors []; obstructions at {11: 64, 13: 64, 2: 512, 3: 256, 5: 128}
+    d = 9734388814994: 8192 covers, survivors []; obstructions at {11: 512, 13: 256, 173: 128, 181: 96, 2: 4096, 241: 24, 3: 2048, 3697: 8, 5: 1024}
+    d = 169137967842673: 8192 covers, survivors []; obstructions at {11: 512, 13: 256, 173: 128, 181: 96, 2: 4096, 241: 24, 3: 2048, 3697: 8, 5: 1024}
+    d = 7394: 1024 covers, survivors []; obstructions at {11: 64, 13: 64, 2: 512, 3: 256, 5: 128}
+    d = 128473: 1024 covers, survivors []; obstructions at {11: 64, 13: 64, 2: 512, 3: 256, 5: 128}
+    d = 4867194407497: 8192 covers, survivors []; obstructions at {11: 512, 13: 256, 173: 128, 181: 96, 2: 4096, 241: 24, 3: 2048, 30181: 4, 3697: 4, 5: 1024}
+    d = 338275935685346: 8192 covers, survivors []; obstructions at {11: 512, 13: 256, 173: 128, 181: 96, 2: 4096, 241: 24, 3: 2048, 30181: 8, 5: 1024}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+E- (180,19): |Sel(E)| = 16, Sel(E') = [-1, 1, -14, 14], s = 4; 3 non-trivial cosets of K; 21.3s
+    d = 2: 256 covers, survivors []; obstructions at {13: 16, 181: 8, 193: 8, 2: 128, 3: 64, 5: 32}
+    d = 854136361: 2048 covers, survivors []; obstructions at {13: 192, 181: 16, 19: 32, 193: 16, 2: 1024, 3: 512, 5: 256}
+    d = 1292429881: 512 covers, survivors []; obstructions at {13: 32, 181: 16, 193: 16, 2: 256, 3: 128, 5: 64}
+    d = 2207822710810006082: 4096 covers, survivors []; obstructions at {13: 384, 181: 32, 19: 64, 193: 32, 2: 2048, 3: 1024, 5: 512}
+    d = 193: 512 covers, survivors []; obstructions at {13: 32, 19: 32, 2: 256, 3: 128, 5: 64}
+    d = 8851154: 1024 covers, survivors []; obstructions at {13: 96, 181: 8, 19: 16, 199: 4, 2: 512, 3: 256, 340429: 4, 5: 128}
+    d = 498877934066: 1024 covers, survivors []; obstructions at {13: 64, 19: 64, 2: 512, 3: 256, 5: 128}
+    d = 5719747955466337: 2048 covers, survivors []; obstructions at {13: 192, 181: 16, 19: 32, 199: 8, 2: 1024, 3: 512, 340429: 8, 5: 256}
+    d = 386: 512 covers, survivors []; obstructions at {13: 32, 19: 32, 2: 256, 3: 128, 5: 64}
+    d = 4425577: 1024 covers, survivors []; obstructions at {13: 96, 181: 8, 19: 16, 193: 8, 2: 512, 3: 256, 5: 128}
+    d = 249438967033: 1024 covers, survivors []; obstructions at {13: 64, 19: 64, 2: 512, 3: 256, 5: 128}
+    d = 11439495910932674: 2048 covers, survivors []; obstructions at {13: 192, 181: 16, 19: 32, 193: 16, 2: 1024, 3: 512, 5: 256}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+E- (195,28): |Sel(E)| = 16, Sel(E') = [-1, 1, -2338, 2338], s = 4; 3 non-trivial cosets of K; 36.6s
+    d = 2: 256 covers, survivors []; obstructions at {157: 8, 197: 8, 2: 128, 3: 64, 37: 16, 5: 32}
+    d = 1099466761: 1024 covers, survivors []; obstructions at {13: 64, 157: 24, 197: 8, 2: 512, 3: 256, 37: 32, 5: 128}
+    d = 1912810201: 1024 covers, survivors []; obstructions at {13: 64, 157: 8, 197: 8, 2: 512, 3: 256, 37: 48, 5: 128}
+    d = 4206142472202457922: 4096 covers, survivors []; obstructions at {13: 256, 157: 48, 197: 8, 2: 2048, 223: 4, 3: 1024, 37: 192, 5: 512, 7002973: 4}
+    d = 7289: 1024 covers, survivors []; obstructions at {13: 64, 157: 8, 197: 8, 2: 512, 3: 256, 37: 48, 5: 128}
+    d = 20368843762: 1024 covers, survivors []; obstructions at {13: 64, 157: 16, 197: 16, 2: 512, 3: 256, 37: 32, 5: 128}
+    d = 16028026441858: 4096 covers, survivors []; obstructions at {13: 256, 157: 48, 197: 8, 2: 2048, 223: 4, 3: 1024, 37: 192, 5: 512, 7002973: 4}
+    d = 11197433338160597441: 4096 covers, survivors []; obstructions at {13: 256, 157: 96, 197: 24, 2: 2048, 223: 4, 3: 1024, 37: 128, 5: 512, 7002973: 4}
+    d = 14578: 1024 covers, survivors []; obstructions at {13: 64, 157: 8, 197: 8, 2: 512, 3: 256, 37: 48, 5: 128}
+    d = 10184421881: 1024 covers, survivors []; obstructions at {13: 64, 157: 16, 197: 8, 2: 512, 223: 4, 3: 256, 37: 32, 5: 128, 51697573: 4}
+    d = 8014013220929: 4096 covers, survivors []; obstructions at {13: 256, 157: 48, 197: 16, 2: 2048, 3: 1024, 37: 192, 5: 512}
+    d = 22394866676321194882: 4096 covers, survivors []; obstructions at {13: 256, 157: 96, 197: 24, 2: 2048, 223: 4, 3: 1024, 37: 128, 5: 512, 51697573: 4}
+    every coset excluded: True; cosets internally consistent: True; RANK EXACTLY 1: False
+ALL SIX RANK-1 CLAIMS CONFIRMED: False
