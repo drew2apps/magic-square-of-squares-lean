@@ -323,6 +323,7 @@ def saturation(Em, G, T, lmax, qmax=60000):
             if l in done or N % l: continue
             if l > 2:
                 if (N // l) % l == 0: continue
+                assert (N // l) % 2 == 0, ('N/l odd', q, l)   # T mod q has order 2, so N is even: (N/l) T = O
                 v = mulmod(Em, N // l, red(G, q), q)
                 if v is not None: need[l].append(q); done.add(l)
             else:
@@ -578,6 +579,7 @@ def sieve_local(St, p, Gw, Tw):
         X = (R[0] - rr2) * iu2 * iu2 % p; Y = R[1] * iu2 * iu2 * iu2 % p
         return ((-X) % p, iota * Y % p)
     Gp, Tp = redP(Gw, p), redP(Tw, p)
+    assert Gp is not None and Tp is not None, ('point reduces to O', p)
     assert e1.on(Gp) and e1.on(Tp)
     dlog = {}; X = None; a = 0
     while True:

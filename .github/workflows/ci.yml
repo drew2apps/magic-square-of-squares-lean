@@ -2,7 +2,7 @@ name: CI
 
 # Two levels.  Every push to main runs `build` (Lean, the axiom audit, the generated files, the C searches) and `quick`
 # (the checkers that read committed transcripts and a few small reruns): about 20 minutes, most of it Lean.
-# The long jobs (`four-points`, `descents`, `last-pair`, `twist-search`, `scan-5000`, about 65 minutes) regenerate the main computed records
+# The long jobs (`four-points`, `descents`, `last-pair`, `twist-search`, `scan-5000`, `scan-15000`; they run in parallel, the longest about 95 minutes) regenerate the main computed records
 # and stated samples of the others.  They do not regenerate everything: SECOND_DESCENT.md, section 8, lists the committed
 # outputs that no job reruns (the wide runs, the scan beyond 1100, the 681-ratio real-point run and others).
 # They run on a pull request, on a tag, when the workflow is started by hand (Actions, CI, "Run workflow"), and on a push

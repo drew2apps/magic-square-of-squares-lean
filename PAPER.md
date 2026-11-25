@@ -2,7 +2,7 @@
 
 Drew Carlson. 23 November 2026, release 0.5.0.
 
-**This note describes release 0.5.0 and is not updated** (it gives 24 open ratios and 313 declared theorems). For the current census (9 open since 24 November 2026), the current counts and the prior art found since (Morgenstern 2010, Bremner 1999, the Kepler71 notes), see `README.md`, `LEDGER.md` and `CHANGES.md`.
+**This note describes release 0.5.0 and is not updated** (it gives 24 open ratios and 313 declared theorems). For the current census (9 open since 25 November 2026), the current counts and the prior art found since (Morgenstern 2010, Bremner 1999, the Kepler71 notes), see `README.md`, `LEDGER.md` and `CHANGES.md`.
 Repository: https://github.com/drew2apps/magic-square-of-squares-lean. Archive: https://doi.org/10.5281/zenodo.24435351.
 
 The Lean code and this text were written with Claude, an AI model made by Anthropic. I am not a number theorist. Nobody else has checked the mathematics outside Lean. This note says what is proved, what is only computed, and what is unchecked, so that someone who knows the subject can check it.

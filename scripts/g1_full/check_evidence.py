@@ -4,7 +4,7 @@
 1. Unit tests of classify_t, the exact test applied to every candidate t in dm.py, dm2.py, dm3.py.
    The function is taken from the source of dm.py without importing Sage.
 2. Consistency of dm_evidence.txt, dm_closures.txt and open_pairs_1000.txt: 157 pairs, 131 closed
-   (91 E04, 25 D1, 6 E0L, and 9 with four points on E0L, section 6), 26 open, no overlap; every recorded t is re-tested and is degenerate; the listed bound
+   (91 E04, 25 D1, 6 E0L, and 9 with four points on E0L, section 6), 26 left by this method, no overlap; every recorded t is re-tested and is degenerate; the listed bound
    amax is at least the bound that follows from the recorded heights.
 3. Every recorded E04 and D1 generator is a rational point of its curve with y != 0.
    Every recorded E0L model is isomorphic over Q to the Weierstrass curve of G1.e0l_weierstrass for the
@@ -285,4 +285,4 @@ if '--dm4' in sys.argv:
             assert abs(j[name] - k[name]) < 1e-9 * abs(k[name]), (of, name)
         assert abs(j['reg'] - k['reg']) < 1e-6 * k['reg'], of
     print('fresh dm4 records agree with the stored ones:', ' '.join('(%d,%d)' % tuple(j['pair']) for j in fresh))
-print('check_evidence OK: classify_t tests pass; 157 = 122 closed on curves of rank 1 (91 E04, 25 D1, 6 E0L) + 9 closed with four points on E0L (a separate, unreviewed tier) + 26 open')
+print('check_evidence OK: classify_t tests pass; 157 = 122 closed on curves of rank 1 (91 E04, 25 D1, 6 E0L) + 9 closed with four points on E0L (a separate, unreviewed tier) + 26 left by this method')

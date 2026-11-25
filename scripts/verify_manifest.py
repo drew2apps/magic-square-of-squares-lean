@@ -20,7 +20,7 @@ def files():
         sub[:] = sorted(x for x in sub if x not in SKIP_DIRS)
         for f in sorted(fs):
             rel = os.path.relpath(os.path.join(d, f), ROOT).replace(os.sep, '/')
-            if rel != NAME and not rel.endswith('.pyc'): out.append(rel)
+            if rel != NAME and rel != '.git' and not rel.endswith('.pyc'): out.append(rel)   # .git is a file in a worktree
     return sorted(out)
 
 def sha(rel):

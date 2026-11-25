@@ -27,7 +27,8 @@ a d is a certificate (d, p) that the program re-verifies; the search depth is
 capped and an undecided class counts as "has a point" (the safe side).
 
 Torsion: #E(Q)_tors divides #E(F_p) for every odd prime of good reduction
-(reduction is injective on torsion there), and #E(K)_tors divides #E(F_p) for
+(reduction is injective on torsion there: Silverman, AEC VII.3.1 for the part prime to p; for the p-part, E_1 = formal group
+(VII.2.2) has no torsion since v(p) = 1 < p - 1 (IV.6.4(b))), and #E(K)_tors divides #E(F_p) for
 split p = 1 mod 4 and #E(F_{q^2}) for inert q, q odd of good reduction.  The
 point counts are computed here by Legendre sums (no PARI).  Lower bounds come from
 explicit points (2-torsion from the roots, 4-torsion by halving).
