@@ -17,7 +17,7 @@ python3 scripts/verify_manifest.py
 | Lean | `leanprover/lean4:v4.33.1` | `lean-toolchain` |
 | Mathlib and its dependencies | commit `0df444a360eaa60ab8c11dca51a86af692955474` and the revisions of `lake-manifest.json` | `lake-manifest.json` |
 | Python | 3.13 | `.github/workflows/ci.yml` |
-| PARI (through `cypari2`), passagemath (Sage libraries, eclib) | `cypari2==2.2.9` (PARI 2.17.4), `passagemath-*==10.8.14` | `scripts/g1_full/requirements.txt` |
+| PARI (through `cypari2`), passagemath (Sage libraries, eclib) | `cypari2==2.2.9` (PARI 2.17.4), `passagemath-*==10.8.14` | `scripts/g1_full/requirements.txt`; `passagemath-eclib==10.8.14` is installed in the job `four-points` for `eclib_check.py` |
 | sympy, python-flint, numpy | `sympy==1.14.0`, `python-flint==0.9.0`, `numpy==2.5.5` | `.github/workflows/ci.yml` |
 | GitHub Actions | `actions/checkout`, `actions/setup-python`, `leanprover/lean-action`, each by commit hash | `.github/workflows/ci.yml` |
 | C compiler | `gcc` of the runner image `ubuntu-latest`, not pinned | — |
@@ -51,12 +51,13 @@ The executable specification is `.github/workflows/ci.yml`: every job is plain s
 | Job | What it reruns | Time on GitHub's runner |
 |---|---|---|
 | `build` | Lean; the axiom audit; generated Lean files; the C searches on small ranges | about 20 minutes |
+| `rank` (every push) | The sub-project `lean_rank/`: Lean v4.36.0, Mathlib v4.36.0 and M. Stoll's `EllipticCurves` 2164fb5 built from source; the axioms of its 9 headline theorems; its negative controls and four forged claims refused | about 15 minutes |
 | `quick` | The manifest; the transcript checkers; counts; a small rerun of every descent program; Proposition 1 of the rational distance note | a few minutes |
 | `four-points`, `descents`, `last-pair` | The four-point tier and the two descent experiments in full, stated samples of the rest | up to about an hour each |
 | `scan-5000` | The four-class descent on all 20,423 ratios to 5000; both rational-distance scans and the exhaustion on six lines; the third implementation on the 157 ratios that ranks leave | about an hour |
 | `twist-search` | The C search of twists | minutes |
 
-The long jobs run on a pull request, on a tag, by hand, and on a push whose commit message contains `[full ci]`; on other pushes they are skipped, and a green mark then says less. `SECOND_DESCENT.md`, section 8, lists the committed outputs that no job reruns (the wide runs and a few others, each several hours).
+The long jobs run on a pull request, on a tag, by hand, and on a push whose commit message contains `[full ci]`; on other pushes they are skipped, and a green mark then says less. `OUTPUTS.md` lists the committed outputs that no job reruns, with the command and time of each (the wide runs, the scan beyond 1100, the Magma transcripts and others); the jobs `four-points`, `descents`, `last-pair` and `scan-15000` (and `quick`) end with `git diff --exit-code`.
 
 ## 5. What a rerun does not show
 

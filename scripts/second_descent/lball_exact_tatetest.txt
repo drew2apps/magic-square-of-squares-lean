@@ -1,0 +1,16 @@
+tatetest: 4000 random models, every prime of Delta: f_p, c_p, Kodaira, a_p and w_p compared with PARI: 0 disagreements
+      50  p = 2, Rizzo 2003, Table III, row
+     187  p = 2, additive, potentially multiplicative
+     877  p = 2, good
+     378  p = 2, non-split multiplicative
+     382  p = 2, split multiplicative
+    1349  p = 2, w_p not implemented
+     102  p = 3, additive, potentially multiplicative
+    1135  p = 3, good
+     372  p = 3, non-split multiplicative
+     415  p = 3, split multiplicative
+     716  p = 3, w_p not implemented
+     823  p >= 5, additive, potentially good
+      75  p >= 5, additive, potentially multiplicative
+    4421  p >= 5, non-split multiplicative
+    4482  p >= 5, split multiplicative

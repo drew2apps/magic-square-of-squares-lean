@@ -1,0 +1,20 @@
+selmer_square_rule.py: the lemmas of SELMER_SQUARE.md, checked; then the rule against selmer_square_5000.json
+I1  a = 32 m^3 n^3 - 4 (m^2 - n^2)^2 S: identity (sympy expand)
+I2  b' = a^2 - 4b = -64 m^2 n^2 (m - n)^2 (m + n)^6 = -(2 kappa)^2, kappa = 4mn(m - n)(m + n)^3: identity (sympy expand)
+I3  x^2 + a x + b = (x + a/2)^2 + kappa^2: identity (sympy expand)
+I4  a - 32 m^3 n^3 = -4 (m^2 - n^2)^2 S  (so a = 32 m^3 n^3 mod S): identity (sympy expand)
+I5  (m + n)^2 - 2mn = S  (so 2mn is a square mod p | S): identity (sympy expand)
+I6  a at m = 0: -4 n^6;  at n = 0: -4 m^6;  at m = n: 32 n^6;  at m = -n: -32 n^6: identity (sympy expand)
+I7  H(m, n) - H(m, -n) = -4mn(m^2 - n^2);  H(n, n) = H(-n, n) = 4 n^4;  H(m, n) = n^4 at m = 0, m^4 at n = 0: identity (sympy expand)
+I8  H(m, n) = S^2 - 2mn(m^2 - n^2)  (so H = -2mn(m^2 - n^2) mod S): identity (sympy expand)
+I9  f((x + 1)/(x - 1)) (x - 1)^6 = 8 f(x), f = (x^2 + 1) H(x, 1)  (UNIFORM_RANK.md, remark after Lemma D): identity (sympy expand)
+I10 a^2 - b' = 4b  (so p | b gives a^2 = b' mod p, and p | b' gives a^2 = 4b mod p): identity (sympy expand)
+C1  m, n of opposite parity with 4 | mn (all residues mod 16): a = -4 a0 with a0 = 1 mod 8, H(m, +-n) = 1 mod 8
+C2  m = r^2 - s^2, n = 2rs (r > s coprime, opposite parity; r < 60): 4 | n, m + n = (r + s)^2 - 2s^2, m - n = (r - s)^2 - 2s^2 (identities, also for (m, n) swapped up to sign; so every odd prime of m +- n has (2/p) = 1)
+C3  lemmas L1 (104 curves), L2 (94), L3 (50 pairs) agree with the exhaustive local solver on random curves outside the family (control of the hand proofs)
+rule against the exact descent: selmer_square_5000.json, 1780 curves
+C4  the local images of 200 random curves at every bad prime p < 3000 (4644 local images) recomputed by the separate exhaustive search of sigma_generic.py: all agree
+  fit half (m <= 2500): 894 curves, 0 exceptions (local images at every bad prime, Sel(E), Sel(E'), bound)
+  test half (m > 2500): 886 curves, 0 exceptions (local images at every bad prime, Sel(E), Sel(E'), bound)
+  Selmer bound from the rule: 2: 110, 3: 326, 4: 510, 5: 484, 6: 250, 7: 76, 8: 19, 9: 5  (never 1)
+  bound 2 (the least possible): 110 curves: (40,9) (55,48) (55,-48) (80,-39) (84,13) (117,-44) (144,17) (208,105) (360,-319) (408,145) (435,308) (435,-308) (440,-279) (460,-429) (480,-31) (493,276) (528,-455) (600,-481) (700,429) (780,-451) (840,41) (840,-559) (884,-387) (952,-495) (989,660) (1075,612) (1075,-612) (1100,141) (1116,637) (1155,68) (1155,-68) (1188,245) (1271,360) (1271,-360) (1292,-1155) (1443,-76) (1480,-969) (1537,984) (1596,-1003) (1643,924) (1643,-924) (1711,1320) (1711,-1320) (1748,-915) (1848,305) (1927,264) (1927,-264) (1984,-63) (2024,-1407) (2091,460) (2091,-460) (2100,-2059) (2200,-1311) (2244,-67) (2356,-483) (2419,-900) (2491,300) (2491,-300) (2548,1725) (2555,2052) (2555,-2052) (2640,2449) (2664,73) (2756,2133) (2812,75) (2924,693) (3036,-1027) (3068,2805) (3075,-1972) (3080,2241) (3220,-891) (3264,1577) (3348,-3115) (3360,-1079) (3440,249) (3480,-2759) (3485,2772) (3525,1708) (3608,-255) (3660,2821) (3741,-2860) (3807,2176) (3807,-2176) (3876,2093) (3904,2697) (3999,-3400) (4060,-2139) (4136,273) (4216,3663) (4240,1209) (4260,4141) (4264,1023) (4293,-1876) (4416,-3737) (4420,3069) (4588,-2475) (4620,-3131) (4623,136) (4623,-136) (4661,-1380) (4664,873) (4680,-2929) (4692,3605) (4731,1820) (4731,-1820) (4756,-1683) (4824,3193) (4876,693) (4899,140) (4899,-140)

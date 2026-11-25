@@ -1,0 +1,5 @@
+selmer_square.py: exact 2-isogeny Selmer bounds, square-type coprime ratios m <= 5000 (890 ratios, 1780 curves)
+every local test certified; product formula |im_p(E)||im_p(E')| = 4 (odd p), 8 (p = 2) holds at every bad prime
+Selmer bound distribution: 2: 110, 3: 326, 4: 510, 5: 484, 6: 250, 7: 76, 8: 19, 9: 5
+by curve: E+ 2: 54, E+ 3: 165, E+ 4: 256, E+ 5: 229, E+ 6: 137, E+ 7: 33, E+ 8: 13, E+ 9: 3, E- 2: 56, E- 3: 161, E- 4: 254, E- 5: 255, E- 6: 113, E- 7: 43, E- 8: 6, E- 9: 2
+both curves of a ratio with bound 1: 0 of 890 ratios

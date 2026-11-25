@@ -1,10 +1,11 @@
 name: CI
 
 # Two levels.  Every push to main runs `build` (Lean, the axiom audit, the generated files, the C searches) and `quick`
-# (the checkers that read committed transcripts and a few small reruns): about 20 minutes, most of it Lean.
+# (the checkers that read committed transcripts and a few small reruns): about 20 minutes, most of it Lean. `rank` (the sub-project
+# lean_rank/ on Lean v4.36.0 with Stoll's EllipticCurves) also runs on every push, about 15 minutes.
 # The long jobs (`four-points`, `descents`, `last-pair`, `twist-search`, `scan-5000`, `scan-15000`; they run in parallel, the longest about 95 minutes) regenerate the main computed records
-# and stated samples of the others.  They do not regenerate everything: SECOND_DESCENT.md, section 8, lists the committed
-# outputs that no job reruns (the wide runs, the scan beyond 1100, the 681-ratio real-point run and others).
+# and stated samples of the others.  They do not regenerate everything: OUTPUTS.md lists the committed
+# outputs that no job reruns (the wide runs, the scan beyond 1100, the Magma transcripts and others).
 # They run on a pull request, on a tag, when the workflow is started by hand (Actions, CI, "Run workflow"), and on a push
 # whose commit message contains [full ci].  A green mark on a push without [full ci] therefore says less than a green
 # mark on a full run: the long jobs show as skipped.  A release is made only from a commit with a full green run.
@@ -68,6 +69,35 @@ jobs:
         run: |
           set -e -o pipefail
           lake env lean scripts/CoverDescentChecks.lean
+          lake env lean scripts/TwoDescentChecks.lean
+
+  rank:
+    # lean_rank/: rank E(Q) >= 2 on the 254 twice-square curves m <= 1000 (UNIFORM_RANK.md, section 7), a sub-project on
+    # Lean v4.36.0 and Mathlib v4.36.0 with Michael Stoll's EllipticCurves 2164fb5 (Mordell-Weil), built from source; it
+    # compiles four modules of the main tree unchanged (srcDir = ".."). The main library stays on v4.33.1.
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: leanprover/lean-action@ba3fdfe5c4476c925da13bf11a005ddb47e47aee # v1
+        with:
+          lake-package-directory: lean_rank
+      - name: Axioms of the 9 headline theorems; the checks; forged claims refused
+        shell: bash
+        working-directory: lean_rank
+        run: |
+          set -e -o pipefail
+          lake --version > lakever.txt
+          grep -q 'Lean version 4.36.0' lakever.txt
+          lake env lean LeanRank/Rank.lean | tee axioms.txt
+          lake env lean LeanRank/Index.lean | tee -a axioms.txt
+          test "$(grep -c 'depends on axioms' axioms.txt)" = 9
+          test "$(grep -c 'depends on axioms: \[propext, Classical.choice, Quot.sound\]$' axioms.txt)" = 9
+          if grep -q sorryAx axioms.txt; then echo 'sorryAx'; exit 1; fi
+          lake env lean scripts/RankChecks.lean
+          if lake env lean scripts/RankForge.lean > forge.txt 2>&1; then echo 'forged claims accepted'; exit 1; fi
+          test "$(grep -c '^scripts/RankForge.lean:[0-9]*:[0-9]*: error' forge.txt)" = 4
+          for L in 19 23 27 33; do grep -q "^scripts/RankForge.lean:$L:" forge.txt; done
 
   quick:
     # On every push: what can be checked in a few minutes.  The transcripts of Magma against the committed outputs, the
@@ -93,10 +123,18 @@ jobs:
           (cd scripts/second_descent && python3 second_exact.py | diff - second_exact.txt)
           python3 scripts/degenerate_squares.py 1000 | diff - scripts/degenerate_squares.txt
           python3 scripts/g1_full/sigma_generic.py | diff - scripts/g1_full/sigma_generic.txt
+          python3 scripts/g1_full/two_descent_certs.py | diff - scripts/g1_full/two_descent_certs.txt
+          # SELMER_SQUARE.md: the forged inputs, and the rule of Proposition S2 against the committed exact descent (about a minute)
+          python3 scripts/g1_full/selmer_square.py --negative | diff - scripts/g1_full/selmer_square_negative.txt
+          python3 scripts/g1_full/selmer_square_rule.py --max 5000 | diff - scripts/g1_full/selmer_square_rule_5000.txt
           (cd scripts/second_descent && python3 exact_last_pair.py | diff - exact_last_pair.txt && python3 exact_last_pair.py --negative | diff - exact_last_pair_negative.txt)
-          (cd scripts/g1_full && python3 rank_indep.py | diff - rank_indep.txt && python3 rank_indep.py --negative | diff - rank_indep_negative.txt)
+          (cd scripts/g1_full && python3 rank_indep.py | diff - rank_indep.txt && python3 rank_indep.py --negative | diff - rank_indep_negative.txt && python3 rank_indep.py --all | diff - rank_indep_all.txt)
           (cd scripts/g1_full && python3 rank_indep_heights.py | diff - rank_indep_heights.txt && python3 rank_indep_heights.py --negative | diff - rank_indep_heights_negative.txt)
-          python3 scripts/g1_full/sigma_exact.py --negative | grep -q 'negative tests: 96 altered records, 96 refused'
+          # OUTPUTS.md: committed outputs that were not regenerated anywhere, the fast ones (Sage from requirements.txt, no eclib)
+          (cd scripts/g1_full && python3 height_precision.py | diff - height_precision.txt)
+          (cd scripts/g1_full/genus2 && python3 frobenius.py | diff - <(tail -n +2 frobenius.txt))
+          python3 scripts/g1_full/sigma_exact.py --negative > /tmp/sigma_exact_neg.txt
+          grep -q 'negative tests: 96 altered records, 96 refused' /tmp/sigma_exact_neg.txt
           cd scripts/gauss_descent
           python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt
           python3 twocover_check.py | diff - twocover_check.txt
@@ -107,6 +145,10 @@ jobs:
           python3 tally.py second_123.jsonl lvalue_open.jsonl | diff - tally.txt
           python3 second_descent.py --summary second_123.jsonl | diff - second_summary.txt
           python3 wide.py --summary wide_1000_2000.jsonl | diff - wide_summary.txt
+          python3 wide.py --summary wide_2000_2500.jsonl | diff - wide_2000_2500_summary.txt
+          python3 wide.py --summary wide_2500_3000.jsonl | diff - wide_2500_3000_summary.txt
+          python3 indep_rank.py --ainvs 0,-491040,0,-13400146081,0 440,279 | grep -v "PARI stack" | diff - indep_rank_440_279.txt
+          python3 lproof.py curve 0,-491040,0,-13400146081,0 '(440,279), curve y^2 = x(x - 719^2)(x + 161^2), the twist by -1 of the Frey curve:' | grep -v "PARI stack" | diff - lproof_440_279.txt
           python3 second_descent.py --all 15,8 21,20 23,7 | diff - <(head -n 3 second_123.jsonl)
           # whole output to a file first: head on a live pipe can end it early (SIGPIPE under pipefail)
           lp=$(mktemp); python3 lproof.py 1e7 second_123.jsonl > "$lp"; grep -v "PARI stack" "$lp" | head -n 5 | diff - <(head -n 5 lproof.txt)
@@ -119,6 +161,8 @@ jobs:
           # LAST_PAIR.md, section 11: the class d from a short descent on the double cover (Python and sympy only)
           cd ../cover_descent
           python3 cover_descent.py 627,364 | diff - cover_627_364.txt
+          # the input of the exhaustion sample of COMPLETE.md, section 7, test 7 (b) is every 40th line of the list (OUTPUTS.md)
+          diff <(awk 'NR % 40 == 1' structure/class_selmer_15000_list.txt | cut -d' ' -f1) <(tail -n +2 tuple_bruteforce_15000_sample_in.txt)
           grep -q "^left: \[521266\] (exactly the classes of the known points)$" cover_627_364.txt
           python3 cover_descent.py 820,799 | diff - cover_820_799.txt
           python3 cover_descent.py 889,320 | diff - cover_889_320.txt
@@ -181,6 +225,11 @@ jobs:
           grep -q 'lower bound 1 and upper bound 1 for the rank$' si_criterion_test.txt
           test "$(grep -c 'the descent set is inside the exhaustion set: True' rd_exhaust.txt)" = 6
           pip install -q numpy==2.5.5
+          # SECOND_DESCENT.md, section 6: the L-value of the curve of (440,279), (719,161) with conductor, root number and a_n computed exactly
+          (cd "$GITHUB_WORKSPACE/scripts/second_descent" && python3 lball_exact.py --all | diff - <(cat lball_exact.txt lball_exact_negative.txt))
+          (cd "$GITHUB_WORKSPACE/scripts/second_descent" && python3 lball_exact.py --census second_123.jsonl | diff - lball_exact_census.txt)
+          (cd "$GITHUB_WORKSPACE/scripts/second_descent" && python3 lball_exact.py --tatetest 4000 | diff - lball_exact_tatetest.txt)
+          (cd "$GITHUB_WORKSPACE/scripts/second_descent" && python3 lball_exact.py --rowtest 3000 | diff - lball_exact_rowtest.txt)
           cd ../cover_descent/third
           python3 third_run.py @pairs_other.txt 150 | diff - third_other.txt
           python3 third_run.py "627,364 991,263 820,799 889,320" 150 | diff - <(grep -E '^\((627,364|991,263)\)' third_123.txt; grep -E '^\((820,799|889,320)\)' third_34.txt)
@@ -244,6 +293,7 @@ jobs:
           grep -q '^{z, z-1, z+1, z-2}: D=+1: cond 24, rank bounds \[0, 0\], torsion \[4, 2\] | D=-1: cond 48, rank bounds \[0, 0\]' pt_second.txt
           python3 pt_control.py | diff - pt_control.txt
           python3 pt_count.py | diff - pt_count.txt
+          python3 pt_tors.py 2>/dev/null | grep -v "PARI stack" | diff - pt_tors.txt
           grep -qx '#E(F_5) = 8' pt_count.txt
           grep -qx '#E(F_13) = 16' pt_count.txt
           test "$(grep -c 'kept by the 4-form first step: True' pt_control.txt)" = 5
@@ -265,6 +315,8 @@ jobs:
           python3 ap_relaxed.py 250 | diff - ap_relaxed_250.txt
           gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c
           /tmp/ap_exact 250 | diff - ap_exact_250.txt
+          # no program above may rewrite a committed file (OUTPUTS.md)
+          git diff --exit-code
 
   four-points:
     # The four-point argument (FOUR_POINTS.md) run as a program, not only checked through its records:
@@ -307,13 +359,29 @@ jobs:
           cd scripts/g1_full
           python3 dm_sigma.py --effort=4 --magma=magma_sigma2_raw.txt,magma_sigma3_raw.txt 91,60 209,120 420,341 572,555 608,105 680,111 741,580 760,39 945,248 > /tmp/sigma_fresh.jsonl
           python3 dm_sigma.py --magma=magma_sigma2_raw.txt,magma_sigma3_raw.txt 72,65 920,129 > /tmp/sigma_fresh2.jsonl
-          python3 check_sigma.py /tmp/sigma_fresh2.jsonl | grep -q '^OK$'
+          python3 check_sigma.py /tmp/sigma_fresh2.jsonl > /tmp/check_sigma2.txt
+          grep -q '^OK$' /tmp/check_sigma2.txt
           python3 check_sigma.py /tmp/sigma_fresh.jsonl | tee /tmp/sigma_check.txt
           grep -q "^of the 24 ratios open in the census before 24 November 2026: 15 closed" /tmp/sigma_check.txt
           grep -q "^OK$" /tmp/sigma_check.txt
           python3 sigma_certify.py 91,60:E+ 91,60:E- 209,120:E- 420,341:E- 572,555:E- 608,105:E+ 680,111:E- 741,580:E+ 760,39:E+ 945,248:E+ 72,65:E+ 920,129:E+ | grep -v 'PARI stack' > /tmp/sigma_evidence.txt
           python3 sigma_exact.py --same-group /tmp/sigma_evidence.txt   # PARI may return -G or G + T: compared exactly up to those
           python3 sigma_twice.py | diff - sigma_twice.txt
+      - name: committed outputs of G1_FULL_SYSTEM.md and UNIFORM_RANK.md that no step above regenerates (OUTPUTS.md)
+        shell: bash
+        run: |
+          set -e -o pipefail
+          cd scripts/g1_full
+          python3 dm4_degenerate.py 4,3 15,8 21,20 72,65 425,168 920,129 | diff - <(tail -n +2 dm4_degenerate.txt)
+          (python3 dm4_validate.py 3,2 2 7/3 11/5 101/17 1009/331 20011/7919; python3 dm4_validate.py 72,65 2 7/3 101/17 1009/331) | diff - dm4_validate.txt
+          python3 height_certify.py | diff - height_certify.txt
+          python3 sigma_generic.py --pari | grep -v "PARI stack" | diff - sigma_generic_pari.txt
+          python3 rank_indep_control.py 30 | diff - rank_indep_control.txt
+          python3 rank_indep_control.py --census | diff - rank_indep_control_census.txt
+          pip install -q passagemath-eclib==10.8.14      # eclib is not in requirements.txt
+          python3 eclib_check.py | diff - <(tail -n +3 eclib_check.txt)
+          # no program of this job may rewrite a committed file
+          git diff --exit-code
 
   descents:
     # GAUSS_DESCENT.md and SECOND_DESCENT.md are experiments, not counted in the census. This job reruns the second descent
@@ -331,6 +399,12 @@ jobs:
         run: |
           set -e -o pipefail
           pip install -q -r scripts/g1_full/requirements.txt
+          # OUTPUTS.md: the first descent restricted to subsets of the forms on the 34 ratios (about 10 minutes), in the background
+          (cd scripts/gauss_descent && python3 subsets.py $(cat pairs34.txt) > /tmp/subsets_34.out) &
+          SUB34=$!
+          # and the Lemma on real points of the 681 ratios without a trivial point (about 5 minutes)
+          (cd scripts/gauss_descent && python3 real_points.py 200 $(cat pairs_notrivial_1000.txt) > /tmp/real_points_681.out) &
+          RP681=$!
           cd scripts/second_descent
           python3 second_descent.py --all $(cat pairs123.txt) | diff - second_123.jsonl
           python3 second_descent.py --summary second_123.jsonl | diff - second_summary.txt
@@ -354,6 +428,11 @@ jobs:
           python3 indep_rank.py --selftest | grep -v "PARI stack" | diff - indep_rank_selftest.txt
           python3 indep_second.py | grep -v "PARI stack" | diff - indep_second.txt
           python3 indep_second.py --selftest | grep -v "PARI stack" | diff - indep_second_selftest.txt
+          # OUTPUTS.md: the 2-Selmer bounds over Q(i) of the 210 quartics for (627,364); the two maps modulo two primes, compared
+          # after sorting each dictionary (the program iterates over a set of strings, so the order follows the hash seed)
+          python3 kdist.py 627,364 | diff - kdist_627_364.txt
+          norm() { python3 -c "import sys, ast; [print(p, (lambda t: (t[0], t[1], sorted(t[2].items())))(ast.literal_eval(q))) for p, q in (l.split(' ', 1) for l in sys.stdin)]"; }
+          python3 two_maps_independent.py | norm | diff - <(norm < two_maps_independent.txt)
           cd ../gauss_descent
           python3 real_points.py 300 $(cat pairs157.txt) | diff - real_points_157.txt
           python3 local_points.py $(cat pairs157.txt) | diff - local_points_157.txt
@@ -365,9 +444,19 @@ jobs:
           python3 scan.py 1000 1100 ../g1_full/modp_classes.txt /tmp/scan_list.txt | sed 's/  \[[0-9]* s\]$//' | diff - scan_1000_1100.txt
           diff /tmp/scan_list.txt <(awk -F'[, ]' '$1 <= 1100' scan_certificates.txt)
           python3 gd_check.py --pmax=100 $(cat pairs_scan_high.txt) | diff - gd_check_scan_high.txt
+          python3 small_all.py 60 | diff - small_all_60.txt
           cd ../hill
           gcc -O2 -Wall -Wextra -Werror -fopenmp -o /tmp/ap_exact ap_exact.c
           /tmp/ap_exact 1000 | diff - ap_exact_1000.txt
+          # the second program for squares with seven square entries, to centre root 1300 (README; the job build runs it to 430; about 3 minutes)
+          gcc -O2 -Wall -Wextra -Werror -o /tmp/seven_brute ../search/seven_brute.c
+          /tmp/seven_brute 1300 | LC_ALL=C sort -u | diff - <(tail -n +3 ../search/seven_brute_1300.txt)
+          wait $SUB34
+          diff /tmp/subsets_34.out ../gauss_descent/subsets_34.txt
+          wait $RP681
+          diff /tmp/real_points_681.out ../gauss_descent/real_points_681.txt
+          # no program of this job may rewrite a committed file (OUTPUTS.md)
+          git diff --exit-code
 
   last-pair:
     # LAST_PAIR.md: the argument for (627,364) and (991,263). An experiment, not counted in the census. This job reruns every
@@ -404,6 +493,13 @@ jobs:
           python3 route_all.py 4 | diff - route_all.txt
           # the same on the ratios of square type left with 1000 < m <= 3000 whose E1 has rank exactly 1
           python3 two_map_scope.py pairs_wide_open.txt | f | diff - two_map_scope_wide.txt
+          python3 two_map_scope.py pairs123.txt | f | diff - two_map_scope.txt
+          # the exact route on three ratios closed by other means (LAST_PAIR.md, section 18; OUTPUTS.md); the models are the minimal models
+          # (PARI's ellminimalmodel; for (440,279) the model of saturation_440_279.txt). The program prints each line as it goes and then all of them again, so the repeat is removed;
+          # for (440,279) and (420,341) it exits with 1 on purpose (the analogue of Theorem A fails there), and the diff decides.
+          (python3 exact_last_pair_route.py 187,84 55826 model=0,-1,0,4801746619611299721114526655,163620228695308602818059322473823297577025 || true
+           python3 exact_last_pair_route.py 440,279 231518 model=0,-1,0,234855998575724119950174256951679,494588188707432659580713964254497581771145395745 || true
+           python3 exact_last_pair_route.py 420,341 120238 model=0,1,0,101547849759331103572441792455359,29444456147762872577981199189928064917272903359 || true) | awk '!seen[$0]++' | diff - exact_last_pair_route.txt
           python3 route_all.py 4 two_map_scope_wide.txt | diff - route_wide.txt
           python3 route_all.py 4 two_map_scope_wide_twist.txt | diff - route_twist.txt
           # the cover descent on the 157 ratios of the census list
@@ -417,6 +513,8 @@ jobs:
           grep -q "^left: \[(1, 1)\]$" mw_sieve_big_627_364.txt
           test "$(grep -c "the planted pair (2, 1) survives; survivors: \[(0, 1), (2, 1)\]" planted_control.txt)" = 3
           test "$(grep -c "14 of 14" planted_control.txt)" = 6
+          # no program of this job may rewrite a committed file (OUTPUTS.md)
+          git diff --exit-code
 
   twist-search:
     # scripts/search/twist_search.txt: no t0 = p/q != 1 with m, p, q <= 400 at which all four points are rational on a twist.
@@ -464,6 +562,8 @@ jobs:
           pip install -q sympy==1.14.0 cypari2==2.2.9
           cd scripts/cover_descent/structure
           test "$(python3 class_selmer_linalg.py 5010 5010 --from 5000 | grep -c '[1-9][0-9]* ratios, 0 different')" = 1   # a comparison with class_selmer.py that is not empty
+          # COMPLETE.md, section 7, test 7, cross-check (a) in full: 5000 < m <= 5100 and 14900 < m <= 15000 (OUTPUTS.md; about a minute)
+          (python3 class_selmer_linalg.py 5100 5100 --from 5000; python3 class_selmer_linalg.py 15000 15000 --from 14900) | diff - xcheck_15000.txt
           python3 class_selmer_linalg.py 10000 0 --from 5000 --list /tmp/a.txt > /tmp/sa.txt &
           python3 class_selmer_linalg.py 15000 0 --from 10000 --list /tmp/b.txt > /tmp/sb.txt &
           wait
@@ -472,6 +572,8 @@ jobs:
           cd ..
           python3 tuple_descent.py batch magic structure/class_selmer_15000_list.txt 4 | diff - tuple_selmer_15000.txt
           test "$(grep -c 'nothing is left$' tuple_selmer_15000.txt)" = "$(wc -l < structure/class_selmer_15000_list.txt)"
+          # no program of this job may rewrite a committed file (OUTPUTS.md)
+          git diff --exit-code
 
   scan-5000:
     # LAST_PAIR.md, section 12: the four-class descent on EVERY ratio with m <= 5000 that avoids the 484 classes, rerun in

@@ -1,0 +1,3 @@
+rowtest: v2(c6) = 7: 678 curves in the row (4, >=7, 6), c4' = 3 mod 4; PARI w_2 agrees with "c4' + 4 c6/2^7" on 0, with "c4' - 4 c6/2^7" on 678
+rowtest: v2(c6) = 8: 1166 curves in the row (4, >=7, 6), c4' = 3 mod 4; PARI w_2 agrees with "c4' + 4 c6/2^7" on 1166, with "c4' - 4 c6/2^7" on 1166
+rowtest: v2(c6) >= 9: 1156 curves in the row (4, >=7, 6), c4' = 3 mod 4; PARI w_2 agrees with "c4' + 4 c6/2^7" on 1156, with "c4' - 4 c6/2^7" on 1156

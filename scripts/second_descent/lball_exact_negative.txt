@@ -1,0 +1,15 @@
+lball_exact.py --negative: the guard (L(E,1) at the cut-offs y = 1 and y = 6/5) with forged inputs; each must be refused
+
+true inputs, tails below 0.001: N = 1929934048, w = +1: L(y=1) [1.1044, 1.1054], L(y=6/5) [1.1047, 1.1052]: guard passes
+true inputs, tails below 1e-09: N = 1929934048, w = +1: L(y=1) [1.1049249737, 1.1049249744], L(y=6/5) [1.1049249739, 1.1049249742]: guard passes
+forged N/2 (f_2 = 4):                         (tails below 0.001) L(y=1) [0.7991, 0.7998], L(y=6/5) [0.8034, 0.8037]: guard refuses
+forged 2N (f_2 = 6):                          (tails below 0.001) L(y=1) [1.4101, 1.4108], L(y=6/5) [1.4061, 1.4065]: guard refuses
+forged N/7 (7 left out):                      (tails below 0.001) L(y=1) [0.3451, 0.3461], L(y=6/5) [0.3571, 0.3576]: guard refuses
+forged 3N (3 added):                          (tails below 0.001) L(y=1) [1.5768, 1.5777], L(y=6/5) [1.5702, 1.5707]: guard refuses
+forged w = -1:                                (tails below 0.001) L(y=1) [-0.0005, 0.0005], L(y=6/5) [-0.1628, -0.1623]: guard refuses
+forged a_2 = +1 (additive read as split):     (tails below 1e-09) L(y=1) [1.5030150844, 1.5030150851], L(y=6/5) [1.5112407085, 1.5112407088]: guard refuses
+forged a_3 one more:                          (tails below 1e-09) L(y=1) [1.1781589763, 1.1781589770], L(y=6/5) [1.1834921479, 1.1834921482]: guard refuses
+forged a_7 = +1 (non-split read as split):    (tails below 1e-09) L(y=1) [1.1844216281, 1.1844216287], L(y=6/5) [1.1869754372, 1.1869754375]: guard refuses
+forged a_521 = -1 (split read as non-split):  (tails below 1e-09) L(y=1) [1.1020628274, 1.1020628281], L(y=6/5) [1.1020528562, 1.1020528565]: guard refuses
+forged a_719 = -1 (split read as non-split):  (tails below 1e-09) L(y=1) [1.1024691551, 1.1024691558], L(y=6/5) [1.1024680427, 1.1024680430]: guard refuses
+negative tests: 10 forged inputs, 10 refused

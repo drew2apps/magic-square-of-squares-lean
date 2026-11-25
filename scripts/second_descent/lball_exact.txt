@@ -1,0 +1,31 @@
+lball_exact.py: (440,279) and its partner (719,161): y^2 = x(x - 719^2)(x + 161^2)
+
+model a = [0, -491040, 0, -13400146081, 0]
+Delta = 846739720242990813194233916405824 = 2^6 * 7^4 * 23^4 * 521^4 * 719^4
+Tate's algorithm (exact):
+  p = 2: v(Delta) = 6, v(c4, c6, Delta) of the p-minimal model = (4, 10, 6), Kodaira III, f_p = 5, c_p = 2, additive, a_p = 0, w_p = -1 (Rizzo 2003, Table III, row (4, >=7, 6), c4' = 3 mod 4: c4' = 3 mod 16, 4 c6/2^7 = 0 mod 16)
+    (at 2: singular point moved to (0,0) by (r, s, t) = (1, 0, 0): a = [0, -491037, 0, -13401128158, -13400637120]; v(b2) 2, v(a6) 6, v(b8) 2, v(b6) 8; p^2 | a6, p^3 does not divide b8: III, f = v(Delta) - 1)
+  p = 7: v(Delta) = 4, v(c4, c6, Delta) of the p-minimal model = (0, 0, 4), Kodaira I4, f_p = 1, c_p = 2, nonsplit, a_p = -1, w_p = 1 (non-split multiplicative)
+  p = 23: v(Delta) = 4, v(c4, c6, Delta) of the p-minimal model = (0, 0, 4), Kodaira I4, f_p = 1, c_p = 2, nonsplit, a_p = -1, w_p = 1 (non-split multiplicative)
+  p = 521: v(Delta) = 4, v(c4, c6, Delta) of the p-minimal model = (0, 0, 4), Kodaira I4, f_p = 1, c_p = 4, split, a_p = 1, w_p = -1 (split multiplicative)
+  p = 719: v(Delta) = 4, v(c4, c6, Delta) of the p-minimal model = (0, 0, 4), Kodaira I4, f_p = 1, c_p = 4, split, a_p = 1, w_p = -1 (split multiplicative)
+conductor N = 1929934048 = 2^5 * 7 * 23 * 521 * 719
+root number from the local root numbers, w = -prod w_p: 1
+a_p for the 26175 primes p <= 302194: by counting points at good p (Hasse checked for each), from Tate's algorithm at bad p
+
+Fricke sign: F = sum a_n exp(-2 pi n / sqrt N) in [3130.055, 3130.056]  (248581 terms, tail included)
+  F != 0, so w = +1 (f = sum a_n q^n is the newform of level N; f(i/sqrt N) = w f(i/sqrt N), so w = -1 would force F = 0)
+root numbers: local 1, Fricke 1: agree
+
+L(E,1), cut-off y = 1   (225453 terms): [1.104924973, 1.104924975]
+L(E,1), cut-off y = 6/5 (274081 terms): [1.104924973, 1.104924975]
+guard: the two enclosures intersect: True; Fricke residual at y = 6/5 in [-0.001, 0.001] (302194 terms) contains 0: True
+certified (the enclosure at y = 1, with N, a_n and w as above): L(E,1) >= 1.104924973 > 0: True
+
+PARI cross-check (not used above): conductor 1929934048 (agrees), root number 1 (agrees)
+  p = 2: PARI f_p = 5, c_p = 2, w_p = -1: agrees
+  p = 7: PARI f_p = 1, c_p = 2, w_p = 1: agrees
+  p = 23: PARI f_p = 1, c_p = 2, w_p = 1: agrees
+  p = 521: PARI f_p = 1, c_p = 4, w_p = -1: agrees
+  p = 719: PARI f_p = 1, c_p = 4, w_p = -1: agrees
+  a_n for n <= 20000: agree with PARI ellan

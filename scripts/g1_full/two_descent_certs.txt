@@ -1,0 +1,4 @@
+negative: 6 forged inputs refused
+crosscheck: Eplus m (+-n) = sigma_exact.model(m, n, +-2), y(Q)^2 = a6, x(P) = -(m+n)^2 S^2 on 254 curves
+matches MagicSquareOfSquares/TwoDescentCertificates.lean
+two_descent_certs OK: 127 ratios, 254 curves

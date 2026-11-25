@@ -1,0 +1,15 @@
+selmer_square_pari.py (guide only): 120 curves, PARI upper bound above s on 0; lo, hi of the parity of s on 120
+  s = 2, PARI [2, 2]: 7 curves
+  s = 3, PARI [1, 1]: 14 curves
+  s = 3, PARI [1, 3]: 8 curves
+  s = 3, PARI [3, 3]: 1 curves
+  s = 4, PARI [2, 2]: 42 curves
+  s = 4, PARI [2, 4]: 3 curves
+  s = 5, PARI [1, 1]: 14 curves
+  s = 5, PARI [1, 3]: 10 curves
+  s = 5, PARI [1, 5]: 1 curves
+  s = 5, PARI [3, 3]: 1 curves
+  s = 6, PARI [2, 2]: 13 curves
+  s = 6, PARI [2, 4]: 3 curves
+  s = 7, PARI [1, 1]: 1 curves
+  s = 7, PARI [1, 3]: 2 curves

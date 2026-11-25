@@ -1,0 +1,13 @@
+  refused: forged element 13 added to Sel(E) of E+ (12,5) (('Sel(E) differs', [13]))
+    (C_13 of E+ (12,5) is certified insoluble at 2)
+  refused: the class 13 claimed everywhere locally soluble on E+ (12,5) (C_13 has no point at 2)
+    (C_3 of E' of (12,5) is certified insoluble at 2)
+  refused: the class 3 claimed everywhere locally soluble on E' of (12,5) (C_3 has no point at 2)
+  refused: an obstruction claimed for the class 2 on E+ (12,5) (the class 2 has no local obstruction (as Theorem S1 says))
+  refused: class 2 removed from Sel(E) of E+ (12,5) (('Sel(E) differs', [2]))
+  refused: forged element 3 added to Sel(E') of E+ (12,5) (("Sel(E') differs", [3]))
+  refused: a wrong 2-adic image im_2(E) = {1, 2, 5, 10} (forged im_2(E) differs from the exact local image)
+  refused: a wrong local image im_17(E) = units at 17 | m + n (forged im_17(E) differs from the exact local image)
+  refused: the local solver forced to accept every class at 17 (product formula must fail) (('product formula fails', 12, 5, 17, 4, 4))
+  refused: a ratio of the wrong type (5,2) given to the rule ()
+negative tests: 10 of 10 refused

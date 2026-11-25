@@ -1,0 +1,90 @@
+15 8: N = 87584 (agrees with PARI), w = 1 (agrees)
+21 20: N = 38048 (agrees with PARI), w = 1 (agrees)
+23 7: N = 105757680 (agrees with PARI), w = 1 (agrees)
+41 1: N = 7600627245120 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+72 65: N = 2976736 (agrees with PARI), w = 1 (agrees)
+91 60: N = 16327328 (agrees with PARI), w = 1 (agrees)
+117 44: N = 1880480 (agrees with PARI), w = 1 (agrees)
+156 133: N = 2564960 (agrees with PARI), w = 1 (agrees)
+176 57: N = 164143840 (agrees with PARI), w = 1 (agrees)
+187 84: N = 517551540335136656158656 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+195 28: N = 234767264 (agrees with PARI), w = 1 (agrees)
+209 120: N = 225815072 (agrees with PARI), w = 1 (agrees)
+220 21: N = 339166048 (agrees with PARI), w = 1 (agrees)
+223 167: N = 5967075440660880 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+233 119: N = 18973781076569951696064 (agrees with PARI), w = 1 (agrees)
+247 96: N = 131153353877363458368 (agrees with PARI), w = 1 (agrees)
+255 32: N = 361449285473448317046720 (agrees with PARI), w = 1 (agrees)
+264 23: N = 586536160 (agrees with PARI), w = 1 (agrees)
+271 103: N = 517551540335136656158656 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+273 136: N = 546882080 (agrees with PARI), w = 1 (agrees)
+287 223: N = 361449285473448317046720 (agrees with PARI), w = 1 (agrees)
+329 89: N = 327648755488562858159040 (agrees with PARI), w = 1 (agrees)
+340 189: N = 43231904 (agrees with PARI), w = 1 (agrees)
+343 151: N = 131153353877363458368 (agrees with PARI), w = 1 (agrees)
+351 280: N = 643700768 (agrees with PARI), w = 1 (agrees)
+377 336: N = 31368109827939968621638464 (agrees with PARI), w = 1 (agrees)
+396 203: N = 1646243680 (agrees with PARI), w = 1 (agrees)
+399 40: N = 2022336032 (agrees with PARI), w = 1 (agrees)
+408 145: N = 2015202784 (agrees with PARI), w = 1 (agrees)
+416 87: N = 450124640 (agrees with PARI), w = 1 (agrees)
+420 341: N = 1040780128 (agrees with PARI), w = 1 (agrees)
+439 359: N = 317925375526783920 (agrees with PARI), w = 1 (agrees)
+460 429: N = 554707552 (agrees with PARI), w = 1 (agrees)
+465 368: N = 219039968 (agrees with PARI), w = 1 (agrees)
+476 93: N = 3382227040 (agrees with PARI), w = 1 (agrees)
+483 44: N = 3590598560 (agrees with PARI), w = 1 (agrees)
+493 276: N = 3424826225273201555313159744 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+503 329: N = 42123968497469040 (agrees with PARI), w = 1 (agrees)
+520 231: N = 232461536 (agrees with PARI), w = 1 (agrees)
+529 151: N = 1986863648654250985920 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+552 385: N = 3369931744 (agrees with PARI), w = 1 (agrees)
+553 263: N = 524183598880964666173682880 (agrees with PARI), w = 1 (agrees)
+569 383: N = 1212197972828081902104152256 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+572 315: N = 4977544980452674322096564160 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+572 555: N = 2127155794101679842621120 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+599 193: N = 331200932167235588153158848 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+608 105: N = 7080968416 (agrees with PARI), w = 1 (agrees)
+609 200: N = 1882265409843149874811356480 (agrees with PARI), w = 1 (agrees)
+631 71: N = 8670536565806682696816960 (agrees with PARI), w = 1 (agrees)
+644 333: N = 1409850080 (agrees with PARI), w = 1 (agrees)
+667 156: N = 9218521760 (agrees with PARI), w = 1 (agrees)
+680 111: N = 9923341792 (agrees with PARI), w = 1 (agrees)
+684 37: N = 10225395040 (agrees with PARI), w = 1 (agrees)
+700 429: N = 8038154848 (agrees with PARI), w = 1 (agrees)
+713 41: N = 31368109827939968621638464 (agrees with PARI), w = 1 (agrees)
+713 503: N = 1628008001236091685147161280 (agrees with PARI), w = 1 (agrees)
+736 273: N = 11735235040 (agrees with PARI), w = 1 (agrees)
+741 580: N = 6404250272 (agrees with PARI), w = 1 (agrees)
+751 289: N = 77096996536560 (agrees with PARI), w = 1 (agrees)
+759 280: N = 12883965728 (agrees with PARI), w = 1 (agrees)
+760 39: N = 14028675808 (agrees with PARI), w = 1 (agrees)
+761 79: N = 1120171249873940880 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+769 217: N = 3424826225273201555313159744 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+780 451: N = 11676931168 (agrees with PARI), w = 1 (agrees)
+783 56: N = 6282061822983325430386531392 (agrees with PARI), w = 1 (agrees)
+791 569: N = 19255222096555554681507445440 (agrees with PARI), w = 1 (agrees)
+799 721: N = 23704575494245364794266784320 (agrees with PARI), w = 1 (agrees)
+809 409: N = 1882265409843149874811356480 (agrees with PARI), w = 1 (agrees)
+833 97: N = 275928637346160 (agrees with PARI), w = 1 (agrees)
+836 123: N = 1422235360 (agrees with PARI), w = 1 (agrees)
+839 727: N = 6282061822983325430386531392 (agrees with PARI), w = 1 (agrees)
+840 559: N = 12693026272 (agrees with PARI), w = 1 (agrees)
+861 620: N = 1793486690052363694728072707520 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+868 765: N = 6227399776 (agrees with PARI), w = 1 (agrees)
+884 387: N = 19506494560 (agrees with PARI), w = 1 (agrees)
+887 257: N = 4977544980452674322096564160 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+889 31: N = 377096646485198640 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+899 60: N = 23198256032 (agrees with PARI), w = 1 (agrees)
+900 301: N = 21846708832 (agrees with PARI), w = 1 (agrees)
+924 893: N = 2316166240 (agrees with PARI), w = 1 (agrees)
+928 585: N = 371786464 (agrees with PARI), w = 1 (agrees)
+945 248: N = 25996672544 (agrees with PARI), w = 1 (agrees)
+957 124: N = 3972372320 (agrees with PARI), w = 1 (agrees)
+959 713: N = 284002508845684434959980913856 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+960 799: N = 11318897632 (agrees with PARI), w = 1 (agrees)
+975 448: N = 25749287456 (agrees with PARI), w = 1 (agrees)
+977 311: N = 3827778028056714480 (agrees with PARI), w = None (PARI 1); w_p not implemented at [2]
+989 660: N = 20641839008 (agrees with PARI), w = 1 (agrees)
+992 705: N = 18967246816 (agrees with PARI), w = 1 (agrees)
+census: 89 closing curves; N exact for all that factored, equal to PARI: True; w determined exactly for 72, equal to PARI for all of them: True; of the 53 with N <= 1e14 (the ones lball.py sums), w exact for 52

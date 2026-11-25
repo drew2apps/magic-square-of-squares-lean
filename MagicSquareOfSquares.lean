@@ -38,3 +38,5 @@ import MagicSquareOfSquares.ClassPadic
 import MagicSquareOfSquares.G1Sigma
 import MagicSquareOfSquares.G1SigmaGeneric
 import MagicSquareOfSquares.SecondDescentIdentities
+import MagicSquareOfSquares.TwoDescentMap
+import MagicSquareOfSquares.TwoDescentCertificates
