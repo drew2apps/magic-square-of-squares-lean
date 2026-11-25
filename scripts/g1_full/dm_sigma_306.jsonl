@@ -38,7 +38,7 @@
 {"pair": [63, 16], "curve": "E-", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [71, 49], "curve": "E+", "A_digits": 13, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
 {"pair": [71, 49], "curve": "E-", "A_digits": 12, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
-{"pair": [72, 65], "curve": "E+", "A_digits": 13, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
+{"pair": [72, 65], "curve": "E+", "A_digits": 13, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "-168914884320", "hG": 3.107359099015798, "hG_enclosure": [3.1032187586704496, 3.1122965794880773], "B": 74.3655081380043, "hj": 164.11642851723366, "logK": 29.525100126790274, "amax": 58, "ntors": 2, "sat": "<= 9", "lam": 0.047998645304495484, "max |h - hhat| on the list": 34.680502638218215, "ncand": 120, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
 {"pair": [72, 65], "curve": "E-", "A_digits": 11, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
 {"pair": [73, 17], "curve": "E+", "A_digits": 13, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [73, 17], "curve": "E-", "A_digits": 12, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
@@ -141,28 +141,28 @@
 {"pair": [239, 1], "curve": "E+", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [239, 1], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [240, 161], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
-{"pair": [240, 161], "curve": "E-", "A_digits": 15, "rank": [1, 3], "status": "rank not 1", "sec": "0.8"}
+{"pair": [240, 161], "curve": "E-", "A_digits": 15, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "408944393471040", "hG": 4.026815922234258, "hG_enclosure": [4.02172239783906, 4.032623885595875], "B": 89.30498770382913, "hj": 203.5876178827368, "logK": 32.79089681850368, "amax": 53, "ntors": 2, "sat": "<= 60", "lam": 0.0011196491956655084, "max |h - hhat| on the list": 40.45974299936552, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "2.0"}
 {"pair": [241, 199], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [241, 199], "curve": "E-", "A_digits": 14, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
 {"pair": [247, 96], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [247, 96], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [252, 115], "curve": "E+", "A_digits": 16, "rank": [1, 1], "G": "-447202828764720", "hG": 3.8105918268304193, "hG_enclosure": [3.8055643248241005, 3.816594873184367], "B": 90.36225216730215, "hj": 204.91728251602797, "logK": 35.69308808197839, "amax": 57, "ntors": 2, "sat": "<= 10", "lam": 0.04522298394048188, "max |h - hhat| on the list": 42.30919515368282, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
 {"pair": [252, 115], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
-{"pair": [253, 204], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [253, 204], "curve": "E+", "A_digits": 16, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "488303325510000", "hG": 3.912822966680399, "hG_enclosure": [3.9076859238189505, 3.9188762170026687], "B": 91.67088176102163, "hj": 204.4601475791381, "logK": 36.770961872227254, "amax": 57, "ntors": 2, "sat": "<= 17", "lam": 0.015064143919629291, "max |h - hhat| on the list": 43.52585672622263, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
 {"pair": [253, 204], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [255, 32], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
 {"pair": [255, 32], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
 {"pair": [257, 49], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [257, 49], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
-{"pair": [260, 69], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
-{"pair": [260, 69], "curve": "E-", "A_digits": 15, "rank": [0, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [260, 69], "curve": "E+", "A_digits": 16, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "326299384997040", "hG": 3.810901285959562, "hG_enclosure": [3.8059653680185748, 3.8167850382009827], "B": 88.63473813428901, "hj": 200.9040844594387, "logK": 35.35725538105799, "amax": 56, "ntors": 2, "sat": "<= 85", "lam": 0.004831334638096965, "max |h - hhat| on the list": 41.92867512195414, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
+{"pair": [260, 69], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
 {"pair": [263, 73], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [263, 73], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
-{"pair": [264, 23], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [264, 23], "curve": "E+", "A_digits": 16, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "-117972950541600", "hG": 3.8096749480245995, "hG_enclosure": [3.804715583027779, 3.8154450842579193], "B": 87.89607407731172, "hj": 200.24308204032587, "logK": 35.02417809658402, "amax": 56, "ntors": 2, "sat": "<= 29", "lam": 0.004857568307424691, "max |h - hhat| on the list": 41.66520274042955, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
 {"pair": [264, 23], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [271, 103], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [271, 103], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
-{"pair": [272, 225], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [272, 225], "curve": "E+", "A_digits": 17, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "712549551268800", "hG": 3.96807790893663, "hG_enclosure": [3.9628826994469772, 3.9742636252911456], "B": 93.23254451542687, "hj": 208.68301792092615, "logK": 37.26934664104633, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.0612434768504356, "max |h - hhat| on the list": 44.143103284987774, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.7"}
 {"pair": [272, 225], "curve": "E-", "A_digits": 15, "rank": [2, 4], "status": "rank not 1", "sec": "0.6"}
 {"pair": [273, 136], "curve": "E+", "A_digits": 16, "rank": [0, 2], "status": "rank not 1", "sec": "0.5"}
 {"pair": [273, 136], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
@@ -176,19 +176,19 @@
 {"pair": [287, 223], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
 {"pair": [287, 241], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
 {"pair": [287, 241], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
-{"pair": [288, 175], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [288, 175], "curve": "E+", "A_digits": 17, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "-1197870208617600", "hG": 3.9361795292800488, "hG_enclosure": [3.930938274280607, 3.9423272822022217], "B": 93.29875289386484, "hj": 210.83748472000653, "logK": 36.94208019070181, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.059607492640331966, "max |h - hhat| on the list": 43.78571347648176, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "4.2"}
 {"pair": [288, 175], "curve": "E-", "A_digits": 15, "rank": [2, 4], "status": "rank not 1", "sec": "0.6"}
 {"pair": [289, 23], "curve": "E+", "A_digits": 16, "rank": [4, 4], "status": "rank not 1", "sec": "0.0"}
 {"pair": [289, 23], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
 {"pair": [299, 180], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
 {"pair": [299, 180], "curve": "E-", "A_digits": 15, "rank": [1, 1], "G": "1494641420279280", "hG": 4.144274817039771, "hG_enclosure": [4.139022690092887, 4.150269390174934], "B": 92.13296707213519, "hj": 210.18616579832417, "logK": 34.36482903615266, "amax": 53, "ntors": 2, "sat": "<= 31", "lam": 0.004454409778051314, "max |h - hhat| on the list": 42.08462492131275, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.2"}
-{"pair": [304, 297], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
-{"pair": [304, 297], "curve": "E-", "A_digits": 13, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [304, 297], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
+{"pair": [304, 297], "curve": "E-", "A_digits": 13, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "274435567560000", "hG": 4.2925494947370835, "hG_enclosure": [4.286745443616867, 4.29835074104269], "B": 95.07059651234542, "hj": 217.8735830616755, "logK": 29.48647133492881, "amax": 52, "ntors": 2, "sat": "<= 99", "lam": 0.0004411364214023233, "max |h - hhat| on the list": 39.50895279913493, "ncand": 108, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
 {"pair": [308, 75], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
 {"pair": [308, 75], "curve": "E-", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
 {"pair": [311, 31], "curve": "E+", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [311, 31], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
-{"pair": [312, 25], "curve": "E+", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [312, 25], "curve": "E+", "A_digits": 16, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "295634467783200", "hG": 3.919934631506126, "hG_enclosure": [3.9148795267594187, 3.9259159908246413], "B": 90.41071362230072, "hj": 206.348992066094, "logK": 36.01127298398523, "amax": 56, "ntors": 2, "sat": "<= 29", "lam": 0.004702276204641988, "max |h - hhat| on the list": 42.90724606643221, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
 {"pair": [312, 25], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
 {"pair": [313, 103], "curve": "E+", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
 {"pair": [313, 103], "curve": "E-", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
@@ -218,7 +218,7 @@
 {"pair": [357, 76], "curve": "E-", "A_digits": 16, "rank": [1, 1], "G": "1759226445404400", "hG": 4.0841209795718045, "hG_enclosure": [4.0789285804390065, 4.090240054672114], "B": 92.66359691761598, "hj": 211.18222991884767, "logK": 36.26259311411735, "amax": 55, "ntors": 2, "sat": "<= 30", "lam": 0.0045766652821738335, "max |h - hhat| on the list": 43.559850467485376, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.0"}
 {"pair": [359, 287], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
 {"pair": [359, 287], "curve": "E-", "A_digits": 15, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
-{"pair": [360, 319], "curve": "E+", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
+{"pair": [360, 319], "curve": "E+", "A_digits": 17, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "2958672934657440", "hG": 4.174717043503991, "hG_enclosure": [4.169129182890322, 4.181130560461562], "B": 98.31528506360063, "hj": 221.50428953533515, "logK": 39.131005696660324, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.06465138104319874, "max |h - hhat| on the list": 46.43526197869505, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
 {"pair": [360, 319], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
 {"pair": [364, 27], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [364, 27], "curve": "E-", "A_digits": 16, "rank": [1, 1], "G": "690108737900400", "hG": 4.035673324002513, "hG_enclosure": [4.030433839998986, 4.041756945762405], "B": 92.75888241392714, "hj": 212.13573619007462, "logK": 36.62604963615458, "amax": 56, "ntors": 2, "sat": "<= 30", "lam": 0.004527365504138666, "max |h - hhat| on the list": 43.826331276773715, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
@@ -226,8 +226,8 @@
 {"pair": [367, 137], "curve": "E-", "A_digits": 16, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
 {"pair": [377, 336], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [377, 336], "curve": "E-", "A_digits": 15, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
-{"pair": [380, 261], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
-{"pair": [380, 261], "curve": "E-", "A_digits": 16, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [380, 261], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
+{"pair": [380, 261], "curve": "E-", "A_digits": 16, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "-6431184026502480", "hG": 4.339699543720865, "hG_enclosure": [4.334200145640429, 4.34595661112486], "B": 96.30896524846177, "hj": 220.43845706004623, "logK": 35.478133519329546, "amax": 53, "ntors": 2, "sat": "<= 33", "lam": 0.004129191371537225, "max |h - hhat| on the list": 43.71252736929728, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
 {"pair": [383, 233], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
 {"pair": [383, 233], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [391, 71], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
@@ -270,8 +270,8 @@
 {"pair": [440, 279], "curve": "E-", "A_digits": 16, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [449, 391], "curve": "E+", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
 {"pair": [449, 391], "curve": "E-", "A_digits": 16, "rank": [2, 4], "status": "rank not 1", "sec": "0.3"}
-{"pair": [456, 217], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
-{"pair": [456, 217], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [456, 217], "curve": "E+", "A_digits": 18, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "16236046604114400", "hG": 4.209747119255923, "hG_enclosure": [4.204103603629023, 4.216239053830319], "B": 99.41360804901463, "hj": 226.53285421295664, "logK": 39.308018737510785, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.059931155430951094, "max |h - hhat| on the list": 46.714509046706326, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "2.8"}
+{"pair": [456, 217], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.7"}
 {"pair": [457, 49], "curve": "E+", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [457, 49], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
 {"pair": [459, 220], "curve": "E+", "A_digits": 18, "rank": [1, 1], "G": "-16982381685543120", "hG": 4.214814527222963, "hG_enclosure": [4.2091059002949365, 4.221256562687218], "B": 99.53822631756883, "hj": 226.81197108665722, "logK": 39.35732868243937, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.060256575678517166, "max |h - hhat| on the list": 46.76860302322257, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
@@ -319,7 +319,7 @@
 {"pair": [527, 23], "curve": "E+", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
 {"pair": [527, 23], "curve": "E-", "A_digits": 17, "rank": [4, 4], "status": "rank not 1", "sec": "0.2"}
 {"pair": [527, 336], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
-{"pair": [527, 336], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [527, 336], "curve": "E-", "A_digits": 17, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "45605170275000000", "hG": 4.537338843748987, "hG_enclosure": [4.531507830059644, 4.543821677771392], "B": 100.87504045464229, "hj": 231.26634119602082, "logK": 37.64184781615876, "amax": 53, "ntors": 2, "sat": "<= 131", "lam": 0.0002665973385648589, "max |h - hhat| on the list": 46.315664306690906, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "2.5"}
 {"pair": [527, 439], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [527, 439], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
 {"pair": [528, 455], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
@@ -339,15 +339,15 @@
 {"pair": [553, 263], "curve": "E+", "A_digits": 18, "rank": [3, 5], "status": "rank not 1", "sec": "0.4"}
 {"pair": [553, 263], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
 {"pair": [561, 400], "curve": "E+", "A_digits": 18, "rank": [2, 4], "status": "rank not 1", "sec": "0.8"}
-{"pair": [561, 400], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
+{"pair": [561, 400], "curve": "E-", "A_digits": 17, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "-65928098718081600", "hG": 4.609876521768485, "hG_enclosure": [4.603964794195966, 4.616456874106729], "B": 102.33511862896084, "hj": 234.96566738301306, "logK": 37.69006817514345, "amax": 53, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 46.482153471059064, "ncand": 110, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.8"}
 {"pair": [569, 383], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
 {"pair": [569, 383], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [572, 315], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
 {"pair": [572, 315], "curve": "E-", "A_digits": 17, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
 {"pair": [572, 555], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.3"}
 {"pair": [572, 555], "curve": "E-", "A_digits": 15, "rank": [1, 1], "G": "15453913728293040", "hG": 4.712117988935587, "hG_enclosure": [4.705809998221064, 4.718566610831513], "B": 104.50217050479334, "hj": 240.50804048790678, "logK": 33.77613976439319, "amax": 52, "ntors": 2, "sat": "<= 57", "lam": 0.001452005364272219, "max |h - hhat| on the list": 44.47563043499258, "ncand": 108, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
-{"pair": [575, 48], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
-{"pair": [575, 48], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [575, 48], "curve": "E+", "A_digits": 18, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "-12067557075873600", "hG": 4.328059077368873, "hG_enclosure": [4.3224776244859795, 4.334633051890941], "B": 99.57726130144533, "hj": 228.31583477004162, "logK": 39.686756464727196, "amax": 56, "ntors": 2, "sat": "<= 33", "lam": 0.004174155317544108, "max |h - hhat| on the list": 47.38350350885139, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "3.5"}
+{"pair": [575, 48], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
 {"pair": [577, 511], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.3"}
 {"pair": [577, 511], "curve": "E-", "A_digits": 16, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [589, 300], "curve": "E+", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
@@ -438,8 +438,8 @@
 {"pair": [721, 521], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
 {"pair": [721, 647], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [721, 647], "curve": "E-", "A_digits": 17, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
-{"pair": [725, 108], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
-{"pair": [725, 108], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [725, 108], "curve": "E+", "A_digits": 18, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "86488799329522800", "hG": 4.489331577171945, "hG_enclosure": [4.483313512030736, 4.495857982476834], "B": 102.76430189443474, "hj": 234.77570920592734, "logK": 41.224944453000184, "amax": 56, "ntors": 2, "sat": "<= 34", "lam": 0.003975597723721542, "max |h - hhat| on the list": 49.19940640605273, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.7"}
+{"pair": [725, 108], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
 {"pair": [727, 623], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [727, 623], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [728, 615], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
@@ -458,8 +458,8 @@
 {"pair": [756, 533], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
 {"pair": [759, 280], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "276890402597534880", "hG": 4.532766348208758, "hG_enclosure": [4.526786408165003, 4.539735445100269], "B": 106.07851057369535, "hj": 242.97097816493792, "logK": 42.06151801155231, "amax": 57, "ntors": 2, "sat": "<= 35", "lam": 0.0038693984117912934, "max |h - hhat| on the list": 50.00647537213081, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
 {"pair": [759, 280], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
-{"pair": [760, 39], "curve": "E+", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.7"}
-{"pair": [760, 39], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
+{"pair": [760, 39], "curve": "E+", "A_digits": 18, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "39553921584035040", "hG": 4.50729312390052, "hG_enclosure": [4.501483015252589, 4.5141520147979755], "B": 103.78444427581383, "hj": 238.65872895830907, "logK": 41.29154968409918, "amax": 56, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 49.387354052574665, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.5"}
+{"pair": [760, 39], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.5"}
 {"pair": [761, 79], "curve": "E+", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.0"}
 {"pair": [761, 79], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [769, 217], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
@@ -485,7 +485,7 @@
 {"pair": [799, 721], "curve": "E+", "A_digits": 20, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
 {"pair": [799, 721], "curve": "E-", "A_digits": 17, "rank": [3, 3], "status": "rank not 1", "sec": "0.4"}
 {"pair": [800, 369], "curve": "E+", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.8"}
-{"pair": [800, 369], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.8"}
+{"pair": [800, 369], "curve": "E-", "A_digits": 18, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "-461763862998883200", "hG": 4.736616061183929, "hG_enclosure": [4.730621052008566, 4.743558345072136], "B": 105.98230477676783, "hj": 243.04940316143822, "logK": 40.64274104507211, "amax": 54, "ntors": 2, "sat": "<= 36", "lam": 0.00380704542297353, "max |h - hhat| on the list": 49.4558520396252, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "6.0"}
 {"pair": [805, 348], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
 {"pair": [805, 348], "curve": "E-", "A_digits": 18, "rank": [1, 1], "G": "-454129599750293040", "hG": 4.727197048874489, "hG_enclosure": [4.721219160549143, 4.734146154767297], "B": 105.89793663511423, "hj": 242.7861396323826, "logK": 40.74168911239703, "amax": 54, "ntors": 2, "sat": "<= 36", "lam": 0.003827717303152225, "max |h - hhat| on the list": 49.51798299616104, "ncand": 112, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
 {"pair": [809, 409], "curve": "E+", "A_digits": 19, "rank": [2, 4], "status": "rank not 1", "sec": "0.5"}
@@ -507,7 +507,7 @@
 {"pair": [833, 617], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.1"}
 {"pair": [833, 617], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.5"}
 {"pair": [836, 123], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
-{"pair": [836, 123], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [836, 123], "curve": "E-", "A_digits": 19, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "200813513664363600", "hG": 4.622589344791674, "hG_enclosure": [4.616610401044114, 4.629463731588522], "B": 105.29448381978783, "hj": 241.830739578514, "logK": 41.48260371137718, "amax": 55, "ntors": 2, "sat": "<= 65", "lam": 0.0011075883493024236, "max |h - hhat| on the list": 49.882729236082014, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
 {"pair": [837, 116], "curve": "E+", "A_digits": 19, "rank": [1, 1], "G": "190539500248515600", "hG": 4.584387653166544, "hG_enclosure": [4.578477820507193, 4.591296901499416], "B": 105.01391148829653, "hj": 240.46548515374246, "logK": 42.06287067785699, "amax": 56, "ntors": 2, "sat": "<= 66", "lam": 0.0010663893542594356, "max |h - hhat| on the list": 50.206362654796976, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.1"}
 {"pair": [837, 116], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
 {"pair": [839, 727], "curve": "E+", "A_digits": 20, "rank": [2, 4], "status": "rank not 1", "sec": "0.4"}
@@ -554,8 +554,8 @@
 {"pair": [912, 215], "curve": "E-", "A_digits": 19, "rank": [1, 1], "G": "-540915175060115520", "hG": 4.719533692593292, "hG_enclosure": [4.713541086977312, 4.726578152951081], "B": 106.79964445712048, "hj": 245.01968318408953, "logK": 41.850598311594624, "amax": 55, "ntors": 2, "sat": "<= 33", "lam": 0.0044303533972096945, "max |h - hhat| on the list": 50.47316538656469, "ncand": 114, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "0.9"}
 {"pair": [919, 401], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.3"}
 {"pair": [919, 401], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
-{"pair": [920, 129], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
-{"pair": [920, 129], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.6"}
+{"pair": [920, 129], "curve": "E+", "A_digits": 19, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "-339954605141131680", "hG": 4.647538609457249, "hG_enclosure": [4.641539659783906, 4.6545303160249425], "B": 106.41945592657954, "hj": 243.79721563331253, "logK": 42.63391453316784, "amax": 56, "ntors": 2, "sat": "<= 36", "lam": 0.003766035979907323, "max |h - hhat| on the list": 50.90960517305575, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
+{"pair": [920, 129], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.4"}
 {"pair": [924, 43], "curve": "E+", "A_digits": 19, "rank": [0, 2], "status": "rank not 1", "sec": "0.8"}
 {"pair": [924, 43], "curve": "E-", "A_digits": 19, "rank": [1, 1], "G": "115847393297790000", "hG": 4.642970190862079, "hG_enclosure": [4.636936400135604, 4.649964173209846], "B": 106.72351702418435, "hj": 245.76041470531115, "logK": 42.26758456304195, "amax": 56, "ntors": 2, "sat": "<= 66", "lam": 0.001089740240472822, "max |h - hhat| on the list": 50.65132516139147, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.5"}
 {"pair": [924, 893], "curve": "E+", "A_digits": 20, "rank": [1, 1], "G": "-306977325412203600", "hG": 4.830080761421684, "hG_enclosure": [4.823744927334927, 4.837570629003107], "B": 113.26014806572519, "hj": 257.6466666998314, "logK": 45.030234487229514, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.07483009923516365, "max |h - hhat| on the list": 53.64849194353121, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.4"}
@@ -574,9 +574,9 @@
 {"pair": [943, 576], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
 {"pair": [943, 607], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [943, 607], "curve": "E-", "A_digits": 18, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
-{"pair": [945, 248], "curve": "E+", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
-{"pair": [945, 248], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
-{"pair": [952, 495], "curve": "E+", "A_digits": 20, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [945, 248], "curve": "E+", "A_digits": 19, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "744056354166420960", "hG": 4.6711010373361725, "hG_enclosure": [4.66509124001562, 4.678267558958961], "B": 107.94040478384923, "hj": 247.21031393678987, "logK": 43.092693813486854, "amax": 56, "ntors": 2, "sat": "<= 33", "lam": 0.004358960961891288, "max |h - hhat| on the list": 51.38523262600597, "ncand": 116, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
+{"pair": [945, 248], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.6"}
+{"pair": [952, 495], "curve": "E+", "A_digits": 20, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "1435113711268443360", "hG": 4.7101241932314935, "hG_enclosure": [4.703782998153239, 4.717304674554338], "B": 110.7695730778012, "hj": 253.50589663632556, "logK": 43.853644784905654, "amax": 57, "ntors": 2, "sat": "<= 9", "lam": 0.0701220750219028, "max |h - hhat| on the list": 52.26038684746163, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
 {"pair": [952, 495], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [953, 721], "curve": "E+", "A_digits": 20, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
 {"pair": [953, 721], "curve": "E-", "A_digits": 18, "rank": [2, 2], "status": "rank not 1", "sec": "0.0"}
@@ -598,7 +598,7 @@
 {"pair": [977, 311], "curve": "E-", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.1"}
 {"pair": [983, 73], "curve": "E+", "A_digits": 19, "rank": [3, 3], "status": "rank not 1", "sec": "0.2"}
 {"pair": [983, 73], "curve": "E-", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
-{"pair": [987, 884], "curve": "E+", "A_digits": 20, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}
+{"pair": [987, 884], "curve": "E+", "A_digits": 20, "upper": "Magma TwoPowerIsogenyDescentRankBound: 1", "rank": [1, 1], "G": "1180788671197590000", "hG": 4.850297732590039, "hG_enclosure": [4.843961122892153, 4.857822875303772], "B": 113.55547575598621, "hj": 258.1360323999132, "logK": 45.21142196734936, "amax": 57, "ntors": 2, "sat": "<= 17", "lam": 0.018809104818567953, "max |h - hhat| on the list": 53.86557682964849, "ncand": 118, "nt": 3, "four": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "how": "DM", "sec": "1.6"}
 {"pair": [987, 884], "curve": "E-", "A_digits": 18, "rank": [1, 3], "status": "rank not 1", "sec": "0.5"}
 {"pair": [988, 315], "curve": "E+", "A_digits": 19, "rank": [2, 2], "status": "rank not 1", "sec": "0.2"}
 {"pair": [988, 315], "curve": "E-", "A_digits": 19, "rank": [1, 3], "status": "rank not 1", "sec": "0.4"}

@@ -3,4 +3,4 @@ closed with a rank bound 0 from descent (second_descent.py): 89
 closed with rank 0 from an L-value (lvalue_close.py): 4: 440,279 612,35 660,259 920,129
 closed, directly or through the partner: 108
 not closed: 15: 99,20 119,79 253,204 425,168 457,49 593,257 627,364 672,185 777,464 779,660 812,645 857,487 912,215 987,884 991,263
-of the 24 ratios that are open in the census: closed 22 (by descent bounds alone 20), not closed: 627,364 991,263
+of the 24 ratios that were open in the census at release 0.5.0: closed 22 (by descent bounds alone 20), not closed: 627,364 991,263

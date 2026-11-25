@@ -1,0 +1,14 @@
+# The curves of F0 F8 GL (G1_FULL_SYSTEM.md, Result 4): one line per closing curve, written by sigma_certify.py and checked by sigma_exact.py.
+# fields: ratio, curve, G=x:y (the generator on the model of dm_sigma.py), K (index bound), amax (listed by dm_sigma.py), rank (sources), lam (Cremona-Siksek lower bound), gen
+91,60 E+ G=-1214630748240:7055957792295965280 K=9 amax=58 rank=PARI[1,1];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:upper_bound_1 lam=0.0485213 gen=PARI,_saturated;_equal_to_eclib's_generator_up_to_sign_and_torsion
+91,60 E- G=1214630748240:3093281319875990880 K=26 amax=53 rank=PARI[1,1];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:upper_bound_1 lam=0.0053549 gen=PARI,_saturated;_equal_to_eclib's_generator_up_to_sign_and_torsion
+209,120 E- G=170611190423520:5022023383903963968960 K=29 amax=53 rank=PARI[1,1];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:failed_(RuntimeError:_Aborted) lam=0.00483133 gen=PARI,_saturated
+420,341 E- G=-10080218336662320:1813159242707912386758240 K=33 amax=53 rank=PARI[1,1];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:no_answer_within_300_s lam=0.00426556 gen=PARI,_saturated
+572,555 E- G=15453913728293040:11399281379703727500001440 K=58 amax=52 rank=PARI[1,1];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:upper_bound_1 lam=0.00145201 gen=PARI,_saturated;_equal_to_eclib's_generator_up_to_sign_and_torsion
+608,105 E+ G=34864280951122560:26437957458145231805264640 K=33 amax=55 rank=PARI[1,1];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:failed_(RuntimeError:_Aborted) lam=0.00410689 gen=PARI,_saturated
+680,111 E- G=-64508816837381280:25675667487325000764116160 K=33 amax=55 rank=PARI[1,1];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:failed_(RuntimeError:_Aborted) lam=0.00426556 gen=PARI,_saturated
+741,580 E+ G=323753247458506320:3888613051404321358913627040 K=9 amax=56 rank=PARI[1,1];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:upper_bound_1 lam=0.0712706 gen=PARI,_saturated;_equal_to_eclib's_generator_up_to_sign_and_torsion
+760,39 E+ G=39553921584035040:40544809943392890915449280 K=33 amax=56 rank=PARI[1,3];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:no_answer_within_300_s lam=0.00435896 gen=PARI,_saturated
+945,248 E+ G=744056354166420960:2777403598855628830459968960 K=33 amax=56 rank=PARI[1,3];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:failed_(RuntimeError:_Aborted) lam=0.00435896 gen=PARI,_saturated
+72,65 E+ G=168914884320:4705752514364665920 K=9 amax=58 rank=PARI[1,3];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:failed_(RuntimeError:_Aborted) lam=0.0479986 gen=PARI,_saturated
+920,129 E+ G=339954605141131680:809522910864959301149588160 K=36 amax=56 rank=PARI[1,3];Magma_TwoPowerIsogenyDescentRankBound:1;eclib:no_answer_within_300_s lam=0.00376604 gen=PARI,_saturated

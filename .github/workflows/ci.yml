@@ -61,6 +61,8 @@ jobs:
           diff <(grep '^AUDIT OK:' audit.txt) scripts/audit_line.txt
           diff <(sort audit.txt) <(sort scripts/audit_output.txt)
           echo "::notice title=Axiom audit::$(grep '^AUDIT OK:' audit.txt)"
+          lake env lean scripts/AuditInternal.lean > internal.txt
+          diff <(grep '^AUDIT INTERNAL:' internal.txt) <(grep '^AUDIT INTERNAL:' scripts/audit_internal.txt)
       - name: The count 306 + 119 = 425, and forged certificates are refused
         shell: bash
         run: |
@@ -87,6 +89,8 @@ jobs:
           pip install -q -r scripts/g1_full/requirements.txt
           pip install -q sympy==1.14.0
           python3 scripts/g1_full/check_sigma.py | diff - scripts/g1_full/check_sigma.txt
+          python3 scripts/g1_full/sigma_exact.py | diff - scripts/g1_full/sigma_exact.txt
+          python3 scripts/g1_full/sigma_exact.py --negative | grep -q 'negative tests: 72 altered records, 72 refused'
           cd scripts/gauss_descent
           python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt
           python3 twocover_check.py | diff - twocover_check.txt
@@ -267,15 +271,19 @@ jobs:
           wait $TWIST
           diff <(sed 's/   \[[0-9]* s\]$//' /tmp/dm4_twist.out) dm4_twist.txt
           grep -q "^72 configurations on twists, 0 outside the bounds" /tmp/dm4_twist.out
-      - name: dm_sigma.py on the seven ratios it closes (G1_FULL_SYSTEM.md, the curves of F0*F8*GL; review of 7b4ff7a)
+      - name: dm_sigma.py and sigma_certify.py on the census ratios they close (G1_FULL_SYSTEM.md, the curves of F0*F8*GL)
         shell: bash
         run: |
           set -e -o pipefail
           cd scripts/g1_full
-          python3 dm_sigma.py --effort=4 91,60 209,120 420,341 572,555 608,105 680,111 741,580 > /tmp/sigma_fresh.jsonl
+          python3 dm_sigma.py --effort=4 --magma=magma_sigma2_raw.txt,magma_sigma3_raw.txt 91,60 209,120 420,341 572,555 608,105 680,111 741,580 760,39 945,248 > /tmp/sigma_fresh.jsonl
+          python3 dm_sigma.py --magma=magma_sigma2_raw.txt,magma_sigma3_raw.txt 72,65 920,129 > /tmp/sigma_fresh2.jsonl
+          python3 check_sigma.py /tmp/sigma_fresh2.jsonl | grep -q '^OK$'
           python3 check_sigma.py /tmp/sigma_fresh.jsonl | tee /tmp/sigma_check.txt
-          grep -q "^of the 24 open ratios of the census: 12 closed" /tmp/sigma_check.txt
+          grep -q "^of the 24 ratios open in the census before 24 November 2026: 15 closed" /tmp/sigma_check.txt
           grep -q "^OK$" /tmp/sigma_check.txt
+          python3 sigma_certify.py 91,60:E+ 91,60:E- 209,120:E- 420,341:E- 572,555:E- 608,105:E+ 680,111:E- 741,580:E+ 760,39:E+ 945,248:E+ 72,65:E+ 920,129:E+ | grep -v 'PARI stack' > /tmp/sigma_evidence.txt
+          diff <(cut -d' ' -f1-5 /tmp/sigma_evidence.txt) <(grep -v '^#' sigma_evidence.txt | cut -d' ' -f1-5)
 
   descents:
     # GAUSS_DESCENT.md and SECOND_DESCENT.md are experiments, not counted in the census. This job reruns the second descent

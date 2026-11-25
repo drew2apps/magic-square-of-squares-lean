@@ -327,6 +327,7 @@ MagicSquareOfSquares.G1.isSquare_norm_mod
 MagicSquareOfSquares.G1.isSquare_norm_of_normOk
 MagicSquareOfSquares.G1.maskTable_primes
 MagicSquareOfSquares.G1.maskTable_valid
+MagicSquareOfSquares.G1.moebius_height
 MagicSquareOfSquares.G1.no_point
 MagicSquareOfSquares.G1.no_point_13_3
 MagicSquareOfSquares.G1.no_point_19_11
@@ -377,9 +378,17 @@ MagicSquareOfSquares.G1.quadPart6
 MagicSquareOfSquares.G1.quadPart7
 MagicSquareOfSquares.G1.quadPart8
 MagicSquareOfSquares.G1.quadPart9
+MagicSquareOfSquares.G1.quartic_root_weierstrass
 MagicSquareOfSquares.G1.quartic_to_weierstrass
 MagicSquareOfSquares.G1.resultant_F0_GL
 MagicSquareOfSquares.G1.resultants_octic
+MagicSquareOfSquares.G1.sigma_involution
+MagicSquareOfSquares.G1.sigma_minus
+MagicSquareOfSquares.G1.sigma_minus_U
+MagicSquareOfSquares.G1.sigma_palin
+MagicSquareOfSquares.G1.sigma_palin_U
+MagicSquareOfSquares.G1.sigma_plus
+MagicSquareOfSquares.G1.sigma_plus_U
 MagicSquareOfSquares.G1.sizePrimes_valid
 MagicSquareOfSquares.G1.sqFive_of_intSq
 MagicSquareOfSquares.G1.sqFive_of_solution
@@ -389,6 +398,7 @@ MagicSquareOfSquares.G1.table47
 MagicSquareOfSquares.G1.table7
 MagicSquareOfSquares.G1.table8
 MagicSquareOfSquares.G1.testBit_sqMask_of_int
+MagicSquareOfSquares.G1.two_torsion_translate
 MagicSquareOfSquares.GaussDescent.gaussianInt_norm_alpha0
 MagicSquareOfSquares.GaussDescent.gaussianInt_norm_alpha8
 MagicSquareOfSquares.GaussDescent.gaussianInt_norm_gamma4
@@ -539,4 +549,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 1139 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 1177 theorems (including auxiliary ones), standard axioms only

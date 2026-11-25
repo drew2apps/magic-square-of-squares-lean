@@ -33,3 +33,4 @@ import MagicSquareOfSquares.ClassConic
 import MagicSquareOfSquares.ClassOdd
 import MagicSquareOfSquares.ClassFive
 import MagicSquareOfSquares.ClassTable
+import MagicSquareOfSquares.G1Sigma

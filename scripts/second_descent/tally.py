@@ -15,5 +15,5 @@ print('closed with a rank bound 0 from descent (second_descent.py): %d' % len(d2
 print('closed with rank 0 from an L-value (lvalue_close.py): %d: %s' % (len(dl), ' '.join('%d,%d' % p for p in sorted(dl))))
 print('closed, directly or through the partner: %d' % len(full))
 print('not closed: %d: %s' % (len(R) - len(full), ' '.join('%d,%d' % p for p in sorted(R) if p not in full)))
-print('of the 24 ratios that are open in the census: closed %d (by descent bounds alone %d), not closed: %s' % (
+print('of the 24 ratios that were open in the census at release 0.5.0: closed %d (by descent bounds alone %d), not closed: %s' % (
     sum(p in full for p in OPEN24), sum(p in d2 or partner(*p) in d2 for p in OPEN24), ' '.join('%d,%d' % p for p in OPEN24 if p not in full)))

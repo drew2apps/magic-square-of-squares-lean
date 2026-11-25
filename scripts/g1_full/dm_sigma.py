@@ -70,6 +70,10 @@ def dm_sigma(m, n, s):
             for F in isos:
                 rk = pari.ellrank(F, eff); lo = max(lo, int(rk[0])); hi = min(hi, int(rk[1]))
             if lo == hi: break
+    mg = MAGMA.get(((m, n), out['curve']))
+    if mg is not None and mg < hi:
+        assert mg >= lo, (lo, hi, mg)
+        hi = mg; out['upper'] = 'Magma TwoPowerIsogenyDescentRankBound: %d' % mg
     out['rank'] = [lo, hi]
     if lo == 0 and hi == 0:                        # rank 0: the points are torsion points
         cand = set([QQ(z0)])
@@ -164,9 +168,19 @@ def finish(m, n, cand, out, how):
 
 
 EFFORT = 1
+MAGMA = {}
+def read_magma(path):
+    """Upper rank bounds from Magma's calculator (lines 'BOUNDS m n curve r' of a transcript)."""
+    import re
+    for m, n, c, r in re.findall(r'<line>BOUNDS (\d+) (\d+) (E[+-]) (\d+)</line>', open(path).read()):
+        MAGMA[((int(m), int(n)), c)] = int(r)
+
 if __name__ == '__main__':
     for arg in sys.argv[1:]:
         if arg.startswith('--effort='): EFFORT = int(arg[9:]); continue
+        if arg.startswith('--magma='):
+            for path in arg[8:].split(','): read_magma(path)
+            continue
         m, n = (int(v) for v in arg.split(','))
         for s in (2, -2):
             t0 = time.time()

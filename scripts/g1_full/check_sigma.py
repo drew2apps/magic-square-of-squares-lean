@@ -5,8 +5,9 @@
     python3 check_sigma.py FRESH.jsonl     also compare fresh records (from dm_sigma.py) with the committed ones
 
 The committed records are dm_sigma_306.jsonl (every coprime ratio m <= 1000 with m^2 + n^2 a square or twice a
-square, both curves, and the partner pairs outside that range) and dm_sigma_24.jsonl (the 24 open ratios of the
-census and four partners outside it, with ellrank effort up to 4)."""
+square, both curves, and the partner pairs outside that range) and dm_sigma_24.jsonl (the 24 ratios that were open
+in the census before 24 November 2026 and four partners outside it, with ellrank effort up to 4 and Magma's upper
+bounds of magma_sigma2_raw.txt)."""
 import sys, os, json
 from math import gcd, isqrt
 D = os.path.dirname(os.path.abspath(__file__))
@@ -41,8 +42,11 @@ OPEN24 = [(91,60),(151,31),(195,28),(209,120),(223,167),(329,89),(420,341),(440,
 c24 = [p for p in OPEN24 if closed(p, 'dm_sigma_24.jsonl') or closed(partner(*p), 'dm_sigma_24.jsonl')]
 c24b = [p for p in OPEN24 if p in withp]
 assert c24 == c24b, (c24, c24b)
-print('of the 24 open ratios of the census: %d closed: %s' % (len(c24), ' '.join('(%d,%d)' % p for p in c24)))
-print('left: %s' % ' '.join('(%d,%d)' % p for p in OPEN24 if p not in c24))
+print('of the 24 ratios open in the census before 24 November 2026: %d closed: %s' % (len(c24), ' '.join('(%d,%d)' % p for p in c24)))
+print('open: %s' % ' '.join('(%d,%d)' % p for p in OPEN24 if p not in c24))
+FOUR = [(72,65),(137,7),(425,168),(593,257),(740,539),(828,173),(840,83),(920,129),(923,757)]
+c4 = [p for p in FOUR if p in withp]
+print('of the 9 ratios closed in the four-point tier: %d closed here as well: %s' % (len(c4), ' '.join('(%d,%d)' % p for p in c4)))
 if len(sys.argv) > 1:
     fresh = [json.loads(l) for l in open(sys.argv[1]) if l.startswith('{')]
     n = 0

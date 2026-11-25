@@ -1,0 +1,13 @@
+91,60 E+: hhat(G) in [3.182478, 3.184591] (k = 8), B <= 76.150, U <= 62.279, |a| <= 52 (dm_sigma.py listed 58), 108 candidates, four corners square only at t in {-1, 1}; saturated at p <= 9; torsion Z/2 (98 primes)
+91,60 E-: hhat(G) in [3.374462, 3.376530] (k = 8), B <= 74.679, U <= 60.859, |a| <= 48 (dm_sigma.py listed 53), 100 candidates, four corners square only at t in {-1, 1}; saturated at p <= 26; torsion Z/2 (98 primes)
+209,120 E-: hhat(G) in [3.888377, 3.897958] (k = 7), B <= 86.575, U <= 70.396, |a| <= 48 (dm_sigma.py listed 53), 100 candidates, four corners square only at t in {-1, 1}; saturated at p <= 29; torsion Z/2 (96 primes)
+420,341 E-: hhat(G) in [4.448536, 4.459446] (k = 7), B <= 98.699, U <= 80.048, |a| <= 48 (dm_sigma.py listed 53), 100 candidates, four corners square only at t in {-1, 1}; saturated at p <= 33; torsion Z/2 (99 primes)
+572,555 E-: hhat(G) in [4.705810, 4.717357] (k = 7), B <= 104.502, U <= 84.678, |a| <= 47 (dm_sigma.py listed 52), 98 candidates, four corners square only at t in {-1, 1}; saturated at p <= 58; torsion Z/2 (100 primes)
+608,105 E+: hhat(G) in [4.367772, 4.378801] (k = 7), B <= 99.672, U <= 81.033, |a| <= 50 (dm_sigma.py listed 55), 104 candidates, four corners square only at t in {-1, 1}; saturated at p <= 33; torsion Z/2 (99 primes)
+680,111 E-: hhat(G) in [4.485997, 4.497297] (k = 7), B <= 102.221, U <= 82.909, |a| <= 50 (dm_sigma.py listed 55), 104 candidates, four corners square only at t in {-1, 1}; saturated at p <= 33; torsion Z/2 (96 primes)
+741,580 E+: hhat(G) in [4.615425, 4.627287] (k = 7), B <= 107.087, U <= 87.250, |a| <= 51 (dm_sigma.py listed 56), 106 candidates, four corners square only at t in {-1, 1}; saturated at p <= 9; torsion Z/2 (99 primes)
+760,39 E+: hhat(G) in [4.501483, 4.512951] (k = 7), B <= 103.784, U <= 84.114, |a| <= 50 (dm_sigma.py listed 56), 104 candidates, four corners square only at t in {-1, 1}; saturated at p <= 33; torsion Z/2 (98 primes)
+945,248 E+: hhat(G) in [4.665091, 4.677023] (k = 7), B <= 107.940, U <= 87.558, |a| <= 51 (dm_sigma.py listed 56), 106 candidates, four corners square only at t in {-1, 1}; saturated at p <= 33; torsion Z/2 (99 primes)
+72,65 E+: hhat(G) in [3.106323, 3.108387] (k = 8), B <= 74.366, U <= 60.907, |a| <= 53 (dm_sigma.py listed 58), 110 candidates, four corners square only at t in {-1, 1}; saturated at p <= 9; torsion Z/2 (101 primes)
+920,129 E+: hhat(G) in [4.641540, 4.653304] (k = 7), B <= 106.419, U <= 86.321, |a| <= 50 (dm_sigma.py listed 56), 104 candidates, four corners square only at t in {-1, 1}; saturated at p <= 36; torsion Z/2 (99 primes)
+sigma_exact OK: 12 curves
