@@ -1,6 +1,8 @@
 # The 3×3 magic square of squares: a statement on the centre, a machine-checked reduction, and a computed census
 
 Drew Carlson. 23 November 2026, release 0.5.0.
+
+**This note describes release 0.5.0 and is not updated** (it gives 24 open ratios and 313 declared theorems). For the current census (9 open since 24 November 2026), the current counts and the prior art found since (Morgenstern 2010, Bremner 1999, the Kepler71 notes), see `README.md`, `LEDGER.md` and `CHANGES.md`.
 Repository: https://github.com/drew2apps/magic-square-of-squares-lean. Archive: https://doi.org/10.5281/zenodo.24435351.
 
 The Lean code and this text were written with Claude, an AI model made by Anthropic. I am not a number theorist. Nobody else has checked the mathematics outside Lean. This note says what is proved, what is only computed, and what is unchecked, so that someone who knows the subject can check it.
@@ -25,7 +27,7 @@ This note does not solve the problem. It contains:
 
 ## 2. Proved in Lean
 
-Lean 4 with Mathlib, 558 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures. The library also contains the nine necessary conditions listed on Wikipedia (most of them are in Rabern 2003) and the classical reformulations: three arithmetic progressions of squares with a common difference, rational right triangles of equal area, and points on the curves `y² = x³ − n²x`.
+Lean 4 with Mathlib, 313 declared theorems, no `sorry`, no `native_decide`, standard axioms only (checked in CI for every theorem). Statements exist both for nine integers and for the matrix form used in google-deepmind/formal-conjectures. The library also contains the nine necessary conditions listed on Wikipedia (most of them are in Rabern 2003) and the classical reformulations: three arithmetic progressions of squares with a common difference, rational right triangles of equal area, and points on the curves `y² = x³ − n²x`.
 
 ### 2.1 The centre
 

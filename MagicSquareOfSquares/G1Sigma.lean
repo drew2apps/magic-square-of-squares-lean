@@ -17,9 +17,11 @@ of the family G1, and `z = t + 1/t`:
   `y² = X³ + c₂X² + c₁c₃X + c₁²c₄` by `X = c₁/h`, `y = c₁Y/h²` (`quartic_root_weierstrass`); and
   `z ↦ −z` is `X ↦ −c₁X/(2z₀X + c₁)` (`sigma_involution`).
 * The heights: for that Möbius map, `|c₁p|` and `|2z₀p + c₁q|` are at most `(|c₁| + 2|z₀|)·max(|p|, |q|)`
-  (`moebius_height`), which gives `H(X') ≤ (|A| + 4)·H(X)` for `z₀ = ±2`.
-* Translation by a point of order 2: on `y² = (x − e)(x² + bx + c)`, the abscissa of `P + (e, 0)` is
-  `e + (e² + be + c)/(x − e)` (`two_torsion_translate`).
+  (`moebius_height`, the coefficient bound only). For `X = p/q` in lowest terms this gives `H(X') ≤ (|c₁| + 4)·H(X)`
+  for `z₀ = ±2`, and, the map being an involution, the same with `X` and `X'` exchanged; neither step is
+  formalised here.
+* Translation by a point of order 2: on `y² = (x − e)(x² + bx + c)`, the chord through `P` and `(e, 0)` gives the
+  abscissa `e + (e² + be + c)/(x − e)` (`two_torsion_translate`: the identity of the chord formula, not the group law).
 
 Ranks, generators and heights are not in Lean (`sigma_exact.py`, `sigma_certify.py`).
 -/

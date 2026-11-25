@@ -1,0 +1,1 @@
+N = 1000: degenerate magic squares of squares checked: 179 with m^2+n^2 a square, 127 with twice a square; failures 0

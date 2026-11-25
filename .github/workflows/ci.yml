@@ -62,7 +62,7 @@ jobs:
           diff <(sort audit.txt) <(sort scripts/audit_output.txt)
           echo "::notice title=Axiom audit::$(grep '^AUDIT OK:' audit.txt)"
           lake env lean scripts/AuditInternal.lean > internal.txt
-          diff <(grep '^AUDIT INTERNAL:' internal.txt) <(grep '^AUDIT INTERNAL:' scripts/audit_internal.txt)
+          diff <(sort internal.txt) <(sort scripts/audit_internal.txt)
       - name: The count 306 + 119 = 425, and forged certificates are refused
         shell: bash
         run: |
@@ -91,6 +91,7 @@ jobs:
           python3 scripts/g1_full/check_sigma.py | diff - scripts/g1_full/check_sigma.txt
           python3 scripts/g1_full/sigma_exact.py | diff - scripts/g1_full/sigma_exact.txt
           (cd scripts/second_descent && python3 second_exact.py | diff - second_exact.txt)
+          python3 scripts/degenerate_squares.py 1000 | diff - scripts/degenerate_squares.txt
           python3 scripts/g1_full/sigma_exact.py --negative | grep -q 'negative tests: 96 altered records, 96 refused'
           cd scripts/gauss_descent
           python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt

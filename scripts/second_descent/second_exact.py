@@ -9,8 +9,9 @@ For each closing curve (SECOND_DESCENT.md, sections 2 and 3) this script recompu
  2. the Weierstrass model E of Y^2 = d Q(s) by X = A/(s - r) (the map of quartic_root_weierstrass in G1Sigma.lean),
     and that the record's curve of rank 0 is isomorphic over Q to E or to its twist by -1, as the record says;
  3. the torsion of E(Q(i)): every point found by halving from the points of order 2 over Q(i), closed under
-    addition, and the bound: the gcd of #E(F_p) over primes p = 1 (mod 4) of good reduction, 13 <= p < 400 (Q(i)
-    embeds in Q_p, and torsion of order prime to p injects into E(F_p)); the two agree;
+    addition, and the bound: the gcd of #E(F_p) over primes p = 1 (mod 4) of good reduction, 17 <= p < 400 (Q(i)
+    embeds in Q_p, and torsion of order prime to p injects into E(F_p); by Kamienny, Kenku and Momose every prime
+    dividing the order of a torsion point over a quadratic field is at most 13, so p >= 17 loses nothing); the two agree;
  4. the equations of section 3: with g(x) = -A x/(2 r x + A) (the image of s -> -s), x(P + T) = g(x(P)) when the
     twist by -1 has rank 0, x(P - T) = g(x(P)), that is x(-P + T), when E has rank 0, for every torsion point T;
     each is a polynomial equation in x(P) over Q(i) (squared to remove y), solved by factoring over Q(i);
@@ -177,7 +178,7 @@ def torsion_bound(a2, a4, a6, disc):
     from math import gcd
     g = 0
     den = sp.lcm([sp.Rational(c).q for c in (a2, a4, a6)])
-    for p in sp.primerange(13, 400):
+    for p in sp.primerange(17, 400):        # above every prime that can divide a torsion order over a quadratic field (<= 13)
         if p % 4 != 1 or disc % p == 0 or den % p == 0: continue
         A2, A4, A6 = [int(sp.Rational(c).p * pow(int(sp.Rational(c).q), -1, p)) % p for c in (a2, a4, a6)]
         g = gcd(g, count_mod(A2, A4, A6, p))

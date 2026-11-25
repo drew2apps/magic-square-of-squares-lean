@@ -22,7 +22,7 @@ def bounds(C):
     j = Fr(C.c4**3, C.D); jsize = max(abs(j.numerator), j.denominator)
     common = ln_bounds(abs(C.D))[1]/6 + lnplus_hi(abs(j))/6 + lnplus_hi(Fr(abs(C.b2), 12)) + (LN2[1] if C.b2 else 0)
     assert jsize >= 32
-    return common + ln_bounds(jsize)[1]/12 + Fr(1922, 1000), common + Fr(214, 100)
+    return common + ln_bounds(jsize)[1]/12 + Fr(1946, 1000), common + Fr(214, 100)   # Silverman's 0.973, as sigma_exact.py
 
 
 def hhat(C, P, B, U, k=6):
