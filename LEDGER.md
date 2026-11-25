@@ -33,7 +33,7 @@ The 119 are exclusions with a proof in Lean, not new closures: all 119 were alre
 
 CI on every push: `lake build`, the axiom audit of every theorem (`scripts/Audit.lean`, compared with `scripts/audit_output.txt`), the generated Lean files against their generators, the count of declared theorems.
 
-## Tier B: the census of ratios `m ≤ 1000` (release 0.5.0)
+## Tier B: the census of ratios `m ≤ 1000` (release 0.5.0, with the 18 closures of 24 November 2026, not released)
 
 | Count | Method | Rests on |
 |---|---|---|

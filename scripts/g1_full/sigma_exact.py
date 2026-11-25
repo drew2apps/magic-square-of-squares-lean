@@ -25,7 +25,10 @@ script does not recompute; see sigma_certify.py).  Everything else is recomputed
       hhat - h <= U   (Silverman's archimedean bound as quoted by Cremona-Prickett-Siksek; see height_sides.py),
     hhat(G) enclosed from Q = 2^k G (exact duplication): (h(x(Q)) - B)/4^k <= hhat(G) <= (h(x(Q)) + U)/4^k.
     Demjanenko-Manin: |a^2 - a'^2| hhat(G) <= B + U + log(|A| + 4), so when |a| != |a'|,
-    max(|a|, |a'|) <= Xb := (B + U + log(|A| + 4)) / (lower end of hhat(G)).  amax = floor(Xb) is computed here.
+    max(|a|, |a'|) <= Xb := (B + U + log(|A| + 4)) / (lower end of hhat(G)); the listing goes to floor(Xb) + 2.
+    B uses Silverman's constant 0.973 (eclib and Sage use Bremner's correction 0.961, which gives a smaller B).
+    The index bound K of the evidence is checked against sqrt(hhat(G)/lam), with the upper end of the enclosure and the
+    recorded Cremona-Siksek lower bound lam (the one floating-point input; sigma_certify.py).
  6. The candidates: X(aG + T) for 0 <= a <= amax and T in {O, (e, 0)} (exact group law); X = 0 (z = infinity);
     P = O (z = z0); P' = O (X = -A/(2 z0)); |a| = |a'|, T'' = O: X = M(X), so X = 0 or X = -A/z0;
     |a| = |a'|, T'' = (e, 0): x(P + T'') = e + f'(e)/(X - e) = M(X) = -A X/(2 z0 X + A), a quadratic in X whose
@@ -158,7 +161,7 @@ def four_corners(m, n, t):
     GL = (m+n)**2*(t-1)**2 + (m-n)**2*(t+1)**2; GU = (m-n)**2*(t-1)**2 + (m+n)**2*(t+1)**2
     return all(issq(v) for v in (F0, F8, GL, GU))
 
-def check(m, n, cv, Gx, Gy, K):
+def check(m, n, cv, Gx, Gy, K, lam):
     s = 2 if cv == 'E+' else -2
     M = model(m, n, s); A, z0 = M['A'], M['z0']
     C = Curve(M['a2'], M['a4'], M['a6'])
@@ -173,6 +176,29 @@ def check(m, n, cv, Gx, Gy, K):
             g = gcd(g, count_mod(C, q)); qs += 1
     assert g == 2, g
     tors = [None, T]
+    # 5. heights
+    b2, D, j = C.b2, C.D, Fr(C.c4**3, C.D)
+    jsize = max(abs(j.numerator), j.denominator); assert jsize >= 32
+    common_hi = ln_bounds(abs(D))[1]/6 + lnplus_hi(abs(j))/6 + lnplus_hi(Fr(abs(b2), 12)) + (LN2[1] if b2 else 0)
+    Bhi = common_hi + ln_bounds(jsize)[1]/12 + Fr(1946, 1000)     # Silverman's published 0.973, doubled (eclib uses Bremner's 0.961)
+    Uhi = common_hi + Fr(214, 100)
+    Bfloat = float(Bhi)
+    x = G[0]; k = 0
+    while True:
+        hx = hnaive(x)
+        if hx[1] > 60000 or k >= 12: break
+        x = C.dup_x(x); k += 1
+    hx = hnaive(x)
+    lo = (hx[0] - Bhi) / 4**k; hi = (hx[1] + Uhi) / 4**k
+    assert lo > 0
+    logK = ln_bounds(abs(A) + 4)[1]
+    Xb = (Bhi + Uhi + logK) / lo
+    amax = int(Xb) + 2                      # floor, and two more multiples for margin
+    # the index bound: if G = k G1 + torsion, hhat(G1) = hhat(G)/k^2 >= lam, so k^2 <= hi/lam; K must reach that
+    lam_safe = Fr(lam) * Fr(99999, 100000)  # lam is recorded to 6 digits
+    Kmin = 1
+    while (Kmin + 1)**2 * lam_safe <= hi: Kmin += 1
+    assert K >= Kmin, ('index bound K below sqrt(hhat(G)/lam)', K, Kmin)
     # 4. saturation at every prime p <= K
     assert K * K * Fr(1) >= 0
     Gden = G[0].denominator * G[1].denominator
@@ -190,24 +216,6 @@ def check(m, n, cv, Gx, Gy, K):
                 vals.append((q, v is not None))
                 if len(set(b for _, b in vals)) == 2: break
         assert (p > 2 and vals) or (p == 2 and len(set(b for _, b in vals)) == 2), ('saturation', p)
-    # 5. heights
-    b2, D, j = C.b2, C.D, Fr(C.c4**3, C.D)
-    jsize = max(abs(j.numerator), j.denominator); assert jsize >= 32
-    common_hi = ln_bounds(abs(D))[1]/6 + lnplus_hi(abs(j))/6 + lnplus_hi(Fr(abs(b2), 12)) + (LN2[1] if b2 else 0)
-    Bhi = common_hi + ln_bounds(jsize)[1]/12 + Fr(1922, 1000)
-    Uhi = common_hi + Fr(214, 100)
-    Bfloat = float(Bhi)
-    x = G[0]; k = 0
-    while True:
-        hx = hnaive(x)
-        if hx[1] > 60000 or k >= 12: break
-        x = C.dup_x(x); k += 1
-    hx = hnaive(x)
-    lo = (hx[0] - Bhi) / 4**k; hi = (hx[1] + Uhi) / 4**k
-    assert lo > 0
-    logK = ln_bounds(abs(A) + 4)[1]
-    Xb = (Bhi + Uhi + logK) / lo
-    amax = int(Xb)                          # floor
     # 6. candidates
     cand = set([('z0',)])
     def addX(X):
@@ -243,7 +251,7 @@ def check(m, n, cv, Gx, Gy, K):
             for tt in ([t, 1/t] if t != 0 else [t]):
                 if four_corners(m, n, tt): four.add(str(tt))
     bad = [t for t in four if t not in ('0', '1', '-1', 'inf')]
-    return dict(k=k, lo=lo, hi=hi, B=Bhi, U=Uhi, amax=amax, ncand=len(cand), four=sorted(four), bad=bad, tors_q=qs)
+    return dict(k=k, lo=lo, hi=hi, B=Bhi, U=Uhi, amax=amax, ncand=len(cand), four=sorted(four), bad=bad, tors_q=qs, Kmin=Kmin)
 
 def tsol(z):
     D = z*z - 4
@@ -299,23 +307,58 @@ def negative():
         G = (Gx, Gy); e = [r for r in divisors_cands(C)][0]; T = (Fr(e), Fr(0))
         alts = [C.add(G, G), C.add(C.add(G, G), G), (Gx, Gy + 1), (Gx + 1, Gy)]
         if 2 < int(f['K']): alts.append(C.add(C.add(G, G), C.add(G, G)))      # 4G
+        K0 = int(f['K']); p = K0 + 1
+        while any(p % q == 0 for q in range(2, p)): p += 1
+        Pp = None
+        for _ in range(p): Pp = C.add(Pp, G)
+        alts.append(Pp)                                                       # pG, p the least prime above K
         other = 'E-' if cv == 'E+' else 'E+'
         for P in alts:
             total += 1
             try:
-                r = check(m, n, cv, P[0], P[1], int(f['K'])); print('NOT REFUSED', m, n, cv)
+                r = check(m, n, cv, P[0], P[1], int(f['K']), Fr(f['lam'])); print('NOT REFUSED', m, n, cv)
             except AssertionError:
                 refused += 1
         total += 1
         try:
-            check(m, n, other, Gx, Gy, int(f['K'])); print('NOT REFUSED (other curve)', m, n, cv)
+            check(m, n, other, Gx, Gy, int(f['K']), Fr(f['lam'])); print('NOT REFUSED (other curve)', m, n, cv)
+        except AssertionError:
+            refused += 1
+        total += 1
+        try:                                                                  # K lowered
+            r0 = check(m, n, cv, Gx, Gy, int(f['K']), Fr(f['lam']))
+            check(m, n, cv, Gx, Gy, r0['Kmin'] - 1, Fr(f['lam'])); print('NOT REFUSED (K lowered)', m, n, cv)
         except AssertionError:
             refused += 1
     print('negative tests: %d altered records, %d refused' % (total, refused))
     return refused == total
 
 
+def same_group(path):
+    """A fresh sigma_certify.py output against sigma_evidence.txt: PARI may return another generator (-G, G + T, -G + T),
+    so the generators are compared up to sign and the point of order 2, exactly, and K and amax must agree."""
+    def read(f):
+        out = {}
+        for line in open(f):
+            if line.startswith('#') or not line.strip(): continue
+            w = line.split(); d = dict(x.split('=', 1) for x in w[2:])
+            out[(w[0], w[1])] = (tuple(Fr(v) for v in d['G'].split(':')), d['K'], d['amax'])
+        return out
+    old, new = read(os.path.join(here, 'sigma_evidence.txt')), read(path)
+    assert set(old) == set(new), (sorted(set(old) ^ set(new)))
+    for k in old:
+        (G, K, a), (G2, K2, a2) = old[k], new[k]
+        assert (K, a) == (K2, a2), (k, K, K2, a, a2)
+        m, n = (int(v) for v in k[0].split(',')); M = model(m, n, 2 if k[1] == 'E+' else -2)
+        C = Curve(M['a2'], M['a4'], M['a6']); e = divisors_cands(C)[0]; T = (Fr(e), Fr(0))
+        neg = lambda P: (P[0], -P[1])
+        assert any(G2 == Q for Q in (G, neg(G), C.add(G, T), neg(C.add(G, T)))), ('another group', k)
+    print('same generators up to sign and torsion, same K and amax: %d curves' % len(old))
+
+
 if __name__ == '__main__':
+    if len(sys.argv) > 2 and sys.argv[1] == '--same-group':
+        same_group(sys.argv[2]); sys.exit(0)
     if '--negative' in sys.argv:
         sys.exit(0 if negative() else 1)
     n_ok = 0
@@ -324,12 +367,11 @@ if __name__ == '__main__':
         w = line.split(); m, n = (int(v) for v in w[0].split(',')); cv = w[1]
         f = dict(x.split('=', 1) for x in w[2:])
         Gx, Gy = f['G'].split(':')
-        r = check(m, n, cv, Fr(Gx), Fr(Gy), int(f['K']))
+        r = check(m, n, cv, Fr(Gx), Fr(Gy), int(f['K']), Fr(f['lam']))
         assert not r['bad'], (m, n, cv, r['bad'])
-        assert r['amax'] <= int(f['amax']), (m, n, cv, r['amax'], f['amax'])
         n_ok += 1
         print('%d,%d %s: hhat(G) in [%.6f, %.6f] (k = %d), B <= %.3f, U <= %.3f, |a| <= %d (dm_sigma.py listed %s), '
-              '%d candidates, four corners square only at t in {%s}; saturated at p <= %s; torsion Z/2 (%d primes)'
+              '%d candidates, four corners square only at t in {%s}; saturated at p <= %s (needed: %d); torsion Z/2 (%d primes)'
               % (m, n, cv, r['lo'], r['hi'], r['k'], r['B'], r['U'], r['amax'], f['amax'], r['ncand'], ', '.join(r['four']),
-                 f['K'], r['tors_q']), flush=True)
+                 f['K'], r['Kmin'], r['tors_q']), flush=True)
     print('sigma_exact OK: %d curves' % n_ok)

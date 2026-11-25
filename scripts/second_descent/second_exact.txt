@@ -1,0 +1,7 @@
+195,28 curve 1356: d = 1, torsion over Q(i) 8 (equal to the bound from #E(F_p)), 7 candidates; rational t: -1 degenerate, 0 no, 1 degenerate
+223,167 curve 1356: d = 37241, torsion over Q(i) 4 (equal to the bound from #E(F_p)), 7 candidates; rational t: -1 no, 0 degenerate, 1 no
+609,200 curve +14: d = 661762, torsion over Q(i) 4 (equal to the bound from #E(F_p)), 10 candidates; rational t: -1 degenerate, 0 no, 1 degenerate
+809,409 curve +14: d = 661762, torsion over Q(i) 4 (equal to the bound from #E(F_p)), 10 candidates; rational t: -1 no, 0 degenerate, 1 no
+861,620 curve +23: d = 713842, torsion over Q(i) 4 (equal to the bound from #E(F_p)), 10 candidates; rational t: -1 degenerate, 0 no, 1 degenerate
+440,279 curve 1356 (twist by -1 of rank 0 by an L-value): d = 1, torsion over Q(i) 8 (equal to the bound), 7 candidates; rational t: -1 degenerate, 0 no, 1 degenerate
+second_exact OK: 6 closures

@@ -1,8 +1,9 @@
 import MagicSquareOfSquares
 
 /-!
-The theorems that `scripts/Audit.lean` counts but does not print: the auxiliary theorems that Lean
-generates (internal details: equation lemmas, `proof_` terms of tactic blocks, and the like).
+The theorems that `scripts/Audit.lean` counts but does not print: every theorem with an internal name,
+that is the `private theorem`s of the sources (Lean stores them as `_private...`) and the auxiliary
+theorems that Lean generates (`_simp` lemmas, `proof_` terms of tactic blocks, and the like).
 Run with `lake env lean scripts/AuditInternal.lean`; output in `scripts/audit_internal.txt`.
 Together with the names that `Audit.lean` prints, this accounts for its count `N`.
 -/

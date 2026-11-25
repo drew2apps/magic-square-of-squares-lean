@@ -97,7 +97,7 @@ def dm_sigma(m, n, s):
     sat = Ep.ellsaturation([pts[0]], kmax)
     G = iso(Em([QQ(sat[0][0]), QQ(sat[0][1])]))
     hG = float(G.height()); B = float(E.silverman_height_bound())
-    # exact enclosure of hhat(G): |h(x(2^k G)) - hhat(2^k G)| <= B, hhat(2^k G) = 4^k hhat(G)
+    # enclosure of hhat(G) in floating point (the exact one is in sigma_exact.py): |h(x(2^k G)) - hhat(2^k G)| <= B
     def hx(P):
         X = P[0]; return math.log(max(abs(int(X.numerator())), abs(int(X.denominator()))))
     k = 7; Q = G
@@ -107,7 +107,7 @@ def dm_sigma(m, n, s):
     j = E.j_invariant(); hj = math.log(max(abs(int(j.numerator())), abs(int(j.denominator()))))
     assert hj >= 2.62          # so the upper side hhat - h <= B - h(j)/12 + 0.218 is below B (see G1_FULL_SYSTEM.md)
     logK = math.log(abs(A) + 4)
-    amax = int(math.floor((2*B + logK)/hG_lo)) + 1            # from the exact lower end of the enclosure
+    amax = int(math.floor((2*B + logK)/hG_lo)) + 1            # from the lower end of that enclosure
     tors = E.torsion_points()
     out.update(G=str(G.xy()[0])[:60], hG=hG, hG_enclosure=[hG_lo, hG_hi], B=B, hj=hj, logK=logK, amax=amax,
                ntors=len(tors), sat='<= %d' % kmax, lam=lam)

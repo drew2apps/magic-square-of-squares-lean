@@ -1,0 +1,18 @@
+--- input
+E:=MinimalModel(EllipticCurve([0, 0, 0, -1545887281, 10868231053680])); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 195, 28, "1356", hi; E:=MinimalModel(EllipticCurve([0, -1, 0, -682502020075443120, -216717222157776186302937600])); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 223, 167, "1356", hi; 
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2599922987</seed><version>2.29-10</version><time>0.100</time><memory>32.09MB</memory></headers><results><line>BOUNDS 195 28 1356 0</line><line>BOUNDS 223 167 1356 0</line><line></line></results></calculator>
+
+--- input
+E:=MinimalModel(EllipticCurve([0, 1, 0, 2657389687335443426815780334514559, -46004163125583148363653912915452814645634607488641])); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 609, 200, "+14", hi; E:=MinimalModel(EllipticCurve([0, 1, 0, 2657389687335443426815780334514559, -46004163125583148363653912915452814645634607488641])); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 809, 409, "+14", hi; 
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>1327646741</seed><version>2.29-10</version><time>0.260</time><memory>32.09MB</memory></headers><results><line>BOUNDS 609 200 +14 0</line><line>BOUNDS 809 409 +14 0</line><line></line></results></calculator>
+
+--- input
+E:=MinimalModel(EllipticCurve([0, 1, 0, -362829818208101442058708434949241601, -167594410341870582628947624633518268164345050039942401])); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 861, 620, "+23", hi; 
+--- response
+<?xml version="1.0"?>
+<calculator><headers><max_time>60</max_time><max_input>50000</max_input><seed>2263593188</seed><version>2.29-10</version><time>0.110</time><memory>32.09MB</memory></headers><results><line>BOUNDS 861 620 +23 0</line><line></line></results></calculator>
+

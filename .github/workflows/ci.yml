@@ -90,7 +90,8 @@ jobs:
           pip install -q sympy==1.14.0
           python3 scripts/g1_full/check_sigma.py | diff - scripts/g1_full/check_sigma.txt
           python3 scripts/g1_full/sigma_exact.py | diff - scripts/g1_full/sigma_exact.txt
-          python3 scripts/g1_full/sigma_exact.py --negative | grep -q 'negative tests: 72 altered records, 72 refused'
+          (cd scripts/second_descent && python3 second_exact.py | diff - second_exact.txt)
+          python3 scripts/g1_full/sigma_exact.py --negative | grep -q 'negative tests: 96 altered records, 96 refused'
           cd scripts/gauss_descent
           python3 gauss_descent.py 820,799 889,320 4,3 72,65 | sed 's/  \[[0-9.]* s\]$//' | diff - ci_expected.txt
           python3 twocover_check.py | diff - twocover_check.txt
@@ -283,7 +284,8 @@ jobs:
           grep -q "^of the 24 ratios open in the census before 24 November 2026: 15 closed" /tmp/sigma_check.txt
           grep -q "^OK$" /tmp/sigma_check.txt
           python3 sigma_certify.py 91,60:E+ 91,60:E- 209,120:E- 420,341:E- 572,555:E- 608,105:E+ 680,111:E- 741,580:E+ 760,39:E+ 945,248:E+ 72,65:E+ 920,129:E+ | grep -v 'PARI stack' > /tmp/sigma_evidence.txt
-          diff <(cut -d' ' -f1-5 /tmp/sigma_evidence.txt) <(grep -v '^#' sigma_evidence.txt | cut -d' ' -f1-5)
+          python3 sigma_exact.py --same-group /tmp/sigma_evidence.txt   # PARI may return -G or G + T: compared exactly up to those
+          python3 sigma_twice.py | diff - sigma_twice.txt
 
   descents:
     # GAUSS_DESCENT.md and SECOND_DESCENT.md are experiments, not counted in the census. This job reruns the second descent
@@ -422,6 +424,7 @@ jobs:
           set -e -o pipefail
           pip install -q sympy==1.14.0 cypari2==2.2.9
           cd scripts/cover_descent/structure
+          test "$(python3 class_selmer_linalg.py 5010 5010 --from 5000 | grep -c '[1-9][0-9]* ratios, 0 different')" = 1   # a comparison with class_selmer.py that is not empty
           python3 class_selmer_linalg.py 10000 0 --from 5000 --list /tmp/a.txt > /tmp/sa.txt &
           python3 class_selmer_linalg.py 15000 0 --from 10000 --list /tmp/b.txt > /tmp/sb.txt &
           wait
