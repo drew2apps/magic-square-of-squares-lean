@@ -1,0 +1,12 @@
+{"pair": [15, 8], "curve": "E", "rank": [1, 1], "hG": 3.1576167237813184, "B": 29.268802043933313, "amax": 27, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 4, "ncand": 111, "nt": 56, "t": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "sec": 0.2}
+{"pair": [15, 8], "curve": "D1", "rank": [4, 4], "status": "rank not 1", "sec": 0.0}
+{"pair": [15, 8], "curve": "Sig+", "rank": [1, 1], "hG": 1.9463329701400491, "B": 48.62618801060285, "amax": 62, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 127, "nt": 1, "t": {"1": "degenerate"}, "status": "closed", "sec": 0.3}
+{"pair": [15, 8], "curve": "Sig-", "rank": [1, 1], "hG": 2.118833859546796, "B": 46.821661277746145, "amax": 55, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 113, "nt": 1, "t": {"-1": "degenerate"}, "status": "closed", "sec": 0.2}
+{"pair": [21, 20], "curve": "E", "rank": [1, 1], "hG": 3.7137207434788, "B": 33.587753369904014, "amax": 27, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 4, "ncand": 111, "nt": 56, "t": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "sec": 0.2}
+{"pair": [21, 20], "curve": "D1", "rank": [3, 3], "status": "rank not 1", "sec": 0.1}
+{"pair": [21, 20], "curve": "Sig+", "rank": [2, 2], "status": "rank not 1", "sec": 0.0}
+{"pair": [21, 20], "curve": "Sig-", "rank": [2, 2], "status": "rank not 1", "sec": 0.4}
+{"pair": [23, 7], "curve": "E", "rank": [1, 1], "hG": 2.7699725894820997, "B": 32.73575885177993, "amax": 34, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 8, "ncand": 277, "nt": 136, "t": {}, "status": "closed", "sec": 0.2}
+{"pair": [23, 7], "curve": "D1", "rank": [1, 1], "hG": 5.933703131086203, "B": 60.658639203811504, "amax": 22, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 45, "nt": 0, "t": {}, "status": "closed", "sec": 0.4}
+{"pair": [23, 7], "curve": "Sig+", "rank": [3, 3], "status": "rank not 1", "sec": 0.0}
+{"pair": [23, 7], "curve": "Sig-", "rank": [2, 2], "status": "rank not 1", "sec": 0.0}

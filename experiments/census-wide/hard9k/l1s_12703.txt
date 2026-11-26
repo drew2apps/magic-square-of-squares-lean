@@ -1,0 +1,15 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+N 344915031754191990 root number 1 X 1200000000 exp(-2piX/sqrtN) = 2.6572279799525132e-06
+a_p to 10000001 19 s
+a_p to 20000001 41 s
+a_p to 30000001 63 s
+a_p to 40000001 86 s
+a_p to 50000001 110 s
+a_p to 60000001 135 s
+a_p to 70000001 162 s
+a_p to 80000001 187 s
+a_p to 90000001 214 s
+a_p to 100000001 241 s
+a_p to 110000001 268 s
+STOPPED at a_p 1.1e8: the isogeny class of w*K contains curves with PARI lower bound 2 (rn8_12703.txt), so rank w*K = 2 and L(E,1) = 0; the sum is pointless.

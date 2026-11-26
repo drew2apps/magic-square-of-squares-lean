@@ -1,6 +1,8 @@
 square_section.py: second descent on the coverings C_d of E+- at square-type ratios, m <= 300, box 60
-Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of class 2 found and checked;
+Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of class 2 found in the box, or given
+        in square_section_hints.json (found by PARI, a finder only), and checked exactly here;
         sha = every cover D_lam locally insoluble somewhere, so C_2(Q) is empty; open = otherwise)
+        On every curve: 2 is in Sel(E) (selmer_square_5000.json), R is on the curve with 2R = P and alpha(R) = 2H.
    4     3 E+  sha   survivors 0/16  all 16 covers insoluble (Q_13,Q_2,Q_5)
    4    -3 E-  point survivors 2/16  lam=6 (s,t)=(1,-5) X=-1968
   12     5 E+  open  survivors 4/64  survivors lam in [30, -30, 510, -510], no point with |s|,|t| <= 60
@@ -8,13 +10,13 @@ Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of clas
   15     8 E+  sha   survivors 0/64  all 64 covers insoluble (Q_13,Q_17,Q_2,Q_3,Q_37,Q_7)
   15    -8 E-  sha   survivors 0/64  all 64 covers insoluble (Q_13,Q_17,Q_2,Q_23,Q_3,Q_37)
   21    20 E+  sha   survivors 0/64  all 64 covers insoluble (Q_13,Q_2,Q_29,Q_3,Q_73)
-  21   -20 E-  open  survivors 4/64  survivors lam in [15, -15, 1230, -1230], no point with |s|,|t| <= 60
-  24     7 E+  open  survivors 8/64  survivors lam in [51, -51, 651, -651, 186, -186, 714, -714], no point with |s|,|t| <= 60
+  21   -20 E-  point survivors 4/64  hint (PARI ellrank, checked exactly here) X=345572823129360/8288641
+  24     7 E+  point survivors 8/64  hint (PARI ellrank, checked exactly here) X=567420000
   24    -7 E-  point survivors 4/64  lam=42 (s,t)=(29,18) X=237904800
   35    12 E+  open  survivors 4/128  survivors lam in [705, -705, 105, -105], no point with |s|,|t| <= 60
   35   -12 E-  open  survivors 4/128  survivors lam in [2415, -2415, 30, -30], no point with |s|,|t| <= 60
-  40     9 E+  open  survivors 2/64  survivors lam in [5, -5], no point with |s|,|t| <= 60
-  40    -9 E-  open  survivors 4/64  survivors lam in [5, -5, 310, -310], no point with |s|,|t| <= 60
+  40     9 E+  point survivors 2/64  hint (PARI ellrank, checked exactly here) X=-402837615678383019300960/142209655678561
+  40    -9 E-  point survivors 4/64  hint (PARI ellrank, checked exactly here) X=-5669611173491040/1329409
   45    28 E+  open  survivors 8/128  survivors lam in [2555, -2555, 43435, -43435, 70, -70, 1190, -1190], no point with |s|,|t| <= 60
   45   -28 E-  open  survivors 8/128  survivors lam in [5, -5, 85, -85, 730, -730, 12410, -12410], no point with |s|,|t| <= 60
   55    48 E+  open  survivors 2/128  survivors lam in [16995, -16995], no point with |s|,|t| <= 60
@@ -24,7 +26,7 @@ Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of clas
   60    11 E+  sha   survivors 0/128  all 128 covers insoluble (Q_13,Q_2,Q_3,Q_5,Q_7,Q_73)
   60   -11 E-  sha   survivors 0/128  all 128 covers insoluble (Q_13,Q_2,Q_3,Q_5,Q_61)
   63    16 E+  open  survivors 2/64  survivors lam in [7, -7], no point with |s|,|t| <= 60
-  63   -16 E-  open  survivors 2/64  survivors lam in [1, -1], no point with |s|,|t| <= 60
+  63   -16 E-  point survivors 2/64  hint (PARI ellrank, checked exactly here) X=-810898999847843896267200/91211228908849
   72    65 E+  open  survivors 4/128  survivors lam in [8905, -8905, 17810, -17810], no point with |s|,|t| <= 60
   72   -65 E-  open  survivors 8/128  survivors lam in [8905, -8905, 455, -455, 17810, -17810, 910, -910], no point with |s|,|t| <= 60
   77    36 E+  sha   survivors 0/128  all 128 covers insoluble (Q_13,Q_17,Q_2,Q_3,Q_37,Q_5)
@@ -35,13 +37,13 @@ Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of clas
   84   -13 E-  open  survivors 4/128  survivors lam in [39, -39, 537186, -537186], no point with |s|,|t| <= 60
   91    60 E+  sha   survivors 0/256  all 256 covers insoluble (Q_109,Q_193,Q_2,Q_3,Q_31,Q_5)
   91   -60 E-  sha   survivors 0/256  all 256 covers insoluble (Q_109,Q_151,Q_193,Q_2,Q_3,Q_5)
-  99    20 E+  open  survivors 2/256  survivors lam in [385, -385], no point with |s|,|t| <= 60
+  99    20 E+  point survivors 2/256  hint (PARI ellrank, checked exactly here) X=-3612062319418301752080/5447473249
   99   -20 E-  sha   survivors 0/256  all 256 covers insoluble (Q_101,Q_13,Q_2,Q_3,Q_5,Q_7,Q_73)
  105    88 E+  open  survivors 4/256  survivors lam in [2805, -2805, 63690, -63690], no point with |s|,|t| <= 60
  105   -88 E-  open  survivors 4/256  survivors lam in [2805, -2805, 63690, -63690], no point with |s|,|t| <= 60
  112    15 E+  open  survivors 4/128  survivors lam in [184785, -184785, 30, -30], no point with |s|,|t| <= 60
  112   -15 E-  open  survivors 2/128  survivors lam in [30, -30], no point with |s|,|t| <= 60
- 117    44 E+  open  survivors 8/256  survivors lam in [73073, -73073, 23023, -23023, 20878, -20878, 6578, -6578], no point with |s|,|t| <= 60
+ 117    44 E+  point survivors 8/256  hint (PARI ellrank, checked exactly here) X=-2617352251414120162800/570588769
  117   -44 E-  open  survivors 2/256  survivors lam in [286, -286], no point with |s|,|t| <= 60
  120   119 E+  open  survivors 8/128  survivors lam in [15, -15, 25095, -25095, 7170, -7170, 210, -210], no point with |s|,|t| <= 60
  120  -119 E-  open  survivors 4/128  survivors lam in [105, -105, 30, -30], no point with |s|,|t| <= 60
@@ -51,16 +53,16 @@ Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of clas
  140   -51 E-  sha   survivors 0/256  all 256 covers insoluble (Q_13,Q_149,Q_1657,Q_191,Q_2,Q_3)
  143    24 E+  open  survivors 4/256  survivors lam in [1217931, -1217931, 143286, -143286], no point with |s|,|t| <= 60
  143   -24 E-  sha   survivors 0/256  all 256 covers insoluble (Q_11,Q_167,Q_2,Q_29,Q_3,Q_5,Q_7069)
- 144    17 E+  open  survivors 2/128  survivors lam in [34, -34], no point with |s|,|t| <= 60
+ 144    17 E+  point survivors 2/128  hint (PARI ellrank, checked exactly here) X=-1660515117700543376832/150381169
  144   -17 E-  open  survivors 2/128  survivors lam in [2, -2], no point with |s|,|t| <= 60
  153   104 E+  open  survivors 4/128  survivors lam in [3341, -3341, 26, -26], no point with |s|,|t| <= 60
- 153  -104 E-  open  survivors 4/128  survivors lam in [13, -13, 6682, -6682], no point with |s|,|t| <= 60
+ 153  -104 E-  point survivors 4/128  hint (PARI ellrank, checked exactly here) X=-7907999849568
  156   133 E+  sha   survivors 0/256  all 256 covers insoluble (Q_13,Q_2,Q_23,Q_3,Q_37,Q_41,Q_5,Q_73)
  156  -133 E-  sha   survivors 0/256  all 256 covers insoluble (Q_13,Q_2,Q_3,Q_37,Q_41,Q_5,Q_73)
  165    52 E+  sha   survivors 0/512  all 512 covers insoluble (Q_11,Q_173,Q_181,Q_2,Q_241,Q_3,Q_3697,Q_5)
  165   -52 E-  sha   survivors 0/512  all 512 covers insoluble (Q_11,Q_173,Q_181,Q_2,Q_241,Q_3,Q_31,Q_5,Q_7)
  168    95 E+  open  survivors 8/256  survivors lam in [20805, -20805, 524685, -524685, 149910, -149910, 291270, -291270], no point with |s|,|t| <= 60
- 168   -95 E-  open  survivors 4/256  survivors lam in [20805, -20805, 291270, -291270], no point with |s|,|t| <= 60
+ 168   -95 E-  point survivors 4/256  hint (PARI ellrank, checked exactly here) X=-203884365689969979937440/2111678209
  171   140 E+  sha   survivors 0/256  all 256 covers insoluble (Q_13,Q_17,Q_193,Q_2,Q_3,Q_31,Q_5)
  171  -140 E-  sha   survivors 0/256  all 256 covers insoluble (Q_13,Q_17,Q_193,Q_2,Q_3,Q_5)
  176    57 E+  sha   survivors 0/256  all 256 covers insoluble (Q_109,Q_11,Q_13,Q_2,Q_3,Q_37,Q_5,Q_7)
@@ -109,7 +111,7 @@ Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of clas
  288  -175 E-  open  survivors 8/128  survivors lam in [1, -1, 113, -113, 14, -14, 1582, -1582], no point with |s|,|t| <= 60
  299   180 E+  open  survivors 4/512  survivors lam in [1105, -1105, 529295, -529295], no point with |s|,|t| <= 60
  299  -180 E-  sha   survivors 0/512  all 512 covers insoluble (Q_109,Q_2,Q_3,Q_349,Q_479,Q_5,Q_73,Q_829)
-Part 1 tally: {'point': 3, 'sha': 37, 'open': 68}
+Part 1 tally: {'point': 13, 'sha': 37, 'open': 58} (point: 3 in the box, 10 from hints)
 
 Part 2. alpha(E(Q)) = K = {1, HH-, 2H, 2H-} exactly, when every other coset of K in Sel(E) (Sel from
         selmer_square_5000.json, the exact descent of selmer_square.py) has an empty C_d; then

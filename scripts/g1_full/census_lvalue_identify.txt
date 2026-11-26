@@ -1,0 +1,42 @@
+census_lvalue_identify.py: the 19 L-value closures of G1_FULL_SYSTEM.md Result 3 (PARI 2.17.4; identification only)
+
+112 15  rank-0 by ellrank: none;  L-candidates [0,hi]: w*K (0, 2) N=2338638960 w=1 L=1.025909
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*K N=2338638960 L=1.025909
+127 97  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=2338638960 w=1 L=1.025909; g4*K (0, 2) N=115238773392960 w=1 L=-; f8*K (0, 2) N=232658631737208580726280640 w=1 L=-; w*f0*K (0, 2) N=232658631737208580726280640 w=1 L=-; w*g4*K (0, 2) N=115238773392960 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=2338638960 L=1.025909
+240 161  rank-0 by ellrank: none;  L-candidates [0,hi]: w*K (0, 2) N=20809301520 w=1 L=0.944864
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*K N=20809301520 L=0.944864
+260 69  rank-0 by ellrank: none;  L-candidates [0,hi]: f0*K (0, 2) N=27090595831059820283980830088560 w=1 L=-; g4*K (0, 2) N=10880689529455200 w=1 L=-; f8*K (0, 2) N=3386324478882477535497603761070 w=1 L=-; w*K (0, 2) N=1213008866160 w=1 L=3.049459; w*f0*K (0, 2) N=3386324478882477535497603761070 w=1 L=-; w*g4*K (0, 2) N=10880689529455200 w=1 L=-; w*f8*K (0, 2) N=27090595831059820283980830088560 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*K N=1213008866160 L=3.049459
+288 175  rank-0 by ellrank: none;  L-candidates [0,hi]: w*K (0, 2) N=29620925040 w=1 L=2.895771
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*K N=29620925040 L=2.895771
+329 191  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=1213008866160 w=1 L=3.049459; f0*K (0, 2) N=108362383324239281135923320354240 w=1 L=-; g4*K (0, 2) N=304897056562512960 w=1 L=-; w*g4*K (0, 2) N=304897056562512960 w=1 L=-; w*f8*K (0, 2) N=108362383324239281135923320354240 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=1213008866160 L=3.049459
+352 135  rank-0 by ellrank: none;  L-candidates [0,hi]: w*K (0, 2) N=105180195120 w=1 L=3.341535
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*K N=105180195120 L=3.341535
+401 79  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=20809301520 w=1 L=0.944864; f8*K (0, 2) N=3551543315581555752069908412480 w=1 L=-; w*K (0, 2) N=2601162690 w=1 L=0.000000; w*f0*K (0, 2) N=3551543315581555752069908412480 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=20809301520 L=0.944864
+463 113  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=29620925040 w=1 L=2.895771; f0*g4*f8 (0, 2) N=55292393408 w=1 L=-0.000000; f0*K (0, 4) N=16415180714620925567363381799360 w=1 L=-; g4*K (0, 2) N=6198948708671040 w=1 L=-; w*g4*K (0, 2) N=6198948708671040 w=1 L=-; w*f8*K (0, 4) N=16415180714620925567363381799360 w=1 L=-; w*f0*g4*f8 (0, 2) N=55292393408 w=1 L=-0.000000
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=29620925040 L=2.895771
+487 217  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=105180195120 w=1 L=3.341535; g4*K (0, 2) N=44461351360345920 w=1 L=-; w*g4*K (0, 2) N=44461351360345920 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=105180195120 L=3.341535
+527 336  rank-0 by ellrank: none;  L-candidates [0,hi]: g4*K (0, 2) N=3230159484373920 w=1 L=-; w*K (0, 2) N=145936544880 w=1 L=0.387585; w*g4*K (0, 2) N=3230159484373920 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*K N=145936544880 L=0.387585
+544 33  rank-0 by ellrank: none;  L-candidates [0,hi]: w*K (0, 2) N=1442367936240 w=1 L=1.391437
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*K N=1442367936240 L=1.391437
+575 48  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=130714439730 w=1 L=15.110668; f0*K (0, 4) N=1563009022024154367594341697326130 w=1 L=-; f8*K (0, 2) N=12504072176193234940754733578609040 w=1 L=-; w*K (0, 2) N=1045715517840 w=1 L=4.981835; w*f0*K (0, 2) N=12504072176193234940754733578609040 w=1 L=-; w*f8*K (0, 4) N=1563009022024154367594341697326130 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=130714439730 L=15.110668, w*K N=1045715517840 L=4.981835
+577 511  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=1442367936240 w=1 L=1.391437; f0*K (0, 4) N=3404600989956949556970626609699520 w=1 L=-; w*f8*K (0, 4) N=3404600989956949556970626609699520 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=1442367936240 L=1.391437
+623 527  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=1045715517840 w=1 L=4.981835; w*K (0, 2) N=130714439730 w=1 L=15.110668
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*K N=130714439730 L=15.110668, w*f0*f8 N=1045715517840 L=4.981835
+697 696  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=166406150190 w=1 L=6.790591
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=166406150190 L=6.790591
+700 529  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*g4 (0, 2) N=2138969868557508087360 w=1 L=-; w*f8*g4 (0, 2) N=2138969868557508087360 w=1 L=-; w*f0*f8 (0, 2) N=86826771232530 w=1 L=4.362312; f0*g4*f8 (0, 2) N=16649028466895457115981120 w=1 L=-; f0*K (0, 2) N=227149368298435600605425766822191210640 w=1 L=-; f8*K (0, 2) N=28393671037304450075678220852773901330 w=1 L=-; w*K (0, 2) N=694614169860240 w=1 L=-; w*f0*K (0, 2) N=28393671037304450075678220852773901330 w=1 L=-; w*f8*K (0, 2) N=227149368298435600605425766822191210640 w=1 L=-; w*f0*g4*f8 (0, 2) N=16649028466895457115981120 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=86826771232530 L=4.362312
+863 191  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=145936544880 w=1 L=0.387585; f0*g4*f8 (0, 2) N=3230159484373920 w=1 L=-; w*f0*g4*f8 (0, 2) N=3230159484373920 w=1 L=-
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=145936544880 L=0.387585
+943 576  rank-0 by ellrank: none;  L-candidates [0,hi]: w*f0*f8 (0, 2) N=497910195510 w=1 L=28.578192
+        closed by L (N <= 1e14, w = +1, lfun > 1e-3, no torsion solution): w*f0*f8 N=497910195510 L=28.578192
+
+pairs 19; closed by a rank-0 curve (ellrank): 0; closed by an L-value curve: 19; time 523 s

@@ -1,0 +1,8 @@
+  primes [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273] basis 16 constraints 32 dim Sel 4
+curve 1 seed 1 dim Sel - 2 = 2  (0s)
+  primes [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273] basis 16 constraints 32 dim Sel 4
+curve 1 seed 2 dim Sel - 2 = 2  (0s)
+  primes [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273] basis 16 constraints 32 dim Sel 4
+curve 4 seed 1 dim Sel - 2 = 2  (0s)
+  primes [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273] basis 16 constraints 32 dim Sel 4
+curve 4 seed 2 dim Sel - 2 = 2  (0s)

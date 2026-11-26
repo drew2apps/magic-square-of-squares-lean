@@ -1,0 +1,10 @@
+refused: the class dd replaced by -dd (the V-pair field is not Q(sqrt dd))
+refused: a mutated U (the stored point leaves the conic) (the stored point is not on the conic)
+refused: a point off the conic (the stored point is not on the conic)
+refused: a line that is not the tangent at p_X (l is not the tangent line at the stored point)
+refused: the second quadric with Xi -> 3 Xi (det(x A + y B) is not a constant times U V)
+refused: disc U forged to a square (a split pair) (a pair of singular quadrics splits: not the case treated)
+refused: the hinted point of Gamma_1 moved off the cone (Z -> Z + 1) (P1 is not on the cone over Gamma_1)
+refused: the hinted point of Gamma_3 moved off the cone (Z -> Z + 1) (P3 is not on the cone)
+refused: f replaced by f + e^2 in step (8) (no longer c q^2 / f_dag modulo I(C3')) (f f_dag is not a constant times a square modulo I(C3'))
+9 of 9 refused

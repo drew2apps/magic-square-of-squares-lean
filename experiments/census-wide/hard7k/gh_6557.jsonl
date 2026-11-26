@@ -1,0 +1,14 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+{"pair": [6557, 324], "curve": "w*f0*g4", "rank": [2, 2], "effort": 4, "sec": 3.7}
+{"pair": [6557, 324], "curve": "w*f8*g4", "rank": [2, 2], "effort": 4, "sec": 4.3}
+{"pair": [6557, 324], "curve": "w*f0*f8", "rank": [0, 2], "effort": 4, "sec": 6.6}
+{"pair": [6557, 324], "curve": "f0*g4*f8", "rank": [1, 1], "effort": 4, "sec": 50.8}
+{"pair": [6557, 324], "curve": "f0*K", "rank": [3, 3], "effort": 4, "sec": 3.8}
+{"pair": [6557, 324], "curve": "g4*K", "rank": [1, 1], "effort": 4, "sec": 5.5}
+{"pair": [6557, 324], "curve": "f8*K", "rank": [2, 2], "effort": 4, "sec": 0.6}
+{"pair": [6557, 324], "curve": "w*K", "rank": [1, 1], "effort": 4, "sec": 5.6}
+{"pair": [6557, 324], "curve": "w*f0*K", "rank": [2, 2], "effort": 4, "sec": 0.5}
+{"pair": [6557, 324], "curve": "w*g4*K", "rank": [1, 1], "effort": 4, "sec": 11.9}
+{"pair": [6557, 324], "curve": "w*f8*K", "rank": [3, 3], "effort": 4, "sec": 4.0}
+{"pair": [6557, 324], "curve": "w*f0*g4*f8", "rank": [1, 1], "effort": 4, "sec": 49.9}

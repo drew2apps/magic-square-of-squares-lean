@@ -1,0 +1,14 @@
+kctp_recheck.py --negative: forged inputs that must be refused.
+  refused: a model with e1 + 1 (not isomorphic)
+  refused: the point (e1 + 1, 0) (not on the curve)
+  refused: (i - 1, 1) as a Selmer element (fails the local test)
+  refused: (-2*i - 1, 1) as a Selmer element (fails the local test)
+  refused: (2*i - 1, 1) as a Selmer element (fails the local test)
+  refused: (-2*i - 5, 1) as a Selmer element (fails the local test)
+  refused: (2*i - 5, 1) as a Selmer element (fails the local test)
+  refused: (i + 6, 1) as a Selmer element (fails the local test)
+  refused: (3, 3) (3 not in S) (fails)
+  refused: a point off a conic (the conic point is not on the conic)
+  refused: a non-tangent line l_w in the lift criterion (g(D_a(K_v)) has the wrong size or no lam)
+  refused: the lift criterion for a class outside Sel^2 (the conic is not locally soluble at 263)
+12 of 12 forged inputs refused.

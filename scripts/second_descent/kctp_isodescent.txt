@@ -1,0 +1,53 @@
+kctp_isodescent.py: 2-isogeny descents over K = Q(i) in the isogeny class of L1L3M1M2 of (627,364).
+Written by an AI model; not read by a person.  Experiment, not counted.
+Controls: three base changes y^2 = x(x + p)(x + q) (kernel (0,0): a = p + q, b = p q); the local sizes must be
+reached and not exceeded, and Cassels' formula must hold.  (For (14,74): rank_K 0, Sha(A)[2] = (Z/2)^2 with
+non-zero pairing (kctp_recheck --controls), B(B)/B(A) = 4, so Sha(B)[2^inf] = 0 and dim Sel^2(B) = 1, inside
+the interval [dim Sel^phihat - 1, dim Sel^phihat + dim Sel^phi - 1] printed for it.)
+  control y^2 = x(x+14)(x+74): v_(1+i)(alpha) = 1; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 2, 2), (5, 2, 0), (5, 2, 0), (9, 2, 0), (37, 0, 2), (37, 0, 2), (49, 0, 2)]
+     dim Sel^phi(A) = 2, dim Sel^phihat(B) = 2; Cassels' formula (2 - 2 = 0): True
+     B(B)/B(A) = 4 (exact; area ratio N(u)/2 = 1 checked in floating point)
+     dim Sel^2(B) in [1, 3]
+  control y^2 = x(x+41)(x+80): v_(1+i)(alpha) = 0; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 1, 3), (5, 0, 2), (5, 0, 2), (9, 2, 0), (13, 1, 1), (13, 1, 1), (41, 0, 2), (41, 0, 2)]
+     dim Sel^phi(A) = 0, dim Sel^phihat(B) = 4; Cassels' formula (0 - 4 = -4): True
+     B(B)/B(A) = 1/4 (exact; area ratio N(u)/2 = 1/2 checked in floating point)
+     dim Sel^2(B) in [3, 3]
+  control y^2 = x(x+1)(x+7): v_(1+i)(alpha) = 1; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 2, 2), (9, 2, 0), (49, 0, 2)]
+     dim Sel^phi(A) = 2, dim Sel^phihat(B) = 2; Cassels' formula (2 - 2 = 0): True
+     B(B)/B(A) = 1 (exact; area ratio N(u)/2 = 1 checked in floating point)
+     dim Sel^2(B) in [1, 3]
+
+The target.  E: y^2 = (x - e1)(x - e2)(x - e3); for the kernel (e_k, 0), x -> x + e_k gives a = 2 e_k - e_i - e_j,
+b = (e_k - e_i)(e_k - e_j).
+  E -> E/<T1>: v_(1+i)(alpha) = 1; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 0, 4), (5, 0, 2), (5, 0, 2), (29, 0, 2), (29, 0, 2), (37, 0, 2), (181, 0, 2), (69169, 0, 2), (982081, 0, 2), (23490241, 0, 2), (395249137273, 2, 0)]
+     dim Sel^phi(A) = 0, dim Sel^phihat(B) = 10; Cassels' formula (0 - 10 = -10): True
+     B(B)/B(A) = 1/256 (exact; area ratio N(u)/2 = 1 checked in floating point)
+  E -> E/<T2>: v_(1+i)(alpha) = 1; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 0, 4), (5, 0, 2), (5, 0, 2), (29, 0, 2), (29, 0, 2), (37, 2, 0), (181, 2, 0), (69169, 0, 2), (982081, 0, 2), (23490241, 2, 0), (395249137273, 0, 2)]
+     dim Sel^phi(A) = 0, dim Sel^phihat(B) = 6; Cassels' formula (0 - 6 = -6): True
+     B(B)/B(A) = 1/16 (exact; area ratio N(u)/2 = 1 checked in floating point)
+  E -> E/<T3>: v_(1+i)(alpha) = 1; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 2, 2), (5, 2, 0), (5, 2, 0), (29, 2, 0), (29, 2, 0), (37, 0, 2), (181, 0, 2), (69169, 2, 0), (982081, 2, 0), (23490241, 0, 2), (395249137273, 0, 2)]
+     dim Sel^phi(A) = 3, dim Sel^phihat(B) = 1; Cassels' formula (3 - 1 = 2): True
+     B(B)/B(A) = 4 (exact; area ratio N(u)/2 = 1 checked in floating point)
+  E3 -> E3/<S1>: v_(1+i)(alpha) = 1; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 0, 4), (5, 2, 0), (5, 0, 2), (9, 1, 1), (29, 0, 2), (29, 2, 0), (37, 0, 2), (181, 0, 2), (69169, 0, 2), (982081, 2, 0), (23490241, 0, 2), (395249137273, 0, 2)]
+     dim Sel^phi(A) = 0, dim Sel^phihat(B) = 6; Cassels' formula (0 - 6 = -6): True
+     B(B)/B(A) = 1/16 (exact; area ratio N(u)/2 = 1 checked in floating point)
+  E3 -> E3/<S2>: v_(1+i)(alpha) = 1; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 0, 4), (5, 0, 2), (5, 2, 0), (9, 1, 1), (29, 2, 0), (29, 0, 2), (37, 0, 2), (181, 0, 2), (69169, 2, 0), (982081, 0, 2), (23490241, 0, 2), (395249137273, 0, 2)]
+     dim Sel^phi(A) = 0, dim Sel^phihat(B) = 6; Cassels' formula (0 - 6 = -6): True
+     B(B)/B(A) = 1/16 (exact; area ratio N(u)/2 = 1 checked in floating point)
+
+Cross-check with kctp_recheck (direct 2-descent): dim Sel^2(E) = 4 in [3, 4], dim Sel^2(E3) = 4 in [1, 4]: True
+Exact dim Sel^2 of the four curves with one point of order 2 over K: Sel^phihat(B) -> Sel^2(B) -> Sel^phi(A) has
+kernel of dimension 1, so dim Sel^phihat(B) - 1 <= dim Sel^2(B) <= dim Sel^phihat(B) + dim Sel^phi(A) - 1.
+  E/<T1>    dim Sel^2 in [9, 9] (= 9);  |Sha(B)| / |Sha(E)| = B(E)/B(B) = 2^8 (exact)
+  E/<T2>    dim Sel^2 in [5, 5] (= 5);  |Sha(B)| / |Sha(E)| = B(E)/B(B) = 2^4 (exact)
+  E3/<S1>   dim Sel^2 in [5, 5] (= 5);  |Sha(B)| / |Sha(E)| = B(E)/B(B) = 2^2 (exact)
+  E3/<S2>   dim Sel^2 in [5, 5] (= 5);  |Sha(B)| / |Sha(E)| = B(E)/B(B) = 2^2 (exact)
+
+CONSEQUENCES, if rank E(K) = 0 and Sha is finite (kctp_isog.py: Sha(E)[2^inf] = (Z/2^n)^2 with n >= 3).
+For each B: dim Sha(B)[2] = dim Sel^2(B) - 1 = 2 m (m pairs of cyclic factors, Sha(B)[2^inf] = (prod_j Z/2^a_j)^2,
+a_j >= 1, sum a_j = n + k/2).  The level-2 pairing on Sel^2(B) proves rank 0 iff all a_j = 1; a 4-descent with its
+pairing iff all a_j <= 2.
+  E/<T1>    m = 4, sum a_j = n + 4:  level 2 needs n = 0 (excluded);  level 4 needs n <= 4 (possible for n <= 4)
+  E/<T2>    m = 2, sum a_j = n + 2:  level 2 needs n = 0 (excluded);  level 4 needs n <= 2 (excluded)
+  E3/<S1>   m = 2, sum a_j = n + 1:  level 2 needs n = 1 (excluded);  level 4 needs n <= 3 (possible for n <= 3)
+  E3/<S2>   m = 2, sum a_j = n + 1:  level 2 needs n = 1 (excluded);  level 4 needs n <= 3 (possible for n <= 3)

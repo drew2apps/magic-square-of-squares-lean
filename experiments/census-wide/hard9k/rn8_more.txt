@@ -1,0 +1,18 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+12703 2767 f0*K root number 1 torsion [2]
+  curve 0 effort 8 [2, 2]
+  curve 1 effort 8 [2, 2]
+12703 2767 w*f8*K root number 1 torsion [2]
+  curve 0 effort 8 [2, 2]
+  curve 1 effort 8 [2, 2]
+8249 3720 g4*K root number 1 torsion [2]
+  curve 0 effort 8 [2, 2]
+  curve 1 effort 8 [2, 2]
+  curve 2 effort 8 [2, 2]
+  curve 3 effort 8 [2, 2]
+11969 4529 f0*g4*f8 root number 1 torsion [2, 2]
+  curve 0 effort 8 [2, 2]
+  curve 1 effort 8 [2, 2]
+  curve 2 effort 8 [2, 2]
+  curve 3 effort 8 [2, 2]

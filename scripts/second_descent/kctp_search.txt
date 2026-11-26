@@ -1,0 +1,3 @@
+kctp.py --search=60: points on the 2-coverings of the non-torsion cosets of Sel^2 for L1L3M1M2 of (627,364)
+(the other three curves are isomorphic over K to it or to its complex conjugate: checked in kctp.txt)
+3 cosets x all admissible models, |re y|, |im y| <= 60: 0 points of infinite order found

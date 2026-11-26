@@ -9,4 +9,7 @@ Negative tests
   refused: class 3 on E+ (12,5) (not a sum of two squares)
   refused: Sel(E) of E+ (15,8) with the class of T removed
   refused: real solver claims a point on -s^2 + t^2 >= 0, s^2 - 4t^2 >= 0
-negative tests refused: 10 of 10
+  refused: hint R on E+ (12,5) offered as a point of class 2 (its class is 2H)
+  refused: hint (X, Y) = (-1968, 1) on E- (4,3) (X is the class-2 point, Y is not)
+  refused: R of E+ (12,5) on E- (12,5)
+negative tests refused: 13 of 13

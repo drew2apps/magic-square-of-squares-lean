@@ -1,0 +1,149 @@
+rank_fisher_theta4_control.py: rank_fisher_theta4's Theta_4 code on two curves with a known answer
+control A: E: y^2 = x(x^2 + 128 x + 4097), conductor 262208; L(E,1) = 3141449/500000 (non-zero: rank 0); BSD quotient for Sha(E) = 16; torsion E [2], E' [2]
+  first descent: S_1 = [-2, -1, 1, 2] (E' side; known <-1>, y0 = 2), S'_1 = [1, 17, 241, 4097] (E side; known <4097>, y1 = 17); y0, y1 certified (rank_indep local images)
+  level-3 lifts tried (lam, xi, number of level-4 twists found): [(-17, 17, 4)]
+  level 2: D_lam with lam = -17 checked, Theta_2(y0, y1) = +1; level 3: C3 with xi = 17 (the first lift with level-4 twists found by the real sampler; a count of 0 for another lift is a miss of the sampler, not an empty level-4 Selmer set)
+  rank_fisher5 steps (1)-(8) on C3': cones over Q(sqrt -2), Q(sqrt 2); conic points found and checked
+  pencil discriminant (136 digits): primes [2, 17, 241]; B0 = [2, 17, 241]
+  level-4 Selmer set: 4 twists [2, 34, 482, 8194] (a coset of S'_1, dimension 2)
+  C4: Xi W^2 = f0 with Xi = 2 (xi4 = 1/7768); k_1 = 22 + -27 sqrt(-2) (N = 1942), k_3 = 386 + 631 sqrt(2) (N = -647326); sigma_1 = 1/2, tau_3 = .../... (10/7 digits)
+  (I1) N1 N1' = -2 delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = 2 W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (58, 48, 153 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 67 digits)
+  R3 = t3 (W T3 + r Q0) with r = 3 digits / 6 digits: primes of den(r): [2, 7, 337]; Q0 mod p in span(QA, QB) for: [2, 7, 337]
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 241, 337]  (primes < 47, B0, primes of Xi, the primes where R3^0 reduces into (QA, QB), primes of the y)
+  R: a point of C4(R) (interval enclosure, Xi f0 > 0), g0^0 there > 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 1), (0, 5), (1, 3)] on C4(Q_p): g0 is not a constant times a square, so [B] = T'
+  sum_v (g0(P_v), 17)_v: the term is -1 exactly at [337]; product = -1
+  sum_v (g0(P_v), 4097)_v: the term is -1 exactly at [241, 337]; product = +1
+    p = 2 (2 mod 8): classes of g0^0 on C4(Q_p) [(0, 1), (0, 5), (1, 3)]; terms 17:+1 4097:+1
+    p = 3 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 1)]; terms 17:+1 4097:+1
+    p = 5 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 7 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0)]; terms 17:+1 4097:+1
+    p = 11 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 13 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 17 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0)]; terms 17:+1 4097:+1
+    p = 19 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 23 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 29 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 31 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 37 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 41 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 43 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 17:+1 4097:+1
+    p = 241 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 1)]; terms 17:+1 4097:-1
+    p = 337 (1 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 17:-1 4097:-1
+  => control A: Theta_4(y0, y1) product -1 (expected -1), class b of T: +1 (expected +1)
+control B: E: y^2 = x(x^2 + 74 x + 17753), conductor 284048; L(E,1) = 485559/50000 (non-zero: rank 0); BSD quotient for Sha(E) = 16; torsion E [2], E' [2]
+  first descent: S_1 = [-2, -1, 1, 2] (E' side; known <-1>, y0 = 2), S'_1 = [1, 41, 433, 17753] (E side; known <17753>, y1 = 41); y0, y1 certified (rank_indep local images)
+  level-3 lifts tried (lam, xi, number of level-4 twists found): [(41, 7, 4)]
+  level 2: D_lam with lam = 41 checked, Theta_2(y0, y1) = +1; level 3: C3 with xi = 7 (the first lift with level-4 twists found by the real sampler; a count of 0 for another lift is a miss of the sampler, not an empty level-4 Selmer set)
+  rank_fisher5 steps (1)-(8) on C3': cones over Q(sqrt -2), Q(sqrt 2); conic points found and checked
+  pencil discriminant (193 digits): primes [2, 7, 41, 433]; B0 = [2, 7, 41, 433]
+  level-4 Selmer set: 4 twists [2, 82, 866, 35506] (a coset of S'_1, dimension 2)
+  C4: Xi W^2 = f0 with Xi = 2 (xi4 = 2/11); k_1 = -2 + 3 sqrt(-2) (N = 22), k_3 = -25 + -23 sqrt(2) (N = -433); sigma_1 = 2, tau_3 = .../... (5/3 digits)
+  (I1) N1 N1' = -2 delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = 2 W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (40, 53, 142 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 62 digits)
+  R3 = t3 (W T3 + r Q0) with r = 3 digits / 4 digits: primes of den(r): [2, 239]; Q0 mod p in span(QA, QB) for: [2, 239]
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 239, 433]  (primes < 47, B0, primes of Xi, the primes where R3^0 reduces into (QA, QB), primes of the y)
+  R: a point of C4(R) (interval enclosure, Xi f0 > 0), g0^0 there < 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 5), (1, 3)] on C4(Q_p): g0 is not a constant times a square, so [B] = T'
+  sum_v (g0(P_v), 41)_v: the term is -1 exactly at [239]; product = -1
+  sum_v (g0(P_v), 17753)_v: the term is -1 exactly at no place; product = +1
+    p = 2 (2 mod 8): classes of g0^0 on C4(Q_p) [(0, 5), (1, 3)]; terms 41:+1 17753:+1
+    p = 3 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 5 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 7 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 11 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 13 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 17 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 19 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 23 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 29 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 31 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 37 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 41 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0)]; terms 41:+1 17753:+1
+    p = 43 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 41:+1 17753:+1
+    p = 239 (7 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 41:-1 17753:+1
+    p = 433 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0)]; terms 41:+1 17753:+1
+  => control B: Theta_4(y0, y1) product -1 (expected -1), class b of T: +1 (expected +1)
+control C: E: y^2 = x(x^2 + 1310 x + 429041), conductor 3432328; L(E,1) = 15712169/1000000 (non-zero: rank 0); BSD quotient for Sha(E) = 64; torsion E [2], E' [2]
+  first descent: S_1 = [-2, -1, 1, 2] (E' side; known <-1>, y0 = 2), S'_1 = [1, 409, 1049, 429041] (E side; known <429041>, y1 = 409); y0, y1 certified (rank_indep local images)
+  level-3 lifts tried (lam, xi, number of level-4 twists found): [(1, 1, 4)]
+  level 2: D_lam with lam = 1 checked, Theta_2(y0, y1) = +1; level 3: C3 with xi = 1 (the first lift with level-4 twists found by the real sampler; a count of 0 for another lift is a miss of the sampler, not an empty level-4 Selmer set)
+  rank_fisher5 steps (1)-(8) on C3': cones over Q(sqrt -2), Q(sqrt 2); conic points found and checked
+  pencil discriminant (153 digits): primes [2, 37, 409, 1049]; B0 = [2, 37, 409, 1049]
+  level-4 Selmer set: 4 twists [2, 818, 2098, 858082] (a coset of S'_1, dimension 2)
+  C4: Xi W^2 = f0 with Xi = 2 (xi4 = 1/6212); k_1 = -39 + 4 sqrt(-2) (N = 1553), k_3 = -1 + 0 sqrt(2) (N = 1); sigma_1 = 1/2, tau_3 = .../... (16/4 digits)
+  (I1) N1 N1' = -2 delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = 2 W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (70, 70, 167 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 95 digits)
+  R3 = t3 (W T3 + r Q0) with r = 1 digits / 4 digits: primes of den(r): [7, 1193]; Q0 mod p in span(QA, QB) for: [7, 1193]
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 409, 1049, 1193]  (primes < 47, B0, primes of Xi, the primes where R3^0 reduces into (QA, QB), primes of the y)
+  R: a point of C4(R) (interval enclosure, Xi f0 > 0), g0^0 there < 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 1), (0, 7), (1, 1), (1, 3), (1, 5), (1, 7)] on C4(Q_p): g0 is not a constant times a square, so [B] = T'
+  sum_v (g0(P_v), 409)_v: the term is -1 exactly at [7, 409]; product = +1
+  sum_v (g0(P_v), 429041)_v: the term is -1 exactly at [409, 1049]; product = +1
+    p = 2 (2 mod 8): classes of g0^0 on C4(Q_p) [(0, 1), (0, 7), (1, 1), (1, 3), (1, 5), (1, 7)]; terms 409:+1 429041:+1
+    p = 3 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0)]; terms 409:+1 429041:+1
+    p = 5 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 7 (7 mod 8): classes of g0^0 on C4(Q_p) [(1, 0)]; terms 409:-1 429041:+1
+    p = 11 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 13 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 17 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 19 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 23 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 29 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 31 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 37 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 41 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 43 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 409:+1 429041:+1
+    p = 409 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 1)]; terms 409:-1 429041:-1
+    p = 1049 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 1)]; terms 409:+1 429041:-1
+    p = 1193 (1 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 409:+1 429041:+1
+  => control C: Theta_4(y0, y1) product +1 (expected +1), class b of T: +1 (expected +1)
+control D: E: y^2 = x(x^2 + 1706 x + 743993), conductor 11903888; L(E,1) = 13711033/1000000 (non-zero: rank 0); BSD quotient for Sha(E) = 64; torsion E [2], E' [2]
+  first descent: S_1 = [-2, -1, 1, 2] (E' side; known <-1>, y0 = 2), S'_1 = [1, 449, 1657, 743993] (E side; known <743993>, y1 = 449); y0, y1 certified (rank_indep local images)
+  level-3 lifts tried (lam, xi, number of level-4 twists found): [(2, 1, 'no conic point: Legendre descent failed'), (2, -1, 0), (2, 2, 'no conic point: Legendre descent failed'), (2, -2, 0), (898, 10327, 'no conic point: Legendre descent failed'), (898, -10327, 4)]
+  level 2: D_lam with lam = 898 checked, Theta_2(y0, y1) = +1; level 3: C3 with xi = -10327 (the first lift with level-4 twists found by the real sampler; a count of 0 for another lift is a miss of the sampler, not an empty level-4 Selmer set)
+  rank_fisher5 steps (1)-(8) on C3': cones over Q(sqrt -2), Q(sqrt 2); conic points found and checked
+  pencil discriminant (266 digits): primes [2, 23, 449, 1657]; B0 = [2, 23, 449, 1657]
+  level-4 Selmer set: 4 twists [2, 898, 3314, 1487986] (a coset of S'_1, dimension 2)
+  C4: Xi W^2 = f0 with Xi = 2 (xi4 = 2/5819); k_1 = -2 + 3 sqrt(-2) (N = 22), k_3 = 65 + -29 sqrt(2) (N = 2543); sigma_1 = 2/23, tau_3 = .../... (20/10 digits)
+  (I1) N1 N1' = -2 delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = 2 W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (105, 84, 198 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 138 digits)
+  R3 = t3 (W T3 + r Q0) with r = 1 digits / 9 digits: primes of den(r): [449, 736823]; Q0 mod p in span(QA, QB) for: [449, 736823]
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 449, 1657, 736823]  (primes < 47, B0, primes of Xi, the primes where R3^0 reduces into (QA, QB), primes of the y)
+  R: a point of C4(R) (interval enclosure, Xi f0 > 0), g0^0 there > 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 3), (1, 1), (1, 5)] on C4(Q_p): g0 is not a constant times a square, so [B] = T'
+  sum_v (g0(P_v), 449)_v: the term is -1 exactly at no place; product = +1
+  sum_v (g0(P_v), 743993)_v: the term is -1 exactly at [449, 1657]; product = +1
+    p = 2 (2 mod 8): classes of g0^0 on C4(Q_p) [(0, 3), (1, 1), (1, 5)]; terms 449:+1 743993:+1
+    p = 3 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0)]; terms 449:+1 743993:+1
+    p = 5 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 7 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 11 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 13 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 17 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 19 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 23 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 1)]; terms 449:+1 743993:+1
+    p = 29 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 31 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 37 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 41 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 43 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 449:+1 743993:+1
+    p = 449 (1 mod 8): classes of g0^0 on C4(Q_p) [(1, 0)]; terms 449:+1 743993:-1
+    p = 1657 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 1)]; terms 449:+1 743993:-1
+    p = 736823 (7 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 449:+1 743993:+1
+  => control D: Theta_4(y0, y1) product +1 (expected +1), class b of T: +1 (expected +1)
+
+control A: Theta_4(y0, y1) non-zero (predicted non-zero), image of E(Q) 0 (as required)
+control B: Theta_4(y0, y1) non-zero (predicted non-zero), image of E(Q) 0 (as required)
+control C: Theta_4(y0, y1) zero (predicted zero), image of E(Q) 0 (as required)
+control D: Theta_4(y0, y1) zero (predicted zero), image of E(Q) 0 (as required)
+controls passed

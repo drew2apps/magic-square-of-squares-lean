@@ -1,0 +1,64 @@
+kctp_isog.py: the isogeny class over K = Q(i) of L1L3M1M2 of (627,364).  Written by an AI model; not read by a
+person.  Experiment, not counted.
+1. The 2-isogenous curves (Velu, exact): points of order 2 over K: E/<T1>: 1, E/<T2>: 1, E/<T3>: 3
+   the curves 2-isogenous to E3 other than E (kernels the two points of order 2 of E3 other than the image of T1):
+   points of order 2 over K: [1, 1]
+2. Sage isogeny_class over K (guide): 6 curves, degree matrix rows [[1, 2, 4, 2, 4, 2], [2, 1, 2, 4, 2, 4], [4, 2, 1, 8, 4, 8], [2, 4, 8, 1, 8, 4], [4, 2, 4, 8, 1, 8], [2, 4, 8, 4, 8, 1]] (1 s)
+   the six curves above are, up to isomorphism, the six curves of the class: True
+   a curve of the class with j = conj(j(E)): False (so E is not a Q-curve, if the class is complete)
+3. E3 = E/<T3> (model with all 2-torsion over K, e in Z[i]): dim Sel^2(E3/K) = 4, torsion image dim 2
+   (Sage torsion of E3, guide: (2, 4))
+   lift criterion for the 4 basis classes: [True, True, True, True] -> the pairing on Sel^2(E3/K) is zero  (243 s)
+4. LEMMA (proof in the header): if rank E(K) = 0 and Sha(E/K)[2^inf] is finite, then Sha(E'/K)[2] != 0 for
+   all six curves E' of the class, so dim Sel^2(E'/K) >= dim E'(K)[2] + 2 for each: no 2-descent on any curve
+   of the isogeny class proves rank 0.  The level-2 pairing is zero on Sel^2 of E and of E3 (both computed).  On
+   the four curves with one point of order 2 over K it is not computed; under rank 0 it would prove rank 0
+   exactly when Sha(E'/K)[2^inf] is killed by 2, which the lemma does not exclude (open route).
+5. BSD scale (guide, floating point).  Normalisation check on base changes of y^2 = x(x + a)(x + b) of rank 0
+   over Q for E and E^-1: L(E/K,1) = L(E,1) L(E^-1,1) (PARI lfun) against B = 2 area prod c_v / (|tors|^2 * 2):
+     a=1 b=2: L(E/K,1) = 0.429699, B = 0.429699, ratio 1.0000 (= |Sha(E/K)|)
+     a=2 b=3: L(E/K,1) = 1.172682, B = 1.172682, ratio 1.0000 (= |Sha(E/K)|)
+     a=1 b=4: L(E/K,1) = 0.454418, B = 0.454418, ratio 1.0000 (= |Sha(E/K)|)
+   The target: global minimal model (0, 0, 0, 19028826105673303920000*i - 33237886878644869978657, 91392735360875041360431429657392*i - 2733455814936458513848281805470000).
+   global root number of E/K (PARI ellrootno over the number field; a guide): +1, so the analytic rank is even
+   conductor norm 5683468881658146768135645923544141966400 = 2^6 * 5^2 * 29^2 * 37 * 181 * 263^2 * 991^2 * 23490241 * 395249137273
+   Kodaira symbols and Tamagawa numbers [(2, 'I2*', 4), (5, 'I8', 8), (5, 'I8', 8), (29, 'I4', 4), (29, 'I4', 4), (37, 'I4', 4), (181, 'I4', 4), (69169, 'I2', 2), (982081, 'I2', 2), (23490241, 'I4', 4), (395249137273, 'I4', 4)]; product 4194304 = 2^22
+   area of the period lattice 3.3490e-11; Omega = 2 area = 6.6980e-11; |E(K)_tors|^2 = 64; sqrt|d_K| = 2
+   B = Omega prod c_v / (64 * 2) = 2.195e-06.  BSD over K: L(E/K,1) = B |Sha| if the rank is 0, and
+   L''(E/K,1)/2 = B Reg |Sha| if it is 2.  So rank 0 needs |Sha| = 4.56e+05 L(E/K,1), and rank 2 needs
+   Reg |Sha| = 4.56e+05 L''(E/K,1)/2.  For L-values of moderate size this means |Sha| of order 10^5 to 10^6 (rank 0)
+   or a regulator of that order (rank 2, Sha = 1): generators of canonical height of order 10^3, out of reach of
+   any point search on 2- or 4-coverings (these reach canonical height about 2 h and 4 h for points of naive
+   height h on the covering).  The order of magnitude only; L(E/K, s) itself is out of reach
+   (N_{K/Q}(conductor) d_K^2 = 9.1e+40, about 10^20 Dirichlet coefficients).
+   B for the six curves of the class (same L-function; Cassels: the BSD quotient is an isogeny invariant, so with
+   rank 0 and finite Sha, |Sha(E')| / |Sha(E)| = B(E) / B(E') exactly; floating point here, a guide):
+     E            prod c_v = 2^22, |tors| = 8, B = 2.1948e-06, B(E)/B = 1.000000 = 2^0
+     E/<T1>       prod c_v = 2^12, |tors| = 4, B = 8.5734e-09, B(E)/B = 256.000000 = 2^8
+     E/<T2>       prod c_v = 2^16, |tors| = 4, B = 1.3718e-07, B(E)/B = 16.000000 = 2^4
+     E3 = E/<T3>  prod c_v = 2^24, |tors| = 8, B = 8.7792e-06, B(E)/B = 0.250000 = 2^-2
+     E3/<S1>      prod c_v = 2^18, |tors| = 4, B = 5.4870e-07, B(E)/B = 4.000000 = 2^2
+     E3/<S2>      prod c_v = 2^18, |tors| = 4, B = 5.4870e-07, B(E)/B = 4.000000 = 2^2
+   exponents [0, 8, 4, -2, 2, 2]: all even, as needed for rank 0 with finite Sha (|Sha| a square for each curve)
+   Exact form of the ratios for the three curves 2-isogenous to E: Sage's Velu isogeny from the minimal model is
+   normalised (phi^* omega' = omega), so the period lattice of the codomain contains that of E with index 2 (area
+   ratio 1/2), and the minimal model of the codomain changes the area by N(u)^(+-1) (u from the K-isomorphism; the
+   sign of the exponent, fixed by the convention, is read off the floating-point area ratio).  With the Tamagawa
+   numbers (Tate's algorithm) and the torsion orders, B(E')/B(E) is then a rational number:
+     E/<T2>       N(u) = 2, area ratio 1, B(E')/B(E) = 1/16
+     E/<T1>       N(u) = 2, area ratio 1, B(E')/B(E) = 1/256
+     E3 = E/<T3>  N(u) = 2, area ratio 1, B(E')/B(E) = 4
+   CONSEQUENCE (from the ratio for E3, which is 2^-2, and the zero pairings on Sel^2 of E and E3).  Suppose rank 0
+   and Sha finite.  dim Sha(E)[2] = dim Sha(E3)[2] = 2, so Sha(E)[2^inf] = (Z/2^n)^2 and Sha(E3)[2^inf] =
+   (Z/2^n3)^2 (a finite group with an alternating non-degenerate pairing is C x C); the zero pairings give n, n3 >= 2;
+   the ratio gives 2 n3 = 2 n - 2.  Hence n3 = n - 1 >= 2, so n >= 3: Sha(E/K)[2^inf] contains (Z/8)^2.  Then every
+   class of Sha(E)[2] = 2^(n-1) Sha(E)[2^inf] lifts to Sha[8], so a 4-descent on E with its pairing cannot prove rank
+   0 either; on E3 a 4-descent with its pairing proves rank 0 exactly when n3 = 2.  For E/<T1>, E/<T2> (2-isogenous
+   to E): Sha[2^inf] killed by 2 would give 4 Sha(E)[2^inf] = 0 (2 = phi^ phi on E, phi phi^ on E'), i.e. n = 2:
+   excluded, so their level-2 pairing cannot prove rank 0.  For E3/<S1>, E3/<S2> it could only if n3 = 2.
+   (The ratio 2^-2 for E3 is the exact value B(E3)/B(E) = 4 above; floating point only fixes the convention.
+   Quoted theory: Cassels' isogeny invariance of the BSD quotient, and the properties of the pairing.)
+6. 3-descent: the 3-division polynomial over K factors as degrees [4] (exact).
+   f(x) at a root x of psi_3 is a square in K(x): False, so a point of order 3 generates a field of degree 8
+   over K (16 over Q).  A 3-descent (Schaefer-Stoll) needs class groups and units in that field; if rank 0 and
+   Sha[3] = 0, Sel^3(E/K) = 0 would prove rank 0.  Not attempted.

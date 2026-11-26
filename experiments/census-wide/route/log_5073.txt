@@ -1,0 +1,16 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000001536
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+setup: rank bounds of E1 [1, 1], smallest upper bound in its isogeny class 1, h(G) = 26.214173
+G saturated at every prime <= 2000 (PARI ellsaturation): True (height after saturation 26.214173)
+p = 10009: order of G 5070, pairs allowed 9272 of 25704900 (0 s)
+p = 20089: order of G 5067, pairs allowed 8984 of 25674489 (0 s)
+p = 30013: order of G 14958, pairs allowed 104292 of 223741764 (0 s)
+p = 40009: order of G 1111, pairs allowed 164 of 1234321 (0 s)
+orders of G modulo 10009 and 20089 not coprime: lifting from the first prime only, range 30000; pairs: 324239
+  after p = 20089: 137
+  after p = 30013: 1
+  after p = 40009: 1
+sieve to 30000 leaves 1 pairs: [(1, 1)]; lifting test passed: True
+closure estimate: {"const_times_square_products": ["1234"], "distinct_roots": 8, "roots_in_how_many_f": [2], "genus": 9, "hG_enclosure": [26.209675757452565, 26.217617059771793], "ab_bound_deg96": 14063, "ab_bound_deg192": 28127, "mu": 5227.14412973165, "hG_check_P": null}
+fibre: {"A = +-G or +-G + T": {"consts": 2, "identically": 0, "s_values": 4, "rational_t": {"-1": "degenerate", "1": "degenerate"}}, "B = +-G or +-G + T": {"consts": 2, "identically": 0, "s_values": 4, "rational_t": {"-1": "degenerate", "1": "degenerate"}}}
+{"pair": [5073, 2336], "d": 40556866, "rank_E1": [1, 1], "rank_upper_isogeny_class": 1, "hG": 26.214173100897785, "saturated_up_to": 2000, "saturated": true, "lift_test": true, "primes": [10009, 20089, 30013, 40009], "sieve_range": 30000, "one_prime": true, "left": [[1, 1]], "n_left": 1, "closure": {"const_times_square_products": ["1234"], "distinct_roots": 8, "roots_in_how_many_f": [2], "genus": 9, "hG_enclosure": [26.209675757452565, 26.217617059771793], "ab_bound_deg96": 14063, "ab_bound_deg192": 28127, "mu": 5227.14412973165, "hG_check_P": null}, "fibre": {"A = +-G or +-G + T": {"consts": 2, "identically": 0, "s_values": 4, "rational_t": {"-1": "degenerate", "1": "degenerate"}}, "B = +-G or +-G + T": {"consts": 2, "identically": 0, "s_values": 4, "rational_t": {"-1": "degenerate", "1": "degenerate"}}}, "within_bound": [[1, 1]], "range_covers_bound": true, "closed": true, "sec": 6.8}

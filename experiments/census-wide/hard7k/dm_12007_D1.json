@@ -1,0 +1,1 @@
+{"pair": [12007, 1799], "curve": "D1", "rank": [1, 3], "hG": 18.440391285348372, "B": 174.254741688306, "amax": 21, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 43, "nt": 0, "t": {}, "status": "closed", "assumed": "rank 1"}

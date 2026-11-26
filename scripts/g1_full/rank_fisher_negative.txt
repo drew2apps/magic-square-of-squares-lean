@@ -1,0 +1,10 @@
+rank_fisher.py --negative
+  refused: a forged xi (times a prime 2 of S3) with the same local points (xi f(P) is not a square in Q_p)
+  refused: a forged xi (times -1): the real point must refuse it (xi f(P) is not a positive real number)
+  refused: a forged local point at 3 (not on D_lam(Q_3)) (not a point of D_lam(Q_p))
+  refused: a non-tangent line in place of l_Y (f is not a pushout: its classes are not a coset) (('a value of f outside f(P) Im(delta): f is not a pushout', 2, -7))
+  refused: a lam outside the survivors of the second descent (no local point somewhere) (('no conic point', 'none over Q_2'))
+  refused: a forged xi (times the prime 17 outside S3, where no point is checked) (xi has a prime outside S3)
+  refused: a forged local image at 2 (only the trivial class): the sampled values of f leave the coset (('a value of f outside f(P) Im(delta): f is not a pushout', 2, -7))
+  refused: a mutated coefficient of U (the forms U, V do not parametrise the conic)
+negative tests: 8 of 8 refused

@@ -1,0 +1,16 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000001536
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+setup: rank bounds of E1 [1, 1], smallest upper bound in its isogeny class 1, h(G) = 27.382606
+G saturated at every prime <= 2000 (PARI ellsaturation): True (height after saturation 27.382606)
+p = 10009: order of G 118, pairs allowed 12 of 13924 (0 s)
+p = 20089: order of G 3346, pairs allowed 7924 of 11195716 (0 s)
+p = 30013: order of G 14974, pairs allowed 26105 of 224220676 (0 s)
+p = 40009: order of G 10004, pairs allowed 35024 of 100080016 (0 s)
+orders of G modulo 10009 and 20089 not coprime: lifting from the first prime only, range 30000; pairs: 776225
+  after p = 20089: 516
+  after p = 30013: 1
+  after p = 40009: 1
+sieve to 30000 leaves 1 pairs: [(1, 1)]; lifting test passed: True
+closure estimate: {"const_times_square_products": ["1234"], "distinct_roots": 8, "roots_in_how_many_f": [2], "genus": 9, "hG_enclosure": [27.378339921809566, 27.385779927102906], "ab_bound_deg96": 13653, "ab_bound_deg192": 27307, "mu": 5151.59108704625, "hG_check_P": null}
+fibre: {"A = +-G or +-G + T": {"consts": 2, "identically": 0, "s_values": 4, "rational_t": {"-1": "no", "1": "no"}}, "B = +-G or +-G + T": {"consts": 2, "identically": 0, "s_values": 4, "rational_t": {"-1": "no", "1": "no"}}}
+{"pair": [12703, 2767], "d": -533715, "rank_E1": [1, 1], "rank_upper_isogeny_class": 1, "hG": 27.382606167750044, "saturated_up_to": 2000, "saturated": true, "lift_test": true, "primes": [10009, 20089, 30013, 40009], "sieve_range": 30000, "one_prime": true, "left": [[1, 1]], "n_left": 1, "closure": {"const_times_square_products": ["1234"], "distinct_roots": 8, "roots_in_how_many_f": [2], "genus": 9, "hG_enclosure": [27.378339921809566, 27.385779927102906], "ab_bound_deg96": 13653, "ab_bound_deg192": 27307, "mu": 5151.59108704625, "hG_check_P": null}, "fibre": {"A = +-G or +-G + T": {"consts": 2, "identically": 0, "s_values": 4, "rational_t": {"-1": "no", "1": "no"}}, "B = +-G or +-G + T": {"consts": 2, "identically": 0, "s_values": 4, "rational_t": {"-1": "no", "1": "no"}}}, "within_bound": [[1, 1]], "range_covers_bound": true, "closed": true, "sec": 5.8}

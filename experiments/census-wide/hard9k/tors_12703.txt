@@ -1,0 +1,1 @@
+{"pair": [12703, 2767], "curve": "w*K", "torsion": 4, "w": ["None", "1", "0", "1"], "verdicts": ["degenerate", "no"], "closes_if_rank0": true}

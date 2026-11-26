@@ -5,13 +5,13 @@
     15     8  mine: 0/64 survivors (sha);  t8: sha 0/64  AGREE
     15    -8  mine: 0/64 survivors (sha);  t8: sha 0/64  AGREE
     21    20  mine: 0/64 survivors (sha);  t8: sha 0/64  AGREE
-    21   -20  mine: 4/64 survivors (nonempty);  t8: open 4/64  AGREE
-    24     7  mine: 8/64 survivors (nonempty);  t8: open 8/64  AGREE
+    21   -20  mine: 4/64 survivors (nonempty);  t8: point 4/64  AGREE
+    24     7  mine: 8/64 survivors (nonempty);  t8: point 8/64  AGREE
     24    -7  mine: 4/64 survivors (nonempty);  t8: point 4/64  AGREE
     35    12  mine: 4/128 survivors (nonempty);  t8: open 4/128  AGREE
     35   -12  mine: 4/128 survivors (nonempty);  t8: open 4/128  AGREE
-    40     9  mine: 2/64 survivors (nonempty);  t8: open 2/64  AGREE
-    40    -9  mine: 4/64 survivors (nonempty);  t8: open 4/64  AGREE
+    40     9  mine: 2/64 survivors (nonempty);  t8: point 2/64  AGREE
+    40    -9  mine: 4/64 survivors (nonempty);  t8: point 4/64  AGREE
     45    28  mine: 8/128 survivors (nonempty);  t8: open 8/128  AGREE
     45   -28  mine: 8/128 survivors (nonempty);  t8: open 8/128  AGREE
     55    48  mine: 2/128 survivors (nonempty);  t8: open 2/128  AGREE
@@ -21,7 +21,7 @@
     60    11  mine: 0/128 survivors (sha);  t8: sha 0/128  AGREE
     60   -11  mine: 0/128 survivors (sha);  t8: sha 0/128  AGREE
     63    16  mine: 2/64 survivors (nonempty);  t8: open 2/64  AGREE
-    63   -16  mine: 2/64 survivors (nonempty);  t8: open 2/64  AGREE
+    63   -16  mine: 2/64 survivors (nonempty);  t8: point 2/64  AGREE
     72    65  mine: 4/128 survivors (nonempty);  t8: open 4/128  AGREE
     72   -65  mine: 8/128 survivors (nonempty);  t8: open 8/128  AGREE
     77    36  mine: 0/128 survivors (sha);  t8: sha 0/128  AGREE
@@ -32,13 +32,13 @@
     84   -13  mine: 4/128 survivors (nonempty);  t8: open 4/128  AGREE
     91    60  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
     91   -60  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
-    99    20  mine: 2/256 survivors (nonempty);  t8: open 2/256  AGREE
+    99    20  mine: 2/256 survivors (nonempty);  t8: point 2/256  AGREE
     99   -20  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
    105    88  mine: 4/256 survivors (nonempty);  t8: open 4/256  AGREE
    105   -88  mine: 4/256 survivors (nonempty);  t8: open 4/256  AGREE
    112    15  mine: 4/128 survivors (nonempty);  t8: open 4/128  AGREE
    112   -15  mine: 2/128 survivors (nonempty);  t8: open 2/128  AGREE
-   117    44  mine: 8/256 survivors (nonempty);  t8: open 8/256  AGREE
+   117    44  mine: 8/256 survivors (nonempty);  t8: point 8/256  AGREE
    117   -44  mine: 2/256 survivors (nonempty);  t8: open 2/256  AGREE
    120   119  mine: 8/128 survivors (nonempty);  t8: open 8/128  AGREE
    120  -119  mine: 4/128 survivors (nonempty);  t8: open 4/128  AGREE
@@ -48,16 +48,16 @@
    140   -51  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
    143    24  mine: 4/256 survivors (nonempty);  t8: open 4/256  AGREE
    143   -24  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
-   144    17  mine: 2/128 survivors (nonempty);  t8: open 2/128  AGREE
+   144    17  mine: 2/128 survivors (nonempty);  t8: point 2/128  AGREE
    144   -17  mine: 2/128 survivors (nonempty);  t8: open 2/128  AGREE
    153   104  mine: 4/128 survivors (nonempty);  t8: open 4/128  AGREE
-   153  -104  mine: 4/128 survivors (nonempty);  t8: open 4/128  AGREE
+   153  -104  mine: 4/128 survivors (nonempty);  t8: point 4/128  AGREE
    156   133  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
    156  -133  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
    165    52  mine: 0/512 survivors (sha);  t8: sha 0/512  AGREE
    165   -52  mine: 0/512 survivors (sha);  t8: sha 0/512  AGREE
    168    95  mine: 8/256 survivors (nonempty);  t8: open 8/256  AGREE
-   168   -95  mine: 4/256 survivors (nonempty);  t8: open 4/256  AGREE
+   168   -95  mine: 4/256 survivors (nonempty);  t8: point 4/256  AGREE
    171   140  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
    171  -140  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE
    176    57  mine: 0/256 survivors (sha);  t8: sha 0/256  AGREE

@@ -1,0 +1,32 @@
+kctp_recheck.py: independent re-check of the inputs of kctp.py for L1L3M1M2 of (627,364) over K = Q(i).
+Written by an AI model; not read by a person.  Experiment, not counted.  Sage (passagemath) for exact arithmetic.
+
+1. The curve.  Q_J = (-364*s + 627) * (627*s + 364) * ((364*i + 627)*s + 364*i - 627) * ((-364*i + 627)*s + 364*i + 627)
+   Jacobian of y^2 = Q_J (invariants I, J), the model with the root of M2 at infinity, and the model of kctp.txt:
+   isomorphic over K (exact).  j = c0 + c1 i with c1 = 9.282088e+02 != 0 (exact test c1 != 0), so j is not in Q.
+   the other corner curves (Jacobians of their quartics) are isomorphic over K to: {'L1L3M3M4': 'conj(E)', 'L2L4M1M2': 'conj(E)', 'L2L4M3M4': 'E'}
+   (a curve and its complex conjugate have the same rank over K), so the four have one rank between them.
+   Q_J(-i) and Q_J(i) (t = 1, -1) are non-zero squares in K (exact): the degenerate solutions give K-points.
+   e = ['28543239158509955880000*i - 2783595387469704535000', '28543239158509955880000*i + 72914933236647971246250', '61411774313468584005000*i - 31221116673647194769375']
+2. Torsion.  T1, T2, T3 = (e_k, 0) have order 2; halves found and checked (2H = T): 4, all halving T3.
+   gcd of #E(F_P) over the primes of good reduction with N(P) < 10^4 and p < 400: 8 (e.g. [(9, 16), (49, 64), (121, 144), (13, 8), (13, 8)]).
+   naive point counts agree with Sage at the primes above 13 and 7: [(8, 8), (8, 8), (64, 64)]
+   So E(K)_tors has order 8 and contains Z/2 x Z/4: E(K)_tors = Z/2 x Z/4 (exact; torsion injects into E(F_P)
+   for P of good reduction above an odd p, as e(P|p) = 1 < p - 1).
+3. Sel^2(E/K), new code.  S = places above [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273] (11 places); K(S,2) has dimension 12.
+   local images: dimensions [4, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2] (2 at odd places, 4 at 1 + i)
+   dim Sel^2(E/K) = 4   (3 s)
+   torsion image (T1, T2, the halves of T3) has dimension 2
+   the four Selmer elements printed in kctp.txt pass the local test here and span a space of dimension 4,
+   so the two computations give the same group.
+4. The lift criterion (second descent, no Hilbert symbols) for a basis of Sel^2:
+   class 100000000100100000000100: g(D_a(K_v)) affine of dimension [2, 4]; global lam exists: True
+   class 010000110010110000000001: g(D_a(K_v)) affine of dimension [2, 4]; global lam exists: True
+   class 001111000000001111000000: g(D_a(K_v)) affine of dimension [2, 4]; global lam exists: True
+   class 000000001000000000001000: g(D_a(K_v)) affine of dimension [2, 4]; global lam exists: True
+   every class of Sel^2 lifts to an everywhere locally soluble 4-covering: the Cassels-Tate pairing on Sel^2
+   is zero (Cassels; quoted).  This agrees with kctp.py.
+
+RESULT: kctp.py's inputs re-checked with new code: the curve (three models, isomorphic over K, j not in Q),
+E(K)_tors = Z/2 x Z/4, dim Sel^2 = 4 with torsion image of dimension 2, the same group as kctp.txt, and every
+class lifts (pairing zero).  So rank E(K) <= 2; 0 versus 2 is not decided here.

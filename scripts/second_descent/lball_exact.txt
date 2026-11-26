@@ -28,4 +28,4 @@ PARI cross-check (not used above): conductor 1929934048 (agrees), root number 1 
   p = 23: PARI f_p = 1, c_p = 2, w_p = 1: agrees
   p = 521: PARI f_p = 1, c_p = 4, w_p = -1: agrees
   p = 719: PARI f_p = 1, c_p = 4, w_p = -1: agrees
-  a_n for n <= 20000: agree with PARI ellan
+  a_n for n <= 302194: agree with PARI ellan

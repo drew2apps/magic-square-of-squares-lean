@@ -1,0 +1,30 @@
+1 constants A1 = 8d, B1 = -8d^2, A2 = -16d, B2 = 96d^2 = A1^2 - 4B1, 4B2 - A2^2 = 768 + 512 sqrt2: OK
+2 15 polynomial identities of E1Descent.lean (V1, V2, M1, prime_dvd_B, real_excl, pow4): OK
+3a classes of x on the eight affine torsion points of E1 with x != 0: [(0, 0, 0, 0), (1, 0, 0, 0)] (only 1, -1)
+3b classes on E1': images of the torsion points -> 1, alpha'(T') = B2 -> 3: [(0, 0, 0, 0), (0, 0, 0, 1)]
+4 E1  delta = (1, 0)    kept: F(s,t) a square at (s,t) = ((-4, -4), (-2, -2))
+4 E1  delta = (0, 1)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1  delta = (1, 1)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1  delta = (2, 1)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1  delta = (-1, 0)   kept: F(s,t) a square at (s,t) = ((-4, -4), (-2, -2))
+4 E1  delta = (0, -1)   excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1  delta = (-1, -1)  excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1  delta = (-2, -1)  excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (1, 0)    kept: F(s,t) a square at (s,t) = ((-4, -4), (-2, -1))
+4 E1' delta = (3, 0)    kept: F(s,t) a square at (s,t) = ((-4, -4), (-2, -1))
+4 E1' delta = (0, 1)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (0, 3)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (1, 1)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (3, 3)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (2, 1)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (6, 3)    excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (-1, 0)   excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (-3, 0)   excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (0, -1)   excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (0, -3)   excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (-1, -1)  excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (-3, -3)  excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (-2, -1)  excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+4 E1' delta = (-6, -3)  excluded in Lean; no square F(s,t), coordinates in [-4, 4]
+5 negative tests: 4 forged claims refused
+e1_rank0_check OK

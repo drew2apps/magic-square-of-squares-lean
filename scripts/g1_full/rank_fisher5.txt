@@ -1,0 +1,65 @@
+rank_fisher5.py: first steps of Fisher's fifth descent (arXiv:1509.03234 Sect. 7) on the level-3 curves of rank_fisher.py, exact
+760,39 E+, E side: lam = -646, xi = -108864007
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (10 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 128 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 84710170238502096055866041), L' = Q(sqrt 761) (dU = m^2 D0 checked); disc V = dd = 761 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+760,39 E+, E' side (the C3 of the Theta_4 reduction): lam = -9013070042, xi = 279001662
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (10 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 173 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 799), L' = Q(sqrt -799) (dU = m^2 D0 checked); disc V = dd = -799 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+945,248 E+, E side (the C3 of the Theta_4 reduction): lam = 697, xi = -205
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (4 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 129 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 1356488820560645889749762), L' = Q(sqrt 2) (dU = m^2 D0 checked); disc V = dd = 2 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+945,248 E+, E' side: lam = -349, xi = 1271
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (5 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 123 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 5820647), L' = Q(sqrt -5820647) (dU = m^2 D0 checked); disc V = dd = -5820647 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+72,65 E+, E side: lam = -7, xi = 35
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (3 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 77 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 15513721419678722), L' = Q(sqrt 2) (dU = m^2 D0 checked); disc V = dd = 2 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+72,65 E+, E' side (the C3 of the Theta_4 reduction): lam = -1, xi = 7
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (3 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 73 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt -2), L' = Q(sqrt 2) (dU = m^2 D0 checked); disc V = dd = 2 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; an L-point P1 (hint) checked on the cone
+  (6) Lemma 7.1: l_1 = tangent plane at P1 (tangency along the ruling checked); the pushout form on C3' is f = l_1 conj(l_1) = s0 * f0, f0 primitive in Z[c, d, e, g] (written to rank_fisher5_pushout.json), s0 = 1/588
+  (7) the other pair: a point P3 of the cone over Gamma_3 over L' (hint) checked, l_3 tangent along the ruling (checked), f_dag = l_3 conj(l_3) = s3 * f3 rational (rank_fisher5_pushout.json), s3 = 1/281253902327
+  (8) q through a_1 + a_2 + a_3 + a_4 (8 points, 7 conditions, checked) and f f_dag = c q^2 mod I(C3') with c = 244453884703974680380416794687225612508509774031007736457729901035157453005767472166143101568016884970320763110969127236234190255741037379017802699475534080137333319465007825279188400297856464168070277314433549031512725597146078504639012425500091945119404104008307604933168329862678491/6605918222724025804997467416363091939948352603545712 (exact linear algebra)
+920,129 E+, E side: lam = 11865, xi = 3
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (2 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 127 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 11400183300981303090754), L' = Q(sqrt 156252226) (dU = m^2 D0 checked); disc V = dd = 156252226 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+920,129 E+, E' side (the C3 of the Theta_4 reduction): lam = -148447697, xi = 314931
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (7 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 165 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 23), L' = Q(sqrt -23) (dU = m^2 D0 checked); disc V = dd = -23 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+631,71 D1, E side (the C3 of the Theta_4 reduction): lam = -71, xi = 35
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (3 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 118 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 49449047761), L' = Q(sqrt 31836878641) (dU = m^2 D0 checked); disc V = dd = 31836878641 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+631,71 D1, E' side: lam = 2, xi = 3
+  (1) conics parametrised from p_X, p_Y; l_X, l_Y tangent: l_X(p) = kX L1^2, l_Y(q) = kY L2^2 with kX = -4, kY = -4
+  (2) C3': p1(c,d) = Xi q1(e,g), p2(c,d) = Xi q2(e,g), Xi = xi kX kY (2 digits); the morphism to C3 checked (identities)
+  (3) det(x A + y B) = c * U(-y,x) V(-y,x) (const 124 digits): non-singular quadric intersection
+  (4) (19) holds: disc U, disc V, disc U disc V non-squares; L = Q(sqrt 627214), L' = Q(sqrt -627214) (dU = m^2 D0 checked); disc V = dd = -627214 modulo squares (Fisher Sect. 5: one pair over Q(sqrt xi_1))
+  (5) Gamma_1 over L: h0 Z^2 + B(e, g) = 0, (c, d)-block of rank 1 checked; locally soluble everywhere because C3 is (written argument); an L-point is NOT computed here
+Theta_4 is not computed by this script.

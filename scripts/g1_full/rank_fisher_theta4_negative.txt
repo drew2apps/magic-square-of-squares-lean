@@ -1,0 +1,11 @@
+rank_fisher_theta4.py --negative: altered inputs that must be refused
+  refused: q replaced by q + e g (f f_dag - c q^2 leaves the ideal) (f f_dag - c q^2 is not in (QA, QB))
+  refused: sigma_1 doubled in N1 (a mutated g0) (the identity N1 N1' = -2 delta1^2 fails modulo I(C4))
+  refused: tau_3 tripled in R3 (a mutated g0) (the identity R3 R3' = 2 W^2 delta3^2 fails modulo I(C4))
+  refused: k_1 = 1 + sqrt(-2) (norm 3, not xi4 modulo squares): sigma_1 not rational (not a rational square)
+  refused: a forged twist Xi = 137 * 3 (outside the Selmer coset) (no point of 411 W^2 = f0 over Q_2)
+  refused: a wrong y1 = 3 (not in S'_1): the quartic C_3 is not soluble at some bad prime (3 is not certified in Im(delta_phihat) at 2)
+  refused: the pairing evaluated with y = 3 (not Selmer): the local term depends on the point (the term (g0(P), 3)_137 depends on the point P: {1, -1})
+  refused: g0 replaced by g0 c / e (not a pushout form): the local term depends on the point (the term (g0(P), 2)_2 depends on the point P: {1, -1})
+  refused: the p-adic precision lowered to 4 digits at p = 2 (classes not certifiable) (no usable point of C4(Q_2) found)
+negative tests: 9 of 9 refused

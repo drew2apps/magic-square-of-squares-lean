@@ -1,0 +1,4 @@
+rank_fisher5_local.py --negative
+refused: a moved local point (r + p^3: not on D_lam, no p-adic square root) 
+refused: e and g swapped in the lifted point (not on C3') ("not on C3' to the required precision", '2', [80, 73], 34)
+2 of 2 refused

@@ -1,0 +1,104 @@
+kctp.py: the Cassels-Tate pairing on Sel^2 over K = Q(i) for the four corner K-quartics of (627,364).
+Written by an AI model; not read by a person.  Experiment, not counted.
+
+Hilbert symbols at 1 + i (product formula on the basis [(1, 1), (-4, -5), (-4, -1), (-5, -6)] of K_v*/K_v*^2): matrix [[0, 0, 1, 1], [0, 0, 0, 1], [1, 0, 0, 1], [1, 1, 1, 0]]
+  check: product formula on 300 random pairs (all places), PARI nfhilbert at every place for 60 of them: agree
+
+Labels: q+ = S s^2 - 2 D s + S = M1 M4 and q- = M2 M3 (checked), so L1L3M1M2 is not q+ L1 L3 (= L1 L3 M1 M4).
+
+== L1L3M1M2 of (627,364): y^2 = (x - e1)(x - e2)(x - e3) over K, s = r + den^2 A / x, den = 525625
+   e = [(-2783595387469704535000, 28543239158509955880000), (72914933236647971246250, 28543239158509955880000), (-31221116673647194769375, 61411774313468584005000)]
+   Q_J at s = -i, i (t = 1, -1): squares in K (checked), so the class of kclose.py is 1
+   j(E) has imaginary part 9.282088e+02 != 0: j is not rational (exact)
+   the points over s = -i, i have order 4, twice them T3, T3 (exact group law)
+   S: places above [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel^2(E/K) = 4; torsion image (T1, T2, the points over s = -i, i) of dimension 2
+     ((0, 1)*(991, 0), (0, 1)*(991, 0))
+     ((1, 1)*(1, -6)*(9, 10)*(991, 0)*(671, -4800), (1, 1)*(991, 0)*(95732, 621357))
+     ((1, 2)*(1, -2)*(2, 5)*(2, -5), (1, 2)*(1, -2)*(2, 5)*(2, -5))
+     ((263, 0), (263, 0))
+   pairing matrix <b_j, D_(a_i)>: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]] (symmetric, alternating, torsion images in the kernel: checked)
+   the same matrix with the tangent lines at second rational points of all twelve conics
+   check of the purity argument: the local term is 0 at the 15 places above [3, 7, 11, 13, 17, 19, 23, 41, 53, 61] (outside S), for all D_a and b
+   lifts to 4-coverings (no Hilbert symbols: lam in K(S,2)^2 with (l_v l_w, l_u l_w)(P_v) = lam locally, every v in S): solvable for all 4 basis classes (solution spaces of dimension [4, 4, 4, 4]): every class of Sel^2 lifts to an everywhere locally soluble 4-covering, as the zero pairing requires
+   rank of the pairing 0  =>  rank E(K) <= 2
+   E/<T1>: not all points of order 2 over K
+   E/<T2>: not all points of order 2 over K
+   E/<T3> = y^2 = x(x - (-17445862251774206250000, -9961458314200419531250))(x - (-247701280141171106250000, 141435598934034932031250)): dim Sel^2 = 4, pairing rank 0  =>  rank <= 2
+     its 2-isogenous curves other than E (kernels its T2, T3; T1 = (0, 0) is the kernel of the dual): not all points of order 2 over K
+   route (b): points on the 2-coverings of the 3 non-torsion cosets, all admissible models, |y| <= 24: 0 found
+     (test of the models, |y| <= 4: the torsion classes give s = ['-260633/525625-456456/525625i', '-364/6270i', '0-1i', '01i', '260633/525625-456456/525625i', '627/3640i'], the s of all 8 torsion points: O at r, T1..T3 at the roots, the order-4 points at -i, i)
+
+== L1L3M3M4 of (627,364): y^2 = (x - e1)(x - e2)(x - e3) over K, s = r + den^2 A / x, den = 525625
+   e = [(35379552288463120465000, 28543239158509955880000), (-40318976335654555316250, 28543239158509955880000), (-68756497621832045550625, -4325295996448672245000)]
+   Q_J at s = -i, i (t = 1, -1): squares in K (checked), so the class of kclose.py is 1
+   j(E) has imaginary part -9.282088e+02 != 0: j is not rational (exact)
+   the points over s = -i, i have order 4, twice them T3, T3 (exact group law)
+   S: places above [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel^2(E/K) = 4; torsion image (T1, T2, the points over s = -i, i) of dimension 2
+     ((0, 1)*(991, 0), (0, 1)*(991, 0))
+     ((1, 1)*(95732, -621357), (1, 1)*(1, 6)*(9, -10)*(671, 4800))
+     ((1, 2)*(1, -2)*(2, 5)*(2, -5), (1, 2)*(1, -2)*(2, 5)*(2, -5))
+     ((263, 0), (263, 0))
+   pairing matrix <b_j, D_(a_i)>: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]] (symmetric, alternating, torsion images in the kernel: checked)
+   the same matrix with the tangent lines at second rational points of all twelve conics
+   check of the purity argument: the local term is 0 at the 15 places above [3, 7, 11, 13, 17, 19, 23, 41, 53, 61] (outside S), for all D_a and b
+   lifts to 4-coverings (no Hilbert symbols: lam in K(S,2)^2 with (l_v l_w, l_u l_w)(P_v) = lam locally, every v in S): solvable for all 4 basis classes (solution spaces of dimension [4, 4, 4, 4]): every class of Sel^2 lifts to an everywhere locally soluble 4-covering, as the zero pairing requires
+   rank of the pairing 0  =>  rank E(K) <= 2
+   E/<T1>: not all points of order 2 over K
+   E/<T2>: not all points of order 2 over K
+   E/<T3> = y^2 = x(x - (-17445862251774206250000, 9961458314200419531250))(x - (-247701280141171106250000, -141435598934034932031250)): dim Sel^2 = 4, pairing rank 0  =>  rank <= 2
+     its 2-isogenous curves other than E (kernels its T2, T3; T1 = (0, 0) is the kernel of the dual): not all points of order 2 over K
+   route (b): points on the 2-coverings of the 3 non-torsion cosets, all admissible models, |y| <= 24: 0 found
+     (test of the models, |y| <= 4: the torsion classes give s = ['-260633/525625456456/525625i', '-364/6270i', '0-1i', '01i', '260633/525625456456/525625i', '627/3640i'], the s of all 8 torsion points: O at r, T1..T3 at the roots, the order-4 points at -i, i)
+
+== L2L4M1M2 of (627,364): y^2 = (x - e1)(x - e2)(x - e3) over K, s = r + den^2 A / x, den = 525625
+   e = [(35379552288463120465000, 28543239158509955880000), (-40318976335654555316250, 28543239158509955880000), (-68756497621832045550625, -4325295996448672245000)]
+   Q_J at s = -i, i (t = 1, -1): squares in K (checked), so the class of kclose.py is 1
+   j(E) has imaginary part -9.282088e+02 != 0: j is not rational (exact)
+   the points over s = -i, i have order 4, twice them T3, T3 (exact group law)
+   S: places above [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel^2(E/K) = 4; torsion image (T1, T2, the points over s = -i, i) of dimension 2
+     ((0, 1)*(991, 0), (0, 1)*(991, 0))
+     ((1, 1)*(95732, -621357), (1, 1)*(1, 6)*(9, -10)*(671, 4800))
+     ((1, 2)*(1, -2)*(2, 5)*(2, -5), (1, 2)*(1, -2)*(2, 5)*(2, -5))
+     ((263, 0), (263, 0))
+   pairing matrix <b_j, D_(a_i)>: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]] (symmetric, alternating, torsion images in the kernel: checked)
+   the same matrix with the tangent lines at second rational points of all twelve conics
+   check of the purity argument: the local term is 0 at the 15 places above [3, 7, 11, 13, 17, 19, 23, 41, 53, 61] (outside S), for all D_a and b
+   lifts to 4-coverings (no Hilbert symbols: lam in K(S,2)^2 with (l_v l_w, l_u l_w)(P_v) = lam locally, every v in S): solvable for all 4 basis classes (solution spaces of dimension [4, 4, 4, 4]): every class of Sel^2 lifts to an everywhere locally soluble 4-covering, as the zero pairing requires
+   rank of the pairing 0  =>  rank E(K) <= 2
+   E/<T1>: not all points of order 2 over K
+   E/<T2>: not all points of order 2 over K
+   E/<T3> = y^2 = x(x - (-17445862251774206250000, 9961458314200419531250))(x - (-247701280141171106250000, -141435598934034932031250)): dim Sel^2 = 4, pairing rank 0  =>  rank <= 2
+     its 2-isogenous curves other than E (kernels its T2, T3; T1 = (0, 0) is the kernel of the dual): not all points of order 2 over K
+   route (b): points on the 2-coverings of the 3 non-torsion cosets, all admissible models, |y| <= 24: 0 found
+     (test of the models, |y| <= 4: the torsion classes give s = ['-260633/525625-456456/525625i', '-627/3640i', '0-1i', '01i', '260633/525625-456456/525625i', '364/6270i'], the s of all 8 torsion points: O at r, T1..T3 at the roots, the order-4 points at -i, i)
+
+== L2L4M3M4 of (627,364): y^2 = (x - e1)(x - e2)(x - e3) over K, s = r + den^2 A / x, den = 525625
+   e = [(-2783595387469704535000, 28543239158509955880000), (72914933236647971246250, 28543239158509955880000), (-31221116673647194769375, 61411774313468584005000)]
+   Q_J at s = -i, i (t = 1, -1): squares in K (checked), so the class of kclose.py is 1
+   j(E) has imaginary part 9.282088e+02 != 0: j is not rational (exact)
+   the points over s = -i, i have order 4, twice them T3, T3 (exact group law)
+   S: places above [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel^2(E/K) = 4; torsion image (T1, T2, the points over s = -i, i) of dimension 2
+     ((0, 1)*(991, 0), (0, 1)*(991, 0))
+     ((1, 1)*(1, -6)*(9, 10)*(991, 0)*(671, -4800), (1, 1)*(991, 0)*(95732, 621357))
+     ((1, 2)*(1, -2)*(2, 5)*(2, -5), (1, 2)*(1, -2)*(2, 5)*(2, -5))
+     ((263, 0), (263, 0))
+   pairing matrix <b_j, D_(a_i)>: [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]] (symmetric, alternating, torsion images in the kernel: checked)
+   the same matrix with the tangent lines at second rational points of all twelve conics
+   check of the purity argument: the local term is 0 at the 15 places above [3, 7, 11, 13, 17, 19, 23, 41, 53, 61] (outside S), for all D_a and b
+   lifts to 4-coverings (no Hilbert symbols: lam in K(S,2)^2 with (l_v l_w, l_u l_w)(P_v) = lam locally, every v in S): solvable for all 4 basis classes (solution spaces of dimension [4, 4, 4, 4]): every class of Sel^2 lifts to an everywhere locally soluble 4-covering, as the zero pairing requires
+   rank of the pairing 0  =>  rank E(K) <= 2
+   E/<T1>: not all points of order 2 over K
+   E/<T2>: not all points of order 2 over K
+   E/<T3> = y^2 = x(x - (-17445862251774206250000, -9961458314200419531250))(x - (-247701280141171106250000, 141435598934034932031250)): dim Sel^2 = 4, pairing rank 0  =>  rank <= 2
+     its 2-isogenous curves other than E (kernels its T2, T3; T1 = (0, 0) is the kernel of the dual): not all points of order 2 over K
+   route (b): points on the 2-coverings of the 3 non-torsion cosets, all admissible models, |y| <= 24: 0 found
+     (test of the models, |y| <= 4: the torsion classes give s = ['-260633/525625456456/525625i', '-627/3640i', '0-1i', '01i', '260633/525625456456/525625i', '364/6270i'], the s of all 8 torsion points: O at r, T1..T3 at the roots, the order-4 points at -i, i)
+
+Isomorphisms over K (exact): L2L4M3M4 ~ L1L3M1M2: True; L2L4M1M2 ~ L1L3M3M4: True; L1L3M3M4 ~ complex conjugate of L1L3M1M2: True
+So the four curves have one rank over K between them.
+
+RESULT: on all four curves dim Sel^2 = 4, the torsion image has dimension 2, and the Cassels-Tate pairing on Sel^2 is
+identically zero (also on the 2-isogenous curve with full 2-torsion).  So rank E(K) <= 2, and the rank is 0 or 2 if
+Sha(E/K)[2^inf] is finite (PARI's root number +1, a guide, agrees): the level-2 pairing does not decide.  Every class
+of Sel^2 lifts to an everywhere locally soluble 4-covering.  No point of infinite order was found.
+(627,364) is NOT closed by this computation.

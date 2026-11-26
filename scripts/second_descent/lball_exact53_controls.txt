@@ -1,0 +1,7 @@
+lball_exact53.py --controls: the certificate on curves with known rank
+
+67a1    N = 67: F in [0.774919, 0.793985], L(E,1) computed with w = +1 in [1.273770036, 1.273770037], guard passes: certified (expected: certified)
+79a1    N = 79: F in [-0.000032, 0.000031], L(E,1) computed with w = +1 in [0.603652132, 0.603652133], guard fails: w not determined (expected: w not determined)
+389a1   N = 389: F in [-0.918342, -0.917588], L(E,1) computed with w = +1 in [-0.000000001, 0.000000001], guard passes: not positive (expected: not positive)
+5077a1  N = 5077: F in [-0.001185, 0.001252], L(E,1) computed with w = +1 in [-0.512637341, -0.512637339], guard fails: w not determined (expected: w not determined)
+controls: 4 of 4 as expected

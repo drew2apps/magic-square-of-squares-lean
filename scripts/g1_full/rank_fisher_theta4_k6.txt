@@ -1,0 +1,43 @@
+rank_fisher_theta4_k6.py: control (K6), Theta_4(y0, y1) on E+ of (72,65) over other level-2 lifts D_lam of y0
+D_lam with lam = -2 (Theta_2 = +1), level-3 twist xi = 3793813179 (certified); C3' re-built, conic points over Q(sqrt -2), Q(sqrt 2) found and checked
+  pencil discriminant (637 digits): primes [2, 3, 5, 7, 13, 97, 137, 710053, 79553041, 97505521]
+  level-4 Selmer set over [2, 3, 5, 7, 11, 13, 97, 137, 710053, 79553041, 97505521]: 8 twists [1, 2, 79553041, 97505521, 159106082, 195011042, 7756860709839361, 15513721419678722]
+  C4: Xi W^2 = f0 with Xi = 1 (xi4 = 49/935810137921); k_1 = 196427 + 669786 sqrt(-2) (N = 935810137921), k_3 = 3596059713601739 + 2195748837408538 sqrt(2) (N = 3289019549827528628828873229233); sigma_1 = 7, tau_3 = .../... (157/35 digits)
+  (I1) N1 N1' = -2 delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = 2 W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (301, 998, 2067 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 510 digits)
+  R3 = t3 (W T3 + r Q0) with r = 33 digits / 21 digits: primes of den(r): [3, 353, 1279, 336527, 252169271]; Q0 mod p in span(QA, QB) for: [3, 353, 1279, 336527, 252169271]
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 97, 137, 353, 1279, 336527, 710053, 79553041, 97505521, 252169271]  (primes < 47, B0, primes of Xi, the primes where R3^0 reduces into (QA, QB), primes of the y)
+  R: a point of C4(R) (interval enclosure, Xi f0 > 0), g0^0 there < 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 1), (0, 7), (1, 1), (1, 7)] on C4(Q_p): g0 is not a constant times a square, so [B] = T'
+  sum_v (g0(P_v), 2)_v: the term is -1 exactly at [3]; product = -1
+  sum_v (g0(P_v), 7756860709839361)_v: the term is -1 exactly at [353, 1279, 336527, 97505521]; product = +1
+  sum_v (g0(P_v), 195011042)_v: the term is -1 exactly at [3, 353, 97505521, 252169271]; product = +1
+    p = 2 (2 mod 8): classes of g0^0 on C4(Q_p) [(0, 1), (0, 7), (1, 1), (1, 7)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 3 (3 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 2:-1 7756860709839361:+1 195011042:-1
+    p = 5 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 7 (7 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 11 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 13 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 17 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 19 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 23 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 29 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 31 (7 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 37 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 41 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 43 (3 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 97 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 137 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 353 (1 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 2:+1 7756860709839361:-1 195011042:-1
+    p = 1279 (7 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 2:+1 7756860709839361:-1 195011042:+1
+    p = 336527 (7 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 2:+1 7756860709839361:-1 195011042:+1
+    p = 710053 (5 mod 8): classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 79553041 (1 mod 8): classes of g0^0 on C4(Q_p) [(0, 0)]; terms 2:+1 7756860709839361:+1 195011042:+1
+    p = 97505521 (1 mod 8): classes of g0^0 on C4(Q_p) [(1, 1)]; terms 2:+1 7756860709839361:-1 195011042:-1
+    p = 252169271 (7 mod 8): classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 2:+1 7756860709839361:+1 195011042:-1
+  => over lam = -2: product of the local symbols -1
+
+(K6) values over lam = [-2]: {-2: -1}; rank_fisher_theta4.py (lam = -1): -1
+(K6) passed

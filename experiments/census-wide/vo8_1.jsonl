@@ -1,0 +1,5 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000001536
+{"pair": [1039, 479], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [759, 280], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 27.9}
+{"pair": [1049, 791], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [920, 129], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 79.5}
+{"pair": [1057, 967], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [1012, 45], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 76.0}
+{"pair": [1088, 735], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [1823, 353], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 62.8}

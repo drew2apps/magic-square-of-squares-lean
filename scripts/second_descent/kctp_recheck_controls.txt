@@ -1,0 +1,21 @@
+kctp_recheck.py --controls.  For each curve: dim Sel^2(E/K) and the dimension of the subspace of classes that
+lift (kernel of the Cassels-Tate pairing, by the lift criterion), with the new code; compared with kctp.py's
+results (run 3, kctp_controls.txt: dim Sel^2 and the rank of the pairing matrix) and with the known ranks.
+(1) base changes of y^2 = x(x + a)(x + b) from Q; rank E(K) = rank E(Q) + rank E^-1(Q) from PARI ellrank (guide,
+    used when its bounds agree).  Required: bound = lifting - 2 >= rank_K, and agreement with kctp.py.
+  a=  14 b=  74: ranks over Q [(0, 0), (0, 0)] -> rank_K 0; dim Sel^2_K 4, lifting 2, bound 0; kctp.py: dim 4, pairing rank 2: agree
+  a= -56 b= -71: ranks over Q [(0, 0), (0, 0)] -> rank_K 0; dim Sel^2_K 4, lifting 2, bound 0; kctp.py: dim 4, pairing rank 2: agree
+  a=  66 b=   9: ranks over Q [(0, 0), (0, 0)] -> rank_K 0; dim Sel^2_K 4, lifting 2, bound 0; kctp.py: dim 4, pairing rank 2: agree
+  a=  59 b= -47: ranks over Q [(0, 0), (1, 1)] -> rank_K 1; dim Sel^2_K 5, lifting 3, bound 1; kctp.py: dim 5, pairing rank 2: agree
+  a=  41 b=  80: ranks over Q [(0, 0), (2, 2)] -> rank_K 2; dim Sel^2_K 4, lifting 4, bound 2; kctp.py: dim 4, pairing rank 0: agree
+  a=  61 b= -21: ranks over Q [(1, 1), (1, 1)] -> rank_K 2; dim Sel^2_K 4, lifting 4, bound 2; kctp.py: dim 4, pairing rank 0: agree
+  a=  29 b=  21: ranks over Q [(2, 2), (0, 0)] -> rank_K 2; dim Sel^2_K 4, lifting 4, bound 2; kctp.py: dim 4, pairing rank 0: agree
+  a= -20 b=  71: ranks over Q [(0, 0), (1, 1)] -> rank_K 1; dim Sel^2_K 3, lifting 3, bound 1; kctp.py: dim 3, pairing rank 0: agree
+  8 curves: sound on all; bound = rank_K on 8; agreement with kctp.py on 8.
+(2) curves over K with j not in Q (kctp.py's list): lower bound from points found by kctp.py (not re-checked
+    here); required: agreement with kctp.py and bound >= that lower bound.
+  c=(14, -33) d=(32, -25): dim Sel^2 4, torsion image 2, lifting 2 -> bound 0; kctp.py: dim 4, pairing rank 2, lower 0: agree
+  c=(-35, -31) d=(31, 33): dim Sel^2 4, torsion image 2, lifting 2 -> bound 0; kctp.py: dim 4, pairing rank 2, lower 0: agree
+  c=(14, 0) d=(19, 34): dim Sel^2 4, torsion image 2, lifting 4 -> bound 2; kctp.py: dim 4, pairing rank 0, lower 2: agree
+  c=(0, 3) d=(4, 36): dim Sel^2 4, torsion image 2, lifting 4 -> bound 2; kctp.py: dim 4, pairing rank 0, lower 2: agree
+  4 curves: agreement with kctp.py on all; the lift criterion fails (pairing non-zero) on 2 of them.

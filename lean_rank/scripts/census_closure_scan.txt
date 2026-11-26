@@ -1,0 +1,59 @@
+# census_closure_scan.py 60 G1Census1000.lean 400, run in the Mac container (PARI via cypari2), 25-26 Nov 2026.
+# Guidance only (nothing in Lean depends on it). Partial: stopped by hand at (357,20) (4.5 GB in PARI/the local test).
+# Of the 114 census pairs scanned (m <= 353), 51 have PARI rank bounds [0,0] on w*f0*f8; only those lines and the
+# three [0,2] lines are kept below (the other 60 have a positive lower bound). "cert" is the run-3 local test
+# (gen_rank_zero_certs.cert: at most 4 classes left) with a 60 s cap: 9 ACCEPT, 5 refused, 37 timeout.
+4 3 rank [0,0] cert ACCEPT 0.0s points 16 p 11
+7 1 rank [0,0] cert ACCEPT 0.0s points 8 p 11
+12 5 rank [0,0] cert ACCEPT 0.0s points 16 p 11
+17 7 rank [0,0] cert ACCEPT 1.7s points 8 p 11
+24 7 rank [0,0] cert ACCEPT 0.0s points 16 p 11
+35 12 rank [0,0] cert refused 0.6s
+45 28 rank [0,0] cert ACCEPT 3.0s points 16 p 11
+47 23 rank [0,0] cert timeout 60.0s
+49 31 rank [0,0] cert refused 0.6s
+55 48 rank [0,0] cert timeout 59.9s
+56 33 rank [0,0] cert ACCEPT 5.3s points 16 p 17
+60 11 rank [0,0] cert refused 13.0s
+63 16 rank [0,0] cert ACCEPT 2.4s points 16 p 11
+71 49 rank [0,0] cert timeout 60.0s
+73 17 rank [0,0] cert timeout 60.0s
+79 47 rank [0,0] cert timeout 59.9s
+84 13 rank [0,0] cert ACCEPT 6.8s points 16 p 11
+89 23 rank [0,0] cert timeout 60.0s
+103 7 rank [0,0] cert timeout 59.9s
+113 41 rank [0,0] cert timeout 60.0s
+119 41 rank [0,0] cert refused 39.1s
+127 97 rank [0,2]
+140 51 rank [0,0] cert timeout 60.0s
+143 24 rank [0,0] cert timeout 60.0s
+153 104 rank [0,0] cert timeout 60.0s
+161 127 rank [0,0] cert refused 49.1s
+165 52 rank [0,0] cert timeout 59.9s
+168 95 rank [0,0] cert timeout 59.9s
+171 140 rank [0,0] cert timeout 60.0s
+180 19 rank [0,0] cert timeout 60.0s
+193 17 rank [0,0] cert timeout 60.0s
+208 105 rank [0,0] cert timeout 60.0s
+217 47 rank [0,0] cert timeout 60.0s
+217 113 rank [0,0] cert timeout 60.0s
+221 60 rank [0,0] cert timeout 60.0s
+224 207 rank [0,0] cert timeout 60.0s
+231 160 rank [0,0] cert timeout 60.0s
+239 1 rank [0,0] cert timeout 59.9s
+252 115 rank [0,0] cert timeout 60.0s
+257 49 rank [0,0] cert timeout 60.0s
+272 225 rank [0,0] cert timeout 60.0s
+275 252 rank [0,0] cert timeout 60.0s
+285 68 rank [0,0] cert timeout 60.0s
+287 223 rank [0,2]
+299 180 rank [0,0] cert timeout 60.0s
+304 297 rank [0,0] cert timeout 60.0s
+308 75 rank [0,0] cert timeout 60.0s
+308 185 rank [0,0] cert timeout 73.2s
+312 25 rank [0,0] cert timeout 60.0s
+323 36 rank [0,0] cert timeout 60.0s
+325 228 rank [0,0] cert timeout 60.0s
+329 191 rank [0,2]
+337 287 rank [0,0] cert timeout 60.0s
+353 217 rank [0,0] cert timeout 60.0s

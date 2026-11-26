@@ -1,0 +1,42 @@
+lball_exact53.py --negative: forged inputs, each must be refused
+
+curve (21,20), N = 38048:
+  true inputs, tails below 0.001: L(y=1) [0.9946349117, 0.9953176927], L(y=6/5) [0.9948300458, 0.9951235707]: guard passes
+  true inputs, tails below 1e-09: L(y=1) [0.9949769535, 0.9949769538], L(y=6/5) [0.9949769535, 0.9949769537]: guard passes
+  forged N/41 (41 left out):                      (tails below 0.001) L(y=1) [1.2242052320, 1.2247134373], L(y=6/5) [1.2169880674, 1.2172417444]: guard refuses
+  forged 3N (3 added):                            (tails below 0.001) L(y=1) [1.0264805450, 1.0271448928], L(y=6/5) [1.0204351064, 1.0208400991]: guard refuses
+  forged 2N:                                      (tails below 0.001) L(y=1) [1.0227312052, 1.0231727911], L(y=6/5) [1.0185141981, 1.0187616036]: guard refuses
+  forged w = -1:                                  (tails below 0.001) L(y=1) [-0.0003413905, 0.0003413905], L(y=6/5) [-0.0169183077, -0.0166247828]: guard refuses
+  forged a_7 one more:                            (tails below 1e-09) L(y=1) [1.1803256011, 1.1803256015], L(y=6/5) [1.1792223151, 1.1792223153]: guard refuses
+  forged a_53 one more (p near sqrt(N)/4):        (tails below 1e-09) L(y=1) [1.0018181040, 1.0018181044], L(y=6/5) [1.0019511428, 1.0019511430]: guard refuses
+  forged a_2 = 1 (bad prime, additive):           (tails below 1e-09) L(y=1) [2.0099419813, 2.0099419816], L(y=6/5) [2.0117008494, 2.0117008496]: guard refuses
+  order certificate at the first 10 good primes above 10^5, #E(F_p) by counting points: the true order accepted at 10 of 10; forged orders #E(F_p) + d, d = -4, -2, 2, 4: 40 of 40 refused
+  broken group law (P + Q -> -(P + Q)): detected (an assertion fails or a_p differs from counting) at 10 of 10 primes
+  broken group law (chord slope + 1): detected (an assertion fails or a_p differs from counting) at 10 of 10 primes
+curve (15,8), N = 87584:
+  true inputs, tails below 0.001: L(y=1) [1.7673836378, 1.7679042602], L(y=6/5) [1.7674931419, 1.7677957368]: guard passes
+  true inputs, tails below 1e-09: L(y=1) [1.7676443477, 1.7676443482], L(y=6/5) [1.7676443477, 1.7676443482]: guard passes
+  forged N/23 (23 left out):                      (tails below 0.001) L(y=1) [1.1792647489, 1.1795976985], L(y=6/5) [1.1852574620, 1.1856631706]: guard refuses
+  forged 3N (3 added):                            (tails below 0.001) L(y=1) [2.1536271047, 2.1540992867], L(y=6/5) [2.1428542055, 2.1431976603]: guard refuses
+  forged 2N:                                      (tails below 0.001) L(y=1) [2.0248338812, 2.0254063107], L(y=6/5) [2.0173923501, 2.0177778867]: guard refuses
+  forged w = -1:                                  (tails below 0.001) L(y=1) [-0.0002603112, 0.0002603112], L(y=6/5) [-0.1392211957, -0.1389186008]: guard refuses
+  forged a_5 one more:                            (tails below 1e-09) L(y=1) [1.9552789956, 1.9552789962], L(y=6/5) [1.9563857016, 1.9563857021]: guard refuses
+  forged a_79 one more (p near sqrt(N)/4):        (tails below 1e-09) L(y=1) [1.7723734461, 1.7723734466], L(y=6/5) [1.7724597360, 1.7724597365]: guard refuses
+  forged a_2 = 1 (bad prime, additive):           (tails below 1e-09) L(y=1) [2.9889318021, 2.9889318027], L(y=6/5) [2.9961901843, 2.9961901848]: guard refuses
+  order certificate at the first 10 good primes above 10^5, #E(F_p) by counting points: the true order accepted at 10 of 10; forged orders #E(F_p) + d, d = -4, -2, 2, 4: 40 of 40 refused
+  broken group law (P + Q -> -(P + Q)): detected (an assertion fails or a_p differs from counting) at 10 of 10 primes
+  broken group law (chord slope + 1): detected (an assertion fails or a_p differs from counting) at 10 of 10 primes
+curve (23,7), N = 105757680:
+  true inputs, tails below 0.001: L(y=1) [3.9650211776, 3.9656830696], L(y=6/5) [3.9651955612, 3.9655086968]: guard passes
+  true inputs, tails below 1e-09: L(y=1) [3.9653521309, 3.9653521319], L(y=6/5) [3.9653521311, 3.9653521316]: guard passes
+  forged N/23 (23 left out):                      (tails below 0.001) L(y=1) [3.3603916613, 3.3613271794], L(y=6/5) [3.3614305212, 3.3618487111]: guard refuses
+  forged 11N (11 added):                          (tails below 0.001) L(y=1) [4.3906112734, 4.3912092528], L(y=6/5) [4.3928814055, 4.3931636594]: guard refuses
+  forged 2N:                                      (tails below 0.001) L(y=1) [4.0603818069, 4.0613667508], L(y=6/5) [4.0634117063, 4.0638808855]: guard refuses
+  forged w = -1:                                  (tails below 0.001) L(y=1) [-0.0003309460, 0.0003309460], L(y=6/5) [-0.0490214414, -0.0487083058]: guard refuses
+  forged a_7 one more:                            (tails below 1e-09) L(y=1) [4.4748871283, 4.4748871293], L(y=6/5) [4.4753875034, 4.4753875038]: guard refuses
+  forged a_2579 one more (p near sqrt(N)/4):      (tails below 1e-09) L(y=1) [3.9655103213, 3.9655103224], L(y=6/5) [3.9655121142, 3.9655121147]: guard refuses
+  forged a_2 = 1 (bad prime, additive):           (tails below 1e-09) L(y=1) [7.4221565444, 7.4221565455], L(y=6/5) [7.4203739781, 7.4203739786]: guard refuses
+  order certificate at the first 10 good primes above 10^5, #E(F_p) by counting points: the true order accepted at 10 of 10; forged orders #E(F_p) + d, d = -4, -2, 2, 4: 40 of 40 refused
+  broken group law (P + Q -> -(P + Q)): detected (an assertion fails or a_p differs from counting) at 10 of 10 primes
+  broken group law (chord slope + 1): detected (an assertion fails or a_p differs from counting) at 10 of 10 primes
+negative tests: 147 forged inputs, 147 refused

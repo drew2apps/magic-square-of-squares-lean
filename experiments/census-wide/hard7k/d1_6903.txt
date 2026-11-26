@@ -1,0 +1,5 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000001536
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+6903 5104 D1 conductor 18624223332500189182746974405643286975342970222725062 root number -1
+6903 5104 D1 curve 0 effort 6 bounds 3 5 points 3 54 s
+6903 5104 D1 curve 1 effort 6 bounds 3 5 points 3 66 s

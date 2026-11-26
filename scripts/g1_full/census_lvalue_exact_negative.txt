@@ -1,0 +1,17 @@
+census_lvalue_exact.py --negative: forged inputs through lball_exact.evaluate, each must be refused
+
+curve (112,15) w*K, N = 2338638960:
+  true inputs: L(y=1) [1.0259086972, 1.0259086979], L(y=6/5) [1.0259086974, 1.0259086977], Fricke residual [-0.000002, 0.000002]: guard passes
+  forged N/127 (127 left out):                L(y=1) [2.1105210193, 2.1105210200], L(y=6/5) [2.1120450187, 2.1120450190], residual [13.561896, 13.561919]: refused (enclosures disjoint, residual excludes 0)
+  forged 11N (11 added):                      L(y=1) [0.2744402841, 0.2744402851], L(y=6/5) [0.2808489902, 0.2808489907], residual [2138.985620, 2138.985621]: refused (enclosures disjoint, residual excludes 0)
+  forged 2N:                                  L(y=1) [0.7606444791, 0.7606444801], L(y=6/5) [0.7649518622, 0.7649518627], residual [612.174942, 612.174944]: refused (enclosures disjoint, residual excludes 0)
+  forged w = -1:                              L(y=1) [-0.0000000003, 0.0000000003], L(y=6/5) [0.1416106888, 0.1416106891], residual [-7092.654790, -7092.654786]: refused (enclosures disjoint, residual excludes 0)
+  forged a_7 one more:                        L(y=1) [1.3107174254, 1.3107174261], L(y=6/5) [1.3106636777, 1.3106636780], residual [-5.834866, -5.834863]: refused (enclosures disjoint, residual excludes 0)
+  forged a_12097 one more (p near sqrt(N)/4): L(y=1) [1.0259425529, 1.0259425536], L(y=6/5) [1.0259429309, 1.0259429312], residual [0.038071, 0.038074]: refused (enclosures disjoint, residual excludes 0)
+  forged a_2 = 1 (bad prime, additive):       L(y=1) [2.7939506749, 2.7939506756], L(y=6/5) [2.7890895380, 2.7890895384], residual [-489.363875, -489.363872]: refused (enclosures disjoint, residual excludes 0)
+isogeny chain (112,15) -> (127,97) (true partners): found
+forged isogeny (112,15) -> (260,69) (not isogenous):    refused (no chain)
+forged isogeny (112,15) -> (127,97) with b + 1:         refused (no chain)
+forged isogeny (112,15) -> (127,97) with a + 2:         refused (no chain)
+forged isogeny (112,15) -> twist by -1 of (127,97):     refused (no chain)
+negative tests: 11 forged inputs, 11 refused

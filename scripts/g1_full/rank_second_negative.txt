@@ -1,0 +1,8 @@
+  refused: a forged point of the conic C_X (not a point of the conic)
+  refused: a mutated coefficient of U (a forged homogeneous space D_lam) (the forms U, V do not parametrise the conic)
+  refused: a tangent decomposition at a point that is not on the (mutated) conic (the point is not on the conic)
+  refused: pairing with a class outside the Selmer group (evaluation must not be constant) (('the local evaluation is not constant', 2, {1, -1}))
+  refused: a curve D_lam with lam outside the survivors (no local point somewhere) (('no conic point', 'none over Q_2'))
+  refused: a non-tangent line in place of l_X (the evaluation must not be constant) (('the local evaluation is not constant', 2, {1, -1}))
+  refused: full 2-torsion: pairing with a class outside Sel^2 (evaluation must not be constant) (('the local evaluation is not constant', 2, {1, -1}))
+negative tests: 7 of 7 refused

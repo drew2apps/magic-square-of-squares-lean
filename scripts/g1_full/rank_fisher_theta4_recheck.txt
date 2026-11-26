@@ -1,0 +1,26 @@
+rank_fisher_theta4_recheck.py: the local terms of rank_fisher_theta4.py re-checked by Hensel's lemma in integer arithmetic (E+ of (72,65), Xi = 137)
+  p = 2: 58 points certified by Hensel (of 58 sampled); terms 2:-1 7756860709839361:+1 195011042:-1
+  p = 3: 4 points certified by Hensel (of 4 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 5: 80 points certified by Hensel (of 80 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 7: 2 points certified by Hensel (of 2 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 11: 49 points certified by Hensel (of 49 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 13: 81 points certified by Hensel (of 81 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 17: 13 points certified by Hensel (of 13 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 19: 17 points certified by Hensel (of 17 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 23: 52 points certified by Hensel (of 52 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 29: 19 points certified by Hensel (of 19 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 31: 30 points certified by Hensel (of 30 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 37: 32 points certified by Hensel (of 32 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 41: 49 points certified by Hensel (of 49 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 43: 28 points certified by Hensel (of 28 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 97: 204 points certified by Hensel (of 204 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 137: 152 points certified by Hensel (of 152 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 353: 70 points certified by Hensel (of 70 sampled); terms 2:+1 7756860709839361:-1 195011042:-1
+  p = 1279: 50 points certified by Hensel (of 50 sampled); terms 2:+1 7756860709839361:-1 195011042:+1
+  p = 336527: 38 points certified by Hensel (of 38 sampled); terms 2:+1 7756860709839361:-1 195011042:+1
+  p = 710053: 39 points certified by Hensel (of 39 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 79553041: 60 points certified by Hensel (of 60 sampled); terms 2:+1 7756860709839361:+1 195011042:+1
+  p = 97505521: 14 points certified by Hensel (of 14 sampled); terms 2:+1 7756860709839361:-1 195011042:-1
+  p = 252169271: 24 points certified by Hensel (of 24 sampled); terms 2:+1 7756860709839361:+1 195011042:-1
+  products over S (the real place contributes +1: all three classes are positive): 2: -1, 7756860709839361: +1, 195011042: +1
+RE-CHECKED: Theta_4(y0, y1) product -1 (non-zero), the classes of E(Q) +1; 1165 Hensel-certified points

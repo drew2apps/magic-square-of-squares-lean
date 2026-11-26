@@ -1,0 +1,4 @@
+aptest (21,20): order certificate against counting points at the 3077 good primes 1000 <= p < 30000 and 150 random primes 30000 < p < 2e6: 3225 compared, 0 disagreements, 2 left to counting
+aptest (23,7): order certificate against counting points at the 3077 good primes 1000 <= p < 30000 and 150 random primes 30000 < p < 2e6: 3226 compared, 0 disagreements, 1 left to counting
+aptest (399,40): order certificate against counting points at the 3077 good primes 1000 <= p < 30000 and 150 random primes 30000 < p < 2e6: 3226 compared, 0 disagreements, 1 left to counting
+aptest: 9677 primes compared, 0 disagreements; the pure-Python count against lball_exact.ap_count (numpy) at p < 1e5: 0 disagreements

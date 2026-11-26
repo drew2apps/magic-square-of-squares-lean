@@ -1,0 +1,50 @@
+kctp.py --controls: y^2 = x(x + a)(x + b) over Q base-changed to K; ranks over Q from PARI (a guide).
+  y^2 = x(x -20)(x +71): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 3; pairing rank 0; bound 1
+  y^2 = x(x +59)(x -47): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x +14)(x +74): ranks over Q of E, E^(-1) (PARI) 0, 0; dim Sel^2(E/K) 4; pairing rank 2; bound 0
+  y^2 = x(x +41)(x +80): ranks over Q of E, E^(-1) (PARI) 0, 2; dim Sel^2(E/K) 4; pairing rank 0; bound 2
+  y^2 = x(x +68)(x -64): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 3; pairing rank 0; bound 1
+  y^2 = x(x +75)(x -77): ranks over Q of E, E^(-1) (PARI) 0, 2; dim Sel^2(E/K) 4; pairing rank 0; bound 2
+  y^2 = x(x +40)(x -14): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 3; pairing rank 0; bound 1
+  y^2 = x(x +61)(x -21): ranks over Q of E, E^(-1) (PARI) 1, 1; dim Sel^2(E/K) 4; pairing rank 0; bound 2
+  y^2 = x(x -31)(x +40): ranks over Q of E, E^(-1) (PARI) 2, 1; dim Sel^2(E/K) 5; pairing rank 0; bound 3
+  y^2 = x(x +58)(x +60): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 3; pairing rank 0; bound 1
+  y^2 = x(x +41)(x +21): ranks over Q of E, E^(-1) (PARI) 1, 0; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x -42)(x -21): ranks over Q of E, E^(-1) (PARI) 1, 1; dim Sel^2(E/K) 4; pairing rank 0; bound 2
+  y^2 = x(x -42)(x +53): ranks over Q of E, E^(-1) (PARI) 0, 2; dim Sel^2(E/K) 4; pairing rank 0; bound 2
+  y^2 = x(x +19)(x -77): ranks over Q of E, E^(-1) (PARI) 1, 0; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x +71)(x -70): ranks over Q of E, E^(-1) (PARI) 1, 0; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x -3)(x -73): ranks over Q of E, E^(-1) (PARI) 1, 0; dim Sel^2(E/K) 3; pairing rank 0; bound 1
+  y^2 = x(x +29)(x +21): ranks over Q of E, E^(-1) (PARI) 2, 0; dim Sel^2(E/K) 4; pairing rank 0; bound 2
+  y^2 = x(x -56)(x -71): ranks over Q of E, E^(-1) (PARI) 0, 0; dim Sel^2(E/K) 4; pairing rank 2; bound 0
+  y^2 = x(x +66)(x +9): ranks over Q of E, E^(-1) (PARI) 0, 0; dim Sel^2(E/K) 4; pairing rank 2; bound 0
+  y^2 = x(x +66)(x -12): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x +74)(x +77): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x +70)(x +4): ranks over Q of E, E^(-1) (PARI) 1, 0; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x +57)(x -72): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 5; pairing rank 0; bound 3
+  y^2 = x(x -6)(x +76): ranks over Q of E, E^(-1) (PARI) 0, 0; dim Sel^2(E/K) 4; pairing rank 2; bound 0
+  y^2 = x(x -70)(x +6): ranks over Q of E, E^(-1) (PARI) 1, 0; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x -54)(x +78): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x +26)(x +68): ranks over Q of E, E^(-1) (PARI) 0, 0; dim Sel^2(E/K) 4; pairing rank 2; bound 0
+  y^2 = x(x -60)(x +6): ranks over Q of E, E^(-1) (PARI) 0, 1; dim Sel^2(E/K) 5; pairing rank 2; bound 1
+  y^2 = x(x -72)(x +55): ranks over Q of E, E^(-1) (PARI) 0, 0; dim Sel^2(E/K) 4; pairing rank 2; bound 0
+summary: {'curves': 29, 'sound': 29, 'excess2': 17, 'closed': 16, 'zero_ok': 12, 'zero_curves': 12}
+
+Curves over K with j not in Q (not base changes): lower bound from points found by search, upper from Sel^2 and the pairing.
+  y^2 = x(x - (14-33i))(x - (32-25i)): dim Sel^2 4, pairing rank 2, upper 0; points found give lower 0
+  y^2 = x(x - (14+0i))(x - (19+34i)): dim Sel^2 4, pairing rank 0, upper 2; points found give lower 2
+  y^2 = x(x - (-35-31i))(x - (31+33i)): dim Sel^2 4, pairing rank 2, upper 0; points found give lower 0
+  y^2 = x(x - (0+3i))(x - (4+36i)): dim Sel^2 4, pairing rank 0, upper 2; points found give lower 2
+  y^2 = x(x - (-4+9i))(x - (4-38i)): dim Sel^2 4, pairing rank 2, upper 0; points found give lower 0
+  y^2 = x(x - (13+5i))(x - (8-11i)): dim Sel^2 4, pairing rank 2, upper 0; points found give lower 0
+  y^2 = x(x - (-11-11i))(x - (-39+22i)): dim Sel^2 4, pairing rank 2, upper 0; points found give lower 0
+  y^2 = x(x - (-40-22i))(x - (13+28i)): dim Sel^2 4, pairing rank 2, upper 0; points found give lower 0
+  y^2 = x(x - (-24+25i))(x - (39-34i)): dim Sel^2 4, pairing rank 0, upper 2; points found give lower 0
+  y^2 = x(x - (3+36i))(x - (-34-27i)): dim Sel^2 4, pairing rank 0, upper 2; points found give lower 2
+  y^2 = x(x - (-10+11i))(x - (-11-15i)): dim Sel^2 4, pairing rank 0, upper 2; points found give lower 1
+  y^2 = x(x - (-27-11i))(x - (20-15i)): dim Sel^2 4, pairing rank 0, upper 2; points found give lower 2
+  y^2 = x(x - (-30-20i))(x - (-19-24i)): dim Sel^2 5, pairing rank 0, upper 3; points found give lower 3
+  y^2 = x(x - (-13-37i))(x - (-8-13i)): dim Sel^2 4, pairing rank 2, upper 0; points found give lower 0
+  y^2 = x(x - (31-33i))(x - (1+26i)): dim Sel^2 4, pairing rank 0, upper 2; points found give lower 0
+  y^2 = x(x - (17+31i))(x - (-37-32i)): dim Sel^2 4, pairing rank 2, upper 0; points found give lower 0
+summary: {'curves': 16, 'sound': 16, 'rho_pos': 8, 'sharp': 13, 'sharp_rho_pos': 8}

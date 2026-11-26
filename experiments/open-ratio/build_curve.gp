@@ -1,0 +1,20 @@
+\\ (627,364): the bound-2 curve over K=Q(i):  delta*Y^2 = Q(x), Q = L1*L3*M1*M2 (labels of kclose.py; x plays s)
+K = nfinit(y^2+1); bnf = bnfinit(y^2+1); w = Mod(y, y^2+1);
+issq(a) = #nfroots(K, x^2 - lift(Mod(a,y^2+1))) > 0;
+m=627; n=364; p=m+w*n; pb=m-w*n;
+L1=m-n*x; L3=n+m*x; M1=p*x-pb; M2=pb*x+p; Q=L1*L3*M1*M2;
+v1 = subst(Q,x,-w); v2 = subst(Q,x,w);
+print("Q(-i) = ", lift(v1), "   Q(i) = ", lift(v2));
+print("Q(-i) square in K: ", issq(v1), "   Q(i) square in K: ", issq(v2));
+delta = if(issq(v1), 1, error("delta not 1"));
+r = m/n;
+q1 = subst(deriv(Q,x),x,r); q2 = subst(deriv(deriv(Q,x),x),x,r)/2; q3 = subst(deriv(deriv(deriv(Q,x),x),x),x,r)/6; q4 = pollead(Q);
+print("Q(r) = ", subst(Q,x,r));
+a2 = delta*q2; a4 = delta^2*q1*q3; a6 = delta^3*q1^2*q4;
+E = ellinit(lift([0, a2, 0, a4, a6]), bnf);
+print("j = ", lift(E.j)); print("j approx = ", subst(lift(E.j),y,I)*1.);
+Em = ellminimalmodel(E);
+print("minimal model a-invs: ", lift(Em[1..5]));
+gr = ellglobalred(Em); print("conductor factorisation: ", idealfactor(K, gr[1])); print("norm of conductor: ", idealnorm(K, gr[1]));
+print("torsion: ", elltors(Em)[1..2]);
+write("curve_627_364.gp", "Ecoef = ", lift(Em[1..5]), ";");

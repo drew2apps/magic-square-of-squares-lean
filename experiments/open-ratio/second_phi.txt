@@ -1,0 +1,35 @@
+delta = (145, 0) (excess 1): primes [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273], |basis| = 16
+   ram 2: 64 realised class pairs (552 discs)
+   split 5 +: 3 realised class pairs (22 discs)
+   split 5 -: 3 realised class pairs (22 discs)
+   split 29 +: 3 realised class pairs (60 discs)
+   split 29 -: 3 realised class pairs (60 discs)
+   split 37 +: 10 realised class pairs (113 discs)
+   split 37 -: 8 realised class pairs (39 discs)
+   split 181 +: 10 realised class pairs (545 discs)
+   split 181 -: 8 realised class pairs (183 discs)
+   inert 263: 7 realised class pairs (138340 discs)
+   inert 991: 7 realised class pairs (1964164 discs)
+Traceback (most recent call last):
+  File "/mnt/attach/project-files/mss-experiments/open-ratio/second_phi.py", line 310, in <module>
+    run(delta, a, beta, lab)
+    ~~~^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/attach/project-files/mss-experiments/open-ratio/second_phi.py", line 277, in run
+    Rv, cnt = realised(pl, delta, A1, A2)
+              ~~~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "/mnt/attach/project-files/mss-experiments/open-ratio/second_phi.py", line 241, in realised
+    rec(1, R.zero(), 0)
+    ~~~^^^^^^^^^^^^^^^^
+  File "/mnt/attach/project-files/mss-experiments/open-ratio/second_phi.py", line 190, in rec
+    generic_split(chart); return
+    ~~~~~~~~~~~~~^^^^^^^
+  File "/mnt/attach/project-files/mss-experiments/open-ratio/second_phi.py", line 211, in generic_split
+    for t in special: rec(chart, t, 1)
+                      ~~~^^^^^^^^^^^^^
+  File "/mnt/attach/project-files/mss-experiments/open-ratio/second_phi.py", line 191, in rec
+    for t in range(pl.p): rec(chart, (x0 + t*step) % pl.M, k + 1)
+                          ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/attach/project-files/mss-experiments/open-ratio/second_phi.py", line 163, in rec
+    if count[0] > 20_000_000: raise RuntimeError("too many discs at " + pl.name)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: too many discs at split 23490241 +

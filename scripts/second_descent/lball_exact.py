@@ -7,8 +7,11 @@ What lball.py takes from PARI (its line 22: ellminimalmodel, ellglobalred, ellro
  1. Conductor.  Tate's algorithm (Silverman, Advanced Topics, IV.9.4; the order of the steps and the coordinate changes
     follow Cremona's implementation as in Sage's ell_local_data._tate) in integer arithmetic at every prime p | Delta,
     2 and 3 included: a p-minimal model, the Kodaira type, f_p, the Tamagawa number c_p, and for multiplicative p whether
-    it is split.  Every division is asserted exact; Ogg's formula f_p = v(Delta) + 1 - (number of components) is
-    asserted as a check.  The prime factors of Delta are found by trial division (sympy.factorint for a cofactor above
+    it is split.  Every division is asserted exact.  f_p is computed by Ogg's formula f_p = v(Delta) + 1 - (number of
+    components) (Saito at 2) from the Kodaira type, as Tate's algorithm does, so asserting that formula would be true by
+    construction (an earlier version did); instead the program asserts f_p = 0 at good and 1 at multiplicative p, and
+    at additive p the bounds 2 <= f_p <= 2 (p >= 5), 5 (p = 3), 8 (p = 2) (Lockhart-Rosen-Silverman 1993, Brumer-
+    Kramer 1994).  The conductor itself is compared with PARI by --tatetest and --census, and below.  The prime factors of Delta are found by trial division (sympy.factorint for a cofactor above
     10^6, as a finder only), the product is checked, and each factor is proved prime by trial division (for this curve
     all are below 10^3).
  2. a_n.  a_p = p + 1 - #E(F_p) at good p, by counting points: #E(F_p) = p + 1 + sum_x chi(4x^3 + b2 x^2 + 2 b4 x + b6),
@@ -30,6 +33,10 @@ What lball.py takes from PARI (its line 22: ellminimalmodel, ellglobalred, ellro
         the 1166 with v2(c6) = 8, where 4 c6/2^7 = 8 mod 16, also agree, which supports the normalization c6/2^7.
         For this curve v_2(c6) = 10, so 4 c6/2^7 = 0 mod 16 and neither the sign nor the normalization matters: the
         condition is c4' = 7 or 11 mod 16, and c4' = 3 mod 16 gives w_2 = -1.
+        So the sign of the c6 term in this row is PARI-calibrated (chosen because it agrees with PARI), not derived
+        from Rizzo's paper: where that term is non-zero mod 16 (v_2(c6) = 7) this route is not independent of PARI.
+        No curve used depends on it: this curve has v_2(c6) = 10, and the 50 closing curves of --census that fall in
+        this row all have v_2(c6) >= 9 (checked on 26 November 2026 by a separate script, not committed).
         Any other additive case at 2 or 3 is reported as "w_p not implemented (would trust PARI)".
     (b) Global, from the functional equation itself (modularity): if f = sum a_n q^n is the newform of level N (Wiles,
         Breuil-Conrad-Diamond-Taylor; level = conductor, Carayol), then f(i/(y sqrt N)) = w y^2 f(i y/sqrt N) for y > 0;
@@ -293,7 +300,8 @@ def tate(a, p):
 # ---------------------------------------------------------------- local root numbers
 def rizzo_row_2(cm):
     """Rizzo, Table III, row v2(c4,c6,Delta) = (4, >=7, 6), c4' = 3 mod 4 (Kodaira III, f_2 = 5): w_2 = +1 iff
-    c4' - 4*c6/2^7 = 7, 11 mod 16 (the sign is the one that agrees with PARI in --rowtest; see the docstring).
+    c4' - 4*c6/2^7 = 7, 11 mod 16 (the sign is PARI-calibrated: it is the one that agrees with PARI in --rowtest, not
+    read reliably from the paper; it matters only when v2(c6) = 7; see the docstring).
     Returns None outside this row."""
     c4, c6, D = cm
     if val(c4, 2) != 4 or c6 == 0 or val(c6, 2) < 7 or val(D, 2) != 6: return None
@@ -341,7 +349,9 @@ def local_data(a):
     N = 1
     for p, T in rows.items():
         N *= p**T['f']
-        assert T['f'] == T['vD'] + 1 - n_components(T['kod']), ('Ogg', p, T)   # Ogg's formula (Saito for p = 2), a check
+        # f_p comes from Ogg's formula in tate(), so that formula is not re-asserted; the known range of f_p is:
+        assert T['f'] == {'good': 0, 'split': 1, 'nonsplit': 1}.get(T['red'], T['f']), ('f_p', p, T)
+        assert T['red'] != 'additive' or 2 <= T['f'] <= {2: 8, 3: 5}.get(p, 2), ('f_p out of range', p, T)
     ws = [T['w'] for T in rows.values()]
     w = None if None in ws else -math.prod(ws)
     return dict(fac=fac, rows=rows, N=N, w_local=w, D=D, c4=c4, c6=c6)
@@ -561,7 +571,9 @@ def local_report(a, LD, lines):
     lines.append('conductor N = %d = %s' % (LD['N'], ' * '.join('%d^%d' % (p, T['f']) if T['f'] > 1 else str(p) for p, T in LD['rows'].items() if T['f'])))
     lines.append('root number from the local root numbers, w = -prod w_p: %s' % (LD['w_local'] if LD['w_local'] is not None else 'not determined here (an additive case at 2 or 3 not implemented)'))
 
-def pari_crosscheck(a, LD, an, lines, nterms=20000):
+def pari_crosscheck(a, LD, an, lines, nterms=None):
+    # every a_n used (n <= Mmax) is compared with PARI's ellan; an earlier version stopped at n = 20000, while a wrong
+    # a_p above about 1.5*10^5 would not move the guard
     try:
         import cypari2
     except ImportError:
@@ -576,7 +588,7 @@ def pari_crosscheck(a, LD, an, lines, nterms=20000):
         same = fp == T['f'] and cp == T['c'] and (T['w'] is None or wpp == T['w'])
         ok &= same
         lines.append('  p = %d: PARI f_p = %d, c_p = %d, w_p = %d: %s' % (p, fp, cp, wpp, 'agrees' if same else 'DISAGREES'))
-    m = min(nterms, len(an) - 1); pa = [int(x) for x in pari.ellan(E, m)]
+    m = len(an) - 1 if nterms is None else min(nterms, len(an) - 1); pa = [int(x) for x in pari.ellan(E, m)]
     same = pa == an[1:m + 1]; ok &= same
     lines.append('  a_n for n <= %d: %s with PARI ellan' % (m, 'agree' if same else 'DISAGREE'))
     return ok

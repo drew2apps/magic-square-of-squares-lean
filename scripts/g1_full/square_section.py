@@ -7,6 +7,11 @@ Experiment (task t8), not counted, nothing in the census.  Written by an AI mode
       --bound B   search box |s|, |t| <= B on the covers D_lambda (default 60)
       --write     write square_section.txt and square_section.tsv (otherwise print only)
       --negative  run the forged inputs (output square_section_negative.txt with --write)
+      --tsv-to P  also write the .tsv to the path P (for CI; nothing is written into the repository)
+      --controls  add the controls C1 (local solver against a box search) and C2 (PARI points, guide)
+      --find-hints  PARI's ellrank (a finder only) on the curves left open by the box search: a combination of its
+                  points of class 2, written to square_section_hints.json with --write (every hint is checked
+                  exactly by the main run, which reads that file and needs no PARI)
 
 Model (SELMER_SQUARE.md): E+ = sigma_exact.model(m, n, 2), E- = model(m, -n, 2); X = x + e, e = -2 S^3, gives
 E: y^2 = x(x^2 + a x + b).  Here a, b are recomputed from the model on every curve, and it is checked on every curve
@@ -42,6 +47,10 @@ Res disc disc divides a product of powers of them.
 
 Points: on a cover D_lam that is soluble everywhere, (s, t) with |s|, |t| <= B are tried; a hit gives M, e and the
 point X = e + 2 M^2/e^2 of E, checked on the curve exactly, and its class 2 checked exactly.
+Hints (since 26 November 2026): square_section_hints.json lists points of class 2 found by PARI's ellrank (effort 1,
+R supplied; --find-hints, a finder only) on curves where the box search finds none; each is checked exactly on the
+curve and in the class 2, and such a curve must have a cover soluble everywhere (asserted).  Also asserted on every
+curve: 2 in Sel(E) (from selmer_square_5000.json), and R on the curve with 2R = P and alpha(R) = 2H.
 """
 import os, sys, json, itertools
 from fractions import Fraction as Fr
@@ -277,6 +286,32 @@ def point_from(cd, M, e):
     assert issq((X - cd['e']) / 2), 'class of the point is not 2'
     return (X, Fr(isqrt(rhs.numerator), isqrt(rhs.denominator)))
 
+def check_class2(cd, X, Y):
+    """a point (X, Y) given from outside (a hint): on the original model and of class 2, both exactly."""
+    X, Y = Fr(X), Fr(Y); Mo = cd['M']
+    assert Y*Y == X**3 + Mo['a2']*X*X + Mo['a4']*X + Mo['a6'], 'the hint is not on the curve'
+    assert X != cd['e'] and issq((X - cd['e']) / 2), 'class of the hint is not 2'
+    return (X, Y)
+
+def check_R(m, nn, cd):
+    """the point R of UNIFORM_RANK.md (identity A5) on this curve: on the model, 2R = P (exact doubling), and
+    alpha(R) = 2SH = 2H mod squares (S is a square), which lies in K."""
+    Mo = cd['M']; S = cd['S']
+    xR = Fr(-4*m*nn*S*(m*m - nn*nn)); yR = Fr(-8*m*nn*(m + nn)*S*H(m, nn))
+    assert yR*yR == xR**3 + Mo['a2']*xR*xR + Mo['a4']*xR + Mo['a6'], 'R is not on the curve'
+    lam = (3*xR*xR + 2*Mo['a2']*xR + Mo['a4']) / (2*yR)
+    x2 = lam*lam - Mo['a2'] - 2*xR; y2 = lam*(xR - x2) - yR
+    xP = Fr(-(m + nn)**2 * S*S); yP = Fr(S**3 * (m - nn) * (m + nn)**2)
+    assert x2 == xP and y2*y2 == yP*yP, '2R is not P'
+    aR = xR - cd['e']; assert aR.denominator == 1
+    assert sqfree(int(aR)) == sqfree(2*H(m, nn)), 'alpha(R) is not 2H'
+    return True
+
+def load_hints():
+    path = os.path.join(here, 'square_section_hints.json')
+    if not os.path.exists(path): return {}
+    return {(m, nn): (Fr(X), Fr(Y)) for m, nn, X, Y in json.load(open(path))['points']}
+
 def sqfree(z):
     sg = -1 if z < 0 else 1
     f = sympy.factorint(abs(z)); r = 1
@@ -438,6 +473,22 @@ def negative():
         assert real_soluble((-1, 0, 4), (1, 0, -1)) is True          # control: 1 <= |u| <= 2 is a real point
         assert real_soluble((-1, 0, 1), (1, 0, -4)) is True          # forged claim
     expect_fail('real solver claims a point on -s^2 + t^2 >= 0, s^2 - 4t^2 >= 0', real_forged)
+    # 11. a hint must be on the curve and of class 2: R of E+ (12,5) (on the curve, class 2H) is refused,
+    #     and so is a hint moved off the curve
+    def forged_hint_R():
+        cd = curve_data(12, 5); S = cd['S']
+        check_class2(cd, Fr(-4*12*5*S*(144 - 25)), Fr(-8*12*5*17*S*H(12, 5)))
+    expect_fail('hint R on E+ (12,5) offered as a point of class 2 (its class is 2H)', forged_hint_R)
+    def forged_hint_off():
+        cd = curve_data(4, -3)
+        check_class2(cd, Fr(-1968), Fr(1))
+    expect_fail('hint (X, Y) = (-1968, 1) on E- (4,3) (X is the class-2 point, Y is not)', forged_hint_off)
+    # 12. R must be on the curve with 2R = P: R of (12,5) checked on the curve of (12,-5) is refused
+    def forged_R():
+        cd = curve_data(12, -5); S = cd['S']; Mo = cd['M']
+        xR = Fr(-4*12*5*S*(144 - 25)); yR = Fr(-8*12*5*17*S*H(12, 5))
+        assert yR*yR == xR**3 + Mo['a2']*xR*xR + Mo['a4']*xR + Mo['a6'], 'R is not on the curve'
+    expect_fail('R of E+ (12,5) on E- (12,5)', forged_R)
     say('negative tests refused: %d of %d' % (sum(res), len(res)))
     assert all(res)
 
@@ -461,6 +512,45 @@ def brute_control(ntests=300, seed=1):
         elif r is True and not found: miss += 1
         else: agree += 1
     return bad, agree, miss
+
+def find_hints(data):
+    """Finder only (PARI is not trusted): on each curve left open by the box search, ellrank (effort 1, R supplied);
+    a combination of its points and T of class exactly 2, computed by PARI's elladd and checked exactly here."""
+    import cypari2
+    pari = cypari2.Pari(); pari.allocatemem(2 * 10**9)
+    found = []; nopen = 0
+    for (m, n) in square_type_ratios(MMAX):
+        for nn in (n, -n):
+            cd, reasons, surv, pt = second_descent(m, nn)
+            if pt is not None or not surv: continue
+            nopen += 1
+            Mo = cd['M']; S = cd['S']
+            E = pari.ellinit([0, Mo['a2'], 0, Mo['a4'], Mo['a6']])
+            xR = -4*m*nn*S*(m*m - nn*nn)
+            rk = pari.ellrank(E, 1, [[xR, pari.ellordinate(E, xR)[0]]])
+            cand = []
+            for P in rk[3]:
+                X = Fr(str(P[0])); cand.append((P, sqfree(int((X - cd['e']).numerator * (X - cd['e']).denominator))))
+            cand.append(([cd['e'], 0], sqfree(cd['b'])))                        # T, alpha(T) = b
+            hit = None
+            for r_ in range(1, len(cand) + 1):
+                for sub in itertools.combinations(range(len(cand)), r_):
+                    c = 1
+                    for i in sub: c = sqfree(c * cand[i][1])
+                    if c == 2:
+                        Q = [0]
+                        for i in sub: Q = pari.elladd(E, Q, cand[i][0])
+                        hit = Q; break
+                if hit is not None: break
+            if hit is not None and len(hit) == 2:
+                X, Y = check_class2(cd, Fr(str(hit[0])), Fr(str(hit[1])))
+                found.append([m, nn, str(X), str(Y)])
+                say('%4d %5d  hint: X = %s' % (m, nn, X))
+    say('find_hints: %d open curves, a point of class 2 for %d (PARI ellrank effort 1, guide; checked exactly)' % (nopen, len(found)))
+    if WRITE:
+        json.dump({'note': 'points of class 2 on E+- at square-type ratios, found by PARI ellrank (a finder only) by '
+                           'square_section.py --find-hints; square_section.py checks each exactly', 'points': found},
+                  open(os.path.join(here, 'square_section_hints.json'), 'w'), indent=1)
 
 def pari_control(mmax):
     """Guide only (PARI is not trusted): points of ellrank (effort 1, R supplied) are checked exactly on the curve;
@@ -499,18 +589,30 @@ if __name__ == '__main__':
             open(os.path.join(here, 'square_section_negative.txt'), 'w').write('\n'.join(out) + '\n')
         sys.exit(0)
     data = {(r['m'], r['n']): r for r in json.load(open(os.path.join(here, 'selmer_square_5000.json')))}
+    if '--find-hints' in sys.argv:
+        find_hints(data); sys.exit(0)
+    hints = load_hints()
     say('square_section.py: second descent on the coverings C_d of E+- at square-type ratios, m <= %d, box %d' % (MMAX, BOUND))
-    say('Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of class 2 found and checked;')
+    say('Part 1. The class 2: is C_2(Q) empty?  (status: point = a rational point of class 2 found in the box, or given')
+    say('        in square_section_hints.json (found by PARI, a finder only), and checked exactly here;')
     say('        sha = every cover D_lam locally insoluble somewhere, so C_2(Q) is empty; open = otherwise)')
+    say('        On every curve: 2 is in Sel(E) (selmer_square_5000.json), R is on the curve with 2R = P and alpha(R) = 2H.')
     rows = []
-    tally = {'point': 0, 'sha': 0, 'open': 0}
+    tally = {'point': 0, 'sha': 0, 'open': 0}; nhint = 0
     for (m, n) in square_type_ratios(MMAX):
         for nn, lab in ((n, 'E+'), (-n, 'E-')):
+            assert 2 in data[(m, nn)]['S'], ('2 not in Sel(E)', m, nn)          # Theorem S1, from the exact descent
             cd, reasons, surv, pt = second_descent(m, nn)
+            check_R(m, nn, cd)
             r2 = descent_class(m, nn, 2, want_points=False)
             assert sorted(r2['survivors']) == sorted(surv), 'the two parametrisations disagree'
             nl = len(reasons)
-            if pt is not None:
+            if pt is None and (m, nn) in hints:
+                X, Y = check_class2(cd, *hints[(m, nn)])
+                assert surv, ('a point of class 2 where the descent says sha', m, nn)
+                nhint += 1
+                status = 'point'; detail = 'hint (PARI ellrank, checked exactly here) X=%s' % X
+            elif pt is not None:
                 lam, s, t, P = pt
                 status = 'point'; detail = 'lam=%d (s,t)=(%d,%d) X=%s' % (lam, s, t, P[0])
             elif not surv:
@@ -520,7 +622,7 @@ if __name__ == '__main__':
             tally[status] += 1
             rows.append([m, nn, lab, status, len(surv), nl, detail])
             say('%4d %5d %s  %-5s survivors %d/%d  %s' % (m, nn, lab, status, len(surv), nl, detail[:150]))
-    say('Part 1 tally: %s' % tally)
+    say('Part 1 tally: %s (point: %d in the box, %d from hints)' % (tally, tally['point'] - nhint, nhint))
     say('')
     say('Part 2. alpha(E(Q)) = K = {1, HH-, 2H, 2H-} exactly, when every other coset of K in Sel(E) (Sel from')
     say('        selmer_square_5000.json, the exact descent of selmer_square.py) has an empty C_d; then')
@@ -551,8 +653,12 @@ if __name__ == '__main__':
         say('Control C2 (PARI ellrank points, guide; m <= %d): cosets hit by a PARI point %d, declared empty %d'
             % (min(MMAX, 130), nchk, nbad))
         assert nbad == 0
-    if WRITE:
-        open(os.path.join(here, 'square_section.txt'), 'w').write('\n'.join(out) + '\n')
-        with open(os.path.join(here, 'square_section.tsv'), 'w') as f:
+    def write_tsv(path):
+        with open(path, 'w') as f:
             f.write('m\tn_signed\tcurve\tclass2_status\tsurvivors\tcovers\tdetail\talphaE_equals_K\n')
             for r in rows: f.write('\t'.join(map(str, r)) + '\n')
+    if '--tsv-to' in sys.argv:                      # for CI: the .tsv to a path named here (under /tmp)
+        write_tsv(sys.argv[sys.argv.index('--tsv-to') + 1])
+    if WRITE:
+        open(os.path.join(here, 'square_section.txt'), 'w').write('\n'.join(out) + '\n')
+        write_tsv(os.path.join(here, 'square_section.tsv'))

@@ -5,6 +5,7 @@ Experiment (item C1 of AGENT_TASKS.md): nothing counted, nothing in the census.
     python3 selmer_square_rule.py [--max M] [--write]   identities (sympy), congruence lemmas (finite checks), then the
                                                          rule against every curve of selmer_square_<M>.json
     python3 selmer_square_rule.py --negative            forged records / forged rules that must be refused
+    python3 selmer_square_rule.py --max 5000 --tsv-to PATH   also the .tsv, to PATH (for CI; nothing is written here)
 
 Written by an AI model (Claude); not read by a person.  The lemmas and their proofs are in SELMER_SQUARE.md; this script
 checks each computational step: the polynomial identities in general m, n (sympy), the congruences (finite checks over
@@ -351,6 +352,11 @@ if __name__ == '__main__':
     say('selmer_square_rule.py: the lemmas of SELMER_SQUARE.md, checked; then the rule against selmer_square_%d.json' % M)
     identities(); congruences(); lemma_controls()
     rows = against_data(M)
+    if '--tsv-to' in sys.argv:
+        # for CI: the .tsv written to the path named here (under /tmp), not into the repository
+        with open(sys.argv[sys.argv.index('--tsv-to') + 1], 'w') as f:
+            f.write('m\tn_signed\tbound\tdim Sel(E)\tgens E\tdim Sel(E\')\tgens E\'\todd bad primes p:(b or b\')^v[symbol]\n')
+            for row in rows: f.write('\t'.join(map(str, row)) + '\n')
     if WRITE:
         with open(os.path.join(here, 'selmer_square_rule_%d.txt' % M), 'w') as f: f.write('\n'.join(out) + '\n')
         with open(os.path.join(here, 'selmer_square_rule_%d.tsv' % M), 'w') as f:

@@ -4,6 +4,7 @@ AGENT_TASKS.md): nothing here is counted, nothing goes into the census.
 
     python3 selmer_square.py [--max M] [--jobs J] [--write]     table for coprime m > n >= 1, m <= M (default 2500)
     python3 selmer_square.py --negative                           forged inputs that must be refused
+    python3 selmer_square.py --max M --dump-tsv | --dump-json     the rows of the .tsv / the .json on stdout (for CI)
 
 Written by an AI model (Claude); not read by a person.
 
@@ -239,6 +240,19 @@ def main():
              'by curve: ' + ', '.join('%s %d: %d' % (c, k, v) for (c, k), v in sorted(cntE.items())),
              'both curves of a ratio with bound 1: %d of %d ratios'
              % (sum(1 for (m, n) in rats if all(r['bound'] == 1 for r in res if r['m'] == m and abs(r['n']) == n)), len(rats))]
+    recs = [dict(m=r['m'], n=r['n'], bound=r['bound'], S=r['S'], Sp=r['Sp'], bad=r['bad'],
+                 locS={str(p): v for p, v in r['locS'].items()},
+                 locSp={str(p): v for p, v in r['locSp'].items()},
+                 F={k: sorted(v.items()) for k, v in r['F'].items()}) for r in res]
+    if '--dump-tsv' in sys.argv or '--dump-json' in sys.argv:
+        # for CI: the rows of the .tsv, or the .json, on stdout (nothing is written); with m <= M they are the first
+        # rows of selmer_square_5000.tsv / .json, which are ordered by m
+        if '--dump-tsv' in sys.argv:
+            print(HEADER)
+            for r in res: print(row(r))
+        else:
+            json.dump(recs, sys.stdout); print()
+        return
     for l in lines: print(l)
     print('time %.0f s' % (time.time() - t0), file=sys.stderr)
     if WRITE:
@@ -246,10 +260,7 @@ def main():
             f.write(HEADER + '\n')
             for r in res: f.write(row(r) + '\n')
         with open(os.path.join(here, 'selmer_square_%d.json' % M), 'w') as f:
-            json.dump([dict(m=r['m'], n=r['n'], bound=r['bound'], S=r['S'], Sp=r['Sp'], bad=r['bad'],
-                            locS={str(p): v for p, v in r['locS'].items()},
-                            locSp={str(p): v for p, v in r['locSp'].items()},
-                            F={k: sorted(v.items()) for k, v in r['F'].items()}) for r in res], f)
+            json.dump(recs, f)
         with open(os.path.join(here, 'selmer_square_%d.txt' % M), 'w') as f:
             f.write('\n'.join(lines) + '\n')
 

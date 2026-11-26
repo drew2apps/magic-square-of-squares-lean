@@ -1,0 +1,15 @@
+kctp_points.py: exact certifier for points of E(K), K = Q(i); controls; the target.  Written by an AI model;
+not read by a person.  Experiment, not counted.
+Controls: y^2 = x(x + a)(x + b), rank 1 over Q for E and for E^-1 (PARI ellrank, guide), so rank E(K) = 2.
+  a=1 b=7: P1 = (-4, 6) (from E(Q)), P2 = (-9, 12*i) (from E^-1(Q)); dim Sel^2_K = 4; certified rank E(K) >= 2 (1 halvings)
+    forged inputs refused: 5 of 5
+  a=1 b=11: P1 = (-9, 12) (from E(Q)), P2 = (-99, 924*i) (from E^-1(Q)); dim Sel^2_K = 4; certified rank E(K) >= 2 (1 halvings)
+    forged inputs refused: 5 of 5
+  a=1 b=22: P1 = (-8, 28) (from E(Q)), P2 = (-49, 252*i) (from E^-1(Q)); dim Sel^2_K = 4; certified rank E(K) >= 2 (0 halvings)
+    forged inputs refused: 5 of 5
+  a=6 b=7: P1 = (2, 12) (from E(Q)), P2 = (-3, 6*i) (from E^-1(Q)); dim Sel^2_K = 4; certified rank E(K) >= 2 (1 halvings)
+    forged inputs refused: 5 of 5
+4 controls of rank 2 over K certified (rank >= 2, exact); every forged input refused.
+
+Target L1L3M1M2 of (627,364): no point of infinite order known; the certifier refuses 3 of 3 forged/torsion
+inputs.  The search of run 3 (kctp.py --search=60: 2-coverings, |re y|, |im y| <= 60) found none.

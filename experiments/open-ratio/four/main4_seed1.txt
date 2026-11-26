@@ -1,0 +1,145 @@
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+entry 1: psi: E1 -> E6
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   split 5 (1+2i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 5 (1-2i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 29 (2+5i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 29 (2-5i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1+6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1-6i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 181 (9+10i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 181 (9-10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 263: |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 991: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 23490241 (671+4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671-4800i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 395249137273 (95732+621357i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 395249137273 (95732-621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]  |Sel^psi| = 8 (invariants [2, 2, 2]),  |Sel^psihat| = 128 (invariants [2, 2, 2, 2, 2, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 3.0
+entry 2: psi: E1 -> E5
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   split 5 (1+2i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 5 (1-2i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 29 (2+5i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 29 (2-5i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 37 (1+6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1-6i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 181 (9+10i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 181 (9-10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 263: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   inert 991: |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671+4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671-4800i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 395249137273 (95732+621357i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 395249137273 (95732-621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]  |Sel^psi| = 8 (invariants [2, 2, 2]),  |Sel^psihat| = 128 (invariants [2, 2, 2, 2, 2, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 3.0
+entry 3: psi: E2 -> E4
+   ram 1+i: |im psi| = 64, |im psihat| = 4, product target 256
+   split 5 (1+2i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 5 (1-2i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 29 (2+5i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 29 (2-5i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 37 (1+6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1-6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 181 (9+10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 181 (9-10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 263: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   inert 991: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 23490241 (671+4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671-4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 395249137273 (95732+621357i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 395249137273 (95732-621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]  |Sel^psi| = 8192 (invariants [2, 2, 2, 2, 2, 2, 2, 4, 4, 4]),  |Sel^psihat| = 2 (invariants [2])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 5.0
+entry 4: psi: E3 -> E4
+   ram 1+i: |im psi| = 64, |im psihat| = 4, product target 256
+   split 5 (1+2i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 5 (1-2i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 29 (2+5i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 29 (2-5i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 37 (1+6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1-6i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 181 (9+10i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 181 (9-10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 263: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   inert 991: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 23490241 (671+4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671-4800i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 395249137273 (95732+621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 395249137273 (95732-621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]  |Sel^psi| = 512 (invariants [2, 2, 2, 4, 4, 4]),  |Sel^psihat| = 2 (invariants [2])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 3.0
+entry 5: psi: E4 -> E2
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   split 5 (1+2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 5 (1-2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 29 (2+5i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 29 (2-5i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 37 (1+6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1-6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 181 (9+10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 181 (9-10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 263: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   inert 991: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 23490241 (671+4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671-4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 395249137273 (95732+621357i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 395249137273 (95732-621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]  |Sel^psi| = 2 (invariants [2]),  |Sel^psihat| = 8192 (invariants [2, 2, 2, 2, 2, 2, 2, 4, 4, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 5.0
+entry 6: psi: E4 -> E3
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   split 5 (1+2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 5 (1-2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 29 (2+5i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 29 (2-5i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 37 (1+6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1-6i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 181 (9+10i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 181 (9-10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 263: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   inert 991: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 23490241 (671+4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671-4800i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 395249137273 (95732+621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 395249137273 (95732-621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]  |Sel^psi| = 2 (invariants [2]),  |Sel^psihat| = 512 (invariants [2, 2, 2, 4, 4, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 3.0
+entry 7: psi: E5 -> E1
+   ram 1+i: |im psi| = 64, |im psihat| = 4, product target 256
+   split 5 (1+2i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 5 (1-2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 29 (2+5i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 29 (2-5i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 37 (1+6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1-6i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 181 (9+10i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 181 (9-10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 263: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   inert 991: |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671+4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671-4800i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 395249137273 (95732+621357i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 395249137273 (95732-621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]  |Sel^psi| = 128 (invariants [2, 2, 2, 2, 2, 4]),  |Sel^psihat| = 8 (invariants [2, 2, 2])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 3.0
+entry 8: psi: E6 -> E1
+   ram 1+i: |im psi| = 64, |im psihat| = 4, product target 256
+   split 5 (1+2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 5 (1-2i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 29 (2+5i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 29 (2-5i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1+6i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 37 (1-6i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 181 (9+10i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 181 (9-10i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 263: |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   inert 991: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 23490241 (671+4800i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   split 23490241 (671-4800i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 395249137273 (95732+621357i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 395249137273 (95732-621357i): |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 5, 29, 37, 181, 263, 991, 23490241, 395249137273]  |Sel^psi| = 128 (invariants [2, 2, 2, 2, 2, 4]),  |Sel^psihat| = 8 (invariants [2, 2, 2])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 3.0

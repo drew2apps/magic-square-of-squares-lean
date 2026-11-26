@@ -1,0 +1,22 @@
+=== E4 e = [-288326974936*y - 176651052841, 128377184936*y + 97339388409, 159949790000*y + 79311664432]
+  Selmer elements 4: [[991*y + 991, y^2 + y], [-4*y^3 + 8*y^2 + 5*y, -2*y^2 - 9*y - 10], [6710*y^4 + 94299*y^3 + 367434*y^2 + 259200*y, 1764730*y^4 + 24800637*y^3 + 96635142*y^2 + 68169600*y], [95732*y - 621357, 25177516*y - 163416891]]
+  <1,1> run 1 = 0  per place [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  <1,1> run 2 = 0  per place [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  retry: error("user error: cassels2: no local point at [[37, [6, 1]~, 1, 1, [-6, -1; 1, -6]]]")
+  retry: error("user error: cassels2: no local point at [[37, [6, 1]~, 1, 1, [-6, -1; 1, -6]]]")
+  <1,2> run 1 = 0  per place [0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  retry: error("user error: cassels2: no local point at [[37, [6, 1]~, 1, 1, [-6, -1; 1, -6]]]")
+  <1,2> run 2 = 0  per place [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  <1,3> run 1 = 0  per place [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 0] correction 0
+  <1,3> run 2 = 0  per place [0, 0, 0, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 0, 0, 0] correction 0
+  <1,4> run 1 = 0  per place [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0] correction 0
+  retry: error("user error: cassels2: no local point at [[37, [6, 1]~, 1, 1, [-6, -1; 1, -6]]]")
+  <1,4> run 2 = 0  per place [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0] correction 0
+  <2,1> run 1 = 0  per place [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  <2,1> run 2 = 0  per place [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  <2,2> run 1 = 0  per place [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  <2,2> run 2 = 0  per place [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  <2,3> run 1 = 0  per place [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] correction 0
+  <2,3> run 2 = 0  per place [0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0] correction 0
+  <2,4> run 1 = 0  per place [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0
+  <2,4> run 2 = 0  per place [0, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] correction 0

@@ -1,0 +1,153 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000001536
+{"pair": [5015, 1872], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [6887, 3143], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 70.3}
+{"pair": [5025, 568], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 24.2}
+{"pair": [5033, 4481], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [4757, 276], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 74.2}
+{"pair": [5040, 1111], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 13.7}
+{"pair": [5047, 1103], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 12.5}
+{"pair": [5063, 1584], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 19.5}
+{"pair": [5084, 2163], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 44.5}
+{"pair": [5089, 1271], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 44.7}
+{"pair": [5100, 4469], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 16.3}
+{"pair": [5119, 2161], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 24.6}
+{"pair": [5129, 2609], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 16.0}
+{"pair": [5151, 3800], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 19.0}
+{"pair": [5167, 2863], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [4015, 1152], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 70.6}
+{"pair": [5180, 4251], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 18.9}
+{"pair": [5185, 1752], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [6937, 3433], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 107.6}
+{"pair": [5201, 4999], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 32.1}
+{"pair": [5217, 5056], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 2], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 95.9}
+{"pair": [5233, 1817], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [3525, 1708], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 70.9}
+{"pair": [5244, 3317], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 8.0}
+{"pair": [5253, 4004], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 2], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 54.3}
+{"pair": [5264, 927], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 13.6}
+{"pair": [5280, 721], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 21.1}
+{"pair": [5292, 515], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [5807, 4777], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 59.3}
+{"pair": [5303, 1393], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 18.4}
+{"pair": [5311, 289], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [4, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 17.0}
+{"pair": [5320, 4551], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [9871, 769], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 85.5}
+{"pair": [5327, 3617], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [4472, 855], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 63.9}
+{"pair": [5332, 1995], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [7327, 3337], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 95.0}
+{"pair": [5353, 3696], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 62.3}
+{"pair": [5360, 2889], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 16.6}
+{"pair": [5383, 2567], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [3, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 21.2}
+{"pair": [5396, 3597], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [2, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 16.5}
+{"pair": [5417, 1513], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [3465, 1952], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 74.2}
+{"pair": [5431, 617], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 9.8}
+{"pair": [5451, 740], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 27.9}
+{"pair": [5460, 2461], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 41.0}
+{"pair": [5471, 2089], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 17.1}
+{"pair": [5497, 3353], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [4425, 1072], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 75.2}
+{"pair": [5508, 5405], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 24.8}
+{"pair": [5521, 1519], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 36.6}
+{"pair": [5537, 3791], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [4664, 873], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 51.4}
+{"pair": [5544, 2033], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 22.0}
+{"pair": [5555, 3588], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 2], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 20.2}
+{"pair": [5569, 4183], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [3, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 44.2}
+{"pair": [5593, 401], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 16.7}
+{"pair": [5605, 2772], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 65.4}
+{"pair": [5609, 4991], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [5300, 309], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 71.4}
+{"pair": [5621, 300], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 2], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 13.8}
+{"pair": [5635, 5412], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 63.6}
+{"pair": [5647, 1297], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 16.5}
+{"pair": [5663, 3193], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 42.4}
+{"pair": [5673, 2464], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 56.8}
+{"pair": [5688, 4945], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 43.8}
+{"pair": [5700, 4181], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 2], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 25.6}
+{"pair": [5720, 2289], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 34.2}
+{"pair": [5729, 1697], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [3713, 2016], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 83.6}
+{"pair": [5740, 3219], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 45.5}
+{"pair": [5757, 3476], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 3], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 32.5}
+{"pair": [5763, 5084], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 12.8}
+{"pair": [5772, 3955], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 28.0}
+{"pair": [5783, 4369], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [5076, 707], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 57.0}
+{"pair": [5796, 1853], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 27.2}
+{"pair": [5829, 1540], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [7369, 4289], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 168.9}
+{"pair": [5840, 3729], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [9569, 2111], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 79.5}
+{"pair": [5852, 4485], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 84.8}
+{"pair": [5865, 5312], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [11177, 553], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 133.7}
+{"pair": [5879, 4439], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 27.9}
+{"pair": [5885, 4212], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [10097, 1673], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}}, "sec": 67.2}
+{"pair": [5900, 981], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 41.0}
+{"pair": [5911, 5023], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 20.5}
+{"pair": [5920, 5031], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 8.9}
+{"pair": [5927, 5623], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [3, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 15.6}
+{"pair": [5940, 109], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 8.0}
+{"pair": [5964, 3277], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 22.5}
+{"pair": [5980, 2109], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 3], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 28.2}
+{"pair": [5989, 4980], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 22.9}
+{"pair": [6001, 607], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 13.0}
+{"pair": [6016, 1887], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 14.5}
+{"pair": [6041, 3281], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [4661, 1380], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 93.7}
+{"pair": [6049, 1889], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [3, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 25.5}
+{"pair": [6068, 5355], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [11423, 713], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 98.9}
+{"pair": [6077, 3564], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 14.4}
+{"pair": [6095, 5208], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 21.1}
+{"pair": [6103, 1553], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 28.9}
+{"pair": [6113, 3841], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 25.2}
+{"pair": [6132, 3565], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [9697, 2567], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}}, "sec": 79.1}
+{"pair": [6148, 555], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 16.9}
+{"pair": [6160, 4329], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 25.0}
+{"pair": [6167, 1303], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 17.1}
+{"pair": [6177, 1264], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 5.5}
+{"pair": [6195, 3772], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 17.4}
+{"pair": [6205, 948], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 56.2}
+{"pair": [6215, 4872], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 31.6}
+{"pair": [6223, 5311], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [5767, 456], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 74.7}
+{"pair": [6233, 1319], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [3776, 2457], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 30.0}
+{"pair": [6239, 5927], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [6083, 156], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 48.7}
+{"pair": [6247, 5177], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 22.0}
+{"pair": [6271, 6049], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [6160, 111], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 47.4}
+{"pair": [6287, 2297], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 29.3}
+{"pair": [6308, 5445], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 9.9}
+{"pair": [6319, 1440], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 14.8}
+{"pair": [6329, 3703], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 26.2}
+{"pair": [6351, 1120], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [3, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 26.9}
+{"pair": [6361, 3521], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 32.8}
+{"pair": [6365, 2268], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [2, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 8.0}
+{"pair": [6377, 4111], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [2, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 27.9}
+{"pair": [6392, 2415], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 40.9}
+{"pair": [6405, 3652], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 28.5}
+{"pair": [6432, 2185], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 17.8}
+{"pair": [6435, 5332], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 28.0}
+{"pair": [6449, 4951], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [5700, 749], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 110.9}
+{"pair": [6463, 4391], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [5427, 1036], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 58.7}
+{"pair": [6481, 839], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [3660, 2821], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 74.4}
+{"pair": [6497, 6271], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [6384, 113], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 83.0}
+{"pair": [6511, 623], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [3, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 16.1}
+{"pair": [6521, 2447], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 37.3}
+{"pair": [6532, 2925], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 5.5}
+{"pair": [6549, 4420], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 43.2}
+{"pair": [6555, 2132], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [8687, 4423], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 131.5}
+{"pair": [6559, 6239], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 30.6}
+{"pair": [6572, 1035], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 21.8}
+{"pair": [6599, 593], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [3596, 3003], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 101.0}
+{"pair": [6601, 2839], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [4720, 1881], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 86.4}
+{"pair": [6608, 345], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 7.3}
+{"pair": [6633, 2656], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 7.9}
+{"pair": [6647, 3479], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [5063, 1584], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 55.3}
+{"pair": [6664, 2223], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 45.5}
+{"pair": [6673, 3239], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [4956, 1717], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 59.3}
+{"pair": [6693, 2324], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [9017, 4369], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 71.7}
+{"pair": [6703, 5593], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [6148, 555], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 54.3}
+{"pair": [6713, 2297], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [4505, 2208], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 45.0}
+{"pair": [6723, 164], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [6887, 6559], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 73.1}
+{"pair": [6737, 3647], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [5192, 1545], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 73.1}
+{"pair": [6764, 6477], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 32.8}
+{"pair": [6769, 529], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [3649, 3120], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 91.9}
+{"pair": [6784, 1287], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 27.3}
+{"pair": [6793, 4063], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 24.6}
+{"pair": [6820, 819], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 45.9}
+{"pair": [6833, 2857], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [3, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 36.7}
+{"pair": [6841, 4487], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 63.3}
+{"pair": [6853, 996], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [7849, 5857], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 83.2}
+{"pair": [6867, 3956], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 17.6}
+{"pair": [6881, 4919], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [1, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 55.8}
+{"pair": [6887, 3143], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [5015, 1872], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 64.3}
+{"pair": [6897, 5696], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 10.2}
+{"pair": [6903, 5104], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [12007, 1799], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 121.6}
+{"pair": [6916, 6837], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 9.5}
+{"pair": [6952, 4305], "first": 2, "differ": true, "status": "closed", "by": "+14", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 56.0}
+{"pair": [6956, 3267], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 6.3}
+{"pair": [6967, 457], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [3712, 3255], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 1], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 50.3}
+{"pair": [6977, 1087], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [3, 0], "rational_t": {"-1": "no", "0": "degenerate", "1": "no"}, "sec": 69.7}
+{"pair": [6996, 1547], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 19.8}

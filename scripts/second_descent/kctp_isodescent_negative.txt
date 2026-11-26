@@ -1,0 +1,7 @@
+kctp_isodescent.py --negative: forged inputs that must be refused (on the control y^2 = x(x + 1)(x + 7)).
+  refused: a local image size one larger than the true one (forged (size): phi image 2, expected 3 at Fractional ideal ()
+  forged (selmer): v_(1+i)(alpha) = 1; local sizes (N(v), log2 |B/phi A|, log2 |A/phihat B|): [(2, 2, 2), (9, 2, 0), (49, 0, 2)]
+     dim Sel^phi(A) = 2, dim Sel^phihat(B) = 3; Cassels' formula (2 - 3 = 0): False
+     B(B)/B(A) = 1 (exact; area ratio N(u)/2 = 1 checked in floating point)
+  refused: a Selmer dimension one too large (Cassels' formula) ()
+2 of 2 refused.

@@ -1,0 +1,3 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+  ***   Warning: not enough memory, new PARI stack 12000002048
+PARI stack size set to 12000002048 bytes, maximum size set to 12000002048
