@@ -1,0 +1,6 @@
+== D1 of (12007,1799)
+D1 of (12007,1799):  y^2 = x(x^2 + a x + b),  a = -3452456673872977258396002631680000,  b = 3003915701715806114756638353004431944805585787414205788662005760000
+  rank_indep.rank_bound: exact bound 4; E side: Selmer 8, known 2, open cosets 3; E' side: Selmer 16, known 4, open cosets 1
+  E' side classes certified locally soluble at every bad prime: [] of [-6177769598]
+  => rank of the pairing matrix 0: rank <= 4
+  result: {'name': 'D1 of (12007,1799)', 'bound': 4, 'rho': 0, 'new': 4}

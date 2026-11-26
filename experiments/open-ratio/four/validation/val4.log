@@ -1,0 +1,93 @@
+== known ranks: rank E(K) = rank E(Q) + rank E^-1(Q) (PARI ellrank, lower = upper)
+t=2 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 66 528
+t=3 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 21 336
+t=4 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 130 1040
+t=5 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 15 240
+t=6 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 582 4656
+t=7 rank E(Q)=1 rank E^-1(Q)=1  rank E(K)=2  cond 791 12656
+t=8 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 258 2064
+t=9 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 435 6960
+t=10 rank E(Q)=1 rank E^-1(Q)=1  rank E(K)=2  cond 1610 12880
+t=11 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 1947 31152
+t=12 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 1158 9264
+t=13 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 2717 43472
+t=14 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 210 1680
+t=15 rank E(Q)=0 rank E^-1(Q)=2  rank E(K)=2  cond 3615 57840
+t=16 rank E(Q)=1 rank E^-1(Q)=1  rank E(K)=2  cond 514 4112
+t=17 rank E(Q)=1 rank E^-1(Q)=0  rank E(K)=1  cond 4641 74256
+t=18 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 102 816
+t=19 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 5795 92720
+t=20 rank E(Q)=1 rank E^-1(Q)=1  rank E(K)=2  cond 3210 25680
+t=21 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 7077 113232
+t=22 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 7766 62128
+t=23 rank E(Q)=1 rank E^-1(Q)=0  rank E(K)=1  cond 2829 45264
+t=24 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 2310 18480
+t=25 rank E(Q)=1 rank E^-1(Q)=2  rank E(K)=3  cond 2005 32080
+t=26 rank E(Q)=1 rank E^-1(Q)=1  rank E(K)=2  cond 10842 86736
+t=27 rank E(Q)=1 rank E^-1(Q)=1  rank E(K)=2  cond 1299 20784
+t=28 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 6286 50288
+t=29 rank E(Q)=1 rank E^-1(Q)=0  rank E(K)=1  cond 13485 215760
+t=30 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 14430 115440
+t=31 rank E(Q)=0 rank E^-1(Q)=2  rank E(K)=2  cond 15407 246512
+t=32 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 114 912
+t=33 rank E(Q)=1 rank E^-1(Q)=1  rank E(K)=2  cond 759 12144
+t=34 rank E(Q)=1 rank E^-1(Q)=1  rank E(K)=2  cond 18530 148240
+t=35 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 19635 314160
+t=36 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 3462 27696
+t=37 rank E(Q)=1 rank E^-1(Q)=0  rank E(K)=1  cond 21941 351056
+t=38 rank E(Q)=0 rank E^-1(Q)=1  rank E(K)=1  cond 23142 185136
+t=39 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 195 3120
+t=40 rank E(Q)=0 rank E^-1(Q)=0  rank E(K)=0  cond 6410 51280
+== t=2: run4.py test_t2.gp
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+entry 1: psi: E1 -> E-1
+   ram 1+i: |im psi| = 1, |im psihat| = 256, product target 256
+   inert 3: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   inert 11: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   S = [2, 3, 11]  |Sel^psi| = 4 (invariants [4]),  |Sel^psihat| = 4 (invariants [4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 0.0
+== t=3: run4.py test_t3.gp
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+entry 1: psi: E1 -> E-1
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   inert 3: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   inert 7: |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   S = [2, 3, 7]  |Sel^psi| = 4 (invariants [4]),  |Sel^psihat| = 16 (invariants [4, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 1.0
+entry 2: psi: E1 -> E-1
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   inert 3: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   inert 7: |im psi| = 4, |im psihat| = 4, product target 16, expected |im psi| = 4 c(B)/c(A) = 4
+   S = [2, 3, 7]  |Sel^psi| = 2 (invariants [2]),  |Sel^psihat| = 32 (invariants [2, 4, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 1.0
+== t=7: run4.py test_t7.gp
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+entry 1: psi: E1 -> E-1
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   inert 7: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 113 (7+8i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 113 (7-8i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   S = [2, 7, 113]  |Sel^psi| = 16 (invariants [4, 4]),  |Sel^psihat| = 16 (invariants [4, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 2.0
+== t=15: run4.py test_t15.gp
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+entry 1: psi: E1 -> E-1
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   inert 3: |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 5 (1+2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 5 (1-2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 241 (4+15i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 241 (4-15i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   S = [2, 3, 5, 241]  |Sel^psi| = 4 (invariants [4]),  |Sel^psihat| = 64 (invariants [4, 4, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 2.0
+== t=25: run4.py test_t25.gp
+PARI stack size set to 4000000000 bytes, maximum size set to 4000002048
+entry 1: psi: E1 -> E-1
+   ram 1+i: |im psi| = 4, |im psihat| = 64, product target 256
+   split 5 (1+2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 5 (1-2i): |im psi| = 1, |im psihat| = 16, product target 16, expected |im psi| = 4 c(B)/c(A) = 1
+   split 401 (1+20i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   split 401 (1-20i): |im psi| = 16, |im psihat| = 1, product target 16, expected |im psi| = 4 c(B)/c(A) = 16
+   S = [2, 5, 401]  |Sel^psi| = 16 (invariants [4, 4]),  |Sel^psihat| = 64 (invariants [4, 4, 4])
+   rank bound  r <= log_4(|Sel^psi||Sel^psihat|/16) = 3.0
+done

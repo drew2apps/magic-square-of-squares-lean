@@ -8,7 +8,8 @@ and the local sum are all recomputed.  Fisher's Thm 2.1: the value cannot depend
 
     python3 rank_fisher_theta4_k6.py [--write]     (rank_fisher_theta4_k6.txt, rank_fisher_theta4_k6_hints.json)
 
-Written by an AI model (Claude); not read by a person; not reviewed.  Experiment, not counted.
+Written by an AI model (Claude); not read by a person.  Reviewed by a separate AI agent on 26 November 2026: holds
+with gaps (LEDGER.md, tier C).  Not counted in the census.
 """
 import os, sys, json
 here = os.path.dirname(os.path.abspath(__file__))

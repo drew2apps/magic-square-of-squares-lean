@@ -1,0 +1,7 @@
+kctp_isog_exact.py --negative: inputs that must be refused
+forged convention 1/(2 N(u)) = 1/4 for E3: refused (the discriminants force 1)
+forged non-normalised isogeny (Velu followed by a rescaling by 1 + i; scaling factor i + 1): refused (the isogeny is not normalised (phi^* w' != w))
+forged C' = twist of the minimal model by 1 + i: refused (no K-isomorphism C -> C' (elliptic curves not isomorphic))
+forged u = 1 + 2i (the parameter of C -> another model, claimed for C -> C'): refused (Delta(C') != u^-12 Delta(C))
+positive control, the true data for E3: area ratio 1, holds
+negative tests: 4 forged inputs, 4 refused

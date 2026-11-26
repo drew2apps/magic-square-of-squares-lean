@@ -1,0 +1,12 @@
+{"pair": [7735, 4968], "curve": "g4*K", "rank": [1, 1], "hG": 9.446, "B": 121.157, "amax": 40, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 81, "nt": 2, "t": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "rootno": -1}
+{"pair": [12703, 2767], "curve": "g4*K", "rank": [2, 4], "status": "rank not 1", "rootno": 1}
+{"pair": [6557, 324], "curve": "g4*K", "rank": [1, 1], "hG": 8.833, "B": 118.518, "amax": 41, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 83, "nt": 2, "t": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "rootno": -1}
+{"pair": [6881, 6233], "curve": "g4*K", "rank": [1, 1], "hG": 4.482, "B": 123.367, "amax": 83, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 168, "nt": 3, "t": {"0": "degenerate"}, "status": "closed", "rootno": -1}
+{"pair": [3540, 2581], "curve": "g4*K", "rank": [2, 2], "status": "rank not 1", "rootno": 1}
+{"pair": [6121, 959], "curve": "g4*K", "rank": [1, 3], "status": "rank not 1", "rootno": -1}
+{"pair": [4440, 2231], "curve": "g4*K", "rank": [2, 2], "status": "rank not 1", "rootno": 1}
+{"pair": [6671, 2209], "curve": "g4*K", "rank": [3, 3], "status": "rank not 1", "rootno": -1}
+{"pair": [6480, 4961], "curve": "g4*K", "rank": [2, 2], "status": "rank not 1", "rootno": 1}
+{"pair": [6903, 5104], "curve": "g4*K", "rank": [2, 2], "status": "rank not 1", "rootno": 1}
+{"pair": [12007, 1799], "curve": "g4*K", "rank": [2, 2], "status": "rank not 1", "rootno": 1}
+{"pair": [8249, 3720], "curve": "g4*K", "rank": [2, 2], "status": "rank not 1", "rootno": 1}

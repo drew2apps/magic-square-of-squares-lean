@@ -10,8 +10,8 @@ that the results can be cited and rerun.
 | Folder | Write-up | What it claims (labels as in the write-up) |
 |---|---|---|
 | `census2000/` | `CENSUS3000.md` | the census pipeline for `1000 < m ≤ 3000` |
-| `census-wide/` | `CENSUS5000.md`, `CENSUS7000.md`, `CENSUS9000.md` | the same for `3000 < m ≤ 9000`. Together: every coprime ratio with `1000 < m ≤ 9000` is excluded except **(7735,4968), open**; **seven** exclusions are **conditional on a rank being 1** ((3540,2581), (4440,2231), (6121,959), (6671,2209), (6480,4961), (6903,5104), (8249,3720)); the nine rank-1-route exclusions are conditional on (a) the generator `G` generating `E1(ℚ)` modulo torsion (saturation checked at primes `≤ 2000`) and (b) an AI reading of the constants of Checcoli, Veneziano and Viada; every Demjanenko–Manin exclusion is conditional on PARI's generators (saturation checked only at primes `≤ 1000`); every rank bound is PARI's; (6557,324) and (6881,6233) rest on a **numerical** `L(E,1) ≈ 1.44409` (no rigorous tail bound) |
-| `open-ratio/` | `WRITEUP.md` | (627,364) over `ℚ(i)`: 2-descent and φ-descents (rank `≤ 2`), the Sha ratios across the isogeny class, a cyclic 4-isogeny descent (bounds 3 to 5), and a new PARI implementation of the Cassels–Tate pairing on Sel², which vanishes on Sel² of `E₁` (as `scripts/second_descent/kctp*.py` found) |
+| `census-wide/` | `CENSUS5000.md`, `CENSUS7000.md`, `CENSUS9000.md` | the same for `3000 < m ≤ 9000`. Together: every coprime ratio with `1000 < m ≤ 9000` is excluded except **(7735,4968)**, which run 5 (`census-wide/g4k/`) excludes only **conditionally on rank C(ℚ) = 1** of the quotient C: y² = g4·K (that rank is PARI's bound only; the exact descent gives 2); **seven** exclusions are **conditional on a rank being 1** ((3540,2581), (4440,2231), (6121,959), (6671,2209), (6480,4961), (6903,5104), (8249,3720); the exact bounds for their five curves are 3, 5, 3, 3, 3, `census-wide/rank1/`); the nine rank-1-route exclusions are conditional on (a) the generator `G` generating `E1(ℚ)` modulo torsion (saturation checked at primes `≤ 2000`) and (b) an AI reading of the constants of Checcoli, Veneziano and Viada; every Demjanenko–Manin exclusion is conditional on PARI's generators (saturation checked only at primes `≤ 1000`); every rank bound is PARI's; (6557,324) and (6881,6233) rest on a **numerical** `L(E,1) ≈ 1.44409` (no rigorous tail bound); `census-wide/g4k/` gives them a second route, also conditional on rank C(ℚ) = 1 of their g4·K (PARI's bound; the exact descent gives 3 and 5) |
+| `open-ratio/` | `WRITEUP.md` | (627,364) over `ℚ(i)`: 2-descent and φ-descents (rank `≤ 2`), the Sha ratios across the isogeny class, a cyclic 4-isogeny descent (bounds 3 to 5), and a new PARI implementation of the Cassels–Tate pairing on Sel², which vanishes on Sel² of `E₁` (as `scripts/second_descent/kctp*.py` found) and, in run 5, on the deciding value of Sel² of `E₄`, so Sel² with its pairing cannot prove rank 0 for `E₄` (a second implementation, unreviewed) |
 | `HANDOFF_26NOV.md` | | the session's one-page summary |
 
 The pipeline is: congruences (`census2000/gen_pairs.py`) → the repository's class criterion → second descent
@@ -67,4 +67,23 @@ Hilbert-reciprocity shortcut of `open-ratio/ctp/ctp.gp` and found it correct und
   `ctp/validation/val_Q.err` holds one line, `INCONSISTENT at inf [1, 1, 0]`, which the write-up does not explain.
 
 Not changed: `open-ratio/ctp/torsion_E4.gp` still tests "is a square" at 300 split primes (heuristic in that direction;
-the review made it exact in its own copy, with the same result).
+the review made it exact in its own copy, with the same result; so did review agent x3 of run 5,
+`referee_x3/torsion_exact.py`).
+
+## Run 5 (26 November 2026)
+
+The same session sent a second bundle (run 5, part 1), reviewed by a separate AI agent (`reviews/review_x3.md`) and
+committed with these changes: its PARI stand-in for sympy (`sympy_pari_shim.py`, `run_shim.py`) is left out and the
+scripts import sympy (with the stand-in, 7 of 11 of its checks fail under PARI 2.17.4; with sympy all reproduce the
+committed outputs); the scripts' fallback paths to the session's folders are removed; logs that only show a script
+stopping on its own assertion are left out. Everything is tier D, written by an AI model and not read by a person.
+
+- `census-wide/g4k/` (F4, `NOTES.md`): Demjanenko–Manin on C: y² = g4·K in exact arithmetic. **If rank C(ℚ) = 1**, every
+  solution of (7735,4968), (6557,324) and (6881,6233) is degenerate. Rank 1 is PARI's `ellrank` bound only; the exact
+  descent gives 2, 3, 5. Conditional.
+- `census-wide/rank1/` (F2, `NOTES.md`): exact rank bounds 3, 5, 3, 3, 3 for the five curves behind the seven
+  conditional ratios ((8249,3720) lowered from 5, D1 of (12007,1799) from 4). None reaches 1.
+- `open-ratio/` (F1): the real-place fix in `ctp/ctp.gp` and the logs that explain `val_Q.err`
+  (`ctp/validation/val_Q_run1.err`, `val_Q_run2.err`; the rerun's `val_Q.err` is empty and `val_Q.log` unchanged); the
+  driver and log of the 4-isogeny descent's six test curves (`four/validation/`); `WRITEUP.md` updated to match.
+  `ctp/run627b.log` is kept as committed (the session's copy only adds a hand-written stop note, now in `WRITEUP.md`).

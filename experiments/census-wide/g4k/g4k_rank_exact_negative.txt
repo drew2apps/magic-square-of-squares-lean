@@ -1,0 +1,12 @@
+(3540,2581) g4*K: 2-torsion roots 1; shifted model a = -51271853518335905395200, b = 725017572008317340901798342408425190684902400
+  first descent: |Sel(phi)| <= 2, |Sel(phi^)| <= 64, rank <= 5; bad primes [2, 3, 5, 7, 13, 29, 59, 89, 137, 337, 6121]
+  E: Selmer 2 classes, known subgroup 1, cosets excluded by the second descent 0, not excluded 1: image <= 2^1 (control: 0 classes of known points survive, as they must)
+  E': Selmer 64 classes, known subgroup 4, cosets excluded by the second descent 14, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+exact rank bound (rank_indep, no PARI in the bound): 2; a point of infinite order is known, so rank >= 1
+  negative control: PARI finds 2 independent points, so the exact bound must be >= 2: yes
+(6671,2209) g4*K: 2-torsion roots 1; shifted model a = -343155750073398263761984, b = 82646647922680502859016982072379637661445489664
+  first descent: |Sel(phi)| <= 2, |Sel(phi^)| <= 16, rank <= 3; bad primes [2, 3, 5, 7, 23, 37, 47, 97, 953, 4969]
+  E: Selmer 2 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 0: image <= 2^1 (control: 1 classes of known points survive, as they must)
+  E': Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+exact rank bound (rank_indep, no PARI in the bound): 3; a point of infinite order is known, so rank >= 1
+  negative control: PARI finds 3 independent points, so the exact bound must be >= 3: yes

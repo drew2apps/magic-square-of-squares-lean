@@ -1,0 +1,16 @@
+kctp_isog_exact.py: B(E')/B(E) for the three curves 2-isogenous to L1L3M1M2 of (627,364) over Q(i), exact.
+Written by an AI model; not read by a person.  Experiment, not counted.
+Emin = (0, 0, 0, 19028826105673303920000*i - 33237886878644869978657, 91392735360875041360431429657392*i - 2733455814936458513848281805470000) (global minimal model of E); prod c_v = 4194304; |E(K)_tors| = 8
+E/<T2>       Velu normalised: True; N(u) = 2; Delta(C') = u^-12 Delta(C) exactly; (N Delta(C) / N Delta(C'))^(1/12) = 2;
+             area(C')/area(Emin) = 1 (exact; = N(u)/2: True); prod c_v = 65536, |tors| = 4; B(E')/B(E) = 1/16 (kctp_isog.txt: 1/16)
+             check, not used: Sage's floating-point area ratio 1.000000000000000; the rejected alternative 1/(2 N(u)) = 1/4
+E/<T1>       Velu normalised: True; N(u) = 2; Delta(C') = u^-12 Delta(C) exactly; (N Delta(C) / N Delta(C'))^(1/12) = 2;
+             area(C')/area(Emin) = 1 (exact; = N(u)/2: True); prod c_v = 4096, |tors| = 4; B(E')/B(E) = 1/256 (kctp_isog.txt: 1/256)
+             check, not used: Sage's floating-point area ratio 1.000000000000000; the rejected alternative 1/(2 N(u)) = 1/4
+E3 = E/<T3>  Velu normalised: True; N(u) = 2; Delta(C') = u^-12 Delta(C) exactly; (N Delta(C) / N Delta(C'))^(1/12) = 2;
+             area(C')/area(Emin) = 1 (exact; = N(u)/2: True); prod c_v = 16777216, |tors| = 8; B(E')/B(E) = 4 (kctp_isog.txt: 4)
+             check, not used: Sage's floating-point area ratio 1.000000000000000; the rejected alternative 1/(2 N(u)) = 1/4
+
+RESULT: the three ratios of kctp_isog.py section 5 hold exactly (B(E3)/B(E) = 4, i.e. |Sha(E3)|/|Sha(E)| = 2^-2 under
+rank 0 and finite Sha, by Cassels' isogeny invariance); the convention N(u)/2 that kctp_isog.py read off the
+floating-point area ratio is the one forced by the discriminants.  No floating point is used for this.

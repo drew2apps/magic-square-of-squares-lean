@@ -1,0 +1,8 @@
+positive control: (7735,4968) unchanged: status closed, t found ['-1', '1'] (must be closed, with t = 1 and -1 degenerate)
+relation forged to x' = x, which every point satisfies: status identity (must be identity: no finite list exists)
+classifier forged to call t = 1 a solution: status ALERT (must be ALERT)
+a ratio whose g4*K has PARI rank [2,2]: status rank not 1 (must be "rank not 1")
+negative checks: all as required (4 of 4)
+robustness, not a control: 7735,4968 with the height bound tripled: amax 92, 185 candidates, t ['-1', '1'], status closed
+robustness, not a control: 6557,324 with the height bound tripled: amax 96, 193 candidates, t ['-1', '1'], status closed
+robustness, not a control: 6881,6233 with the height bound tripled: amax 195, 392 candidates, t ['0'], status closed

@@ -1,0 +1,61 @@
+census_lvalue_exact.py --torsion: E(Q)_tors of the 19 closing curves without PARI (torsion_exact.py), and
+global.py's classify_t/analyse (loaded from global.py's source) on every torsion point
+
+112 15   w*K      B = 8 (gcd of #E(F_p), 161 good odd p < 1000); E(Q)_tors = Z/4, order 4: 2-part of B (8) not attained by T (4): E(Q)[2] in T (the quadratic cofactor has discriminant -27412550697369600, not a square); the 2 points of T[2^inf] with no half in T are not doubles modulo [17]
+                  x of the torsion points (number of points): 0 (1), 163047361 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+127 97   w*f0*f8  B = 8 (gcd of #E(F_p), 161 good odd p < 1000); E(Q)_tors = Z/2 x Z/4, order 8: 2-part of B attained
+                  x of the torsion points (number of points): -260144641 (1), -151757761 (2), -88529281 (1), 0 (1), 151757761 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 degenerate, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+240 161  w*K      B = 8 (gcd of #E(F_p), 160 good odd p < 1000); E(Q)_tors = Z/4, order 4: 2-part of B (8) not attained by T (4): E(Q)[2] in T (the quadratic cofactor has discriminant -95895259183451750400, not a square); the 2 points of T[2^inf] with no half in T are not doubles modulo [37]
+                  x of the torsion points (number of points): 0 (1), 6975757441 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+401 79   w*f0*f8  B = 8 (gcd of #E(F_p), 160 good odd p < 1000); E(Q)_tors = Z/2 x Z/4, order 8: 2-part of B attained
+                  x of the torsion points (number of points): -25856961601 (1), -1003559041 (2), -38950081 (1), 0 (1), 1003559041 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 degenerate, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+288 175  w*K      B = 8 (gcd of #E(F_p), 161 good odd p < 1000); E(Q)_tors = Z/4, order 4: 2-part of B (8) not attained by T (4): E(Q)[2] in T (the quadratic cofactor has discriminant -444999902552432640000, not a square); the 2 points of T[2^inf] with no half in T are not doubles modulo [17]
+                  x of the torsion points (number of points): 0 (1), 12897917761 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+463 113  w*f0*f8  B = 8 (gcd of #E(F_p), 161 good odd p < 1000); E(Q)_tors = Z/2 x Z/4, order 8: 2-part of B attained
+                  x of the torsion points (number of points): -45954068161 (1), -2737277761 (2), -163047361 (1), 0 (1), 2737277761 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 degenerate, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+352 135  w*K      B = 8 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/4, order 4: 2-part of B (8) not attained by T (4): E(Q)[2] in T (the quadratic cofactor has discriminant -1614024891229092249600, not a square); the 2 points of T[2^inf] with no half in T are not doubles modulo [17]
+                  x of the torsion points (number of points): 0 (1), 20200652641 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+487 217  w*f0*f8  B = 8 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/2 x Z/4, order 8: 2-part of B attained
+                  x of the torsion points (number of points): -56249134561 (1), -11168051041 (2), -2217373921 (1), 0 (1), 11168051041 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 degenerate, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by isogeny
+575 48   w*f0*f8  B = 16 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/2 x Z/8, order 16: 2-part of B attained
+                  x of the torsion points (number of points): -109312890625 (1), -16819660800 (2), -761760000 (2), -34500000 (2), -5308416 (1), 0 (1), 29200800 (2), 761760000 (2), 19872000000 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+623 527  w*K      B = 16 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/4, order 4: 2-part of B (16) not attained by T (4): E(Q)[2] in T (the quadratic cofactor has discriminant -84084402899222691840000, not a square); the 2 points of T[2^inf] with no half in T are not doubles modulo [13]
+                  x of the torsion points (number of points): 0 (1), 443366876164 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 degenerate, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by isogeny
+527 336  w*K      B = 8 (gcd of #E(F_p), 160 good odd p < 1000); E(Q)_tors = Z/4, order 4: 2-part of B (8) not attained by T (4): E(Q)[2] in T (the quadratic cofactor has discriminant -54521536336671370788864, not a square); the 2 points of T[2^inf] with no half in T are not doubles modulo [41]
+                  x of the torsion points (number of points): 0 (1), 152587890625 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by isogeny
+863 191  w*f0*f8  B = 8 (gcd of #E(F_p), 160 good odd p < 1000); E(Q)_tors = Z/2 x Z/4, order 8: 2-part of B attained
+                  x of the torsion points (number of points): -554680863361 (1), -27169917889 (2), -1330863361 (1), 0 (1), 27169917889 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 degenerate, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+697 696  w*f0*f8  B = 16 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/2 x Z/8, order 16: 2-part of B attained
+                  x of the torsion points (number of points): -236010384481 (1), -235811972976 (2), -235333652544 (2), -234856302336 (2), -234658861056 (1), 0 (1), 40376841984 (2), 235333652544 (2), 1371626043504 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+943 576  w*f0*f8  B = 16 (gcd of #E(F_p), 158 good odd p < 1000); E(Q)_tors = Z/2 x Z/8, order 16: 2-part of B attained
+                  x of the torsion points (number of points): -790763784001 (1), -588463865856 (2), -295031476224 (2), -147916596096 (2), -110075314176 (1), 0 (1), 46548411264 (2), 295031476224 (2), 1869957955584 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+260 69   w*K      B = 8 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/4, order 4: 2-part of B (8) not attained by T (4): E(Q)[2] in T (the quadratic cofactor has discriminant -81336106984854758400, not a square); the 2 points of T[2^inf] with no half in T are not doubles modulo [17]
+                  x of the torsion points (number of points): 0 (1), 5236114321 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+329 191  w*f0*f8  B = 8 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/2 x Z/4, order 8: 2-part of B attained
+                  x of the torsion points (number of points): -11716114081 (1), -3948739921 (2), -1330863361 (1), 0 (1), 3948739921 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 degenerate, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by isogeny
+544 33   w*K      B = 8 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/4, order 4: 2-part of B (8) not attained by T (4): E(Q)[2] in T (the quadratic cofactor has discriminant -1793077577491014549504, not a square); the 2 points of T[2^inf] with no half in T are not doubles modulo [29]
+                  x of the torsion points (number of points): 0 (1), 88223850625 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+577 511  w*f0*f8  B = 8 (gcd of #E(F_p), 159 good odd p < 1000); E(Q)_tors = Z/2 x Z/4, order 8: 2-part of B attained
+                  x of the torsion points (number of points): -110841719041 (1), -86934753409 (2), -68184176641 (1), 0 (1), 86934753409 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 degenerate, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by isogeny
+700 529  w*f0*f8  B = 8 (gcd of #E(F_p), 161 good odd p < 1000); E(Q)_tors = Z/2 x Z/4, order 8: 2-part of B attained
+                  x of the torsion points (number of points): -240100000000 (1), -137122090000 (2), -78310985281 (1), 0 (1), 137122090000 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 no, t = 0 no, t = 1 no, w = inf degenerate; global.py analyse: closes; rank 0: census_lvalue_exact.txt, by the series
+torsion step without PARI: 19 of 19 curves certified; no torsion point gives a solution; with rank 0 (census_lvalue_exact.txt) global.py's analyse closes each pair

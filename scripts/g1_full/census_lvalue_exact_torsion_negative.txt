@@ -1,0 +1,31 @@
+census_lvalue_exact.py --torsion-negative: forged torsion inputs, each must be refused; controls
+
+true certificate (112,15) w*K: E(Q)_tors = Z/4, certified True
+forged (112,15) w*K, an extra point (x, y + 1) off the curve:     refused ((163047361, 4017160880319) is not on the curve)
+forged (112,15) w*K, a torsion point left out:                    refused (not closed: (0, 0) + (163047361, -4017160880318) is not listed)
+forged (112,15) w*K, E(Q)_tors claimed to be E(Q)[2]:             refused ((0, 0) has no half in T, and it is a double modulo each of the first 40 good primes: NOT EXCLUDED)
+forged (112,15) w*K, the bad prime 3 among the primes:            refused (bound: ('not a good odd prime', 3))
+forged (112,15) w*K, p = 2 among the primes:                      refused (bound: ('not an odd prime', 2))
+true certificate (575,48) w*f0*f8: E(Q)_tors = Z/2 x Z/8, certified True
+forged (575,48) w*f0*f8, an extra point (x, y + 1) off the curve: refused ((-761760000, 250101804960001) is not on the curve)
+forged (575,48) w*f0*f8, a torsion point left out:                refused (not closed: (-109312890625, 0) + (761760000, -253611995040000) is not listed)
+forged (575,48) w*f0*f8, E(Q)_tors claimed to be E(Q)[2]:         refused ((0, 0) has no half in T, and it is a double modulo each of the first 40 good primes: NOT EXCLUDED)
+forged (575,48) w*f0*f8, the bad prime 3 among the primes:        refused (bound: ('not a good odd prime', 3))
+forged (575,48) w*f0*f8, p = 2 among the primes:                  refused (bound: ('not an odd prime', 2))
+forged y^2 = x^3 - 2x: (2, 2) (infinite order) with O, (0, 0):    refused (not closed: (0, 0) + (2, 2) is not listed)
+forged y^2 = x^3 - 2x: the multiples kP, |k| <= 3, of P = (2, 2): refused (not closed: (338, -6214) + (338, -6214) is not listed)
+control 15a1   (0, 5, 0, -152, -624)          E(Q)_tors = Z/2 x Z/4    (tables: Z/2 x Z/4): recognised
+control 15a4   (0, 5, 0, 568, -1776)          E(Q)_tors = Z/8          (tables: Z/8): recognised
+control 15a8   (0, 5, 0, -1272, 15504)        E(Q)_tors = Z/4          (tables: Z/4): recognised
+control 210e2  (0, 1, 0, -17120, 499968)      E(Q)_tors = Z/2 x Z/8    (tables: Z/2 x Z/8): recognised
+control 14a1   (0, 1, 0, 72, -368)            E(Q)_tors = Z/6          (tables: Z/6): recognised
+control 30a2   (0, 1, 0, -296, 1680)          E(Q)_tors = Z/2 x Z/6    (tables: Z/2 x Z/6): recognised
+control 90c3   (0, -3, 0, -1944, 110160)      E(Q)_tors = Z/12         (tables: Z/12): recognised
+control 11a1   (0, -4, 0, -160, -1264)        E(Q)_tors = Z/5          (tables: Z/5): recognised
+control 26b1   (0, -3, 0, -40, 208)           E(Q)_tors = Z/7          (tables: Z/7): recognised
+control 54b3   (0, -3, 0, -216, 1872)         E(Q)_tors = Z/9          (tables: Z/9): recognised
+control 66c1   (0, 1, 0, -720, 5184)          E(Q)_tors = Z/10         (tables: Z/10): recognised
+control 11a2 (trivial torsion, B = 5 from its 5-isogeny): refused, no claim (odd 5-part of B (5) not attained by T (1): NOT CERTIFIED)
+planted solution (575,48) w*f0*f8, global.py's issq forged to accept every value: classify_t t = -1 degenerate, t = -1/6 SOLUTION, t = -6 SOLUTION, t = 0 degenerate, t = 1 degenerate, t = 1/6 SOLUTION, t = 6 SOLUTION, w = inf degenerate; analyse: flags SOLUTION, does not close
+  the assertion of --torsion fires: ('a torsion point gives a SOLUTION', (575, 48))
+negative tests: 15 forged inputs, 15 refused

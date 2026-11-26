@@ -1,0 +1,16 @@
+1. repository rank_second.negative(): 7 of 7 refused
+   refused: a forged point of the conic C_X
+   refused: a mutated coefficient of U
+   refused: a tangent decomposition at a point that is not on the
+   refused: pairing with a class outside the Selmer group
+   refused: a curve D_lam with lam outside the survivors
+   refused: a non-tangent line in place of l_X
+   refused: full 2-torsion: pairing with a class outside Sel^2
+2. E1 of (8249,3720), d = -108415202: open E-side cosets [13278577, 755496193, 3378195882300241]; known E'-side classes [-1, 108415202, -108415202]
+   <-1 (a point class), lift of C_13278577> = +1 (must be +1)
+   <-1 (a point class), lift of C_755496193> = +1 (must be +1)
+   <-1 (a point class), lift of C_3378195882300241> = +1 (must be +1)
+   <108415202 (a point class), lift of C_13278577> = +1 (must be +1)
+   <108415202 (a point class), lift of C_755496193> = +1 (must be +1)
+   <108415202 (a point class), lift of C_3378195882300241> = +1 (must be +1)
+negative checks: all as required

@@ -1,0 +1,25 @@
+rank_fisher_theta4_order.py --negative: inputs that must be refused
+
+G replaced by the torsion point (0, 0):            bound        B = gcd #E~(F_p) over 161 good odd primes p < 1000 = 2; k G = O for k = 2: refused
+G replaced by the torsion point (0, 0):            orders       order of G~ in E~(F_p) for p = 11, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59: 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 (ALL EQUAL): refused
+G replaced by the torsion point (0, 0):            nagell-lutz  k G integral (or O) for every k <= 6: refused
+G replaced by (x(G), y(G) + 1), off the curve:     bound        G is not on the curve: refused
+G replaced by (x(G), y(G) + 1), off the curve:     orders       G is not on the curve: refused
+G replaced by (x(G), y(G) + 1), off the curve:     nagell-lutz  G is not on the curve: refused
+primes with the bad prime 3:                       bound        bound refused: ('not a good odd prime', 3): refused
+primes with the bad prime 3:                       orders       bound refused: ('not a good odd prime', 3): refused
+primes with the bad prime 3:                       nagell-lutz  bound refused: ('not a good odd prime', 3): refused
+primes with p = 2:                                 bound        bound refused: ('not an odd prime', 2): refused
+primes with p = 2:                                 orders       bound refused: ('not an odd prime', 2): refused
+primes with p = 2:                                 nagell-lutz  bound refused: ('not an odd prime', 2): refused
+a point of order 8 on 15a4 (0, 5, 0, 568, -1776):  bound        B = gcd #E~(F_p) over 165 good odd primes p < 1000 = 8; k G = O for k = 8: refused
+a point of order 8 on 15a4 (0, 5, 0, 568, -1776):  orders       order of G~ in E~(F_p) for p = 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47: 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8 (ALL EQUAL): refused
+a point of order 8 on 15a4 (0, 5, 0, 568, -1776):  nagell-lutz  k G integral (or O) for every k <= 6: refused
+a point of order 4 on 15a8 (0, 5, 0, -1272, 15504): bound        B = gcd #E~(F_p) over 165 good odd primes p < 1000 = 8; k G = O for k = 4: refused
+a point of order 4 on 15a8 (0, 5, 0, -1272, 15504): orders       order of G~ in E~(F_p) for p = 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47: 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4 (ALL EQUAL): refused
+a point of order 4 on 15a8 (0, 5, 0, -1272, 15504): nagell-lutz  k G integral (or O) for every k <= 6: refused
+a point of order 12 on 90c3 (0, -3, 0, -1944, 110160): bound        B = gcd #E~(F_p) over 165 good odd primes p < 1000 = 12; k G = O for k = 12: refused
+a point of order 12 on 90c3 (0, -3, 0, -1944, 110160): orders       order of G~ in E~(F_p) for p = 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47: 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12 (ALL EQUAL): refused
+a point of order 12 on 90c3 (0, -3, 0, -1944, 110160): nagell-lutz  k G integral (or O) for every k <= 6: refused
+positive control, the true G: bound holds, orders holds, nagell-lutz holds
+negative tests: 21 forged inputs, 21 refused

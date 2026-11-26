@@ -260,21 +260,22 @@ caslocal(nf, e, b, bp, G, pl, x0, N) = { my(ctx = lctx(nf, pl, N), w = vector(3)
   for(i=1, 3, w[i] = iferr(lsqrt(emb(red((x0 - e[i])/b[i]), ctx), ctx), E, 0); if(w[i] === 0, return(-1)));
   for(t=1, 3, my(i = cyc[t][1], j = cyc[t][2], k = cyc[t][3], s = e[j] - e[k], L);
      L = 2*(emb(b[j]*G[i][1], ctx)*w[j] - emb(b[k]*G[i][2], ctx)*w[k])/emb(s, ctx) + 2;
-     if(ctx[1] == 0, tot += (L < 0 && simplify(bp[i]) < 0),
+     \\ at a real place L can be 0 at a K-point (sampled x0 where w equals the conic point); its sign is then noise, so skip the sample
+     if(ctx[1] == 0, if(abs(L) < 10^(-(default(realprecision)\2)) * (1 + abs(emb(b[j]*G[i][1], ctx)*w[j]) + abs(emb(b[k]*G[i][2], ctx)*w[k])), return(-1)); tot += (L < 0 && simplify(bp[i]) < 0),
         my(Lg = back(L, ctx)); if(Lg == 0, return(-1)); tot += (1 - nfhilbert(nf, Lg, bp[i], pl[1]))/2));
   tot % 2; }
 \\ the pairing; PL: places to use. Returns [value, per-place values]
 cassels(bnf, e, b, bp, PL0, N) = { my(nf = bnf.nf, G = casdata(bnf, e, b), per = List(), tot = 0, PL);
   PL = augment(nf, PL0, concat(concat(b, bp), concat(G[1], concat(G[2], G[3]))));
-  for(k=1, #PL, my(pl = PL[k], B = lsqbasis(nf, pl), vals = List(), x0, cnt = 0);
+  for(k=1, #PL, my(pl = PL[k], B = lsqbasis(nf, pl), vals = List(), xs = List(), x0, cnt = 0);
     for(tr=1, 60000, if(#vals >= 3, break);
       my(md = tr % 4, pi = if(isre(pl), 1, if(pl[1].e==1, pl[1].p, lift(nfbasistoalg(nf, pl[1].gen[2])))));
       x0 = if(md==0, e[random(3)+1] + pi^random(10)*randK(nf, 60), md==1, randK(nf, 10^4), md==2, randK(nf, 300)/pi^(2*(random(4)+1)), pi^random(8)*randK(nf,300));
       if(red(fx(e, x0)) == 0, next);
       if(vecmax(concat(vector(3, i, lvec(nf, red((x0 - e[i])/b[i]), B, pl)))) != 0, next);
-      my(v = caslocal(nf, e, b, bp, G, pl, x0, N)); if(v < 0, next); listput(vals, v));
+      my(v = caslocal(nf, e, b, bp, G, pl, x0, N)); if(v < 0, next); listput(vals, v); listput(xs, x0));
     if(#vals == 0, error("cassels: no local point at ", pl));
-    if(vecmin(Vec(vals)) != vecmax(Vec(vals)), print("  INCONSISTENT at ", if(isre(pl), "inf", pl[1].p), " ", Vec(vals)));
+    if(vecmin(Vec(vals)) != vecmax(Vec(vals)), print("  INCONSISTENT at ", if(isre(pl), "inf", pl[1].p), " ", Vec(vals), " e ", e, " b ", b, " bp ", bp, " xs ", Vec(xs)));
     tot += vals[1]; listput(per, vals[1]));
   [tot % 2, Vec(per), G, apply(pl->if(isre(pl),0,[pl[1].p, pl[1].f]), PL)]; }
 
@@ -294,15 +295,15 @@ ggcd(a, b) = { a = red(a); b = red(b);
 conj_i(z) = subst(lift(Mod(z, y^2+1)), y, -y);
 cassels2(bnf, e, b, bp, PL0, N) = { my(nf = bnf.nf, G = casdata(bnf, e, b), per = List(), tot = 0, PL, Z, corr = 0);
   PL = augment(nf, PL0, concat(b, bp));
-  for(k=1, #PL, my(pl = PL[k], B = lsqbasis(nf, pl), vals = List(), x0);
+  for(k=1, #PL, my(pl = PL[k], B = lsqbasis(nf, pl), vals = List(), xs = List(), x0);
     for(tr=1, 60000, if(#vals >= 3, break);
       my(md = tr % 4, pi = if(isre(pl), 1, if(pl[1].e==1, pl[1].p, lift(nfbasistoalg(nf, pl[1].gen[2])))));
       x0 = if(md==0, e[random(3)+1] + pi^random(10)*randK(nf, 60), md==1, randK(nf, 10^4), md==2, randK(nf, 300)/pi^(2*(random(4)+1)), pi^random(8)*randK(nf,300));
       if(red(fx(e, x0)) == 0, next);
       if(vecmax(concat(vector(3, i, lvec(nf, red((x0 - e[i])/b[i]), B, pl)))) != 0, next);
-      my(v = caslocal(nf, e, b, bp, G, pl, x0, N)); if(v < 0, next); listput(vals, v));
+      my(v = caslocal(nf, e, b, bp, G, pl, x0, N)); if(v < 0, next); listput(vals, v); listput(xs, x0));
     if(#vals == 0, error("cassels2: no local point at ", pl));
-    if(vecmin(Vec(vals)) != vecmax(Vec(vals)), print("  INCONSISTENT at ", if(isre(pl), "inf", pl[1].p), " ", Vec(vals)));
+    if(vecmin(Vec(vals)) != vecmax(Vec(vals)), print("  INCONSISTENT at ", if(isre(pl), "inf", pl[1].p), " ", Vec(vals), " e ", e, " b ", b, " bp ", bp, " xs ", Vec(xs)));
     tot += vals[1]; listput(per, vals[1]));
   Z = vector(3, i, dengen(bnf, G[i]));
   for(i=1, 3, for(k=1, #PL, corr += (1 - hil(nf, Z[i], bp[i], PL[k]))/2));

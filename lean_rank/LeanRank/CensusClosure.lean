@@ -34,8 +34,8 @@ For a census pair `(m, n)` of `G1_FULL_SYSTEM.md`, Result 3, closed by the curve
 
 The hypotheses `b² ≠ d²`, `b² ≠ f²` hold when the nine entries are distinct.  The eight
 hypotheses `r₁ … ad` are the fields of `MagicSquareOfSquares.IsMagic (a²) … (i²) T`, that is
-`MagicSquareOfSquares.IsMSS a b c d e f g h i T` of the main library (not imported: lean_rank
-compiles only four main-library modules).
+`MagicSquareOfSquares.IsMSS a b c d e f g h i T` of the main library (not imported here;
+`CensusClosureMSS.lean` restates the six exclusions for `IsMSS` itself).
 -/
 
 open WeierstrassCurve WeierstrassCurve.Affine IsDedekindDomain IsDedekindDomain.HeightOneSpectrum

@@ -1,7 +1,7 @@
 # Sub-project: "rank E(Q) >= 2" for the twice-square curves, on top of Michael Stoll's
 # EllipticCurves library (Mordell-Weil over number fields).  Own toolchain (v4.36.0) and Mathlib
 # (the rev pinned by EllipticCurves 2164fb5); the main library stays on v4.33.1.
-# The four main-library modules it needs are compiled from the main tree (srcDir = ".."),
+# The five main-library modules it needs are compiled from the main tree (srcDir = ".."),
 # so there is one copy of each source file.
 name = "lean_rank"
 defaultTargets = ["MagicSquareOfSquares", "LeanRank"]
@@ -24,7 +24,8 @@ rev = "2164fb57f067b75cd515029cddb2be50fd059983"
 name = "MagicSquareOfSquares"
 srcDir = ".."
 roots = ["MagicSquareOfSquares.G1Sigma", "MagicSquareOfSquares.G1SigmaGeneric",
-  "MagicSquareOfSquares.TwoDescentMap", "MagicSquareOfSquares.TwoDescentCertificates"]
+  "MagicSquareOfSquares.TwoDescentMap", "MagicSquareOfSquares.TwoDescentCertificates",
+  "MagicSquareOfSquares.Defs"]
 
 [[lean_lib]]
 name = "LeanRank"

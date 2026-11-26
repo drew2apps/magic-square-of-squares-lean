@@ -24,7 +24,8 @@ For all four the class b of T (the image of E(Q)) must give +1.
 The level-2 and level-3 curves are built with rank_indep / rank_second / rank_fisher (their certified routines), the
 cone-conic points with the finder of rank_fisher_theta4_k4.py (Legendre descent in Z[sqrt -2], Z[sqrt 2]), every
 step re-checked exactly as for (72,65).
-Written by an AI model (Claude); not read by a person; not reviewed.  Experiment, not counted.
+Written by an AI model (Claude); not read by a person.  Reviewed by a separate AI agent on 26 November 2026: holds
+with gaps (LEDGER.md, tier C).  Not counted in the census.
 """
 import os, sys, json, time
 here = os.path.dirname(os.path.abspath(__file__))

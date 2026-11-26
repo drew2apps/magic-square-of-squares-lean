@@ -1,0 +1,15 @@
+(7735,4968) g4*K: 2-torsion roots 1; shifted model a = -3993450530968096731187200, b = 4820830536984668538036201506705755075792073625600
+  first descent: |Sel(phi)| <= 1, |Sel(phi^)| <= 128, rank <= 5; bad primes [2, 3, 5, 7, 13, 17, 23, 29, 317, 2767, 12703]
+  E: Selmer 1 classes, known subgroup 1, cosets excluded by the second descent 0, not excluded 0: image <= 2^0 (control: 0 classes of known points survive, as they must)
+  E': Selmer 128 classes, known subgroup 4, cosets excluded by the second descent 28, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+exact rank bound (rank_indep, no PARI in the bound): 2; a point of infinite order is known, so rank >= 1
+(6557,324) g4*K: 2-torsion roots 1; shifted model a = -6224720087712481804800, b = 996685649261303196362035185169723587600000000
+  first descent: |Sel(phi)| <= 1, |Sel(phi^)| <= 128, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 79, 83, 101, 271, 983]
+  E: Selmer 1 classes, known subgroup 1, cosets excluded by the second descent 0, not excluded 0: image <= 2^0 (control: 0 classes of known points survive, as they must)
+  E': Selmer 128 classes, known subgroup 4, cosets excluded by the second descent 24, not excluded 7: image <= 2^5 (control: 2 classes of known points survive, as they must)
+exact rank bound (rank_indep, no PARI in the bound): 3; a point of infinite order is known, so rank >= 1
+(6881,6233) g4*K: 2-torsion roots 1; shifted model a = -5073957255900562354561600, b = 6499428485986488666679004862246527610643600000000
+  first descent: |Sel(phi)| <= 4, |Sel(phi^)| <= 32, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 79, 83, 101, 271, 983]
+  E: Selmer 4 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 1: image <= 2^2 (control: 1 classes of known points survive, as they must)
+  E': Selmer 32 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 15: image <= 2^5 (control: 0 classes of known points survive, as they must)
+exact rank bound (rank_indep, no PARI in the bound): 5; a point of infinite order is known, so rank >= 1

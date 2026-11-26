@@ -1,0 +1,8 @@
+F2, D1 of (12007,1799): the open class on the E' side and the prime 2 (experiment; written by an AI model, not read by a person)
+rank_indep.rank_bound (exact): bound 4; E: Selmer 8, known 2, open cosets 3; E': Selmer 16, known 4, open cosets 1
+  class -6177769598: Q_2-point on its quartic: no (certified)
+  class 6177769598: Q_2-point on its quartic: no (certified)
+  class 73917229246: Q_2-point on its quartic: no (certified)
+  class -73917229246: Q_2-point on its quartic: no (certified)
+so the whole coset lies outside Sel(phi^): E' image <= 2^2, E image <= 2^3, rank <= 3 + 2 - 2 = 3
+result: exact rank bound 3 for D1 of (12007,1799) (was 4); PARI ellrank gives [1,3]; rank 1 is still open

@@ -62,7 +62,7 @@ Theorem 7 is a finite statement. Its proof: congruences leave 425 ratios (`G1.ex
 
 - Not a proof that there is no magic square of squares, and not a step that reduces the problem to something known. For the 306 ratios to 1000 with a degenerate solution, and for every ratio above 1000, nothing is proved here beyond the criterion.
 - Theorem 6 gives the class for the last pair. The argument that then excludes that pair (`LAST_PAIR.md`, Theorem A: a curve of genus 9 with two maps to an elliptic curve of rank 1, an explicit height bound from the literature read by an automated reader, a Mordell–Weil sieve) is not in Lean and has not been read by anyone.
-- The census of the repository (release 0.5.0) is not changed by any of this.
+- The census of the repository is not changed by any of this.
 
 ## 5. For a reader with one hour
 

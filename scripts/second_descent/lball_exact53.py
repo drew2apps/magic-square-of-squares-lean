@@ -42,7 +42,8 @@ usage: lball_exact53.py --list                       the 53 curves, N, w (local)
                                                        certify the selected curves (index in the N-sorted list, 0-based);
                                                        one line per curve on stdout, a JSON line per curve to out.jsonl
        lball_exact53.py --merge a.jsonl b.jsonl ... [--write]   lball_exact53.txt (and _timing.txt, and every record in .jsonl)
-       lball_exact53.py --negative [--write]        forged N, w and a_p on three curves (the guard must refuse each), and
+       lball_exact53.py --negative [--write]        forged N, w and a_p on three curves through lball_exact.evaluate (its
+                                                       guard must refuse each), and
                                                        forged orders #E(F_p) (the order certificate must refuse each)
        lball_exact53.py --aptest [--write]          the order-certificate a_p against counting points
        lball_exact53.py --controls [--write]        67a1 (rank 0) certified; 79a1, 5077a1 (w = -1), 389a1 (rank 2) refused
@@ -476,29 +477,30 @@ def bigcheck(idx, prefix, nprimes):
 NEG_TL = 1e-3
 
 def negative(write):
-    """forged N, w, a_p on three curves: the guard must refuse each; forged #E(F_p): the order certificate must refuse"""
+    """forged N, w, a_p on three curves, through LX.evaluate (the function certify() calls): its guard must refuse each;
+    forged #E(F_p): the order certificate must refuse.  (Before 26 November 2026 this test used a copy of the overlap test
+    of evaluate, without the Fricke residual.)"""
     rows = the_53(); lines = ['lball_exact53.py --negative: forged inputs, each must be refused', '']
     PI = LX.pi_interval(); nref = ntot = 0
     for i in (0, 1, 7):                                        # (21,20), (15,8), (23,7)
         N, pair, a, LD = rows[i]
         bad = sorted(p for p, T in LD['rows'].items() if T['f'])
         lN = bad[-1]; nN = next(q for q in (3, 5, 7, 11, 13) if N % q)
-        Mmax = max(max(LX.terms_needed(n, LX.Y2[1]/LX.Y2[0], True, NEG_TL) for n in (N // lN, N * nN, 2*N)),
-                   LX.terms_needed(N, LX.Y2[1]/LX.Y2[0], True, LX.TARGET))
+        # every forged input goes through LX.evaluate, the function certify() calls, and is refused by its guard
+        # (the two enclosures meet and the Fricke residual contains 0); forged N and w with tails below NEG_TL
+        Mmax = max(max(LX.max_terms(n, NEG_TL) for n in (N // lN, N * nN, 2*N)), LX.max_terms(N))
         ap, st = ap_table_fast(a, LD, Mmax); an0 = LX.an_from_ap(ap, LD, Mmax)
         good = [p for p in sorted(ap) if p >= 5 and p not in LD['rows']]
         pmid = next(p for p in good if p > math.isqrt(N) // 4)
         def two(an, Nf, wf, tl):
-            M1 = LX.terms_needed(Nf, 1, True, tl); Mb = LX.terms_needed(Nf, LX.Y2[1]/LX.Y2[0], True, tl); assert Mb <= Mmax
-            S1 = LX.series(an, LX.q_interval(Nf, 1, 1, PI), True, M1)
-            Ly1 = (2*S1[0], 2*S1[1]) if wf == 1 else (S1[0] - S1[1], S1[1] - S1[0])
-            Sa = LX.series(an, LX.q_interval(Nf, LX.Y2[0], LX.Y2[1], PI), True, Mb); Sb = LX.series(an, LX.q_interval(Nf, LX.Y2[1], LX.Y2[0], PI), True, Mb)
-            Ly2 = (Sa[0] + Sb[0], Sa[1] + Sb[1]) if wf == 1 else (Sa[0] - Sb[1], Sa[1] - Sb[0])
-            return Ly1, Ly2, max(Ly1[0], Ly2[0]) <= min(Ly1[1], Ly2[1])
+            ev = LX.evaluate(an, Nf, wf, PI, Mmax, tL=tl)
+            return ev['L_y1'], ev['L_y2'], ev['guard'], ev
+        def why(ev):
+            return ', '.join(x for x, y in (('enclosures disjoint', not ev['overlap']), ('residual excludes 0', not ev['R_has_0'])) if y)
         lines.append('curve (%d,%d), N = %d:' % (pair[0], pair[1], N))
         for tl in (NEG_TL, LX.TARGET):
-            Ly1, Ly2, ok = two(an0, N, 1, tl)
-            lines.append('  true inputs, tails below %g: L(y=1) %s, L(y=6/5) %s: guard %s' % (tl, LX.iv(Ly1, 10), LX.iv(Ly2, 10), 'passes' if ok else 'FAILS'))
+            Ly1, Ly2, ok, ev = two(an0, N, 1, tl)
+            lines.append('  true inputs, tails below %g: L(y=1) %s, L(y=6/5) %s, residual %s: guard %s' % (tl, LX.iv(Ly1, 10), LX.iv(Ly2, 10), LX.iv(ev['R'], 6), 'passes' if ok else 'FAILS'))
             assert ok
         bp = bad[0]; bT = LD['rows'][bp]
         forged = [('N/%d (%d left out)' % (lN, lN), N // lN, 1, None, NEG_TL), ('%dN (%d added)' % (nN, nN), N * nN, 1, None, NEG_TL),
@@ -509,8 +511,9 @@ def negative(write):
         for name, Nf, wf, ov, tl in forged:
             if ov == 'small': q = 5 if 5 not in LD['rows'] else 7; ov = {q: ap[q] + 1}
             an = an0 if ov is None else LX.an_from_ap({**ap, **ov}, LD, Mmax)
-            Ly1, Ly2, ok = two(an, Nf, wf, tl)
-            lines.append('  forged %-40s (tails below %g) L(y=1) %s, L(y=6/5) %s: guard %s' % (name + ':', tl, LX.iv(Ly1, 10), LX.iv(Ly2, 10), 'passes (NOT REFUSED)' if ok else 'refuses'))
+            Ly1, Ly2, ok, ev = two(an, Nf, wf, tl)
+            lines.append('  forged %-40s (tails below %g) L(y=1) %s, L(y=6/5) %s, residual %s: guard %s' % (name + ':', tl, LX.iv(Ly1, 10), LX.iv(Ly2, 10),
+                         LX.iv(ev['R'], 6), 'passes (NOT REFUSED)' if ok else 'refuses (%s)' % why(ev)))
             ntot += 1; nref += not ok
         # forged group orders at the first 10 good primes above 10^5, the true order by counting points: the true one must
         # pass, n + d, d = -4, -2, 2, 4 must be refused

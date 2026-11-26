@@ -1,0 +1,32 @@
+== E1 of (6480,4961), d = 709342
+E1 of (6480,4961), d = 709342:  y^2 = x(x^2 + a x + b),  a = -428478652648379840444,  b = 9272320577932914217772059434089455615255684
+  rank_indep.rank_bound: exact bound 3; open cosets E side [[807642573697801, 22816965413338681]], E' side [[-34129302, 34129302, -20942341989, 20942341989]]
+  d = 807642573697801 (E side) and d' = -34129302 (E' side) are certified in the Selmer groups (local points at every bad prime)
+  E side: class 807642573697801, the curves D_lam that the second descent of rank_indep.py does not exclude: lam in [6970, -6970, -122415, 122415, 4276915, -4276915, -86834100930, 86834100930]
+    lam = 6970: <-34129302, D_lam> = +1  (places with factor -1: 11, 31, 41, 8161; |S| = 21; control with the torsion class: +1)
+    lam = -6970: <-34129302, D_lam> = +1  (places with factor -1: 2, 5, 31, 41; |S| = 22; control with the torsion class: +1)
+    lam = -122415: <-34129302, D_lam> = +1  (places with factor -1: 5, 17, 41, 8161; |S| = 20; control with the torsion class: +1)
+    lam = 122415: <-34129302, D_lam> = +1  (places with factor -1: 5, 17, 41, 8161; |S| = 21; control with the torsion class: +1)
+    lam = 4276915: <-34129302, D_lam> = +1  (places with factor -1: 3, 5, 17, 31; |S| = 20; control with the torsion class: +1)
+    lam = -4276915: <-34129302, D_lam> = +1  (places with factor -1: 5, 17, 41, inf; |S| = 20; control with the torsion class: +1)
+    lam = -86834100930: <-34129302, D_lam> = +1  (places with factor -1: 17, 41, 8161, inf; |S| = 22; control with the torsion class: +1)
+    lam = 86834100930: <-34129302, D_lam> = +1  (places with factor -1: 3, 5, 17, inf; |S| = 21; control with the torsion class: +1)
+  E' side: class -34129302, the curves D_lam that the second descent of rank_indep.py does not exclude: lam in [183209, 165916889, 394613464529, 5234631580121, 7568572155209, 16230904631201, 215306403844649, 6854215383328889, 24735345659244771641, 1017393151787625115529, 351922725168104733086249, 32098470227140893741779081, 148614893094332829495924161, 318706634108007463278800729, 6112701094650509331233995409, 29068868460317672463228086201]
+    lam = 183209: <807642573697801, D_lam> = +1  (places with factor -1: 193, 829; |S| = 20; control with the torsion class: +1)
+    lam = 165916889: <807642573697801, D_lam> = +1  (places with factor -1: none; |S| = 21; control with the torsion class: +1)
+    lam = 394613464529: <807642573697801, D_lam> = +1  (places with factor -1: 829, 565429; |S| = 22; control with the torsion class: +1)
+    lam = 5234631580121: <807642573697801, D_lam> = +1  (places with factor -1: 829, 5047860733; |S| = 22; control with the torsion class: +1)
+    lam = 7568572155209: <807642573697801, D_lam> = +1  (places with factor -1: none; |S| = 24; control with the torsion class: +1)
+    lam = 16230904631201: <807642573697801, D_lam> = +1  (places with factor -1: 565429, 5047860733; |S| = 22; control with the torsion class: +1)
+    lam = 215306403844649: <807642573697801, D_lam> = +1  (places with factor -1: none; |S| = 22; control with the torsion class: +1)
+    lam = 6854215383328889: <807642573697801, D_lam> = +1  (places with factor -1: 829, 5047860733; |S| = 23; control with the torsion class: +1)
+    lam = 24735345659244771641: no local point found at 38965643 (not shown to be everywhere locally soluble; skipped)
+    lam = 1017393151787625115529: <807642573697801, D_lam> = +1  (places with factor -1: 829, 5047860733; |S| = 23; control with the torsion class: +1)
+    lam = 351922725168104733086249: <807642573697801, D_lam> = +1  (places with factor -1: 193, 829; |S| = 24; control with the torsion class: +1)
+    lam = 32098470227140893741779081: <807642573697801, D_lam> = +1  (places with factor -1: 829, 5047860733; |S| = 21; control with the torsion class: +1)
+    lam = 148614893094332829495924161: <807642573697801, D_lam> = +1  (places with factor -1: 829, 5047860733; |S| = 26; control with the torsion class: +1)
+    lam = 318706634108007463278800729: <807642573697801, D_lam> = +1  (places with factor -1: 193, 5047860733; |S| = 25; control with the torsion class: +1)
+    lam = 6112701094650509331233995409: <807642573697801, D_lam> = +1  (places with factor -1: 829, 5047860733; |S| = 24; control with the torsion class: +1)
+    lam = 29068868460317672463228086201: <807642573697801, D_lam> = +1  (places with factor -1: 829, 565429; |S| = 23; control with the torsion class: +1)
+  => <y0, y1> = 0 (every value +1): the pairing on Sel^2 does not lower the bound
+  result: {'name': 'E1 of (6480,4961), d = 709342', 'bound': 3, 'pairing': [1]}

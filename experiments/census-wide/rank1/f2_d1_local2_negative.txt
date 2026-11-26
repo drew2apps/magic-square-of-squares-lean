@@ -1,0 +1,7 @@
+F2, D1 of (12007,1799): controls (each must come out the other way from the open class)
+  known class -1 (image of a rational point, so a Q_2-point exists): solvable at depth 12 says undecided -> never "no", as it must
+  known class 244673 (image of a rational point, so a Q_2-point exists): solvable at depth 12 says yes -> never "no", as it must
+  known class -244673 (image of a rational point, so a Q_2-point exists): solvable at depth 12 says undecided -> never "no", as it must
+  (undecided is harmless: only "no" is used as a certificate; at least one known class is found soluble: True)
+  open class -6177769598 at depth 2: None -> not decided at a shallow depth, as expected
+all controls as they must be: True

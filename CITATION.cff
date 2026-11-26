@@ -11,8 +11,8 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.24435351
     description: "Zenodo concept DOI; resolves to the latest archived version"
-version: 0.5.0
-date-released: 2026-11-23
+version: 0.6.0
+date-released: 2026-11-27
 abstract: >-
   Lean 4 proofs of the known necessary conditions and reformulations for a 3x3 magic square of
   squares (an open problem), and kernel-checked conditions on two ratios of sums of edge roots.
@@ -22,11 +22,13 @@ abstract: >-
   either a prime congruent to 1 modulo 8 divides e and divides both numbers to an odd power, or
   one of them is a square and the other is twice a square. One edge root exceeds 500 (far below
   published search bounds). Computed and not formalized: a census of the ratios with m <= 1000
-  (of 425 ratios left by congruences, 268 are closed by rank 0 and 122 by rank 1; 9 more by an
-  argument with four maps that has not been reviewed; 2 more, counted apart, by a two-cover descent
-  run in Magma; 24 are open). The repository also contains experiments that are not counted in
-  the census and that nobody has reviewed: two descents over the Gaussian integers and a proposed
-  proof for the last pair of ratios left by them.
+  (of 425 ratios left by congruences, 268 are closed by rank 0, 122 and 18 by the Demjanenko-Manin
+  argument on curves of rank 1; 6 more by an argument with four maps derived here and 2 more by a
+  two-cover descent run in Magma, both counted apart; 9 are open). A Lean sub-project on Lean v4.36.0
+  with M. Stoll's Mordell-Weil library proves rank >= 1 on the two elliptic quotients of
+  y^2 = F0 F8 GL for every ratio, and rank >= 2 when m^2 + n^2 is twice a square. The repository also
+  contains experiments that are not counted in the census and that no person has reviewed (reports of
+  AI reviews are in reviews/).
   The problem itself is not solved, and no novelty is claimed.
   The Lean code and the text were written with Claude, an AI model made by Anthropic.
 keywords:

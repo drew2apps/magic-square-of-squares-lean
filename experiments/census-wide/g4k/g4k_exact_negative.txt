@@ -1,0 +1,7 @@
+controls on (7735,4968):
+  refused: 3G in place of G (not saturated at 3) (saturation not shown at)
+  refused: the height search on y^2 = x^3 - 2, which has the point (3, 5) of small height (the search must see it) (points of small height found)
+  refused: a point that is not on the curve (G is not on the curve)
+  classifier forged to call t = 1 a solution: status ALERT (must be ALERT)
+  unchanged run: status closed, t not "no": ['-1', '1'] (t = 1, -1 must be found)
+negative checks: all as required (5 of 5)

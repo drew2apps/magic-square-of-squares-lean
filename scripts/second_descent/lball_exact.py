@@ -50,7 +50,7 @@ What lball.py takes from PARI (its line 22: ellminimalmodel, ellglobalred, ellro
     <= 2n (Hasse and the recursion), so sum_{n>M} |a_n|/n q^n <= 2 q^(M+1)/(1-q) and sum_{n>M} |a_n| q^n
     <= 2 q^(M+1)((M+1) - M q)/(1-q)^2.  No floating point enters a certified bound (floats only choose M and print).
  5. Guard.  The two enclosures of L(E,1) must intersect and the Fricke residual f(i/(y sqrt N)) - w y^2 f(i y/sqrt N) at
-    y = 6/5 must contain 0.  --negative reruns the first test (the two cut-offs) with a forged conductor (N/2, 2N, N/7,
+    y = 6/5 must contain 0.  --negative runs evaluate() itself (both tests) with a forged conductor (N/2, 2N, N/7,
     3N) or sign (w = -1), tails below 10^-3, and with one forged a_p (a_2, a_3, a_7, a_521, a_719), tails below 10^-9,
     and requires that every forgery is refused.  The guard is a check, not part of the proof: the proof is N (1), the a_n
     (2), w = +1 (3b, and 3a), and the lower end of the enclosure at y = 1 (4).
@@ -631,8 +631,7 @@ NEG_TL = 1e-3      # a forged N or w moves the two values apart by more than 10^
                    # so those are run with the full precision TARGET (and the true N, so no more terms are needed)
 
 def neg_terms(N):
-    return max(max(terms_needed(n, Y2[1]/Y2[0], True, NEG_TL) for n in (N // 2, 2*N, N // 7, 3*N)),
-               terms_needed(N, Y2[1]/Y2[0], True, TARGET))
+    return max(max(max_terms(n, NEG_TL) for n in (N // 2, 2*N, N // 7, 3*N)), max_terms(N))
 
 def negative(write, ap=None):
     """forged N, forged w, forged a_p: the guard (the two cut-offs) must refuse each"""
@@ -646,24 +645,26 @@ def negative(write, ap=None):
     if ap is None: ap = ap_table(a, LD, Mmax)
     ap0 = {p: x for p, x in ap.items() if p <= Mmax}; an0 = an_from_ap(ap0, LD, Mmax)
     lines = ['lball_exact.py --negative: the guard (L(E,1) at the cut-offs y = 1 and y = 6/5) with forged inputs; each must be refused', '']
+    # every forged input goes through evaluate(), the function main_curve() certifies with, and is refused by its guard
+    # (the two enclosures meet and the Fricke residual at y = 6/5 contains 0).  Before 26 November 2026 this test used a
+    # copy of the overlap test, without the residual.
     def two(an, Nf, wf, tl):
-        M1 = terms_needed(Nf, 1, True, tl); Mb = terms_needed(Nf, Y2[1]/Y2[0], True, tl); assert Mb <= Mmax
-        S1 = series(an, q_interval(Nf, 1, 1, PI), True, M1)
-        L1 = (2*S1[0], 2*S1[1]) if wf == 1 else (S1[0] - S1[1], S1[1] - S1[0])
-        Sa = series(an, q_interval(Nf, Y2[0], Y2[1], PI), True, Mb); Sb = series(an, q_interval(Nf, Y2[1], Y2[0], PI), True, Mb)
-        L2 = (Sa[0] + Sb[0], Sa[1] + Sb[1]) if wf == 1 else (Sa[0] - Sb[1], Sa[1] - Sb[0])
-        return L1, L2, max(L1[0], L2[0]) <= min(L1[1], L2[1])
+        ev = evaluate(an, Nf, wf, PI, Mmax, tL=tl)
+        return ev['L_y1'], ev['L_y2'], ev['guard'], ev
+    def why(ev):
+        return ', '.join(x for x, y in (('enclosures disjoint', not ev['overlap']), ('residual excludes 0', not ev['R_has_0'])) if y)
     for tl in (NEG_TL, TARGET):
-        L1, L2, ok = two(an0, N, 1, tl); dg = 4 if tl == NEG_TL else 10
-        lines.append('true inputs, tails below %g: N = %d, w = +1: L(y=1) %s, L(y=6/5) %s: guard %s' % (tl, N, iv(L1, dg), iv(L2, dg), 'passes' if ok else 'FAILS'))
+        L1, L2, ok, ev = two(an0, N, 1, tl); dg = 4 if tl == NEG_TL else 10
+        lines.append('true inputs, tails below %g: N = %d, w = +1: L(y=1) %s, L(y=6/5) %s, residual %s: guard %s' % (tl, N, iv(L1, dg), iv(L2, dg), iv(ev['R'], 4), 'passes' if ok else 'FAILS'))
         assert ok
     refused = 0
     for name, Nf, wf, ov, tl in forged:
         if ov == 'a3': ov = {3: ap0[3] + 1}
         if ov is None: an = an0
         else: apf = dict(ap0); apf.update(ov); an = an_from_ap(apf, LD, Mmax)
-        L1, L2, ok = two(an, Nf, wf, tl); dg = 4 if tl == NEG_TL else 10
-        lines.append('forged %-38s (tails below %g) L(y=1) %s, L(y=6/5) %s: guard %s' % (name + ':', tl, iv(L1, dg), iv(L2, dg), 'passes (NOT REFUSED)' if ok else 'refuses'))
+        L1, L2, ok, ev = two(an, Nf, wf, tl); dg = 4 if tl == NEG_TL else 10
+        lines.append('forged %-38s (tails below %g) L(y=1) %s, L(y=6/5) %s, residual %s: guard %s' % (name + ':', tl, iv(L1, dg), iv(L2, dg), iv(ev['R'], 4),
+                     'passes (NOT REFUSED)' if ok else 'refuses (%s)' % why(ev)))
         refused += not ok
     lines.append('negative tests: %d forged inputs, %d refused' % (len(forged), refused))
     out = '\n'.join(lines) + '\n'; sys.stdout.write(out); sys.stderr.write('[%.0f s]\n' % (time.time() - t0))

@@ -72,7 +72,7 @@ All curves are `C: y² = x(x² + Ax + B)`, `A, B ∈ ℤ`, `B(A² − 4B) ≠ 0`
 - `selmer_square_rule.py`: identities I1–I10 in general `m, n` (sympy), congruences C1 (all residues mod 16) and C2, controls C3 (L1, L2, L3 against the exhaustive solver on random curves outside the family), C4 (the local images of 200 random curves of the data at every bad prime below 3000, 4644 in all, recomputed by the separate exhaustive search `locally_soluble` of `sigma_generic.py`, which shares no code with `rank_indep.solvable`: all agree), the facts L0.3–L0.7 on every curve of the data, then the local images and Selmer groups predicted by Proposition S2 against the exact ones, curve by curve, split at `m = 2500`.
 - `--negative` (both scripts run the same set, 10 tests, output `selmer_square_negative.txt`): a forged element added to `Sel(E)` (13) or `Sel(E′)` (3), each also shown to fail a certified local test (both at 2, as the rule says: `13 ≡ 5`, `3 ≡ 3 (mod 8)`), the class 2 removed from `Sel(E)`, an obstruction claimed for the class 2, a wrong 2-adic image, a wrong image at 17 for (12, 5), the local solver forced to accept every class at 17 (the product formula refuses it), a ratio of the wrong type given to the rule: all refused.
 
-What is not checked: the proofs by hand have been read by nobody; the reduction of `rank ≤ s` and the local-global set-up are quoted (Silverman–Tate III.4–III.6); the parity remark is quoted and not used.
+What is not checked: the proofs by hand have been read by no person (one AI review, `reviews/review_t4.md`); the reduction of `rank ≤ s` and the local-global set-up are quoted (Silverman–Tate III.4–III.6); the parity remark is quoted and not used.
 
 ## 5. Counts
 

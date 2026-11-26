@@ -1,0 +1,12 @@
+rank_fisher_theta4_order.py: G of infinite order on E+ of (72,65), exact (no PARI, no floating point, no heights)
+
+E: y^2 = x(x^2 + a x + b), a = 3245490309884, b = 2746837205836913019317764 (sigma_exact.model(72, 65, +2) moved by its rational root e = -1665944009858; the quadratic cofactor has discriminant -454141471796709729177600, not a square;
+   the same a, b as rank_fisher_theta4.txt)
+G = (1834858894178, 4705752514364665920) (sigma_evidence.txt, moved by e), on the curve
+E(Q)_tors = Z/2 = {O, (0, 0)} (torsion_exact.py: 2-part of B attained)
+(1) reduction bound    B = gcd #E~(F_p) over 161 good odd primes p < 1000 = 2; k G != O for every k <= B: G of infinite order
+(2) orders modulo p    order of G~ in E~(F_p) for p = 11, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59: 10, 8, 6, 28, 6, 34, 22, 6, 52, 58, 6, 6 (not all equal): G of infinite order
+(3) Nagell-Lutz        3 G has x = 2460449975530023264078722/2016607325329 (denominator 2016607325329 != 1: not integral): G of infinite order
+
+RESULT: G has infinite order (each of (1), (2), (3) suffices).  With rank E(Q) <= 1 from rank_fisher_theta4.txt
+(Theta_4(y0, y1) != 0, Fisher Lemma 2.2), rank E+(72,65)(Q) = 1.

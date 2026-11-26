@@ -1,0 +1,15 @@
+== E1 of (8249,3720), d = -108415202
+E1 of (8249,3720), d = -108415202:  y^2 = x(x^2 + a x + b),  a = 637148337598427327611204,  b = 398335498716739689878574060448482164403451996804
+  rank_indep.rank_bound: exact bound 5; E side: Selmer 8, known 2, open cosets 3; E' side: Selmer 64, known 4, open cosets 3
+  E' side classes certified locally soluble at every bad prime: [113, 2991753233, 338068115329] of [113, 2991753233, 338068115329]
+    <113, lift of C_13278577> = +1  (lifts used: lam = [-7, 7])
+    <113, lift of C_755496193> = +1  (lifts used: lam = [-6, 6])
+    <113, lift of C_3378195882300241> = +1  (lifts used: lam = [-2, 2])
+    <2991753233, lift of C_13278577> = -1  (lifts used: lam = [-7, 7])
+    <2991753233, lift of C_755496193> = +1  (lifts used: lam = [-6, 6])
+    <2991753233, lift of C_3378195882300241> = -1  (lifts used: lam = [-2, 2])
+    <338068115329, lift of C_13278577> = -1  (lifts used: lam = [-7, 7])
+    <338068115329, lift of C_755496193> = +1  (lifts used: lam = [-6, 6])
+    <338068115329, lift of C_3378195882300241> = -1  (lifts used: lam = [-2, 2])
+  => rank of the pairing matrix 1: rank <= 3
+  result: {'name': 'E1 of (8249,3720), d = -108415202', 'bound': 5, 'rho': 1, 'new': 3}

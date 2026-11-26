@@ -12,7 +12,8 @@ The conic points are found by the method of rank_fisher5_find.py (PARI reduction
 descent of rank_fisher5_legendre.py in Z[sqrt -2], Z[sqrt 2]): FINDERS, not certifying; rank_fisher5.analyse re-checks
 each point exactly (on the cone, tangency along the ruling, f rational, q and c by exact linear algebra), and
 rank_fisher_theta4 does the rest exactly.  A stored hints file is used when present (re-checked the same way).
-Written by an AI model (Claude); not read by a person; not reviewed.  Experiment, not counted.
+Written by an AI model (Claude); not read by a person.  Reviewed by a separate AI agent on 26 November 2026: holds
+with gaps (LEDGER.md, tier C).  Not counted in the census.
 """
 import os, sys, json, time, subprocess
 here = os.path.dirname(os.path.abspath(__file__))

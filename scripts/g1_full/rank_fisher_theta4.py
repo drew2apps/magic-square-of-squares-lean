@@ -7,7 +7,8 @@ point", arXiv:1509.03234 (Sect. 2: Thm 2.1, Lemma 2.2; Sect. 3: the pairing form
     python3 rank_fisher_theta4.py --negative   altered inputs that must be refused
     (add --write to rewrite rank_fisher_theta4.txt / rank_fisher_theta4_negative.txt)
 
-Written by an AI model (Claude); not read by a person; not reviewed.  Experiment, not counted.
+Written by an AI model (Claude); not read by a person.  Reviewed by a separate AI agent on 26 November 2026: holds
+with gaps (LEDGER.md, tier C).  Not counted in the census.
 
 NOTATION.  E: y^2 = x(x^2 + a x + b), T = (0,0), phi: E -> E' with kernel <T>; E': Y^2 = X(X^2 - 2aX + a^2 - 4b),
 T' = (0,0) = generator of ker(phihat).  S_1 = S^(phi)(E/Q) (rank_indep's "E' side"), S'_1 = S^(phihat)(E'/Q)
