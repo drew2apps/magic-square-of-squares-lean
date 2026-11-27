@@ -1,0 +1,38 @@
+# ct_mine.py self-test (review z7; written by an AI model): Sel^2 and Cassels-Tate pairing on y^2 = x^3 - n^2 x
+# reference: PARI 2.17.4 ellrank [r,R,s] recorded at review time (not computed here); s must equal the pairing rank, R the bound
+n = 17 (PARI [0, 0, 2]): dim Sel^2 = 4, pairing rank 2, rank <= 0
+    +1 -1 -1 -1
+    -1 +1 +1 -1
+    -1 +1 +1 -1
+    -1 -1 -1 +1
+n = 73 (PARI [0, 0, 2]): dim Sel^2 = 4, pairing rank 2, rank <= 0
+    +1 -1 -1 -1
+    -1 +1 +1 -1
+    -1 +1 +1 -1
+    -1 -1 -1 +1
+n = 205 (PARI [1, 1, 2]): dim Sel^2 = 5, pairing rank 2, rank <= 1
+    +1 -1 -1 +1 -1
+    -1 +1 -1 +1 -1
+    -1 -1 +1 +1 +1
+    +1 +1 +1 +1 +1
+    -1 -1 +1 +1 +1
+n = 34 (PARI [2, 2, 0]): dim Sel^2 = 4, pairing rank 0, rank <= 2
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+n = 41 (PARI [2, 2, 0]): dim Sel^2 = 4, pairing rank 0, rank <= 2
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+n = 113 (PARI [0, 2, 0]): dim Sel^2 = 4, pairing rank 0, rank <= 2
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+n = 5 (PARI [1, 1, 0]): dim Sel^2 = 3, pairing rank 0, rank <= 1
+    +1 +1 +1
+    +1 +1 +1
+    +1 +1 +1
+# all agree

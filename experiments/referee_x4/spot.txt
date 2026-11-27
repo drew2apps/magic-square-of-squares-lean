@@ -24,7 +24,7 @@ DM                  (4079, 721) Demjanenko-Manin ok=True | experiments/census200
 repo route          (2107, 276) repository route ok=True | route_wide_summary.txt: closed by the route (route_wide.txt): 12: 1064,423 1332,1045 1395,532 1785,688 2015,1632 2107,276 21
 repo route          (2331, 1300) repository route ok=True | route_wide_summary.txt: closed by the route (route_wide.txt): 12: 1064,423 1332,1045 1395,532 1785,688 2015,1632 2107,276 21
 spot-checked 25 rows; all close: True
-special (3321, 2440)   route     records ['out_3321_2440_10150882.json', 'out_3321_2440_-10150882.json'] closed [True, True] rank upper (isogeny class) [1, 1]; fibre t degenerate only -> True
+special (3321, 2440)   route     records ['out_3321_2440_-10150882.json', 'out_3321_2440_10150882.json'] closed [True, True] rank upper (isogeny class) [1, 1]; fibre t degenerate only -> True
 special (5073, 2336)   route     records ['log_5073.txt'] closed [True] rank upper (isogeny class) [1]; fibre t degenerate only -> True
 special (6588, 805)    route     records ['log_6588.txt'] closed [True] rank upper (isogeny class) [1]; fibre t degenerate only -> True
 special (7811, 3060)   route     records ['log_7811.txt'] closed [True] rank upper (isogeny class) [1]; fibre t degenerate only -> True
@@ -34,7 +34,7 @@ special (3540, 2581)   cond      records ['out_3540_2581_-11740078.json'] closed
 special (4440, 2231)   cond      records ['out_4440_2231_-13342.json'] closed [False] rank upper (isogeny class) [3]; fibre t degenerate only -> True
 special (6480, 4961)   cond      records ['log_6480.txt'] closed [False] rank upper (isogeny class) [3]; fibre t degenerate only -> True
 special (8249, 3720)   cond      records ['log_8249.txt'] closed [False] rank upper (isogeny class) [3]; fibre t degenerate only -> True
-special (10512, 145)   cond      records ['log_10512_220962238.txt', 'log_10512_-220962238.txt'] closed [False, False] rank upper (isogeny class) [3, 3]; fibre t degenerate only -> True
+special (10512, 145)   cond      records ['log_10512_-220962238.txt', 'log_10512_220962238.txt'] closed [False, False] rank upper (isogeny class) [3, 3]; fibre t degenerate only -> True
 partner relations of the 12 SPECIAL partner rows: True
 special partner (2405, 1428) in route_wide_summary.txt: closed by the route on the twist, with -d (route_twist.txt):
 special partner (2331, 1300) in route_wide_summary.txt: closed by the route (route_wide.txt): 12: 1064,423 1332,1045

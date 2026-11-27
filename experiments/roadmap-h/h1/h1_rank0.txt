@@ -1,0 +1,145 @@
+H1: rank-0 quotients of C at the phantom ratios. Written by an AI model; not read by a person. Experiment, not counted.
+rank bounds: PARI ellrank (and isogenous curves), as in global.py; torsion and tuples exact
+
+(204724,97893): known [(2, 1, 106831, 302617), (2, 1, 605234, 213662)]; extra [(2, 1, 119521, 270487), (2, 1, 540974, 239042)]
+  y^2 = w*f0*f8: rank 1..1, torsion 16
+  y^2 = f0*K: rank 1..3, torsion 2
+  y^2 = f8*K: rank 0..4, torsion 2
+  y^2 = w*K: rank 1..1, torsion 4
+  y^2 = w*f0*K: rank 0..4, torsion 2
+  y^2 = w*f8*K: rank 1..3, torsion 2
+  => no rank-0 curve among the six
+
+(561607,264401): known [(528802, 1123214, 1, 2), (561607, 264401, 1, 2)]; extra [(528802, 1123214, 1, 34210498), (528802, 1123214, 17105249, 2), (561607, 264401, 1, 34210498), (561607, 264401, 17105249, 2)]
+  y^2 = w*f0*f8: rank 0..0, torsion 8; t over its torsion points: [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), None]; their tuples on C: [(528802, 1123214, 1, 2), (561607, 264401, 1, 2)]
+  y^2 = f0*K: rank 1..1, torsion 2
+  y^2 = f8*K: rank 0..2, torsion 2
+  y^2 = w*K: rank 1..3, torsion 4
+  y^2 = w*f0*K: rank 0..2, torsion 2
+  y^2 = w*f8*K: rank 1..1, torsion 2
+  => y^2 = w*f0*f8 has rank 0 (PARI): every point of C is over its torsion points; extra tuples that are no tuple of those: 4 of 4
+
+(756492,255635): known [(2, 1, 500857, 1012127), (2, 1, 2024254, 1001714)]; extra [(2, 1, 2113, 239910503), (2, 1, 479821006, 4226)]
+  y^2 = w*f0*f8: rank 1..1, torsion 16
+  y^2 = f0*K: rank 1..3, torsion 2
+  y^2 = f8*K: rank 0..2, torsion 2
+  y^2 = w*K: rank 1..1, torsion 4
+  y^2 = w*f0*K: rank 0..2, torsion 2
+  y^2 = w*f8*K: rank 1..3, torsion 2
+  => no rank-0 curve among the six
+
+(1012127,500857): known [(1001714, 2024254, 1, 2), (1012127, 500857, 1, 2)]; extra [(4226, 479821006, 1, 2), (239910503, 2113, 1, 2)]
+  y^2 = w*f0*f8: rank 1..1, torsion 8
+  y^2 = f0*K: rank 0..4, torsion 2
+  y^2 = f8*K: rank 1..3, torsion 2
+  y^2 = w*K: rank 1..5, torsion 4
+  y^2 = w*f0*K: rank 1..3, torsion 2
+  y^2 = w*f8*K: rank 0..4, torsion 2
+  => no rank-0 curve among the six
+
+(1109503,597671): known [(1109503, 597671, 2, 1), (1195342, 2219006, 2, 1)]; extra [(1109503, 597671, 2, 959), (1109503, 597671, 1918, 1), (1195342, 2219006, 2, 959), (1195342, 2219006, 1918, 1)]
+  y^2 = w*f0*f8: rank 0..0, torsion 8; t over its torsion points: [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), None]; their tuples on C: [(1109503, 597671, 2, 1), (1195342, 2219006, 2, 1)]
+  y^2 = f0*K: rank 0..2, torsion 2
+  y^2 = f8*K: rank 0..2, torsion 2
+  y^2 = w*K: rank 1..3, torsion 4
+  y^2 = w*f0*K: rank 0..2, torsion 2
+  y^2 = w*f8*K: rank 0..2, torsion 2
+  => y^2 = w*f0*f8 has rank 0 (PARI): every point of C is over its torsion points; extra tuples that are no tuple of those: 4 of 4
+
+(1992873,999664): known [(1, 2, 993209, 2992537), (1, 2, 5985074, 1986418)]; extra [(1, 2, 322, 36921921506), (1, 2, 18460960753, 161)]
+  y^2 = w*f0*f8: rank 0..0, torsion 16; t over its torsion points: [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), None]; their tuples on C: [(1, 2, 993209, 2992537), (1, 2, 5985074, 1986418)]
+  y^2 = f0*K: rank 2..2, torsion 2
+  y^2 = f8*K: rank 1..3, torsion 2
+  y^2 = w*K: rank 1..1, torsion 4
+  y^2 = w*f0*K: rank 1..3, torsion 2
+  y^2 = w*f8*K: rank 2..2, torsion 2
+  => y^2 = w*f0*f8 has rank 0 (PARI): every point of C is over its torsion points; extra tuples that are no tuple of those: 2 of 2
+
+(11875080,6497849): known [(2, 1, 5377231, 18372929), (2, 1, 36745858, 10754462)]; extra [(2, 1, 1, 98795483379599), (2, 1, 197590966759198, 2)]
+  y^2 = w*f0*f8: rank 1..1, torsion 16
+  y^2 = f0*K: rank 3..3, torsion 2
+  y^2 = f8*K: rank 0..4, torsion 2
+  y^2 = w*K: rank 1..1, torsion 4
+  y^2 = w*f0*K: rank 0..4, torsion 2
+  y^2 = w*f8*K: rank 1..3, torsion 2
+  => no rank-0 curve among the six
+
+(36090673,28702177): known [(36090673, 28702177, 2, 1), (57404354, 72181346, 2, 1)]; extra [(2, 2071761768990242, 2, 1), (1035880884495121, 1, 2, 1)]
+  y^2 = w*f0*f8: rank 0..2, torsion 8
+  y^2 = f0*K: rank 1..1, torsion 2
+  y^2 = f8*K: rank 1..1, torsion 2
+  y^2 = w*K: rank 1..5, torsion 4
+  y^2 = w*f0*K: rank 1..1, torsion 2
+  y^2 = w*f8*K: rank 1..1, torsion 2
+  => no rank-0 curve among the six
+
+(175775580,15972419): known [(2, 1, 3261289, 191747999), (2, 1, 383495998, 6522578)]; extra [(34, 4247, 206, 12142633784674), (34, 4247, 6071316892337, 103), (8494, 17, 206, 12142633784674), (8494, 17, 6071316892337, 103)]
+  y^2 = w*f0*f8: rank 0..0, torsion 16; t over its torsion points: [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), None]; their tuples on C: [(2, 1, 3261289, 191747999), (2, 1, 383495998, 6522578)]
+  y^2 = f0*K: rank 1..3, torsion 2
+  y^2 = f8*K: rank 0..2, torsion 2
+  y^2 = w*K: rank 1..3, torsion 4
+  y^2 = w*f0*K: rank 0..2, torsion 2
+  y^2 = w*f8*K: rank 1..3, torsion 2
+  => y^2 = w*f0*f8 has rank 0 (PARI): every point of C is over its torsion points; extra tuples that are no tuple of those: 4 of 4
+
+(189089400,156063271): known [(2, 1, 33026129, 345152671), (2, 1, 690305342, 66052258)]; extra [(2, 1, 1346, 33875354047966), (2, 1, 16937677023983, 673)]
+  y^2 = w*f0*f8: rank 1..3, torsion 16
+  y^2 = f0*K: rank 1..5, torsion 2
+  y^2 = f8*K: rank 1..3, torsion 2
+  y^2 = w*K: rank 0..0, torsion 4; t over its torsion points: [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), None]; their tuples on C: [(2, 1, 33026129, 345152671), (2, 1, 690305342, 66052258)]
+  y^2 = w*f0*K: rank 1..3, torsion 2
+  y^2 = w*f8*K: rank 1..5, torsion 2
+  => y^2 = w*K has rank 0 (PARI): every point of C is over its torsion points; extra tuples that are no tuple of those: 2 of 2
+
+(191747999,159803161): known [(6522578, 383495998, 1, 2), (191747999, 3261289, 1, 2)]; extra [(103, 6071316892337, 17, 8494), (103, 6071316892337, 4247, 34), (12142633784674, 206, 17, 8494), (12142633784674, 206, 4247, 34)]
+  y^2 = w*f0*f8: rank 1..3, torsion 8
+  y^2 = f0*K: rank 1..3, torsion 2
+  y^2 = f8*K: rank 1..3, torsion 2
+  y^2 = w*K: rank 0..0, torsion 4; t over its torsion points: [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), None]; their tuples on C: [(6522578, 383495998, 1, 2), (191747999, 3261289, 1, 2)]
+  y^2 = w*f0*K: rank 1..3, torsion 2
+  y^2 = w*f8*K: rank 1..3, torsion 2
+  => y^2 = w*K has rank 0 (PARI): every point of C is over its torsion points; extra tuples that are no tuple of those: 4 of 4
+
+(231641256,72371617): known [(2, 1, 159269639, 304012873), (2, 1, 608025746, 318539278)]; extra [(2, 1, 1, 48420020534062847), (2, 1, 96840041068125694, 2)]
+  y^2 = w*f0*f8: rank 1..1, torsion 16
+  y^2 = f0*K: rank 1..3, torsion 2
+  y^2 = f8*K: rank 1..3, torsion 2
+  y^2 = w*K: rank 0..0, torsion 4; t over its torsion points: [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), None]; their tuples on C: [(2, 1, 159269639, 304012873), (2, 1, 608025746, 318539278)]
+  y^2 = w*f0*K: rank 1..3, torsion 2
+  y^2 = w*f8*K: rank 1..3, torsion 2
+  => y^2 = w*K has rank 0 (PARI): every point of C is over its torsion points; extra tuples that are no tuple of those: 2 of 2
+
+(349960367,118678903): known [(237357806, 699920734, 2, 1), (349960367, 118678903, 2, 1)]; extra [(1, 41532912449037401, 2, 1), (83065824898074802, 2, 2, 1)]
+  y^2 = w*f0*f8: rank 0..0, torsion 8; t over its torsion points: [Fraction(-1, 1), Fraction(0, 1), Fraction(1, 1), None]; their tuples on C: [(237357806, 699920734, 2, 1), (349960367, 118678903, 2, 1)]
+  y^2 = f0*K: rank 0..2, torsion 2
+  y^2 = f8*K: rank 0..2, torsion 2
+  y^2 = w*K: rank 1..5, torsion 4
+  y^2 = w*f0*K: rank 0..2, torsion 2
+  y^2 = w*f8*K: rank 0..2, torsion 2
+  => y^2 = w*f0*f8 has rank 0 (PARI): every point of C is over its torsion points; extra tuples that are no tuple of those: 2 of 2
+
+(518804652,31743595): known [(2, 1, 487061057, 550548247), (2, 1, 1101096494, 974122114)]; extra [(2, 1, 226696337, 1182862567), (2, 1, 2365725134, 453392674)]
+  y^2 = w*f0*f8: rank 1..1, torsion 16
+  y^2 = f0*K: rank 0..2, torsion 2
+  y^2 = f8*K: rank 1..3, torsion 2
+  y^2 = w*K: rank 1..3, torsion 4
+  y^2 = w*f0*K: rank 1..3, torsion 2
+  y^2 = w*f8*K: rank 0..2, torsion 2
+  => no rank-0 curve among the six
+
+SUMMARY:
+  (204724, 97893): not excluded here
+  (561607, 264401): all extra tuples excluded by y^2 = w*f0*f8 (rank 0 by PARI)
+  (756492, 255635): not excluded here
+  (1012127, 500857): not excluded here
+  (1109503, 597671): all extra tuples excluded by y^2 = w*f0*f8 (rank 0 by PARI)
+  (1992873, 999664): all extra tuples excluded by y^2 = w*f0*f8 (rank 0 by PARI)
+  (11875080, 6497849): not excluded here
+  (36090673, 28702177): not excluded here
+  (175775580, 15972419): all extra tuples excluded by y^2 = w*f0*f8 (rank 0 by PARI)
+  (189089400, 156063271): all extra tuples excluded by y^2 = w*K (rank 0 by PARI)
+  (191747999, 159803161): all extra tuples excluded by y^2 = w*K (rank 0 by PARI)
+  (231641256, 72371617): all extra tuples excluded by y^2 = w*K (rank 0 by PARI)
+  (349960367, 118678903): all extra tuples excluded by y^2 = w*f0*f8 (rank 0 by PARI)
+  (518804652, 31743595): not excluded here
+phantom ratios: 14; all extras excluded by a rank-0 quotient: 8

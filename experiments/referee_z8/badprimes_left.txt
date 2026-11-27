@@ -1,0 +1,130 @@
+z8: the bad primes above 20,000 that H1's scan left out, tested with G1's exact_local. Written by an AI model; not read by a person.
+(204724,97893): 2 such primes
+  106690256768835590869 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  1355921409194521419097 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(302617,106831): 2 such primes
+  106690256768835590869 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  1355921409194521419097 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(413004,148603): 3 such primes
+  186272761 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  297105616124113 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  18889334553741291095257 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(561607,264401): 3 such primes
+  186272761 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  297105616124113 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  18889334553741291095257 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(756492,255635): 4 such primes
+  798517 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  27415837 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  301114707132181 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  16192672727344871509597 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(853587,255916): 4 such primes
+  3202453 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  6968344381 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  3763052404561 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  1192437057240229 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(1012127,500857): 4 such primes
+  798517 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  27415837 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  301114707132181 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  16192672727344871509597 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(1109503,597671): 4 such primes
+  3202453 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  6968344381 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  3763052404561 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  1192437057240229 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(1992873,999664): 5 such primes
+  25609 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  3448537 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  332211589 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  35155827253 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  2979344315273089 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(2992537,993209): 5 such primes
+  25609 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  3448537 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  332211589 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  35155827253 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  2979344315273089 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(11875080,6497849): 4 such primes
+  5462461 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  45257869 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  798775110477654781 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  1078781397091130496469 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(18372929,5377231): 4 such primes
+  5462461 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  45257869 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  798775110477654781 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  1078781397091130496469 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(32396425,3694248): 7 such primes
+  122029 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  218077 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  394501 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  32606377 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  42526211953 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  162677733349 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  148619132854261 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+(36090673,28702177): 7 such primes
+  122029 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  218077 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  394501 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  32606377 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  42526211953 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  162677733349 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  148619132854261 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+(175775580,15972419): 5 such primes
+  189989 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  10057297 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 4 of 4 extra tuples
+  15534866530669 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 4 of 4 extra tuples
+  3953388125944997713 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 4 of 4 extra tuples
+  113600710762407899526169273 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 4 of 4 extra tuples
+(189089400,156063271): 4 such primes
+  245174521 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  1482800832973 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  895171326686943193 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  2940507432898774646565595406039281 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(191747999,159803161): 5 such primes
+  189989 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  10057297 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 4 of 4 extra tuples
+  15534866530669 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 4 of 4 extra tuples
+  3953388125944997713 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 4 of 4 extra tuples
+  113600710762407899526169273 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 4 of 4 extra tuples
+(231641256,72371617): 4 such primes
+  2855101 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  4280327969163277 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  7039373598787501 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  1845208126555427292358624624569937 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(234319635,115640732): 5 such primes
+  26317 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  130873 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  21062406847889269 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  114475219027652869 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  22233683444089486981 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(304012873,159269639): 4 such primes
+  2855101 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  4280327969163277 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  7039373598787501 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  1845208126555427292358624624569937 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(345152671,33026129): 4 such primes
+  245174521 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  1482800832973 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  895171326686943193 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  2940507432898774646565595406039281 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(349960367,118678903): 5 such primes
+  26317 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  130873 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  21062406847889269 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  114475219027652869 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  22233683444089486981 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(518804652,31743595): 5 such primes
+  47857 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  39378457 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  1650997632721 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  38859794425882715723401 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  2077832126250200172594887473 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+(550548247,487061057): 5 such primes
+  47857 (m^2+n^2, p mod 4 = 1): 4 allowed label tuples, keeps every extra tuple
+  39378457 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+  1650997632721 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  38859794425882715723401 (octic, p mod 4 = 1): 2 allowed label tuples, cuts 2 of 2 extra tuples
+  2077832126250200172594887473 (octic, p mod 4 = 1): 2 allowed label tuples, keeps every extra tuple
+ratios whose every extra tuple is cut at one of these primes: 10 [(11875080, 6497849), (18372929, 5377231), (32396425, 3694248), (36090673, 28702177), (175775580, 15972419), (191747999, 159803161), (234319635, 115640732), (349960367, 118678903), (518804652, 31743595), (550548247, 487061057)]

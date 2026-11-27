@@ -1,0 +1,16 @@
+z8: my local test against H3 h3_weil.json (every good residue). Written by an AI model; not read by a person.
+p = 17: 12 good residues, 12 lose a vector, 0 disagree with h3_weil.json
+p = 29: 24 good residues, 24 lose a vector, 0 disagree with h3_weil.json
+p = 37: 24 good residues, 24 lose a vector, 0 disagree with h3_weil.json
+p = 41: 36 good residues, 36 lose a vector, 0 disagree with h3_weil.json
+p = 53: 48 good residues, 48 lose a vector, 0 disagree with h3_weil.json
+p = 61: 48 good residues, 48 lose a vector, 0 disagree with h3_weil.json
+p = 97: 84 good residues, 84 lose a vector, 0 disagree with h3_weil.json
+p = 101: 96 good residues, 96 lose a vector, 0 disagree with h3_weil.json
+p = 137: 132 good residues, 124 lose a vector, 0 disagree with h3_weil.json
+p = 181: 168 good residues, 152 lose a vector, 0 disagree with h3_weil.json
+p = 229: 216 good residues, 192 lose a vector, 0 disagree with h3_weil.json
+p = 409: 396 good residues, 292 lose a vector, 0 disagree with h3_weil.json
+p = 617: 612 good residues, 356 lose a vector, 0 disagree with h3_weil.json
+p = 1069: 1056 good residues, 176 lose a vector, 0 disagree with h3_weil.json
+p = 1153: 1140 good residues, 204 lose a vector, 0 disagree with h3_weil.json

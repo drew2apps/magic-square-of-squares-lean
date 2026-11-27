@@ -1,0 +1,13 @@
+# rank0_ct.py --negative: forged inputs refused; controls of known rank
+refused, x0 + 1: x0 is not a root
+refused, A + 2: the shift does not give (A, B)
+refused, (223,167) with x0 = -462297360, whose isogenous curve has no full 2-torsion: B is not a square: no full 2-torsion on the isogenous curve
+refused, a forged E' (e3 + 2): point counts differ
+without the pairing, E' of (609,200): dim Sel^2 = 6, rank <= 4 (2-descent alone does not decide, as SECOND_DESCENT_CHAIN.md says)
+congruent-number curve n = 5 (rank 1): roots [-5, 0, 5]; dim Sel^2 = 3, pairing of rank 0, rank <= 1
+congruent-number curve n = 6 (rank 1): roots [-6, 0, 6]; dim Sel^2 = 3, pairing of rank 0, rank <= 1
+congruent-number curve n = 7 (rank 1): roots [-7, 0, 7]; dim Sel^2 = 3, pairing of rank 0, rank <= 1
+congruent-number curve n = 1 (rank 0): roots [-1, 0, 1]; dim Sel^2 = 2, pairing of rank 0, rank <= 0
+congruent-number curve n = 2 (rank 0): roots [-2, 0, 2]; dim Sel^2 = 2, pairing of rank 0, rank <= 0
+congruent-number curve n = 3 (rank 0): roots [-3, 0, 3]; dim Sel^2 = 2, pairing of rank 0, rank <= 0
+# end

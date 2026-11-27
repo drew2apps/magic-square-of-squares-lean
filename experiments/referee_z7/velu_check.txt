@@ -1,0 +1,7 @@
+# velu_check.py (review z7; written by an AI model)
+(1) Velu residual: 0
+(2) c0 = 2*(m**2 + n**2)**3, c3 = 2*(m**2 + n**2)**3; cubic at x = -c3: 0
+    shifted: a = -32*m**2*n**2*(m**2 + n**2), b = 64*m**2*n**2*(m**2 + n**2)**4
+    16 b - (32 m n S^2)^2 = 0, so 16 b is a square
+    E' quadratic minus (X - 16Smn(m-n)^2)(X + 16Smn(m+n)^2): 0
+# end

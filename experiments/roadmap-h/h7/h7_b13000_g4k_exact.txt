@@ -1,0 +1,16 @@
+(13348,3795) C: y^2 = x^3 + c2 x^2 + c1 c3 x + c0 c3^2 (x = c3 s)
+  torsion Z/2 (no odd part by point counts at 66 good primes; one rational root; T not in 2C(Q)); hhat(G) in [9.732920, 9.748166] (exact rational enclosure)
+  saturation of G at every prime <= 199 (exact)
+  minimal model [0, 0, 0, 15010003569811445164710594324900, 30683109072066497895574295001249169010574960000] (from the hint, checked: integral, minimal at each of 13 bad primes)
+  m = 24, height search to 39: no point of infinite order of small height, 2-torsion x []
+  so every point of infinite order has hhat >= hi/210^2; IF rank C(Q) = 1, G generates C(Q) modulo torsion
+  Demjanenko-Manin: B + U + 2 log|c3| <= 365.634, so a <= 19; 39 candidate x, 3 values of t; not "no": {'1': 'degenerate', '-1': 'degenerate'}; closed
+  conclusion: IF rank C(Q) = 1, every solution t of (13348,3795) is degenerate
+(13899,1180) C: y^2 = x^3 + c2 x^2 + c1 c3 x + c0 c3^2 (x = c3 s)
+  torsion Z/2 (no odd part by point counts at 65 good primes; one rational root; T not in 2C(Q)); hhat(G) in [9.608690, 9.623889] (exact rational enclosure)
+  saturation of G at every prime <= 199 (exact)
+  minimal model [0, 0, 0, 2449440312846779378443005008100, 445011495818364292970201967077886224526960000] (from the hint, checked: integral, minimal at each of 14 bad primes)
+  m = 24, height search to 50: no point of infinite order of small height, 2-torsion x []
+  so every point of infinite order has hhat >= hi/210^2; IF rank C(Q) = 1, G generates C(Q) modulo torsion
+  Demjanenko-Manin: B + U + 2 log|c3| <= 364.921, so a <= 19; 39 candidate x, 3 values of t; not "no": {'1': 'degenerate', '-1': 'degenerate'}; closed
+  conclusion: IF rank C(Q) = 1, every solution t of (13899,1180) is degenerate

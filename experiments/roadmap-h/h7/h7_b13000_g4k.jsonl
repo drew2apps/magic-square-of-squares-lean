@@ -1,0 +1,2 @@
+{"pair": [13348, 3795], "curve": "g4*K", "rank": [1, 1], "hG": 9.74, "B": 129.141, "amax": 41, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 83, "nt": 2, "t": {"1": "degenerate", "-1": "degenerate"}, "status": "closed", "rootno": -1}
+{"pair": [13899, 1180], "curve": "g4*K", "rank": [2, 2], "status": "rank not 1", "rootno": 1}

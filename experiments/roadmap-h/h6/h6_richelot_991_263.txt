@@ -1,0 +1,34 @@
+H6: Richelot descent on the genus-2 pieces of (991,263) (h6_split). Written by an AI model; not read by a person. Experiment, not counted.
+For each piece: the groupings of its factors, the Selmer dimensions and the rank bound; the multiplicity of the piece in Jac(cover).
+F0*F4*L        -              best bound: 8
+    grouping [2, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 4, dim Sel(phi side) 8; dim delta(T) 1, dim delta-dual(T-dual) 2; rank J(Q) <= 8; 5 global point differences checked in Sel
+F0*F4*U        -              best bound: 8
+    grouping [2, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 4, dim Sel(phi side) 8; dim delta(T) 1, dim delta-dual(T-dual) 2; rank J(Q) <= 8; 5 global point differences checked in Sel
+F8*F4*L        -              best bound: 8
+    grouping [2, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 4, dim Sel(phi side) 8; dim delta(T) 1, dim delta-dual(T-dual) 2; rank J(Q) <= 8; 6 global point differences checked in Sel
+F8*F4*U        -              best bound: 8
+    grouping [2, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 4, dim Sel(phi side) 8; dim delta(T) 1, dim delta-dual(T-dual) 2; rank J(Q) <= 8; 6 global point differences checked in Sel
+F0*F8*F4*L     x<->z:wP       best bound: 6
+    grouping [1, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 5, dim Sel(phi side) 5; dim delta(T) 1, dim delta-dual(T-dual) 1; rank J(Q) <= 7; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 4, dim Sel(phi side) 6; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 6; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 7, dim Sel(phi side) 5; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 8; 1 global point differences checked in Sel
+F0*F8*F4*U     x<->z:wP       best bound: 6
+    grouping [1, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 5, dim Sel(phi side) 5; dim delta(T) 1, dim delta-dual(T-dual) 1; rank J(Q) <= 7; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 7, dim Sel(phi side) 5; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 8; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 4, dim Sel(phi side) 6; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 6; 1 global point differences checked in Sel
+F0*F4*L*U      x->-x:wP       best bound: 9
+    grouping [1, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 4, dim Sel(phi side) 8; dim delta(T) 1, dim delta-dual(T-dual) 1; rank J(Q) <= 9; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 9, dim Sel(phi side) 5; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 10; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 11, dim Sel(phi side) 5; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 12; 1 global point differences checked in Sel
+F8*F4*L*U      x->-x:wP       best bound: 9
+    grouping [1, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 4, dim Sel(phi side) 8; dim delta(T) 1, dim delta-dual(T-dual) 1; rank J(Q) <= 9; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 11, dim Sel(phi side) 5; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 12; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 9, dim Sel(phi side) 5; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 10 (quadratic points used); 1 global point differences checked in Sel
+F0*F8*F4*L*U   x->-x:P        best bound: 9
+    grouping [1, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 8, dim Sel(phi side) 4; dim delta(T) 1, dim delta-dual(T-dual) 1; rank J(Q) <= 9; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 14, dim Sel(phi side) 2; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 12; 1 global point differences checked in Sel
+    grouping [2, 1, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 12, dim Sel(phi side) 2; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 10; 1 global point differences checked in Sel
+F0*F8*F4*L*U   x->-x:wP       best bound: 9
+    grouping [2, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 8, dim Sel(phi side) 4; dim delta(T) 1, dim delta-dual(T-dual) 1; rank J(Q) <= 9; 1 global point differences checked in Sel
+    grouping [2, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 14, dim Sel(phi side) 2; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 12; 0 global point differences checked in Sel
+    grouping [2, 2, 2]: S = [2, 3, 5, 7, 11, 13, 19, 29, 37, 181, 263, 991, 23490241, 395249137273]; dim Sel(phi-hat side) 12, dim Sel(phi side) 2; dim delta(T) 2, dim delta-dual(T-dual) 1; rank J(Q) <= 10; 0 global point differences checked in Sel

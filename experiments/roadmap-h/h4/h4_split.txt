@@ -1,0 +1,6 @@
+H4: G2 kill sets for the three ratios of G1 that ran out of memory at 8 GB (split by d0).
+Written by an AI model; not read by a person. Experiment, not counted.
+m,n  log2|space|  bad-alone: EMPTY | k left  kill: p:tag ...   (tag b = bad, g = good)
+88373348,70002375  32  bad-alone: EMPTY  kill: 2:b 13:b 1777:b
+120756965,14608109  34  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+711343101,552021980  36  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 53:b

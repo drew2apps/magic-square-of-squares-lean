@@ -1,0 +1,5 @@
+H3 (part 3): the allowed sets at the good primes 17 <= p <= 1153, p = 1 mod 4. Written by an AI model; not read by a person. Experiment, not counted.
+every set is closed under adding (1,1,1,1): yes
+sets by size: 0: 36, 2: 112, 4: 192, 6: 524, 8: 900, 10: 2100, 12: 3568, 14: 9792, 16: 32540
+affine subspaces of F_2^4: 33780 of 49764 (so the good-prime test is not linear over F_2)
+largest prime with a set of at most s vectors: 0: 137, 2: 313, 4: 401, 6: 457, 8: 617, 10: 1069, 12: 1153, 14: 1153

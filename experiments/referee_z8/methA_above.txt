@@ -1,0 +1,13 @@
+z8: losses above 1153 recomputed with the bundle's method A. Written by an AI model; not read by a person.
+p = 1181, r = 5: my test 14 vectors, method A 14 vectors, equal; missing [5, 10]
+p = 1181, r = 14: my test 14 vectors, method A 14 vectors, equal; missing [5, 10]
+p = 1181, r = 17: my test 12 vectors, method A 12 vectors, equal; missing [4, 7, 8, 11]
+p = 1181, r = 23: my test 14 vectors, method A 14 vectors, equal; missing [6, 9]
+p = 1201, r = 39: my test 14 vectors, method A 14 vectors, equal; missing [3, 12]
+p = 1201, r = 61: my test 14 vectors, method A 14 vectors, equal; missing [3, 12]
+p = 1201, r = 82: my test 14 vectors, method A 14 vectors, equal; missing [3, 12]
+p = 1201, r = 154: my test 14 vectors, method A 14 vectors, equal; missing [3, 12]
+p = 1249, r = 28: my test 14 vectors, method A 14 vectors, equal; missing [0, 15]
+p = 1249, r = 44: my test 14 vectors, method A 14 vectors, equal; missing [0, 15]
+p = 1249, r = 143: my test 14 vectors, method A 14 vectors, equal; missing [0, 15]
+p = 1249, r = 212: my test 14 vectors, method A 14 vectors, equal; missing [0, 15]

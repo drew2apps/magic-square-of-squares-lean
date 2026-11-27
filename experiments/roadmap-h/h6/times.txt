@@ -1,0 +1,28 @@
+h6_ranks --negative 1 s
+h6_ranks --negative 0 s
+h6_ranks --negative 1 s
+h6_ranks --negative 1 s
+h6_split 627 364 exit=0 1 s
+h6_ranks 627 364 exit=0 165 s
+h6_split 991 263 exit=0 1 s
+h6_ranks 991 263 exit=0 192 s
+h6_richelot --controls 20 s
+h6_richelot --negative 3 s
+h6_richelot 627 364 exit=143 1553 s
+h6_richelot 991 263 exit=143 1553 s
+h6_richelot --negative (after the sampling fix) 4 s
+h6_richelot --controls (after the sampling fix) 43 s
+h6_richelot --controls (root-neighbourhood sampling) 56 s
+h6_richelot --negative (root-neighbourhood sampling) 6 s
+h6_richelot --controls (six sampling rounds) 71 s
+h6_richelot --negative (six sampling rounds) 7 s
+h6_richelot --controls (final sampler) 68 s
+h6_richelot --negative (final sampler) 7 s
+h6_richelot 627 364 exit=0 614 s
+h6_richelot 991 263 exit=0 661 s
+h6_richelot 991 263 exit=0 355 s
+h6_richelot 627 364 exit=0 356 s
+h6_richelot 991 263 exit=0 349 s
+h6_richelot 627 364 exit=0 351 s
+h6_richelot 991 263 exit=0 315 s
+h6_richelot 627 364 exit=0 317 s

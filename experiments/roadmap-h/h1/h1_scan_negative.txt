@@ -1,0 +1,4 @@
+(1298876,247707) with the known tuples withheld: 2 tuples listed (listed, as it must be)
+(1900421,472260) with the known tuples withheld: 2 tuples listed (listed, as it must be)
+(623461796,439041597) with the known tuples withheld: 2 tuples listed (listed, as it must be)
+positive control (1109503,597671) (G1): 4 extra tuples, good primes to 20000 (listed, as it must be)

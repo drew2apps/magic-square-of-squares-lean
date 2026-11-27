@@ -1,0 +1,3 @@
+z8: brute force over P^1(Z/p^2) at a good prime above 1153. Written by an AI model; not read by a person.
+ratio (5,1), p = 1181: vectors not allowed even mod p^2: [5, 10]
+ratio (17,1), p = 1181: vectors not allowed even mod p^2: [4, 7, 8, 11]

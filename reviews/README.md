@@ -3,7 +3,7 @@
 Written by AI models (Claude, made by Anthropic); **none of these is a reading by a person.** An outside review of
 commit `24d6ef6` asked whether the reviews that `CHANGES.md` and `LEDGER.md` mention ("reviewed by a separate AI
 agent") actually took place, since no report was committed. These are the reports, committed on 26 November 2026
-(UTC; run 6's on 27 November) as they were written, unedited.
+(UTC; runs 6 to 8's on 27 November) as they were written, unedited.
 
 How they were made: each piece of work was done by a build agent in its own git branch; a separate agent, which had not
 seen the work being produced, was then given the diff (not the build agent's summary) and asked to act as a hostile
@@ -47,6 +47,11 @@ the machines the agents ran on.
 | `review_y5.md` | run 6: `Θ₄` by the general module `rank_fisher_theta4_gen.py` on `E⁺` of (920,129), (760,39) and the `D1` curve of (631,71) |
 | `review_x6.md` | run 6: the Roadmap G bundle (`experiments/roadmap-g/`: `exact_local.py` and the stress test to `m = 10⁹`, the kill sets and test 6 of `COMPLETE.md` §7, the degenerate types for `11000 < m ≤ 13000`, the point search on the square-type fibres); its scripts are in `experiments/referee_x6/` |
 | `referee_run6.md` | the integrated diff of run 6 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`) |
+| `review_z7.md` | run 7: Fable's roadmap H, H7 (rank 1 for `g4·K` by a full-2-torsion isogenous curve; the `E04` bounds of tier B), and `scripts/second_descent/rank0_ct.py`; its scripts are in `experiments/referee_z7/` |
+| `review_z8.md` | run 7: roadmap H, H1 (phantoms) and H3 (local images at good primes); its scripts are in `experiments/referee_z8/` |
+| `review_z9.md` | run 7: roadmap H, H2 (survivor hunt), H4, H6 ((627,364), (991,263)) and G3's block `13000 < m ≤ 14000`; its scripts are in `experiments/referee_z9/` |
+| `referee_run7.md` | the integrated diff of run 7 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`) |
+| `review_z10.md` | run 8: `Θ₄` on `E⁺` of (945,248) (`rank_fisher_theta4_gen.py --side=E'`, the conic finder `rank_fisher_theta4_norm.py`) |
 
 Work that `CHANGES.md` marks "not reviewed" (for example the (627,364) scripts `kctp_*` of run 4) has no report here. A few earlier reviews, among them those of `ClassPadic.lean` and of `0b34613`, were not saved.
 The outside reviews that Drew obtained from other tools are not included.

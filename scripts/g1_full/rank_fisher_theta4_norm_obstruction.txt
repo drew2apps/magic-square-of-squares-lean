@@ -1,0 +1,6 @@
+rank_fisher_theta4_norm.py --obstruction: 945,248 E+, E' side, lam = -349: the level-3 twists xi = 1271 s, s in S_1 / S_2 (a sampler: finder points, sampled local classes of f0)
+  S_1 of this side (rank_indep): [1, -1, 14, -14, 17, -17, 238, -238, 97826, -97826, 342391, -342391, 1663042, -1663042, 5820647, -5820647]; S_2 = <-1, -5820647> (rank_fisher.txt); places: R and [2, 3, 5, 7, 11, 13, 17, 31, 41, 61, 97, 157, 349, 977, 1193, 245411, 1493911429, 100067394997] (B0 and 11)
+  xi = 1271 (s = 1): sign of f0 on C3'(R) 1; Ob(eta) = prod_v (f0(P_v), eta)_v: -1:+1 14:+1 17:-1 97826:-1 -5820647:+1 -> empty
+  xi = 17794 (s = 14): sign of f0 on C3'(R) -1; Ob(eta) = prod_v (f0(P_v), eta)_v: -1:+1 14:+1 17:+1 97826:+1 -5820647:+1 -> level-4 Selmer set non-empty
+  xi = 21607 (s = 17): sign of f0 on C3'(R) -1; Ob(eta) = prod_v (f0(P_v), eta)_v: -1:+1 14:-1 17:-1 97826:+1 -5820647:+1 -> empty
+  xi = 302498 (s = 238): sign of f0 on C3'(R) 1; Ob(eta) = prod_v (f0(P_v), eta)_v: -1:+1 14:-1 17:+1 97826:-1 -5820647:+1 -> empty

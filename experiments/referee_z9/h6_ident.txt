@@ -1,0 +1,14 @@
+Review z9: identities for H6 (generic m, n). Written by an AI model; not read by a person.
+h6_split.forms = (1, 1, 4, 4, 4) x the forms of G1_FULL_SYSTEM.md: True
+sigma: t -> -t fixes F0, F8, F4 and swaps L, U: True
+tau: t -> 1/t (times t^2) swaps F0, F8 and fixes F4, L, U: True
+F0F4L(-t) = F0F4U(t): True
+t^6 F0F4L(1/t) = F8F4L(t): True
+t^6 F0F4L(-1/t) = F8F4U(t): True
+partner (m + n, m - n), t' = (t + 1)/(t - 1): (t - 1)^2 F'(t') / F_k(t), constant in t:
+  F0 -> L times 1 (a square: True)
+  F8 -> U times 1 (a square: True)
+  F4 -> F4 times 4 (a square: True)
+  L -> F0 times 16 (a square: True)
+  U -> F8 times 16 (a square: True)
+627 + 364 = 991, 627 - 364 = 263, gcd(991, 263) = 1; 627^2 + 364^2 = {5: 4, 29: 2}, 991^2 + 263^2 = {2: 1, 5: 4, 29: 2}

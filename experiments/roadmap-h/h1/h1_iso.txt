@@ -1,0 +1,38 @@
+H1: the partner isomorphism, written down and checked. Written by an AI model; not read by a person. Experiment, not counted.
+(204724, 97893) <-> (302617, 106831)
+  (204724, 97893) -> (302617, 106831): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (302617, 106831) -> (204724, 97893): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(561607, 264401) <-> (413004, 148603)
+  (561607, 264401) -> (413004, 148603): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (413004, 148603) -> (561607, 264401): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(756492, 255635) <-> (1012127, 500857)
+  (756492, 255635) -> (1012127, 500857): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (1012127, 500857) -> (756492, 255635): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(1109503, 597671) <-> (853587, 255916)
+  (1109503, 597671) -> (853587, 255916): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (853587, 255916) -> (1109503, 597671): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(1992873, 999664) <-> (2992537, 993209)
+  (1992873, 999664) -> (2992537, 993209): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (2992537, 993209) -> (1992873, 999664): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(11875080, 6497849) <-> (18372929, 5377231)
+  (11875080, 6497849) -> (18372929, 5377231): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (18372929, 5377231) -> (11875080, 6497849): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(36090673, 28702177) <-> (32396425, 3694248)
+  (36090673, 28702177) -> (32396425, 3694248): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (32396425, 3694248) -> (36090673, 28702177): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(175775580, 15972419) <-> (191747999, 159803161)
+  (175775580, 15972419) -> (191747999, 159803161): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (191747999, 159803161) -> (175775580, 15972419): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(189089400, 156063271) <-> (345152671, 33026129)
+  (189089400, 156063271) -> (345152671, 33026129): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (345152671, 33026129) -> (189089400, 156063271): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(231641256, 72371617) <-> (304012873, 159269639)
+  (231641256, 72371617) -> (304012873, 159269639): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (304012873, 159269639) -> (231641256, 72371617): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(349960367, 118678903) <-> (234319635, 115640732)
+  (349960367, 118678903) -> (234319635, 115640732): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (234319635, 115640732) -> (349960367, 118678903): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+(518804652, 31743595) <-> (550548247, 487061057)
+  (518804652, 31743595) -> (550548247, 487061057): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (1, 1, 1, 1); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+  (550548247, 487061057) -> (518804652, 31743595): M = (-1, -1, -1, 1), s = (0 8 L U) -> (L U 0 8), classes of lam = (2, 2, 2, 2); known -> 4 tuples of the space, none extra: yes; consistency (known2 and extra2 reached): yes
+pairs: 12; the transfer holds in both directions: 12

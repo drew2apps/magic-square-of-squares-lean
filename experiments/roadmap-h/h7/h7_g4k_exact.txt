@@ -1,0 +1,8 @@
+(12201,7360) C: y^2 = x^3 + c2 x^2 + c1 c3 x + c0 c3^2 (x = c3 s)
+  torsion Z/2 (no odd part by point counts at 69 good primes; one rational root; T not in 2C(Q)); hhat(G) in [9.870024, 9.884853] (exact rational enclosure)
+  saturation of G at every prime <= 199 (exact)
+  minimal model [0, 0, 0, -5853864199902817711427100, 282276256542325437758831023860483840000] (from the hint, checked: integral, minimal at each of 10 bad primes)
+  m = 24, height search to 7: no point of infinite order of small height, 2-torsion x []
+  so every point of infinite order has hhat >= hi/210^2; IF rank C(Q) = 1, G generates C(Q) modulo torsion
+  Demjanenko-Manin: B + U + 2 log|c3| <= 359.128, so a <= 18; 37 candidate x, 3 values of t; not "no": {'1': 'degenerate', '-1': 'degenerate'}; closed
+  conclusion: IF rank C(Q) = 1, every solution t of (12201,7360) is degenerate

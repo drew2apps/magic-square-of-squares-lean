@@ -1,0 +1,17 @@
+Review z9: G3 family and table, 11000 < m <= 14000. Written by an AI model; not read by a person.
+brute force: {'degenerate coprime': 916}; kept 916 ({'square': 540, 'twice': 376}); fam_11000_30000.json in range: 916, identical: True
+CENSUS_TABLE_G3.tsv: 916 rows; (m, n, type) identical to the brute force: True
+  square: second descent 476, rank 0 34, Demjanenko-Manin 24, special 1, open 5
+  twice: second descent 327, rank 0 28, Demjanenko-Manin 15, special 5, open 1
+block 13000-14000: 305 rows; {'second descent': 270, 'rank 0': 23, 'special': 1, 'Demjanenko-Manin': 9, 'open': 2}
+  stage_13000.json: ratios 305, after second descent 35, after rank 0 12, after DM 3, open [[13103, 4271], [13348, 3795], [13899, 1180]]
+row (12007,1799) keeps run 6's label: CONDITIONAL on a rank being 1 (D1 of the partner: root number -1, PARI bounds [1,3]); plus the DM generator condition
+OPEN in the table: [(11165, 7548), (12201, 7360), (12204, 9853), (12703, 2767), (13348, 3795), (13899, 1180)]
+  (11165, 7548) (square), partner (18713, 3617): (11165, 7548): second descent ['open'], DM ['rank not 1'], rank 0 closes none; (18713, 3617): second descent ['open'], DM ['rank not 1'], rank 0 closes none
+  (12201, 7360) (square), partner (19561, 4841): (12201, 7360): second descent ['open'], DM ['rank not 1'], rank 0 closes none; (19561, 4841): second descent ['open'], DM ['rank not 1'], rank 0 closes none
+  (12204, 9853) (square), partner (22057, 2351): (12204, 9853): second descent ['open'], DM ['rank not 1'], rank 0 closes none; (22057, 2351): second descent ['open'], DM ['rank not 1'], rank 0 closes none
+  (12703, 2767) (twice), partner (7735, 4968): (12703, 2767): second descent ['open'], DM ['rank not 1'], rank 0 closes none; (7735, 4968): second descent ['open'], DM ['rank not 1'], rank 0 closes none, 1000-11000 table: special OPEN
+  (13348, 3795) (square), partner (17143, 9553): (13348, 3795): second descent ['open'], DM ['rank not 1'], rank 0 closes none; (17143, 9553): second descent ['open'], DM ['rank not 1'], rank 0 closes none
+  (13899, 1180) (square), partner (15079, 12719): (13899, 1180): second descent ['open'], DM ['rank not 1'], rank 0 closes none; (15079, 12719): second descent ['open'], DM ['rank not 1'], rank 0 closes none
+route row (13103,4271), twice: partner (8687, 4416), square (8687^2 + 4416^2 = 9745^2), its 1000-11000 row: special rank-1 route, route_pari.py, d = 111925826 | computed (route_pari.py); conditional on (a) G generating E1(Q) mod torsion, (b) the reading of CVV constants
+  G3 row: special | partner (8687, 4416), 1000 < m <= 11000 table: rank-1 route, route_pari.py, d = 111925826 | computed (route_pari.py); conditional on (a) G generating E1(Q) mod torsion, (b) the reading of CVV constants

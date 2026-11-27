@@ -1,0 +1,228 @@
+14901,8468 0 18 0
+14901,12376 0 20 0
+m=14901 coprime=9932 degenerate=0 no_point=9871 no_class=59 class=2
+m=14902 coprime=7450 degenerate=0 no_point=7450 no_class=0 class=0
+14903,892 0 18 0
+14903,943 0 22 0
+14903,2465 0 22 0
+14903,9153 0 20 37
+14903,9480 0 24 0
+14903,9696 0 20 37
+14903,11943 0 20 0
+14903,12472 0 22 0
+14903,13128 0 18 0
+14903,14025 0 20 0
+m=14903 coprime=12768 degenerate=2 no_point=12574 no_class=182 class=10
+14904,6469 0 22 0
+14904,14315 0 22 0
+m=14904 coprime=4752 degenerate=1 no_point=4655 no_class=94 class=2
+14905,2823 0 20 0
+m=14905 coprime=10800 degenerate=0 no_point=10683 no_class=116 class=1
+m=14906 coprime=7168 degenerate=0 no_point=7168 no_class=0 class=0
+14907,12124 0 18 0
+m=14907 coprime=9936 degenerate=0 no_point=9865 no_class=70 class=1
+14908,1547 1 22 0
+14908,5707 0 22 0
+m=14908 coprime=7452 degenerate=0 no_point=7354 no_class=96 class=2
+14909,4899 0 24 0
+14909,13812 0 20 0
+m=14909 coprime=14016 degenerate=0 no_point=13852 no_class=162 class=2
+m=14910 coprime=3360 degenerate=0 no_point=3360 no_class=0 class=0
+14911,2841 0 24 0
+14911,4439 0 26 0
+14911,5816 0 24 0
+14911,6089 0 22 0
+14911,13489 0 24 0
+m=14911 coprime=12960 degenerate=0 no_point=12764 no_class=191 class=5
+14912,4153 0 22 0
+m=14912 coprime=7424 degenerate=0 no_point=7320 no_class=103 class=1
+m=14913 coprime=9936 degenerate=0 no_point=9868 no_class=68 class=0
+m=14914 coprime=7456 degenerate=0 no_point=7456 no_class=0 class=0
+14915,4669 0 24 0
+14915,10948 0 24 0
+m=14915 coprime=11232 degenerate=1 no_point=11118 no_class=111 class=2
+14916,3521 0 24 0
+m=14916 coprime=4480 degenerate=1 no_point=4424 no_class=54 class=1
+14917,7285 0 22 0
+m=14917 coprime=12780 degenerate=0 no_point=12580 no_class=199 class=1
+m=14918 coprime=7458 degenerate=0 no_point=7458 no_class=0 class=0
+m=14919 coprime=9944 degenerate=0 no_point=9880 no_class=64 class=0
+14920,4329 0 22 0
+14920,8649 0 20 0
+m=14920 coprime=5952 degenerate=0 no_point=5827 no_class=123 class=2
+14921,2545 0 24 0
+14921,5120 0 18 41
+14921,7879 0 20 0
+m=14921 coprime=14532 degenerate=0 no_point=14443 no_class=86 class=3
+m=14922 coprime=4968 degenerate=0 no_point=4968 no_class=0 class=0
+m=14923 coprime=14922 degenerate=0 no_point=14843 no_class=79 class=0
+14924,835 0 24 29
+14924,4707 0 22 0
+14924,7341 0 22 0
+14924,8755 0 24 0
+14924,11189 0 22 0
+14924,13821 1 22 0
+m=14924 coprime=5760 degenerate=1 no_point=5491 no_class=262 class=6
+m=14925 coprime=7920 degenerate=0 no_point=7833 no_class=87 class=0
+m=14926 coprime=7008 degenerate=0 no_point=7008 no_class=0 class=0
+14927,3892 0 24 0
+14927,10783 0 24 0
+m=14927 coprime=12760 degenerate=0 no_point=12633 no_class=125 class=2
+14928,6577 0 22 0
+14928,8855 0 22 41
+m=14928 coprime=4960 degenerate=0 no_point=4909 no_class=49 class=2
+m=14929 coprime=14928 degenerate=1 no_point=14832 no_class=95 class=0
+m=14930 coprime=5968 degenerate=0 no_point=5968 no_class=0 class=0
+14931,4075 0 24 0
+14931,13592 0 20 0
+m=14931 coprime=8424 degenerate=1 no_point=8230 no_class=191 class=2
+14932,13175 0 20 0
+m=14932 coprime=7464 degenerate=0 no_point=7364 no_class=99 class=1
+14933,6900 0 22 0
+m=14933 coprime=14688 degenerate=1 no_point=14585 no_class=101 class=1
+m=14934 coprime=4680 degenerate=0 no_point=4680 no_class=0 class=0
+14935,3672 0 22 37
+m=14935 coprime=11424 degenerate=1 no_point=11314 no_class=108 class=1
+14936,10131 0 20 0
+m=14936 coprime=7464 degenerate=0 no_point=7369 no_class=94 class=1
+14937,7967 0 24 0
+14937,14680 0 20 37
+m=14937 coprime=9168 degenerate=0 no_point=9103 no_class=63 class=2
+m=14938 coprime=5760 degenerate=0 no_point=5760 no_class=0 class=0
+14939,251 0 18 0
+14939,11696 0 22 41
+m=14939 coprime=14938 degenerate=0 no_point=14824 no_class=112 class=2
+m=14940 coprime=3936 degenerate=1 no_point=3865 no_class=70 class=0
+14941,6324 0 22 29
+m=14941 coprime=14652 degenerate=0 no_point=14558 no_class=93 class=1
+m=14942 coprime=7200 degenerate=0 no_point=7200 no_class=0 class=0
+14943,224 0 20 0
+14943,712 0 24 0
+14943,5063 0 24 0
+14943,10817 0 22 0
+14943,12455 1 24 0
+m=14943 coprime=9344 degenerate=0 no_point=9225 no_class=114 class=5
+14944,7575 0 18 37
+m=14944 coprime=7456 degenerate=0 no_point=7356 no_class=99 class=1
+14945,14601 0 24 0
+m=14945 coprime=10080 degenerate=0 no_point=9853 no_class=226 class=1
+m=14946 coprime=4784 degenerate=0 no_point=4784 no_class=0 class=0
+m=14947 coprime=14946 degenerate=0 no_point=14839 no_class=107 class=0
+m=14948 coprime=7200 degenerate=1 no_point=7101 no_class=98 class=0
+m=14949 coprime=9000 degenerate=1 no_point=8935 no_class=64 class=0
+m=14950 coprime=5280 degenerate=0 no_point=5280 no_class=0 class=0
+14951,5496 0 22 0
+14951,13175 0 20 0
+m=14951 coprime=14950 degenerate=1 no_point=14859 no_class=88 class=2
+14952,2873 0 24 0
+14952,8243 0 18 0
+14952,12095 0 24 0
+m=14952 coprime=4224 degenerate=1 no_point=4082 no_class=138 class=3
+m=14953 coprime=14148 degenerate=0 no_point=14063 no_class=85 class=0
+m=14954 coprime=7476 degenerate=0 no_point=7476 no_class=0 class=0
+14955,9044 0 24 0
+m=14955 coprime=7968 degenerate=0 no_point=7894 no_class=73 class=1
+m=14956 coprime=7476 degenerate=0 no_point=7396 no_class=80 class=0
+14957,6715 0 22 0
+m=14957 coprime=14956 degenerate=0 no_point=14859 no_class=96 class=1
+m=14958 coprime=4968 degenerate=0 no_point=4968 no_class=0 class=0
+14959,9776 0 24 0
+14959,10609 0 20 0
+14959,11839 0 18 0
+m=14959 coprime=12816 degenerate=2 no_point=12617 no_class=194 class=3
+14960,2877 0 22 0
+14960,9199 0 20 0
+m=14960 coprime=5120 degenerate=1 no_point=4942 no_class=175 class=2
+m=14961 coprime=9972 degenerate=0 no_point=9905 no_class=67 class=0
+m=14962 coprime=7480 degenerate=0 no_point=7480 no_class=0 class=0
+14963,3157 0 22 0
+14963,11812 1 22 0
+m=14963 coprime=13800 degenerate=0 no_point=13704 no_class=94 class=2
+14964,5521 1 24 0
+m=14964 coprime=4704 degenerate=2 no_point=4642 no_class=59 class=1
+14965,1309 0 24 0
+14965,1372 0 22 0
+14965,7084 0 26 0
+m=14965 coprime=11520 degenerate=0 no_point=11407 no_class=110 class=3
+m=14966 coprime=6408 degenerate=0 no_point=6408 no_class=0 class=0
+m=14967 coprime=9972 degenerate=0 no_point=9899 no_class=73 class=0
+14968,413 1 20 0
+14968,8437 0 24 0
+14968,8825 0 20 0
+m=14968 coprime=7480 degenerate=0 no_point=7394 no_class=83 class=3
+14969,13241 0 18 0
+m=14969 coprime=14968 degenerate=1 no_point=14872 no_class=94 class=1
+m=14970 coprime=3984 degenerate=0 no_point=3984 no_class=0 class=0
+m=14971 coprime=13600 degenerate=0 no_point=13503 no_class=97 class=0
+m=14972 coprime=7056 degenerate=0 no_point=6965 no_class=91 class=0
+14973,1000 0 20 0
+14973,3403 0 24 0
+14973,5485 0 22 0
+14973,5525 0 24 0
+14973,6932 0 26 0
+14973,7877 0 20 0
+14973,9928 0 24 0
+14973,10523 0 22 37
+14973,11275 0 24 0
+14973,11608 0 22 0
+14973,13192 0 26 0
+14973,13325 0 22 0
+m=14973 coprime=7920 degenerate=1 no_point=7535 no_class=372 class=12
+m=14974 coprime=7486 degenerate=0 no_point=7486 no_class=0 class=0
+14975,1176 0 18 17
+14975,2004 0 20 0
+14975,8372 0 24 0
+14975,10033 0 20 0
+m=14975 coprime=11960 degenerate=0 no_point=11828 no_class=128 class=4
+14976,851 0 22 0
+14976,12121 0 22 0
+m=14976 coprime=4608 degenerate=1 no_point=4538 no_class=67 class=2
+14977,364 1 20 0
+14977,1337 0 22 101
+14977,4088 0 22 0
+14977,6048 0 18 0
+14977,13048 0 22 0
+14977,13636 0 22 0
+m=14977 coprime=14080 degenerate=2 no_point=13894 no_class=178 class=6
+m=14978 coprime=7488 degenerate=0 no_point=7488 no_class=0 class=0
+m=14979 coprime=9984 degenerate=0 no_point=9926 no_class=58 class=0
+14980,9251 0 24 0
+14980,9571 0 20 0
+14980,14773 0 22 0
+m=14980 coprime=5088 degenerate=1 no_point=4865 no_class=219 class=3
+m=14981 coprime=14700 degenerate=0 no_point=14606 no_class=94 class=0
+m=14982 coprime=4520 degenerate=0 no_point=4520 no_class=0 class=0
+m=14983 coprime=14982 degenerate=1 no_point=14887 no_class=94 class=0
+14984,10937 0 18 0
+14984,12121 0 24 0
+m=14984 coprime=7488 degenerate=0 no_point=7395 no_class=91 class=2
+14985,7831 0 22 0
+14985,12112 0 20 0
+m=14985 coprime=7776 degenerate=1 no_point=7712 no_class=61 class=2
+m=14986 coprime=7308 degenerate=0 no_point=7308 no_class=0 class=0
+14987,5484 0 22 0
+14987,14227 0 20 0
+14987,14491 0 18 0
+m=14987 coprime=12840 degenerate=0 no_point=12652 no_class=185 class=3
+14988,9673 0 22 0
+14988,10087 0 24 0
+m=14988 coprime=4992 degenerate=0 no_point=4925 no_class=65 class=2
+14989,3936 0 20 0
+m=14989 coprime=13824 degenerate=0 no_point=13713 no_class=110 class=1
+m=14990 coprime=5992 degenerate=0 no_point=5992 no_class=0 class=0
+m=14991 coprime=9432 degenerate=0 no_point=9363 no_class=69 class=0
+m=14992 coprime=7488 degenerate=0 no_point=7405 no_class=83 class=0
+14993,2652 0 26 0
+14993,3332 0 24 0
+m=14993 coprime=12880 degenerate=0 no_point=12781 no_class=97 class=2
+m=14994 coprime=4032 degenerate=0 no_point=4032 no_class=0 class=0
+m=14995 coprime=11992 degenerate=0 no_point=11889 no_class=103 class=0
+14996,5931 0 22 0
+m=14996 coprime=7128 degenerate=0 no_point=6988 no_class=139 class=1
+14997,3805 0 20 0
+m=14997 coprime=9996 degenerate=0 no_point=9936 no_class=59 class=1
+m=14998 coprime=7498 degenerate=0 no_point=7498 no_class=0 class=0
+14999,4676 0 22 0
+m=14999 coprime=14664 degenerate=0 no_point=14576 no_class=87 class=1
+15000,11129 0 22 0
+m=15000 coprime=4000 degenerate=0 no_point=3928 no_class=71 class=1

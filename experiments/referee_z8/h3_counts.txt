@@ -1,0 +1,12 @@
+z8: REPORT_H3 numbers recounted from h3_weil.json / h3_tables.json. Written by an AI model; not read by a person.
+primes in h3_weil.json: 91 (17 to 1153); primes p = 1 mod 4 with 17 <= p <= 1153 (sympy): 91; equal lists: True; with 5 and 13: 93
+good residues: 49764; losing a vector: 17224
+primes with no loss: []
+sets that are not affine subspaces: 15984
+empty sets: 36, largest p with one: 137
+largest p with a set of at most s vectors: 2: 313, 4: 401, 6: 457, 8: 617, 10: 1069, 12: 1153, 14: 1153
+most vectors lost at a prime above 1069: 4
+at 1153: 1140 good residues, 204 lose a vector
+mean allowed size: 17: 2.67, 193: 10.31, 197: 9.83, 509: 14.44, 1153: 15.62
+h3_tables.json: primes 5 to 197 (21); good residues 1848; empty 36; full sets at {137: 8, 181: 16, 193: 16}; no good residue at [5, 13]
+good residues at 197 < p < 1154: 47916

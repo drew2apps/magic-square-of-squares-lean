@@ -1,0 +1,8 @@
+z8: PARI cross-check of H1's rank-0 quotients y^2 = w f0 f8. Written by an AI model; not read by a person.
+(561607,264401): torsion [4, 2] (8 points), gcd #E(F_p) 8; t over torsion: ['-1', '0', '1', 'inf']; ellrank over the isogeny class: [(0, 0), (0, 2), (0, 2), (0, 0), (0, 2), (0, 2), (0, 4), (0, 4)]
+(1109503,597671): torsion [4, 2] (8 points), gcd #E(F_p) 8; t over torsion: ['-1', '0', '1', 'inf']; ellrank over the isogeny class: [(0, 0), (0, 2), (0, 2), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0)]
+(1992873,999664): torsion [8, 2] (16 points), gcd #E(F_p) 16; t over torsion: ['-1', '0', '1', 'inf']; ellrank over the isogeny class: [(0, 0), (0, 0), (0, 0), (0, 0), (0, 2), (0, 2), (0, 8), (0, 8)]
+(175775580,15972419): torsion [8, 2] (16 points), gcd #E(F_p) 16; t over torsion: ['-1', '0', '1', 'inf']; ellrank over the isogeny class: [(0, 0), (0, 2), (0, 0), (0, 2), (0, 6), (0, 6), (0, 10), (0, 10)]
+(345152671,33026129): torsion [4, 2] (8 points), gcd #E(F_p) 8; t over torsion: ['-1', '0', '1', 'inf']; ellrank over the isogeny class: [(0, 2), (0, 4), (0, 4), (0, 0), (0, 4), (0, 0), (0, 2), (0, 2)]
+(304012873,159269639): torsion [4, 2] (8 points), gcd #E(F_p) 8; t over torsion: ['-1', '0', '1', 'inf']; ellrank over the isogeny class: [(0, 0), (0, 2), (0, 2), (0, 0), (0, 0), (0, 2), (0, 4), (0, 4)]
+(349960367,118678903): torsion [4, 2] (8 points), gcd #E(F_p) 8; t over torsion: ['-1', '0', '1', 'inf']; ellrank over the isogeny class: [(0, 2), (0, 2), (0, 2), (0, 0), (0, 2), (0, 0), (0, 2), (0, 2)]

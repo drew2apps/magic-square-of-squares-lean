@@ -3,3 +3,10 @@ stages 11000: exit 0 628 s
 chunk 12000-13000: 9316 s
 stages 12000: exit 0 685 s
 route 12416,5313: 9 s
+restart (container restart at 04:22 UTC lost block 13000's run): 04:23
+block 13000 second descent stopped by hand at 06:08 UTC to free cores for H2 (not finished)
+block 13000 restarted at 10:04 UTC (H7)
+chunk 13000-14000: 7829 s
+stages 13000: exit 0 443 s
+block 14000 started by run_g3.sh at 12:15 UTC and stopped by hand at 12:23 UTC (deadline; not finished, nothing claimed)
+g3_table --write (with block 13000) exit=0 0 s

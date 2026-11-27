@@ -1,0 +1,20 @@
+h1_pairs.py --negative: forged inputs that must be refused
+E_0L of (1109503,597671): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-5044806324638439453125000, -2317692836450396408463936, 2317692836450396408463936)
+  complete 2-descent: dim Sel^2 = 7; Cassels-Tate pairing of rank 0; the images of 3 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 8 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 64
+  tuple (1109503, 597671, 2, 959): D_0L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ)
+  1. pairing left out: refused (not decided), as it must be
+E_0L of (1109503,597671): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-5044806324638439453125000, -2317692836450396408463936, 2317692836450396408463936)
+  complete 2-descent: dim Sel^2 = 7; Cassels-Tate pairing of rank 2; the images of 3 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 8 points: 0
+  2. wrong root: refused (the root of the descent map is not identified), as it must be
+E_0L of (1109503,597671): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-5044806324638439453125000, -2317692836450396408463936, 2317692836450396408463936)
+  complete 2-descent: dim Sel^2 = 7; Cassels-Tate pairing of rank 2; the images of 3 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 8 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 64
+  tuple (1109503, 597671, 6, 1): D_0L / D(t = 0) = 3: EXCLUDED: its class 3 is not the class of any rational point of E_0L (it is in Sel^2: no)
+  3. forged tuple (1109503, 597671, 6, 1): excluded, as it must be

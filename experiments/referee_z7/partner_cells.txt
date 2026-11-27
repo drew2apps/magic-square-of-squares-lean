@@ -1,0 +1,5 @@
+# partner_cells.py (review z7; written by an AI model)
+partner (m+n, m-n) at t' = (t+1)/(t-1): cell i times (t-1)^2/4 = cell [0, 2, 1, 3, 7, 8, 6, 4, 5] of (m, n) at t
+partner ((m+n)/2, (m-n)/2) at t' = (t+1)/(t-1): cell i times (t-1)^2/1 = cell [0, 2, 1, 3, 7, 8, 6, 4, 5] of (m, n) at t
+(6881,6233): m, n odd, g = 2, halved partner ((m+n)/2, (m-n)/2) = (6557,324)
+# end

@@ -13,8 +13,7 @@ partner is removed and the ratio must come out UNCLOSED (7 of 7 refused, `census
 **What it shows.** 20,682 ratios pass the congruences (other type 17,636; m² + n² a square 1,780; twice a square 1,266).
 First closing step: class 17,636; second descent 2,582; repository L-value 23; rank 0 231; Demjanenko–Manin 175;
 repository route 9; special 26. Every row has a step and a label; that is all "UNCLOSED 0" means. 20,681 rows have a
-closing record of the tier their label states; (7735,4968) has none (label OPEN here; `../g4k/` excludes it only
-conditionally on a rank being 1). The labels, not the counts, carry the tiers:
+closing record of the tier their label states; (7735,4968) has none (label OPEN here; `../g4k/` excludes it conditionally on a rank being 1; since run 7 that rank is computed exactly, `../../roadmap-h/h7/`; the table's labels are unchanged). The labels, not the counts, carry the tiers:
 - **conditional on a rank being 1** (9): (3540,2581), (4440,2231), (6121,959), (6480,4961), (6671,2209), (6903,5104),
   (8249,3720), (10512,145), (10657,10367);
 - **numerical L-value** (25): (6557,324), (6881,6233) (`../hard7k/`; `../lvalue/` now gives an exact enclosure

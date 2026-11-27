@@ -1,0 +1,4 @@
+H2 control: h2_exhaust.py against G2 on 14900 < m <= 15000. Written by an AI model; not read by a person. Experiment, not counted.
+forged: ratio (14901, 8468) dropped: refused
+forged: P of (14901, 8468) set to 29: refused
+forged: P of (14903, 9153) set above G2's kill set: refused

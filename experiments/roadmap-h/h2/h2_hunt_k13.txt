@@ -1,0 +1,32 @@
+range k = 13: 10000 <= m < 16384 (seed 4013); bias: at least 9 primes in mn(m^2-n^2), at most 2 odd primes in m^2+n^2
+sampled 4000 (draws 5200529); no local point 2372; no class 1599; class kept 29; timed out: class 0, descent 0
+SURVIVORS: none
+13919,2649 class dim 0 22 0
+12920,453 class dim 0 24 29
+11425,7952 class dim 0 20 29
+15463,10207 class dim 0 22 0
+14937,14680 class dim 0 20 37
+11500,2899 class dim 0 24 0
+12152,7075 class dim 0 22 0
+15689,7516 class dim 0 24 0
+15653,13188 class dim 0 24 0
+13820,13379 class dim 0 20 0
+15460,2047 class dim 0 24 0
+15827,237 class dim 0 20 0
+12769,3444 class dim 0 20 0
+15225,3937 class dim 0 26 0
+16236,14315 class dim 1 24 0
+15908,3073 class dim 0 24 0
+15247,9535 class dim 1 20 0
+14909,13812 class dim 0 20 0
+14204,7701 class dim 0 24 0
+15843,15752 class dim 0 22 0
+13127,8463 class dim 0 24 0
+11404,7245 class dim 0 20 0
+11373,7133 class dim 0 22 0
+16213,9325 class dim 0 20 0
+13237,4059 class dim 0 24 0
+15653,13188 class dim 0 24 0
+14089,2240 class dim 0 20 0
+15785,1879 class dim 0 22 0
+15275,8211 class dim 0 22 0

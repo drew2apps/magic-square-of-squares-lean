@@ -1,0 +1,26 @@
+z8: the four-class descent with every bad prime and good primes <= 20000 on H1's 24 ratios. Written by an AI model; not read by a person.
+(204724,97893): 4 tuples left; extra tuples left: the 2 of H1
+(302617,106831): 4 tuples left; extra tuples left: the 2 of H1
+(413004,148603): 6 tuples left; extra tuples left: the 4 of H1
+(561607,264401): 6 tuples left; extra tuples left: the 4 of H1
+(756492,255635): 4 tuples left; extra tuples left: the 2 of H1
+(853587,255916): 6 tuples left; extra tuples left: the 4 of H1
+(1012127,500857): 4 tuples left; extra tuples left: the 2 of H1
+(1109503,597671): 6 tuples left; extra tuples left: the 4 of H1
+(1992873,999664): 4 tuples left; extra tuples left: the 2 of H1
+(2992537,993209): 4 tuples left; extra tuples left: the 2 of H1
+(11875080,6497849): 2 tuples left; extra tuples left: none
+(18372929,5377231): 2 tuples left; extra tuples left: none
+(32396425,3694248): 2 tuples left; extra tuples left: none
+(36090673,28702177): 2 tuples left; extra tuples left: none
+(175775580,15972419): 2 tuples left; extra tuples left: none
+(189089400,156063271): 4 tuples left; extra tuples left: the 2 of H1
+(191747999,159803161): 2 tuples left; extra tuples left: none
+(231641256,72371617): 4 tuples left; extra tuples left: the 2 of H1
+(234319635,115640732): 2 tuples left; extra tuples left: none
+(304012873,159269639): 4 tuples left; extra tuples left: the 2 of H1
+(345152671,33026129): 4 tuples left; extra tuples left: the 2 of H1
+(349960367,118678903): 2 tuples left; extra tuples left: none
+(518804652,31743595): 2 tuples left; extra tuples left: none
+(550548247,487061057): 2 tuples left; extra tuples left: none
+ratios that keep extra tuples (phantoms): 14 [(204724, 97893), (302617, 106831), (413004, 148603), (561607, 264401), (756492, 255635), (853587, 255916), (1012127, 500857), (1109503, 597671), (1992873, 999664), (2992537, 993209), (189089400, 156063271), (231641256, 72371617), (304012873, 159269639), (345152671, 33026129)]

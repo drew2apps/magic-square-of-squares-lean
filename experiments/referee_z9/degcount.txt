@@ -1,0 +1,18 @@
+Review z9: degenerate ratios with 15000 < m <= 30000 from Pythagorean parameters, against H2. Written by an AI model; not read by a person.
+degenerate ratios: 4579 (square type 2678, twice-square type 1901); H2 total 4579
+  15000-16000: here 304, H2 304 equal
+  16000-17000: here 305, H2 305 equal
+  17000-18000: here 312, H2 312 equal
+  18000-19000: here 306, H2 306 equal
+  19000-20000: here 304, H2 304 equal
+  20000-21000: here 301, H2 301 equal
+  21000-22000: here 303, H2 303 equal
+  22000-23000: here 309, H2 309 equal
+  23000-24000: here 302, H2 302 equal
+  24000-25000: here 305, H2 305 equal
+  25000-26000: here 310, H2 310 equal
+  26000-27000: here 302, H2 302 equal
+  27000-28000: here 310, H2 310 equal
+  28000-29000: here 300, H2 300 equal
+  29000-30000: here 306, H2 306 equal
+per-m counts equal too: True

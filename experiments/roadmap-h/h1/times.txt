@@ -1,0 +1,40 @@
+scan k=28 exit=0 2123 s
+scan k=29 exit=0 2972 s
+h1_phantom exit=1 319 s
+scan k=26 exit=0 1084 s
+scan k=24 exit=0 666 s
+scan k=22 exit=0 581 s
+h1_phantom exit=0 566 s
+scan k=20 exit=0 629 s
+scan k=18 exit=0 286 s
+h1_phantom exit=0 527 s
+scan k=27 exit=0 2618 s
+scan k=16 exit=0 237 s
+scan k=14 exit=0 201 s
+h1_phantom exit=0 427 s
+h1_phantom exit=0 570 s
+scan k=25 exit=0 1451 s
+h1_partners exit=0 347 s
+scan k=23 exit=0 1063 s
+h1_rank0 exit=0 861 s
+h1_rank0_exact --negative exit=0 6 s
+h1_allphantoms exit=0 1805 s
+h1_partners exit=0 341 s
+scan k=21 exit=0 615 s
+h1_rank0_exact exit=0 88 s
+scan k=19 exit=0 440 s
+scan k=17 exit=0 339 s
+scan k=15 exit=0 252 s
+scan k=13 exit=0 232 s
+h1_partners exit=0 429 s
+h1_rank0 exit=0 1036 s
+h1_allphantoms exit=0 2219 s
+h1_rank0_exact exit=0 2303 s
+check h1_pairs.py --negative: # matches 113 s
+check h1_scan.py --negative: # matches 18 s
+check h1_rank0_exact.py --negative: # DIFFERS from h1_rank0_exact_negative.txt 5 s
+h1_rank0_exact --negative exit=0 4 s
+h1_holdouts exit=0 1941 s
+h1_rank0_exact exit=0 1783 s
+h1_iso exit=0 3 s
+h1_iso --negative exit=0 1 s

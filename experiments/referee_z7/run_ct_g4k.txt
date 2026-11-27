@@ -1,0 +1,63 @@
+# run_ct_g4k.py (review z7; written by an AI model): F4's g4*K curve C, its 2-isogenous curve E' with full 2-torsion,
+# my complete 2-descent and Cassels-Tate pairing on E', compared with H7's committed outputs
+(12201,7360): C = dm_g4k.g4k_curve, root e = -2S^3, a = -52392030974943737049907200, b = 877003948469964553121222203270093882699363968614400; E' roots (-111620535884994085310376960, 0, 6836473935106611210562560)
+   mine: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+    +1 +1 +1
+    +1 +1 +1
+    +1 +1 +1
+   H7 (committed): roots and dim Sel^2 = 3, pairing rank 0: agree
+(7735,4968): C = dm_g4k.g4k_curve, root e = -2S^3, a = -3993450530968096731187200, b = 4820830536984668538036201506705755075792073625600; E' roots (-8384728493923604533226880, 0, 397827431987411070852480)
+   mine: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+    +1 +1 +1
+    +1 +1 +1
+    +1 +1 +1
+   H7 (committed): roots and dim Sel^2 = 3, pairing rank 0: agree
+(6881,6233): C = dm_g4k.g4k_curve, root e = -2S^3, a = -5073957255900562354561600, b = 6499428485986488666679004862246527610643600000000; E' roots (-10172752598326649048681600, 0, 24838086525524339558400)
+   mine: dim Sel^2 = 7, pairing rank 4, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+    +1 +1 +1 +1 +1 +1 +1
+    +1 +1 +1 +1 -1 -1 -1
+    +1 +1 +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1 -1 -1
+    +1 -1 +1 +1 +1 -1 -1
+    +1 -1 +1 -1 -1 +1 -1
+    +1 -1 +1 -1 -1 -1 +1
+   H7 (committed): roots and dim Sel^2 = 7, pairing rank 4: agree
+(13348,3795): C = dm_g4k.g4k_curve, root e = -2S^3, a = -15812375217712490950156800, b = 225839881224072021483922445206622057090023050470400; E' roots (-45868315144726719761645760, 0, 14243564709301737861332160)
+   mine: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+    +1 +1 +1 +1 +1
+    +1 +1 +1 -1 -1
+    +1 +1 +1 -1 -1
+    +1 -1 -1 +1 +1
+    +1 -1 -1 +1 +1
+   H7 (committed): roots and dim Sel^2 = 5, pairing rank 2: agree
+(6557,324): C = dm_g4k.g4k_curve, root e = -2S^3, a = -6224720087712481804800, b = 996685649261303196362035185169723587600000000; E' roots (-69365377330452779284800, 0, 56915937155027815675200)
+   mine: dim Sel^2 = 5, pairing rank 0, rank <= 3; images of T1, T2 and 1 point(s) span 3 = part of the kernel (dim 5)
+    +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1
+   H7 (committed): roots and dim Sel^2 = 5, pairing rank 0: agree
+(11165,7548): C = dm_g4k.g4k_curve, root e = -2S^3, a = -41277907439107587846259200, b = 494660279702954698757585384110004997843714885657600; E' roots (-85759826449103309871318720, 0, 3204011570888134178800320)
+   mine: dim Sel^2 = 4, pairing rank 0, rank <= 2; images of T1, T2 and 1 point(s) span 3 = part of the kernel (dim 4)
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+   H7 (committed): roots and dim Sel^2 = 4, pairing rank 0: agree
+(12204,9853): C = dm_g4k.g4k_curve, root e = -2S^3, a = -113830957220202272997388800, b = 3389983011353450868176500457275187004539955600000000; E' roots (-230278078461621562420708800, 0, 2616164021217016425931200)
+   mine: dim Sel^2 = 6, pairing rank 2, rank <= 2; images of T1, T2 and 1 point(s) span 3 = part of the kernel (dim 4)
+    +1 +1 +1 +1 +1 +1
+    +1 +1 -1 +1 -1 +1
+    +1 -1 +1 +1 +1 -1
+    +1 +1 +1 +1 +1 +1
+    +1 -1 +1 +1 +1 -1
+    +1 +1 -1 +1 -1 +1
+   H7 (committed): roots and dim Sel^2 = 6, pairing rank 2: agree
+(13899,1180): C = dm_g4k.g4k_curve, root e = -2S^3, a = -1674816579016334646796800, b = 24674916553060268439830569132421389861647669273600; E' roots (-11609587145679717525913920, 0, 8259953987647048232320320)
+   mine: dim Sel^2 = 4, pairing rank 0, rank <= 2; images of T1, T2 and 1 point(s) span 3 = part of the kernel (dim 4)
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+   H7 (committed): roots and dim Sel^2 = 4, pairing rank 0: agree

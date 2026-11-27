@@ -1,0 +1,8 @@
+z8: good primes p = 3 mod 4 that empty the four-class set, by G1's exact test. Written by an AI model; not read by a person.
+(2,1) at p = 7 (good): 0 allowed label tuples
+(9,1) at p = 7 (good): 0 allowed label tuples
+(3,1) at p = 23 (good): 0 allowed label tuples
+(5,1) at p = 47 (good): 0 allowed label tuples
+(25,1) at p = 127 (good): 0 allowed label tuples
+(14,1) at p = 151 (good): 0 allowed label tuples
+(151000467,1) at p = 151 (good): 0 allowed label tuples

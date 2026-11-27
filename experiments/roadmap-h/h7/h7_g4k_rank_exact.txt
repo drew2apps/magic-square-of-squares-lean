@@ -1,0 +1,5 @@
+(12201,7360) g4*K: 2-torsion roots 1; shifted model a = -52392030974943737049907200, b = 877003948469964553121222203270093882699363968614400
+  first descent: |Sel(phi)| <= 1, |Sel(phi^)| <= 256, rank <= 6; bad primes [2, 3, 5, 7, 23, 31, 47, 83, 103, 631, 14249]
+  E: Selmer 1 classes, known subgroup 1, cosets excluded by the second descent 0, not excluded 0: image <= 2^0 (control: 0 classes of known points survive, as they must)
+  E': Selmer 256 classes, known subgroup 4, cosets excluded by the second descent 56, not excluded 7: image <= 2^5 (control: 2 classes of known points survive, as they must)
+exact rank bound (rank_indep, no PARI in the bound): 3; a point of infinite order is known, so rank >= 1

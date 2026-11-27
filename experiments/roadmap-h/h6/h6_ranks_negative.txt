@@ -1,0 +1,4 @@
+forged Jacobian: refused
+even sextic (split Jacobian): not shown simple (Frobenius polynomial reducible at every good prime tried)
+generic sextic: simple over Q (Frobenius polynomial at p = 5 irreducible: T^4 + 4*T^3 + 12*T^2 + 20*T + 25)
+37a1 rank bounds (1, 1), 11a1 rank bounds (0, 0)

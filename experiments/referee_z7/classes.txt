@@ -1,0 +1,32 @@
+# classes.py (review z7; written by an AI model)
+## (1) isogeny classes of three E04 curves; my descent and pairing on each member with full 2-torsion
+(320,289) E04: class of 6 curves (ellisomat), degrees from E04 [1, 2, 2, 2, 4, 4]
+  curve 0, full 2-torsion: dim Sel^2 = 7, pairing rank 4, rank <= 1
+  curve 1: one rational 2-torsion point
+  curve 2: one rational 2-torsion point
+  curve 3, full 2-torsion: dim Sel^2 = 7, pairing rank 4, rank <= 1
+  curve 4: one rational 2-torsion point
+  curve 5: one rational 2-torsion point
+(1015,961) E04: class of 6 curves (ellisomat), degrees from E04 [1, 2, 2, 2, 4, 4]
+  curve 0, full 2-torsion: dim Sel^2 = 5, pairing rank 0, rank <= 3
+  curve 1: one rational 2-torsion point
+  curve 2: one rational 2-torsion point
+  curve 3, full 2-torsion: dim Sel^2 = 7, pairing rank 4, rank <= 1
+  curve 4: one rational 2-torsion point
+  curve 5: one rational 2-torsion point
+(1015,713) E04: class of 6 curves (ellisomat), degrees from E04 [1, 2, 2, 2, 4, 4]
+  curve 0, full 2-torsion: dim Sel^2 = 5, pairing rank 0, rank <= 3
+  curve 1: one rational 2-torsion point
+  curve 2: one rational 2-torsion point
+  curve 3, full 2-torsion: dim Sel^2 = 7, pairing rank 2, rank <= 3
+  curve 4: one rational 2-torsion point
+  curve 5: one rational 2-torsion point
+## (2) the walk of h7_e04_rank.least_bound (6 visits), up to isomorphism
+(1015,713): the walk visits 6 curves, 2 up to isomorphism; sequence [0, 1, 0, 1, 0, 1]
+(1015,961): the walk visits 6 curves, 2 up to isomorphism; sequence [0, 1, 0, 1, 0, 1]
+(320,289): the walk visits 6 curves, 2 up to isomorphism; sequence [0, 1, 0, 1, 0, 1]
+(15,8): the walk visits 6 curves, 2 up to isomorphism; sequence [0, 1, 0, 1, 0, 1]
+## (3) D1 and sigma curves of tier B: members of the class with full 2-torsion
+D1: 16 curves; class sizes [2]; curves with a full-2-torsion member: []
+sigma: 12 curves; class sizes [2]; curves with a full-2-torsion member: []
+# end

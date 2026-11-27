@@ -7,13 +7,13 @@ on the level-4 lift C4 of the side named first in the curve's 'theta4_reduction'
 first Selmer group equals its S_2), with y the open class of the other side.
 
     python3 rank_fisher_theta4_gen.py <name> [--side=E|E'] [--write]   name: 72,65 (positive control) | 920,129 |
-                                                                       760,39 | 631,71 --side=E'
+                                                                       760,39 | 631,71 --side=E' | 945,248 --side=E'
     python3 rank_fisher_theta4_gen.py <name> [--side=...] --negative [--write]
     (outputs only with --write: rank_fisher_theta4_gen_<m>_<n>.txt, ..._negative.txt)
 
 Written by an AI model (Claude); not read by a person.  Experiment, not counted.  Reviewed by a separate AI agent on
 27 November 2026 (reviews/review_y5.md): holds with gaps.  Every committed output and CI line reduces on the E' side (the lifted class on E', as for
-(72,65)): for (631,71) by --side=E', for the other curves because that is rank_fisher.py's side.  The
+(72,65)): for (631,71) and (945,248) by --side=E', for the other curves because that is rank_fisher.py's side.  The
 branch for a reduction on the E side (the else of prepare()) is run by no output and no CI line: untested,
 and its K2 list holds only the class of T'.
 
@@ -30,11 +30,19 @@ found) and at R, the good-reduction argument covering the rest; Fisher's Thm 3.1
 needing y in S'_4) is then what makes <[C4], y> equal Theta_4(lifted class, y).  For the D1 curve of (631,71) the
 E side's cone fields Q(sqrt 49449047761), Q(sqrt 31836878641) were out of reach of the finder, the E' side's
 Q(sqrt +-627214) were not.
-Not done: (945,248): no point found on its cone conics over Q(sqrt 1356488820560645889749762) (E side) nor over
-Q(sqrt 5820647) (E' side, 60000 short vectors and about 9e6 pairs).
+(945,248), added 27 November 2026 (run 7, t9): with --side=E' (output rank_fisher_theta4_gen_945_248_Eprime.txt)
+Theta_4(-5820647, 2) != 0, K2, K3, K5 agree; rank <= (2 - 1) + (3 - 1) - 2 = 1.  Two differences from the other
+curves: the conic points over Q(sqrt 5820647), Q(sqrt -5820647) come from rank_fisher_theta4_norm.py (a Legendre-type
+descent over L, rnfisnorm, a quaternion reduction of the point), and the json's E'-side C3 (xi = 1271) has an empty
+level-4 Selmer set, so its twist xi = 17794 = 1271 * 14 (14 in S_1 of that side; the hint key '945,248 E+|E'|xi')
+is used; prepare() asserts the ratio is in S_1 and nothing rests on the choice (C4 is checked locally soluble).
+The E side (Q(sqrt 1356488820560645889749762), class group (2,2,2,2), a regulator too large for generators) was
+not attempted.  For (945,248) choose_Xi_lin also retries more seeds at a place where the first seed finds no point (p =
+97 here); this fires on no other curve, whose outputs are unchanged.
 THE CONIC POINTS (rank_fisher_theta4_gen_hints.json) were found by rank_fisher_theta4_find.py with
-conic_lattice_find.py (finders: PARI, lattice reduction and enumeration); they are inputs, re-checked exactly by
-rank_fisher5.analyse (on the cone, tangency along the ruling, f and f_dag rational, q and c by exact linear algebra).
+conic_lattice_find.py (finders: PARI, lattice reduction and enumeration), those of (945,248) by
+rank_fisher_theta4_norm.py; they are inputs, re-checked exactly by rank_fisher5.analyse (on the cone, tangency
+along the ruling, f and f_dag rational, q and c by exact linear algebra).
 NEW EXACT CHECK (not in rank_fisher_theta4.py): the primes p where f0 mod p lies in span(QA, QB) mod p (where the
 good-reduction argument for the double cover would not apply) are computed (gcd of the 3 x 3 minors) and put into S;
 on the three curves they are already in B0 u {p < 47}.
@@ -92,7 +100,8 @@ def base_curve(cvname):
     return R2.sigma_curve(m, n, typ)
 
 def load_hints(cv, side, mutate=None):
-    """the conic points: rank_fisher5_hints.json (already in R5.HINTS: (72,65)) or rank_fisher_theta4_gen_hints.json."""
+    """the conic points: rank_fisher5_hints.json (already in R5.HINTS: (72,65)) or rank_fisher_theta4_gen_hints.json;
+    and, under the key '<key>|xi', another level-3 twist xi of the json's C3 (only (945,248), E' side; see prepare)."""
     key = '%s|%s' % (cv['name'], side)
     H = json.load(open(HINTS_GEN)) if os.path.exists(HINTS_GEN) else {}
     for k_ in (key, key + '|V'):
@@ -100,7 +109,8 @@ def load_hints(cv, side, mutate=None):
     assert key in R5.HINTS and key + '|V' in R5.HINTS, 'no conic points (hints) for %s' % key
     if mutate == 'hintZ':
         h = dict(R5.HINTS[key]); z0 = Fr(h['Z'][0]) + 1; h['Z'] = [str(z0), h['Z'][1]]; R5.HINTS[key] = h
-    return key
+    xi2 = H.get(key + '|xi')
+    return key, (int(xi2) if xi2 is not None else None)
 
 def setup_gen(R, mut=None):
     """rank_fisher_theta4.setup without the assertion (D1, D3) = (-2, 2)."""
@@ -173,6 +183,12 @@ def choose_Xi_lin(M, D, C, places, say=say):
     'class(Xi) in that coset' is solved by linear algebra (rank_fisher_theta4.choose_Xi does the same by
     enumerating all 2^(1 + #places) candidates)."""
     K = {p: T.f0_classes(M, D, C, p) for p in places}
+    for p in places:
+        # a place without a sampled point: more seeds (added for (945,248), where the default seed finds no point
+        # at p = 97; it changes nothing where the first seed finds points; a sampler only)
+        sd = 2
+        while not K[p] and sd <= 8:
+            K[p] = T.f0_classes(M, D, C, p, seed=sd); sd += 1
     Rs = T.real_signs(M, D, C=C)
     if not all(K[p] for p in places): return [], K, Rs     # a place without a sampled point: no twist found
     gens = [-1] + list(places)
@@ -288,7 +304,12 @@ def prepare(name, mutate=None, quiet=False):
     if SIDE is not None and SIDE != side: side, other = other, side
     S = cv['sides'][side]; C = S['level3_curve']
     lifted = int(S['dd']); y = int(cv['sides'][other]['dd'])
-    load_hints(cv, side, mutate=mutate)
+    _, xi2 = load_hints(cv, side, mutate=mutate)
+    if xi2 is not None:
+        # (945,248), E' side: the json's C3 (xi = 1271) has an empty level-4 Selmer set, its twist xi2 = 1271 * 14
+        # (14 in S_1 of this side: same level-2 lift D_lam, another member of its level-3 coset) has not
+        # (rank_fisher_theta4_norm.py).  Nothing rests on that choice: C4 is checked everywhere locally soluble below.
+        C = dict(C, xi=str(xi2))
     R = R5.analyse(cv['name'], side, C, dd=lifted)
     assert R['pushout'] is not None and R['pushout3'] is not None and R['comp'] is not None, \
         'rank_fisher5 steps (6)-(8) not completed (conic points missing or rejected)'
@@ -301,8 +322,11 @@ def prepare(name, mutate=None, quiet=False):
         aw, bw = -2 * a, a * a - 4 * b
         imgs = [T.sqfree(bw)]
     RD = RI.first_descent(aw, bw)
+    if xi2 is not None:
+        assert side == "E'" and T.sqfree(xi2 * int(S['level3_curve']['xi'])) in RD['Sp'], \
+            'the level-3 twist xi2 is not in the coset xi S_1 of this side'
     return dict(k=k, cv=cv, side=side, other=other, C=C, lifted=lifted, y=y, R=R, D=D, a=a, b=b, G=Gpt,
-                aw=aw, bw=bw, imgs=imgs, RD=RD)
+                aw=aw, bw=bw, imgs=imgs, RD=RD, xi2=xi2, xi_json=int(S['level3_curve']['xi']))
 
 def main(name):
     t0 = time.time()
@@ -313,6 +337,11 @@ def main(name):
     say('E: y^2 = x(x^2 + a x + b), a = %d, b = %d; known point with x = %s' % (P['a'], P['b'], P['G'][0]))
     say('the lifted class %d (%s side) -> C3\' (rank_fisher5 steps (1)-(8) re-run, conic points re-checked); '
         'L = Q(sqrt %d), L\' = Q(sqrt %d)' % (P['lifted'], side, D['D1'], D['D3']))
+    if P['xi2'] is not None:
+        say('  level-3 lift: the twist xi = %d of the json\'s C3 (xi = %d there; the ratio %d is in S_1 of this side, so '
+            'the same D_lam and another member of its level-3 coset); the json\'s C3 has no level-4 twist '
+            '(rank_fisher_theta4_norm.py); C4 below is checked everywhere locally soluble'
+            % (P['xi2'], P['xi_json'], T.sqfree(P['xi2'] * P['xi_json'])))
     say('working curve (whose x-classes are the paired group): y^2 = x(x^2 + %d x + %d) (%s); paired class y = %d'
         % (P['aw'], P['bw'], 'E' if side == "E'" else "E'", y))
     for p in RD['bad']:

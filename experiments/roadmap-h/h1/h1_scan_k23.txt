@@ -1,0 +1,3 @@
+range k = 23: 8388608 <= m < 16777216; 1177 degenerate ratios (seed 3023)
+ratios with tuples beyond those of their degenerate points: 1
+(11875080,6497849) PHANTOM: class dim 0; good primes to 20000; known [(2, 1, 5377231, 18372929), (2, 1, 36745858, 10754462)]; extra [(2, 1, 1, 98795483379599), (2, 1, 197590966759198, 2)]

@@ -1,0 +1,3 @@
+range k = 36: 68719476736 <= m < 137438953472 (seed 4036); bias: at least 15 primes in mn(m^2-n^2), at most 2 odd primes in m^2+n^2
+sampled 94 (draws 710430); no local point 48; no class 43; class kept 0; timed out: class 3, descent 0
+SURVIVORS: none

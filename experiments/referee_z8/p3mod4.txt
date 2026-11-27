@@ -1,0 +1,99 @@
+z8: good primes p = 3 mod 4, p <= 1160: good residues r = m/n mod p at which no t in P^1(F_p) makes all four forms nonzero squares (the four-class set is then empty). Written by an AI model; not read by a person.
+p = 3 (p mod 8 = 3): 0 good residues, 0 with no point 
+p = 7 (p mod 8 = 7): 4 good residues, 4 with no point [2, 3, 4, 5]
+p = 11 (p mod 8 = 3): 8 good residues, 0 with no point 
+p = 19 (p mod 8 = 3): 16 good residues, 0 with no point 
+p = 23 (p mod 8 = 7): 20 good residues, 8 with no point [2, 3, 8, 11, 12, 15, 20, 21]
+p = 31 (p mod 8 = 7): 28 good residues, 16 with no point [4, 5, 6, 8, 11, 12, 13, 14, 17, 18, 19, 20, 23, 25, 26, 27]
+p = 43 (p mod 8 = 3): 40 good residues, 0 with no point 
+p = 47 (p mod 8 = 7): 44 good residues, 8 with no point [5, 15, 19, 22, 25, 28, 32, 42]
+p = 59 (p mod 8 = 3): 56 good residues, 0 with no point 
+p = 67 (p mod 8 = 3): 64 good residues, 0 with no point 
+p = 71 (p mod 8 = 7): 68 good residues, 0 with no point 
+p = 79 (p mod 8 = 7): 76 good residues, 24 with no point [4, 9, 11, 14, 15, 17, 20, 21, 28, 31, 35, 36, 43, 44, 48, 51, 58, 59, 62, 64, 65, 68, 70, 75]
+p = 83 (p mod 8 = 3): 80 good residues, 0 with no point 
+p = 103 (p mod 8 = 7): 100 good residues, 8 with no point [10, 31, 46, 47, 56, 57, 72, 93]
+p = 107 (p mod 8 = 3): 104 good residues, 0 with no point 
+p = 127 (p mod 8 = 7): 124 good residues, 8 with no point [25, 40, 54, 61, 66, 73, 87, 102]
+p = 131 (p mod 8 = 3): 128 good residues, 0 with no point 
+p = 139 (p mod 8 = 3): 136 good residues, 0 with no point 
+p = 151 (p mod 8 = 7): 148 good residues, 8 with no point [14, 21, 36, 54, 97, 115, 130, 137]
+p = 163 (p mod 8 = 3): 160 good residues, 0 with no point 
+p = 167 (p mod 8 = 7): 164 good residues, 0 with no point 
+p = 179 (p mod 8 = 3): 176 good residues, 0 with no point 
+p = 191 (p mod 8 = 7): 188 good residues, 0 with no point 
+p = 199 (p mod 8 = 7): 196 good residues, 0 with no point 
+p = 211 (p mod 8 = 3): 208 good residues, 0 with no point 
+p = 223 (p mod 8 = 7): 220 good residues, 0 with no point 
+p = 227 (p mod 8 = 3): 224 good residues, 0 with no point 
+p = 239 (p mod 8 = 7): 236 good residues, 0 with no point 
+p = 251 (p mod 8 = 3): 248 good residues, 0 with no point 
+p = 263 (p mod 8 = 7): 260 good residues, 0 with no point 
+p = 271 (p mod 8 = 7): 268 good residues, 0 with no point 
+p = 283 (p mod 8 = 3): 280 good residues, 0 with no point 
+p = 307 (p mod 8 = 3): 304 good residues, 0 with no point 
+p = 311 (p mod 8 = 7): 308 good residues, 0 with no point 
+p = 331 (p mod 8 = 3): 328 good residues, 0 with no point 
+p = 347 (p mod 8 = 3): 344 good residues, 0 with no point 
+p = 359 (p mod 8 = 7): 356 good residues, 0 with no point 
+p = 367 (p mod 8 = 7): 364 good residues, 0 with no point 
+p = 379 (p mod 8 = 3): 376 good residues, 0 with no point 
+p = 383 (p mod 8 = 7): 380 good residues, 0 with no point 
+p = 419 (p mod 8 = 3): 416 good residues, 0 with no point 
+p = 431 (p mod 8 = 7): 428 good residues, 0 with no point 
+p = 439 (p mod 8 = 7): 436 good residues, 0 with no point 
+p = 443 (p mod 8 = 3): 440 good residues, 0 with no point 
+p = 463 (p mod 8 = 7): 460 good residues, 0 with no point 
+p = 467 (p mod 8 = 3): 464 good residues, 0 with no point 
+p = 479 (p mod 8 = 7): 476 good residues, 0 with no point 
+p = 487 (p mod 8 = 7): 484 good residues, 0 with no point 
+p = 491 (p mod 8 = 3): 488 good residues, 0 with no point 
+p = 499 (p mod 8 = 3): 496 good residues, 0 with no point 
+p = 503 (p mod 8 = 7): 500 good residues, 0 with no point 
+p = 523 (p mod 8 = 3): 520 good residues, 0 with no point 
+p = 547 (p mod 8 = 3): 544 good residues, 0 with no point 
+p = 563 (p mod 8 = 3): 560 good residues, 0 with no point 
+p = 571 (p mod 8 = 3): 568 good residues, 0 with no point 
+p = 587 (p mod 8 = 3): 584 good residues, 0 with no point 
+p = 599 (p mod 8 = 7): 596 good residues, 0 with no point 
+p = 607 (p mod 8 = 7): 604 good residues, 0 with no point 
+p = 619 (p mod 8 = 3): 616 good residues, 0 with no point 
+p = 631 (p mod 8 = 7): 628 good residues, 0 with no point 
+p = 643 (p mod 8 = 3): 640 good residues, 0 with no point 
+p = 647 (p mod 8 = 7): 644 good residues, 0 with no point 
+p = 659 (p mod 8 = 3): 656 good residues, 0 with no point 
+p = 683 (p mod 8 = 3): 680 good residues, 0 with no point 
+p = 691 (p mod 8 = 3): 688 good residues, 0 with no point 
+p = 719 (p mod 8 = 7): 716 good residues, 0 with no point 
+p = 727 (p mod 8 = 7): 724 good residues, 0 with no point 
+p = 739 (p mod 8 = 3): 736 good residues, 0 with no point 
+p = 743 (p mod 8 = 7): 740 good residues, 0 with no point 
+p = 751 (p mod 8 = 7): 748 good residues, 0 with no point 
+p = 787 (p mod 8 = 3): 784 good residues, 0 with no point 
+p = 811 (p mod 8 = 3): 808 good residues, 0 with no point 
+p = 823 (p mod 8 = 7): 820 good residues, 0 with no point 
+p = 827 (p mod 8 = 3): 824 good residues, 0 with no point 
+p = 839 (p mod 8 = 7): 836 good residues, 0 with no point 
+p = 859 (p mod 8 = 3): 856 good residues, 0 with no point 
+p = 863 (p mod 8 = 7): 860 good residues, 0 with no point 
+p = 883 (p mod 8 = 3): 880 good residues, 0 with no point 
+p = 887 (p mod 8 = 7): 884 good residues, 0 with no point 
+p = 907 (p mod 8 = 3): 904 good residues, 0 with no point 
+p = 911 (p mod 8 = 7): 908 good residues, 0 with no point 
+p = 919 (p mod 8 = 7): 916 good residues, 0 with no point 
+p = 947 (p mod 8 = 3): 944 good residues, 0 with no point 
+p = 967 (p mod 8 = 7): 964 good residues, 0 with no point 
+p = 971 (p mod 8 = 3): 968 good residues, 0 with no point 
+p = 983 (p mod 8 = 7): 980 good residues, 0 with no point 
+p = 991 (p mod 8 = 7): 988 good residues, 0 with no point 
+p = 1019 (p mod 8 = 3): 1016 good residues, 0 with no point 
+p = 1031 (p mod 8 = 7): 1028 good residues, 0 with no point 
+p = 1039 (p mod 8 = 7): 1036 good residues, 0 with no point 
+p = 1051 (p mod 8 = 3): 1048 good residues, 0 with no point 
+p = 1063 (p mod 8 = 7): 1060 good residues, 0 with no point 
+p = 1087 (p mod 8 = 7): 1084 good residues, 0 with no point 
+p = 1091 (p mod 8 = 3): 1088 good residues, 0 with no point 
+p = 1103 (p mod 8 = 7): 1100 good residues, 0 with no point 
+p = 1123 (p mod 8 = 3): 1120 good residues, 0 with no point 
+p = 1151 (p mod 8 = 7): 1148 good residues, 0 with no point 
+primes p = 3 mod 4 at which some good residue has an empty set: [7, 23, 31, 47, 79, 103, 127, 151]

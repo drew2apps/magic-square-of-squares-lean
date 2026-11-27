@@ -221,5 +221,40 @@ and 12 of class D (before this release: 106, that is 41, 30, 24 and 11).
 | `experiments/referee_x6/local_compare.txt`, `weil_check.txt`, `local_mutation.txt`, `g3_family.txt`, `g3_sample.txt`, `samples/compare.txt` | A | `python3 experiments/referee_x6/<script>.py` | descents | about 1 minute together |
 | `experiments/referee_x6/kept63_repo_only.txt`, `control_1109503.txt`, `badalone_witness_all.txt`, `killsets_witness.txt`, `g4_enum.txt`, `samples/*` (reruns) | B | `python3 experiments/referee_x6/<script>.py`; `bash samples/samples.sh` (outputs with timings, or PARI-dependent) | none | 1 to 30 min |
 
-**Counts, all tables, after run 6.** The five tables list 146 rows: 62 of class A, 44 of class B, 27 of class C and 13
-of class D (117 before run 6).
+**Added on 27 November 2026 (UTC), run 7, after release 0.6.0** (written by an AI model; not read by a person). Fable's roadmap H, reviewed by three separate AI agents (`reviews/review_z7.md`, `review_z8.md`, `review_z9.md`), their own checks, and `rank0_ct.py`. Under PARI 2.17.4 (CI's version) every class-A output here matches; the session's outputs were made with PARI 2.19.1.
+
+| File | Class | Command | CI job | Time |
+|---|---|---|---|---|
+| `experiments/roadmap-h/h1/h1_pairs_negative.txt`, `h1_scan_negative.txt`, `h1_rank0_exact_negative.txt`, `h1_iso.txt`, `h1_iso_negative.txt` | A | `python3 <script> [--negative]` in `h1/` (each prints `# matches`) | descents | about 2.5 minutes together |
+| `experiments/roadmap-h/h1/h1_pairs.txt`, `h1_scan_k*.txt`, `h1_partners.txt`, `h1_allphantoms.txt`, `h1_rank0.txt`, `h1_rank0_exact.txt`, `h1_holdouts.txt`, `h1_phantom.txt` | B | `run_h1_*.sh` (the session's runs, PARI 2.19.1; single ratios rerun under 2.17.4 by review z8: identical) | none | 200 s to 50 min each |
+| `experiments/roadmap-h/h1/*_hints.json` | D | written by the finders of `h1_*.py` (PARI points, each checked on use) |  |  |
+| `experiments/roadmap-h/h2/h2_summary.txt`, `h2_control.txt`, `h2_control_negative.txt` | A | `python3 h2_summary.py`, `h2_control.py [--negative]` | descents | 3 s |
+| `experiments/roadmap-h/h2/h2_ex_*.txt`, `h2_hunt_*.txt`, `h2_design_*.txt` | B | `run_h2_exhaust.sh`, `run_h2_hunt*.sh`, `run_h2_design.sh` (samples rerun by review z9: identical) | none | about 0.6 core-hours per block of 1000; hunts 100 to 5,000 s per range |
+| `experiments/roadmap-h/h3/h3_tables.txt`, `h3_tables.json`, `h3_negative.txt`, `h3_check.txt`, `h3_weil_negative.txt`, `h3_sizes.txt` | A | `python3 h3_tables.py [--negative | --check 2000]`, `h3_weil.py --negative`, `h3_sizes.py` | descents | about 25 s together |
+| `experiments/roadmap-h/h3/h3_weil.json`, `h3_weil.txt` | B | `python3 h3_weil.py --write` (method A on every residue) | none | 320 s |
+| `experiments/roadmap-h/h4/h4_negative.txt` | A | `python3 h4_split.py --negative` | descents | 5 s |
+| `experiments/roadmap-h/h4/h4_split.txt` | B | `python3 h4_split.py` under `ulimit -v 8000000` (rerun by review z9: identical) | none | 411 s |
+| `experiments/roadmap-h/h6/h6_split_627_364.json`, `h6_ranks_negative.txt`, `h6_richelot_negative.txt`, `h6_richelot_controls.txt` | A | `python3 h6_split.py 627 364`, `h6_ranks.py --negative`, `h6_richelot.py --negative`, `--controls` | descents | about 20 s together |
+| `experiments/roadmap-h/h6/h6_split_991_263.json`, `h6_ranks_627_364.txt`, `h6_ranks_991_263.txt`, `h6_richelot_627_364.txt`, `h6_richelot_991_263.txt` | B | `bash run_h6.sh m n`, `bash run_h6_rich.sh m n` (PARI's `ellrank` as a finder) | none | 3 to 5 min each |
+| `experiments/roadmap-h/h7/h7_g4k_rank1.txt`, `h7_g4k_rank1_negative.txt`, `h7_e04_rank.txt`, `h7_e04_rank_negative.txt`, `h7_b13000_rank1.txt` | A | `python3 h7_g4k_rank1.py [--negative]`, `h7_e04_rank.py [--negative]`, `h7_g4k_rank1.py 13348,3795 13899,1180` (compared with `diff`) | descents | about 2 minutes together |
+| `experiments/roadmap-h/h7/h7_g4k.jsonl`, `h7_g4k_exact.txt`, `h7_g4k_rank_exact.txt`, `h7_b13000_g4k.jsonl`, `h7_b13000_g4k_exact.txt` | B | `run_h7_g4k.sh`, `run_h7_g4k_exact.sh`, `run_h7_b13000.sh` (F4's scripts, print-only; rerun by review z7 under PARI 2.17.4: identical) | none | 2 to 20 s each |
+| `experiments/roadmap-g/g3/` records of the block `13000 < m ≤ 14000` (`sd_13000_*`, `r0_13000_*`, `dm_13000_*`, `stage_13000.json`, `done_13000`) | B | `run_g3.sh 13000`, `run_g3_stages.sh` (PARI 2.19.1; samples rerun under 2.17.4 by review z9) | none | about 2.3 hours |
+| `scripts/second_descent/rank0_ct.txt`, `rank0_ct_negative.txt` | A | `python3 scripts/second_descent/rank0_ct.py [--negative]` | descents | 15 s |
+| `experiments/referee_z7/my2desc.txt`, `ct_mine.txt`, `velu_check.txt`, `partner_cells.txt`, `run_ct_g4k.txt`, `ct_rank0.txt`, `classes.txt` | A | `python3 -I <script>.py` in `referee_z7/` | descents | about 1 to 3 minutes together |
+| `experiments/referee_z7/run_ct_e04.txt`, `forge_e04.txt` | B | `python3 -I run_ct_e04.py`, `forge_e04.py` | none | 4 to 5 min each |
+| `experiments/referee_z7/z7_points.json` | D | written by the `--find` modes of `run_ct_g4k.py`, `forge_e04.py` (PARI's points, checked on every run) |  |  |
+| `experiments/referee_z8/` outputs of `my_local`, `brute_p2`, `methA_above`, `p3mod4`, `p3_methA`, `h3_counts`, `badprimes_left`, `octic_cut`, `octic_cut_all`, `witness2`, `witness5`, `witness_odd`, `witness_supp` | A | `python3 -I <script>.py` in `referee_z8/` | descents | about 30 s together |
+| `experiments/referee_z8/scan_losses.txt`, `full_descent.txt`, `phantom_mid.txt`, `rank0_check.txt` | B | `python3 -I <script>.py` (rank0_check: PARI's `ellrank`, a cross-check) | none | 4 to 12 min each |
+| `experiments/referee_z9/recount.txt`, `degcount.txt`, `h6_ident.txt`, `c5.txt`, `g3_family_z9.txt`, `sample_h2.txt` | A | `python3 -I <script>.py` in `referee_z9/` | descents | about 1 minute together |
+| `experiments/referee_z9/sample_h2b.txt`, `h4_one.txt`, `g3_samples_compare.txt` | B | `python3 -I sample_h2b.py`, `h4_one.py` (under `ulimit -v 6500000`), `bash g3_samples.sh` then `g3_samples_compare.py` | none | 2 to 6 min each |
+
+**Added on 27 November 2026 (UTC), run 8, after release 0.6.0** (written by an AI model; not read by a person). `Θ₄` on `E⁺` of (945,248), reviewed by a separate AI agent (`reviews/review_z10.md`). The hints file `rank_fisher_theta4_gen_hints.json` (class D, row above) gains the points for this curve.
+
+| File | Class | Command | CI job | Time |
+|---|---|---|---|---|
+| `scripts/g1_full/rank_fisher_theta4_gen_945_248_Eprime.txt`, `rank_fisher_theta4_gen_945_248_Eprime_negative.txt` | A | `python3 rank_fisher_theta4_gen.py 945,248 --side=E' [--negative]` | descents | about 45 s each |
+| `scripts/g1_full/rank_fisher_theta4_norm.txt` | A | `python3 rank_fisher_theta4_norm.py` (re-checks the committed hints exactly; `--find` reproduces them with PARI under GRH, grepped in CI) | descents | 2 s; `--find` 22 s |
+| `scripts/g1_full/rank_fisher_theta4_norm_obstruction.txt` | B | `python3 rank_fisher_theta4_norm.py --obstruction` (the dual obstruction of the level-3 lifts, from sampled local points) | none | 127 s |
+
+**Counts, all tables, after run 8.** The seven tables list 171 rows: 74 of class A, 55 of class B, 27 of class C and 15
+of class D (168 after run 7, 146 after run 6, 117 before run 6).

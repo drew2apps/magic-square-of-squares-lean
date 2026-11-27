@@ -1,0 +1,2 @@
+range k = 21: 2097152 <= m < 4194304; 1177 degenerate ratios (seed 3021)
+ratios with tuples beyond those of their degenerate points: 0

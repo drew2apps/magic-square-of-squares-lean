@@ -1,0 +1,6 @@
+h3_tables : # matches 17 s
+h3_tables --negative: # matches 3 s
+h3_tables --check 2000: # matches 17 s
+h3_weil --write exit=0 320 s
+h3_weil --negative --write exit=0 2 s
+h3_sizes --write exit=0 1 s

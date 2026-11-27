@@ -1,0 +1,8 @@
+rank_fisher_theta4_norm.py: the committed conic points of 945,248 E+, E' side (rank_fisher_theta4_gen_hints.json), re-checked exactly
+C3 (rank_fisher_curves.json): lam = -349, xi = 1271; used with xi = 17794 (the hint '945,248 E+|E'|xi'); xi / 1271 = 14 mod squares
+  945,248 E+|E': over Q(sqrt 5820647) (class group [4, 2, 2] under GRH, PARI bnfinit: for information), m = 652757845403720432359489996800; digits of the coordinates [54, 51, 96, 95, 50, 46]
+  945,248 E+|E'|V: over Q(sqrt -5820647) (class group [604, 2, 2] under GRH, PARI bnfinit: for information), m = 1712362768869576480; digits of the coordinates [56, 52, 94, 91, 40, 35]
+  rank_fisher5.analyse, steps (1)-(8), exact: P1 on the cone over Gamma_1, l_1 tangent along the ruling, f = N(l_1) rational; P3 on the cone over Gamma_3, l_3 tangent, f_dag rational; q through the 8 points and f f_dag = c q^2 mod I(C3') with c of 389 / 97 digits
+  refused: the same points on the json's C3 (xi = 1271): another conic (P1 is not on the cone over Gamma_1)
+  refused: P1 moved off its cone (Z -> Z + 1) (P1 is not on the cone over Gamma_1)
+refusals: 2 of 2

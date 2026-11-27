@@ -1,0 +1,4 @@
+range k = 28: 268435456 <= m < 536870912; 1177 degenerate ratios (seed 3028)
+ratios with tuples beyond those of their degenerate points: 2
+(349960367,118678903) PHANTOM: class dim 0; good primes to 20000; known [(237357806, 699920734, 2, 1), (349960367, 118678903, 2, 1)]; extra [(1, 41532912449037401, 2, 1), (83065824898074802, 2, 2, 1)]
+(518804652,31743595) PHANTOM: class dim 2; good primes to 20000; known [(2, 1, 487061057, 550548247), (2, 1, 1101096494, 974122114)]; extra [(2, 1, 226696337, 1182862567), (2, 1, 2365725134, 453392674)]

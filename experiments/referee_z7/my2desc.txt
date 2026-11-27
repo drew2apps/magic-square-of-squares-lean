@@ -1,0 +1,34 @@
+# my2desc.py self-test (review z7; written by an AI model): dim Sel^2 of y^2 = x^3 - n^2 x by the complete 2-descent
+# reference: PARI 2.17.4 ellrank [r,R,s] recorded at review time (not computed here); R + s + 2 must equal dim Sel^2
+n = 1: dim Sel^2 = 2; PARI [0, 0, 0]: R + s + 2 = 2, agrees
+n = 5: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 6: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 7: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 13: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 14: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 15: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 17: dim Sel^2 = 4; PARI [0, 0, 2]: R + s + 2 = 4, agrees
+n = 21: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 22: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 23: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 29: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 30: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 31: dim Sel^2 = 3; PARI [1, 1, 0]: R + s + 2 = 3, agrees
+n = 34: dim Sel^2 = 4; PARI [2, 2, 0]: R + s + 2 = 4, agrees
+n = 41: dim Sel^2 = 4; PARI [2, 2, 0]: R + s + 2 = 4, agrees
+n = 65: dim Sel^2 = 4; PARI [2, 2, 0]: R + s + 2 = 4, agrees
+n = 73: dim Sel^2 = 4; PARI [0, 0, 2]: R + s + 2 = 4, agrees
+n = 82: dim Sel^2 = 4; PARI [0, 0, 2]: R + s + 2 = 4, agrees
+n = 89: dim Sel^2 = 4; PARI [0, 0, 2]: R + s + 2 = 4, agrees
+n = 97: dim Sel^2 = 4; PARI [0, 0, 2]: R + s + 2 = 4, agrees
+n = 105: dim Sel^2 = 2; PARI [0, 0, 0]: R + s + 2 = 2, agrees
+n = 113: dim Sel^2 = 4; PARI [0, 2, 0]: R + s + 2 = 4, agrees
+n = 137: dim Sel^2 = 4; PARI [2, 2, 0]: R + s + 2 = 4, agrees
+n = 145: dim Sel^2 = 4; PARI [2, 2, 0]: R + s + 2 = 4, agrees
+n = 193: dim Sel^2 = 4; PARI [0, 0, 2]: R + s + 2 = 4, agrees
+n = 205: dim Sel^2 = 5; PARI [1, 1, 2]: R + s + 2 = 5, agrees
+n = 210: dim Sel^2 = 4; PARI [2, 2, 0]: R + s + 2 = 4, agrees
+n = 219: dim Sel^2 = 4; PARI [2, 2, 0]: R + s + 2 = 4, agrees
+n = 226: dim Sel^2 = 4; PARI [2, 2, 0]: R + s + 2 = 4, agrees
+n = 241: dim Sel^2 = 4; PARI [0, 0, 2]: R + s + 2 = 4, agrees
+# all agree

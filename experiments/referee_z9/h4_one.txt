@@ -1,0 +1,7 @@
+Review z9: H4 rerun (h4_split.line) against h4_split.txt. Written by an AI model; not read by a person.
+88373348,70002375  32  bad-alone: EMPTY  kill: 2:b 13:b 1777:b
+    identical to the line of h4_split.txt: True
+120756965,14608109  34  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+    identical to the line of h4_split.txt: True
+711343101,552021980  36  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 53:b
+    identical to the line of h4_split.txt: True

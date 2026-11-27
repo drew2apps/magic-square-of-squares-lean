@@ -1,0 +1,31 @@
+H1: the extra tuples of (1109503,597671). Written by an AI model; not read by a person. Experiment, not counted.
+E_0L of (1109503,597671): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-5044806324638439453125000, -2317692836450396408463936, 2317692836450396408463936)
+  complete 2-descent: dim Sel^2 = 7; Cassels-Tate pairing of rank 2; the images of 3 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 8 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 64
+  tuple (1109503, 597671, 2, 1): D_0L / D(t = 0) = 1: the class of a rational point of E_0L (not excluded here)
+  tuple (1195342, 2219006, 2, 1): D_0L / D(t = 0) = 1326235535026: the class of a rational point of E_0L (not excluded here)
+  tuple (1109503, 597671, 2, 959): D_0L / D(t = 0) = 1: the class of a rational point of E_0L (not excluded here)
+  tuple (1109503, 597671, 1918, 1): D_0L / D(t = 0) = 959: EXCLUDED: its class 959 is not the class of any rational point of E_0L (it is in Sel^2: yes)
+  tuple (1195342, 2219006, 2, 959): D_0L / D(t = 0) = 1326235535026: the class of a rational point of E_0L (not excluded here)
+  tuple (1195342, 2219006, 1918, 1): D_0L / D(t = 0) = 1271859878089934: EXCLUDED: its class 1271859878089934 is not the class of any rational point of E_0L (it is in Sel^2: yes)
+E_0U of (1109503,597671): y^2 = F_0 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-5044806324638439453125000, -2317692836450396408463936, 2317692836450396408463936)
+  complete 2-descent: dim Sel^2 = 7; Cassels-Tate pairing of rank 2; the images of 3 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_0U / D_0U(t = 0) on 8 points: 1
+  classes of x - e* on E_0U(Q): 16; on Sel^2: 64
+  tuple (1109503, 597671, 2, 1): D_0U / D(t = 0) = 1: the class of a rational point of E_0U (not excluded here)
+  tuple (1195342, 2219006, 2, 1): D_0U / D(t = 0) = 1326235535026: the class of a rational point of E_0U (not excluded here)
+  tuple (1109503, 597671, 2, 959): D_0U / D(t = 0) = 959: EXCLUDED: its class 959 is not the class of any rational point of E_0U (it is in Sel^2: yes)
+  tuple (1109503, 597671, 1918, 1): D_0U / D(t = 0) = 1: the class of a rational point of E_0U (not excluded here)
+  tuple (1195342, 2219006, 2, 959): D_0U / D(t = 0) = 1271859878089934: EXCLUDED: its class 1271859878089934 is not the class of any rational point of E_0U (it is in Sel^2: yes)
+  tuple (1195342, 2219006, 1918, 1): D_0U / D(t = 0) = 1326235535026: the class of a rational point of E_0U (not excluded here)
+
+VERDICT per tuple:
+  (1109503, 597671, 2, 1) known (degenerate point): not excluded by E_0L or E_0U
+  (1195342, 2219006, 2, 1) known (degenerate point): not excluded by E_0L or E_0U
+  (1109503, 597671, 2, 959) extra: killed by E_0U
+  (1109503, 597671, 1918, 1) extra: killed by E_0L
+  (1195342, 2219006, 2, 959) extra: killed by E_0U
+  (1195342, 2219006, 1918, 1) extra: killed by E_0L

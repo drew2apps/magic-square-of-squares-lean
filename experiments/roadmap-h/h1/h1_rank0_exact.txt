@@ -1,0 +1,105 @@
+H1: rank-0 quotients of C at the phantoms and their partners, rank bounds exact. Written by an AI model; not read by a person. Experiment, not counted.
+
+(204724,97893): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 9, Cassels-Tate pairing of rank 6)): no conclusion
+  B: y^2 = w K: rank <= 1 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 128; second descent leaves 2^0 and 2^3): no conclusion
+
+(302617,106831): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2)): no conclusion
+  B: y^2 = w K: rank <= 1 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 128; second descent leaves 2^0 and 2^3): no conclusion
+
+(413004,148603): 2 known tuples, 4 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), rank <= 3 (dim Sel^2 = 11, Cassels-Tate pairing of rank 6)): no conclusion
+  B: y^2 = w K: rank <= 2 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 16; second descent leaves 2^0 and 2^4): no conclusion
+
+(561607,264401): 2 known tuples, 4 extra
+  A: y^2 = w f0 f8: rank 0 (over 1 curves of the isogeny class with full 2-torsion: rank <= 0 (dim Sel^2 = 4, Cassels-Tate pairing of rank 2)); 8 torsion points (all of them); t over them: ['-1', '0', '1', 'inf']; tuples on C: 2 (the known ones)
+
+(756492,255635): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 7, Cassels-Tate pairing of rank 4), rank <= 5 (dim Sel^2 = 9, Cassels-Tate pairing of rank 2)): no conclusion
+  B: y^2 = w K: rank <= 1 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 512; second descent leaves 2^0 and 2^3): no conclusion
+
+(853587,255916): 2 known tuples, 4 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), rank <= 3 (dim Sel^2 = 9, Cassels-Tate pairing of rank 4)): no conclusion
+  stopped: the torsion list (4 points) is not all of E(Q)_tors (gcd of #E(F_p)
+
+(1012127,500857): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), pairing not computed (no local point found at 2)): no conclusion
+  B: y^2 = w K: rank <= 5 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 512; second descent leaves 2^0 and 2^7): no conclusion
+
+(1109503,597671): 2 known tuples, 4 extra
+  A: y^2 = w f0 f8: rank 0 (over 1 curves of the isogeny class with full 2-torsion: rank <= 0 (dim Sel^2 = 4, Cassels-Tate pairing of rank 2)); 8 torsion points (all of them); t over them: ['-1', '0', '1', 'inf']; tuples on C: 2 (the known ones)
+
+(1992873,999664): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank 0 (over 1 curves of the isogeny class with full 2-torsion: rank <= 0 (dim Sel^2 = 2, Cassels-Tate pairing of rank 0)); 16 torsion points (all of them); t over them: ['-1', '0', '1', 'inf']; tuples on C: 2 (the known ones)
+
+(2992537,993209): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), pairing not computed (no local point found at 2)): no conclusion
+  B: y^2 = w K: rank <= 2 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 16; second descent leaves 2^0 and 2^4): no conclusion
+
+(11875080,6497849): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 7, Cassels-Tate pairing of rank 4), rank <= 5 (dim Sel^2 = 13, Cassels-Tate pairing of rank 6)): no conclusion
+  B: y^2 = w K: rank <= 3 (descent via 2-isogeny: |Sel(phi)| 2, |Sel(phi^)| 16; second descent leaves 2^1 and 2^4): no conclusion
+
+(18372929,5377231): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 3 (dim Sel^2 = 5, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), pairing not computed (no local point found at 2)): no conclusion
+  B: y^2 = w K: rank <= 5 (descent via 2-isogeny: |Sel(phi)| 2, |Sel(phi^)| 64; second descent leaves 2^1 and 2^6): no conclusion
+
+(32396425,3694248): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), rank <= 3 (dim Sel^2 = 7, Cassels-Tate pairing of rank 2), rank <= 5 (dim Sel^2 = 9, Cassels-Tate pairing of rank 2)): no conclusion
+  B: y^2 = w K: rank <= 4 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 256; second descent leaves 2^0 and 2^6): no conclusion
+
+(36090673,28702177): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 2 (over 3 curves of the isogeny class with full 2-torsion: rank <= 2 (dim Sel^2 = 6, Cassels-Tate pairing of rank 2), rank <= 2 (dim Sel^2 = 6, Cassels-Tate pairing of rank 2), pairing not computed (no local point found at 2)): no conclusion
+  B: y^2 = w K: rank <= 5 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 128; second descent leaves 2^0 and 2^7): no conclusion
+
+(175775580,15972419): 2 known tuples, 4 extra
+  A: y^2 = w f0 f8: rank 0 (over 1 curves of the isogeny class with full 2-torsion: rank <= 0 (dim Sel^2 = 4, Cassels-Tate pairing of rank 2)); 16 torsion points (all of them); t over them: ['-1', '0', '1', 'inf']; tuples on C: 2 (the known ones)
+
+(189089400,156063271): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 3 (over 3 curves of the isogeny class with full 2-torsion: rank <= 3 (dim Sel^2 = 5, Cassels-Tate pairing of rank 0), rank <= 3 (dim Sel^2 = 7, Cassels-Tate pairing of rank 2), rank <= 5 (dim Sel^2 = 9, Cassels-Tate pairing of rank 2)): no conclusion
+  B: y^2 = w K: rank <= 4 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 4096; second descent leaves 2^0 and 2^6): no conclusion
+
+(191747999,159803161): 2 known tuples, 4 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 3 (dim Sel^2 = 5, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0)): no conclusion
+  B: y^2 = w K: rank <= 6 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 256; second descent leaves 2^0 and 2^8): no conclusion
+
+(231641256,72371617): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), rank <= 3 (dim Sel^2 = 11, Cassels-Tate pairing of rank 6)): no conclusion
+  B: y^2 = w K: rank <= 2 (descent via 2-isogeny: |Sel(phi)| 2, |Sel(phi^)| 128; second descent leaves 2^1 and 2^3): no conclusion
+
+(234319635,115640732): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 7, Cassels-Tate pairing of rank 4), rank <= 5 (dim Sel^2 = 11, Cassels-Tate pairing of rank 4)): no conclusion
+  B: y^2 = w K: rank <= 2 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 1024; second descent leaves 2^0 and 2^4): no conclusion
+
+(304012873,159269639): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank 0 (over 1 curves of the isogeny class with full 2-torsion: rank <= 0 (dim Sel^2 = 4, Cassels-Tate pairing of rank 2)); 8 torsion points (all of them); t over them: ['-1', '0', '1', 'inf']; tuples on C: 2 (the known ones)
+
+(345152671,33026129): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank 0 (over 2 curves of the isogeny class with full 2-torsion: rank <= 2 (dim Sel^2 = 6, Cassels-Tate pairing of rank 2), rank <= 0 (dim Sel^2 = 6, Cassels-Tate pairing of rank 4)); 8 torsion points (all of them); t over them: ['-1', '0', '1', 'inf']; tuples on C: 2 (the known ones)
+
+(349960367,118678903): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank 0 (over 2 curves of the isogeny class with full 2-torsion: rank <= 2 (dim Sel^2 = 4, Cassels-Tate pairing of rank 0), rank <= 0 (dim Sel^2 = 4, Cassels-Tate pairing of rank 2)); 8 torsion points (all of them); t over them: ['-1', '0', '1', 'inf']; tuples on C: 2 (the known ones)
+
+(518804652,31743595): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0), rank <= 1 (dim Sel^2 = 9, Cassels-Tate pairing of rank 6), rank <= 7 (dim Sel^2 = 13, Cassels-Tate pairing of rank 4)): no conclusion
+  B: y^2 = w K: rank <= 3 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 2048; second descent leaves 2^0 and 2^5): no conclusion
+
+(550548247,487061057): 2 known tuples, 2 extra
+  A: y^2 = w f0 f8: rank <= 1 (over 3 curves of the isogeny class with full 2-torsion: rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2), pairing not computed (no local point found at 2)): no conclusion
+  B: y^2 = w K: rank <= 7 (descent via 2-isogeny: |Sel(phi)| 1, |Sel(phi^)| 2048; second descent leaves 2^0 and 2^9): no conclusion
+
+VERDICT (a ratio and its partner together):
+  (204724, 97893) and (302617, 106831): not excluded
+  (413004, 148603) and (561607, 264401): every extra tuple excluded (rank 0 of y^2 = w f0 f8 at (561607, 264401))
+  (756492, 255635) and (1012127, 500857): not excluded
+  (853587, 255916) and (1109503, 597671): every extra tuple excluded (rank 0 of y^2 = w f0 f8 at (1109503, 597671))
+  (1992873, 999664) and (2992537, 993209): every extra tuple excluded (rank 0 of y^2 = w f0 f8 at (1992873, 999664))
+  (11875080, 6497849) and (18372929, 5377231): not excluded
+  (32396425, 3694248) and (36090673, 28702177): not excluded
+  (175775580, 15972419) and (191747999, 159803161): every extra tuple excluded (rank 0 of y^2 = w f0 f8 at (175775580, 15972419))
+  (189089400, 156063271) and (345152671, 33026129): every extra tuple excluded (rank 0 of y^2 = w f0 f8 at (345152671, 33026129))
+  (231641256, 72371617) and (304012873, 159269639): every extra tuple excluded (rank 0 of y^2 = w f0 f8 at (304012873, 159269639))
+  (234319635, 115640732) and (349960367, 118678903): every extra tuple excluded (rank 0 of y^2 = w f0 f8 at (349960367, 118678903))
+  (518804652, 31743595) and (550548247, 487061057): not excluded
+phantom pairs: 12; excluded by an exact rank-0 quotient: 7

@@ -1,0 +1,48 @@
+H1: the extra tuples of the scan phantom (349960367,118678903). Written by an AI model; not read by a person. Experiment, not counted.
+the four pair curves have the same integral model; 7 points pooled from PARI on the four
+E_0L of (349960367,118678903): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-37295595990918082096801894046755208, -18006606893624804225487526989453120, 18006606893624804225487526989453120)
+  complete 2-descent: dim Sel^2 = 9; Cassels-Tate pairing of rank 2; the images of 7 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 12 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 256
+  classes of x - e* on the kernel of the pairing (dimension 7): 64
+  tuple (237357806, 699920734, 2, 1): D_0L / D(t = 0) = 83065824898074802: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (349960367, 118678903, 2, 1): D_0L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1, 41532912449037401, 2, 1): D_0L / D(t = 0) = 349960367: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (83065824898074802, 2, 2, 1): D_0L / D(t = 0) = 237357806: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+E_0U of (349960367,118678903): y^2 = F_0 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-37295595990918082096801894046755208, -18006606893624804225487526989453120, 18006606893624804225487526989453120)
+  complete 2-descent: dim Sel^2 = 9; Cassels-Tate pairing of rank 2; the images of 7 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_0U / D_0U(t = 0) on 12 points: 1
+  classes of x - e* on E_0U(Q): 16; on Sel^2: 256
+  classes of x - e* on the kernel of the pairing (dimension 7): 64
+  tuple (237357806, 699920734, 2, 1): D_0U / D(t = 0) = 83065824898074802: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (349960367, 118678903, 2, 1): D_0U / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1, 41532912449037401, 2, 1): D_0U / D(t = 0) = 349960367: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (83065824898074802, 2, 2, 1): D_0U / D(t = 0) = 237357806: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+E_8L of (349960367,118678903): y^2 = F_8 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-37295595990918082096801894046755208, -18006606893624804225487526989453120, 18006606893624804225487526989453120)
+  complete 2-descent: dim Sel^2 = 9; Cassels-Tate pairing of rank 2; the images of 7 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_8L / D_8L(t = 0) on 12 points: 1
+  classes of x - e* on E_8L(Q): 16; on Sel^2: 256
+  classes of x - e* on the kernel of the pairing (dimension 7): 64
+  tuple (237357806, 699920734, 2, 1): D_8L / D(t = 0) = 83065824898074802: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (349960367, 118678903, 2, 1): D_8L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1, 41532912449037401, 2, 1): D_8L / D(t = 0) = 349960367: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (83065824898074802, 2, 2, 1): D_8L / D(t = 0) = 237357806: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+E_8U of (349960367,118678903): y^2 = F_8 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-37295595990918082096801894046755208, -18006606893624804225487526989453120, 18006606893624804225487526989453120)
+  complete 2-descent: dim Sel^2 = 9; Cassels-Tate pairing of rank 2; the images of 7 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_8U / D_8U(t = 0) on 12 points: 1
+  classes of x - e* on E_8U(Q): 16; on Sel^2: 256
+  classes of x - e* on the kernel of the pairing (dimension 7): 64
+  tuple (237357806, 699920734, 2, 1): D_8U / D(t = 0) = 83065824898074802: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (349960367, 118678903, 2, 1): D_8U / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1, 41532912449037401, 2, 1): D_8U / D(t = 0) = 349960367: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (83065824898074802, 2, 2, 1): D_8U / D(t = 0) = 237357806: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+
+VERDICT per tuple:
+  (237357806, 699920734, 2, 1) known (degenerate point): not excluded by the four pair curves
+  (349960367, 118678903, 2, 1) known (degenerate point): not excluded by the four pair curves
+  (1, 41532912449037401, 2, 1) extra: not excluded by the four pair curves
+  (83065824898074802, 2, 2, 1) extra: not excluded by the four pair curves

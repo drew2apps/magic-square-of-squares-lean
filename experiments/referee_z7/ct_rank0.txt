@@ -1,0 +1,48 @@
+# ct_rank0.py (review z7; written by an AI model): rank0_ct.py's curves, independently
+(1) magma_second_ranks.json: curve +14 of (609,200), curve +14 of (809,409); same a-invariants: True
+    second_123.jsonl [609, 200]: rank-0 curve (twist 1) isomorphic over Q to it: True (u^2 = 1)
+    second_123.jsonl [809, 409]: rank-0 curve (twist -1) isomorphic over Q to it: True (u^2 = 4)
+(2) x0 = 15821452025664321 (record 15821452025664321), A = 47464356076992964, B = 3408344719936636397319208503016324 (record: same); E' roots (-69297704883520000, 0, 164226417037505928); record class_full_2descent[0] roots [0, -69297704883520000, 164226417037505928]
+(3) my descent and pairing
+  E' of +14, seed 3: dim Sel^2 = 6, pairing rank 4, rank <= 0; images of T1, T2 and 0 point(s) span 2 = all of the kernel (dim 2), so rank = 0 exactly
+    +1 +1 +1 -1 -1 +1
+    +1 +1 +1 +1 -1 -1
+    +1 +1 +1 -1 -1 +1
+    -1 +1 -1 +1 -1 +1
+    -1 -1 -1 -1 +1 -1
+    +1 -1 +1 +1 -1 +1
+  E' of +14, seed 4: dim Sel^2 = 6, pairing rank 4, rank <= 0; images of T1, T2 and 0 point(s) span 2 = all of the kernel (dim 2), so rank = 0 exactly
+    +1 +1 +1 -1 -1 +1
+    +1 +1 +1 +1 -1 -1
+    +1 +1 +1 -1 -1 +1
+    -1 +1 -1 +1 -1 +1
+    -1 -1 -1 -1 +1 -1
+    +1 -1 +1 +1 -1 +1
+    rank0_ct.txt: dim Sel^2 = 6, pairing rank 4: agrees
+  class member (0, 69297704883520000, 233524121921025928): dim Sel^2 = 6, pairing rank 4, rank <= 0; images of T1, T2 and 0 point(s) span 2 = all of the kernel (dim 2), so rank = 0 exactly
+    +1 +1 +1 -1 -1 +1
+    +1 +1 +1 +1 -1 -1
+    +1 +1 +1 -1 -1 +1
+    -1 +1 -1 +1 -1 +1
+    -1 -1 -1 -1 +1 -1
+    +1 -1 +1 +1 -1 +1
+  class member (0, -233524121921025928, -164226417037505928): dim Sel^2 = 6, pairing rank 4, rank <= 0; images of T1, T2 and 0 point(s) span 2 = all of the kernel (dim 2), so rank = 0 exactly
+    +1 +1 +1 -1 -1 +1
+    +1 +1 +1 +1 -1 -1
+    +1 +1 +1 -1 -1 +1
+    -1 +1 -1 +1 -1 +1
+    -1 -1 -1 -1 +1 -1
+    +1 -1 +1 +1 -1 +1
+  control (861,620) +23, E' (-63749906513795200, 0, 4642784309331971208): dim Sel^2 = 4, pairing rank 2, rank <= 0; images of T1, T2 and 0 point(s) span 2 = all of the kernel (dim 2), so rank = 0 exactly
+    +1 -1 +1 -1
+    -1 +1 +1 -1
+    +1 +1 +1 +1
+    -1 -1 +1 +1
+    rank0_ct.txt: agrees
+  control (440,279), lball_exact's curve: dim Sel^2 = 4, pairing rank 0, rank <= 2; images of T1, T2 and 0 point(s) span 2 = part of the kernel (dim 4)
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    +1 +1 +1 +1
+    rank0_ct.txt: agrees
+# end

@@ -1,0 +1,5 @@
+H1: rank-0 quotients, forged inputs. Written by an AI model; not read by a person.
+a torsion point withheld: refused (the list is shorter than the gcd of #E(F_p))
+  A: y^2 = w f0 f8: rank 0 (over 1 curves of the isogeny class with full 2-torsion: rank <= 0 (dim Sel^2 = 4, Cassels-Tate pairing of rank 2)); 8 torsion points (all of them); t over them: ['-1', '0', '1', 'inf']; tuples on C: 2 (the known ones)
+an "extra" tuple that is the tuple of t = 0: not excluded, as it must be
+a known tuple that is not over the torsion: refused

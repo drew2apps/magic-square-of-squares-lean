@@ -1,0 +1,13 @@
+Review z9: the quotient y^2 = L*U of (627,364) and y^2 = F0*F8 of (991,263). Written by an AI model; not read by a person.
+(627,364) y^2 = L*U: minimal model of the Jacobian [0, -1, 0, -20726093229249919718240, 867584179339740364535547318393600]
+    torsion [4, 2] (order 8); root number -1; conductor 34500574027920
+    rational points of the quartic: t = [0, 1, -1] with y = +-, and 2 at infinity: 8 points
+(991,263) y^2 = F0*F8: minimal model of the Jacobian [0, -1, 0, -20726093229249919718240, 867584179339740364535547318393600]
+    torsion [4, 2] (order 8); root number -1; conductor 34500574027920
+    rational points of the quartic: t = [0, 1, -1] with y = +-, and 2 at infinity: 8 points
+(627,364) y^2 = F0*F8: minimal model of the Jacobian [1, 0, 0, -1295380826828119982390, -13556002802183443195867926849900]
+    torsion [4, 2] (order 8); root number -1; conductor 4312571753490
+    rational points of the quartic: t = [0, 1, -1] with y = +-, and 2 at infinity: 8 points
+Jacobian of L*U (627,364) = Jacobian of F0*F8 (991,263): True
+(627,364) classes whose PARI lower bound exceeds the points returned: c3 rank 4 (bounds meet), 4 maps, at most 3 points on one curve; c5 rank 1 (bounds meet), 1 maps, at most 0 points on one curve; c6 rank 2 (bounds meet), 2 maps, at most 1 points on one curve; c9 rank 4 (bounds meet), 2 maps, at most 3 points on one curve; c16 rank 2 (bounds meet), 2 maps, at most 1 points on one curve
+(991,263) classes whose PARI lower bound exceeds the points returned: c1 rank 1 (bounds meet), 1 maps, at most 0 points on one curve; c3 rank 4 (bounds meet), 4 maps, at most 3 points on one curve; c7 rank 4 (bounds meet), 2 maps, at most 3 points on one curve; c11 rank 2 (bounds meet), 2 maps, at most 1 points on one curve; c12 rank 2 (bounds meet), 2 maps, at most 1 points on one curve

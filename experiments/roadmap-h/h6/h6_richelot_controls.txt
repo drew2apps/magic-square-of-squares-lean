@@ -1,0 +1,20 @@
+c = 2: PARI rank E1 + rank E2 in [1,1]; Richelot bound 1: consistent
+    grouping [2, 2, 2]: S = [2, 3]; dim Sel(phi-hat side) 2, dim Sel(phi side) 3; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 1; 8 global point differences checked in Sel
+c = 3: PARI rank E1 + rank E2 in [0,0]; Richelot bound 0: consistent
+    grouping [2, 2, 2]: S = [2, 3, 7]; dim Sel(phi-hat side) 2, dim Sel(phi side) 2; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 0 (quadratic points used); 0 global point differences checked in Sel
+c = -2: PARI rank E1 + rank E2 in [1,1]; Richelot bound 1: consistent
+    grouping [2, 2, 2]: S = [2, 3, 7]; dim Sel(phi-hat side) 2, dim Sel(phi side) 3; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 1 (quadratic points used); 0 global point differences checked in Sel
+c = 5: PARI rank E1 + rank E2 in [2,2]; Richelot bound 2: consistent
+    grouping [2, 2, 2]: S = [2, 3, 5, 7]; dim Sel(phi-hat side) 3, dim Sel(phi side) 3; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 2 (quadratic points used); 8 global point differences checked in Sel
+c = -3: PARI rank E1 + rank E2 in [1,1]; Richelot bound 1: consistent
+    grouping [2, 2, 2]: S = [2, 3, 13]; dim Sel(phi-hat side) 2, dim Sel(phi side) 3; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 1 (quadratic points used); 0 global point differences checked in Sel
+c = 7: PARI rank E1 + rank E2 in [1,1]; Richelot bound 1: consistent
+    grouping [2, 2, 2]: S = [2, 3, 7, 43]; dim Sel(phi-hat side) 2, dim Sel(phi side) 3; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 1 (quadratic points used); 0 global point differences checked in Sel
+c = 10: PARI rank E1 + rank E2 in [2,2]; Richelot bound 2: consistent
+    grouping [2, 2, 2]: S = [2, 3, 5, 7, 13]; dim Sel(phi-hat side) 3, dim Sel(phi side) 3; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 2; 4 global point differences checked in Sel
+c = -6: PARI rank E1 + rank E2 in [1,1]; Richelot bound 1: consistent
+    grouping [2, 2, 2]: S = [2, 3, 43]; dim Sel(phi-hat side) 2, dim Sel(phi side) 3; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 1; 0 global point differences checked in Sel
+c = 13: PARI rank E1 + rank E2 in [2,2]; Richelot bound 2: consistent
+    grouping [2, 2, 2]: S = [2, 3, 13, 157]; dim Sel(phi-hat side) 2, dim Sel(phi side) 4; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 2 (quadratic points used); 0 global point differences checked in Sel
+c = -11: PARI rank E1 + rank E2 in [2,2]; Richelot bound 2: consistent
+    grouping [2, 2, 2]: S = [2, 3, 7, 11, 19]; dim Sel(phi-hat side) 3, dim Sel(phi side) 3; dim delta(T) 2, dim delta-dual(T-dual) 2; rank J(Q) <= 2 (quadratic points used); 0 global point differences checked in Sel

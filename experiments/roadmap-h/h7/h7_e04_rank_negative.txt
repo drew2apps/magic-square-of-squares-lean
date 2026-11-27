@@ -1,0 +1,5 @@
+E04 exact rank bounds, negative and positive controls. Written by an AI model; not read by a person.
+a forged model (S + 1) for 15,8: refused (the stated roots are not the 2-torsion of the model)
+a forged generator x + 1 for 15,8: refused (the generator abscissa is not the x of a point of infinite order on E04)
+the 2-torsion point x = 0 as the generator: refused (the generator abscissa is not the x of a point of infinite order on E04)
+positive control (rank >= 2 by PARI): 1 curve(s): rank <= 2 (dim Sel^2 = 4, Cassels-Tate pairing of rank 0); bound 2: consistent

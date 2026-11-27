@@ -1,0 +1,6 @@
+H2 control: h2_exhaust.py against G2 on 14900 < m <= 15000. Written by an AI model; not read by a person. Experiment, not counted.
+class-keeping ratios: H2 128, G2 128, same set: yes
+log2 of the tuple space and "P = 0 exactly when the bad primes alone empty the set": agree on every ratio
+P <= the largest good prime of G2's irredundant kill set, on every ratio that needs one: yes (equal on 13 of 13)
+ratios that need a good prime: 13; survivors: 0
+RESULT: h2_exhaust agrees with G2

@@ -1,0 +1,73 @@
+# run_ct_e04.py (review z7; written by an AI model): my complete 2-descent and Cassels-Tate pairing on every E04
+# curve of dm_evidence.txt, compared with the first curve of each line of H7's h7_e04_rank.txt
+E04 lines 91, curves (run pair, G) 66, distinct run pairs 66
+15,8: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+21,20: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+23,7: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+156,133: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+176,57: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+187,84: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+220,21: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+233,119: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+241,199: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+247,96: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+457,49: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+255,32: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+287,241: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+287,223: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+320,289: dim Sel^2 = 7, pairing rank 4, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+   H7 first curve: pairing not computed
+340,189: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+343,151: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+377,336: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+599,193: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+439,359: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+416,87: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+889,31: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+465,368: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+569,383: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+527,439: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+769,217: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+503,329: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+520,231: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+779,301: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+1017,65: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+937,167: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+572,315: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+977,311: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+660,259: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+823,511: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+672,185: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+684,37: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+700,429: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+1049,399: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+1009,463: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+759,280: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+777,464: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+779,660: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+839,727: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+1457,167: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+836,123: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+1581,91: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+840,559: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+1015,713: dim Sel^2 = 5, pairing rank 0, rank <= 3; images of T1, T2 and 1 point(s) span 3 = part of the kernel (dim 5)
+1633,103: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+884,387: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+899,60: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+1623,175: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+912,215: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+924,893: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+928,585: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+1351,519: dim Sel^2 = 7, pairing rank 4, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+957,124: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+959,713: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+959,839: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+960,799: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+964,541: dim Sel^2 = 5, pairing rank 2, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+975,448: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+1015,961: dim Sel^2 = 5, pairing rank 0, rank <= 3; images of T1, T2 and 1 point(s) span 3 = part of the kernel (dim 5)
+1649,329: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 2 = part of the kernel (dim 3)
+992,705: dim Sel^2 = 3, pairing rank 0, rank <= 1; images of T1, T2 and 1 point(s) span 3 = all of the kernel (dim 3), so rank = 1 exactly
+tally on E04 itself, (dim Sel^2, pairing rank, bound): (3, 0, 1) x46, (5, 0, 3) x2, (5, 2, 1) x16, (7, 4, 1) x2
+curves where H7's first curve differs from mine: [(320, 289)]
+# end

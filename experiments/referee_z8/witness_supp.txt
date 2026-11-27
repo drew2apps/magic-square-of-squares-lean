@@ -1,0 +1,16 @@
+z8: explicit points at the odd support primes for the tuples of the 7 true phantom pairs. Written by an AI model; not read by a person.
+(204724,97893): odd support primes [3, 7, 13, 17, 31, 47, 73, 127, 149, 2273, 2543]; tuples without a point found: []
+(302617,106831): odd support primes [3, 7, 13, 17, 31, 47, 73, 127, 149, 2273, 2543]; tuples without a point found: []
+(413004,148603): odd support primes [3, 7, 13, 17, 23, 71, 103, 127, 151, 271, 561607]; tuples without a point found: []
+(561607,264401): odd support primes [3, 7, 13, 17, 23, 71, 103, 127, 151, 271, 561607]; tuples without a point found: []
+(756492,255635): odd support primes [3, 5, 7, 11, 29, 41, 43, 479, 521, 2113, 71551]; tuples without a point found: []
+(1012127,500857): odd support primes [3, 5, 7, 11, 29, 41, 43, 479, 521, 2113, 71551]; tuples without a point found: []
+(853587,255916): odd support primes [3, 7, 17, 137, 467, 593, 797, 1871, 597671]; tuples without a point found: []
+(1109503,597671): odd support primes [3, 7, 17, 137, 467, 593, 797, 1871, 597671]; tuples without a point found: []
+(1992873,999664): odd support primes [3, 7, 23, 31, 43, 47, 199, 599, 1109, 1453, 63671]; tuples without a point found: []
+(2992537,993209): odd support primes [3, 7, 23, 31, 43, 47, 199, 599, 1109, 1453, 63671]; tuples without a point found: []
+(189089400,156063271): odd support primes [3, 5, 7, 13, 31, 89, 229, 673, 1583, 3541, 5399, 7489, 63929]; tuples without a point found: []
+(345152671,33026129): odd support primes [3, 5, 7, 13, 31, 89, 229, 673, 1583, 3541, 5399, 7489, 63929]; tuples without a point found: []
+(231641256,72371617): odd support primes [3, 7, 11, 23, 29, 47, 163, 439, 751, 769, 3323, 281233, 362801]; tuples without a point found: []
+(304012873,159269639): odd support primes [3, 7, 11, 23, 29, 47, 163, 439, 751, 769, 3323, 281233, 362801]; tuples without a point found: []
+(prime, tuple) cases: 712; with an explicit point: 712

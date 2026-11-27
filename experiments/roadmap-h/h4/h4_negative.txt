@@ -1,0 +1,5 @@
+291,224  16  bad-alone: EMPTY  kill: 2:b 13:b  (split: agrees with the unsplit join)
+308,185  20  bad-alone: EMPTY  kill: 2:b 5:b 29:b  (split: agrees with the unsplit join)
+465,416  16  bad-alone: 6 left  kill: 2:b 5:b 7:b 41:g  (split: agrees with the unsplit join)
+511,260  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:g  (split: agrees with the unsplit join)
+(12,5) degenerate, primes 2, 3, 5, 13: split join keeps 8 tuples, the known [(2, 1, 7, 17), (2, 1, 34, 14)]: kept, as they must be

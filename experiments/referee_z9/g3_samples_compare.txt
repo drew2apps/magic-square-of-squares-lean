@@ -1,0 +1,23 @@
+Review z9: G3 block 13000 sample reruns against the committed records. Written by an AI model; not read by a person.
+second descent [13001, 9679] closed: identical apart from sec
+second descent [13348, 3795] open: identical apart from sec
+second descent [13447, 1303] open: identical apart from sec
+rank 0 13015,4872 closes by ['w*f0*f8']: identical
+rank 0 13049,5543 closes by ['w*K']: identical
+rank 0 13348,3795 closes by none: identical
+Demjanenko-Manin [13439, 7440] E (of [13439, 7440]) closed: identical apart from sec
+Demjanenko-Manin [13439, 7440] D1 (of [13439, 7440]) rank not 1: identical apart from sec
+Demjanenko-Manin [13439, 7440] Sig+ (of [13439, 7440]) closed: identical apart from sec
+Demjanenko-Manin [13439, 7440] Sig- (of [13439, 7440]) closed: DIFFERENT in hG: 6.659894683951019 here, 6.659894683951018 committed
+Demjanenko-Manin [20879, 5999] E-partner (of [13439, 7440]) rank not 1: identical apart from sec
+Demjanenko-Manin [20879, 5999] D1-partner (of [13439, 7440]) rank not 1: identical apart from sec
+Demjanenko-Manin [20879, 5999] Sig+-partner (of [13439, 7440]) rank not 1: DIFFERENT in rank: [1, 3] here, [3, 3] committed
+Demjanenko-Manin [20879, 5999] Sig--partner (of [13439, 7440]) rank not 1: identical apart from sec
+Demjanenko-Manin [13447, 1303] E (of [13447, 1303]) closed: identical apart from sec
+Demjanenko-Manin [13447, 1303] D1 (of [13447, 1303]) closed: identical apart from sec
+Demjanenko-Manin [13447, 1303] Sig+ (of [13447, 1303]) rank not 1: identical apart from sec
+Demjanenko-Manin [13447, 1303] Sig- (of [13447, 1303]) rank not 1: identical apart from sec
+Demjanenko-Manin [7375, 6072] E-partner (of [13447, 1303]) rank not 1: identical apart from sec
+Demjanenko-Manin [7375, 6072] D1-partner (of [13447, 1303]) rank not 1: identical apart from sec
+Demjanenko-Manin [7375, 6072] Sig+-partner (of [13447, 1303]) rank not 1: identical apart from sec
+Demjanenko-Manin [7375, 6072] Sig--partner (of [13447, 1303]) rank not 1: identical apart from sec

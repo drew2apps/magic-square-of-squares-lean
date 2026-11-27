@@ -1,0 +1,335 @@
+H1: every phantom of the scan on its pair curves. Written by an AI model; not read by a person. Experiment, not counted.
+
+(204724,97893), square type: known [(2, 1, 106831, 302617), (2, 1, 605234, 213662)]; extra [(2, 1, 119521, 270487), (2, 1, 540974, 239042)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L: stopped (no base point t0 found)
+  E_0U: stopped (no base point t0 found)
+  E_8L: stopped (no base point t0 found)
+  E_8U: stopped (no base point t0 found)
+
+(561607,264401), twice-square type: known [(528802, 1123214, 1, 2), (561607, 264401, 1, 2)]; extra [(528802, 1123214, 1, 34210498), (528802, 1123214, 17105249, 2), (561607, 264401, 1, 34210498), (561607, 264401, 17105249, 2)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U E_LU
+  E_0L E_0U E_8L E_8U have the same integral model and base point; 8 points pooled
+E_0L of (561607,264401): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-296928071911143753125000, -145813395481213424362944, 145813395481213424362944)
+  complete 2-descent: dim Sel^2 = 13; Cassels-Tate pairing of rank 8; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 13 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 2048
+  tuple (528802, 1123214, 1, 2): D_0L / D(t = 0) = 296978904814: the class of a rational point of E_0L (not excluded here)
+  tuple (561607, 264401, 1, 2): D_0L / D(t = 0) = 1: the class of a rational point of E_0L (not excluded here)
+  tuple (528802, 1123214, 1, 34210498): D_0L / D(t = 0) = 296978904814: the class of a rational point of E_0L (not excluded here)
+  tuple (528802, 1123214, 17105249, 2): D_0L / D(t = 0) = 5079898114590768686: EXCLUDED: its class 5079898114590768686 is not the class of any rational point of E_0L (it is in Sel^2: yes)
+  tuple (561607, 264401, 1, 34210498): D_0L / D(t = 0) = 1: the class of a rational point of E_0L (not excluded here)
+  tuple (561607, 264401, 17105249, 2): D_0L / D(t = 0) = 17105249: EXCLUDED: its class 17105249 is not the class of any rational point of E_0L (it is in Sel^2: yes)
+E_0U of (561607,264401): y^2 = F_0 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-296928071911143753125000, -145813395481213424362944, 145813395481213424362944)
+  complete 2-descent: dim Sel^2 = 13; Cassels-Tate pairing of rank 8; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_0U / D_0U(t = 0) on 13 points: 1
+  classes of x - e* on E_0U(Q): 16; on Sel^2: 2048
+  tuple (528802, 1123214, 1, 2): D_0U / D(t = 0) = 296978904814: the class of a rational point of E_0U (not excluded here)
+  tuple (561607, 264401, 1, 2): D_0U / D(t = 0) = 1: the class of a rational point of E_0U (not excluded here)
+  tuple (528802, 1123214, 1, 34210498): D_0U / D(t = 0) = 5079898114590768686: EXCLUDED: its class 5079898114590768686 is not the class of any rational point of E_0U (it is in Sel^2: yes)
+  tuple (528802, 1123214, 17105249, 2): D_0U / D(t = 0) = 296978904814: the class of a rational point of E_0U (not excluded here)
+  tuple (561607, 264401, 1, 34210498): D_0U / D(t = 0) = 17105249: EXCLUDED: its class 17105249 is not the class of any rational point of E_0U (it is in Sel^2: yes)
+  tuple (561607, 264401, 17105249, 2): D_0U / D(t = 0) = 1: the class of a rational point of E_0U (not excluded here)
+E_8L of (561607,264401): y^2 = F_8 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-296928071911143753125000, -145813395481213424362944, 145813395481213424362944)
+  complete 2-descent: dim Sel^2 = 13; Cassels-Tate pairing of rank 8; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_8L / D_8L(t = 0) on 13 points: 1
+  classes of x - e* on E_8L(Q): 16; on Sel^2: 2048
+  tuple (528802, 1123214, 1, 2): D_8L / D(t = 0) = 296978904814: the class of a rational point of E_8L (not excluded here)
+  tuple (561607, 264401, 1, 2): D_8L / D(t = 0) = 1: the class of a rational point of E_8L (not excluded here)
+  tuple (528802, 1123214, 1, 34210498): D_8L / D(t = 0) = 296978904814: the class of a rational point of E_8L (not excluded here)
+  tuple (528802, 1123214, 17105249, 2): D_8L / D(t = 0) = 5079898114590768686: EXCLUDED: its class 5079898114590768686 is not the class of any rational point of E_8L (it is in Sel^2: yes)
+  tuple (561607, 264401, 1, 34210498): D_8L / D(t = 0) = 1: the class of a rational point of E_8L (not excluded here)
+  tuple (561607, 264401, 17105249, 2): D_8L / D(t = 0) = 17105249: EXCLUDED: its class 17105249 is not the class of any rational point of E_8L (it is in Sel^2: yes)
+E_8U of (561607,264401): y^2 = F_8 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-296928071911143753125000, -145813395481213424362944, 145813395481213424362944)
+  complete 2-descent: dim Sel^2 = 13; Cassels-Tate pairing of rank 8; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_8U / D_8U(t = 0) on 13 points: 1
+  classes of x - e* on E_8U(Q): 16; on Sel^2: 2048
+  tuple (528802, 1123214, 1, 2): D_8U / D(t = 0) = 296978904814: the class of a rational point of E_8U (not excluded here)
+  tuple (561607, 264401, 1, 2): D_8U / D(t = 0) = 1: the class of a rational point of E_8U (not excluded here)
+  tuple (528802, 1123214, 1, 34210498): D_8U / D(t = 0) = 5079898114590768686: EXCLUDED: its class 5079898114590768686 is not the class of any rational point of E_8U (it is in Sel^2: yes)
+  tuple (528802, 1123214, 17105249, 2): D_8U / D(t = 0) = 296978904814: the class of a rational point of E_8U (not excluded here)
+  tuple (561607, 264401, 1, 34210498): D_8U / D(t = 0) = 17105249: EXCLUDED: its class 17105249 is not the class of any rational point of E_8U (it is in Sel^2: yes)
+  tuple (561607, 264401, 17105249, 2): D_8U / D(t = 0) = 1: the class of a rational point of E_8U (not excluded here)
+E_LU of (561607,264401): y^2 = F_L F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-1187712287644575012500000, 223431230827790945493536, 1187712287644575012500000)
+  complete 2-descent: dim Sel^2 = 5; Cassels-Tate pairing of rank 2; the images of 0 points and the 2-torsion span dimension 1
+  => -1 <= rank <= 1
+  roots e whose class x - e agrees with D_LU / D_LU(t = 0) on 0 points: 3
+  E_LU: stopped (the root of the descent map is not identified)
+
+(756492,255635), square type: known [(2, 1, 500857, 1012127), (2, 1, 2024254, 1001714)]; extra [(2, 1, 2113, 239910503), (2, 1, 479821006, 4226)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L: stopped (no base point t0 found)
+  E_0U: stopped (no base point t0 found)
+  E_8L: stopped (no base point t0 found)
+  E_8U: stopped (no base point t0 found)
+
+(1012127,500857), twice-square type: known [(1001714, 2024254, 1, 2), (1012127, 500857, 1, 2)]; extra [(4226, 479821006, 1, 2), (239910503, 2113, 1, 2)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L E_0U E_8L E_8U have the same integral model and base point; 8 points pooled
+E_0L of (1012127,500857): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-3252570006701207949644168, -1568532043057341312646080, 1568532043057341312646080)
+  complete 2-descent: dim Sel^2 = 8; Cassels-Tate pairing of rank 2; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 4
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 13 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 128
+  classes of x - e* on the kernel of the pairing (dimension 6): 32
+  tuple (1001714, 2024254, 1, 2): D_0L / D(t = 0) = 1013861785678: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1012127, 500857, 1, 2): D_0L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (4226, 479821006, 1, 2): D_0L / D(t = 0) = 958: EXCLUDED (Cassels-Tate): its class 958 is not the class of any element of the kernel of the pairing, so of no rational point of E_0L
+  tuple (239910503, 2113, 1, 2): D_0L / D(t = 0) = 1058310841: EXCLUDED (Cassels-Tate): its class 1058310841 is not the class of any element of the kernel of the pairing, so of no rational point of E_0L
+E_0U of (1012127,500857): y^2 = F_0 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-3252570006701207949644168, -1568532043057341312646080, 1568532043057341312646080)
+  complete 2-descent: dim Sel^2 = 8; Cassels-Tate pairing of rank 2; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 4
+  roots e whose class x - e agrees with D_0U / D_0U(t = 0) on 13 points: 1
+  classes of x - e* on E_0U(Q): 16; on Sel^2: 128
+  classes of x - e* on the kernel of the pairing (dimension 6): 32
+  tuple (1001714, 2024254, 1, 2): D_0U / D(t = 0) = 1013861785678: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1012127, 500857, 1, 2): D_0U / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (4226, 479821006, 1, 2): D_0U / D(t = 0) = 958: EXCLUDED (Cassels-Tate): its class 958 is not the class of any element of the kernel of the pairing, so of no rational point of E_0U
+  tuple (239910503, 2113, 1, 2): D_0U / D(t = 0) = 1058310841: EXCLUDED (Cassels-Tate): its class 1058310841 is not the class of any element of the kernel of the pairing, so of no rational point of E_0U
+E_8L of (1012127,500857): y^2 = F_8 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-3252570006701207949644168, -1568532043057341312646080, 1568532043057341312646080)
+  complete 2-descent: dim Sel^2 = 8; Cassels-Tate pairing of rank 2; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 4
+  roots e whose class x - e agrees with D_8L / D_8L(t = 0) on 13 points: 1
+  classes of x - e* on E_8L(Q): 16; on Sel^2: 128
+  classes of x - e* on the kernel of the pairing (dimension 6): 32
+  tuple (1001714, 2024254, 1, 2): D_8L / D(t = 0) = 1013861785678: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1012127, 500857, 1, 2): D_8L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (4226, 479821006, 1, 2): D_8L / D(t = 0) = 958: EXCLUDED (Cassels-Tate): its class 958 is not the class of any element of the kernel of the pairing, so of no rational point of E_8L
+  tuple (239910503, 2113, 1, 2): D_8L / D(t = 0) = 1058310841: EXCLUDED (Cassels-Tate): its class 1058310841 is not the class of any element of the kernel of the pairing, so of no rational point of E_8L
+E_8U of (1012127,500857): y^2 = F_8 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-3252570006701207949644168, -1568532043057341312646080, 1568532043057341312646080)
+  complete 2-descent: dim Sel^2 = 8; Cassels-Tate pairing of rank 2; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 4
+  roots e whose class x - e agrees with D_8U / D_8U(t = 0) on 13 points: 1
+  classes of x - e* on E_8U(Q): 16; on Sel^2: 128
+  classes of x - e* on the kernel of the pairing (dimension 6): 32
+  tuple (1001714, 2024254, 1, 2): D_8U / D(t = 0) = 1013861785678: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1012127, 500857, 1, 2): D_8U / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (4226, 479821006, 1, 2): D_8U / D(t = 0) = 958: EXCLUDED (Cassels-Tate): its class 958 is not the class of any element of the kernel of the pairing, so of no rational point of E_8U
+  tuple (239910503, 2113, 1, 2): D_8U / D(t = 0) = 1058310841: EXCLUDED (Cassels-Tate): its class 1058310841 is not the class of any element of the kernel of the pairing, so of no rational point of E_8U
+
+(1992873,999664), square type: known [(1, 2, 993209, 2992537), (1, 2, 5985074, 1986418)]; extra [(1, 2, 322, 36921921506), (1, 2, 18460960753, 161)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L: stopped (no base point t0 found)
+  E_0U: stopped (no base point t0 found)
+  E_8L: stopped (no base point t0 found)
+  E_8U: stopped (no base point t0 found)
+
+(11875080,6497849), square type: known [(2, 1, 5377231, 18372929), (2, 1, 36745858, 10754462)]; extra [(2, 1, 1, 98795483379599), (2, 1, 197590966759198, 2)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L: stopped (no base point t0 found)
+  E_0U: stopped (no base point t0 found)
+  E_8L: stopped (no base point t0 found)
+  E_8U: stopped (no base point t0 found)
+
+(36090673,28702177), twice-square type: known [(36090673, 28702177, 2, 1), (57404354, 72181346, 2, 1)]; extra [(2, 2071761768990242, 2, 1), (1035880884495121, 1, 2, 1)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L E_0U E_8L E_8U have the same integral model and base point; 8 points pooled
+E_0L of (36090673,28702177): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-9042742611997100389905528357128, -1983594686179930722684845942400, 1983594686179930722684845942400)
+  complete 2-descent: dim Sel^2 = 5; Cassels-Tate pairing of rank 0; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 13 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 16
+  tuple (36090673, 28702177, 2, 1): D_0L / D(t = 0) = 1: the class of a rational point of E_0L (not excluded here)
+  tuple (57404354, 72181346, 2, 1): D_0L / D(t = 0) = 2071761768990242: the class of a rational point of E_0L (not excluded here)
+  tuple (2, 2071761768990242, 2, 1): D_0L / D(t = 0) = 72181346: EXCLUDED: its class 72181346 is not the class of any rational point of E_0L (it is in Sel^2: no)
+  tuple (1035880884495121, 1, 2, 1): D_0L / D(t = 0) = 28702177: EXCLUDED: its class 28702177 is not the class of any rational point of E_0L (it is in Sel^2: no)
+E_0U of (36090673,28702177): y^2 = F_0 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-9042742611997100389905528357128, -1983594686179930722684845942400, 1983594686179930722684845942400)
+  complete 2-descent: dim Sel^2 = 5; Cassels-Tate pairing of rank 0; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_0U / D_0U(t = 0) on 13 points: 1
+  classes of x - e* on E_0U(Q): 16; on Sel^2: 16
+  tuple (36090673, 28702177, 2, 1): D_0U / D(t = 0) = 1: the class of a rational point of E_0U (not excluded here)
+  tuple (57404354, 72181346, 2, 1): D_0U / D(t = 0) = 2071761768990242: the class of a rational point of E_0U (not excluded here)
+  tuple (2, 2071761768990242, 2, 1): D_0U / D(t = 0) = 72181346: EXCLUDED: its class 72181346 is not the class of any rational point of E_0U (it is in Sel^2: no)
+  tuple (1035880884495121, 1, 2, 1): D_0U / D(t = 0) = 28702177: EXCLUDED: its class 28702177 is not the class of any rational point of E_0U (it is in Sel^2: no)
+E_8L of (36090673,28702177): y^2 = F_8 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-9042742611997100389905528357128, -1983594686179930722684845942400, 1983594686179930722684845942400)
+  complete 2-descent: dim Sel^2 = 5; Cassels-Tate pairing of rank 0; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_8L / D_8L(t = 0) on 13 points: 1
+  classes of x - e* on E_8L(Q): 16; on Sel^2: 16
+  tuple (36090673, 28702177, 2, 1): D_8L / D(t = 0) = 1: the class of a rational point of E_8L (not excluded here)
+  tuple (57404354, 72181346, 2, 1): D_8L / D(t = 0) = 2071761768990242: the class of a rational point of E_8L (not excluded here)
+  tuple (2, 2071761768990242, 2, 1): D_8L / D(t = 0) = 72181346: EXCLUDED: its class 72181346 is not the class of any rational point of E_8L (it is in Sel^2: no)
+  tuple (1035880884495121, 1, 2, 1): D_8L / D(t = 0) = 28702177: EXCLUDED: its class 28702177 is not the class of any rational point of E_8L (it is in Sel^2: no)
+E_8U of (36090673,28702177): y^2 = F_8 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-9042742611997100389905528357128, -1983594686179930722684845942400, 1983594686179930722684845942400)
+  complete 2-descent: dim Sel^2 = 5; Cassels-Tate pairing of rank 0; the images of 8 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 3 (exact)
+  roots e whose class x - e agrees with D_8U / D_8U(t = 0) on 13 points: 1
+  classes of x - e* on E_8U(Q): 16; on Sel^2: 16
+  tuple (36090673, 28702177, 2, 1): D_8U / D(t = 0) = 1: the class of a rational point of E_8U (not excluded here)
+  tuple (57404354, 72181346, 2, 1): D_8U / D(t = 0) = 2071761768990242: the class of a rational point of E_8U (not excluded here)
+  tuple (2, 2071761768990242, 2, 1): D_8U / D(t = 0) = 72181346: EXCLUDED: its class 72181346 is not the class of any rational point of E_8U (it is in Sel^2: no)
+  tuple (1035880884495121, 1, 2, 1): D_8U / D(t = 0) = 28702177: EXCLUDED: its class 28702177 is not the class of any rational point of E_8U (it is in Sel^2: no)
+
+(175775580,15972419), square type: known [(2, 1, 3261289, 191747999), (2, 1, 383495998, 6522578)]; extra [(34, 4247, 206, 12142633784674), (34, 4247, 6071316892337, 103), (8494, 17, 206, 12142633784674), (8494, 17, 6071316892337, 103)]
+  pair curves on which some extra tuple has a class no known tuple has: E_08 E_0L E_0U E_8L E_8U
+  E_0L: stopped (no base point t0 found)
+  E_0U: stopped (no base point t0 found)
+  E_8L: stopped (no base point t0 found)
+  E_8U: stopped (no base point t0 found)
+E_08 of (175775580,15972419): y^2 = F_0 F_8 (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-954693063559823145361847180016721, -15764799937659905596213066240800, 15764799937659905596213066240800)
+  complete 2-descent: dim Sel^2 = 8; Cassels-Tate pairing of rank 4; the images of 0 points and the 2-torsion span dimension 1
+  => -1 <= rank <= 2
+  roots e whose class x - e agrees with D_08 / D_08(t = 0) on 0 points: 3
+  E_08: stopped (the root of the descent map is not identified)
+
+(189089400,156063271), square type: known [(2, 1, 33026129, 345152671), (2, 1, 690305342, 66052258)]; extra [(2, 1, 1346, 33875354047966), (2, 1, 16937677023983, 673)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L: stopped (no base point t0 found)
+  E_0U: stopped (no base point t0 found)
+  E_8L: stopped (no base point t0 found)
+  E_8U: stopped (no base point t0 found)
+
+(191747999,159803161), twice-square type: known [(6522578, 383495998, 1, 2), (191747999, 3261289, 1, 2)]; extra [(103, 6071316892337, 17, 8494), (103, 6071316892337, 4247, 34), (12142633784674, 206, 17, 8494), (12142633784674, 206, 4247, 34)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U E_LU
+  E_0L E_0U E_8L E_8U have the same integral model and base point; 9 points pooled
+E_0L of (191747999,159803161): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-7763662907979864407664481970060168, -1376465792409197037782267236620480, 1376465792409197037782267236620480)
+  complete 2-descent: dim Sel^2 = 10; Cassels-Tate pairing of rank 4; the images of 9 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 4
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 14 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 512
+  classes of x - e* on the kernel of the pairing (dimension 6): 32
+  tuple (6522578, 383495998, 1, 2): D_0L / D(t = 0) = 1250691279821422: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (191747999, 3261289, 1, 2): D_0L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (103, 6071316892337, 17, 8494): D_0L / D(t = 0) = 335750746249: EXCLUDED (Cassels-Tate): its class 335750746249 is not the class of any element of the kernel of the pairing, so of no rational point of E_0L
+  tuple (103, 6071316892337, 4247, 34): D_0L / D(t = 0) = 83878436430559: EXCLUDED (Cassels-Tate): its class 83878436430559 is not the class of any element of the kernel of the pairing, so of no rational point of E_0L
+  tuple (12142633784674, 206, 17, 8494): D_0L / D(t = 0) = 1076542: EXCLUDED (Cassels-Tate): its class 1076542 is not the class of any element of the kernel of the pairing, so of no rational point of E_0L
+  tuple (12142633784674, 206, 4247, 34): D_0L / D(t = 0) = 268945522: EXCLUDED (Cassels-Tate): its class 268945522 is not the class of any element of the kernel of the pairing, so of no rational point of E_0L
+E_0U of (191747999,159803161): y^2 = F_0 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-7763662907979864407664481970060168, -1376465792409197037782267236620480, 1376465792409197037782267236620480)
+  complete 2-descent: dim Sel^2 = 10; Cassels-Tate pairing of rank 4; the images of 9 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 4
+  roots e whose class x - e agrees with D_0U / D_0U(t = 0) on 14 points: 1
+  classes of x - e* on E_0U(Q): 16; on Sel^2: 512
+  classes of x - e* on the kernel of the pairing (dimension 6): 32
+  tuple (6522578, 383495998, 1, 2): D_0U / D(t = 0) = 1250691279821422: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (191747999, 3261289, 1, 2): D_0U / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (103, 6071316892337, 17, 8494): D_0U / D(t = 0) = 83878436430559: EXCLUDED (Cassels-Tate): its class 83878436430559 is not the class of any element of the kernel of the pairing, so of no rational point of E_0U
+  tuple (103, 6071316892337, 4247, 34): D_0U / D(t = 0) = 335750746249: EXCLUDED (Cassels-Tate): its class 335750746249 is not the class of any element of the kernel of the pairing, so of no rational point of E_0U
+  tuple (12142633784674, 206, 17, 8494): D_0U / D(t = 0) = 268945522: EXCLUDED (Cassels-Tate): its class 268945522 is not the class of any element of the kernel of the pairing, so of no rational point of E_0U
+  tuple (12142633784674, 206, 4247, 34): D_0U / D(t = 0) = 1076542: EXCLUDED (Cassels-Tate): its class 1076542 is not the class of any element of the kernel of the pairing, so of no rational point of E_0U
+E_8L of (191747999,159803161): y^2 = F_8 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-7763662907979864407664481970060168, -1376465792409197037782267236620480, 1376465792409197037782267236620480)
+  complete 2-descent: dim Sel^2 = 10; Cassels-Tate pairing of rank 4; the images of 9 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 4
+  roots e whose class x - e agrees with D_8L / D_8L(t = 0) on 14 points: 1
+  classes of x - e* on E_8L(Q): 16; on Sel^2: 512
+  classes of x - e* on the kernel of the pairing (dimension 6): 32
+  tuple (6522578, 383495998, 1, 2): D_8L / D(t = 0) = 1250691279821422: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (191747999, 3261289, 1, 2): D_8L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (103, 6071316892337, 17, 8494): D_8L / D(t = 0) = 335750746249: EXCLUDED (Cassels-Tate): its class 335750746249 is not the class of any element of the kernel of the pairing, so of no rational point of E_8L
+  tuple (103, 6071316892337, 4247, 34): D_8L / D(t = 0) = 83878436430559: EXCLUDED (Cassels-Tate): its class 83878436430559 is not the class of any element of the kernel of the pairing, so of no rational point of E_8L
+  tuple (12142633784674, 206, 17, 8494): D_8L / D(t = 0) = 1076542: EXCLUDED (Cassels-Tate): its class 1076542 is not the class of any element of the kernel of the pairing, so of no rational point of E_8L
+  tuple (12142633784674, 206, 4247, 34): D_8L / D(t = 0) = 268945522: EXCLUDED (Cassels-Tate): its class 268945522 is not the class of any element of the kernel of the pairing, so of no rational point of E_8L
+E_8U of (191747999,159803161): y^2 = F_8 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-7763662907979864407664481970060168, -1376465792409197037782267236620480, 1376465792409197037782267236620480)
+  complete 2-descent: dim Sel^2 = 10; Cassels-Tate pairing of rank 4; the images of 9 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 4
+  roots e whose class x - e agrees with D_8U / D_8U(t = 0) on 14 points: 1
+  classes of x - e* on E_8U(Q): 16; on Sel^2: 512
+  classes of x - e* on the kernel of the pairing (dimension 6): 32
+  tuple (6522578, 383495998, 1, 2): D_8U / D(t = 0) = 1250691279821422: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (191747999, 3261289, 1, 2): D_8U / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (103, 6071316892337, 17, 8494): D_8U / D(t = 0) = 83878436430559: EXCLUDED (Cassels-Tate): its class 83878436430559 is not the class of any element of the kernel of the pairing, so of no rational point of E_8U
+  tuple (103, 6071316892337, 4247, 34): D_8U / D(t = 0) = 335750746249: EXCLUDED (Cassels-Tate): its class 335750746249 is not the class of any element of the kernel of the pairing, so of no rational point of E_8U
+  tuple (12142633784674, 206, 17, 8494): D_8U / D(t = 0) = 268945522: EXCLUDED (Cassels-Tate): its class 268945522 is not the class of any element of the kernel of the pairing, so of no rational point of E_8U
+  tuple (12142633784674, 206, 4247, 34): D_8U / D(t = 0) = 1076542: EXCLUDED (Cassels-Tate): its class 1076542 is not the class of any element of the kernel of the pairing, so of no rational point of E_8U
+E_LU of (191747999,159803161): y^2 = F_L F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-31054651631919457630657927880240672, 29036757239898989714342655401418272, 31054651631919457630657927880240672)
+  complete 2-descent: dim Sel^2 = 8; Cassels-Tate pairing of rank 4; the images of 0 points and the 2-torsion span dimension 1
+  => -1 <= rank <= 2
+  roots e whose class x - e agrees with D_LU / D_LU(t = 0) on 0 points: 3
+  E_LU: stopped (the root of the descent map is not identified)
+
+(231641256,72371617), square type: known [(2, 1, 159269639, 304012873), (2, 1, 608025746, 318539278)]; extra [(2, 1, 1, 48420020534062847), (2, 1, 96840041068125694, 2)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L: stopped (no base point t0 found)
+  E_0U: stopped (no base point t0 found)
+  E_8L: stopped (no base point t0 found)
+  E_8U: stopped (no base point t0 found)
+
+(349960367,118678903), twice-square type: known [(237357806, 699920734, 2, 1), (349960367, 118678903, 2, 1)]; extra [(1, 41532912449037401, 2, 1), (83065824898074802, 2, 2, 1)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L E_0U E_8L E_8U have the same integral model and base point; 10 points pooled
+E_0L of (349960367,118678903): y^2 = F_0 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-37295595990918082096801894046755208, -18006606893624804225487526989453120, 18006606893624804225487526989453120)
+  complete 2-descent: dim Sel^2 = 9; Cassels-Tate pairing of rank 2; the images of 10 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_0L / D_0L(t = 0) on 15 points: 1
+  classes of x - e* on E_0L(Q): 16; on Sel^2: 256
+  classes of x - e* on the kernel of the pairing (dimension 7): 64
+  tuple (237357806, 699920734, 2, 1): D_0L / D(t = 0) = 83065824898074802: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (349960367, 118678903, 2, 1): D_0L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1, 41532912449037401, 2, 1): D_0L / D(t = 0) = 349960367: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (83065824898074802, 2, 2, 1): D_0L / D(t = 0) = 237357806: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+E_0U of (349960367,118678903): y^2 = F_0 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-37295595990918082096801894046755208, -18006606893624804225487526989453120, 18006606893624804225487526989453120)
+  complete 2-descent: dim Sel^2 = 9; Cassels-Tate pairing of rank 2; the images of 10 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_0U / D_0U(t = 0) on 15 points: 1
+  classes of x - e* on E_0U(Q): 16; on Sel^2: 256
+  classes of x - e* on the kernel of the pairing (dimension 7): 64
+  tuple (237357806, 699920734, 2, 1): D_0U / D(t = 0) = 83065824898074802: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (349960367, 118678903, 2, 1): D_0U / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1, 41532912449037401, 2, 1): D_0U / D(t = 0) = 349960367: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (83065824898074802, 2, 2, 1): D_0U / D(t = 0) = 237357806: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+E_8L of (349960367,118678903): y^2 = F_8 F_L (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-37295595990918082096801894046755208, -18006606893624804225487526989453120, 18006606893624804225487526989453120)
+  complete 2-descent: dim Sel^2 = 9; Cassels-Tate pairing of rank 2; the images of 10 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_8L / D_8L(t = 0) on 15 points: 1
+  classes of x - e* on E_8L(Q): 16; on Sel^2: 256
+  classes of x - e* on the kernel of the pairing (dimension 7): 64
+  tuple (237357806, 699920734, 2, 1): D_8L / D(t = 0) = 83065824898074802: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (349960367, 118678903, 2, 1): D_8L / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1, 41532912449037401, 2, 1): D_8L / D(t = 0) = 349960367: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (83065824898074802, 2, 2, 1): D_8L / D(t = 0) = 237357806: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+E_8U of (349960367,118678903): y^2 = F_8 F_U (t); integral model y^2 = (x - e1)(x - e2)(x - e3), e = (-37295595990918082096801894046755208, -18006606893624804225487526989453120, 18006606893624804225487526989453120)
+  complete 2-descent: dim Sel^2 = 9; Cassels-Tate pairing of rank 2; the images of 10 points and the 2-torsion span dimension 5
+  => 3 <= rank <= 5
+  roots e whose class x - e agrees with D_8U / D_8U(t = 0) on 15 points: 1
+  classes of x - e* on E_8U(Q): 16; on Sel^2: 256
+  classes of x - e* on the kernel of the pairing (dimension 7): 64
+  tuple (237357806, 699920734, 2, 1): D_8U / D(t = 0) = 83065824898074802: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (349960367, 118678903, 2, 1): D_8U / D(t = 0) = 1: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (1, 41532912449037401, 2, 1): D_8U / D(t = 0) = 349960367: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+  tuple (83065824898074802, 2, 2, 1): D_8U / D(t = 0) = 237357806: NOT DECIDED (the rank bounds differ; the class is in the kernel of the pairing, and is the class of a rational point found)
+
+(518804652,31743595), square type: known [(2, 1, 487061057, 550548247), (2, 1, 1101096494, 974122114)]; extra [(2, 1, 226696337, 1182862567), (2, 1, 2365725134, 453392674)]
+  pair curves on which some extra tuple has a class no known tuple has: E_0L E_0U E_8L E_8U
+  E_0L: stopped (no base point t0 found)
+  E_0U: stopped (no base point t0 found)
+  E_8L: stopped (no base point t0 found)
+  E_8U: stopped (no base point t0 found)
+
+VERDICT per extra tuple:
+  (204724, 97893) (2, 1, 119521, 270487): not excluded by its pair curves
+  (204724, 97893) (2, 1, 540974, 239042): not excluded by its pair curves
+  (561607, 264401) (528802, 1123214, 1, 34210498): killed by E_0U and E_8U
+  (561607, 264401) (528802, 1123214, 17105249, 2): killed by E_0L and E_8L
+  (561607, 264401) (561607, 264401, 1, 34210498): killed by E_0U and E_8U
+  (561607, 264401) (561607, 264401, 17105249, 2): killed by E_0L and E_8L
+  (756492, 255635) (2, 1, 2113, 239910503): not excluded by its pair curves
+  (756492, 255635) (2, 1, 479821006, 4226): not excluded by its pair curves
+  (1012127, 500857) (4226, 479821006, 1, 2): killed by E_0L and E_0U and E_8L and E_8U
+  (1012127, 500857) (239910503, 2113, 1, 2): killed by E_0L and E_0U and E_8L and E_8U
+  (1992873, 999664) (1, 2, 322, 36921921506): not excluded by its pair curves
+  (1992873, 999664) (1, 2, 18460960753, 161): not excluded by its pair curves
+  (11875080, 6497849) (2, 1, 1, 98795483379599): not excluded by its pair curves
+  (11875080, 6497849) (2, 1, 197590966759198, 2): not excluded by its pair curves
+  (36090673, 28702177) (2, 2071761768990242, 2, 1): killed by E_0L and E_0U and E_8L and E_8U
+  (36090673, 28702177) (1035880884495121, 1, 2, 1): killed by E_0L and E_0U and E_8L and E_8U
+  (175775580, 15972419) (34, 4247, 206, 12142633784674): not excluded by its pair curves
+  (175775580, 15972419) (34, 4247, 6071316892337, 103): not excluded by its pair curves
+  (175775580, 15972419) (8494, 17, 206, 12142633784674): not excluded by its pair curves
+  (175775580, 15972419) (8494, 17, 6071316892337, 103): not excluded by its pair curves
+  (189089400, 156063271) (2, 1, 1346, 33875354047966): not excluded by its pair curves
+  (189089400, 156063271) (2, 1, 16937677023983, 673): not excluded by its pair curves
+  (191747999, 159803161) (103, 6071316892337, 17, 8494): killed by E_0L and E_0U and E_8L and E_8U
+  (191747999, 159803161) (103, 6071316892337, 4247, 34): killed by E_0L and E_0U and E_8L and E_8U
+  (191747999, 159803161) (12142633784674, 206, 17, 8494): killed by E_0L and E_0U and E_8L and E_8U
+  (191747999, 159803161) (12142633784674, 206, 4247, 34): killed by E_0L and E_0U and E_8L and E_8U
+  (231641256, 72371617) (2, 1, 1, 48420020534062847): not excluded by its pair curves
+  (231641256, 72371617) (2, 1, 96840041068125694, 2): not excluded by its pair curves
+  (349960367, 118678903) (1, 41532912449037401, 2, 1): not excluded by its pair curves
+  (349960367, 118678903) (83065824898074802, 2, 2, 1): not excluded by its pair curves
+  (518804652, 31743595) (2, 1, 226696337, 1182862567): not excluded by its pair curves
+  (518804652, 31743595) (2, 1, 2365725134, 453392674): not excluded by its pair curves
+phantom ratios: 13; all extra tuples killed by pair curves: 4 [(561607, 264401), (1012127, 500857), (36090673, 28702177), (191747999, 159803161)]

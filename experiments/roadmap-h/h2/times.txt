@@ -1,0 +1,54 @@
+h2_exhaust 15000 30000 worker 2 of 3 exit=143 12 s
+h2_exhaust 15000 30000 worker 1 of 3 exit=143 12 s
+h2_exhaust 15000 30000 worker 0 of 3 exit=143 12 s
+h2_hunt k=13 keep 120 exit=0 103 s
+h2_hunt k=14 keep 120 exit=0 127 s
+h2_hunt k=15 keep 120 exit=0 124 s
+h2_hunt k=16 keep 120 exit=0 220 s
+h2_hunt k=17 keep 120 exit=0 391 s
+h2_hunt round 1 k=13 keep 400 maxs 12000 exit=0 248 s
+h2_hunt k=18 keep 120 exit=0 404 s
+h2_design k=16 take 300 exit=0 318 s
+h2_hunt round 1 k=14 keep 400 maxs 12000 exit=0 438 s
+h2_design k=17 take 300 exit=0 316 s
+h2_hunt k=19 keep 120 exit=0 819 s
+h2_hunt round 1 k=15 keep 400 maxs 12000 exit=0 590 s
+h2_design k=18 take 300 exit=0 382 s
+h2_design k=19 take 300 exit=0 532 s
+h2_hunt round 1 k=16 keep 400 maxs 12000 exit=0 925 s
+h2_design k=20 take 300 exit=0 388 s
+h2_hunt k=20 keep 120 exit=0 1386 s
+h2_hunt k=27 keep 30 exit=0 3629 s
+h2_design k=21 take 300 exit=0 599 s
+h2_design k=22 take 300 exit=0 479 s
+h2_hunt round 1 k=17 keep 400 maxs 12000 exit=0 1285 s
+h2_design k=23 take 300 exit=0 774 s
+h2_hunt k=21 keep 120 exit=0 1617 s
+h2_design k=24 take 300 exit=0 973 s
+h2_design k=25 take 300 exit=0 1218 s
+h2_exhaust 15000 30000 worker 2 of 3 exit=0 8274 s
+h2_hunt round 1 k=18 keep 400 maxs 12000 exit=0 2851 s
+h2_hunt k=22 keep 120 exit=0 2534 s
+h2_hunt k=28 keep 30 exit=0 5022 s
+h2_hunt round 1 k=19 keep 400 maxs 12000 exit=0 1636 s
+h2_hunt k=23 keep 120 exit=0 2005 s
+h2_exhaust 15000 30000 worker 1 of 3 exit=0 11480 s
+h2_design k=26 take 300 exit=0 3255 s
+h2_exhaust 15000 30000 worker 0 of 3 exit=0 11568 s
+h2_hunt round 1 k=20 keep 400 maxs 12000 exit=0 2541 s
+h2_design k=27 take 300 exit=0 1599 s
+h2_hunt k=29 keep 15 exit=0 3623 s
+h2_hunt k=24 keep 120 exit=0 3110 s
+h2_exhaust 14900 15000 worker 0 of 1 exit=0 89 s
+h2_control and --negative exit=0 0 s
+h2_hunt k=25 keep 120 maxs 1040 (finalized from .part) exit=0 7 s
+h2_hunt k=30 keep 15 maxs 265 (finalized from .part) exit=0 3 s
+h2_hunt k=33 keep 10 maxs 248 (finalized from .part) exit=0 4 s
+h2_hunt k=36 keep 10 maxs 94 (finalized from .part) exit=0 3 s
+h2_design k=28 take 249 (finalized from .part) exit=0 87 s
+h2_hunt round 1 k=21 keep 400 maxs 12000 exit=0 3039 s
+h2_hunt round 1 k=22 keep 400 maxs 12000 exit=0 2437 s
+h2_summary --write exit=0 0 s
+h2_hunt k=26 keep 30 exit=0 1383 s
+h2_retry exit=143 7905 s
+h2_summary --write (after k=26) exit=0 6 s

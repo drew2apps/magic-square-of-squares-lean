@@ -1,0 +1,69 @@
+E04 of the census Demjanenko-Manin tier: exact upper rank bounds. Written by an AI model; not read by a person. Experiment, not counted.
+15,8 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+21,20 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+23,7 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+156,133 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+176,57 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+187,84 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+220,21 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+233,119 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+241,199 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+247,96 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+457,49 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+255,32 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+287,241 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+287,223 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+320,289 E04: G on the curve, of infinite order; 2 curve(s): pairing not computed; rank <= 1 (dim Sel^2 = 7, Cassels-Tate pairing of rank 4); so rank = 1
+340,189 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+343,151 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+377,336 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+599,193 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+439,359 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+416,87 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+889,31 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+465,368 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+569,383 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+527,439 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+769,217 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+503,329 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+520,231 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+779,301 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+1017,65 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+937,167 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+572,315 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+977,311 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+660,259 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+823,511 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+672,185 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+684,37 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+700,429 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+1049,399 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+1009,463 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+759,280 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+777,464 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+779,660 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+839,727 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+1457,167 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+836,123 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+1581,91 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+840,559 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+1015,713 E04: G on the curve, of infinite order; 6 curve(s): rank <= 3 (dim Sel^2 = 5, Cassels-Tate pairing of rank 0); pairing not computed; rank <= 3 (dim Sel^2 = 5, Cassels-Tate pairing of rank 0); pairing not computed; rank <= 3 (dim Sel^2 = 5, Cassels-Tate pairing of rank 0); pairing not computed; so rank <= 3
+1633,103 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+884,387 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+899,60 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+1623,175 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+912,215 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+924,893 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+928,585 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+1351,519 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 7, Cassels-Tate pairing of rank 4); so rank = 1
+957,124 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+959,713 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+959,839 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+960,799 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+964,541 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 5, Cassels-Tate pairing of rank 2); so rank = 1
+975,448 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+1015,961 E04: G on the curve, of infinite order; 2 curve(s): rank <= 3 (dim Sel^2 = 5, Cassels-Tate pairing of rank 0); rank <= 1 (dim Sel^2 = 7, Cassels-Tate pairing of rank 4); so rank = 1
+1649,329 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+992,705 E04: G on the curve, of infinite order; 1 curve(s): rank <= 1 (dim Sel^2 = 3, Cassels-Tate pairing of rank 0); so rank = 1
+curves: 66; rank exactly 1 (computed, exact): 65; ratios of the 91 whose E04 curve this covers: 90
+not covered: 864,151 (curve 1015,713)

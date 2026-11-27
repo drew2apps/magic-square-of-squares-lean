@@ -1,0 +1,37 @@
+# forge_e04.py (review z7; written by an AI model): forgeries against h7_e04_rank.py
+E04 (260,53): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (117,115): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (218,201): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (296,281): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (377,252): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (4,3): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (233,3): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (353,252): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (110,51): exact lower bound 2 (images of 2 stored point(s)); bundle least_bound 2: consistent
+E04 (131,90): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (185,97): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (384,263): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (329,40): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 3: consistent
+E04 (373,175): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (75,74): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (206,135): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (265,13): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (297,115): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (395,67): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (28,23): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+E04 (270,53): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (370,319): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (222,121): exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 2: consistent
+E04 (75,62): exact lower bound 2 (images of 2 stored point(s)); bundle least_bound 2: consistent
+y^2 = x^3 - 5^2 x: exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+y^2 = x^3 - 6^2 x: exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+y^2 = x^3 - 7^2 x: exact lower bound 1 (images of 1 stored point(s)); bundle least_bound 1: consistent
+y^2 = x^3 - 34^2 x: exact lower bound 2 (images of 2 stored point(s)); bundle least_bound 2: consistent
+y^2 = x^3 - 41^2 x: exact lower bound 2 (images of 2 stored point(s)); bundle least_bound 2: consistent
+y^2 = x^3 - 65^2 x: exact lower bound 2 (images of 2 stored point(s)); bundle least_bound 2: consistent
+y^2 = x^3 - 137^2 x: exact lower bound 2 (images of 2 stored point(s)); bundle least_bound 2: consistent
+y^2 = x^3 - 210^2 x: exact lower bound 2 (images of 2 stored point(s)); bundle least_bound 2: consistent
+y^2 = x^3 - 1254^2 x: exact lower bound 3 (images of 3 stored point(s)); bundle least_bound 3: consistent
+violations: 0
+order-4 point x = -186116 on E04(23,7) (2P != O, 4P = O, exact) as the generator: refused (the point has finite order)
+# end

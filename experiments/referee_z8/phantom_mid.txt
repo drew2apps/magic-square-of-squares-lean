@@ -1,0 +1,4 @@
+z8: H1's 24 ratios at good primes p = 1 mod 4 (my local test). Written by an AI model; not read by a person.
+least p with (p - 511)^2 > 66564 p: 67583
+16 < p < 1200: 93 primes, 2142 (ratio, good prime) pairs, extra tuples cut: 0 []
+20000 < p < 67583: 2234 primes, 53608 (ratio, good prime) pairs, extra tuples cut: 0 []

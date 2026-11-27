@@ -1,0 +1,4 @@
+threshold 1154; p = 1153 fails (p + 1)^2 > 1156 p: True
+forged set at p = 229 r = 2: refused by the exact test
+forged set at p = 409 r = 5: refused by the exact test
+bad residue at p = 29 r = 1: refused (two roots agree)

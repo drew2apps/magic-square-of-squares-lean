@@ -1,0 +1,10 @@
+# rank0_ct.py: rank 0 by the complete 2-descent and the Cassels-Tate pairing on a 2-isogenous curve with full 2-torsion
+curve +14 of (609,200) and (809,409): a-invariants [0, 1, 0, 2657389687335443426815780334514559, -46004163125583148363653912915452814645634607488641], 2-torsion x0 = [15821452025664321]
+E': y^2 = x (x - e2)(x - e3) by Velu from (x0, 0); #E(F_p) = #E'(F_p) for every good odd p < 1000
+E' of (609,200): roots [-69297704883520000, 0, 164226417037505928]; dim Sel^2 = 6, pairing of rank 4, rank <= 0
+so rank E(Q) = 0 for the curve of (609,200) and (809,409) (isogeny invariance), from this repository's exact code
+control, (861,620) curve +23 (rank 0 already exact by indep_rank.py):
+E' of (861,620): roots [-63749906513795200, 0, 4642784309331971208]; dim Sel^2 = 4, pairing of rank 2, rank <= 0
+control, (440,279) (rank 0 by L(E,1) in lball_exact.py; this method cannot decide it):
+E of (440,279): roots [-25921, 0, 516961]; dim Sel^2 = 4, pairing of rank 0, rank <= 2
+# end

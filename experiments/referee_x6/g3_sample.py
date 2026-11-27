@@ -3,6 +3,7 @@ Prints only.  usage: python3 -I g3_sample.py"""
 import sys, json, os, glob, random, math
 D = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'roadmap-g', 'g3')
 rows = [l.rstrip('\n').split('\t') for l in open(os.path.join(D, 'CENSUS_TABLE_G3.tsv'))][1:]
+rows = [r for r in rows if int(r[0]) <= 13000]   # run 7 (conductor): the table now runs to 14000; this check keeps the range x6 reviewed
 def partner(m, n):
     a, b = m + n, abs(m - n)
     if a % 2 == 0 and b % 2 == 0: a, b = a//2, b//2

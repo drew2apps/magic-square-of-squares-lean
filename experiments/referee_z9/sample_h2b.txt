@@ -1,0 +1,24 @@
+Review z9: class status of 20 ratios with points everywhere, and two whole values of m, against H2. Written by an AI model; not read by a person.
+points everywhere (28469,9869): here no class; H2 not listed; AGREE
+points everywhere (17029,13860): here no class; H2 not listed; AGREE
+points everywhere (20684,12235): here no class; H2 not listed; AGREE
+points everywhere (15201,13289): here no class; H2 not listed; AGREE
+points everywhere (23549,23260): here no class; H2 not listed; AGREE
+points everywhere (18763,13388): here no class; H2 not listed; AGREE
+points everywhere (16751,8895): here no class; H2 not listed; AGREE
+points everywhere (22560,4313): here no class; H2 not listed; AGREE
+points everywhere (24892,7313): here no class; H2 not listed; AGREE
+points everywhere (18049,14336): here no class; H2 not listed; AGREE
+points everywhere (15893,12968): here no class; H2 not listed; AGREE
+points everywhere (22015,17232): here no class; H2 not listed; AGREE
+points everywhere (16015,10556): here no class; H2 not listed; AGREE
+points everywhere (27993,6932): here no class; H2 not listed; AGREE
+points everywhere (16492,13847): here no class; H2 not listed; AGREE
+points everywhere (26016,12635): here no class; H2 not listed; AGREE
+points everywhere (18301,11956): here no class; H2 not listed; AGREE
+points everywhere (18369,11129): here no class; H2 not listed; AGREE
+points everywhere (24251,18224): here no class; H2 not listed; AGREE
+points everywhere (22232,6117): here no class; H2 not listed; AGREE
+m=25789 here coprime=23040 degenerate=0 no_point=22692 no_class=329 class=19 | H2 coprime=23040 degenerate=0 no_point=22692 no_class=329 class=19 | class lists equal: True | AGREE
+m=29999 here coprime=29640 degenerate=1 no_point=29458 no_class=178 class=3 | H2 coprime=29640 degenerate=1 no_point=29458 no_class=178 class=3 | class lists equal: True | AGREE
+disagreements: 0

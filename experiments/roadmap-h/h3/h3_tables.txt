@@ -1,0 +1,27 @@
+H3: allowed sets of the four-class cover at good primes p = 1 mod 4, p <= 211 (methods A and B agree on every residue).
+Written by an AI model; not read by a person. Experiment, not counted.
+p: good residues; residues where every class is allowed; sizes of the allowed sets (of 16 label vectors) that occur
+    5:   0 good residues, full at   0; sizes 
+   13:   0 good residues, full at   0; sizes 
+   17:  12 good residues, full at   0; sizes 0:8 8:4
+   29:  24 good residues, full at   0; sizes 2:8 4:8 8:8
+   37:  24 good residues, full at   0; sizes 4:8 6:8 8:8
+   41:  36 good residues, full at   0; sizes 0:8 2:4 4:8 6:8 8:8
+   53:  48 good residues, full at   0; sizes 2:24 8:8 10:8 12:8
+   61:  48 good residues, full at   0; sizes 2:8 6:8 8:16 10:8 12:8
+   73:  60 good residues, full at   0; sizes 2:8 4:4 6:32 8:8 14:8
+   89:  84 good residues, full at   0; sizes 0:12 2:8 4:16 6:16 8:8 10:24
+   97:  84 good residues, full at   0; sizes 4:8 6:16 8:16 10:20 12:24
+  101:  96 good residues, full at   0; sizes 2:8 4:8 6:32 8:32 10:8 12:8
+  109:  96 good residues, full at   0; sizes 4:16 6:16 8:8 10:32 12:24
+  113: 108 good residues, full at   0; sizes 4:28 6:32 8:24 10:16 12:8
+  137: 132 good residues, full at   8; sizes 0:8 2:4 4:8 8:56 10:24 12:16 14:8 16:8
+  149: 144 good residues, full at   0; sizes 2:8 4:8 6:40 8:24 10:24 12:24 14:16
+  157: 144 good residues, full at   0; sizes 6:32 8:40 10:32 12:16 14:24
+  173: 168 good residues, full at   0; sizes 6:32 8:32 10:48 12:32 14:24
+  181: 168 good residues, full at  16; sizes 4:8 6:8 8:24 10:64 12:40 14:8 16:16
+  193: 180 good residues, full at  16; sizes 2:8 4:8 6:32 8:8 10:40 12:28 14:40 16:16
+  197: 192 good residues, full at   0; sizes 2:8 6:16 8:24 10:88 12:40 14:16
+primes with no good residue at all (always bad): [5, 13]
+primes with good residues at which no good residue removes anything: none
+good residues where the allowed set is empty (no local point at p): 36 of 1848

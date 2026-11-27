@@ -1,0 +1,3 @@
+forged entry p = 17 r = 2: refused (differs from the exact test), as it must be
+forged entry p = 61 r = 2: refused (differs from the exact test), as it must be
+forged entry p = 181 r = 5: refused (differs from the exact test), as it must be

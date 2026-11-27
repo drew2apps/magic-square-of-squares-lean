@@ -1,0 +1,45 @@
+Review z9: sample of H2 15000 < m <= 30000 against the repository criterion (sympy factorisations) and G2 kill sets. Written by an AI model; not read by a person.
+class-keeping (19412,14413): here class dim 0 log2 24 P 0 (bad primes alone: EMPTY; kill set [3, 5, 13, 29]) | H2 dim 0 log2 24 P 0 | AGREE
+class-keeping (26635,15147): here class dim 0 log2 22 P 0 (bad primes alone: EMPTY; kill set [2, 3, 5, 7, 11, 17, 37]) | H2 dim 0 log2 22 P 0 | AGREE
+class-keeping (22723,11192): here class dim 0 log2 24 P 0 (bad primes alone: EMPTY; kill set [2, 5]) | H2 dim 0 log2 24 P 0 | AGREE
+class-keeping (26435,20828): here class dim 1 log2 24 P 29 (bad primes alone: 2 left; kill set [2, 13, 29, 37, 41]) | H2 dim 1 log2 24 P 29 | AGREE
+class-keeping (28577,28308): here class dim 0 log2 22 P 29 (bad primes alone: 20 left; kill set [2, 5, 13, 29]) | H2 dim 0 log2 22 P 29 | AGREE
+class-keeping (19539,9611): here class dim 0 log2 24 P 0 (bad primes alone: EMPTY; kill set [2, 37, 53]) | H2 dim 0 log2 24 P 0 | AGREE
+class-keeping (19964,11645): here class dim 0 log2 26 P 0 (bad primes alone: EMPTY; kill set [2, 3, 13, 17, 137]) | H2 dim 0 log2 26 P 0 | AGREE
+class-keeping (15225,3937): here class dim 0 log2 26 P 0 (bad primes alone: EMPTY; kill set [2, 5, 13, 67, 109]) | H2 dim 0 log2 26 P 0 | AGREE
+class-keeping (27940,18879): here class dim 0 log2 26 P 0 (bad primes alone: EMPTY; kill set [2, 5, 11, 13, 17]) | H2 dim 0 log2 26 P 0 | AGREE
+class-keeping (26089,8636): here class dim 0 log2 22 P 0 (bad primes alone: EMPTY; kill set [2, 3, 5, 17, 61]) | H2 dim 0 log2 22 P 0 | AGREE
+class-keeping (20909,16491): here class dim 0 log2 24 P 0 (bad primes alone: EMPTY; kill set [2, 13, 29, 37]) | H2 dim 0 log2 24 P 0 | AGREE
+class-keeping (22355,21731): here class dim 0 log2 24 P 0 (bad primes alone: EMPTY; kill set [2, 5, 17, 29]) | H2 dim 0 log2 24 P 0 | AGREE
+class-keeping (26775,3151): here class dim 1 log2 22 P 0 (bad primes alone: EMPTY; kill set [2, 5, 17, 137]) | H2 dim 1 log2 22 P 0 | AGREE
+class-keeping (22879,9600): here class dim 0 log2 18 P 0 (bad primes alone: EMPTY; kill set [5, 13, 137]) | H2 dim 0 log2 18 P 0 | AGREE
+class-keeping (24521,18775): here class dim 0 log2 24 P 0 (bad primes alone: EMPTY; kill set [2, 3, 5, 11, 113]) | H2 dim 0 log2 24 P 0 | AGREE
+class-keeping (24111,19120): here class dim 0 log2 24 P 37 (bad primes alone: 2 left; kill set [3, 5, 13, 17, 29, 31, 37, 41, 47, 157]) | H2 dim 0 log2 24 P 37 | AGREE
+class-keeping (19965,8596): here class dim 0 log2 18 P 0 (bad primes alone: EMPTY; kill set [3, 5, 11, 13]) | H2 dim 0 log2 18 P 0 | AGREE
+class-keeping (23761,4449): here class dim 0 log2 22 P 0 (bad primes alone: EMPTY; kill set [2, 3, 17, 317]) | H2 dim 0 log2 22 P 0 | AGREE
+class-keeping (26023,13905): here class dim 0 log2 24 P 0 (bad primes alone: EMPTY; kill set [2, 5, 13]) | H2 dim 0 log2 24 P 0 | AGREE
+class-keeping (23140,16833): here class dim 0 log2 26 P 0 (bad primes alone: EMPTY; kill set [2, 17, 53]) | H2 dim 0 log2 26 P 0 | AGREE
+class-keeping (25789,12060): here class dim 0 log2 22 P 229 (bad primes alone: 2 left; kill set [2, 5, 29, 229]) | H2 dim 0 log2 22 P 229 | AGREE
+class-keeping (25599,15880): here class dim 0 log2 20 P 197 (bad primes alone: 4 left; kill set [2, 5, 13, 17, 197]) | H2 dim 0 log2 20 P 197 | AGREE
+class-keeping (27924,27845): here class dim 0 log2 22 P 197 (bad primes alone: 8 left; kill set [2, 197]) | H2 dim 0 log2 22 P 197 | AGREE
+random (28127,23823): here no point | H2 not listed | AGREE
+random (25997,20001): here no point | H2 not listed | AGREE
+random (15741,1099): here no point | H2 not listed | AGREE
+random (25325,4314): here no point | H2 not listed | AGREE
+random (15821,14845): here no point | H2 not listed | AGREE
+random (16855,7153): here no point | H2 not listed | AGREE
+random (27932,27711): here no point | H2 not listed | AGREE
+random (15279,3824): here no point | H2 not listed | AGREE
+random (23468,19407): here no point | H2 not listed | AGREE
+random (25857,6626): here no point | H2 not listed | AGREE
+random (17193,335): here no point | H2 not listed | AGREE
+random (29804,6573): here no point | H2 not listed | AGREE
+random (15303,4378): here no point | H2 not listed | AGREE
+random (21469,358): here no point | H2 not listed | AGREE
+random (19571,8715): here no point | H2 not listed | AGREE
+random (23281,13951): here no point | H2 not listed | AGREE
+random (15386,15051): here no point | H2 not listed | AGREE
+random (23007,19222): here no point | H2 not listed | AGREE
+random (28939,15971): here no point | H2 not listed | AGREE
+random (20396,377): here no point | H2 not listed | AGREE
+disagreements: 0 of 43

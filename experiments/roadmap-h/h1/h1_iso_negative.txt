@@ -1,0 +1,4 @@
+H1 part 8, negative controls. Written by an AI model; not read by a person.
+forged partner (m', n' + 2): refused (no isomorphism of this shape)
+forged bijection (0 8 L U) -> (L U 8 0): refused (no isomorphism of this shape)
+an image of a known tuple planted among the partner's extra tuples: refused

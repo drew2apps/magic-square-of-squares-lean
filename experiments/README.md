@@ -14,7 +14,9 @@ that the results can be cited and rerun.
 | `census-wide/table/` | `NOTES.md` | one table of all 20,682 ratios `1000 < m ≤ 11000` that pass the congruences, with the first step that closes each and that step's label (bookkeeping over the committed records): class 17,636, second descent 2,582, repository L-value 23, rank 0 231, Demjanenko–Manin 175, repository route 9, special 26; (7735,4968) has no closing record (OPEN there); 9 rows conditional on a rank being 1; 25 on a numerical L-value (the 2 above and 23 repository values for `m ≤ 3000`, PARI's with a tail bound) |
 | `census-wide/lvalue/` | `NOTES.md` | the L-value above for w·f0·f8 of (6557,324) (the repository's `lball_exact` arithmetic, streamed over 1.21·10⁹ terms; conditional on PARI's `ellap`; the six sums from one run on the session's machine), and a rerun of `census_lvalue_big.py` for (700,529) that reproduces the committed record |
 | `open-ratio/` | `WRITEUP.md` | (627,364) over `ℚ(i)`: 2-descent and φ-descents (rank `≤ 2`), the Sha ratios across the isogeny class, a cyclic 4-isogeny descent (bounds 3 to 5), and a new PARI implementation of the Cassels–Tate pairing on Sel², which vanishes on Sel² of `E₁` (as `scripts/second_descent/kctp*.py` found) and, in run 5, on the deciding value of Sel² of `E₄`, so Sel² with its pairing cannot prove rank 0 for `E₄` (a second implementation, unreviewed) |
-| `roadmap-g/` | `g1/` … `g4/NOTES.md` (with the session's `REPORT_G1.md` … `REPORT_G4.md`) | run 6, Roadmap G: a stress test of the four-class reduction on 340,000 random ratios to `m = 10⁹` (no survivor) with an exact local test at odd primes (`g1/`); which primes empty the four-class set, test 6 of `COMPLETE.md` §7 answered **no** (`g2/`); the census of the two degenerate types for `11000 < m ≤ 13000` (4 open, 3 conditional; `g3/`); a point search on the square-type fibres to `m = 20,000`, a search, not a certificate (`g4/`) |
+| `roadmap-g/` | `g1/` … `g4/NOTES.md` (with the session's `REPORT_G1.md` … `REPORT_G4.md`) | run 6, Roadmap G: a stress test of the four-class reduction on 340,000 random ratios to `m = 10⁹` (no survivor) with an exact local test at odd primes (`g1/`); which primes empty the four-class set, test 6 of `COMPLETE.md` §7 answered **no** (`g2/`); the census of the two degenerate types for `11000 < m ≤ 13000` (4 open, 3 conditional; `g3/`; in run 7 extended to `14000`: 916 ratios, 6 open, 3 conditional); a point search on the square-type fibres to `m = 20,000`, a search, not a certificate (`g4/`) |
+| `roadmap-h/` | `NOTES.md` and `h1/` … `h7/NOTES.md` (with the session's `HANDOFF_ROADMAP_H.md` and `REPORT_H<n>.md`) | run 7, Roadmap H: phantoms of the four-class descent (7 true partner pairs, all explained; `h1/`); no survivor among every non-degenerate ratio with `15000 < m ≤ 30000` (`h2/`); tables of the local images at good primes `≤ 1153`, the session's completeness step withdrawn (`h3/`); G1's three out-of-memory ratios (`h4/`); the quotients of (627,364), (991,263) (`h6/`); rank 1 for F4's `g4·K` at four ratios and the `E04` bounds of tier B by a full-2-torsion isogenous curve (`h7/`); G3's block `13000 < m ≤ 14000` is under `roadmap-g/g3/` |
+| `referee_x6/`, `referee_z7/`, `referee_z8/`, `referee_z9/` | `README.md` in each (z7–z9) | the reviews' own checks of roadmap G (run 6) and roadmap H (run 7) |
 | `HANDOFF_26NOV.md` | | the session's one-page summary |
 
 The pipeline is: congruences (`census2000/gen_pairs.py`) → the repository's class criterion → second descent
@@ -85,7 +87,7 @@ stopping on its own assertion are left out. Everything is tier D, written by an 
 
 - `census-wide/g4k/` (F4, `NOTES.md`): Demjanenko–Manin on C: y² = g4·K in exact arithmetic. **If rank C(ℚ) = 1**, every
   solution of (7735,4968), (6557,324) and (6881,6233) is degenerate. Rank 1 is PARI's `ellrank` bound only; the exact
-  descent gives 2, 3, 5. Conditional.
+  descent gives 2, 3, 5. Conditional. Since run 7 (`roadmap-h/h7/`): rank 1 exactly for (7735,4968) and (6881,6233) by the complete 2-descent with the Cassels–Tate pairing on the 2-isogenous curve with full 2-torsion (review z7: holds; tier D); (6557,324) through its partner. Since run 7 (`roadmap-h/h7/`): rank 1 exactly for (7735,4968) and (6881,6233) by the complete 2-descent with the Cassels–Tate pairing on the 2-isogenous curve with full 2-torsion (review z7: holds; tier D); (6557,324) through its partner. Since run 7 (`roadmap-h/h7/`): rank 1 exactly for (7735,4968) and (6881,6233) by the complete 2-descent with the Cassels–Tate pairing on the 2-isogenous curve with full 2-torsion (review z7: holds; tier D); (6557,324) through its partner. Since run 7 (`roadmap-h/h7/`): rank 1 exactly for (7735,4968) and (6881,6233) by the complete 2-descent with the Cassels–Tate pairing on the 2-isogenous curve with full 2-torsion (review z7: holds; tier D); (6557,324) through its partner.
 - `census-wide/rank1/` (F2, `NOTES.md`): exact rank bounds 3, 5, 3, 3, 3 for the five curves behind the seven
   conditional ratios ((8249,3720) lowered from 5, D1 of (12007,1799) from 4). None reaches 1.
 - `open-ratio/` (F1): the real-place fix in `ctp/ctp.gp` and the logs that explain `val_Q.err`
@@ -131,7 +133,7 @@ read by a person. Nothing changes the census, which stops at `m ≤ 1000`.
   form); tested against the repository's test and against explicit local points, not proved. One degenerate control,
   (1109503,597671), keeps four tuples besides those of its degenerate points; the review found them **locally soluble
   everywhere** (explicit points at 2 and at every bad prime; the good primes by `exact_local.py` and a short argument);
-  whether a rational point has one of these classes is open.
+  whether a rational point has one of these classes is open (run 7, `roadmap-h/h1/`: none does).
 - `roadmap-g/g2/` (`NOTES.md`): **the bad primes alone do not always empty the four-class set**: they leave tuples for 101
   of the 997 ratios of test 4 and 836 of the 8,739 of test 7, each tuple with explicit local points at 2 and (found by
   the review) at every odd bad prime; good primes up to 181, all `≡ 1 (mod 4)`, empty all 9,736; irredundant kill sets;
@@ -140,7 +142,7 @@ read by a person. Nothing changes the census, which stops at `m ≤ 1000`.
   congruences, each with its closing step and label (`CENSUS_TABLE_G3.tsv`, the format of `census-wide/table/`): **open**
   (11165,7548), (12201,7360), (12204,9853), (12703,2767); **conditional on a rank being 1** (11441,1519), (11969,4529),
   (12007,1799); (12416,5313) by the rank-1 route, conditional on (a), (b). PARI rank bounds throughout; other types with
-  `m > 11000` not covered. One row's label regenerated from the corrected table.
+  `m > 11000` not covered. One row's label regenerated from the corrected table. Run 7 added the block `13000 < m ≤ 14000` (305 ratios; open (13348,3795), (13899,1180); `g3/NOTES.md`, last section), so the table now has 916 rows. Run 7 added the block `13000 < m ≤ 14000` (305 ratios; open (13348,3795), (13899,1180); `g3/NOTES.md`, last section), so the table now has 916 rows. Run 7 added the block `13000 < m ≤ 14000` (305 ratios; open (13348,3795), (13899,1180); `g3/NOTES.md`, last section), so the table now has 916 rows.
 - `roadmap-g/g4/` (`NOTES.md`): on the 3,573 square-type ratios with `m ≤ 20,000`, none of the points listed (height up
   to 64 times the largest generator's, on the subgroup of PARI's points, wherever PARI's rank bounds meet) gives a
   solution or a non-degenerate `t` with four of the five forms squares. **A search, not a certificate** (PARI's ranks,
@@ -149,3 +151,16 @@ read by a person. Nothing changes the census, which stops at `m ≤ 1000`.
 - Not committed: nothing of the bundle except the two input lists of `g2/` (copies of repository files) and four
   per-worker files of `g2/` (their lines are the `_all` files). The scripts find the repository through `MSS_REPO`, or
   else `../../..`; `g3/`'s pipeline calls `census-wide/` scripts that still name the session's folders ("Rerunning" above).
+
+## Roadmap H (committed in run 7)
+
+Fable's roadmap-H bundle (a separate AI session, PARI 2.19.1) was reviewed by three separate AI agents, z7 (H7), z8 (H1,
+H3) and z9 (H2, H4, H6, G3's block 13000; reports `reviews/review_z7.md`, `review_z8.md`, `review_z9.md`; their own
+checks in `referee_z7/`, `referee_z8/`, `referee_z9/`), and committed with the session's text unchanged apart from those lines, and a `NOTES.md` in each of `h1`–`h4`, `h6`, `h7` that takes precedence (`roadmap-h/NOTES.md` has the summary). The main corrections: H3's
+Hasse–Weil step used the wrong curve and is withdrawn (good primes above 1153 do remove label vectors; a complete local test needs good primes `≡ 1 (mod 4)` below 67,583 and `≡ 7 (mod 8)` below 1154, by z8's argument with Hasse–Weil quoted); H1's scan skipped the primes of `m² + n²` and of the octic above
+20,000, so 5 of its 12 phantom pairs, the "open" one among them, are not phantoms, and the 7 true pairs are all
+explained; H2's hunts count 2,131 distinct ratios beyond `m = 30,000`, not 2,421. At integration `h2/h2_control.py`
+was given a fallback path for G2's list, and G3's table was rebuilt from the repository's table (the session's copy
+had lost run 6's correction of (12007,1799)). Not committed: the session's own copy of G3's folder (its block-13000
+records were added to `roadmap-g/g3/`).
+

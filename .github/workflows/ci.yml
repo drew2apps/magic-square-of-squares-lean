@@ -607,6 +607,11 @@ jobs:
             python3 $s.py 2>/dev/null | grep -v 'PARI stack' | diff - $s.txt
           done
           python3 rank_fisher_theta4_gen_order.py --negative 2>/dev/null | diff - rank_fisher_theta4_gen_order_negative.txt
+          # run 8: Theta_4 on E+ of (945,248), E' side, and the conic finder's re-check (its --find prints timings: grepped)
+          python3 rank_fisher_theta4_gen.py 945,248 "--side=E'" 2>/dev/null | grep -v 'PARI stack' | diff - rank_fisher_theta4_gen_945_248_Eprime.txt
+          python3 rank_fisher_theta4_gen.py 945,248 "--side=E'" --negative 2>/dev/null | grep -v 'PARI stack' | diff - rank_fisher_theta4_gen_945_248_Eprime_negative.txt
+          python3 rank_fisher_theta4_norm.py 2>/dev/null | grep -v 'PARI stack' | diff - rank_fisher_theta4_norm.txt
+          test "$(python3 rank_fisher_theta4_norm.py --find 2>/dev/null | grep -c 'equal to the committed hint: True')" = 2
           cd "$GITHUB_WORKSPACE"
           # run 6 (experiments/roadmap-g, tier D): the exact local test and its controls; two ranges of the stress test
           # (k = 20 holds the control (1109503,597671)); G2's tables, negative test and 2-adic witnesses; G3's table;
@@ -632,6 +637,32 @@ jobs:
           python3 $Q/g3_family.py | diff - $Q/g3_family.txt
           python3 $Q/g3_sample.py | diff - $Q/g3_sample.txt
           python3 $Q/samples/compare.py | diff - $Q/samples/compare.txt
+          # run 7 (tier D, not counted): Fable's roadmap H (experiments/roadmap-h; each script compares with its committed
+          # output and prints '# matches'), the reviews' own checks (experiments/referee_z7, z8, z9) and rank0_ct.py
+          # for (609,200), (809,409) (about 7 minutes)
+          cd "$GITHUB_WORKSPACE"
+          hm() { (cd "$1" && shift && python3 "$@" 2>/dev/null | grep -v 'PARI stack' > /tmp/hm.out && ! grep -q 'DIFFERS' /tmp/hm.out && tail -1 /tmp/hm.out | grep -q '^# matches'); }
+          H=experiments/roadmap-h
+          hm $H/h1 h1_pairs.py --negative; hm $H/h1 h1_scan.py --negative; hm $H/h1 h1_rank0_exact.py --negative
+          hm $H/h1 h1_iso.py; hm $H/h1 h1_iso.py --negative
+          hm $H/h2 h2_summary.py; hm $H/h2 h2_control.py; hm $H/h2 h2_control.py --negative
+          hm $H/h3 h3_tables.py; hm $H/h3 h3_tables.py --negative; hm $H/h3 h3_tables.py --check 2000
+          hm $H/h3 h3_weil.py --negative; hm $H/h3 h3_sizes.py
+          hm $H/h4 h4_split.py --negative
+          hm $H/h6 h6_split.py 627 364; hm $H/h6 h6_ranks.py --negative; hm $H/h6 h6_richelot.py --negative; hm $H/h6 h6_richelot.py --controls
+          hm $H/h7 h7_g4k_rank1.py; hm $H/h7 h7_g4k_rank1.py --negative; hm $H/h7 h7_e04_rank.py; hm $H/h7 h7_e04_rank.py --negative
+          (cd $H/h7 && python3 h7_g4k_rank1.py 13348,3795 13899,1180 2>/dev/null | grep -v 'PARI stack' | diff - h7_b13000_rank1.txt)
+          (cd $H/h7 && python3 h7_g4k_rank1.py 13348,3795 13899,1180 2>/dev/null | grep -v 'PARI stack' | diff - h7_b13000_rank1.txt)
+          (cd $H/h7 && python3 h7_g4k_rank1.py 13348,3795 13899,1180 2>/dev/null | grep -v 'PARI stack' | diff - h7_b13000_rank1.txt)
+          (cd $H/h7 && python3 h7_g4k_rank1.py 13348,3795 13899,1180 2>/dev/null | grep -v 'PARI stack' | diff - h7_b13000_rank1.txt)
+          hm scripts/second_descent rank0_ct.py; hm scripts/second_descent rank0_ct.py --negative
+          for x in referee_z7/my2desc referee_z7/ct_mine referee_z7/velu_check referee_z7/partner_cells referee_z7/run_ct_g4k \
+                   referee_z7/ct_rank0 referee_z7/classes referee_z8/my_local referee_z8/brute_p2 referee_z8/methA_above \
+                   referee_z8/p3mod4 referee_z8/p3_methA referee_z8/h3_counts referee_z8/badprimes_left referee_z8/octic_cut \
+                   referee_z8/octic_cut_all referee_z8/witness2 referee_z8/witness5 referee_z8/witness_odd referee_z8/witness_supp \
+                   referee_z9/recount referee_z9/degcount referee_z9/h6_ident referee_z9/c5 referee_z9/g3_family_z9 referee_z9/sample_h2; do
+            (cd experiments/$(dirname $x) && python3 -I $(basename $x).py 2>/dev/null | grep -v 'PARI stack' | diff - $(basename $x).txt)
+          done
           cd "$GITHUB_WORKSPACE"
           # no program of this job may rewrite a committed file (OUTPUTS.md)
           git diff --exit-code

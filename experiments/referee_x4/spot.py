@@ -90,7 +90,7 @@ print('spot-checked %d rows; all close: %s' % (len(S), ok_all))
 # ---- the SPECIAL rows (hand-entered in census_table.py): each against its route record, and every partner relation
 RT = CW + '/route'
 def route_rec(m, n, d=None):
-    fs = glob.glob(RT + '/log_%d.txt' % m) + glob.glob(RT + '/log_%d_*.txt' % m) + glob.glob(RT + '/out_%d_%d_*.json' % (m, n))
+    fs = sorted(glob.glob(RT + '/log_%d.txt' % m)) + sorted(glob.glob(RT + '/log_%d_*.txt' % m)) + sorted(glob.glob(RT + '/out_%d_%d_*.json' % (m, n)))   # sorted (run 8): directory order differs between file systems
     out = []
     for f in fs:
         txt = open(f).read().strip().splitlines()

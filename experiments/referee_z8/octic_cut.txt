@@ -1,0 +1,6 @@
+z8: the octic prime 5462461 for (11875080,6497849) (octic mod p = 0, m^2 + n^2 mod p = 1397561). Written by an AI model; not read by a person.
+  forms 8 and U meet at (322524, 1), v_p(resultant) = 1: e_8 + e_U = 0 (argument applies); (2, 1, 5377231, 18372929) ok, (2, 1, 36745858, 10754462) ok, (2, 1, 1, 98795483379599) VIOLATES, (2, 1, 197590966759198, 2) VIOLATES
+  forms 0 and L meet at (1434073, 1), v_p(resultant) = 1: e_0 + e_L = 0 (argument applies); (2, 1, 5377231, 18372929) ok, (2, 1, 36745858, 10754462) ok, (2, 1, 1, 98795483379599) VIOLATES, (2, 1, 197590966759198, 2) VIOLATES
+  forms 0 and U meet at (4028388, 1), v_p(resultant) = 1: e_0 + e_U = 1 (argument applies); (2, 1, 5377231, 18372929) ok, (2, 1, 36745858, 10754462) ok, (2, 1, 1, 98795483379599) VIOLATES, (2, 1, 197590966759198, 2) VIOLATES
+  forms 8 and L meet at (5139937, 1), v_p(resultant) = 1: e_8 + e_L = 1 (argument applies); (2, 1, 5377231, 18372929) ok, (2, 1, 36745858, 10754462) ok, (2, 1, 1, 98795483379599) VIOLATES, (2, 1, 197590966759198, 2) VIOLATES
+known tuples satisfy every equation: yes; extra tuples cut: 2 of 2

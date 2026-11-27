@@ -610,3 +610,308 @@ m	n	type	step	detail	label
 12983	8407	twice	second descent	class +23	computed; PARI rank upper bounds
 12995	228	square	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
 13000	12921	square	second descent	class 1356	computed; PARI rank upper bounds
+13001	9679	twice	second descent	class +14	computed; PARI rank upper bounds
+13007	7001	twice	second descent	partner (10004, 3003): class 1356	computed; PARI rank upper bounds
+13009	3889	twice	second descent	class +23	computed; PARI rank upper bounds
+13013	11316	square	second descent	class 1356	computed; PARI rank upper bounds
+13015	4872	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13020	3749	square	second descent	class 1356	computed; PARI rank upper bounds
+13020	7181	square	second descent	class 1356	computed; PARI rank upper bounds
+13029	3220	square	second descent	class 1356	computed; PARI rank upper bounds
+13031	8880	square	second descent	class 1356	computed; PARI rank upper bounds
+13033	217	twice	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13035	10492	square	second descent	class 1356	computed; PARI rank upper bounds
+13041	9680	square	second descent	class 1356	computed; PARI rank upper bounds
+13049	5543	twice	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13063	9247	twice	second descent	class +14	computed; PARI rank upper bounds
+13064	3423	square	second descent	class 1356	computed; PARI rank upper bounds
+13068	11725	square	second descent	class 1356	computed; PARI rank upper bounds
+13073	2657	twice	second descent	class +23	computed; PARI rank upper bounds
+13073	10903	twice	second descent	class +14	computed; PARI rank upper bounds
+13080	8281	square	second descent	class +23	computed; PARI rank upper bounds
+13081	1433	twice	second descent	class +14	computed; PARI rank upper bounds
+13081	2760	square	second descent	class 1356	computed; PARI rank upper bounds
+13081	3239	twice	second descent	partner (8160, 4921): class 1356	computed; PARI rank upper bounds
+13083	6844	square	second descent	class 1356	computed; PARI rank upper bounds
+13087	641	twice	second descent	partner (6864, 6223): class 1356	computed; PARI rank upper bounds
+13087	7577	twice	second descent	partner (10332, 2755): class 1356	computed; PARI rank upper bounds
+13095	4408	square	second descent	class 1356	computed; PARI rank upper bounds
+13097	9673	twice	second descent	class +23	computed; PARI rank upper bounds
+13097	11527	twice	second descent	class 1356	computed; PARI rank upper bounds
+13103	4271	twice	special	partner (8687, 4416), 1000 < m <= 11000 table: rank-1 route, route_pari.py, d = 111925826	computed (route_pari.py); conditional on (a) G generating E1(Q) mod torsion, (b) the reading of CVV constants
+13104	3097	square	second descent	class 1356	computed; PARI rank upper bounds
+13104	6847	square	second descent	class 1356	computed; PARI rank upper bounds
+13104	10553	square	second descent	class 1356	computed; PARI rank upper bounds
+13108	9405	square	second descent	class +14	computed; PARI rank upper bounds
+13111	2369	twice	second descent	class +23	computed; PARI rank upper bounds
+13111	6311	twice	second descent	class 1356	computed; PARI rank upper bounds
+13121	12799	twice	second descent	class 1356	computed; PARI rank upper bounds
+13127	10103	twice	second descent	class +14	computed; PARI rank upper bounds
+13132	5115	square	second descent	class 1356	computed; PARI rank upper bounds
+13137	7616	square	second descent	class 1356	computed; PARI rank upper bounds
+13140	2771	square	second descent	class +23	computed; PARI rank upper bounds
+13144	12567	square	second descent	class 1356	computed; PARI rank upper bounds
+13151	4657	twice	Demjanenko-Manin	partner (8904, 4247): curve E	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13153	6103	twice	second descent	partner (9628, 3525): class 1356	computed; PARI rank upper bounds
+13153	10537	twice	second descent	partner (11845, 1308): class 1356	computed; PARI rank upper bounds
+13159	8161	twice	second descent	class +14	computed; PARI rank upper bounds
+13161	1840	square	second descent	class +14	computed; PARI rank upper bounds
+13167	3944	square	second descent	partner (17111, 9223): class 1356	computed; PARI rank upper bounds
+13167	11656	square	second descent	class +23	computed; PARI rank upper bounds
+13172	2445	square	second descent	class 1356	computed; PARI rank upper bounds
+13176	7943	square	second descent	class 1356	computed; PARI rank upper bounds
+13177	6713	twice	second descent	partner (9945, 3232): class 1356	computed; PARI rank upper bounds
+13183	3031	twice	second descent	class +14	computed; PARI rank upper bounds
+13184	6513	square	second descent	class 1356	computed; PARI rank upper bounds
+13189	1380	square	second descent	class 1356	computed; PARI rank upper bounds
+13192	4785	square	second descent	class 1356	computed; PARI rank upper bounds
+13193	4657	twice	second descent	class +14	computed; PARI rank upper bounds
+13193	10824	square	second descent	class +23	computed; PARI rank upper bounds
+13193	11417	twice	second descent	partner (12305, 888): class 1356	computed; PARI rank upper bounds
+13195	6372	square	second descent	class +14	computed; PARI rank upper bounds
+13197	9196	square	second descent	class +14	computed; PARI rank upper bounds
+13200	2119	square	second descent	class 1356	computed; PARI rank upper bounds
+13203	10004	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13205	5148	square	second descent	class 1356	computed; PARI rank upper bounds
+13207	1799	twice	second descent	partner (7503, 5704): class 1356	computed; PARI rank upper bounds
+13207	11863	twice	second descent	class +14	computed; PARI rank upper bounds
+13209	920	square	second descent	class 1356	computed; PARI rank upper bounds
+13216	9063	square	second descent	class 1356	computed; PARI rank upper bounds
+13217	12313	twice	second descent	class 1356	computed; PARI rank upper bounds
+13221	460	square	second descent	class 1356	computed; PARI rank upper bounds
+13223	8753	twice	second descent	class 1356	computed; PARI rank upper bounds
+13223	12767	twice	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13224	1793	square	second descent	class 1356	computed; PARI rank upper bounds
+13224	10207	square	second descent	class 1356	computed; PARI rank upper bounds
+13231	3480	square	second descent	partner (16711, 9751): class 1356	computed; PARI rank upper bounds
+13241	287	twice	second descent	class 1356	computed; PARI rank upper bounds
+13244	1467	square	second descent	class 1356	computed; PARI rank upper bounds
+13249	6671	twice	second descent	class +23	computed; PARI rank upper bounds
+13260	1141	square	second descent	partner (14401, 12119): class 1356	computed; PARI rank upper bounds
+13260	6179	square	second descent	class +14	computed; PARI rank upper bounds
+13261	7140	square	second descent	class 1356	computed; PARI rank upper bounds
+13268	7605	square	second descent	class 1356	computed; PARI rank upper bounds
+13271	2897	twice	second descent	class 1356	computed; PARI rank upper bounds
+13271	5209	twice	second descent	class +23	computed; PARI rank upper bounds
+13272	815	square	second descent	class 1356	computed; PARI rank upper bounds
+13279	1153	twice	second descent	class 1356	computed; PARI rank upper bounds
+13279	9353	twice	second descent	class +23	computed; PARI rank upper bounds
+13280	489	square	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13284	163	square	second descent	class 1356	computed; PARI rank upper bounds
+13287	3016	square	second descent	partner (16303, 10271): class 1356	computed; PARI rank upper bounds
+13289	2023	twice	second descent	class 1356	computed; PARI rank upper bounds
+13289	3409	twice	second descent	class +23	computed; PARI rank upper bounds
+13289	4680	square	second descent	class 1356	computed; PARI rank upper bounds
+13297	7529	twice	second descent	partner (10413, 2884): class 1356	computed; PARI rank upper bounds
+13299	5900	square	second descent	class 1356	computed; PARI rank upper bounds
+13313	937	twice	second descent	class +14	computed; PARI rank upper bounds
+13321	12000	square	second descent	class +23	computed; PARI rank upper bounds
+13327	9961	twice	second descent	partner (11644, 1683): class 1356	computed; PARI rank upper bounds
+13332	5845	square	second descent	class 1356	computed; PARI rank upper bounds
+13335	2552	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13337	7247	twice	second descent	class +14	computed; PARI rank upper bounds
+13340	9861	square	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13345	8712	square	second descent	class 1356	computed; PARI rank upper bounds
+13348	3795	square	open	left after every step	OPEN
+13351	11160	square	second descent	class 1356	computed; PARI rank upper bounds
+13356	7267	square	second descent	class 1356	computed; PARI rank upper bounds
+13356	13067	square	second descent	class 1356	computed; PARI rank upper bounds
+13361	4319	twice	second descent	partner (8840, 4521): class 1356	computed; PARI rank upper bounds
+13361	5441	twice	second descent	partner (9401, 3960): class 1356	computed; PARI rank upper bounds
+13363	9516	square	second descent	class +23	computed; PARI rank upper bounds
+13367	10577	twice	second descent	class +23	computed; PARI rank upper bounds
+13375	2088	square	second descent	class 1356	computed; PARI rank upper bounds
+13391	71	twice	second descent	class 1356	computed; PARI rank upper bounds
+13391	3791	twice	second descent	class +14	computed; PARI rank upper bounds
+13395	5428	square	second descent	class +14	computed; PARI rank upper bounds
+13399	11201	twice	second descent	partner (12300, 1099): class 1356	computed; PARI rank upper bounds
+13400	5511	square	second descent	class 1356	computed; PARI rank upper bounds
+13407	1624	square	second descent	class 1356	computed; PARI rank upper bounds
+13417	7831	twice	second descent	partner (10624, 2793): class 1356	computed; PARI rank upper bounds
+13420	8379	square	second descent	class +14	computed; PARI rank upper bounds
+13420	11859	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13423	3433	twice	second descent	class 1356	computed; PARI rank upper bounds
+13423	11833	twice	second descent	class 1356	computed; PARI rank upper bounds
+13425	13208	square	second descent	partner (26633, 217): class 1356	computed; PARI rank upper bounds
+13431	1160	square	second descent	partner (14591, 12271): class 1356	computed; PARI rank upper bounds
+13432	3135	square	second descent	class 1356	computed; PARI rank upper bounds
+13433	3744	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13439	5839	twice	second descent	class 1356	computed; PARI rank upper bounds
+13439	7440	square	Demjanenko-Manin	curve E	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13439	12473	twice	second descent	partner (12956, 483): class 1356	computed; PARI rank upper bounds
+13440	6929	square	second descent	class 1356	computed; PARI rank upper bounds
+13441	799	twice	second descent	class 1356	computed; PARI rank upper bounds
+13447	696	square	second descent	class 1356	computed; PARI rank upper bounds
+13447	1303	twice	Demjanenko-Manin	curve E-partner	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13447	2543	twice	second descent	class 1356	computed; PARI rank upper bounds
+13447	8783	twice	second descent	class 1356	computed; PARI rank upper bounds
+13447	13121	twice	second descent	class +23	computed; PARI rank upper bounds
+13452	9515	square	second descent	class +14	computed; PARI rank upper bounds
+13452	10675	square	second descent	class 1356	computed; PARI rank upper bounds
+13455	232	square	second descent	class +14	computed; PARI rank upper bounds
+13457	2551	twice	second descent	class +14	computed; PARI rank upper bounds
+13463	1673	twice	second descent	class 1356	computed; PARI rank upper bounds
+13464	5177	square	second descent	class +23	computed; PARI rank upper bounds
+13468	2805	square	Demjanenko-Manin	curve Sig--partner	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13483	4956	square	second descent	class 1356	computed; PARI rank upper bounds
+13485	6188	square	second descent	class +14	computed; PARI rank upper bounds
+13485	8228	square	second descent	class 1356	computed; PARI rank upper bounds
+13487	6337	twice	second descent	class +14	computed; PARI rank upper bounds
+13489	4177	twice	second descent	class +14	computed; PARI rank upper bounds
+13489	4871	twice	second descent	partner (9180, 4309): class 1356	computed; PARI rank upper bounds
+13489	8423	twice	second descent	partner (10956, 2533): class 1356	computed; PARI rank upper bounds
+13489	9209	twice	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13493	3276	square	second descent	class 1356	computed; PARI rank upper bounds
+13500	12709	square	second descent	class 1356	computed; PARI rank upper bounds
+13509	11500	square	second descent	class 1356	computed; PARI rank upper bounds
+13513	6241	twice	second descent	class 1356	computed; PARI rank upper bounds
+13515	9028	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13516	8037	square	second descent	class 1356	computed; PARI rank upper bounds
+13524	4843	square	second descent	class 1356	computed; PARI rank upper bounds
+13527	10664	square	second descent	class 1356	computed; PARI rank upper bounds
+13528	2145	square	second descent	class 1356	computed; PARI rank upper bounds
+13529	9840	square	second descent	class +14	computed; PARI rank upper bounds
+13537	433	twice	second descent	class +14	computed; PARI rank upper bounds
+13552	11505	square	second descent	class 1356	computed; PARI rank upper bounds
+13553	9023	twice	second descent	partner (11288, 2265): class 1356	computed; PARI rank upper bounds
+13559	6960	square	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13560	9169	square	second descent	class 1356	computed; PARI rank upper bounds
+13561	2921	twice	second descent	class 1356	computed; PARI rank upper bounds
+13561	10073	twice	second descent	partner (11817, 1744): class 1356	computed; PARI rank upper bounds
+13563	4484	square	second descent	class 1356	computed; PARI rank upper bounds
+13567	3977	twice	second descent	class +14	computed; PARI rank upper bounds
+13572	10325	square	second descent	class +23	computed; PARI rank upper bounds
+13575	13568	square	second descent	class +23	computed; PARI rank upper bounds
+13577	1673	twice	second descent	class +23	computed; PARI rank upper bounds
+13580	4509	square	second descent	class 1356	computed; PARI rank upper bounds
+13583	4567	twice	second descent	class +14	computed; PARI rank upper bounds
+13583	6913	twice	second descent	partner (10248, 3335): class 1356	computed; PARI rank upper bounds
+13585	5712	square	second descent	class 1356	computed; PARI rank upper bounds
+13588	1155	square	second descent	class 1356	computed; PARI rank upper bounds
+13589	2340	square	second descent	partner (15929, 11249): class 1356	computed; PARI rank upper bounds
+13591	10511	twice	second descent	class +14	computed; PARI rank upper bounds
+13596	6253	square	second descent	class 1356	computed; PARI rank upper bounds
+13609	5431	twice	second descent	class +14	computed; PARI rank upper bounds
+13609	9631	twice	second descent	class 1356	computed; PARI rank upper bounds
+13612	165	square	second descent	class 1356	computed; PARI rank upper bounds
+13617	7744	square	Demjanenko-Manin	curve E	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13625	1872	square	second descent	class 1356	computed; PARI rank upper bounds
+13629	12700	square	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13632	4175	square	second descent	class 1356	computed; PARI rank upper bounds
+13633	1319	twice	second descent	class +23	computed; PARI rank upper bounds
+13635	4012	square	second descent	class 1356	computed; PARI rank upper bounds
+13639	2201	twice	second descent	partner (7920, 5719): class 1356	computed; PARI rank upper bounds
+13639	11399	twice	second descent	class +14	computed; PARI rank upper bounds
+13640	12351	square	second descent	class 1356	computed; PARI rank upper bounds
+13649	7057	twice	second descent	class +23	computed; PARI rank upper bounds
+13657	10247	twice	second descent	class +23	computed; PARI rank upper bounds
+13657	11849	twice	second descent	class +14	computed; PARI rank upper bounds
+13659	8540	square	second descent	class 1356	computed; PARI rank upper bounds
+13664	8823	square	second descent	class 1356	computed; PARI rank upper bounds
+13667	11844	square	second descent	class 1356	computed; PARI rank upper bounds
+13668	5915	square	second descent	class 1356	computed; PARI rank upper bounds
+13673	936	square	second descent	class 1356	computed; PARI rank upper bounds
+13677	5236	square	second descent	class 1356	computed; PARI rank upper bounds
+13679	799	twice	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13680	3841	square	second descent	class 1356	computed; PARI rank upper bounds
+13681	12761	twice	second descent	partner (13221, 460): class 1356	computed; PARI rank upper bounds
+13685	468	square	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13685	9348	square	second descent	class 1356	computed; PARI rank upper bounds
+13687	13223	twice	second descent	class 1356	computed; PARI rank upper bounds
+13688	9975	square	second descent	class 1356	computed; PARI rank upper bounds
+13689	11000	square	second descent	class +23	computed; PARI rank upper bounds
+13695	10168	square	second descent	class 1356	computed; PARI rank upper bounds
+13696	7353	square	second descent	class 1356	computed; PARI rank upper bounds
+13697	10871	twice	second descent	class 1356	computed; PARI rank upper bounds
+13699	3540	square	second descent	class 1356	computed; PARI rank upper bounds
+13703	2047	twice	second descent	class 1356	computed; PARI rank upper bounds
+13703	4529	twice	second descent	class 1356	computed; PARI rank upper bounds
+13711	7471	twice	second descent	class +23	computed; PARI rank upper bounds
+13716	13213	square	second descent	class 1356	computed; PARI rank upper bounds
+13721	5999	twice	second descent	class +14	computed; PARI rank upper bounds
+13724	3507	square	second descent	class 1356	computed; PARI rank upper bounds
+13729	11503	twice	second descent	class +14	computed; PARI rank upper bounds
+13736	5577	square	second descent	class 1356	computed; PARI rank upper bounds
+13741	7260	square	Demjanenko-Manin	curve E-partner	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13751	8089	twice	second descent	class 1356	computed; PARI rank upper bounds
+13753	79	twice	second descent	class +14	computed; PARI rank upper bounds
+13753	12143	twice	second descent	partner (12948, 805): class 1356	computed; PARI rank upper bounds
+13755	3068	square	second descent	class +23	computed; PARI rank upper bounds
+13759	5359	twice	second descent	partner (9559, 4200): class 1356	computed; PARI rank upper bounds
+13761	4760	square	Demjanenko-Manin	curve E	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13764	3173	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13764	8477	square	second descent	class 1356	computed; PARI rank upper bounds
+13769	3631	twice	second descent	class +23	computed; PARI rank upper bounds
+13769	12791	twice	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13776	11993	square	second descent	class 1356	computed; PARI rank upper bounds
+13777	3689	twice	second descent	class 1356	computed; PARI rank upper bounds
+13777	13447	twice	second descent	partner (13612, 165): class 1356	computed; PARI rank upper bounds
+13780	7011	square	second descent	class 1356	computed; PARI rank upper bounds
+13783	13056	square	second descent	class +14	computed; PARI rank upper bounds
+13795	8052	square	second descent	class +23	computed; PARI rank upper bounds
+13799	961	twice	second descent	partner (7380, 6419): class 1356	computed; PARI rank upper bounds
+13800	2839	square	second descent	class 1356	computed; PARI rank upper bounds
+13800	5239	square	second descent	class +14	computed; PARI rank upper bounds
+13803	2596	square	second descent	class 1356	computed; PARI rank upper bounds
+13804	10797	square	second descent	class 1356	computed; PARI rank upper bounds
+13807	2737	twice	second descent	class +14	computed; PARI rank upper bounds
+13817	1169	twice	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13817	1847	twice	second descent	class 1356	computed; PARI rank upper bounds
+13823	8311	twice	second descent	partner (11067, 2756): class 1356	computed; PARI rank upper bounds
+13823	8689	twice	second descent	class 1356	computed; PARI rank upper bounds
+13825	12192	square	second descent	class 1356	computed; PARI rank upper bounds
+13831	5089	twice	second descent	partner (9460, 4371): class 1356	computed; PARI rank upper bounds
+13832	2505	square	second descent	class 1356	computed; PARI rank upper bounds
+13837	4284	square	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13841	5761	twice	second descent	class +14	computed; PARI rank upper bounds
+13843	2124	square	second descent	class 1356	computed; PARI rank upper bounds
+13855	9672	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13857	6776	square	second descent	class 1356	computed; PARI rank upper bounds
+13860	2171	square	second descent	class 1356	computed; PARI rank upper bounds
+13860	4901	square	second descent	class +14	computed; PARI rank upper bounds
+13860	8131	square	second descent	class 1356	computed; PARI rank upper bounds
+13860	12851	square	second descent	class 1356	computed; PARI rank upper bounds
+13861	10500	square	second descent	class 1356	computed; PARI rank upper bounds
+13871	5520	square	second descent	partner (19391, 8351): class 1356	computed; PARI rank upper bounds
+13873	8737	twice	Demjanenko-Manin	partner (11305, 2568): curve E-partner	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13875	1652	square	Demjanenko-Manin	curve E	computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+13879	4079	twice	second descent	class 1356	computed; PARI rank upper bounds
+13884	1837	square	second descent	class 1356	computed; PARI rank upper bounds
+13899	1180	square	open	left after every step	OPEN
+13903	287	twice	second descent	class +14	computed; PARI rank upper bounds
+13904	1503	square	second descent	class +14	computed; PARI rank upper bounds
+13905	3808	square	second descent	class +14	computed; PARI rank upper bounds
+13908	9275	square	second descent	class +23	computed; PARI rank upper bounds
+13908	11635	square	second descent	class 1356	computed; PARI rank upper bounds
+13913	4183	twice	second descent	class +23	computed; PARI rank upper bounds
+13915	708	square	second descent	class 1356	computed; PARI rank upper bounds
+13916	4563	square	second descent	class +14	computed; PARI rank upper bounds
+13919	6167	twice	second descent	class 1356	computed; PARI rank upper bounds
+13919	9167	twice	second descent	class 1356	computed; PARI rank upper bounds
+13920	1169	square	second descent	class 1356	computed; PARI rank upper bounds
+13921	7159	twice	second descent	class +23	computed; PARI rank upper bounds
+13923	236	square	second descent	class +14	computed; PARI rank upper bounds
+13923	7564	square	second descent	class +14	computed; PARI rank upper bounds
+13932	835	square	second descent	class 1356	computed; PARI rank upper bounds
+13936	6327	square	second descent	class +23	computed; PARI rank upper bounds
+13937	13416	square	second descent	class 1356	computed; PARI rank upper bounds
+13940	501	square	second descent	class +14	computed; PARI rank upper bounds
+13943	2807	twice	second descent	class 1356	computed; PARI rank upper bounds
+13943	9913	twice	second descent	class 1356	computed; PARI rank upper bounds
+13944	167	square	second descent	class 1356	computed; PARI rank upper bounds
+13951	1543	twice	second descent	partner (7747, 6204): class 1356	computed; PARI rank upper bounds
+13951	5657	twice	second descent	class 1356	computed; PARI rank upper bounds
+13952	7785	square	second descent	class 1356	computed; PARI rank upper bounds
+13961	599	twice	second descent	partner (7280, 6681): class 1356	computed; PARI rank upper bounds
+13961	9601	twice	second descent	class +23	computed; PARI rank upper bounds
+13965	6292	square	second descent	class +23	computed; PARI rank upper bounds
+13967	3281	twice	second descent	class +14	computed; PARI rank upper bounds
+13968	4225	square	rank 0	w*f0*f8	computed (repository global.py); PARI rank upper bounds
+13973	8364	square	second descent	class 1356	computed; PARI rank upper bounds
+13983	12544	square	rank 0	w*K	computed (repository global.py); PARI rank upper bounds
+13991	1489	twice	second descent	class +14	computed; PARI rank upper bounds
+13991	10537	twice	second descent	partner (12264, 1727): class 1356	computed; PARI rank upper bounds
+13993	2383	twice	second descent	partner (8188, 5805): class 1356	computed; PARI rank upper bounds
+13993	6577	twice	second descent	class 1356	computed; PARI rank upper bounds
+13999	10039	twice	second descent	class 1356	computed; PARI rank upper bounds
+14000	12489	square	second descent	class 1356	computed; PARI rank upper bounds

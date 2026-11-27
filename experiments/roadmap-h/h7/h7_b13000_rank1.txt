@@ -1,0 +1,11 @@
+H7: rank C(Q) for C: y^2 = g4 K by a complete 2-descent on a 2-isogenous curve. Written by an AI model; not read by a person. Experiment, not counted.
+(13348,3795) g4*K: X = x - (-14282476738288741182359378); y^2 = X (X^2 + a X + b), a = -15812375217712490950156800, b = 225839881224072021483922445206622057090023050470400
+  E' (2-isogenous, same point counts mod every good p < 1000): full rational 2-torsion, roots (-45868315144726719761645760, 0, 14243564709301737861332160)
+  complete 2-descent on E': dim Sel^2 = 5, Cassels-Tate pairing of rank 2, so rank <= 1
+  a point of infinite order is known (n G != O for n <= 12), so rank >= 1
+  so rank C(Q) = 1 (computed, exact), the condition of F4's g4k_exact.py
+(13899,1180) g4*K: X = x - (-14732906792427692830407602); y^2 = X (X^2 + a X + b), a = -1674816579016334646796800, b = 24674916553060268439830569132421389861647669273600
+  E' (2-isogenous, same point counts mod every good p < 1000): full rational 2-torsion, roots (-11609587145679717525913920, 0, 8259953987647048232320320)
+  complete 2-descent on E': dim Sel^2 = 4, Cassels-Tate pairing of rank 0, so rank <= 2
+  a point of infinite order is known (n G != O for n <= 12), so rank >= 1
+rank C(Q) = 1, computed (exact), for: (13348,3795)
