@@ -1,0 +1,16 @@
+t10_pairct.py --h1control: (1109503,597671), the tuples of h1_pairs.py. Written by an AI model; not read by a person.
+ratio (1109503,597671): 6 residual tuple(s) after the bad primes; known tuples 2
+  E_0L: base t0 = 0; e = (-5044806324638439453125000, -2317692836450396408463936, 2317692836450396408463936); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 78 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 5; PARI ellrank [-1,-1] s=-1 tors []
+    tuple (1109503, 597671, 1918, 1): class (1, 959): killed b = (920312395136104482698617, 8302), local -1 at [137, 241, 593, 3202453, 1192437057240229]
+    tuple (1195342, 2219006, 1918, 1): class (1, 1271859878089934): killed b = (920312395136104482698617, 8302), local -1 at [2, 7, 137, 1871, 3202453]
+  E_0U: base t0 = 0; e = (-5044806324638439453125000, -2317692836450396408463936, 2317692836450396408463936); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 78 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 5; PARI ellrank [-1,-1] s=-1 tors []
+    tuple (1109503, 597671, 2, 959): class (1, 959): killed b = (920312395136104482698617, 8302), local -1 at [137, 241, 593, 3202453, 1192437057240229]
+    tuple (1195342, 2219006, 2, 959): class (1, 1271859878089934): killed b = (920312395136104482698617, 8302), local -1 at [2, 7, 137, 1871, 3202453]
+  per tuple (killing good prime; pairs):
+    (1109503, 597671, 2, 1)  good prime None  0L:image 0U:image  => not pairing-killed
+    (1195342, 2219006, 2, 1)  good prime None  0L:image 0U:image  => not pairing-killed
+    (1109503, 597671, 2, 959)  good prime not computed  0L:image 0U:killed  => PAIRING-KILLED by 0U
+    (1109503, 597671, 1918, 1)  good prime not computed  0L:killed 0U:image  => PAIRING-KILLED by 0L
+    (1195342, 2219006, 2, 959)  good prime not computed  0L:image 0U:killed  => PAIRING-KILLED by 0U
+    (1195342, 2219006, 1918, 1)  good prime not computed  0L:killed 0U:image  => PAIRING-KILLED by 0L
+AGREES WITH h1_pairs.txt

@@ -3,7 +3,7 @@
 Written by AI models (Claude, made by Anthropic); **none of these is a reading by a person.** An outside review of
 commit `24d6ef6` asked whether the reviews that `CHANGES.md` and `LEDGER.md` mention ("reviewed by a separate AI
 agent") actually took place, since no report was committed. These are the reports, committed on 26 November 2026
-(UTC; runs 6 to 8's on 27 November) as they were written, unedited.
+(UTC; runs 6 to 9's on 27 November) as they were written, unedited.
 
 How they were made: each piece of work was done by a build agent in its own git branch; a separate agent, which had not
 seen the work being produced, was then given the diff (not the build agent's summary) and asked to act as a hostile
@@ -52,6 +52,8 @@ the machines the agents ran on.
 | `review_z9.md` | run 7: roadmap H, H2 (survivor hunt), H4, H6 ((627,364), (991,263)) and G3's block `13000 < m ≤ 14000`; its scripts are in `experiments/referee_z9/` |
 | `referee_run7.md` | the integrated diff of run 7 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`) |
 | `review_z10.md` | run 8: `Θ₄` on `E⁺` of (945,248) (`rank_fisher_theta4_gen.py --side=E'`, the conic finder `rank_fisher_theta4_norm.py`) |
+| `review_z11.md` | run 9: `experiments/conductor-t10/` (the Cassels–Tate pairing on the pair curves against the good-prime removals); its scripts are in `experiments/referee_z11/` |
+| `referee_run9.md` | the integrated diff of run 9 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`) |
 
 Work that `CHANGES.md` marks "not reviewed" (for example the (627,364) scripts `kctp_*` of run 4) has no report here. A few earlier reviews, among them those of `ClassPadic.lean` and of `0b34613`, were not saved.
 The outside reviews that Drew obtained from other tools are not included.

@@ -1,0 +1,106 @@
+t10_pairct.py --negative: forged inputs that must be refused, and controls that must survive.
+Written by an AI model; not read by a person. Experiment, not counted; tier D.
+ratio (4,3): 2 residual tuple(s) after the bad primes; known tuples 2
+  E_08: base t0 = 0; e = (-337, -288, 288); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, False)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  E_0L: base t0 = 4/3; e = (-3602, -2688, -2016); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 78 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 5; PARI ellrank [3,3] s=0 tors [2, 2]
+  E_0U: base t0 = -4/3; e = (-3602, -2688, -2016); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 78 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 5; PARI ellrank [3,3] s=0 tors [2, 2]
+  E_8L: base t0 = 3/4; e = (-3602, -2688, -2016); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 78 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 5; PARI ellrank [3,3] s=0 tors [2, 2]
+  E_8U: base t0 = -3/4; e = (-3602, -2688, -2016); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 78 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 5; PARI ellrank [3,3] s=0 tors [2, 2]
+  E_LU: base t0 = 0; e = (-5000, 4216, 5000); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (2, 1, 1, 7)  good prime None  08:image 0L:image 0U:image 8L:image 8U:image LU:image  => not pairing-killed
+    (2, 1, 14, 2)  good prime None  08:image 0L:image 0U:image 8L:image 8U:image LU:image  => not pairing-killed
+  1. (4,3): 2 known tuple(s): all survive, as they must
+ratio (7,1): 2 residual tuple(s) after the bad primes; known tuples 2
+  E_08: base t0 = 0; e = (-2402, -98, 98); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  E_0L: base t0 = 0; e = (-5000, -1344, 1344); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 78 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 5; PARI ellrank [3,3] s=0 tors [2, 2]
+  E_0U: base t0 = 0; e = (-5000, -1344, 1344); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 78 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 5; PARI ellrank [3,3] s=0 tors [2, 2]
+  E_8L: base t0 = 0; e = (-5000, -1344, 1344); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 79 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 5; PARI ellrank [3,3] s=0 tors [2, 2]
+  E_8U: base t0 = 0; e = (-5000, -1344, 1344); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 79 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 5; PARI ellrank [3,3] s=0 tors [2, 2]
+  E_LU: base t0 = 0; e = (-20000, -16864, 20000); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, False)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (2, 14, 1, 2)  good prime None  08:image 0L:image 0U:image 8L:image 8U:image LU:image  => not pairing-killed
+    (7, 1, 1, 2)  good prime None  08:image 0L:image 0U:image 8L:image 8U:image LU:image  => not pairing-killed
+  1. (7,1): 2 known tuple(s): all survive, as they must
+ratio (12,5): 4 residual tuple(s) after the bad primes; known tuples 2
+  E_08: base t0 = 0; e = (-21361, -7200, 7200); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, False)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  E_0L: base t0 = 12/5; e = (-70029122, -70000560, -69943440); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 3; PARI ellrank [1,3] s=2 tors [2, 2]
+    tuple (2, 1, 14, 34): class (2, 255): killed b = (42841, 1), local -1 at [42841]
+    tuple (2, 1, 17, 7): class (2, 210): killed b = (42841, 1), local -1 at [42841]
+  E_0U: base t0 = -12/5; e = (-70029122, -70000560, -69943440); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 3; PARI ellrank [1,3] s=2 tors [2, 2]
+    tuple (2, 1, 14, 34): class (2, 210): killed b = (42841, 1), local -1 at [42841]
+    tuple (2, 1, 17, 7): class (2, 255): killed b = (42841, 1), local -1 at [42841]
+  E_8L: base t0 = 5/12; e = (-70029122, -70000560, -69943440); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 3; PARI ellrank [1,3] s=2 tors [2, 2]
+    tuple (2, 1, 14, 34): class (2, 255): killed b = (42841, 1), local -1 at [42841]
+    tuple (2, 1, 17, 7): class (2, 210): killed b = (42841, 1), local -1 at [42841]
+  E_8U: base t0 = -5/12; e = (-70029122, -70000560, -69943440); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 3; PARI ellrank [1,3] s=2 tors [2, 2]
+    tuple (2, 1, 14, 34): class (2, 210): killed b = (42841, 1), local -1 at [42841]
+    tuple (2, 1, 17, 7): class (2, 255): killed b = (42841, 1), local -1 at [42841]
+  E_LU: base t0 = 0; e = (-228488, 1912, 228488); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (2, 1, 7, 17)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (2, 1, 14, 34)  good prime 29  08:image 0L:killed 0U:killed 8L:killed 8U:killed LU:image  => PAIRING-KILLED by 0L,0U,8L,8U
+    (2, 1, 17, 7)  good prime 29  08:image 0L:killed 0U:killed 8L:killed 8U:killed LU:image  => PAIRING-KILLED by 0L,0U,8L,8U
+    (2, 1, 34, 14)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+  1. (12,5): 2 known tuple(s): all survive, as they must
+ratio (17,7): 4 residual tuple(s) after the bad primes; known tuples 2
+  E_08: base t0 = 0; e = (-85922, -28322, 28322); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  E_0L: base t0 = 0; e = (-228488, -114240, 114240); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 3; PARI ellrank [1,3] s=2 tors [2, 2]
+    tuple (7, 17, 1, 2): class (1, 119): killed b = (42841, 1), local -1 at [42841]
+    tuple (34, 14, 1, 2): class (1, 2): killed b = (42841, 1), local -1 at [42841]
+  E_0U: base t0 = 0; e = (-228488, -114240, 114240); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 3; PARI ellrank [1,3] s=2 tors [2, 2]
+    tuple (7, 17, 1, 2): class (1, 119): killed b = (42841, 1), local -1 at [42841]
+    tuple (34, 14, 1, 2): class (1, 2): killed b = (42841, 1), local -1 at [42841]
+  E_8L: base t0 = 0; e = (-228488, -114240, 114240); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 3; PARI ellrank [1,3] s=2 tors [2, 2]
+    tuple (7, 17, 1, 2): class (1, 119): killed b = (42841, 1), local -1 at [42841]
+    tuple (34, 14, 1, 2): class (1, 2): killed b = (42841, 1), local -1 at [42841]
+  E_8U: base t0 = 0; e = (-228488, -114240, 114240); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 7, point images 3; PARI ellrank [1,3] s=2 tors [2, 2]
+    tuple (7, 17, 1, 2): class (1, 119): killed b = (42841, 1), local -1 at [42841]
+    tuple (34, 14, 1, 2): class (1, 2): killed b = (42841, 1), local -1 at [42841]
+  E_LU: base t0 = 0; e = (-913952, -7648, 913952); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, False)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (7, 17, 1, 2)  good prime 29  08:image 0L:killed 0U:killed 8L:killed 8U:killed LU:image  => PAIRING-KILLED by 0L,0U,8L,8U
+    (14, 34, 1, 2)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (17, 7, 1, 2)  good prime None  08:image 0L:image 0U:image 8L:image 8U:image LU:image  => not pairing-killed
+    (34, 14, 1, 2)  good prime 29  08:image 0L:killed 0U:killed 8L:killed 8U:killed LU:image  => PAIRING-KILLED by 0L,0U,8L,8U
+  1. (17,7): 2 known tuple(s): all survive, as they must
+ratio (627,364): 4 residual tuple(s) after the bad primes; known tuples 2
+  E_08: base t0 = 0; e = (-172105600657, -104176039968, 104176039968); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, False)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 2; PARI ellrank [1,1] s=2 tors [4, 2]
+  E_0L: base t0 = 627/364; e = (-6394169165891137773122, -6394169165576509485168, -6394169165100639498576); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_0U: base t0 = -627/364; e = (-6394169165891137773122, -6394169165576509485168, -6394169165100639498576); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8L: base t0 = 364/627; e = (-6394169165891137773122, -6394169165576509485168, -6394169165100639498576); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8U: base t0 = -364/627; e = (-6394169165891137773122, -6394169165576509485168, -6394169165100639498576); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_LU: base t0 = 0; e = (-2210253125000, 1123380153976, 2210253125000); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 3, point images 2; PARI ellrank [1,1] s=0 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (1, 2, 1, 260633)  good prime 41  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (1, 2, 263, 991)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (1, 2, 1982, 526)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (1, 2, 521266, 2)  good prime 41  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+  1. (627,364): 2 known tuple(s): all survive, as they must
+ratio (991,263): 4 residual tuple(s) after the bad primes; known tuples 2
+  E_08: base t0 = 0; e = (-969267441122, -135859121378, 135859121378); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 3, point images 2; PARI ellrank [1,1] s=0 tors [4, 2]
+  E_0L: base t0 = 0; e = (-2210253125000, -951739973184, 951739973184); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_0U: base t0 = 0; e = (-2210253125000, -951739973184, 951739973184); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8L: base t0 = 0; e = (-2210253125000, -951739973184, 951739973184); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8U: base t0 = 0; e = (-2210253125000, -951739973184, 951739973184); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_LU: base t0 = 0; e = (-8841012500000, -4493520615904, 8841012500000); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, False)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 2; PARI ellrank [1,1] s=2 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (2, 521266, 2, 1)  good prime 41  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (526, 1982, 2, 1)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (991, 263, 2, 1)  good prime None  08:image 0L:image 0U:image 8L:image 8U:image LU:image  => not pairing-killed
+    (260633, 1, 2, 1)  good prime 41  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+  1. (991,263): 2 known tuple(s): all survive, as they must
+  2. forged class (22, 10651290) (the class of (1, 2, 1, 1) times 11 in x - e1): refused (outside Sel^2), as it must be
+  3. roots exchanged: refused (the identified root disagrees with the points), as it must be
+  4. forged base point t0 = 1: refused (the base point is not a point of C_jk), as it must be
+ratio (465,416): 6 residual tuple(s) after the bad primes; known tuples 0
+  E_08: base t0 = 0; e = (-76701629761, -74838067200, 74838067200); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 2; PARI ellrank [1,1] s=2 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (1, 2, 1, 1)  good prime 17  08:kernel  => not pairing-killed
+    (1, 2, 1, 881)  good prime 29  08:kernel  => not pairing-killed
+    (1, 2, 2, 2)  good prime 17  08:kernel  => not pairing-killed
+    (1, 2, 2, 1762)  good prime 41  08:kernel  => not pairing-killed
+    (1, 2, 881, 1)  good prime 41  08:kernel  => not pairing-killed
+    (1, 2, 1762, 2)  good prime 29  08:kernel  => not pairing-killed
+  5. pairing left out, (465,416) on E_08: nothing killed, as it must be
+ALL NEGATIVE TESTS AND CONTROLS AS THEY MUST BE

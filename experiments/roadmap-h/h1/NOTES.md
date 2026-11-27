@@ -41,8 +41,6 @@ take precedence over it.
   `(0, 8, L, U) → (L, U, 0, 8)` up to the square constants −1, −4 (halves when `g = 2`), holds: derived by hand and checked
   as a polynomial identity by review z8; `h1_iso.py` checks it for the 12 pairs. An exclusion on either side settles a pair.
 - Computed (exact), resting on the soundness of the complete 2-descent and of the Cassels–Tate pairing as `rank_second.py` computes them (Cassels 1998; Skorobogatov 6.2), Vélu's formula and isogeny invariance of the rank, the injectivity of torsion into `E(F_p)` at good odd `p` (quoted, tier E); the local tests on G1's `exact_local.py` (tested, not proved) and the repository's one-sided test at 2. Tier D.
-- Computed (exact), resting on the soundness of the complete 2-descent and of the Cassels–Tate pairing as `rank_second.py` computes them (Cassels 1998; Skorobogatov 6.2), Vélu's formula and isogeny invariance of the rank, the injectivity of torsion into `E(F_p)` at good odd `p` (quoted, tier E); the local tests on G1's `exact_local.py` (tested, not proved) and the repository's one-sided test at 2. Tier D.
-- Computed (exact), resting on the soundness of the complete 2-descent and of the Cassels–Tate pairing as `rank_second.py` computes them (Cassels 1998; Skorobogatov 6.2), Vélu's formula and isogeny invariance of the rank, the injectivity of torsion into `E(F_p)` at good odd `p` (quoted, tier E); the local tests on G1's `exact_local.py` (tested, not proved) and the repository's one-sided test at 2. Tier D.
 - (1109503,597671) is settled twice on that ratio itself (pair curves `E_0L`, `E_0U` of rank exactly 3; `y² = w·f0·f8`
   of rank 0), as the report says.
 
@@ -54,10 +52,6 @@ take precedence over it.
   for the 7 true pairs see above.
 - The "Next step" (a Mordell–Weil sieve for the open pair) and the scratch ideas aimed at that pair are moot: the pair
   is not a phantom.
-- The docstrings of `h1_scan.py` and `h1_partners.py` ('the exact local test at every odd prime'; 'Since H3, good primes to 1153 are all that can cut, so good primes to 20000 is the full local test') are wrong in the same way: G1's `one()` skips the primes of `m² + n²` and of the octic above 20,000, and H3's bound is withdrawn.
-- The scan sampled degenerate ratios only; REPORT_H1's "phantoms occur only at degenerate ratios" says nothing about the others (for those see H2 and G1: no survivor).
-- The docstrings of `h1_scan.py` and `h1_partners.py` ('the exact local test at every odd prime'; 'Since H3, good primes to 1153 are all that can cut, so good primes to 20000 is the full local test') are wrong in the same way: G1's `one()` skips the primes of `m² + n²` and of the octic above 20,000, and H3's bound is withdrawn.
-- The scan sampled degenerate ratios only; REPORT_H1's "phantoms occur only at degenerate ratios" says nothing about the others (for those see H2 and G1: no survivor).
 - The docstrings of `h1_scan.py` and `h1_partners.py` ('the exact local test at every odd prime'; 'Since H3, good primes to 1153 are all that can cut, so good primes to 20000 is the full local test') are wrong in the same way: G1's `one()` skips the primes of `m² + n²` and of the octic above 20,000, and H3's bound is withdrawn.
 - The scan sampled degenerate ratios only; REPORT_H1's "phantoms occur only at degenerate ratios" says nothing about the others (for those see H2 and G1: no survivor).
 - A cheap fix (z8: 5 to 16 s per ratio) is to make `h1_scan.py` test every bad prime, as G2 does, and rerun; not done.

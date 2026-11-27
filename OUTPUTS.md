@@ -256,5 +256,15 @@ and 12 of class D (before this release: 106, that is 41, 30, 24 and 11).
 | `scripts/g1_full/rank_fisher_theta4_norm.txt` | A | `python3 rank_fisher_theta4_norm.py` (re-checks the committed hints exactly; `--find` reproduces them with PARI under GRH, grepped in CI) | descents | 2 s; `--find` 22 s |
 | `scripts/g1_full/rank_fisher_theta4_norm_obstruction.txt` | B | `python3 rank_fisher_theta4_norm.py --obstruction` (the dual obstruction of the level-3 lifts, from sampled local points) | none | 127 s |
 
-**Counts, all tables, after run 8.** The seven tables list 171 rows: 74 of class A, 55 of class B, 27 of class C and 15
-of class D (168 after run 7, 146 after run 6, 117 before run 6).
+**Added on 27 November 2026 (UTC), run 9, after release 0.6.0** (written by an AI model; not read by a person). The Cassels–Tate pairing on the pair curves against the good-prime removals, reviewed by a separate AI agent (`reviews/review_z11.md`).
+
+| File | Class | Command | CI job | Time |
+|---|---|---|---|---|
+| `experiments/conductor-t10/t10_negative.txt`, `t10_h1control.txt`, `t10_summary.txt` | A | `python3 t10_pairct.py --negative`, `--h1control`, `--summarize t10_997_a.txt,t10_997_b.txt,t10_15000_s100_a.txt,t10_15000_s100_b.txt` | descents | about 25 s together |
+| `experiments/conductor-t10/t10_997_a.txt`, `t10_997_b.txt`, `t10_15000_s100_a.txt`, `t10_15000_s100_b.txt`, `t10_deep.txt` | B | `python3 t10_pairct.py --list ... --out ...` as in `NOTES.md` (`t10_997_a.txt` cut from the log of a run stopped by the out-of-memory killer; 11 of its ratios rerun identical by review z11) | none | about 2 h of CPU for the four lists; `--deep` 5 min |
+| `experiments/conductor-t10/t10_hints_*.json` | D | written by the finder of `t10_pairct.py` (PARI's points, each checked on use) |  |  |
+| `experiments/referee_z11/` outputs of `rank0`, `recount`, `wash_check`, `pmat`, `h1_mine`, `forge_t10`, `z11_compare` (and `--set mid`), `z11_pair`, `forge_mine` | A | `python3 -I <script>.py` in `referee_z11/` | descents | about 4.5 minutes together |
+| `experiments/referee_z11/z11_compare_big.txt`, `z11_compare_batch30.txt`, `oom_check` output | B | `python3 -I z11_compare.py --set big` (`--set batch30`), `oom_check.py` | none | 4 to 6 min each |
+
+**Counts, all tables, after run 9.** The eight tables list 176 rows: 76 of class A, 57 of class B, 27 of class C and 16
+of class D (171 after run 8, 168 after run 7, 146 after run 6, 117 before run 6).

@@ -11,7 +11,7 @@ session's text, committed unchanged; each folder's `NOTES.md` takes precedence o
 |---|---|
 | H1 phantoms | 7 true phantom pairs (not 12), all settled; the other 5 are removed by a local test at an octic prime that the scan skipped; no pair open (`h1/NOTES.md`) |
 | H2 survivor hunt | holds for the exhaustive range `15000 < m ≤ 30000`; the hunts add 2,131 distinct ratios (not 2,421); "P ≤ 1153" withdrawn (`h2/NOTES.md`) |
-| H3 local images | tables at 91 primes hold; the Hasse–Weil step is wrong (wrong curve: genus 129, not 17) and withdrawn; a correct complete local test goes to 67,583 for good primes ≡ 1 (mod 4), and to 1154 for good primes ≡ 7 (mod 8) (z8's argument, Hasse–Weil quoted) for good primes ≡ 1 (mod 4), and to 1154 for good primes ≡ 7 (mod 8) (z8's argument, Hasse–Weil quoted) for good primes ≡ 1 (mod 4), and to 1154 for good primes ≡ 7 (mod 8) (z8's argument, Hasse–Weil quoted) (`h3/NOTES.md`) |
+| H3 local images | tables at 91 primes hold; the Hasse–Weil step is wrong (wrong curve: genus 129, not 17) and withdrawn; a correct complete local test goes to 67,583 for good primes ≡ 1 (mod 4), and to 1154 for good primes ≡ 7 (mod 8) (z8's argument, Hasse–Weil quoted) (`h3/NOTES.md`) |
 | H4 | holds (`h4/NOTES.md`) |
 | H5 Θ₄ conic points | not done by the session (the scripts were not on `main`); done in run 8 by a build agent here: `Θ₄ ≠ 0` on `E⁺` of (945,248), on its `E′` side (`LEDGER.md` tier C; `reviews/review_z10.md`) |
 | H6 (627,364), (991,263) | holds with gaps; the two covers are isomorphic; some genus-1 ranks rest on parity (`h6/NOTES.md`) |

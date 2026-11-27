@@ -1,0 +1,149 @@
+z11_pair.py: degenerate controls (written by an AI model, review z11; not read by a person). m^2 + n^2 is a
+square or twice a square; the known tuples are classes of rational points and must survive every pair curve.
+ratio (4,3): 2 tuples (2 known): [(2, 1, 1, 7), (2, 1, 14, 2)]
+  E_08: t0 = 0; e = [-337, -288, 288]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': None, "'": -1, '*': -1}; my dim Sel2 = 2; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 1, 7): class(+) (1, 6): ('kernel',) | class(-) (1, -6): ('kernel',)
+    (2, 1, 14, 2): class(+) (1, 6): ('kernel',) | class(-) (1, -6): ('kernel',)
+  E_0L: t0 = 4/3; e = [-1698, -784, -112]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 1, 7): class(+) (2, 42): ('kernel',) | class(-) (2, -42): ('kernel',)
+    (2, 1, 14, 2): class(+) (2, 3): ('kernel',) | class(-) (2, -3): ('kernel',)
+  E_0U: t0 = -4/3; e = [-1698, -784, -112]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 1, 7): class(+) (2, 3): ('kernel',) | class(-) (2, -3): ('kernel',)
+    (2, 1, 14, 2): class(+) (2, 42): ('kernel',) | class(-) (2, -42): ('kernel',)
+  E_8L: t0 = 3/4; e = [-998, -84, 588]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 1, 7): class(+) (2, 42): ('kernel',) | class(-) (2, -42): ('kernel',)
+    (2, 1, 14, 2): class(+) (2, 3): ('kernel',) | class(-) (2, -3): ('kernel',)
+  E_8U: t0 = -3/4; e = [-998, -84, 588]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 1, 7): class(+) (2, 3): ('kernel',) | class(-) (2, -3): ('kernel',)
+    (2, 1, 14, 2): class(+) (2, 42): ('kernel',) | class(-) (2, -42): ('kernel',)
+  E_LU: t0 = 0; e = [-5000, 4216, 5000]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, "'": None, '*': -1}; my dim Sel2 = 2; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 1, 7): class(+) (2, 14): ('kernel',) | class(-) (2, -14): ('kernel',)
+    (2, 1, 14, 2): class(+) (2, 14): ('kernel',) | class(-) (2, -14): ('kernel',)
+  summary (4,3):
+    (2, 1, 1, 7) known=True goodprime=None killed(+) by []; killed(-) by []
+    (2, 1, 14, 2) known=True goodprime=None killed(+) by []; killed(-) by []
+ratio (12,5): 4 tuples (2 known): [(2, 1, 7, 17), (2, 1, 14, 34), (2, 1, 17, 7), (2, 1, 34, 14)]
+  E_08: t0 = 0; e = [-21361, -7200, 7200]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': None, "'": -1, '*': -1}; my dim Sel2 = 2; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 7, 17): class(+) (1, 30): ('kernel',) | class(-) (1, -30): ('kernel',)
+    (2, 1, 14, 34): class(+) (1, 30): ('kernel',) | class(-) (1, -30): ('kernel',)
+    (2, 1, 17, 7): class(+) (1, 30): ('kernel',) | class(-) (1, -30): ('kernel',)
+    (2, 1, 34, 14): class(+) (1, 30): ('kernel',) | class(-) (1, -30): ('kernel',)
+  E_0L: t0 = 12/5; e = [-125666, -97104, -39984]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 7; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 7, 17): class(+) (2, 510): ('kernel',) | class(-) (2, -510): ('kernel',)
+    (2, 1, 14, 34): class(+) (2, 255): ('killed', (42841, 1), [42841]) | class(-) (2, -255): ('killed', (42841, 1), [42841])
+    (2, 1, 17, 7): class(+) (2, 210): ('killed', (42841, 1), [42841]) | class(-) (2, -210): ('killed', (42841, 1), [42841])
+    (2, 1, 34, 14): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+  E_0U: t0 = -12/5; e = [-125666, -97104, -39984]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 7; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 7, 17): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+    (2, 1, 14, 34): class(+) (2, 210): ('killed', (42841, 1), [42841]) | class(-) (2, -210): ('killed', (42841, 1), [42841])
+    (2, 1, 17, 7): class(+) (2, 255): ('killed', (42841, 1), [42841]) | class(-) (2, -255): ('killed', (42841, 1), [42841])
+    (2, 1, 34, 14): class(+) (2, 510): ('kernel',) | class(-) (2, -510): ('kernel',)
+  E_8L: t0 = 5/12; e = [-45222, -16660, 40460]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 7; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 7, 17): class(+) (2, 510): ('kernel',) | class(-) (2, -510): ('kernel',)
+    (2, 1, 14, 34): class(+) (2, 255): ('killed', (42841, 1), [42841]) | class(-) (2, -255): ('killed', (42841, 1), [42841])
+    (2, 1, 17, 7): class(+) (2, 210): ('killed', (42841, 1), [42841]) | class(-) (2, -210): ('killed', (42841, 1), [42841])
+    (2, 1, 34, 14): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+  E_8U: t0 = -5/12; e = [-45222, -16660, 40460]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 7; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 7, 17): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+    (2, 1, 14, 34): class(+) (2, 210): ('killed', (42841, 1), [42841]) | class(-) (2, -210): ('killed', (42841, 1), [42841])
+    (2, 1, 17, 7): class(+) (2, 255): ('killed', (42841, 1), [42841]) | class(-) (2, -255): ('killed', (42841, 1), [42841])
+    (2, 1, 34, 14): class(+) (2, 510): ('kernel',) | class(-) (2, -510): ('kernel',)
+  E_LU: t0 = 0; e = [-228488, 1912, 228488]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, "'": None, '*': -1}; my dim Sel2 = 2; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (2, 1, 7, 17): class(+) (2, 238): ('kernel',) | class(-) (2, -238): ('kernel',)
+    (2, 1, 14, 34): class(+) (2, 238): ('kernel',) | class(-) (2, -238): ('kernel',)
+    (2, 1, 17, 7): class(+) (2, 238): ('kernel',) | class(-) (2, -238): ('kernel',)
+    (2, 1, 34, 14): class(+) (2, 238): ('kernel',) | class(-) (2, -238): ('kernel',)
+  summary (12,5):
+    (2, 1, 7, 17) known=True goodprime=None killed(+) by []; killed(-) by []
+    (2, 1, 14, 34) known=False goodprime=29 killed(+) by ['0L', '0U', '8L', '8U']; killed(-) by ['0L', '0U', '8L', '8U']
+    (2, 1, 17, 7) known=False goodprime=29 killed(+) by ['0L', '0U', '8L', '8U']; killed(-) by ['0L', '0U', '8L', '8U']
+    (2, 1, 34, 14) known=True goodprime=None killed(+) by []; killed(-) by []
+ratio (15,8): 2 tuples (2 known): [(1, 2, 7, 23), (1, 2, 46, 14)]
+  E_08: t0 = 0; e = [-54721, -28800, 28800]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': None, "'": -1, '*': -1}; my dim Sel2 = 3; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 7, 23): class(+) (1, 15): ('kernel',) | class(-) (1, -15): ('kernel',)
+    (1, 2, 46, 14): class(+) (1, 15): ('kernel',) | class(-) (1, -15): ('kernel',)
+  E_0L: t0 = 15/8; e = [-311942, -222180, -67620]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 7, 23): class(+) (2, 690): ('kernel',) | class(-) (2, -690): ('kernel',)
+    (1, 2, 46, 14): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+  E_0U: t0 = -15/8; e = [-311942, -222180, -67620]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 7, 23): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+    (1, 2, 46, 14): class(+) (2, 690): ('kernel',) | class(-) (2, -690): ('kernel',)
+  E_8L: t0 = 8/15; e = [-125826, -36064, 118496]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 7, 23): class(+) (2, 690): ('kernel',) | class(-) (2, -690): ('kernel',)
+    (1, 2, 46, 14): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+  E_8U: t0 = -8/15; e = [-125826, -36064, 118496]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 7, 23): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+    (1, 2, 46, 14): class(+) (2, 690): ('kernel',) | class(-) (2, -690): ('kernel',)
+  E_LU: t0 = 0; e = [-668168, 253432, 668168]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, "'": None, '*': -1}; my dim Sel2 = 4; 2 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 7, 23): class(+) (2, 322): ('kernel',) | class(-) (2, -322): ('kernel',)
+    (1, 2, 46, 14): class(+) (2, 322): ('kernel',) | class(-) (2, -322): ('kernel',)
+  summary (15,8):
+    (1, 2, 7, 23) known=True goodprime=None killed(+) by []; killed(-) by []
+    (1, 2, 46, 14) known=True goodprime=None killed(+) by []; killed(-) by []
+ratio (23,7): 2 tuples (2 known): [(14, 46, 2, 1), (23, 7, 2, 1)]
+  E_08: t0 = 0; e = [-282242, -51842, 51842]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': None, "'": -1, '*': -1}; my dim Sel2 = 4; 2 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (14, 46, 2, 1): class(+) (1, 1): ('kernel',) | class(-) (1, -1): ('kernel',)
+    (23, 7, 2, 1): class(+) (1, 1): ('kernel',) | class(-) (1, -1): ('kernel',)
+  E_0L: t0 = 23/7; e = [-1683848, -1324800, -706560]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (14, 46, 2, 1): class(+) (2, 690): ('kernel',) | class(-) (2, -690): ('kernel',)
+    (23, 7, 2, 1): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+  E_0U: t0 = -23/7; e = [-1683848, -1324800, -706560]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 2 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (14, 46, 2, 1): class(+) (2, 690): ('kernel',) | class(-) (2, -690): ('kernel',)
+    (23, 7, 2, 1): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+  E_8L: t0 = 7/23; e = [-574088, -215040, 403200]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 2 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (14, 46, 2, 1): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+    (23, 7, 2, 1): class(+) (2, 690): ('kernel',) | class(-) (2, -690): ('kernel',)
+  E_8U: t0 = -7/23; e = [-574088, -215040, 403200]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 2 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (14, 46, 2, 1): class(+) (2, 105): ('kernel',) | class(-) (2, -105): ('kernel',)
+    (23, 7, 2, 1): class(+) (2, 690): ('kernel',) | class(-) (2, -690): ('kernel',)
+  E_LU: t0 = 0; e = [-2672672, -1013728, 2672672]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, "'": None, '*': -1}; my dim Sel2 = 3; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (14, 46, 2, 1): class(+) (1, 1): ('kernel',) | class(-) (1, -1): ('kernel',)
+    (23, 7, 2, 1): class(+) (1, 1): ('kernel',) | class(-) (1, -1): ('kernel',)
+  summary (23,7):
+    (14, 46, 2, 1) known=True goodprime=None killed(+) by []; killed(-) by []
+    (23, 7, 2, 1) known=True goodprime=None killed(+) by []; killed(-) by []
+ratio (21,20): 2 tuples (2 known): [(1, 2, 1, 41), (1, 2, 82, 2)]
+  E_08: t0 = 0; e = [-354481, -352800, 352800]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': None, "'": -1, '*': -1}; my dim Sel2 = 3; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 1, 41): class(+) (1, 210): ('kernel',) | class(-) (1, -210): ('kernel',)
+    (1, 2, 82, 2): class(+) (1, 210): ('kernel',) | class(-) (1, -210): ('kernel',)
+  E_0L: t0 = 21/20; e = [-1486886, -141204, -3444]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 1, 41): class(+) (2, 4305): ('kernel',) | class(-) (2, -4305): ('kernel',)
+    (1, 2, 82, 2): class(+) (2, 210): ('kernel',) | class(-) (2, -210): ('kernel',)
+  E_0U: t0 = -21/20; e = [-1486886, -141204, -3444]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 1, 41): class(+) (2, 210): ('kernel',) | class(-) (2, -210): ('kernel',)
+    (1, 2, 82, 2): class(+) (2, 4305): ('kernel',) | class(-) (2, -4305): ('kernel',)
+  E_8L: t0 = 20/21; e = [-1348962, -3280, 134480]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 1, 41): class(+) (2, 4305): ('kernel',) | class(-) (2, -4305): ('kernel',)
+    (1, 2, 82, 2): class(+) (2, 210): ('kernel',) | class(-) (2, -210): ('kernel',)
+  E_8U: t0 = -20/21; e = [-1348962, -3280, 134480]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 5; 3 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 1, 41): class(+) (2, 210): ('kernel',) | class(-) (2, -210): ('kernel',)
+    (1, 2, 82, 2): class(+) (2, 4305): ('kernel',) | class(-) (2, -4305): ('kernel',)
+  E_LU: t0 = 0; e = [-5658248, 5631352, 5658248]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, "'": None, '*': -1}; my dim Sel2 = 3; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (1, 2, 1, 41): class(+) (2, 82): ('kernel',) | class(-) (2, -82): ('kernel',)
+    (1, 2, 82, 2): class(+) (2, 82): ('kernel',) | class(-) (2, -82): ('kernel',)
+  summary (21,20):
+    (1, 2, 1, 41) known=True goodprime=None killed(+) by []; killed(-) by []
+    (1, 2, 82, 2) known=True goodprime=None killed(+) by []; killed(-) by []
+ratio (31,17): 2 tuples (2 known): [(31, 17, 1, 2), (34, 62, 1, 2)]
+  E_08: t0 = 0; e = [-1007042, -555458, 555458]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': None, "'": -1, '*': -1}; my dim Sel2 = 3; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (31, 17, 1, 2): class(+) (1, 1): ('kernel',) | class(-) (1, -1): ('kernel',)
+    (34, 62, 1, 2): class(+) (1, 1): ('kernel',) | class(-) (1, -1): ('kernel',)
+  E_0L: t0 = 31/17; e = [-5708168, -3999744, -1166592]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 7; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (31, 17, 1, 2): class(+) (2, 714): ('kernel',) | class(-) (2, -714): ('kernel',)
+    (34, 62, 1, 2): class(+) (2, 651): ('kernel',) | class(-) (2, -651): ('kernel',)
+  E_0U: t0 = -31/17; e = [-5708168, -3999744, -1166592]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 7; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (31, 17, 1, 2): class(+) (2, 714): ('kernel',) | class(-) (2, -714): ('kernel',)
+    (34, 62, 1, 2): class(+) (2, 651): ('kernel',) | class(-) (2, -651): ('kernel',)
+  E_8L: t0 = 17/31; e = [-2348168, -639744, 2193408]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 7; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (31, 17, 1, 2): class(+) (2, 651): ('kernel',) | class(-) (2, -651): ('kernel',)
+    (34, 62, 1, 2): class(+) (2, 714): ('kernel',) | class(-) (2, -714): ('kernel',)
+  E_8U: t0 = -17/31; e = [-2348168, -639744, 2193408]; roles {"'": 'e3', '*': 'e2', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, '*': -1, "'": -1}; my dim Sel2 = 7; 1 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (31, 17, 1, 2): class(+) (2, 651): ('kernel',) | class(-) (2, -651): ('kernel',)
+    (34, 62, 1, 2): class(+) (2, 714): ('kernel',) | class(-) (2, -714): ('kernel',)
+  E_LU: t0 = 0; e = [-12500000, 5274656, 12500000]; roles {"'": 'e2', '*': 'e3', 'r': 'e1'} (F_p test at [101, 109, 113]); delta(psi(iota t0)) = {'r': 1, "'": None, '*': -1}; my dim Sel2 = 2; 0 point(s) found by PARI checked (divisor formula, in my Sel2, pair +1 with all of Sel2)
+    (31, 17, 1, 2): class(+) (1, 1): ('kernel',) | class(-) (1, -1): ('kernel',)
+    (34, 62, 1, 2): class(+) (1, 1): ('kernel',) | class(-) (1, -1): ('kernel',)
+  summary (31,17):
+    (31, 17, 1, 2) known=True goodprime=None killed(+) by []; killed(-) by []
+    (34, 62, 1, 2) known=True goodprime=None killed(+) by []; killed(-) by []
+ALL KNOWN TUPLES SURVIVE, BOTH SIGNS

@@ -1,0 +1,5 @@
+wash_check.py (review z11; written by an AI model): Washington Thm 2.17, symbolically, modulo v^2 = g(s)
+  the Weierstrass equation: residue 0
+  inverse, s: residue 0
+  inverse, v: residue 0
+ALL ZERO

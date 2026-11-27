@@ -1,0 +1,144 @@
+ratio (5623,1017): 2 residual tuple(s) after the bad primes; known tuples 0
+  E_08: base t0 = 0; e = (-1000775835196162, -65404566050562, 65404566050562); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  E_0L: base t0 = 5623/1017; e = (-20311679026912496252231241608, -20311679026911063477317425920, -20311679026909664305540070400); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_0U: base t0 = -5623/1017; e = (-20311679026912496252231241608, -20311679026911063477317425920, -20311679026909664305540070400); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8L: base t0 = 1017/5623; e = (-20311679026912496252231241608, -20311679026911063477317425920, -20311679026909664305540070400); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8U: base t0 = -1017/5623; e = (-20311679026912496252231241608, -20311679026911063477317425920, -20311679026909664305540070400); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_LU: base t0 = 0; e = (-8529443209973792, -6436497096355808, 8529443209973792); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 2; PARI ellrank [1,1] s=2 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (2, 1270798, 1, 2)  good prime 29  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel  => not pairing-killed
+    (635399, 1, 1, 2)  good prime 29  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel  => not pairing-killed
+deep (5623,1017), ellrank effort 3: 2 tuple(s) not pairing-killed
+  E_08: PARI ellrank [0,0] s=0, 0 point(s); images span 2 of dim Sel2 = 2
+    (2, 1270798, 1, 2): the class of a rational point of E_08
+    (635399, 1, 1, 2): the class of a rational point of E_08
+  E_0L: PARI ellrank [2,4] s=0, 1 point(s); images span 3 of dim Sel2 = 6
+    (2, 1270798, 1, 2): not in the span of the points found (kernel)
+    (635399, 1, 1, 2): not in the span of the points found (kernel)
+  E_0U: PARI ellrank [2,4] s=0, 1 point(s); images span 3 of dim Sel2 = 6
+    (2, 1270798, 1, 2): not in the span of the points found (kernel)
+    (635399, 1, 1, 2): not in the span of the points found (kernel)
+  E_8L: PARI ellrank [2,4] s=0, 1 point(s); images span 3 of dim Sel2 = 6
+    (2, 1270798, 1, 2): not in the span of the points found (kernel)
+    (635399, 1, 1, 2): not in the span of the points found (kernel)
+  E_8U: PARI ellrank [2,4] s=0, 1 point(s); images span 3 of dim Sel2 = 6
+    (2, 1270798, 1, 2): not in the span of the points found (kernel)
+    (635399, 1, 1, 2): not in the span of the points found (kernel)
+  E_LU: PARI ellrank [1,1] s=2, 0 point(s); images span 2 of dim Sel2 = 5
+    (2, 1270798, 1, 2): not in the span of the points found (kernel)
+    (635399, 1, 1, 2): not in the span of the points found (kernel)
+ratio (3320,2303): 2 residual tuple(s) after the bad primes; known tuples 0
+  E_08: base t0 = 0; e = (-149623691668481, -116921408643200, 116921408643200); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 2; PARI ellrank [1,1] s=2 tors [4, 2]
+  E_0L: base t0 = 3320/2303; e = (-2746908466542399843837795842, -2746908466542041650109341920, -2746908466541691857165003040); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_0U: base t0 = -3320/2303; e = (-2746908466542399843837795842, -2746908466542041650109341920, -2746908466541691857165003040); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8L: base t0 = 2303/3320; e = (-2746908466542399843837795842, -2746908466542041650109341920, -2746908466541691857165003040); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8U: base t0 = -2303/3320; e = (-2746908466542399843837795842, -2746908466542041650109341920, -2746908466541691857165003040); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_LU: base t0 = 0; e = (-2132360802493448, 1609124274088952, 2132360802493448); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 2, point images 2; PARI ellrank [0,0] s=0 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (2, 1, 1, 635399)  good prime 29  08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (2, 1, 1270798, 2)  good prime 29  08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+deep (3320,2303), ellrank effort 3: 2 tuple(s) not pairing-killed
+  E_08: PARI ellrank [1,1] s=2, 0 point(s); images span 2 of dim Sel2 = 5
+    (2, 1, 1, 635399): not in the span of the points found (kernel)
+    (2, 1, 1270798, 2): not in the span of the points found (kernel)
+  E_0L: PARI ellrank [2,4] s=0, 1 point(s); images span 3 of dim Sel2 = 6
+    (2, 1, 1, 635399): not in the span of the points found (kernel)
+    (2, 1, 1270798, 2): not in the span of the points found (kernel)
+  E_0U: PARI ellrank [2,4] s=0, 1 point(s); images span 3 of dim Sel2 = 6
+    (2, 1, 1, 635399): not in the span of the points found (kernel)
+    (2, 1, 1270798, 2): not in the span of the points found (kernel)
+  E_8L: PARI ellrank [2,4] s=0, 1 point(s); images span 3 of dim Sel2 = 6
+    (2, 1, 1, 635399): not in the span of the points found (kernel)
+    (2, 1, 1270798, 2): not in the span of the points found (kernel)
+  E_8U: PARI ellrank [2,4] s=0, 1 point(s); images span 3 of dim Sel2 = 6
+    (2, 1, 1, 635399): not in the span of the points found (kernel)
+    (2, 1, 1270798, 2): not in the span of the points found (kernel)
+  E_LU: PARI ellrank [0,0] s=0, 0 point(s); images span 2 of dim Sel2 = 2
+    (2, 1, 1, 635399): the class of a rational point of E_LU
+    (2, 1, 1270798, 2): the class of a rational point of E_LU
+ratio (627,364): 4 residual tuple(s) after the bad primes; known tuples 2
+  E_08: base t0 = 0; e = (-172105600657, -104176039968, 104176039968); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, False)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 2; PARI ellrank [1,1] s=2 tors [4, 2]
+  E_0L: base t0 = 627/364; e = (-6394169165891137773122, -6394169165576509485168, -6394169165100639498576); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_0U: base t0 = -627/364; e = (-6394169165891137773122, -6394169165576509485168, -6394169165100639498576); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8L: base t0 = 364/627; e = (-6394169165891137773122, -6394169165576509485168, -6394169165100639498576); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8U: base t0 = -364/627; e = (-6394169165891137773122, -6394169165576509485168, -6394169165100639498576); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_LU: base t0 = 0; e = (-2210253125000, 1123380153976, 2210253125000); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 3, point images 2; PARI ellrank [1,1] s=0 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (1, 2, 1, 260633)  good prime 41  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (1, 2, 263, 991)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (1, 2, 1982, 526)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (1, 2, 521266, 2)  good prime 41  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+deep (627,364), ellrank effort 3: 4 tuple(s) not pairing-killed
+  E_08: PARI ellrank [1,1] s=2, 0 point(s); images span 2 of dim Sel2 = 5
+    (1, 2, 1, 260633): the class of a rational point of E_08
+    (1, 2, 263, 991): the class of a rational point of E_08
+    (1, 2, 1982, 526): the class of a rational point of E_08
+    (1, 2, 521266, 2): the class of a rational point of E_08
+  E_0L: PARI ellrank [4,4] s=0, 3 point(s); images span 5 of dim Sel2 = 6
+    (1, 2, 1, 260633): not in the span of the points found (kernel)
+    (1, 2, 263, 991): the class of a rational point of E_0L
+    (1, 2, 1982, 526): the class of a rational point of E_0L
+    (1, 2, 521266, 2): not in the span of the points found (kernel)
+  E_0U: PARI ellrank [4,4] s=0, 3 point(s); images span 5 of dim Sel2 = 6
+    (1, 2, 1, 260633): not in the span of the points found (kernel)
+    (1, 2, 263, 991): the class of a rational point of E_0U
+    (1, 2, 1982, 526): the class of a rational point of E_0U
+    (1, 2, 521266, 2): not in the span of the points found (kernel)
+  E_8L: PARI ellrank [4,4] s=0, 3 point(s); images span 5 of dim Sel2 = 6
+    (1, 2, 1, 260633): not in the span of the points found (kernel)
+    (1, 2, 263, 991): the class of a rational point of E_8L
+    (1, 2, 1982, 526): the class of a rational point of E_8L
+    (1, 2, 521266, 2): not in the span of the points found (kernel)
+  E_8U: PARI ellrank [4,4] s=0, 3 point(s); images span 5 of dim Sel2 = 6
+    (1, 2, 1, 260633): not in the span of the points found (kernel)
+    (1, 2, 263, 991): the class of a rational point of E_8U
+    (1, 2, 1982, 526): the class of a rational point of E_8U
+    (1, 2, 521266, 2): not in the span of the points found (kernel)
+  E_LU: PARI ellrank [1,1] s=0, 0 point(s); images span 2 of dim Sel2 = 3
+    (1, 2, 1, 260633): the class of a rational point of E_LU
+    (1, 2, 263, 991): the class of a rational point of E_LU
+    (1, 2, 1982, 526): the class of a rational point of E_LU
+    (1, 2, 521266, 2): the class of a rational point of E_LU
+ratio (991,263): 4 residual tuple(s) after the bad primes; known tuples 2
+  E_08: base t0 = 0; e = (-969267441122, -135859121378, 135859121378); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 3, point images 2; PARI ellrank [1,1] s=0 tors [4, 2]
+  E_0L: base t0 = 0; e = (-2210253125000, -951739973184, 951739973184); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_0U: base t0 = 0; e = (-2210253125000, -951739973184, 951739973184); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 34 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8L: base t0 = 0; e = (-2210253125000, -951739973184, 951739973184); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_8U: base t0 = 0; e = (-2210253125000, -951739973184, 951739973184); e_r = e1, e* = e2 (resolvent; 2-torsion checks 3; constants agree on 10 points, alone unique: (True, True)); bad primes of E in those of the ratio: True; dim Sel2 = 6, point images 3; PARI ellrank [2,4] s=0 tors [2, 2]
+  E_LU: base t0 = 0; e = (-8841012500000, -4493520615904, 8841012500000); e_r = e1, e* = e3 (resolvent; 2-torsion checks 0; constants agree on 6 points, alone unique: (True, False)); bad primes of E in those of the ratio: True; dim Sel2 = 5, point images 2; PARI ellrank [1,1] s=2 tors [4, 2]
+  per tuple (killing good prime; pairs):
+    (2, 521266, 2, 1)  good prime 41  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (526, 1982, 2, 1)  good prime None  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+    (991, 263, 2, 1)  good prime None  08:image 0L:image 0U:image 8L:image 8U:image LU:image  => not pairing-killed
+    (260633, 1, 2, 1)  good prime 41  08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image  => not pairing-killed
+deep (991,263), ellrank effort 3: 4 tuple(s) not pairing-killed
+  E_08: PARI ellrank [1,1] s=0, 0 point(s); images span 2 of dim Sel2 = 3
+    (2, 521266, 2, 1): the class of a rational point of E_08
+    (526, 1982, 2, 1): the class of a rational point of E_08
+    (991, 263, 2, 1): the class of a rational point of E_08
+    (260633, 1, 2, 1): the class of a rational point of E_08
+  E_0L: PARI ellrank [4,4] s=0, 3 point(s); images span 5 of dim Sel2 = 6
+    (2, 521266, 2, 1): not in the span of the points found (kernel)
+    (526, 1982, 2, 1): the class of a rational point of E_0L
+    (991, 263, 2, 1): the class of a rational point of E_0L
+    (260633, 1, 2, 1): not in the span of the points found (kernel)
+  E_0U: PARI ellrank [4,4] s=0, 3 point(s); images span 5 of dim Sel2 = 6
+    (2, 521266, 2, 1): not in the span of the points found (kernel)
+    (526, 1982, 2, 1): the class of a rational point of E_0U
+    (991, 263, 2, 1): the class of a rational point of E_0U
+    (260633, 1, 2, 1): not in the span of the points found (kernel)
+  E_8L: PARI ellrank [4,4] s=0, 3 point(s); images span 5 of dim Sel2 = 6
+    (2, 521266, 2, 1): not in the span of the points found (kernel)
+    (526, 1982, 2, 1): the class of a rational point of E_8L
+    (991, 263, 2, 1): the class of a rational point of E_8L
+    (260633, 1, 2, 1): not in the span of the points found (kernel)
+  E_8U: PARI ellrank [4,4] s=0, 3 point(s); images span 5 of dim Sel2 = 6
+    (2, 521266, 2, 1): not in the span of the points found (kernel)
+    (526, 1982, 2, 1): the class of a rational point of E_8U
+    (991, 263, 2, 1): the class of a rational point of E_8U
+    (260633, 1, 2, 1): not in the span of the points found (kernel)
+  E_LU: PARI ellrank [1,1] s=2, 0 point(s); images span 2 of dim Sel2 = 5
+    (2, 521266, 2, 1): the class of a rational point of E_LU
+    (526, 1982, 2, 1): the class of a rational point of E_LU
+    (991, 263, 2, 1): the class of a rational point of E_LU
+    (260633, 1, 2, 1): the class of a rational point of E_LU

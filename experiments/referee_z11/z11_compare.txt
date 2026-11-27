@@ -1,0 +1,6 @@
+z11_compare.py --set small (review z11; written by an AI model): my code against t10's committed lines
+(465,416) [t10_997_a.txt]: 6 tuples; verdicts agree 36, disagree 0; t10 classes compared 32, differ 0; killing b differ 0; signs disagree 0
+(5623,1017) [t10_15000_s100_a.txt]: 2 tuples; verdicts agree 12, disagree 0; t10 classes compared 0, differ 0; killing b differ 0; signs disagree 0
+(3320,2303) [t10_997_a.txt]: 2 tuples; verdicts agree 12, disagree 0; t10 classes compared 0, differ 0; killing b differ 0; signs disagree 0
+(14885,6076) [t10_15000_s100_b.txt]: 8 tuples; verdicts agree 48, disagree 0; t10 classes compared 40, differ 0; killing b differ 0; signs disagree 0
+TOTAL: 108 (tuple, curve) verdicts agree, 0 disagree; 72 classes compared, 0 differ; 0 killing b differ; both signs disagree on 0

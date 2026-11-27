@@ -22,7 +22,7 @@ below take precedence over it.
   600,000: no tuple fails. Above 595,717 every tuple passes at every good prime: there the eight roots of the components
   are distinct modulo `p`, and the Weil step of `exact_local.py` puts every sign pattern on the other residues; at a good
   prime `≡ 3 (mod 4)` every candidate tuple has the same labels as the degenerate ones. So **the four extra tuples are
-  locally soluble everywhere** (computed, with that short argument; tier D). Whether a rational point has one of these classes is **open**. (Run 7: none does — `y² = w·f0·f8` has rank 0 and the pair curves `E_0L`, `E_0U` rank exactly 3; `../../roadmap-h/h1/NOTES.md`, review z8.) (Run 7: none does — `y² = w·f0·f8` has rank 0 and the pair curves `E_0L`, `E_0U` rank exactly 3; `../../roadmap-h/h1/NOTES.md`, review z8.) (Run 7: none does — `y² = w·f0·f8` has rank 0 and the pair curves `E_0L`, `E_0U` rank exactly 3; `../../roadmap-h/h1/NOTES.md`, review z8.) The report's "the descent can leave classes that no point explains" goes beyond this: read "the
+  locally soluble everywhere** (computed, with that short argument; tier D). Whether a rational point has one of these classes is **open**. (Run 7: none does — `y² = w·f0·f8` has rank 0 and the pair curves `E_0L`, `E_0U` rank exactly 3; `../../roadmap-h/h1/NOTES.md`, review z8.) The report's "the descent can leave classes that no point explains" goes beyond this: read "the
   four-class descent, with every local condition, keeps four classes besides those of the degenerate points; whether a
   rational point has one of them is open".
 

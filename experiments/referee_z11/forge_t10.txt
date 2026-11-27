@@ -1,0 +1,31 @@
+forge_t10.py (review z11; written by an AI model): t10_pairct.PairData without PARI's points
+(7,1) E_08: dim Sel2 2, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: (2, 14, 1, 2):image/image (7, 1, 1, 2):image/image; none killed
+(7,1) E_0L: dim Sel2 5, torsion and psi(iota t0) images span 3; 7 point classes: image:1 kernel:6; known tuples: (2, 14, 1, 2):kernel/kernel (7, 1, 1, 2):image/image; none killed
+(7,1) E_0U: dim Sel2 5, torsion and psi(iota t0) images span 3; 7 point classes: image:1 kernel:6; known tuples: (2, 14, 1, 2):kernel/kernel (7, 1, 1, 2):image/image; none killed
+(7,1) E_8L: dim Sel2 5, torsion and psi(iota t0) images span 3; 7 point classes: image:1 kernel:6; known tuples: (2, 14, 1, 2):kernel/kernel (7, 1, 1, 2):image/image; none killed
+(7,1) E_8U: dim Sel2 5, torsion and psi(iota t0) images span 3; 7 point classes: image:1 kernel:6; known tuples: (2, 14, 1, 2):kernel/kernel (7, 1, 1, 2):image/image; none killed
+(7,1) E_LU: dim Sel2 2, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: (2, 14, 1, 2):image/image (7, 1, 1, 2):image/image; none killed
+(4,3) E_08: dim Sel2 2, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: (2, 1, 1, 7):kernel/kernel (2, 1, 14, 2):kernel/kernel; none killed
+(4,3) E_0L: dim Sel2 5, torsion and psi(iota t0) images span 3; 7 point classes: image:1 kernel:6; known tuples: (2, 1, 1, 7):kernel/kernel (2, 1, 14, 2):kernel/kernel; none killed
+(4,3) E_0U: dim Sel2 5, torsion and psi(iota t0) images span 3; 7 point classes: image:1 kernel:6; known tuples: (2, 1, 1, 7):kernel/kernel (2, 1, 14, 2):kernel/kernel; none killed
+(4,3) E_8L: dim Sel2 5, torsion and psi(iota t0) images span 3; 7 point classes: image:1 kernel:6; known tuples: (2, 1, 1, 7):kernel/kernel (2, 1, 14, 2):kernel/kernel; none killed
+(4,3) E_8U: dim Sel2 5, torsion and psi(iota t0) images span 3; 7 point classes: image:1 kernel:6; known tuples: (2, 1, 1, 7):kernel/kernel (2, 1, 14, 2):kernel/kernel; none killed
+(4,3) E_LU: dim Sel2 2, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: (2, 1, 1, 7):kernel/kernel (2, 1, 14, 2):kernel/kernel; none killed
+(12,5) E_08: dim Sel2 2, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: (2, 1, 7, 17):kernel/kernel (2, 1, 34, 14):kernel/kernel; none killed
+(12,5) E_0L: dim Sel2 7, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: (2, 1, 7, 17):kernel/kernel (2, 1, 34, 14):kernel/kernel; none killed
+(12,5) E_0U: dim Sel2 7, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: (2, 1, 7, 17):kernel/kernel (2, 1, 34, 14):kernel/kernel; none killed
+(12,5) E_8L: dim Sel2 7, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: (2, 1, 7, 17):kernel/kernel (2, 1, 34, 14):kernel/kernel; none killed
+(12,5) E_8U: dim Sel2 7, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: (2, 1, 7, 17):kernel/kernel (2, 1, 34, 14):kernel/kernel; none killed
+(12,5) E_LU: dim Sel2 2, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: (2, 1, 7, 17):kernel/kernel (2, 1, 34, 14):kernel/kernel; none killed
+(627,364) E_08: dim Sel2 5, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: (1, 2, 263, 991):kernel/kernel (1, 2, 1982, 526):kernel/kernel; none killed
+(627,364) E_0L: dim Sel2 6, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: (1, 2, 263, 991):kernel/kernel (1, 2, 1982, 526):kernel/kernel; none killed
+(627,364) E_0U: dim Sel2 6, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: (1, 2, 263, 991):kernel/kernel (1, 2, 1982, 526):kernel/kernel; none killed
+(627,364) E_8L: dim Sel2 6, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: (1, 2, 263, 991):kernel/kernel (1, 2, 1982, 526):kernel/kernel; none killed
+(627,364) E_8U: dim Sel2 6, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: (1, 2, 263, 991):kernel/kernel (1, 2, 1982, 526):kernel/kernel; none killed
+(627,364) E_LU: dim Sel2 3, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: (1, 2, 263, 991):kernel/kernel (1, 2, 1982, 526):kernel/kernel; none killed
+(465,416) E_0L: dim Sel2 8, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: none; none killed
+(465,416) E_08: dim Sel2 5, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: none; none killed
+(465,416) E_LU: dim Sel2 6, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: none; none killed
+(14885,6076) E_0L: dim Sel2 11, torsion and psi(iota t0) images span 3; 1 point classes: image:1; known tuples: none; none killed
+(14885,6076) E_08: dim Sel2 5, torsion and psi(iota t0) images span 1; 1 point classes: kernel:1; known tuples: none; none killed
+t10's METHOD KILLS NO CLASS OF A RATIONAL POINT

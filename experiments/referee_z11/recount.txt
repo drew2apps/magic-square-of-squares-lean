@@ -1,0 +1,15 @@
+recount.py (review z11; written by an AI model): t10's outputs t10_997_a.txt, t10_997_b.txt, t10_15000_s100_a.txt, t10_15000_s100_b.txt, own parser
+  ratios 201 (t10_997_a.txt 79, t10_997_b.txt 22, t10_15000_s100_a.txt 50, t10_15000_s100_b.txt 50); residual tuples 1766 = 436 + 162 + 492 + 676; sum of the header counts 1766
+  the 101 of g2_997_all.txt (997_a + 997_b): 598 tuples; the 15000 sample (_a + _b): 1168 tuples
+  pairing-killed 1762, not 4; verdict text consistent with the pairs on every line: True
+  kills per curve: 08:1280 0L:1694 0U:1694 8L:1694 8U:1694 LU:874
+  per (tuple, curve) verdicts: image:762 kernel:904 killed:8930
+  first killing good prime: 17:420 29:716 37:290 41:166 53:76 61:48 73:8 89:10 97:4 101:20 109:4 173:4
+  kill lines (one per killed tuple and curve): 8930 = the sum of the per-curve counts: True
+  local -1 terms on them: 18222 (terms per line: 5182 x 1 2886 x 3 826 x 5 36 x 7; all odd: True)
+  distinct (ratio, curve, class) kills: 4976; distinct (ratio, curve, d_j d_k) tested: 5707 of 10596 tuple-curve tests
+  G2: 101 ratios of g2_997_all.txt need a good prime (m from 465 to 4997), 836 of g2_15000_need_good.txt (m from 5029 to 14977)
+  t10's 997 runs = all 101 in file order, 0..79 in 997_a: True; the 15000 runs = random.Random(1).sample of 100, first 50 in _a: True
+  residual counts equal G2's "N left" for every ratio: True
+  largest first killing prime equals the largest good prime of G2's kill set: 201 of 201 ratios (above it: 0)
+  ratios with a pair curve of dim Sel2 = 2 in t10's lines: (3320,2303) LU, (5623,1017) 08, (9191,7688) LU, (9532,4445) LU, (14885,6076) LU

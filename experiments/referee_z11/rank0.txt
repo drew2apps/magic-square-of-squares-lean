@@ -1,0 +1,7 @@
+rank0.py (review z11; written by an AI model): pair curves of dim Sel^2 = 2 among t10's 201 ratios
+(5623,1017) E_08: dim Sel^2 = 2, so rank 0; gcd of #E(F_p) over 39 good primes 3 <= p <= 199: 8; C(Q) = the 8 points over t = 0, 1, -1, inf (G(t) a non-zero square at each); four forms squares there (F_0, F_8, F_L, F_U): 0:yynn 1:nnyy -1:nnyy inf:yynn; a four-form point: NONE
+(3320,2303) E_LU: dim Sel^2 = 2, so rank 0; gcd of #E(F_p) over 39 good primes 3 <= p <= 199: 8; C(Q) = the 8 points over t = 0, 1, -1, inf (G(t) a non-zero square at each); four forms squares there (F_0, F_8, F_L, F_U): 0:yynn 1:nnyy -1:nnyy inf:yynn; a four-form point: NONE
+(9191,7688) E_LU: dim Sel^2 = 2, so rank 0; gcd of #E(F_p) over 38 good primes 3 <= p <= 199: 8; C(Q) = the 8 points over t = 0, 1, -1, inf (G(t) a non-zero square at each); four forms squares there (F_0, F_8, F_L, F_U): 0:yynn 1:nnyy -1:nnyy inf:yynn; a four-form point: NONE
+(9532,4445) E_LU: dim Sel^2 = 2, so rank 0; gcd of #E(F_p) over 40 good primes 3 <= p <= 199: 8; C(Q) = the 8 points over t = 0, 1, -1, inf (G(t) a non-zero square at each); four forms squares there (F_0, F_8, F_L, F_U): 0:yynn 1:nnyy -1:nnyy inf:yynn; a four-form point: NONE
+(14885,6076) E_LU: dim Sel^2 = 2, so rank 0; gcd of #E(F_p) over 36 good primes 3 <= p <= 199: 8; C(Q) = the 8 points over t = 0, 1, -1, inf (G(t) a non-zero square at each); four forms squares there (F_0, F_8, F_L, F_U): 0:yynn 1:nnyy -1:nnyy inf:yynn; a four-form point: NONE
+ALL FIVE RATIOS HAVE NO FOUR-FORM POINT (rank 0 of one pair curve)

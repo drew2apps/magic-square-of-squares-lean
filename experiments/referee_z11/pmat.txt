@@ -1,0 +1,17 @@
+pmat.py (review z11; written by an AI model): pairing matrices <b, D_c> on a basis of Sel^2
+(5623,1017) E_08: dim Sel^2 2, pairing matrix of rank 0 (symmetric and alternating: True), so rank E(Q) <= 0
+    +1 +1
+    +1 +1
+(5623,1017) E_0L: dim Sel^2 6, pairing matrix of rank 0 (symmetric and alternating: True), so rank E(Q) <= 4
+    +1 +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1 +1
+(5623,1017) E_LU: dim Sel^2 5, pairing matrix of rank 2 (symmetric and alternating: True), so rank E(Q) <= 1
+    +1 +1 +1 +1 +1
+    +1 +1 +1 +1 +1
+    +1 +1 +1 -1 -1
+    +1 +1 -1 +1 +1
+    +1 +1 -1 +1 +1

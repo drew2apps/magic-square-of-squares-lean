@@ -9,13 +9,6 @@ take precedence over it.
 
 (Run 6's range; for the block added in run 7 see the last section.)
 
-
-(Run 6's range; for the block added in run 7 see the last section.)
-
-
-(Run 6's range; for the block added in run 7 see the last section.)
-
-
 For the two degenerate types only (`m² + n²` a square, or twice a square) and `11000 < m ≤ 13000`: the 611 coprime
 ratios that pass the congruences, each with its first closing step and that step's label in `CENSUS_TABLE_G3.tsv`
 (the format and labels of `../../census-wide/table/CENSUS_TABLE_1000_11000.tsv`). **Open:** (11165,7548), (12201,7360),

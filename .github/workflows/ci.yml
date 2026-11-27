@@ -652,9 +652,6 @@ jobs:
           hm $H/h6 h6_split.py 627 364; hm $H/h6 h6_ranks.py --negative; hm $H/h6 h6_richelot.py --negative; hm $H/h6 h6_richelot.py --controls
           hm $H/h7 h7_g4k_rank1.py; hm $H/h7 h7_g4k_rank1.py --negative; hm $H/h7 h7_e04_rank.py; hm $H/h7 h7_e04_rank.py --negative
           (cd $H/h7 && python3 h7_g4k_rank1.py 13348,3795 13899,1180 2>/dev/null | grep -v 'PARI stack' | diff - h7_b13000_rank1.txt)
-          (cd $H/h7 && python3 h7_g4k_rank1.py 13348,3795 13899,1180 2>/dev/null | grep -v 'PARI stack' | diff - h7_b13000_rank1.txt)
-          (cd $H/h7 && python3 h7_g4k_rank1.py 13348,3795 13899,1180 2>/dev/null | grep -v 'PARI stack' | diff - h7_b13000_rank1.txt)
-          (cd $H/h7 && python3 h7_g4k_rank1.py 13348,3795 13899,1180 2>/dev/null | grep -v 'PARI stack' | diff - h7_b13000_rank1.txt)
           hm scripts/second_descent rank0_ct.py; hm scripts/second_descent rank0_ct.py --negative
           for x in referee_z7/my2desc referee_z7/ct_mine referee_z7/velu_check referee_z7/partner_cells referee_z7/run_ct_g4k \
                    referee_z7/ct_rank0 referee_z7/classes referee_z8/my_local referee_z8/brute_p2 referee_z8/methA_above \
@@ -663,6 +660,17 @@ jobs:
                    referee_z9/recount referee_z9/degcount referee_z9/h6_ident referee_z9/c5 referee_z9/g3_family_z9 referee_z9/sample_h2; do
             (cd experiments/$(dirname $x) && python3 -I $(basename $x).py 2>/dev/null | grep -v 'PARI stack' | diff - $(basename $x).txt)
           done
+          # run 9 (tier D): experiments/conductor-t10 (the pair curves' Cassels-Tate pairing against the good-prime
+          # removals) and review z11's checks (about 5 minutes)
+          cd "$GITHUB_WORKSPACE/experiments/conductor-t10"
+          python3 -I t10_pairct.py --negative 2>/dev/null | grep -v 'PARI stack' | diff - t10_negative.txt
+          python3 -I t10_pairct.py --h1control 2>/dev/null | grep -v 'PARI stack' | diff - t10_h1control.txt
+          python3 -I t10_pairct.py --summarize t10_997_a.txt,t10_997_b.txt,t10_15000_s100_a.txt,t10_15000_s100_b.txt 2>/dev/null | grep -v 'PARI stack' | diff - t10_summary.txt
+          cd "$GITHUB_WORKSPACE/experiments/referee_z11"
+          for s in rank0 recount wash_check pmat h1_mine forge_t10 z11_compare z11_pair forge_mine; do
+            python3 -I $s.py 2>/dev/null | grep -v 'PARI stack' | diff - $s.txt
+          done
+          python3 -I z11_compare.py --set mid 2>/dev/null | grep -v 'PARI stack' | diff - z11_compare_mid.txt
           cd "$GITHUB_WORKSPACE"
           # no program of this job may rewrite a committed file (OUTPUTS.md)
           git diff --exit-code

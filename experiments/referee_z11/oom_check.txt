@@ -1,0 +1,13 @@
+oom_check.py (review z11; written by an AI model): t10_pairct.py rerun against t10_997_a.txt
+  ratio (2999,1081) (index 35..40): 66 lines, identical to t10_997_a.txt: True
+  ratio (3007,697) (index 35..40): 22 lines, identical to t10_997_a.txt: True
+  ratio (3073,412) (index 35..40): 32 lines, identical to t10_997_a.txt: True
+  ratio (3136,1825) (index 35..40): 18 lines, identical to t10_997_a.txt: True
+  ratio (3143,2567) (index 35..40): 28 lines, identical to t10_997_a.txt: True
+  ratio (3163,3116) (index 35..40): 124 lines, identical to t10_997_a.txt: True
+  ratio (4247,2193) (index 74..78): 20 lines, identical to t10_997_a.txt: True
+  ratio (4333,508) (index 74..78): 56 lines, identical to t10_997_a.txt: True
+  ratio (4348,3247) (index 74..78): 32 lines, identical to t10_997_a.txt: True
+  ratio (4404,2197) (index 74..78): 52 lines, identical to t10_997_a.txt: True
+  ratio (4424,2057) (index 74..78): 18 lines, identical to t10_997_a.txt: True
+ALL RERUN BLOCKS IDENTICAL

@@ -1,0 +1,11 @@
+combined summary of t10_997_a.txt, t10_997_b.txt, t10_15000_s100_a.txt, t10_15000_s100_b.txt
+  201 ratios, 1766 residual tuples; killed by a good prime: 1766; pairing-killed: 1762
+  good-prime-killed and pairing-killed: 1762; good-prime-killed, NOT pairing-killed: 4; pairing-killed only: 0; neither: 0
+  ratios all of whose residual tuples are pairing-killed: 199 of 201
+  kills per pair curve: 08:1280 0L:1694 0U:1694 8L:1694 8U:1694 LU:874
+  places carrying a -1 in the kill lines (every pair, one b each): {'bad prime of the ratio': 18222}
+  ratios with a tuple not pairing-killed: ['(3320,2303)', '(5623,1017)']
+    (3320,2303) (2, 1, 1, 635399) good prime 29: 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image
+    (3320,2303) (2, 1, 1270798, 2) good prime 29: 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image
+    (5623,1017) (2, 1270798, 1, 2) good prime 29: 08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+    (5623,1017) (635399, 1, 1, 2) good prime 29: 08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel

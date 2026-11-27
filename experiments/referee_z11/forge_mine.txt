@@ -1,0 +1,20 @@
+forge_mine.py (review z11; written by an AI model): classes of rational points through my pairing
+(7,1) E_08: dim Sel^2 2; 2 points found, 4 subset sums; 2 distinct classes tested (4 from the divisor formula): all in the kernel
+(7,1) E_0L: dim Sel^2 5; 5 points found, 32 subset sums; 32 distinct classes tested (56 from the divisor formula): all in the kernel
+(7,1) E_0U: dim Sel^2 5; 5 points found, 32 subset sums; 32 distinct classes tested (54 from the divisor formula): all in the kernel
+(7,1) E_8L: dim Sel^2 5; 5 points found, 32 subset sums; 32 distinct classes tested (54 from the divisor formula): all in the kernel
+(7,1) E_8U: dim Sel^2 5; 5 points found, 32 subset sums; 32 distinct classes tested (54 from the divisor formula): all in the kernel
+(7,1) E_LU: dim Sel^2 2; 2 points found, 4 subset sums; 2 distinct classes tested (4 from the divisor formula): all in the kernel
+(4,3) E_08: dim Sel^2 2; 2 points found, 4 subset sums; 2 distinct classes tested (4 from the divisor formula): all in the kernel
+(4,3) E_0L: dim Sel^2 5; 5 points found, 32 subset sums; 32 distinct classes tested (56 from the divisor formula): all in the kernel
+(4,3) E_0U: dim Sel^2 5; 5 points found, 32 subset sums; 32 distinct classes tested (56 from the divisor formula): all in the kernel
+(4,3) E_8L: dim Sel^2 5; 5 points found, 32 subset sums; 32 distinct classes tested (56 from the divisor formula): all in the kernel
+(4,3) E_8U: dim Sel^2 5; 5 points found, 32 subset sums; 32 distinct classes tested (56 from the divisor formula): all in the kernel
+(4,3) E_LU: dim Sel^2 2; 2 points found, 4 subset sums; 2 distinct classes tested (4 from the divisor formula): all in the kernel
+(465,416) E_08: dim Sel^2 5; 2 points found, 4 subset sums; 2 distinct classes tested (4 from the divisor formula): all in the kernel
+(465,416) E_0L: dim Sel^2 8; 3 points found, 8 subset sums; 8 distinct classes tested (8 from the divisor formula): all in the kernel
+(465,416) E_0U: dim Sel^2 8; 3 points found, 8 subset sums; 7 distinct classes tested (6 from the divisor formula): all in the kernel
+(465,416) E_8L: dim Sel^2 8; 3 points found, 8 subset sums; 7 distinct classes tested (6 from the divisor formula): all in the kernel
+(465,416) E_8U: dim Sel^2 8; 3 points found, 8 subset sums; 8 distinct classes tested (8 from the divisor formula): all in the kernel
+(465,416) E_LU: dim Sel^2 6; 2 points found, 4 subset sums; 2 distinct classes tested (4 from the divisor formula): all in the kernel
+NO CLASS OF A RATIONAL POINT IS KILLED
