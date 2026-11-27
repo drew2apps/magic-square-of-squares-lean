@@ -1,0 +1,2 @@
+a_p at 20000 random primes <= 1209869493: the repository's own order certificate (lball_exact53.ap_one) and PARI agree at 20000 of 20000 (bad 0, certified 20000, counted 0, fallback 0, points 20012)
+a_n for n <= 200000: streamed a_n and PARI ellan agree: True

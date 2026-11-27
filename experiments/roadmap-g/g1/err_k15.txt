@@ -1,0 +1,1 @@
+k=15 random 2 s, controls 14 s

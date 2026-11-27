@@ -1,0 +1,3 @@
+the same six sums with w forged to -1: guard False (overlap False, Fricke residual contains 0: False) -> refused, as it must be
+the y = 1 sum S1 (L = 2 S1 when w = +1) lies in [0.722042977811, 0.722042978041]: its width is small against its value
+negative checks: as required

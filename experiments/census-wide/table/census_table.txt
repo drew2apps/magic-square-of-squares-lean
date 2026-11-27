@@ -1,0 +1,34 @@
+F0 census table, 1000 < m <= 11000 (experiment; written by an AI model, not read by a person)
+ratios passing the congruences: 20682
+  1000 < m <= 2000: 731 (other 429, square 177, twice-square 125)
+  2000 < m <= 3000: 1015 (other 713, square 178, twice-square 124)
+  3000 < m <= 5000: 2918 (other 2305, square 356, twice-square 257)
+  5000 < m <= 7000: 4116 (other 3508, square 357, twice-square 251)
+  7000 < m <= 9000: 5366 (other 4757, square 357, twice-square 252)
+  9000 < m <= 11000: 6536 (other 5924, square 355, twice-square 257)
+closing step (first that closes, in the order of the header):
+  class             17636
+  second descent    2582
+  L-value           23
+  rank 0            231
+  Demjanenko-Manin  175
+  repository route  9
+  special           26
+  UNCLOSED          0
+by label:
+      1  CONDITIONAL on a rank being 1 (D1 of the partner: root number -1, PARI bounds [1,3]); plus the DM generator condition
+      8  CONDITIONAL on a rank being 1 (root number -1, PARI bounds [1,3]); plus (a), (b)
+      1  OPEN
+    175  computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+    231  computed (repository global.py); PARI rank upper bounds
+     10  computed (route_pari.py); conditional on (a) G generating E1(Q) mod torsion, (b) the reading of CVV constants
+   2066  computed; PARI rank upper bounds
+      2  rank 0 from L(E,1) != 0 computed (numerical), tail bound estimated
+     23  repository (wide L-values); numerical L-value with a tail bound
+    516  repository (wide.py); PARI rank upper bounds
+  17636  repository programs rerun here at 24d6ef6 (class_selmer_linalg.py, tuple_descent.py); tier D, unreviewed
+     13  repository route (route_wide.txt / route_twist.txt); tier C/D
+conditional on a rank being 1: (3540,2581) (4440,2231) (6121,959) (6480,4961) (6671,2209) (6903,5104) (8249,3720) (10512,145) (10657,10367)
+numerical L-value: (6557,324) (6881,6233)
+open: (7735,4968)
+UNCLOSED (a record is missing): 0 

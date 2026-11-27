@@ -1,0 +1,4 @@
+route -220962238 exit 0 50 s
+route 220962238 exit 0 7 s
+rank_hard 220962238 exit 0 117 s
+rank_hard -220962238 exit 0 37 s

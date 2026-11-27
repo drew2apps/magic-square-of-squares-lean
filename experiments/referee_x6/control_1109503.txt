@@ -1,0 +1,11 @@
+m^2 + n^2 = 1588207531250 = 2 * 891125^2: True; 891125 = [5, 3; 7129, 1]; gcd 1; m, n odd: True
+bad primes: [2, 3, 5, 7, 13, 17, 137, 241, 467, 593, 797, 1871, 7129, 597671, 3202453, 6968344381, 3763052404561, 1192437057240229]
+known (t = 0, t = infinity): [(1109503, 597671, 2, 1), (1195342, 2219006, 2, 1)]
+descent, every bad prime and good primes <= 20000: 6 tuples: [(1109503, 597671, 2, 1), (1109503, 597671, 2, 959), (1109503, 597671, 1918, 1), (1195342, 2219006, 2, 1), (1195342, 2219006, 2, 959), (1195342, 2219006, 1918, 1)] (4 s)
+  (1109503, 597671, 2, 1): explicit point at 2: (4, 1); at the odd bad primes: all found
+  (1109503, 597671, 2, 959): explicit point at 2: (4, 1); at the odd bad primes: all found
+  (1109503, 597671, 1918, 1): explicit point at 2: (4, 1); at the odd bad primes: all found
+  (1195342, 2219006, 2, 1): explicit point at 2: (1, 0); at the odd bad primes: all found
+  (1195342, 2219006, 2, 959): explicit point at 2: (1, 0); at the odd bad primes: all found
+  (1195342, 2219006, 1918, 1): explicit point at 2: (1, 0); at the odd bad primes: all found
+good primes = 1 mod 4 in (20000, 600000]: 23397 tested (807 s); tuples failing somewhere: none

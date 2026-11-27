@@ -1,0 +1,11 @@
+python3 lvalue_stream.py --primes r6557 : exit 0 12 s
+nice -n 5 python3 lvalue_stream.py --ap 4 1 r6557 : exit 0 2199 s
+nice -n 5 python3 lvalue_stream.py --ap 4 2 r6557 : exit 0 2202 s
+nice -n 5 python3 lvalue_stream.py --ap 4 3 r6557 : exit 0 2203 s
+nice -n 5 python3 lvalue_stream.py --ap 4 0 r6557 : exit 0 2206 s
+nice -n 5 python3 lvalue_stream.py --series B r6557 : exit 0 2027 s
+nice -n 5 python3 lvalue_stream.py --series A r6557 : exit 0 2163 s
+nice -n 5 python3 lvalue_stream.py --series C r6557 : exit 0 2715 s
+python3 lvalue_stream.py --merge r6557 --write : exit 0 0 s
+python3 lvalue_stream.py --negative r6557 --write : exit 0 0 s
+python3 lvalue_stream.py --apcheck r6557 --write : exit 0 45 s

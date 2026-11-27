@@ -1,0 +1,132 @@
+(23,7) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(23,7) p=5: exact 4 tuples; repository at depth 2: 4; equal
+(23,7) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(23,7) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(23,7) p=13: exact 2 tuples; repository at depth 2: 2; equal
+(23,7) p=17: exact 4 tuples; repository at depth 2: 4; equal
+(23,7) p=23: exact 3 tuples; repository at depth 2: 3; equal
+(23,7) p=29: exact 8 tuples; repository at depth 2: 8; equal
+(23,7) p=37: exact 2 tuples; repository at depth 2: 2; equal
+(23,7) p=41: exact 8 tuples; repository at depth 2: 8; equal
+(41,9) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(41,9) p=5: exact 8 tuples; repository at depth 2: 8; equal
+(41,9) p=7: exact 0 tuples; repository at depth 2: 0; equal
+(41,9) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(41,9) p=13: exact 2 tuples; repository at depth 2: 2; equal
+(41,9) p=17: exact 0 tuples; repository at depth 2: 0; equal
+(41,9) p=29: exact 4 tuples; repository at depth 2: 4; equal
+(41,9) p=37: exact 8 tuples; repository at depth 2: 8; equal
+(41,9) p=41: exact 16 tuples; repository at depth 2: 16; equal
+(97,56) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(97,56) p=5: exact 0 tuples; repository at depth 2: 0; equal
+(97,56) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(97,56) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(97,56) p=13: exact 0 tuples; repository at depth 2: 0; equal
+(97,56) p=17: exact 14 tuples; repository at depth 2: 14; equal
+(97,56) p=29: exact 8 tuples; repository at depth 2: 8; equal
+(97,56) p=37: exact 4 tuples; repository at depth 2: 4; equal
+(97,56) p=41: exact 16 tuples; repository at depth 2: 16; equal
+(120,119) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(120,119) p=5: exact 4 tuples; repository at depth 2: 4; equal
+(120,119) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(120,119) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(120,119) p=13: exact 4 tuples; repository at depth 2: 4; equal
+(120,119) p=17: exact 14 tuples; repository at depth 2: 14; equal
+(120,119) p=29: exact 4 tuples; repository at depth 2: 4; equal
+(120,119) p=37: exact 6 tuples; repository at depth 2: 6; equal
+(120,119) p=41: exact 8 tuples; repository at depth 2: 8; equal
+(627,364) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(627,364) p=5: exact 4 tuples; repository at depth 2: 4; equal
+(627,364) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(627,364) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(627,364) p=13: exact 8 tuples; repository at depth 2: 8; equal
+(627,364) p=17: exact 8 tuples; repository at depth 2: 8; equal
+(627,364) p=19: exact 1 tuples; repository at depth 2: 1; equal
+(627,364) p=29: exact 4 tuples; repository at depth 2: 4; equal
+(627,364) p=37: exact 2 tuples; repository at depth 2: 2; equal
+(627,364) p=41: exact 6 tuples; repository at depth 2: 6; equal
+(1189,820) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(1189,820) p=5: exact 4 tuples; repository at depth 2: 4; equal
+(1189,820) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(1189,820) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(1189,820) p=13: exact 2 tuples; repository at depth 2: 2; equal
+(1189,820) p=17: exact 2 tuples; repository at depth 2: 2; equal
+(1189,820) p=29: exact 8 tuples; repository at depth 2: 8; equal
+(1189,820) p=37: exact 8 tuples; repository at depth 2: 8; equal
+(1189,820) p=41: exact 4 tuples; repository at depth 2: 4; equal
+(4999,1802) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(4999,1802) p=5: exact 0 tuples; repository at depth 2: 0; equal
+(4999,1802) p=7: exact 0 tuples; repository at depth 2: 0; equal
+(4999,1802) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(4999,1802) p=13: exact 2 tuples; repository at depth 2: 2; equal
+(4999,1802) p=17: exact 14 tuples; repository at depth 2: 14; equal
+(4999,1802) p=23: exact 3 tuples; repository at depth 2: 3; equal
+(4999,1802) p=29: exact 2 tuples; repository at depth 2: 2; equal
+(4999,1802) p=37: exact 2 tuples; repository at depth 2: 2; equal
+(4999,1802) p=41: exact 0 tuples; repository at depth 2: 0; equal
+(4999,1802) p=53: exact 8 tuples; repository at depth 2: 8; equal
+(9001,1575) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(9001,1575) p=5: exact 8 tuples; repository at depth 2: 8; equal
+(9001,1575) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(9001,1575) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(9001,1575) p=13: exact 2 tuples; repository at depth 2: 2; equal
+(9001,1575) p=17: exact 8 tuples; repository at depth 2: 8; equal
+(9001,1575) p=29: exact 2 tuples; repository at depth 2: 2; equal
+(9001,1575) p=37: exact 4 tuples; repository at depth 2: 4; equal
+(9001,1575) p=41: exact 2 tuples; repository at depth 2: 2; equal
+(9001,1575) p=47: exact 3 tuples; repository at depth 2: 3; equal
+(35,12) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(35,12) p=5: exact 4 tuples; repository at depth 2: 4; equal
+(35,12) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(35,12) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(35,12) p=13: exact 2 tuples; repository at depth 2: 2; equal
+(35,12) p=17: exact 8 tuples; repository at depth 2: 8; equal
+(35,12) p=23: exact 3 tuples; repository at depth 2: 3; equal
+(35,12) p=29: exact 2 tuples; repository at depth 2: 2; equal
+(35,12) p=37: exact 4 tuples; repository at depth 2: 4; equal
+(35,12) p=41: exact 6 tuples; repository at depth 2: 6; equal
+(35,12) p=47: exact 3 tuples; repository at depth 2: 3; equal
+(21,20) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(21,20) p=5: exact 4 tuples; repository at depth 2: 4; equal
+(21,20) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(21,20) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(21,20) p=13: exact 2 tuples; repository at depth 2: 2; equal
+(21,20) p=17: exact 8 tuples; repository at depth 2: 8; equal
+(21,20) p=29: exact 4 tuples; repository at depth 2: 4; equal
+(21,20) p=37: exact 4 tuples; repository at depth 2: 4; equal
+(21,20) p=41: exact 16 tuples; repository at depth 2: 16; equal
+(47,23) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(47,23) p=5: exact 4 tuples; repository at depth 2: 4; equal
+(47,23) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(47,23) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(47,23) p=13: exact 2 tuples; repository at depth 2: 2; equal
+(47,23) p=17: exact 8 tuples; repository at depth 2: 8; equal
+(47,23) p=23: exact 3 tuples; repository at depth 2: 3; equal
+(47,23) p=29: exact 2 tuples; repository at depth 2: 2; equal
+(47,23) p=37: exact 4 tuples; repository at depth 2: 4; equal
+(47,23) p=41: exact 6 tuples; repository at depth 2: 6; equal
+(47,23) p=47: exact 3 tuples; repository at depth 2: 3; equal
+(161,73) p=3: exact 1 tuples; repository at depth 2: 1; equal
+(161,73) p=5: exact 4 tuples; repository at depth 3: 4; equal
+(161,73) p=7: exact 3 tuples; repository at depth 2: 3; equal
+(161,73) p=11: exact 1 tuples; repository at depth 2: 1; equal
+(161,73) p=13: exact 8 tuples; repository at depth 2: 8; equal
+(161,73) p=17: exact 8 tuples; repository at depth 2: 8; equal
+(161,73) p=23: exact 3 tuples; repository at depth 2: 3; equal
+(161,73) p=29: exact 2 tuples; repository at depth 2: 2; equal
+(161,73) p=37: exact 6 tuples; repository at depth 2: 6; equal
+(161,73) p=41: exact 6 tuples; repository at depth 2: 6; equal
+random points: 240000 tested, 61856 with every form of rational class, all inside the exact set
+(1189,820): exact descent leaves nothing; repository descent leaves nothing
+(4999,1802): exact descent leaves nothing; repository descent leaves nothing
+(35,12): exact descent leaves [(1, 2, 23, 47), (1, 2, 94, 46)]; repository descent leaves [(1, 2, 23, 47), (1, 2, 94, 46)]
+(21,20): exact descent leaves [(1, 2, 1, 41), (1, 2, 82, 2)]; repository descent leaves [(1, 2, 1, 41), (1, 2, 82, 2)]
+(120,119): exact descent leaves [(2, 1, 1, 239), (2, 1, 478, 2)]; repository descent leaves [(2, 1, 1, 239), (2, 1, 478, 2)]
+(47,23): exact descent leaves [(46, 94, 2, 1), (47, 23, 2, 1)]; repository descent leaves [(46, 94, 2, 1), (47, 23, 2, 1)]
+(161,73): exact descent leaves [(146, 322, 2, 1), (161, 73, 2, 1)]; repository descent leaves [(146, 322, 2, 1), (161, 73, 2, 1)]
+(291,224): exact descent leaves nothing; repository descent leaves nothing
+(292,133): exact descent leaves nothing; repository descent leaves nothing
+(308,185): exact descent leaves nothing; repository descent leaves nothing
+(340,53): exact descent leaves nothing; repository descent leaves nothing
+(393,287): exact descent leaves nothing; repository descent leaves nothing
+(408,203): exact descent leaves nothing; repository descent leaves nothing

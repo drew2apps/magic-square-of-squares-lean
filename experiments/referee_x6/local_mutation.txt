@@ -1,0 +1,6 @@
+unmutated: 0 of 24 cases with an explicit point outside the set
+mutation "tail: one parity of e": caught on 1 of 24 cases
+mutation "no unit closure": caught on 12 of 24 cases
+mutation "listing keeps one pattern": caught on 8 of 24 cases
+mutation "dead test at p = 3 mod 4 reversed": caught on 9 of 24 cases
+mutation "symbol of b' forgotten": caught on 7 of 24 cases

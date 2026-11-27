@@ -1,0 +1,5 @@
+model (0, 1848516467034577, 0, 20370457151276745574584576, 0)
+6557 324 w*f0*f8  B = 16 (gcd of #E(F_p), 157 good odd p < 1000); E(Q)_tors = Z/2 x Z/8, order 16: 2-part of B attained
+                  x of the torsion points (number of points): -1848505447074001 (1), -173982036428136 (2), -4513364283024 (2), -117083680416 (2), -11019960576 (1), 0 (1), 106070438304 (2), 4513364283024 (2), 192046506802344 (2)
+                  torsion t (w = t^2) and global.py classify_t: t = -1 degenerate, t = 0 no, t = 1 degenerate, w = inf degenerate; global.py analyse: closes
+closes (rank 0 assumed): True alert: False

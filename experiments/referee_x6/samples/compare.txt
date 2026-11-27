@@ -1,0 +1,28 @@
+second descent [11383, 7769] identical apart from sec
+second descent [12719, 10001] identical apart from sec
+second descent [12927, 5336] identical apart from sec
+second descent [11165, 7548] identical apart from sec
+rank 0 11009,840 identical
+rank 0 11207,6983 identical
+Demjanenko-Manin [11300, 10269] E rank not 1 identical apart from sec
+Demjanenko-Manin [11300, 10269] D1 rank not 1 identical apart from sec
+Demjanenko-Manin [11300, 10269] Sig+ closed identical apart from sec
+Demjanenko-Manin [11300, 10269] Sig- rank not 1 identical apart from sec
+Demjanenko-Manin [21569, 1031] E-partner rank not 1 identical apart from sec
+Demjanenko-Manin [21569, 1031] D1-partner closed identical apart from sec
+Demjanenko-Manin [21569, 1031] Sig+-partner rank not 1 identical apart from sec
+Demjanenko-Manin [21569, 1031] Sig--partner rank not 1 identical apart from sec
+Demjanenko-Manin [11177, 553] E closed identical apart from sec
+Demjanenko-Manin [11177, 553] D1 closed identical apart from sec
+Demjanenko-Manin [11177, 553] Sig+ rank not 1 identical apart from sec
+Demjanenko-Manin [11177, 553] Sig- rank not 1 identical apart from sec
+Demjanenko-Manin [5865, 5312] E-partner rank not 1 identical apart from sec
+Demjanenko-Manin [5865, 5312] D1-partner rank not 1 identical apart from sec
+Demjanenko-Manin [5865, 5312] Sig+-partner rank not 1 identical apart from sec
+Demjanenko-Manin [5865, 5312] Sig--partner rank not 1 identical apart from sec
+route (12416,5313): closed True; identical apart from sec
+G4 search [12, 5] hits 24 (committed 24), solutions [] (committed []); every curve identical
+G4 search [40, 9] hits 26 (committed 26), solutions [] (committed []); every curve identical
+G4 search [195, 28] hits 6 (committed 8), solutions [] (committed []); curves that differ (PARI 2.17.4 against 2.19.1): ['w*f8*K']
+G4 search [440, 279] hits 4 (committed 4), solutions [] (committed []); curves that differ (PARI 2.17.4 against 2.19.1): ['w*f0*K']
+G4 search [7735, 4968] hits 10 (committed 10), solutions [] (committed []); curves that differ (PARI 2.17.4 against 2.19.1): ['w*f0*K']

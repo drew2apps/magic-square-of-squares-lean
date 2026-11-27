@@ -1,0 +1,11 @@
+rank_fisher_theta4_gen.py --negative on 920,129: altered inputs that must be refused
+  refused: a conic point moved off its cone (Z -> Z + 1 in the hint) (P1 is not on the cone over Gamma_1)
+  refused: q replaced by q + e g (f f_dag - c q^2 leaves the ideal) (f f_dag - c q^2 is not in (QA, QB))
+  refused: sigma_1 doubled in N1 (the identity N1 N1' = D1 delta1^2 fails modulo I(C4))
+  refused: tau_3 tripled in R3 (the identity R3 R3' = D3 W^2 delta3^2 fails modulo I(C4))
+  refused: k_1 = 1 + sqrt(D1) (norm 1 - D1, not xi4 modulo squares in general): sigma_1 not rational (not a rational square)
+  refused: a forged twist Xi q outside the Selmer coset (no point of -201213039 W^2 = f0 over Q_2 (sampled classes))
+  refused: a wrong paired class (not Selmer) (3 is not in the local image at 2)
+  refused: g0 replaced by g0 c / e (not a pushout form): the local term depends on the point (at [2, 13, 17, 31, 37, 43]) (the term (g0(P), 156252226)_13 depends on the point P: {1, -1})
+  refused: the p-adic precision lowered to 4 digits at p = 2 (no usable point of C4(Q_2) found)
+negative tests: 9 of 9 refused

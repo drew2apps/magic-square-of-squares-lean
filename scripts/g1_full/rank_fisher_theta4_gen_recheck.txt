@@ -1,0 +1,88 @@
+rank_fisher_theta4_gen_recheck.py: the local terms of rank_fisher_theta4_gen.py re-checked by Hensel's lemma in integer arithmetic, symbols by PARI hilbert()
+920,129 E+: Xi = -67071013, S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 73, 113, 179, 929, 1049, 3613, 6469, 53299, 159793, 6375647, 145585309, 4883483573, 743810044013624383], classes [156252226, 515996348257602069980161, 1883582727842]
+  p = 2: 32 points certified by Hensel (of 32 sampled); terms 156252226:-1 515996348257602069980161:+1 1883582727842:-1
+  p = 3: 4 points certified by Hensel (of 4 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:-1
+  p = 5: 133 points certified by Hensel (of 133 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:-1
+  p = 7: 129 points certified by Hensel (of 129 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 11: 99 points certified by Hensel (of 99 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 13: 28 points certified by Hensel (of 28 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 17: 82 points certified by Hensel (of 82 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 19: 178 points certified by Hensel (of 178 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 23: 164 points certified by Hensel (of 164 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 29: 31 points certified by Hensel (of 31 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 31: 56 points certified by Hensel (of 56 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 37: 86 points certified by Hensel (of 86 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 41: 36 points certified by Hensel (of 36 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 43: 154 points certified by Hensel (of 154 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 73: 276 points certified by Hensel (of 276 sampled); terms 156252226:+1 515996348257602069980161:-1 1883582727842:+1
+  p = 113: 229 points certified by Hensel (of 229 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 179: 86 points certified by Hensel (of 86 sampled); terms 156252226:+1 515996348257602069980161:-1 1883582727842:+1
+  p = 929: 239 points certified by Hensel (of 239 sampled); terms 156252226:-1 515996348257602069980161:+1 1883582727842:+1
+  p = 1049: 274 points certified by Hensel (of 274 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 3613: 119 points certified by Hensel (of 119 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 6469: 119 points certified by Hensel (of 119 sampled); terms 156252226:-1 515996348257602069980161:-1 1883582727842:-1
+  p = 53299: 101 points certified by Hensel (of 101 sampled); terms 156252226:+1 515996348257602069980161:-1 1883582727842:-1
+  p = 159793: 151 points certified by Hensel (of 151 sampled); terms 156252226:+1 515996348257602069980161:-1 1883582727842:+1
+  p = 6375647: 72 points certified by Hensel (of 72 sampled); terms 156252226:+1 515996348257602069980161:-1 1883582727842:+1
+  p = 145585309: 204 points certified by Hensel (of 204 sampled); terms 156252226:+1 515996348257602069980161:-1 1883582727842:-1
+  p = 4883483573: 78 points certified by Hensel (of 78 sampled); terms 156252226:+1 515996348257602069980161:+1 1883582727842:+1
+  p = 743810044013624383: 50 points certified by Hensel (of 50 sampled); terms 156252226:+1 515996348257602069980161:-1 1883582727842:+1
+  products over S (real place +1): 156252226: -1, 515996348257602069980161: +1, 1883582727842: +1
+  RE-CHECKED: Theta_4 product -1 (as rank_fisher_theta4_gen.py), the classes of E(Q) +1; 3210 Hensel-certified points; symbols by PARI hilbert()
+760,39 E+: Xi = 219, S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 73, 103, 761, 1949, 4903, 21757, 23761, 42227, 189661, 15552001, 11298841251693869044727293547], classes [761, 111314284150462675500481, 739062191522]
+  p = 2: 20 points certified by Hensel (of 20 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:-1
+  p = 3: 155 points certified by Hensel (of 155 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 5: 168 points certified by Hensel (of 168 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 7: 17 points certified by Hensel (of 17 sampled); terms 761:-1 111314284150462675500481:+1 739062191522:+1
+  p = 11: 40 points certified by Hensel (of 40 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 13: 107 points certified by Hensel (of 107 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 17: 334 points certified by Hensel (of 334 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 19: 121 points certified by Hensel (of 121 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 23: 42 points certified by Hensel (of 42 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 29: 71 points certified by Hensel (of 71 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 31: 32 points certified by Hensel (of 32 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 37: 87 points certified by Hensel (of 87 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 41: 126 points certified by Hensel (of 126 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 43: 64 points certified by Hensel (of 64 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 47: 168 points certified by Hensel (of 168 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 73: 39 points certified by Hensel (of 39 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 103: 22 points certified by Hensel (of 22 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 761: 632 points certified by Hensel (of 632 sampled); terms 761:-1 111314284150462675500481:+1 739062191522:+1
+  p = 1949: 304 points certified by Hensel (of 304 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 4903: 74 points certified by Hensel (of 74 sampled); terms 761:-1 111314284150462675500481:+1 739062191522:-1
+  p = 21757: 68 points certified by Hensel (of 68 sampled); terms 761:+1 111314284150462675500481:-1 739062191522:+1
+  p = 23761: 16 points certified by Hensel (of 16 sampled); terms 761:+1 111314284150462675500481:-1 739062191522:-1
+  p = 42227: 144 points certified by Hensel (of 144 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 189661: 22 points certified by Hensel (of 22 sampled); terms 761:+1 111314284150462675500481:-1 739062191522:+1
+  p = 15552001: 214 points certified by Hensel (of 214 sampled); terms 761:+1 111314284150462675500481:+1 739062191522:+1
+  p = 11298841251693869044727293547: 90 points certified by Hensel (of 90 sampled); terms 761:+1 111314284150462675500481:-1 739062191522:-1
+  products over S (real place +1): 761: -1, 111314284150462675500481: +1, 739062191522: +1
+  RE-CHECKED: Theta_4 product -1 (as rank_fisher_theta4_gen.py), the classes of E(Q) +1; 3177 Hensel-certified points; symbols by PARI hilbert()
+631,71 D1: Xi = -15, S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 71, 73, 449, 631, 787, 2017, 8053, 1162771, 15784273, 49449047761, 1178063029213507], classes [31836878641, 1574303332479969772801]
+  p = 2: 152 points certified by Hensel (of 152 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 3: 302 points certified by Hensel (of 302 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 5: 124 points certified by Hensel (of 124 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 7: 185 points certified by Hensel (of 185 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 11: 178 points certified by Hensel (of 178 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 13: 128 points certified by Hensel (of 128 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 17: 45 points certified by Hensel (of 45 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 19: 105 points certified by Hensel (of 105 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 23: 53 points certified by Hensel (of 53 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 29: 61 points certified by Hensel (of 61 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 31: 58 points certified by Hensel (of 58 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 37: 91 points certified by Hensel (of 91 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 41: 30 points certified by Hensel (of 30 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 43: 41 points certified by Hensel (of 41 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 71: 176 points certified by Hensel (of 176 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 73: 100 points certified by Hensel (of 100 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 449: 4 points certified by Hensel (of 4 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 631: 182 points certified by Hensel (of 182 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 787: 71 points certified by Hensel (of 71 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 2017: 188 points certified by Hensel (of 188 sampled); terms 31836878641:-1 1574303332479969772801:-1
+  p = 8053: 102 points certified by Hensel (of 102 sampled); terms 31836878641:-1 1574303332479969772801:-1
+  p = 1162771: 32 points certified by Hensel (of 32 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 15784273: 136 points certified by Hensel (of 136 sampled); terms 31836878641:+1 1574303332479969772801:+1
+  p = 49449047761: 139 points certified by Hensel (of 139 sampled); terms 31836878641:+1 1574303332479969772801:-1
+  p = 1178063029213507: 43 points certified by Hensel (of 43 sampled); terms 31836878641:-1 1574303332479969772801:-1
+  products over S (real place +1): 31836878641: -1, 1574303332479969772801: +1
+  RE-CHECKED: Theta_4 product -1 (as rank_fisher_theta4_gen.py), the classes of E(Q) +1; 2726 Hensel-certified points; symbols by PARI hilbert()

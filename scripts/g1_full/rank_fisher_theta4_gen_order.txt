@@ -1,0 +1,4 @@
+rank_fisher_theta4_gen_order.py: G has infinite order (reductions modulo good primes, integer arithmetic)
+920,129 E+: orders of G modulo the good primes tried: 11: 10, 17: 6 -> two different orders: G has infinite order
+760,39 E+: orders of G modulo the good primes tried: 11: 14, 23: 24 -> two different orders: G has infinite order
+631,71 D1: orders of G modulo the good primes tried: 11: 5, 17: 10 -> two different orders: G has infinite order

@@ -1,0 +1,22 @@
+ratios 1000<m<=11000 in the congruence lists: 20682 non-coprime or misordered: 0
+types {'other': 17636, 'twice': 1266, 'square': 1780}
+TSV rows 20682 same key set as lists: True
+my first-step counts (NONE = no machine record; must be the special/route rows): {'class': 17636, 'second descent': 2582, 'rank 0': 231, 'Demjanenko-Manin': 175, 'L-value': 23, 'NONE': 35}
+TSV step counts: {'class': 17636, 'second descent': 2582, 'rank 0': 231, 'Demjanenko-Manin': 175, 'L-value': 23, 'special': 26, 'repository route': 9}
+mismatches: 0 []
+degenerate ratios with no machine closing record: 35
+1064,423:special 1487,641:special 2107,276:reposit 2108,195:reposit 2303,1913:reposit 2331,1300:reposit 2365,588:reposit 2383,1831:reposit 2405,1428:reposit 2473,1097:reposit 2953,1777:reposit 3321,2440:special 3540,2581:special 3631,1031:special 3833,977:special 4440,2231:special 5073,2336:special 5761,881:special 6121,959:special 6480,4961:special 6557,324:special 6588,805:special 6671,2209:special 6881,6233:special 6903,5104:special 7393,5783:special 7409,2737:special 7735,4968:special 7811,3060:special 8249,3720:special 8364,4123:special 8687,4416:special 10512,145:special 10657,10367:special 10871,4751:special
+ 17636 repository programs rerun here at 24d6ef6 (class_selmer_linalg.py, tuple_descent.py); tier D, unreviewed
+  2066 computed; PARI rank upper bounds
+   516 repository (wide.py); PARI rank upper bounds
+   231 computed (repository global.py); PARI rank upper bounds
+   175 computed (dm_pari.py); conditional on PARI generators (saturation at primes <= 1000)
+    23 repository (wide L-values); numerical L-value with a tail bound
+    13 repository route (route_wide.txt / route_twist.txt); tier C/D
+    10 computed (route_pari.py); conditional on (a) G generating E1(Q) mod torsion, (b) the reading of CVV constants
+     8 CONDITIONAL on a rank being 1 (root number -1, PARI bounds [1,3]); plus (a), (b)
+     2 rank 0 from L(E,1) != 0 computed (numerical), tail bound estimated
+     1 CONDITIONAL on a rank being 1 (D1 of the partner: root number -1, PARI bounds [1,3]); plus the DM generator condition
+     1 OPEN
+DM closed for partner only (not used): 32
+recount: as the table

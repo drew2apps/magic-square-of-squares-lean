@@ -1,0 +1,9 @@
+F0 census table, negative mode: with every record of a ratio and of its partner removed, the ratio must come out UNCLOSED
+  drop every record of (1001, 655) and its partner (class step): before "class", after "UNCLOSED" -> refused
+  drop every record of (5015, 4823) and its partner (class step): before "class", after "UNCLOSED" -> refused
+  drop every record of (1009, 463) and its partner (sd step): before "second descent", after "UNCLOSED" -> refused
+  drop every record of (1088, 735) and its partner (lv step): before "L-value", after "UNCLOSED" -> refused
+  drop every record of (1015, 192) and its partner (r0 step): before "rank 0", after "UNCLOSED" -> refused
+  drop every record of (1044, 517) and its partner (dm step): before "Demjanenko-Manin", after "UNCLOSED" -> refused
+  drop every record of (2107, 276) and its partner (rr step): before "repository route", after "UNCLOSED" -> refused
+all refused: True

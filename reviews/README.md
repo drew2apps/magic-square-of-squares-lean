@@ -3,7 +3,7 @@
 Written by AI models (Claude, made by Anthropic); **none of these is a reading by a person.** An outside review of
 commit `24d6ef6` asked whether the reviews that `CHANGES.md` and `LEDGER.md` mention ("reviewed by a separate AI
 agent") actually took place, since no report was committed. These are the reports, committed on 26 November 2026
-(UTC) as they were written, unedited.
+(UTC; run 6's on 27 November) as they were written, unedited.
 
 How they were made: each piece of work was done by a build agent in its own git branch; a separate agent, which had not
 seen the work being produced, was then given the diff (not the build agent's summary) and asked to act as a hostile
@@ -43,6 +43,10 @@ the machines the agents ran on.
 | `review_x2.md` | run 5: `torsion_exact.py` and the torsion step of the 19 `L`-value closures, the `lball` negative tests, `rank_fisher_theta4_order.py`, `kctp_isog_exact.py` |
 | `review_x3.md` | run 5: the Fable bundle (`experiments/census-wide/g4k/`, `rank1/`, `open-ratio/ctp/`); its scripts are in `experiments/referee_x3/` |
 | `referee_run5.md` | the integrated diff of run 5, before publication as release 0.6.0 (its fixes are in `CHANGES.md`) |
+| `review_x4.md` | run 6: the Fable bundle, part 2 (`experiments/census-wide/table/`, `lvalue/`, `CENSUS11000.md` and the `9000 < m ≤ 11000` records); its scripts are in `experiments/referee_x4/` |
+| `review_y5.md` | run 6: `Θ₄` by the general module `rank_fisher_theta4_gen.py` on `E⁺` of (920,129), (760,39) and the `D1` curve of (631,71) |
+| `review_x6.md` | run 6: the Roadmap G bundle (`experiments/roadmap-g/`: `exact_local.py` and the stress test to `m = 10⁹`, the kill sets and test 6 of `COMPLETE.md` §7, the degenerate types for `11000 < m ≤ 13000`, the point search on the square-type fibres); its scripts are in `experiments/referee_x6/` |
+| `referee_run6.md` | the integrated diff of run 6 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`) |
 
 Work that `CHANGES.md` marks "not reviewed" (for example the (627,364) scripts `kctp_*` of run 4) has no report here. A few earlier reviews, among them those of `ClassPadic.lean` and of `0b34613`, were not saved.
 The outside reviews that Drew obtained from other tools are not included.

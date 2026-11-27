@@ -1,0 +1,12 @@
+(11988,1085) degenerate: NOT EMPTIED (as it must be)
+(13073,10903) degenerate: NOT EMPTIED (as it must be)
+(23572,22515) degenerate: NOT EMPTIED (as it must be)
+(291,224) kill [2, 13]: recomputed empty; each prime dropped leaves [8192, 1024]; forged kill sets refused (as they must be)
+(292,133) kill [2, 5, 13]: recomputed empty; each prime dropped leaves [4096, 512, 512]; forged kill sets refused (as they must be)
+(308,185) kill [2, 5, 29]: recomputed empty; each prime dropped leaves [8192, 2048, 1024]; forged kill sets refused (as they must be)
+(340,53) kill [2, 13, 17]: recomputed empty; each prime dropped leaves [7168, 896, 512]; forged kill sets refused (as they must be)
+(393,287) kill [2, 13, 17]: recomputed empty; each prime dropped leaves [7168, 896, 512]; forged kill sets refused (as they must be)
+(408,203) kill [2, 5, 17, 29]: recomputed empty; each prime dropped leaves [1792, 448, 128, 224]; forged kill sets refused (as they must be)
+(425,159) kill [2, 5, 13]: recomputed empty; each prime dropped leaves [4096, 512, 512]; forged kill sets refused (as they must be)
+(465,416) kill [2, 5, 7, 41]: recomputed empty; each prime dropped leaves [256, 128, 128, 128]; forged kill sets refused (as they must be)
+# 11 of 11 as they must be

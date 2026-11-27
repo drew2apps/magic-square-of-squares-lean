@@ -1,0 +1,22 @@
+square-type ratios: 3573 (m <= 19995); second pass (E+, E-) run on 2488 of them
+SOLUTIONS: none
+non-degenerate t with at least four of the five forms squares: none
+ratios by their best search on E+ or E-: full 1741, partial 1473, none 359
+ratios with no curve searched at all: 23 [(5561, 1200), (8911, 6600), (10125, 4532), (10961, 1680), (11543, 2376), (12852, 11245), (13837, 4284), (14111, 4080), (14985, 13832), (15120, 15089), (15561, 10480), (16095, 4352), (16095, 13328), (16109, 12420), (16815, 11152), (16975, 10608), (17139, 15620), (17363, 11316), (17711, 15840), (18688, 11055), (18721, 13920), (19000, 9849), (19599, 280)]
+planted test: searches on a curve carrying the point of t = +-1: 15724; in which it is listed: 15724
+per curve (full: rank bounds equal and a full set of PARI points, every point of height <= 64 max h(gens) listed;
+  partial: rank bounds equal but fewer points, the subgroup they generate searched the same way):
+  E+          partial (pass 2) 1506, skipped: rank bounds differ 1058, full 917, full (pass 2) 92
+  E-          partial (pass 2) 1509, skipped: rank bounds differ 1019, full 941, full (pass 2) 103, skipped: rank above 3 1
+  f0*K        skipped: too few points, not in pass 2 2118, skipped: rank bounds differ 996, full 435, skipped: rank above 3 24
+  f0*g4*f8    skipped: too few points, not in pass 2 1689, full 1126, skipped: rank bounds differ 754, skipped: rank above 3 4
+  f8*K        skipped: too few points, not in pass 2 2255, skipped: rank bounds differ 968, full 326, skipped: rank above 3 24
+  g4*K        skipped: too few points, not in pass 2 1494, skipped: rank bounds differ 1300, full 774, skipped: rank above 3 5
+  w*K         skipped: rank bounds differ 1853, skipped: too few points, not in pass 2 1183, full 537
+  w*f0*K      skipped: too few points, not in pass 2 2252, skipped: rank bounds differ 964, full 332, skipped: rank above 3 25
+  w*f0*f8     skipped: too few points, not in pass 2 1677, full 1394, skipped: rank bounds differ 502
+  w*f0*g4     full 2654, skipped: too few points, not in pass 2 805, skipped: rank bounds differ 90, skipped: rank above 3 24
+  w*f0*g4*f8  skipped: too few points, not in pass 2 1688, full 1126, skipped: rank bounds differ 754, skipped: rank above 3 5
+  w*f8*K      skipped: too few points, not in pass 2 2100, skipped: rank bounds differ 993, full 450, skipped: rank above 3 30
+  w*f8*g4     full 2656, skipped: too few points, not in pass 2 803, skipped: rank bounds differ 90, skipped: rank above 3 24
+  w*g4*K      skipped: too few points, not in pass 2 1491, skipped: rank bounds differ 1300, full 777, skipped: rank above 3 5

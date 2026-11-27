@@ -1,0 +1,63 @@
+14484,979  24  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+16339,3941  18  bad-alone: EMPTY  kill: 5:b 563:b 6099733:b
+14368,5037  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+14773,172  24  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 61:b
+23245,12693  20  bad-alone: EMPTY  kill: 2:b 5:b
+23985,4112  22  bad-alone: 8 left  kill: 2:b 61:g
+29323,17580  24  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 17:b 31:b 71:b 157:b 293:b
+94997,64108  28  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+151763,118885  26  bad-alone: EMPTY  kill: 2:b 5:b 13:b 29:b 37:b
+163928,7495  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b 661:b
+321671,229225  24  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+391597,303180  26  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b 53:b
+411545,318912  28  bad-alone: EMPTY  kill: 2:b 3:b 5:b 349:b
+948651,919384  32  bad-alone: EMPTY  kill: 2:b 3:b 5:b 11:b 13:b 19:b 29:b
+757149,263549  24  bad-alone: EMPTY  kill: 2:b 3:b 109:b
+790007,717703  24  bad-alone: EMPTY  kill: 29:b 37:b
+998055,866612  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+1764105,1438489  30  bad-alone: 16 left  kill: 2:b 5:b 29:g 37:b 41:g 53:b 283:b
+1105221,814669  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1354220,328557  24  bad-alone: EMPTY  kill: 5:b 37:b
+1546801,758936  28  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+3358057,1370687  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 37:b
+3606312,2961647  28  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3344332,1530527  28  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 17:b
+6105761,3411839  22  bad-alone: EMPTY  kill: 2:b 13:b 3889:b
+7387599,2265335  28  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+7614929,301776  26  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 17:b 89:b 719:b 6287:b 12697:b 155599:b
+7299121,2129096  28  bad-alone: EMPTY  kill: 5:b 13:b 953:b
+5507039,3111465  24  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+5352013,2317772  28  bad-alone: EMPTY  kill: 2:b 5:b 19:b 97:b
+14408216,9725737  24  bad-alone: EMPTY  kill: 5:b 37:b 41:b 59:b
+10708360,3055761  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b 163:b
+10254647,4060577  26  bad-alone: EMPTY  kill: 13:b 12613:b
+9691241,2290812  24  bad-alone: EMPTY  kill: 2:b 5:b 17:b 43:b
+10431299,3758584  22  bad-alone: EMPTY  kill: 2:b 5:b 173:b
+11390795,6005437  32  bad-alone: EMPTY  kill: 2:b 5:b 11:b 17:b 29:b
+10202552,6141573  24  bad-alone: EMPTY  kill: 2:b 137:b 293:b 397:b
+30882515,19277252  28  bad-alone: EMPTY  kill: 37:b 97:b 3221:b
+21268132,12612617  28  bad-alone: EMPTY  kill: 2:b 3:b 5:b 11:b 13:b 37:b
+32608075,27444784  28  bad-alone: EMPTY  kill: 2:b 1301:b
+27745069,12049683  24  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+43988637,18719380  30  bad-alone: EMPTY  kill: 5:b 13:b 809:b
+41023448,7055083  30  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+33988557,10716700  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b 31:b 3457:b 2629721:b 11329519:b 27896641:b
+43821036,7073671  24  bad-alone: EMPTY  kill: 2:b 13:b
+43365857,30965001  30  bad-alone: EMPTY  kill: 2:b 13:b 59:b 233:b 1429:b
+88373348,70002375  SKIPPED (out of memory at 8 GB)
+120756965,14608109  SKIPPED (out of memory at 8 GB)
+110977953,61495292  24  bad-alone: EMPTY  kill: 2:b 5:b 733:b
+103809996,82552799  26  bad-alone: EMPTY  kill: 2:b 5:b 17:b 41:b
+108213916,47458271  30  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+232350525,44567467  28  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+194105951,126289804  30  bad-alone: EMPTY  kill: 2:b 5:b 13:b 193:b
+250117025,229812236  28  bad-alone: EMPTY  kill: 5:b 13:b 113:b
+241339963,75360565  30  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+260135260,14751119  32  bad-alone: EMPTY  kill: 2:b 3:b 5:b 11:b 13:b 17:b 37:b 89:b 2243:b
+373636363,308315203  28  bad-alone: EMPTY  kill: 2:b 13:b 17:b 43:b 83:b 337:b
+993260025,766111057  28  bad-alone: EMPTY  kill: 2:b 5:b 19:b 37:b 89:b
+955206895,395654721  32  bad-alone: EMPTY  kill: 2:b 5:b 13:b 73:b
+921424623,769373936  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b 53:b 1129:b
+711343101,552021980  SKIPPED (out of memory at 8 GB)
+890692692,476730793  36  bad-alone: EMPTY  kill: 5:b 13:b 41:b 109:b
+852491661,256286971  26  bad-alone: 2 left  kill: 2:b 29:g

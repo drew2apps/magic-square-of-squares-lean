@@ -1,0 +1,1 @@
+combinations sum a_i g_i, |a_i| <= 4, of height <= 0.999 H on the curves searched: 9495; not listed: 0

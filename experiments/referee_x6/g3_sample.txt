@@ -1,0 +1,55 @@
+ROW 11383,7769 twice [type ok] step=second descent | class 1356 | computed; PARI rank upper bounds
+    sd(11383, 7769): closed by 1356 bounds [2, 0] t {'-1': 'no', '0': 'degenerate', '1': 'no'}
+ROW 12071,4889 twice [type ok] step=second descent | class +23 | computed; PARI rank upper bounds
+    sd(12071, 4889): closed by +23 bounds [2, 0] t {'-1': 'no', '0': 'degenerate', '1': 'no'}
+ROW 12697,10129 twice [type ok] step=Demjanenko-Manin | curve E-partner | computed (dm_pari.py); conditional on PARI generators (satur
+    sd(12697, 10129): open by None bounds None t None
+    sd(12697, 10129): open by None bounds None t None
+    dm(12697, 10129): closed on E rank [1, 1] ncand 245
+    dm(12697, 10129): closed on E-partner rank [1, 1] ncand 245
+    dm(12697, 10129): closed on E-partner rank [1, 1] ncand 245
+    dm(12697, 10129): closed on E rank [1, 1] ncand 245
+ROW 12719,10001 twice [type ok] step=second descent | partner (11360, 1359): class 1356 | computed; PARI rank upper bounds
+    sd(12719, 10001): closed by partner by None bounds None t None
+    sd(11360, 1359): closed by 1356 bounds [0, 1] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+    sd(11360, 1359): closed by 1356 bounds [0, 1] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+ROW 11327,7217 twice [type ok] step=second descent | partner (9272, 2055): class 1356 | computed; PARI rank upper bounds
+    sd(11327, 7217): closed by partner by None bounds None t None
+    sd(9272, 2055): closed by 1356 bounds [0, 1] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+ROW 11752,10065 square [type ok] step=second descent | class 1356 | computed; PARI rank upper bounds
+    sd(11752, 10065): closed by 1356 bounds [0, 1] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+ROW 12864,4727 square [type ok] step=second descent | class 1356 | computed; PARI rank upper bounds
+    sd(12864, 4727): closed by 1356 bounds [2, 0] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+ROW 12412,8085 square [type ok] step=second descent | class 1356 | computed; PARI rank upper bounds
+    sd(12412, 8085): closed by 1356 bounds [0, 1] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+ROW 12927,5336 square [type ok] step=second descent | class 1356 | computed; PARI rank upper bounds
+    sd(12927, 5336): closed by 1356 bounds [0, 0] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+ROW 12831,5800 square [type ok] step=second descent | class 1356 | computed; PARI rank upper bounds
+    sd(12831, 5800): closed by 1356 bounds [0, 0] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+ROW 11165,7548 square [type ok] step=open | left after every step | OPEN
+    sd(11165, 7548): open by None bounds None t None
+    sd(18713, 3617): open by None bounds None t None
+ROW 11441,1519 twice [type ok] step=special | partner (6480, 4961), 1000 < m <= 11000 table: rank-1 route IF rank E1(Q) = 1 | CONDITIONAL on a rank being 1 (root number -1, PARI bounds [
+    sd(11441, 1519): open by None bounds None t None
+    sd(6480, 4961): open by None bounds None t None
+ROW 11969,4529 twice [type ok] step=special | partner (8249, 3720), 1000 < m <= 11000 table: rank-1 route IF rank E1(Q) = 1, d = -108415 | CONDITIONAL on a rank being 1 (root number -1, PARI bounds [
+    sd(11969, 4529): open by None bounds None t None
+    sd(8249, 3720): open by None bounds None t None
+ROW 12007,1799 twice [type ok] step=special | partner (6903, 5104), 1000 < m <= 11000 table: Demjanenko-Manin on D1 of the partner (1200 | CONDITIONAL on a rank being 1 (D1 of the partner: root numbe
+    sd(12007, 1799): open by None bounds None t None
+    sd(6903, 5104): open by None bounds None t None
+ROW 12201,7360 square [type ok] step=open | left after every step | OPEN
+    sd(12201, 7360): open by None bounds None t None
+    sd(19561, 4841): open by None bounds None t None
+ROW 12204,9853 square [type ok] step=open | left after every step | OPEN
+    sd(12204, 9853): open by None bounds None t None
+    sd(22057, 2351): open by None bounds None t None
+ROW 12416,5313 square [type ok] step=special | rank-1 route, class d = 251858174, E1 rank [1, 1], sieve leaves [[1, 1]] (route/log_12416. | computed (route_pari.py); conditional on (a) G generating E1
+    sd(12416, 5313): open by None bounds None t None
+    sd(17729, 7103): open by None bounds None t None
+ROW 12487,4241 twice [type ok] step=special | partner (8364, 4123), 1000 < m <= 11000 table: rank-1 route, route_pari.py, d = -105914734 | computed (route_pari.py); conditional on (a) G generating E1
+    sd(12487, 4241): open by None bounds None t None
+    sd(8364, 4123): open by None bounds None t None
+ROW 12703,2767 twice [type ok] step=open | left after every step | OPEN
+    sd(12703, 2767): open by None bounds None t None
+    sd(7735, 4968): open by None bounds None t None

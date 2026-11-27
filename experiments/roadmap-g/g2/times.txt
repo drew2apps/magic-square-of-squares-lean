@@ -1,0 +1,6 @@
+tuple_selmer_997.txt worker 1/2 exit=0 177 s
+tuple_selmer_997.txt worker 0/2 exit=0 178 s
+class_selmer_15000_list.txt worker 0/2 exit=0 3382 s
+class_selmer_15000_list.txt worker 1/2 exit=0 3413 s
+run_g1kept.sh 1654 s
+run_g1kept.sh (8 GB, resumed for the last 3) 1183 s

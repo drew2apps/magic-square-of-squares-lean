@@ -1,0 +1,5 @@
+(1) tuple_scan_5000: diff exit 0, 2827 s
+(2) criterion 5000 < m <= 10000: summary diff exit 1, list diff exit 0, 651 s
+(3) criterion 10000 < m <= 11000: list diff exit 0, 216 s
+(4) tuple descent on the list, 5000 < m <= 11000: diff exit 0, 4163 of 4163 with nothing left, 1143 s
+done

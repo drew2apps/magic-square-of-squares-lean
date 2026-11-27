@@ -1,0 +1,31 @@
+## the 997 (tuple_selmer_997.txt): 997 ratios
+bad primes alone empty the set: 896; need a good prime too: 101; not emptied: 0
+largest good prime needed: 17 (5), 29 (42), 37 (24), 41 (10), 53 (6), 61 (6), 73 (2), 89 (1), 101 (5)
+good primes needed are all 1 mod 4: True
+kill-set size: 1: 3, 2: 170, 3: 452, 4: 211, 5: 72, 6: 42, 7: 25, 8: 16, 9: 4, 10: 2
+kill sets of bad primes only: 896
+by log2 of the tuple space (ratios, bad primes not enough): 14: 2, 0, 16: 39, 9, 18: 230, 30, 20: 435, 38, 22: 246, 18, 24: 45, 6
+bad primes used most: 2 (857), 5 (646), 13 (536), 17 (295), 3 (264), 37 (97), 7 (65), 29 (64), 11 (62), 41 (50)
+
+## the 8,739 (class_selmer_15000_list.txt): 8739 ratios
+bad primes alone empty the set: 7903; need a good prime too: 836; not emptied: 0
+largest good prime needed: 17 (36), 29 (359), 37 (158), 41 (98), 53 (47), 61 (62), 73 (14), 89 (17), 97 (14), 101 (16), 109 (5), 113 (1), 157 (4), 173 (3), 181 (2)
+good primes needed are all 1 mod 4: True
+kill-set size: 1: 4, 2: 1440, 3: 3277, 4: 2282, 5: 760, 6: 397, 7: 264, 8: 215, 9: 60, 10: 34, 11: 5, 12: 1
+kill sets of bad primes only: 7903
+by log2 of the tuple space (ratios, bad primes not enough): 14: 2, 0, 16: 78, 21, 18: 807, 163, 20: 2409, 252, 22: 3453, 270, 24: 1749, 116, 26: 235, 14, 28: 6, 0
+bad primes used most: 2 (7404), 5 (5797), 13 (4967), 3 (2546), 17 (2493), 37 (1080), 29 (636), 11 (619), 41 (515), 7 (504)
+
+## G1's 63 kept ratios (g1_kept.txt): 60 ratios; 3 more skipped (out of memory)
+bad primes alone empty the set: 57; need a good prime too: 3; not emptied: 0
+largest good prime needed: 29 (1), 41 (1), 61 (1)
+good primes needed are all 1 mod 4: True
+kill-set size: 2: 8, 3: 24, 4: 10, 5: 8, 6: 4, 7: 2, 8: 1, 9: 1, 10: 1, 11: 1
+kill sets of bad primes only: 57
+by log2 of the tuple space (ratios, bad primes not enough): 18: 1, 0, 20: 2, 0, 22: 8, 1, 24: 16, 0, 26: 6, 1, 28: 15, 0, 30: 7, 1, 32: 4, 0, 36: 1, 0
+bad primes used most: 2 (50), 5 (40), 13 (30), 3 (18), 17 (14), 37 (14), 11 (5), 29 (4), 73 (3), 7 (3)
+
+## cross-check with tuple_badprimes_997.txt (tuple space at most 2^18)
+ratios: 271 (repository 271)
+left there: 57; left here, with the large bad primes too: 39; emptied by the large bad primes: 18
+ratios with more tuples left here than there (must be none): none

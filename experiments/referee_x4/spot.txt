@@ -1,0 +1,42 @@
+class<=5000         (4753, 100) class           ok=True | scripts/cover_descent/tuple_scan_5000.txt: (4753,100): 1048576 tuples; good primes up to 150; known: []; left: []; nothing is left
+class<=5000         (2615, 73) class           ok=True | scripts/cover_descent/tuple_scan_5000.txt: (2615,73): 262144 tuples; good primes up to 150; known: []; left: []; nothing is left
+class<=5000         (4464, 3061) class           ok=True | scripts/cover_descent/tuple_scan_5000.txt: (4464,3061): 1048576 tuples; good primes up to 150; known: []; left: []; nothing is left
+class no class      (6956, 1729) class           ok=True | not in class_selmer_15000_list.txt: True
+class no class      (8635, 339) class           ok=True | not in class_selmer_15000_list.txt: True
+class no class      (9639, 4465) class           ok=True | not in class_selmer_15000_list.txt: True
+class kept+descent  (10948, 353) class           ok=True | scripts/cover_descent/tuple_selmer_15000.txt: (10948,353): 4194304 tuples; good primes up to 150; known: []; left: []; nothing is left
+class kept+descent  (6151, 4440) class           ok=True | scripts/cover_descent/tuple_selmer_15000.txt: (6151,4440): 4194304 tuples; good primes up to 150; known: []; left: []; nothing is left
+sd repo direct      (1337, 809) second descent  ok=True | scripts/second_descent/wide_1000_2000.jsonl: (1337, 809) closed by +14 rank_bounds [1, 0] t {'-1': 'no', '0': 'degenerate', '1': 'no'}
+sd repo direct      (2835, 2668) second descent  ok=True | scripts/second_descent/wide_2500_3000.jsonl: (2835, 2668) closed by +23 rank_bounds [2, 0] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+sd here direct      (10112, 2145) second descent  ok=True | experiments/census-wide/s11_1.jsonl: (10112, 2145) closed by +23 rank_bounds [2, 0] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+sd here direct      (7452, 4445) second descent  ok=True | experiments/census-wide/s9_2.jsonl: (7452, 4445) closed by +23 rank_bounds [3, 0] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+sd here direct      (3392, 1785) second descent  ok=True | experiments/census-wide/sw_0.jsonl: (3392, 1785) closed by 1356 rank_bounds [0, 1] t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+sd through partner  (10720, 1911) second descent  ok=True | experiments/census-wide/s11_0.jsonl: (10720, 1911) closed by partner [12631, 8809] (1356, bounds [1, 0], t {'-1': 'no', '0': 'degenerate', '1': 'no'})
+sd through partner  (10007, 5257) second descent  ok=True | experiments/census-wide/s11_1.jsonl: (10007, 5257) closed by partner [7632, 2375] (1356, bounds [1, 0], t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'})
+L-value             (2200, 1311) L-value         ok=True | scripts/second_descent/wide_2000_2500_lvalue.jsonl: (2200, 1311) curve 1356 twist 1 L 3.187821505643 tail 3.2e-20 t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+L-value partner     (2657, 1487) L-value         ok=True | scripts/second_descent/wide_2500_3000_lvalue_partners.jsonl: (2072, 585) curve 1356 twist -1 L 2.259440832624 tail 3.3e-20 t {'-1': 'degenerate', '0': 'no', '1': 'degenerate'}
+rank0               (3577, 1927) rank 0          ok=True | experiments/census-wide/g5k_out1.json: (3577, 1927) {"curve": "w*K", "rank": [0, 0], "torsion": 4, "closes": true, "alert": false}
+rank0               (8641, 7913) rank 0          ok=True | experiments/census-wide/g9k_out0.json: (8641, 7913) {"curve": "w*K", "rank": [0, 0], "torsion": 4, "closes": true, "alert": false}
+rank0 partner       (2377, 287) rank 0          ok=True | experiments/census2000/global_all.json: (1332, 1045) {"curve": "w*f0*f8", "rank": [0, 0], "torsion": 16, "closes": true, "alert": false}
+DM                  (4639, 1561) Demjanenko-Manin ok=True | experiments/census-wide/dm5k3.jsonl: of (4639, 1561) pair [3100, 1539] curve Sig--partner rank [1, 1] hG 5.656 ncand 115 t {'-1': 'degenerate'} gens pari, saturated at primes <= 1000 (conditional)
+DM                  (6961, 6727) Demjanenko-Manin ok=True | experiments/census-wide/dm7k1.jsonl: of (6961, 6727) pair [6961, 6727] curve E rank [1, 1] hG 8.831 ncand 245 t {'0': 'degenerate'} gens pari, saturated at primes <= 1000 (conditional)
+DM                  (4079, 721) Demjanenko-Manin ok=True | experiments/census2000/w3kdm3.jsonl: of (4079, 721) pair [2400, 1679] curve E-partner rank [1, 1] hG 8.321 ncand 115 t {'1': 'degenerate', '-1': 'degenerate'} gens pari, saturated at primes <= 1000 (conditional)
+repo route          (2107, 276) repository route ok=True | route_wide_summary.txt: closed by the route (route_wide.txt): 12: 1064,423 1332,1045 1395,532 1785,688 2015,1632 2107,276 21
+repo route          (2331, 1300) repository route ok=True | route_wide_summary.txt: closed by the route (route_wide.txt): 12: 1064,423 1332,1045 1395,532 1785,688 2015,1632 2107,276 21
+spot-checked 25 rows; all close: True
+special (3321, 2440)   route     records ['out_3321_2440_10150882.json', 'out_3321_2440_-10150882.json'] closed [True, True] rank upper (isogeny class) [1, 1]; fibre t degenerate only -> True
+special (5073, 2336)   route     records ['log_5073.txt'] closed [True] rank upper (isogeny class) [1]; fibre t degenerate only -> True
+special (6588, 805)    route     records ['log_6588.txt'] closed [True] rank upper (isogeny class) [1]; fibre t degenerate only -> True
+special (7811, 3060)   route     records ['log_7811.txt'] closed [True] rank upper (isogeny class) [1]; fibre t degenerate only -> True
+special (8364, 4123)   route     records ['log_8364.txt'] closed [True] rank upper (isogeny class) [1]; fibre t degenerate only -> True
+special (8687, 4416)   route     records ['log_8687.txt'] closed [True] rank upper (isogeny class) [1]; fibre t degenerate only -> True
+special (3540, 2581)   cond      records ['out_3540_2581_-11740078.json'] closed [False] rank upper (isogeny class) [3]; fibre t degenerate only -> True
+special (4440, 2231)   cond      records ['out_4440_2231_-13342.json'] closed [False] rank upper (isogeny class) [3]; fibre t degenerate only -> True
+special (6480, 4961)   cond      records ['log_6480.txt'] closed [False] rank upper (isogeny class) [3]; fibre t degenerate only -> True
+special (8249, 3720)   cond      records ['log_8249.txt'] closed [False] rank upper (isogeny class) [3]; fibre t degenerate only -> True
+special (10512, 145)   cond      records ['log_10512_220962238.txt', 'log_10512_-220962238.txt'] closed [False, False] rank upper (isogeny class) [3, 3]; fibre t degenerate only -> True
+partner relations of the 12 SPECIAL partner rows: True
+special partner (2405, 1428) in route_wide_summary.txt: closed by the route on the twist, with -d (route_twist.txt):
+special partner (2331, 1300) in route_wide_summary.txt: closed by the route (route_wide.txt): 12: 1064,423 1332,1045
+special partner (1064, 423) in route_wide_summary.txt: closed by the route (route_wide.txt): 12: 1064,423 1332,1045
+special rows checked: all as labelled: True

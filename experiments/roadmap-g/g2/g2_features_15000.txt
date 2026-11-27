@@ -1,0 +1,19 @@
+# g2_15000_all.txt: 8739 ratios; empty = bad primes alone empty the set, left = they do not; F = feature holds
+all_X_primes_quad_res          empty&F   253  empty&~F  7650  left&F  167  left&~F  669
+all_X_primes_quartic_res       empty&F     5  empty&~F  7898  left&F    1  left&~F  835
+all_pm1mod8_X_quartic_res      empty&F   485  empty&~F  7418  left&F   23  left&~F  813
+has_q8                         empty&F  6139  empty&~F  1764  left&F  663  left&~F  173
+q16                            empty&F  3875  empty&~F  4028  left&F  441  left&~F  395
+quartic_2_nontriv_some         empty&F  4073  empty&~F  3830  left&F  419  left&~F  417
+quartic_2_trivial_some         empty&F  3197  empty&~F  4706  left&F  351  left&~F  485
+quartic_m+n_nontriv_some       empty&F  4692  empty&~F  3211  left&F  435  left&~F  401
+quartic_m+n_trivial_some       empty&F  2201  empty&~F  5702  left&F  279  left&~F  557
+quartic_m-n_nontriv_some       empty&F  4682  empty&~F  3221  left&F  461  left&~F  375
+quartic_m-n_trivial_some       empty&F  2248  empty&~F  5655  left&F  262  left&~F  574
+quartic_m_nontriv_some         empty&F  3833  empty&~F  4070  left&F  391  left&~F  445
+quartic_m_trivial_some         empty&F  2874  empty&~F  5029  left&F  328  left&~F  508
+quartic_mn_nontriv_some        empty&F  3625  empty&~F  4278  left&F  360  left&~F  476
+quartic_mn_trivial_some        empty&F  3631  empty&~F  4272  left&F  407  left&~F  429
+quartic_n_nontriv_some         empty&F  3774  empty&~F  4129  left&F  392  left&~F  444
+quartic_n_trivial_some         empty&F  2925  empty&~F  4978  left&F  331  left&~F  505
+# features that, where they hold for 5 ratios or more, force one outcome: none

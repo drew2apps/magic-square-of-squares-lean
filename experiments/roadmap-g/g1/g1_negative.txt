@@ -1,0 +1,13 @@
+(19152,12505) degenerate, check off: class dim 0; SURVIVOR (as it must be)
+(21583,11856) degenerate, check off: class dim 1; SURVIVOR (as it must be)
+(31657,6647) degenerate, check off: class dim 0; SURVIVOR (as it must be)
+(1132935,1042712) degenerate, check off: class dim 0; SURVIVOR (as it must be)
+(1572500,1191939) degenerate, check off: class dim 0; SURVIVOR (as it must be)
+(1888035,1498252) degenerate, check off: class dim 0; SURVIVOR (as it must be)
+(84073771,2255820) degenerate, check off: class dim 0; SURVIVOR (as it must be)
+(86329591,81817951) degenerate, check off: class dim 0; SURVIVOR (as it must be)
+(121305717,104424244) degenerate, check off: class dim 0; SURVIVOR (as it must be)
+(13559,6960) known points withheld: descent leaves 2 tuples; they include the known ones
+(14268,845) known points withheld: descent leaves 2 tuples; they include the known ones
+(15113,13423) known points withheld: descent leaves 2 tuples; they include the known ones
+# 12 of 12 refused as they must be

@@ -1,0 +1,1 @@
+brute force: 611; fam_11000_30000.json in 11000 < m <= 13000: 611; identical: True

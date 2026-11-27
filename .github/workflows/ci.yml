@@ -577,6 +577,61 @@ jobs:
           python3 $K/f2_d1_local2.py 2>/dev/null | f5 | diff - $K/f2_d1_local2.txt
           python3 $K/f2_d1_local2.py --negative 2>/dev/null | f5 | diff - $K/f2_d1_local2_negative.txt
           for k in 0 1 2; do python3 $K/f2_pairing.py $k 2>/dev/null | f5 | diff - $K/f2_pairing_$k.log; done
+          # run 6 (experiments/, tier D): Fable run 5 part 2: the census table 1000 < m <= 11000 (bookkeeping) and its
+          # controls; the streamed exact L-value's controls and the (6557,324) record (conditional on PARI's ellap; the six
+          # sums are not recomputed); the review's recount, spot check, congruence lists, torsion step (about 1.5 minutes)
+          cd "$GITHUB_WORKSPACE"
+          T=experiments/census-wide/table; V=experiments/census-wide/lvalue; X=experiments/referee_x4
+          python3 $T/census_table.py 2>/dev/null | f5 | diff - $T/census_table.txt
+          python3 $T/census_table.py --negative 2>/dev/null | f5 | diff - $T/census_table_negative.txt
+          python3 $V/stream_selftest.py 2>/dev/null | f5 | diff - $V/selftest.txt
+          MSS_STREAM_TEST=1 python3 $V/lvalue_stream.py --negative-small 2>/dev/null | f5 | diff - $V/test_lball/negative_small.txt
+          MSS_PAIR=6557,324 MSS_CURVE='w*f0*f8' python3 $V/lvalue_stream.py --merge $V/r6557 2>/dev/null | f5 | diff - $V/r6557/record.json
+          MSS_PAIR=6557,324 MSS_CURVE='w*f0*f8' python3 $V/lvalue_stream.py --negative $V/r6557 2>/dev/null | f5 | diff - $V/r6557/negative.txt
+          python3 $X/recount.py 2>/dev/null | diff - $X/recount.txt
+          python3 $X/recount.py --negative 2>/dev/null | diff - $X/recount_negative.txt
+          python3 $X/spot.py 2>/dev/null | diff - $X/spot.txt
+          python3 $X/congr.py 2>/dev/null | diff - $X/congr.txt
+          python3 $X/tors6557.py 2>/dev/null | f5 | diff - $X/tors6557.txt
+          python3 $X/compare_samples.py 2>/dev/null | diff - $X/compare_samples.txt
+          # run 6: Theta_4 by the general module: (72,65) again, (920,129), (760,39), D1 of (631,71) via E'; refusals,
+          # controls, re-check, order, the Weil-reciprocity test of div g0 (about 3.5 minutes)
+          cd "$GITHUB_WORKSPACE/scripts/g1_full"
+          for n in 72,65 920,129 760,39; do t=$(echo $n | tr , _)
+            python3 rank_fisher_theta4_gen.py $n 2>/dev/null | grep -v 'PARI stack' | diff - rank_fisher_theta4_gen_$t.txt
+            python3 rank_fisher_theta4_gen.py $n --negative 2>/dev/null | grep -v 'PARI stack' | diff - rank_fisher_theta4_gen_${t}_negative.txt
+          done
+          python3 rank_fisher_theta4_gen.py 631,71 "--side=E'" 2>/dev/null | grep -v 'PARI stack' | diff - rank_fisher_theta4_gen_631_71_Eprime.txt
+          python3 rank_fisher_theta4_gen.py 631,71 "--side=E'" --negative 2>/dev/null | grep -v 'PARI stack' | diff - rank_fisher_theta4_gen_631_71_Eprime_negative.txt
+          for s in rank_fisher_theta4_gen_control rank_fisher_theta4_gen_recheck rank_fisher_theta4_gen_order rank_fisher_theta4_gen_weil; do
+            python3 $s.py 2>/dev/null | grep -v 'PARI stack' | diff - $s.txt
+          done
+          python3 rank_fisher_theta4_gen_order.py --negative 2>/dev/null | diff - rank_fisher_theta4_gen_order_negative.txt
+          cd "$GITHUB_WORKSPACE"
+          # run 6 (experiments/roadmap-g, tier D): the exact local test and its controls; two ranges of the stress test
+          # (k = 20 holds the control (1109503,597671)); G2's tables, negative test and 2-adic witnesses; G3's table;
+          # G4's bookkeeping and negative test; the review's own checks (about 2.5 minutes)
+          cd "$GITHUB_WORKSPACE"
+          R=experiments/roadmap-g; Q=experiments/referee_x6
+          python3 $R/g1/test_exact_local.py 2>/dev/null | f5 | diff - $R/g1/test_exact_local.txt
+          for k in 13 20; do python3 $R/g1/g1_stress.py $k 20000 200 2>/dev/null | f5 | diff - $R/g1/g1_k$k.txt; done
+          python3 $R/g1/g1_stress.py --negative 2>/dev/null | f5 | diff - $R/g1/g1_negative.txt
+          python3 $R/g1/g1_summary.py | diff - $R/g1/g1_summary.txt
+          python3 $R/g2/g2_check.py 2>/dev/null | f5 | diff - $R/g2/g2_summary.txt
+          python3 $R/g2/g2_check.py --negative 2>/dev/null | f5 | diff - $R/g2/g2_negative.txt
+          for L in 997 15000; do python3 $R/g2/g2_features.py g2_${L}_all.txt 2>/dev/null | f5 | diff - $R/g2/g2_features_$L.txt; done
+          python3 $R/g2/g2_badalone_witness.py $R/g2/g2_997_all.txt 2>/dev/null | f5 | diff - $R/g2/g2_badalone_witness_g2_997_all.txt
+          python3 $R/g3/g3_table.py | f5 | diff - $R/g3/g3_table.txt
+          python3 $R/g3/g3_table.py --negative | f5 | diff - $R/g3/g3_table_negative.txt
+          python3 $R/g4/g4_summary.py 2>/dev/null | f5 | diff - $R/g4/g4_summary.txt
+          python3 $R/g4/g4_search.py --negative 2>/dev/null | f5 | diff - $R/g4/g4_negative.txt
+          python3 $R/g4/gen_square.py 20000 | tail -1 | grep -qx '# matches square_20000.json'
+          python3 $Q/local_compare.py 2>/dev/null | f5 | diff - $Q/local_compare.txt
+          python3 $Q/weil_check.py 2>/dev/null | f5 | diff - $Q/weil_check.txt
+          python3 $Q/local_mutation.py 2>/dev/null | f5 | diff - $Q/local_mutation.txt
+          python3 $Q/g3_family.py | diff - $Q/g3_family.txt
+          python3 $Q/g3_sample.py | diff - $Q/g3_sample.txt
+          python3 $Q/samples/compare.py | diff - $Q/samples/compare.txt
           cd "$GITHUB_WORKSPACE"
           # no program of this job may rewrite a committed file (OUTPUTS.md)
           git diff --exit-code

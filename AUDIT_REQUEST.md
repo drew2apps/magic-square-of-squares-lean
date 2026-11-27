@@ -36,7 +36,7 @@ Heights are Sage's (twice Silverman's `ĥ`). `B` is Sage's `silverman_height_bou
 m:=631; n:=71; S:=m^2+n^2; D2:=(m^2-n^2)^2; c3:=4*S^2*m^2*n^2; c2:=-16*S*m^3*n^3; c1:=4*S^2*D2; c0:=-16*S*m*n*D2; E:=EllipticCurve([0,c1,0,c0*c2,c0^2*c3]); E:=MinimalModel(E); G,mp:=TorsionSubgroup(E); T:=mp((Order(G.1) div 2)*G.1); hi:=TwoPowerIsogenyDescentRankBound(E,T); print "BOUNDS", 0, hi;
 ```
 
-and it is in `magma_raw.txt` with the response. This line, its partner (351,280) and the line for (724,665) (run on its partner (1389,59)) are the only three that rest on Magma alone; the last one is also closed by the method of closure 4, with PARI's bounds.
+and it is in `magma_raw.txt` with the response. This line, its partner (351,280) and the line for (724,665) (run on its partner (1389,59)) are the only three lines of the 122 that rested on Magma alone; the last one is also closed by the method of closure 4, with PARI's bounds, and since 27 November 2026 (not released) the `D1` curve of the first two also has Fisher's `Θ₄` (`scripts/g1_full/rank_fisher_theta4_gen.py`, tier C). For the whole census see `README.md`: one counted ratio, (945,248), rests on Magma alone.
 
 **3. Curve `E0L`, pair (423,332).** Command: `python3 dm3.py 423,332`.
 

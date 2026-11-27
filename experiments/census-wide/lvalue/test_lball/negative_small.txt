@@ -1,0 +1,4 @@
+true N : guard True (as required)
+N/2    : guard False (as required)
+2N     : guard False (as required)
+forged-N controls through the streamed series: as required

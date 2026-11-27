@@ -1,0 +1,159 @@
+rank_fisher_theta4_gen.py: Fisher's Theta_4 on 631,71 D1 (arXiv:1509.03234 Sects. 2, 3, 7), exact
+E: y^2 = x(x^2 + a x + b), a = -200995169695329197260800, b = 10125675694839481152554505861944572401392025600; known point with x = 100497584847664598630400
+the lifted class -627214 (E' side) -> C3' (rank_fisher5 steps (1)-(8) re-run, conic points re-checked); L = Q(sqrt 627214), L' = Q(sqrt -627214)
+working curve (whose x-classes are the paired group): y^2 = x(x^2 + -200995169695329197260800 x + 10125675694839481152554505861944572401392025600) (E); paired class y = 31836878641
+  y is in the local image at R and at the bad primes [2, 3, 5, 7, 13, 71, 449, 631, 2017, 15784273, 49449047761] (rank_indep certified images); y in S'_1, and S'_4 = S'_2 contains y (rank_fisher.py, levels 2-3)
+  pencil discriminant (1159 digits): primes [2, 3, 5, 7, 13, 23, 71, 73, 449, 631, 787, 2017, 1162771, 15784273, 49449047761]; B0 = [2, 3, 5, 7, 13, 23, 71, 73, 449, 631, 787, 2017, 1162771, 15784273, 49449047761]
+  level-4 twists Xi (sampled classes closed up to cosets, F_2 linear algebra) over R and [2, 3, 5, 7, 11, 13, 23, 71, 73, 449, 631, 787, 2017, 1162771, 15784273, 49449047761]: 4: [-15, -477553179615, -741735716415, -23614549987199546592015]
+C4: Xi W^2 = f0 with Xi = -15; k_1 = 35075178713/345 + 61852211/345 sqrt(627214) (N = -9823666731361565 mod squares: xi4), k_3 = 927530054820742262756/785 + -967326176070252699/785 sqrt(-627214) (N = c xi4 mod squares); sigma_1, tau_3 rational (4/5, 53/25 digits)
+  (I1) N1 N1' = (627214) delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = (-627214) W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (276, 235, 974 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 508 digits)
+  R3 = t3 (W T3 + r Q0) with r = 20 digits / 20 digits: primes of den(r): [3, 8053, 1178063029213507]; Q0 mod p in span(QA, QB) for: [3, 8053, 1178063029213507]
+  f0 mod p in span(QA, QB) mod p only for p in [2, 3, 5, 7, 13, 449, 787, 1162771] (exact: gcd of the 3 x 3 minors); these are put into S
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 71, 73, 449, 631, 787, 2017, 8053, 1162771, 15784273, 49449047761, 1178063029213507]
+  R: a point of C4(R) (interval enclosure), g0^0 there < 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 1), (1, 5)] on C4(Q_p): [B] = T'
+  sum_v (g0(P_v), 31836878641)_v: the term is -1 exactly at [2017, 8053, 1178063029213507]; product = -1
+  sum_v (g0(P_v), 1574303332479969772801)_v: the term is -1 exactly at [2017, 8053, 49449047761, 1178063029213507]; product = +1
+    p = 2: classes of g0^0 on C4(Q_p) [(0, 1), (1, 5)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 3: classes of g0^0 on C4(Q_p) [(0, 1), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 5: classes of g0^0 on C4(Q_p) [(0, 1), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 7: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 11: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 13: classes of g0^0 on C4(Q_p) [(1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 17: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 19: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 23: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 29: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 31: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 37: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 41: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 43: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 71: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 73: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 449: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 631: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 787: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 2017: classes of g0^0 on C4(Q_p) [(0, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 8053: classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 1162771: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 15784273: classes of g0^0 on C4(Q_p) [(0, 0)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 49449047761: classes of g0^0 on C4(Q_p) [(0, 1)]; terms 31836878641:+1 1574303332479969772801:-1
+    p = 1178063029213507: classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+  (K2) the classes [1574303332479969772801] of the rational points pair to 0, as they must
+(K3) C4: Xi W^2 = f0 with Xi = -477553179615; k_1 = 6942063451087823/529 + -14709715375839/529 sqrt(627214) (N = -312754885535987293596833165 mod squares: xi4), k_3 = 45405151551791921926716/335 + 1198908347234804611/335 sqrt(-627214) (N = c xi4 mod squares); sigma_1, tau_3 rational (14/5, 53/32 digits)
+  (I1) N1 N1' = (627214) delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = (-627214) W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (276, 235, 1005 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 508 digits)
+  R3 = t3 (W T3 + r Q0) with r = 16 digits / 16 digits: primes of den(r): [3, 1178063029213507]; Q0 mod p in span(QA, QB) for: [3, 1178063029213507]
+  f0 mod p in span(QA, QB) mod p only for p in [2, 3, 5, 7, 13, 449, 787, 1162771] (exact: gcd of the 3 x 3 minors); these are put into S
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 71, 73, 449, 631, 787, 2017, 1162771, 15784273, 49449047761, 1178063029213507]
+  R: a point of C4(R) (interval enclosure), g0^0 there > 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 3), (1, 7)] on C4(Q_p): [B] = T'
+  sum_v (g0(P_v), 31836878641)_v: the term is -1 exactly at [2017, 15784273, 1178063029213507]; product = -1
+  sum_v (g0(P_v), 1574303332479969772801)_v: the term is -1 exactly at [2017, 15784273, 49449047761, 1178063029213507]; product = +1
+    p = 2: classes of g0^0 on C4(Q_p) [(0, 3), (1, 7)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 3: classes of g0^0 on C4(Q_p) [(0, 1), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 5: classes of g0^0 on C4(Q_p) [(0, 0), (1, 0)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 7: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 11: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 13: classes of g0^0 on C4(Q_p) [(1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 17: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 19: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 23: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 29: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 31: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 37: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 41: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 43: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 71: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 73: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 449: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 631: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 787: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 2017: classes of g0^0 on C4(Q_p) [(0, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 1162771: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 15784273: classes of g0^0 on C4(Q_p) [(0, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 49449047761: classes of g0^0 on C4(Q_p) [(1, 1)]; terms 31836878641:+1 1574303332479969772801:-1
+    p = 1178063029213507: classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+(K3) C4: Xi W^2 = f0 with Xi = -741735716415; k_1 = -2962331595336809/1009 + -28328159776683/1009 sqrt(627214) (N = -485770965387244784244705965 mod squares: xi4), k_3 = 212941546094708/31 + 21765065325/31 sqrt(-627214) (N = c xi4 mod squares); sigma_1, tau_3 rational (14/5, 53/25 digits)
+  (I1) N1 N1' = (627214) delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = (-627214) W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (276, 235, 1061 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 508 digits)
+  R3 = t3 (W T3 + r Q0) with r = 8 digits / 5 digits: primes of den(r): [3, 8053]; Q0 mod p in span(QA, QB) for: [3, 8053]
+  f0 mod p in span(QA, QB) mod p only for p in [2, 3, 5, 7, 13, 449, 787, 1162771] (exact: gcd of the 3 x 3 minors); these are put into S
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 71, 73, 449, 631, 787, 2017, 8053, 1162771, 15784273, 49449047761]
+  R: a point of C4(R) (interval enclosure), g0^0 there > 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 1), (1, 5)] on C4(Q_p): [B] = T'
+  sum_v (g0(P_v), 31836878641)_v: the term is -1 exactly at [2017, 8053, 15784273]; product = -1
+  sum_v (g0(P_v), 1574303332479969772801)_v: the term is -1 exactly at [2017, 8053, 15784273, 49449047761]; product = +1
+    p = 2: classes of g0^0 on C4(Q_p) [(0, 1), (1, 5)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 3: classes of g0^0 on C4(Q_p) [(0, 0), (1, 0)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 5: classes of g0^0 on C4(Q_p) [(0, 0), (1, 0)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 7: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 11: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 13: classes of g0^0 on C4(Q_p) [(1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 17: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 19: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 23: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 29: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 31: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 37: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 41: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 43: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 71: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 73: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 449: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 631: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 787: classes of g0^0 on C4(Q_p) [(0, 0)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 2017: classes of g0^0 on C4(Q_p) [(1, 0)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 8053: classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 1162771: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 15784273: classes of g0^0 on C4(Q_p) [(0, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 49449047761: classes of g0^0 on C4(Q_p) [(1, 1)]; terms 31836878641:+1 1574303332479969772801:-1
+  (K3) the same value for the level-4 lifts [-477553179615, -741735716415]
+(K5) other k_1, k_3: C4: Xi W^2 = f0 with Xi = -15; k_1 = 22077267361814603/345 + 38864784879791/345 sqrt(627214) (N = -9823666731361565 mod squares: xi4), k_3 = -580545467233886761897277856/785 + 608574612981192890623399/785 sqrt(-627214) (N = c xi4 mod squares); sigma_1, tau_3 rational (9/5, 52/30 digits)
+  (I1) N1 N1' = (627214) delta1^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I1) R3 R3' = (-627214) W^2 delta3^2 modulo I(C4) = (QA, QB, xi4 W^2 - f): checked (exact linear algebra)
+  (I2) resultants on the lines {l_1 = conj l_1 = 0}, {l_3 = conj l_3 = 0} (over Q) and {l_1 = delta3 = 0} (over L) are non-zero (276, 235, 1050 digits): A_1, A_2 disjoint, A_3, A_4 disjoint, delta3 != 0 on A_1, A_2
+  (I3') the ruling of the cone through P1 meets C3' in two distinct points (discriminant of QA on it != 0, 508 digits)
+  R3 = t3 (W T3 + r Q0) with r = 23 digits / 20 digits: primes of den(r): [2, 3, 8053, 1178063029213507]; Q0 mod p in span(QA, QB) for: [2, 3, 8053, 1178063029213507]
+  f0 mod p in span(QA, QB) mod p only for p in [2, 3, 5, 7, 13, 449, 787, 1162771] (exact: gcd of the 3 x 3 minors); these are put into S
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 71, 73, 449, 631, 787, 2017, 8053, 1162771, 15784273, 49449047761, 1178063029213507]
+  R: a point of C4(R) (interval enclosure), g0^0 there < 0
+  (I4) at p = 2 g0^0 takes the classes [(0, 3), (1, 7)] on C4(Q_p): [B] = T'
+  sum_v (g0(P_v), 31836878641)_v: the term is -1 exactly at [2017, 8053, 1178063029213507]; product = -1
+  sum_v (g0(P_v), 1574303332479969772801)_v: the term is -1 exactly at [2017, 8053, 49449047761, 1178063029213507]; product = +1
+    p = 2: classes of g0^0 on C4(Q_p) [(0, 3), (1, 7)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 3: classes of g0^0 on C4(Q_p) [(0, 1), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 5: classes of g0^0 on C4(Q_p) [(0, 1), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 7: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 11: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 13: classes of g0^0 on C4(Q_p) [(1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 17: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 19: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 23: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 29: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 31: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 37: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 41: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 43: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 71: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 73: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 449: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 631: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 787: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 2017: classes of g0^0 on C4(Q_p) [(0, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 8053: classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+    p = 1162771: classes of g0^0 on C4(Q_p) [(0, 0), (0, 1)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 15784273: classes of g0^0 on C4(Q_p) [(0, 0)]; terms 31836878641:+1 1574303332479969772801:+1
+    p = 49449047761: classes of g0^0 on C4(Q_p) [(0, 1)]; terms 31836878641:+1 1574303332479969772801:-1
+    p = 1178063029213507: classes of g0^0 on C4(Q_p) [(1, 0), (1, 1)]; terms 31836878641:-1 1574303332479969772801:-1
+  (K5) the same value with k_1 (1 + sqrt D1)^2, k_3 (1 + sqrt D3)^2 (another g0)
+
+RESULT: Theta_4(-627214, 31836878641) on 631,71 D1 = 1/2 (non-zero) (the product of the local Hilbert symbols is -1)
+  => the left and right kernels S_5, S'_5 drop by one each: dim 2 and 1 (rank_fisher.py: dim S_4 = 3, dim S'_4 = 2, each the known classes and one open class), and Lemma 2.2 (n = 3) gives rank <= 2 + 1 - 2 = 1; with the known point of infinite order, rank = 1 for 631,71 D1, without Magma (written arguments as listed in the docstring)

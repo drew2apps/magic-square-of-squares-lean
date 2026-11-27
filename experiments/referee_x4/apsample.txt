@@ -1,0 +1,2 @@
+N = 11077451294972790, Mmax = 1209869493; 30600 primes (30000 random, seed 6; 300 largest <= Mmax; 300 above 1000): ap_one and PARI ellap disagree at 0; stats {'bad': 0, 'certified': 30600, 'counted': 0, 'fallback': 0, 'points': 30691}
+disagreements: []

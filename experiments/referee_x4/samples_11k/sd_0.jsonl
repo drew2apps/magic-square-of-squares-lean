@@ -1,0 +1,6 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000001536
+{"pair": [9563, 5916], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 2], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 18.0}
+{"pair": [9240, 4031], "first": 2, "differ": true, "status": "closed", "by": "+23", "rank_bounds": [1, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}, "sec": 56.0}
+{"pair": [10447, 4463], "first": 2, "differ": true, "status": "closed by partner", "by": null, "partner": {"pair": [7455, 2992], "first": 2, "differ": true, "status": "closed", "by": "1356", "rank_bounds": [0, 0], "rational_t": {"-1": "degenerate", "0": "no", "1": "degenerate"}}, "sec": 108.9}
+{"pair": [9179, 7140], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [16319, 2039], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 118.0}
+{"pair": [9247, 8977], "first": 2, "differ": true, "status": "open", "by": null, "partner": {"pair": [9112, 135], "first": 2, "differ": true, "status": "open", "by": null}, "sec": 129.1}

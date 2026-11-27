@@ -1,0 +1,3 @@
+stream_selftest on lball_exact.CURVE, N = 1929934048, M = 302194
+segment 4194304: a_n identical to lball_exact.an_from_ap: True; the six sums identical to lball_exact.series: True
+segment 4093: a_n identical to lball_exact.an_from_ap: True; the six sums identical to lball_exact.series: True

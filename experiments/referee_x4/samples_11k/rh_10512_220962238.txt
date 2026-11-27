@@ -1,0 +1,2 @@
+10512 145 220962238 curve 0 effort 8 bounds 1 3 points 1 90 s
+10512 145 220962238 curve 1 effort 8 bounds 1 3 points 1 38 s

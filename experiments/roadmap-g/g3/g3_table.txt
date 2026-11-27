@@ -1,0 +1,6 @@
+blocks: 11000-12000, 12000-13000 (11000 < m <= 13000); ratios: 611
+square: second descent 324, rank 0 18, Demjanenko-Manin 18, special 1, open 3
+twice: second descent 209, rank 0 21, Demjanenko-Manin 12, special 4, open 1
+OPEN: [(11165, 7548), (12201, 7360), (12204, 9853), (12703, 2767)]
+CONDITIONAL on a rank being 1: [(11441, 1519), (11969, 4529), (12007, 1799)]
+closed by the route (conditions (a), (b)): [(12416, 5313), (12487, 4241)]

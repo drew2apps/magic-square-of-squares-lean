@@ -1,0 +1,16 @@
+{"pair": [11300, 10269], "curve": "E", "rank": [2, 2], "status": "rank not 1", "sec": 0.1, "of": [11300, 10269]}
+{"pair": [11300, 10269], "curve": "D1", "rank": [4, 4], "status": "rank not 1", "sec": 2.2, "of": [11300, 10269]}
+{"pair": [11300, 10269], "curve": "Sig+", "rank": [1, 1], "hG": 6.479963886211603, "B": 150.30797840452107, "amax": 58, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 119, "nt": 1, "t": {"1": "degenerate"}, "status": "closed", "sec": 0.8, "of": [11300, 10269]}
+{"pair": [11300, 10269], "curve": "Sig-", "rank": [2, 2], "status": "rank not 1", "sec": 0.8, "of": [11300, 10269]}
+{"pair": [21569, 1031], "curve": "E-partner", "rank": [2, 2], "status": "rank not 1", "sec": 0.1, "of": [11300, 10269]}
+{"pair": [21569, 1031], "curve": "D1-partner", "rank": [1, 1], "hG": 19.611455316272703, "B": 184.30013771541687, "amax": 21, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 43, "nt": 0, "t": {}, "status": "closed", "sec": 0.5, "of": [11300, 10269]}
+{"pair": [21569, 1031], "curve": "Sig+-partner", "rank": [3, 3], "status": "rank not 1", "sec": 0.9, "of": [11300, 10269]}
+{"pair": [21569, 1031], "curve": "Sig--partner", "rank": [2, 4], "status": "rank not 1", "sec": 1.4, "of": [11300, 10269]}
+{"pair": [11177, 553], "curve": "E", "rank": [1, 1], "hG": 8.806216249081976, "B": 88.22196743088148, "amax": 29, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 8, "ncand": 237, "nt": 117, "t": {"0": "degenerate"}, "status": "closed", "sec": 0.3, "of": [11177, 553]}
+{"pair": [11177, 553], "curve": "D1", "rank": [1, 1], "hG": 18.296657941727943, "B": 172.4657410676882, "amax": 21, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 43, "nt": 0, "t": {}, "status": "closed", "sec": 0.4, "of": [11177, 553]}
+{"pair": [11177, 553], "curve": "Sig+", "rank": [3, 3], "status": "rank not 1", "sec": 0.2, "of": [11177, 553]}
+{"pair": [11177, 553], "curve": "Sig-", "rank": [2, 2], "status": "rank not 1", "sec": 0.0, "of": [11177, 553]}
+{"pair": [5865, 5312], "curve": "E-partner", "rank": [2, 2], "status": "rank not 1", "sec": 0.0, "of": [11177, 553]}
+{"pair": [5865, 5312], "curve": "D1-partner", "rank": [3, 3], "status": "rank not 1", "sec": 0.4, "of": [11177, 553]}
+{"pair": [5865, 5312], "curve": "Sig+-partner", "rank": [2, 2], "status": "rank not 1", "sec": 0.1, "of": [11177, 553]}
+{"pair": [5865, 5312], "curve": "Sig--partner", "rank": [2, 2], "status": "rank not 1", "sec": 0.1, "of": [11177, 553]}

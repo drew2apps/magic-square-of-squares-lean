@@ -1,0 +1,10 @@
+rank_fisher_theta4_gen_weil.py: Weil reciprocity modulo p, a test of div g0 = 2B on C4 (not a proof)
+  920,129 E+, Xi = -67071013, p = 10007: 11 pairs of hyperplane sections: g0(Z1) / g0(Z2) a square for 11 of 11; control g0 c / e: 8 of 11
+  920,129 E+, Xi = -67071013, p = 100003: 11 pairs of hyperplane sections: g0(Z1) / g0(Z2) a square for 11 of 11; control g0 c / e: 6 of 11
+  760,39 E+, Xi = 219, p = 10007: 11 pairs of hyperplane sections: g0(Z1) / g0(Z2) a square for 11 of 11; control g0 c / e: 8 of 11
+  760,39 E+, Xi = 219, p = 100003: 11 pairs of hyperplane sections: g0(Z1) / g0(Z2) a square for 11 of 11; control g0 c / e: 4 of 11
+  631,71 D1, Xi = -15, p = 10007: 11 pairs of hyperplane sections: g0(Z1) / g0(Z2) a square for 11 of 11; control g0 c / e: 7 of 11
+  631,71 D1, Xi = -15, p = 100003: 11 pairs of hyperplane sections: g0(Z1) / g0(Z2) a square for 11 of 11; control g0 c / e: 7 of 11
+  72,65 E+, Xi = 137, p = 10007: 11 pairs of hyperplane sections: g0(Z1) / g0(Z2) a square for 11 of 11; control g0 c / e: 9 of 11
+  72,65 E+, Xi = 137, p = 100003: 11 pairs of hyperplane sections: g0(Z1) / g0(Z2) a square for 11 of 11; control g0 c / e: 5 of 11
+all tests passed: every ratio for g0 a square; the odd-divisor control g0 c / e fails on every curve

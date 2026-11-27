@@ -1,0 +1,4 @@
+(12,5) planted solutions reported: ['-1', '1']; as it must be
+(24,7) planted solutions reported: ['-1', '1']; as it must be
+(40,9) planted solutions reported: ['-1', '1']; as it must be
+# 3 of 3 as they must be

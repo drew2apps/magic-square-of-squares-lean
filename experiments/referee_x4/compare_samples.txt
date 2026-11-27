@@ -1,0 +1,9 @@
+second descent (wide_pari.py): 10 of 10 records identical apart from "sec"; statuses {'closed': 4, 'closed by partner': 2, 'open': 4}
+rank 0 (global.py): 10 of 10 records identical; 6 close
+Demjanenko-Manin (dm_pari.py): 80 records; every status identical: True; the 11 closed records identical apart from "sec": True; upper rank bounds identical: True; 5 "rank not 1" records differ only in PARI's lower bound
+route (route_pari.py) (10512,145), d = 220962238: identical apart from "sec": True; closed False; rank_E1 [1, 3]; isogeny-class upper bound 3; left [[1, 1]]
+rank_hard.py effort 8, d = 220962238: ['curve 0 effort 8 bounds 1 3 points 1', 'curve 1 effort 8 bounds 1 3 points 1'] (committed: same)
+route (route_pari.py) (10512,145), d = -220962238: identical apart from "sec": True; closed False; rank_E1 [1, 3]; isogeny-class upper bound 3; left [[1, 1]]
+rank_hard.py effort 8, d = -220962238: ['curve 0 effort 8 bounds 1 3 points 1', 'curve 1 effort 8 bounds 1 3 points 1'] (committed: same)
+class step 10000 < m <= 11000 (sympy): list identical to the committed one: True (947 ratios); four-class descent identical: True; nothing left for 947 of 947
+all samples reproduce: True

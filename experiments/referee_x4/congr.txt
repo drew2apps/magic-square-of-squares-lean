@@ -1,0 +1,1 @@
+1000 < m <= 11000: 20682 ratios pass the congruences (this code); the committed lists hold 20682; the same set: True

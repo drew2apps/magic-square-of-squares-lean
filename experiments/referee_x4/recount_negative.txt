@@ -1,0 +1,8 @@
+ratios 1000<m<=11000 in the congruence lists: 20682 non-coprime or misordered: 0
+types {'other': 17636, 'twice': 1266, 'square': 1780}
+TSV rows 20682 same key set as lists: True
+forged: a rank-0 row relabelled DM (1015, 192) -> detected
+forged: the second-descent record of a ratio removed (1012, 45) -> detected
+forged: a listed other-type ratio without its four-class record (5015, 4823) -> detected
+forged: an unlisted other-type ratio added to the list (5003, 957) -> detected
+negative checks: all detected

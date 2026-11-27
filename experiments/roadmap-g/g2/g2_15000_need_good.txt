@@ -1,0 +1,836 @@
+5029,2264  24  bad-alone: 4 left  kill: 2:b 5:b 41:g 1741:b
+5083,3283  22  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g 89:b
+5105,1416  20  bad-alone: 4 left  kill: 2:b 3:b 29:g
+5121,3329  16  bad-alone: 12 left  kill: 2:b 29:g 37:g
+5152,3807  20  bad-alone: 16 left  kill: 2:b 5:b 41:g
+5167,55  18  bad-alone: 4 left  kill: 2:b 3:b 29:g
+5201,3889  18  bad-alone: 2 left  kill: 2:b 13:b 29:g
+5239,479  20  bad-alone: 4 left  kill: 2:b 5:b 29:g 89:g
+5241,560  18  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 17:g 41:g 151:b
+5265,5032  20  bad-alone: 2 left  kill: 2:b 5:b 29:g 193:b 233:b
+5273,217  18  bad-alone: 2 left  kill: 2:b 5:b 29:g 8269:b
+5276,4125  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 37:g
+5280,4753  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 13:b 41:g 61:b
+5320,4719  20  bad-alone: 6 left  kill: 2:b 3:b 5:b 7:b 11:b 13:b 17:g 601:b
+5395,2884  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 37:g 510361:b
+5403,700  18  bad-alone: 2 left  kill: 13:b 17:b 29:g
+5420,3981  20  bad-alone: 12 left  kill: 2:b 13:b 29:g
+5431,1511  18  bad-alone: 2 left  kill: 2:b 29:g 37:g
+5445,476  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+5457,3160  20  bad-alone: 4 left  kill: 3:b 5:b 29:g 2297:b
+5491,5460  22  bad-alone: 8 left  kill: 3:b 5:b 13:b 29:g 37:b
+5497,145  22  bad-alone: 32 left  kill: 2:b 5:b 13:b 37:g
+5500,2051  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+5503,1127  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+5593,1823  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+5617,1103  20  bad-alone: 4 left  kill: 2:b 5:b 29:g
+5623,1017  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 29:g
+5664,1105  22  bad-alone: 10 left  kill: 2:b 3:b 5:b 17:b 29:g 97:b
+5673,1768  24  bad-alone: 24 left  kill: 2:b 3:b 5:b 13:b 29:g 37:g
+5673,4700  24  bad-alone: 2 left  kill: 2:b 3:b 11:b 13:b 17:g 37:b
+5708,2635  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+5763,3437  20  bad-alone: 4 left  kill: 2:b 5:b 29:g
+5785,3871  24  bad-alone: 16 left  kill: 2:b 5:b 29:b 61:g
+5796,475  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 29:g 313:b
+5800,2807  22  bad-alone: 2 left  kill: 2:b 3:b 13:b 17:g 29:b
+5801,4681  18  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 17:g 41:g 151:b
+5860,867  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 61:g
+5883,4340  20  bad-alone: 4 left  kill: 2:b 5:b 41:g
+5911,927  20  bad-alone: 20 left  kill: 2:b 5:b 17:g 37:g 89:b 3189229:b
+5915,5388  22  bad-alone: 2 left  kill: 2:b 5:b 17:b 29:g
+5921,4969  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+6007,3927  20  bad-alone: 2 left  kill: 2:b 5:b 11:b 17:b 29:g 73:b 4967:b
+6016,5625  18  bad-alone: 2 left  kill: 2:b 3:b 13:b 17:b 23:b 37:g 47:b 13326301:b
+6032,1449  18  bad-alone: 2 left  kill: 2:b 3:b 7:b 73:g
+6076,4301  22  bad-alone: 4 left  kill: 2:b 5:b 13:b 17:b 37:g
+6079,5824  18  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+6103,287  20  bad-alone: 2 left  kill: 2:b 5:b 37:g
+6103,4703  18  bad-alone: 2 left  kill: 13:b 17:b 29:g
+6137,1720  20  bad-alone: 2 left  kill: 3:b 5:b 17:b 19:b 29:g 97:b
+6164,4035  22  bad-alone: 4 left  kill: 2:b 13:b 29:g
+6175,476  22  bad-alone: 2 left  kill: 2:b 13:b 29:g 102481:b
+6175,664  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:b 19:b 41:g 977:b
+6200,289  20  bad-alone: 6 left  kill: 2:b 29:g 37:b
+6204,3841  24  bad-alone: 24 left  kill: 3:b 5:b 17:b 29:g
+6220,1459  18  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 13:b 17:g 311:b 1097:b
+6268,3077  20  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g
+6268,5499  18  bad-alone: 8 left  kill: 2:b 13:b 17:g 37:g
+6271,5321  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 29:g 313:b
+6273,3023  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g 8353:b
+6279,47  20  bad-alone: 24 left  kill: 2:b 5:b 13:b 29:g
+6295,5152  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+6320,1833  22  bad-alone: 24 left  kill: 2:b 3:b 5:b 29:g 47:b 61:g 20929:b
+6325,3076  22  bad-alone: 2 left  kill: 5:b 13:b 17:b 37:g
+6325,4368  24  bad-alone: 12 left  kill: 2:b 3:b 11:b 29:g
+6391,1560  20  bad-alone: 2 left  kill: 2:b 5:b 11:b 29:g 541:b
+6459,2788  18  bad-alone: 2 left  kill: 2:b 13:b 17:b 37:g
+6460,3977  24  bad-alone: 8 left  kill: 2:b 5:b 37:g
+6481,2367  18  bad-alone: 2 left  kill: 5:b 13:b 41:g
+6484,6475  16  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 17:g 53:g
+6489,5911  20  bad-alone: 6 left  kill: 2:b 29:g 37:b
+6521,3689  20  bad-alone: 4 left  kill: 2:b 3:b 29:g
+6556,2733  18  bad-alone: 8 left  kill: 2:b 41:g
+6595,6516  18  bad-alone: 4 left  kill: 13:b 37:g
+6599,5980  20  bad-alone: 4 left  kill: 2:b 3:b 5:b 17:g 109:b
+6601,2207  18  bad-alone: 8 left  kill: 2:b 5:b 61:g
+6625,1841  22  bad-alone: 12 left  kill: 2:b 5:b 37:g
+6651,5699  22  bad-alone: 2 left  kill: 2:b 13:b 29:g 102481:b
+6725,4716  20  bad-alone: 2 left  kill: 2:b 5:b 29:g
+6727,4993  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 61:g
+6735,6712  20  bad-alone: 2 left  kill: 2:b 13:b 29:g
+6760,6307  22  bad-alone: 6 left  kill: 2:b 3:b 5:b 13:b 41:g
+6769,4559  22  bad-alone: 10 left  kill: 2:b 3:b 5:b 17:b 29:g 97:b
+6800,2929  22  bad-alone: 4 left  kill: 2:b 5:b 29:b 73:g 97:g
+6805,1828  20  bad-alone: 2 left  kill: 3:b 13:b 29:g 457:b 1657:b
+6815,672  18  bad-alone: 2 left  kill: 5:b 53:g
+6820,6627  22  bad-alone: 2 left  kill: 2:b 29:g 37:b 47:b
+6839,5511  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:b 19:b 41:g 977:b
+6841,240  20  bad-alone: 2 left  kill: 2:b 29:g 41:b
+6868,5005  24  bad-alone: 8 left  kill: 2:b 5:b 29:g 61:g
+6875,6084  18  bad-alone: 8 left  kill: 2:b 29:g 37:b
+6911,6760  18  bad-alone: 4 left  kill: 2:b 37:b 61:g
+6928,4975  18  bad-alone: 2 left  kill: 2:b 13:b 29:g 433:b 2321329:b
+6936,385  18  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 29:g 91081:b
+6945,5888  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 23:b 37:g 41:b 463:b
+6947,4140  18  bad-alone: 2 left  kill: 2:b 3:b 29:g
+6960,1489  20  bad-alone: 8 left  kill: 2:b 3:b 37:g
+6961,423  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 101:g
+6968,6951  20  bad-alone: 2 left  kill: 2:b 3:b 7:b 13:b 37:g 2580469:b
+6980,6483  18  bad-alone: 4 left  kill: 2:b 5:b 29:g 37:b
+6999,1168  16  bad-alone: 4 left  kill: 2:b 3:b 5:b 29:g
+7008,6481  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+7020,6341  22  bad-alone: 8 left  kill: 2:b 3:b 5:b 29:g
+7068,5749  18  bad-alone: 10 left  kill: 2:b 53:g
+7081,6601  20  bad-alone: 2 left  kill: 2:b 29:g 41:b
+7096,5679  20  bad-alone: 20 left  kill: 2:b 5:b 13:b 17:g 29:g 41:g
+7121,2161  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 17:b 29:g 2161:b 7121:b
+7136,2629  20  bad-alone: 8 left  kill: 2:b 29:g
+7140,1261  22  bad-alone: 6 left  kill: 41:g
+7140,2129  22  bad-alone: 4 left  kill: 5:b 13:b 17:b 29:g
+7215,6148  26  bad-alone: 2 left  kill: 5:b 11:b 13:b 17:b 23:b 37:b 41:g 53:b
+7225,7064  20  bad-alone: 4 left  kill: 3:b 5:b 17:b 29:g
+7248,1403  22  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 17:g
+7252,6325  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 23:b 53:g 6361:b
+7257,2737  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 37:g 113:b
+7267,1156  18  bad-alone: 12 left  kill: 3:b 13:b 17:b 29:g 61:g 97:b
+7280,3999  22  bad-alone: 2 left  kill: 3:b 5:b 13:b 29:g 37:b
+7281,119  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+7293,2765  24  bad-alone: 4 left  kill: 2:b 5:b 41:g 1741:b
+7313,3500  22  bad-alone: 6 left  kill: 2:b 29:g
+7321,6551  18  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 29:g 91081:b
+7340,2741  20  bad-alone: 2 left  kill: 2:b 5:b 29:g
+7361,5680  20  bad-alone: 2 left  kill: 5:b 29:g
+7395,5876  24  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 73:g 97:g
+7416,3175  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+7432,4849  18  bad-alone: 8 left  kill: 2:b 13:b 37:g
+7441,3905  24  bad-alone: 24 left  kill: 2:b 3:b 5:b 13:b 29:g 37:g
+7455,5344  18  bad-alone: 2 left  kill: 2:b 3:b 29:g
+7480,6513  22  bad-alone: 8 left  kill: 3:b 29:g 61:g
+7481,2359  20  bad-alone: 2 left  kill: 5:b 13:b 17:b 29:g 7481:b
+7481,4583  18  bad-alone: 2 left  kill: 2:b 3:b 7:b 73:g
+7487,6143  18  bad-alone: 2 left  kill: 5:b 53:g
+7488,2695  20  bad-alone: 2 left  kill: 3:b 5:b 7:b 17:b 29:g 4793:b 287173:b
+7501,480  22  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 29:g 59:b 4887301:b
+7551,3449  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+7593,2200  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+7595,1101  20  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+7679,4761  18  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 13:b 17:g 311:b 1097:b
+7679,6120  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+7735,3984  22  bad-alone: 2 left  kill: 3:b 5:b 13:b 29:g 37:b
+7735,7156  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+7752,5135  22  bad-alone: 6 left  kill: 2:b 5:b 13:b 29:g 2137:b
+7760,1487  20  bad-alone: 2 left  kill: 2:b 53:g 97:b 3109:b
+7768,3495  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:g 61:g
+7797,2155  22  bad-alone: 40 left  kill: 2:b 5:b 17:g 37:b
+7812,2909  18  bad-alone: 2 left  kill: 13:b 61:g
+7819,5780  18  bad-alone: 2 left  kill: 3:b 5:b 7:b 17:b 29:g 1021:b
+7820,1651  26  bad-alone: 6 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 31:b 73:g 199:b
+7820,3633  24  bad-alone: 4 left  kill: 3:b 5:b 13:b 29:g 53:b
+7827,7708  22  bad-alone: 32 left  kill: 2:b 13:b 29:g
+7852,5115  24  bad-alone: 10 left  kill: 2:b 3:b 5:b 11:b 17:b 29:g 31:b 37:g 41:g 151:b 181:g
+7857,4417  20  bad-alone: 2 left  kill: 3:b 5:b 17:b 19:b 29:g 97:b
+7903,3120  20  bad-alone: 2 left  kill: 2:b 5:b 17:b 29:g
+7905,7712  22  bad-alone: 2 left  kill: 2:b 3:b 13:b 17:b 29:g 97:b 193:b 241:b
+7917,1100  24  bad-alone: 6 left  kill: 5:b 13:b 17:b 41:g
+7927,5040  16  bad-alone: 2 left  kill: 7:b 13:b 37:g
+7951,4831  20  bad-alone: 2 left  kill: 2:b 5:b 11:b 29:g 541:b
+7952,3111  24  bad-alone: 8 left  kill: 3:b 29:g 37:b
+7981,7021  22  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 29:g 59:b 4887301:b
+7985,6384  18  bad-alone: 4 left  kill: 3:b 5:b 61:g
+8093,5524  18  bad-alone: 2 left  kill: 2:b 29:g
+8117,4140  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 89:g
+8128,3655  20  bad-alone: 20 left  kill: 17:b 41:g
+8140,813  22  bad-alone: 6 left  kill: 2:b 3:b 5:b 61:g
+8153,4487  22  bad-alone: 24 left  kill: 2:b 3:b 5:b 29:g 47:b 61:g 20929:b
+8157,6820  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 31:b 89:g 101:g
+8159,7088  20  bad-alone: 2 left  kill: 2:b 13:b 29:g
+8167,5831  16  bad-alone: 4 left  kill: 2:b 3:b 5:b 29:g
+8255,912  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 29:g 53:g 89:b 127:b
+8255,4184  22  bad-alone: 4 left  kill: 2:b 5:b 29:g
+8260,1437  18  bad-alone: 2 left  kill: 3:b 5:b 13:b 101:g
+8267,1140  20  bad-alone: 4 left  kill: 3:b 5:b 7:b 13:b 29:g
+8279,2511  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 37:g 510361:b
+8280,673  18  bad-alone: 8 left  kill: 2:b 5:b 41:g
+8303,372  22  bad-alone: 12 left  kill: 2:b 3:b 5:b 11:b 13:b 17:g
+8343,3073  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+8365,1948  20  bad-alone: 4 left  kill: 7:b 73:g 4057:b
+8393,624  22  bad-alone: 4 left  kill: 2:b 3:b 11:b 29:g
+8400,2327  20  bad-alone: 2 left  kill: 2:b 3:b 37:g
+8401,5879  22  bad-alone: 6 left  kill: 41:g
+8407,1207  22  bad-alone: 4 left  kill: 2:b 5:b 17:b 37:g
+8423,6111  18  bad-alone: 12 left  kill: 3:b 13:b 17:b 29:g 61:g 97:b
+8431,2160  18  bad-alone: 4 left  kill: 3:b 61:b 113:g 157:g
+8449,5471  20  bad-alone: 8 left  kill: 2:b 3:b 37:g
+8460,6163  18  bad-alone: 8 left  kill: 2:b 5:b 13:b 37:g 47:b 2089:b
+8463,6712  22  bad-alone: 12 left  kill: 2:b 3:b 5:b 17:b 37:g 9221:b
+8468,8101  18  bad-alone: 4 left  kill: 2:b 37:g
+8495,8432  18  bad-alone: 2 left  kill: 3:b 5:b 13:b 17:b 31:b 37:g
+8520,377  24  bad-alone: 2 left  kill: 3:b 5:b 37:b 53:g 193:b
+8541,6460  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 29:g 2081:b
+8580,7037  24  bad-alone: 20 left  kill: 2:b 3:b 5:b 11:b 13:b 31:b 53:g 61:g 73:g
+8587,1020  24  bad-alone: 20 left  kill: 2:b 3:b 5:b 13:b 29:g
+8593,7812  24  bad-alone: 8 left  kill: 3:b 5:b 13:b 17:b 29:g
+8607,2993  22  bad-alone: 2 left  kill: 2:b 3:b 13:b 17:g 29:b
+8617,2297  20  bad-alone: 4 left  kill: 3:b 5:b 29:g 2297:b
+8633,4977  20  bad-alone: 2 left  kill: 3:b 13:b 29:g 457:b 1657:b
+8651,5845  22  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 17:g
+8661,7852  18  bad-alone: 2 left  kill: 2:b 5:b 89:g
+8675,7931  22  bad-alone: 12 left  kill: 2:b 3:b 5:b 11:b 13:b 17:g
+8680,129  22  bad-alone: 16 left  kill: 2:b 5:b 13:b 29:g
+8760,2657  20  bad-alone: 4 left  kill: 2:b 3:b 37:g
+8772,8371  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 41:g
+8804,597  22  bad-alone: 4 left  kill: 2:b 5:b 41:g 28309:b
+8809,8551  22  bad-alone: 16 left  kill: 2:b 5:b 13:b 29:g
+8812,7595  18  bad-alone: 4 left  kill: 2:b 5:b 41:g
+8815,7268  24  bad-alone: 4 left  kill: 3:b 5:b 13:b 61:g
+8840,951  20  bad-alone: 10 left  kill: 5:b 13:b 29:g
+8863,4416  16  bad-alone: 16 left  kill: 2:b 5:b 37:g
+8876,7557  18  bad-alone: 2 left  kill: 2:b 29:g
+8895,4016  20  bad-alone: 6 left  kill: 2:b 3:b 13:b 29:g 61:g
+8897,8143  24  bad-alone: 2 left  kill: 3:b 5:b 37:b 53:g 193:b
+8911,3320  20  bad-alone: 2 left  kill: 2:b 41:g 61:b
+8925,7964  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 11:b 13:b 17:b 29:g
+8953,7327  22  bad-alone: 6 left  kill: 2:b 3:b 5:b 61:g
+8953,7607  18  bad-alone: 8 left  kill: 2:b 5:b 41:g
+8957,8340  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 17:g 53:b 353:b 617:b
+8959,1345  20  bad-alone: 16 left  kill: 2:b 5:b 41:g
+8993,7348  24  bad-alone: 24 left  kill: 2:b 5:b 41:g
+9004,3715  22  bad-alone: 4 left  kill: 2:b 5:b 29:g
+9017,6817  24  bad-alone: 6 left  kill: 5:b 13:b 17:b 41:g
+9017,7769  22  bad-alone: 4 left  kill: 2:b 3:b 11:b 29:g
+9024,7715  22  bad-alone: 2 left  kill: 2:b 13:b 29:g
+9055,3664  20  bad-alone: 2 left  kill: 2:b 5:b 101:g
+9085,3536  24  bad-alone: 2 left  kill: 3:b 5:b 17:b 29:g
+9100,8811  20  bad-alone: 6 left  kill: 2:b 3:b 5:b 7:b 11:b 17:b 29:g 89:b
+9103,4480  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+9113,3200  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 37:g 229:b
+9120,3289  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+9144,3295  18  bad-alone: 4 left  kill: 2:b 5:b 37:g
+9155,5916  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+9155,9052  20  bad-alone: 2 left  kill: 2:b 29:g 241:b
+9165,3988  22  bad-alone: 8 left  kill: 2:b 5:b 13:b 73:g
+9167,7343  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 29:g 53:g 89:b 127:b
+9168,1633  22  bad-alone: 8 left  kill: 2:b 5:b 37:g
+9180,6157  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+9191,7688  18  bad-alone: 4 left  kill: 2:b 13:b 31:b 37:b 41:g 173:g
+9200,3927  20  bad-alone: 2 left  kill: 3:b 5:b 13:b 17:b 53:g 966481:b
+9204,6203  20  bad-alone: 12 left  kill: 5:b 13:b 29:g
+9216,4225  18  bad-alone: 4 left  kill: 2:b 17:b 61:g
+9220,6539  22  bad-alone: 4 left  kill: 2:b 5:b 29:g
+9225,8392  20  bad-alone: 2 left  kill: 2:b 13:b 29:g
+9239,1100  18  bad-alone: 4 left  kill: 2:b 3:b 5:b 17:g
+9247,3671  18  bad-alone: 2 left  kill: 2:b 13:b 17:b 37:g
+9247,6273  20  bad-alone: 2 left  kill: 2:b 53:g 97:b 3109:b
+9269,5011  22  bad-alone: 4 left  kill: 5:b 13:b 17:b 29:g
+9289,3823  18  bad-alone: 8 left  kill: 2:b 41:g
+9300,8159  24  bad-alone: 4 left  kill: 2:b 13:b 29:g
+9311,575  18  bad-alone: 4 left  kill: 41:g
+9316,6355  22  bad-alone: 2 left  kill: 2:b 3:b 37:g 60901:b
+9321,2720  22  bad-alone: 2 left  kill: 2:b 3:b 17:b 29:g 157:b 12041:b
+9336,6305  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+9337,8280  20  bad-alone: 2 left  kill: 2:b 3:b 13:b 23:b 29:g 37:b 9337:b
+9345,3191  20  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g
+9352,1095  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 29:g 73:b
+9360,3151  20  bad-alone: 8 left  kill: 2:b 3:b 13:b 37:b 101:g
+9380,533  22  bad-alone: 16 left  kill: 2:b 5:b 13:b 37:g
+9380,3547  22  bad-alone: 2 left  kill: 2:b 29:g
+9399,5840  20  bad-alone: 4 left  kill: 2:b 3:b 5:b 29:g
+9400,7819  22  bad-alone: 2 left  kill: 2:b 7:b 13:b 17:b 29:g
+9401,1151  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 37:g
+9401,1439  20  bad-alone: 12 left  kill: 2:b 13:b 29:g
+9401,3249  22  bad-alone: 2 left  kill: 5:b 13:b 17:b 37:g
+9401,8207  22  bad-alone: 4 left  kill: 2:b 5:b 41:g 28309:b
+9407,7127  20  bad-alone: 4 left  kill: 3:b 5:b 7:b 13:b 29:g
+9424,5451  24  bad-alone: 20 left  kill: 2:b 17:b 37:g
+9451,1700  22  bad-alone: 2 left  kill: 5:b 29:g 277:b
+9455,8384  20  bad-alone: 2 left  kill: 3:b 5:b 13:b 29:g 31:b 61:b 241:b
+9464,1705  22  bad-alone: 2 left  kill: 2:b 5:b 7:b 11:b 31:b 37:g 29639461:b
+9471,6169  26  bad-alone: 6 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 31:b 73:g 199:b
+9503,4560  22  bad-alone: 10 left  kill: 5:b 13:b 19:b 29:g
+9511,3320  22  bad-alone: 8 left  kill: 3:b 7:b 13:b 29:g 61:b 2689:b
+9516,1925  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 11:b 17:b 29:g 109:b 673:b
+9520,2001  24  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+9532,4445  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 37:b 127:b 173:g
+9549,3380  20  bad-alone: 16 left  kill: 2:b 3:b 5:b 97:g
+9555,6232  20  bad-alone: 6 left  kill: 2:b 53:g
+9576,5207  20  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+9584,5655  20  bad-alone: 4 left  kill: 2:b 5:b 41:g
+9607,7567  24  bad-alone: 20 left  kill: 2:b 3:b 5:b 13:b 29:g
+9632,3585  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 29:g 239:b
+9672,1633  24  bad-alone: 4 left  kill: 5:b 29:g 37:b
+9672,4097  22  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 17:b 31:b 37:g 241:b 433:b
+9697,6823  18  bad-alone: 2 left  kill: 3:b 5:b 13:b 101:g
+9700,1027  22  bad-alone: 12 left  kill: 2:b 5:b 17:b 29:g
+9700,7821  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 41:g 79:b 1093:b 10863913:b
+9700,9093  18  bad-alone: 2 left  kill: 2:b 29:g 37:g 433:b
+9701,6740  22  bad-alone: 4 left  kill: 2:b 3:b 5:b 17:g 89:b 401:b
+9717,8660  24  bad-alone: 4 left  kill: 2:b 13:b 17:b 37:g
+9729,328  22  bad-alone: 24 left  kill: 2:b 5:b 13:b 17:b 29:g 37:g 41:b 79:b 97:g 113:b
+9729,3871  22  bad-alone: 4 left  kill: 2:b 5:b 29:b 73:g 97:g
+9736,9205  22  bad-alone: 4 left  kill: 2:b 3:b 13:b 17:g 277:b
+9751,5084  24  bad-alone: 216 left  kill: 2:b 5:b 13:b 29:g
+9765,4507  20  bad-alone: 8 left  kill: 2:b 29:g
+9791,7889  20  bad-alone: 10 left  kill: 5:b 13:b 29:g
+9793,120  20  bad-alone: 4 left  kill: 2:b 3:b 29:g
+9793,5393  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+9812,1941  22  bad-alone: 22 left  kill: 2:b 29:g
+9815,5648  20  bad-alone: 2 left  kill: 2:b 5:b 17:g 1009:b
+9827,4164  20  bad-alone: 6 left  kill: 2:b 3:b 5:b 13:b 17:b 29:g 31:b 37:g
+9835,6936  22  bad-alone: 4 left  kill: 2:b 3:b 13:b 29:g 41:g
+9873,3440  18  bad-alone: 2 left  kill: 3:b 5:b 13:b 53:g 97:g
+9880,3609  22  bad-alone: 10 left  kill: 2:b 3:b 5:b 29:g
+9889,1752  22  bad-alone: 4 left  kill: 2:b 11:b 37:g 53:g 73:b
+9913,8847  22  bad-alone: 16 left  kill: 2:b 5:b 13:b 37:g
+9913,9673  20  bad-alone: 4 left  kill: 2:b 3:b 29:g
+9980,9051  18  bad-alone: 2 left  kill: 2:b 5:b 61:g
+10033,527  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 13:b 41:g 61:b
+10036,765  22  bad-alone: 10 left  kill: 2:b 3:b 13:b 157:g
+10039,601  20  bad-alone: 6 left  kill: 2:b 3:b 5:b 7:b 11:b 13:b 17:g 601:b
+10045,2363  24  bad-alone: 24 left  kill: 3:b 5:b 17:b 29:g
+10057,9401  22  bad-alone: 24 left  kill: 2:b 5:b 13:b 17:b 29:g 37:g 41:b 79:b 97:g 113:b
+10060,589  24  bad-alone: 4 left  kill: 2:b 3:b 13:b 29:g 41:b
+10065,4472  24  bad-alone: 4 left  kill: 2:b 3:b 13:b 17:b 29:g 37:g 73:b
+10075,9788  20  bad-alone: 8 left  kill: 2:b 5:b 29:g 41:b 73:b
+10081,4599  20  bad-alone: 2 left  kill: 2:b 5:b 29:g
+10081,9360  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 29:g 37:g 593:b 769:b
+10115,4212  18  bad-alone: 24 left  kill: 3:b 5:b 29:g 89:g
+10127,10080  22  bad-alone: 4 left  kill: 3:b 13:b 37:b 41:b 53:g
+10129,3896  22  bad-alone: 4 left  kill: 13:b 37:g 433:b
+10132,1607  24  bad-alone: 12 left  kill: 2:b 3:b 5:b 11:b 13:b 29:g 37:g
+10165,9996  20  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 19:b 29:g
+10180,3267  22  bad-alone: 4 left  kill: 2:b 11:b 17:b 29:g 41:g 109:b
+10180,9109  18  bad-alone: 2 left  kill: 2:b 5:b 41:g
+10183,4793  20  bad-alone: 2 left  kill: 3:b 5:b 7:b 17:b 29:g 4793:b 287173:b
+10185,1936  24  bad-alone: 2 left  kill: 5:b 29:g 73:b
+10199,2129  22  bad-alone: 4 left  kill: 2:b 13:b 29:g
+10223,1543  20  bad-alone: 4 left  kill: 2:b 5:b 41:g
+10280,4417  24  bad-alone: 4 left  kill: 11:b 17:b 29:g 726853:b
+10280,8529  20  bad-alone: 6 left  kill: 2:b 3:b 29:g
+10292,8927  22  bad-alone: 32 left  kill: 2:b 5:b 13:b 17:g 53:g
+10293,3524  20  bad-alone: 4 left  kill: 2:b 29:g 41:b 101:b
+10296,8455  24  bad-alone: 50 left  kill: 5:b 11:b 13:b 37:g 41:g 61:g
+10297,233  20  bad-alone: 2 left  kill: 2:b 5:b 29:g 193:b 233:b
+10303,3520  22  bad-alone: 4 left  kill: 2:b 5:b 29:g
+10309,7912  24  bad-alone: 8 left  kill: 2:b 5:b 7:b 13:b 17:b 19:b 23:b 29:g 43:b
+10313,6417  20  bad-alone: 4 left  kill: 7:b 73:g 4057:b
+10325,2916  18  bad-alone: 6 left  kill: 2:b 3:b 7:b 13:b 89:g 101:g
+10332,793  20  bad-alone: 4 left  kill: 5:b 13:b 17:g 89:b
+10335,1648  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:b 41:g 61:b 73:b 229:b
+10335,2104  20  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 61:g
+10339,8139  18  bad-alone: 4 left  kill: 2:b 3:b 5:b 17:g
+10359,10088  20  bad-alone: 8 left  kill: 2:b 3:b 5:b 17:b 61:g
+10372,1885  24  bad-alone: 8 left  kill: 2:b 5:b 61:g
+10373,973  24  bad-alone: 2 left  kill: 2:b 3:b 11:b 13:b 17:g 37:b
+10377,1775  22  bad-alone: 4 left  kill: 2:b 5:b 13:b 17:b 37:g
+10388,2045  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 41:g
+10392,1495  22  bad-alone: 4 left  kill: 2:b 13:b 37:b 41:b 61:g 433:b
+10400,6711  22  bad-alone: 2 left  kill: 2:b 13:b 29:g 397:b
+10428,1435  22  bad-alone: 2 left  kill: 3:b 5:b 17:b 29:g
+10437,2483  24  bad-alone: 8 left  kill: 2:b 5:b 37:g
+10437,5980  20  bad-alone: 2 left  kill: 2:b 5:b 7:b 17:b 29:g 71:b 4457:b
+10447,8257  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 29:g 73:b
+10472,6157  24  bad-alone: 24 left  kill: 2:b 3:b 29:g
+10491,5500  22  bad-alone: 18 left  kill: 2:b 5:b 13:b 37:g
+10496,5485  18  bad-alone: 2 left  kill: 2:b 3:b 29:g
+10503,9520  18  bad-alone: 2 left  kill: 2:b 3:b 13:b 17:b 37:g
+10525,7956  20  bad-alone: 2 left  kill: 2:b 29:g 853:b
+10560,9503  22  bad-alone: 2 left  kill: 5:b 11:b 13:b 29:g
+10573,4980  24  bad-alone: 10 left  kill: 2:b 3:b 5:b 41:g
+10584,137  18  bad-alone: 34 left  kill: 2:b 13:b 37:g 41:g
+10584,6505  18  bad-alone: 4 left  kill: 2:b 5:b 7:b 41:g
+10591,4241  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+10591,6271  18  bad-alone: 4 left  kill: 3:b 61:b 113:g 157:g
+10616,1071  24  bad-alone: 32 left  kill: 2:b 5:b 13:b 17:b 37:g
+10628,21  16  bad-alone: 12 left  kill: 2:b 41:g 101:g
+10637,3140  22  bad-alone: 6 left  kill: 2:b 5:b 13:b 37:g
+10645,9676  22  bad-alone: 6 left  kill: 2:b 3:b 5:b 13:b 29:g 37:g
+10649,9471  24  bad-alone: 4 left  kill: 2:b 3:b 13:b 29:g 41:b
+10649,10607  16  bad-alone: 12 left  kill: 2:b 41:g 101:g
+10660,1093  22  bad-alone: 18 left  kill: 2:b 61:g
+10693,1957  24  bad-alone: 12 left  kill: 2:b 3:b 11:b 29:g
+10721,4903  18  bad-alone: 2 left  kill: 13:b 61:g
+10721,10447  18  bad-alone: 34 left  kill: 2:b 13:b 37:g 41:g
+10727,1900  24  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g 61:b
+10727,6073  20  bad-alone: 2 left  kill: 2:b 3:b 37:g
+10727,8673  22  bad-alone: 12 left  kill: 2:b 5:b 17:b 29:g
+10727,10168  24  bad-alone: 8 left  kill: 5:b 17:b 37:g
+10760,3039  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+10780,597  22  bad-alone: 6 left  kill: 2:b 5:b 7:b 13:b 53:g
+10799,268  18  bad-alone: 6 left  kill: 2:b 5:b 13:b 29:g
+10801,7535  22  bad-alone: 8 left  kill: 2:b 5:b 37:g
+10801,9271  22  bad-alone: 10 left  kill: 2:b 3:b 13:b 157:g
+10813,3813  22  bad-alone: 6 left  kill: 2:b 29:g
+10837,1420  22  bad-alone: 2 left  kill: 5:b 13:b 29:g 10837:b
+10840,927  20  bad-alone: 2 left  kill: 2:b 3:b 7:b 13:b 17:g 23:b 37:b 41:b 103:b 271:b
+10859,1820  22  bad-alone: 2 left  kill: 2:b 29:g
+10867,7956  20  bad-alone: 8 left  kill: 5:b 13:b 29:g
+10876,1157  18  bad-alone: 2 left  kill: 17:b 29:g 2521:b 2719:b 4549:b
+10912,3759  22  bad-alone: 10 left  kill: 2:b 5:b 13:b 29:g
+10915,84  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 29:g
+10920,10327  20  bad-alone: 4 left  kill: 2:b 5:b 23:b 29:g 109:g
+10927,1536  16  bad-alone: 2 left  kill: 2:b 29:g
+10948,8339  20  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 17:b 29:g 2609:b
+10951,31  22  bad-alone: 8 left  kill: 3:b 5:b 13:b 29:g 37:b
+10980,7949  20  bad-alone: 8 left  kill: 2:b 5:b 29:g
+10999,10831  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 29:g
+11023,4783  20  bad-alone: 2 left  kill: 2:b 5:b 17:b 29:g
+11027,9700  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 29:g 73:b 277:b
+11040,7657  24  bad-alone: 4 left  kill: 2:b 5:b 17:b 37:g
+11043,9020  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+11063,4841  24  bad-alone: 8 left  kill: 3:b 29:g 37:b
+11067,10531  18  bad-alone: 6 left  kill: 2:b 5:b 13:b 29:g
+11087,2807  18  bad-alone: 2 left  kill: 2:b 3:b 29:g
+11125,9539  20  bad-alone: 4 left  kill: 5:b 13:b 17:g 89:b
+11151,7751  22  bad-alone: 2 left  kill: 5:b 29:g 277:b
+11152,2689  20  bad-alone: 16 left  kill: 2:b 5:b 13:b 29:g
+11160,5423  24  bad-alone: 2 left  kill: 5:b 13:b 41:g 433:b
+11165,7052  22  bad-alone: 4 left  kill: 2:b 5:b 11:b 13:b 17:g 61:g
+11169,7759  22  bad-alone: 2 left  kill: 2:b 5:b 7:b 11:b 31:b 37:g 29639461:b
+11172,275  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 41:g
+11176,10455  24  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+11191,6312  22  bad-alone: 2 left  kill: 13:b 29:g 97:b 457:b
+11212,9165  24  bad-alone: 2 left  kill: 2:b 3:b 97:g
+11228,7327  22  bad-alone: 8 left  kill: 2:b 13:b 17:b 29:g 83:b
+11239,6360  20  bad-alone: 2 left  kill: 2:b 3:b 29:g
+11260,669  22  bad-alone: 8 left  kill: 2:b 5:b 29:g
+11260,861  22  bad-alone: 10 left  kill: 2:b 3:b 37:g
+11263,4273  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:g 61:g
+11265,3848  22  bad-alone: 4 left  kill: 2:b 5:b 17:b 29:g
+11279,3281  22  bad-alone: 2 left  kill: 3:b 5:b 13:b 29:g 37:b
+11284,4675  22  bad-alone: 6 left  kill: 2:b 3:b 29:g
+11284,8013  20  bad-alone: 180 left  kill: 5:b 13:b 17:g 37:g
+11287,2300  22  bad-alone: 10 left  kill: 2:b 3:b 13:b 41:g
+11303,527  22  bad-alone: 2 left  kill: 2:b 5:b 17:b 29:g
+11305,8039  24  bad-alone: 4 left  kill: 5:b 29:g 37:b
+11315,8652  22  bad-alone: 24 left  kill: 2:b 5:b 29:g 61:g 109:g
+11319,1360  22  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 17:b 41:g
+11336,1705  22  bad-alone: 10 left  kill: 3:b 13:b 37:g 53:g
+11375,4384  20  bad-alone: 6 left  kill: 2:b 3:b 5:b 7:b 17:b 29:g 37:g
+11377,10183  22  bad-alone: 6 left  kill: 2:b 5:b 7:b 13:b 53:g
+11395,1428  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 37:g 41:g
+11396,1235  24  bad-alone: 2 left  kill: 2:b 5:b 11:b 13:b 17:b 19:b 29:b 89:g
+11417,6103  20  bad-alone: 4 left  kill: 2:b 3:b 37:g
+11425,7952  20  bad-alone: 4 left  kill: 2:b 29:g
+11431,800  18  bad-alone: 36 left  kill: 2:b 13:b 17:g 29:g 37:g
+11440,4263  22  bad-alone: 2 left  kill: 5:b 7:b 11:b 13:b 17:b 37:g 53:g
+11441,2009  20  bad-alone: 2 left  kill: 2:b 5:b 29:g
+11441,7591  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 11:b 17:b 29:g 109:b 673:b
+11447,1143  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+11447,10897  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 41:g
+11453,4187  24  bad-alone: 4 left  kill: 3:b 5:b 13:b 29:g 53:b
+11455,7144  22  bad-alone: 4 left  kill: 2:b 13:b 41:g 47:b 109:b
+11468,6725  24  bad-alone: 6 left  kill: 2:b 5:b 13:b 37:g
+11476,3399  24  bad-alone: 4 left  kill: 2:b 13:b 29:g 61:g
+11492,5115  22  bad-alone: 30 left  kill: 2:b 29:g 37:g
+11492,5581  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+11500,5993  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 29:g
+11509,988  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:b 19:b 41:g
+11521,7519  24  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+11552,7327  22  bad-alone: 20 left  kill: 2:b 5:b 37:g 53:g
+11596,7403  20  bad-alone: 2 left  kill: 2:b 3:b 37:g 73:b 223:b 229:b
+11625,9532  20  bad-alone: 8 left  kill: 3:b 7:b 13:b 41:g
+11641,391  18  bad-alone: 2 left  kill: 2:b 3:b 13:b 17:b 23:b 37:g 47:b 13326301:b
+11641,8137  22  bad-alone: 4 left  kill: 2:b 11:b 37:g 53:g 73:b
+11648,6611  22  bad-alone: 8 left  kill: 3:b 13:b 29:g
+11655,928  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 61:g
+11687,9545  24  bad-alone: 32 left  kill: 2:b 5:b 13:b 17:b 37:g
+11719,3751  22  bad-alone: 2 left  kill: 3:b 5:b 13:b 29:g 37:b
+11732,3749  20  bad-alone: 2 left  kill: 2:b 13:b 17:b 37:g
+11739,8525  24  bad-alone: 12 left  kill: 2:b 3:b 5:b 11:b 13:b 29:g 37:g
+11743,4368  18  bad-alone: 4 left  kill: 2:b 5:b 41:g
+11744,105  20  bad-alone: 4 left  kill: 2:b 3:b 37:g
+11753,7871  22  bad-alone: 22 left  kill: 2:b 29:g
+11753,9567  22  bad-alone: 18 left  kill: 2:b 61:g
+11767,769  18  bad-alone: 8 left  kill: 2:b 13:b 17:g 37:g
+11767,9913  20  bad-alone: 2 left  kill: 2:b 3:b 7:b 13:b 17:g 23:b 37:b 41:b 103:b 271:b
+11776,2205  22  bad-alone: 4 left  kill: 2:b 7:b 11:b 13:b 17:b 29:g
+11783,4473  20  bad-alone: 20 left  kill: 17:b 41:g
+11807,40  18  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 29:g
+11832,3575  26  bad-alone: 16 left  kill: 2:b 5:b 11:b 61:g 197:b
+11847,11767  18  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 29:g
+11849,11639  20  bad-alone: 4 left  kill: 2:b 3:b 37:g
+11863,8993  22  bad-alone: 2 left  kill: 3:b 5:b 17:b 29:g
+11868,2807  24  bad-alone: 4 left  kill: 2:b 29:g
+11873,1863  24  bad-alone: 8 left  kill: 2:b 5:b 29:g 61:g
+11873,6552  24  bad-alone: 4 left  kill: 2:b 37:g 109:b
+11875,5772  22  bad-alone: 10 left  kill: 2:b 5:b 41:g
+11876,3245  20  bad-alone: 2 left  kill: 2:b 11:b 13:b 29:g
+11887,8897  22  bad-alone: 4 left  kill: 2:b 13:b 37:b 41:b 61:g 433:b
+11903,255  18  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+11903,1953  18  bad-alone: 2 left  kill: 2:b 13:b 29:g 433:b 2321329:b
+11905,2448  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+11929,10591  22  bad-alone: 8 left  kill: 2:b 5:b 29:g
+11960,4497  22  bad-alone: 16 left  kill: 2:b 3:b 29:g
+11960,6919  26  bad-alone: 4 left  kill: 2:b 5:b 11:b 13:b 29:b 53:g
+11960,8481  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 11:b 17:b 23:b 37:g 53:g
+11960,11721  22  bad-alone: 8 left  kill: 2:b 3:b 5:b 29:g 37:g 97:g
+11965,4216  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+11983,8687  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:b 41:g 61:b 73:b 229:b
+12005,5156  16  bad-alone: 2 left  kill: 2:b 29:g
+12012,491  20  bad-alone: 8 left  kill: 2:b 3:b 7:b 11:b 13:b 29:g 37:g 41:b
+12016,11105  18  bad-alone: 4 left  kill: 5:b 13:b 17:g 29:g 433:b
+12028,2875  20  bad-alone: 8 left  kill: 2:b 17:b 37:g
+12033,9719  18  bad-alone: 2 left  kill: 17:b 29:g 2521:b 2719:b 4549:b
+12041,6601  22  bad-alone: 2 left  kill: 2:b 3:b 17:b 29:g 157:b 12041:b
+12060,8749  22  bad-alone: 2 left  kill: 2:b 3:b 29:g
+12088,713  22  bad-alone: 60 left  kill: 2:b 3:b 5:b 13:b 29:g 39389617:b
+12104,9171  22  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 29:g
+12109,260  22  bad-alone: 4 left  kill: 3:b 5:b 53:g 1381:b
+12121,616  26  bad-alone: 8 left  kill: 2:b 5:b 29:g 101:b
+12121,8249  24  bad-alone: 2 left  kill: 5:b 29:g 73:b
+12121,10399  22  bad-alone: 10 left  kill: 2:b 3:b 37:g
+12125,10676  20  bad-alone: 6 left  kill: 2:b 3:b 13:b 17:b 29:g 53:g
+12131,8892  20  bad-alone: 2 left  kill: 19:b 37:g 30181:b
+12141,10588  20  bad-alone: 2 left  kill: 13:b 29:g 73:b
+12152,2125  20  bad-alone: 12 left  kill: 2:b 29:g 37:b
+12164,4235  20  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 17:b 41:g 881:b
+12175,11352  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+12191,984  22  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g 41:b 89:g
+12200,4199  24  bad-alone: 2 left  kill: 2:b 13:b 17:b 23:b 37:g 157:b
+12205,2852  22  bad-alone: 4 left  kill: 2:b 5:b 17:b 31:b 41:g 73:b 2441:b
+12220,973  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:b 37:g
+12231,5591  20  bad-alone: 2 left  kill: 2:b 41:g 61:b
+12231,10631  18  bad-alone: 36 left  kill: 2:b 13:b 17:g 29:g 37:g
+12240,913  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+12257,3977  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 89:g
+12257,8487  24  bad-alone: 8 left  kill: 2:b 5:b 61:g
+12257,9417  22  bad-alone: 2 left  kill: 5:b 13:b 29:g 10837:b
+12269,7292  18  bad-alone: 8 left  kill: 2:b 5:b 41:g
+12272,8175  24  bad-alone: 6 left  kill: 5:b 13:b 17:b 41:g
+12281,2583  18  bad-alone: 8 left  kill: 2:b 13:b 37:g
+12284,11865  24  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 29:g 83:b 113:b
+12296,3297  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 29:b 37:b 89:g 1597:b
+12300,1651  22  bad-alone: 8 left  kill: 2:b 5:b 17:b 29:g 37:g 41:b 53:g 127:b
+12300,7013  22  bad-alone: 10 left  kill: 2:b 13:b 29:g
+12308,9795  22  bad-alone: 2 left  kill: 2:b 7:b 13:b 17:b 29:g 181:b
+12313,5913  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 37:g 229:b
+12369,11849  22  bad-alone: 4 left  kill: 3:b 5:b 53:g 1381:b
+12400,3791  20  bad-alone: 2 left  kill: 2:b 37:g 401:b
+12409,5831  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+12423,3400  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:b 29:g 41:b
+12427,660  22  bad-alone: 4 left  kill: 3:b 5:b 37:g
+12428,11445  20  bad-alone: 2 left  kill: 2:b 7:b 13:b 17:b 29:g 37:b 239:b
+12433,8343  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 41:g
+12439,4071  22  bad-alone: 4 left  kill: 2:b 5:b 29:g
+12439,5849  18  bad-alone: 4 left  kill: 2:b 5:b 37:g
+12439,8231  20  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 61:g
+12443,4476  20  bad-alone: 2 left  kill: 3:b 13:b 29:g
+12463,9391  16  bad-alone: 2 left  kill: 2:b 29:g
+12480,2927  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 41:b 233:b 433:b
+12496,2197  18  bad-alone: 2 left  kill: 2:b 3:b 7:b 11:b 13:b 53:g 181:b
+12497,10521  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:b 19:b 41:g
+12500,3057  20  bad-alone: 4 left  kill: 2:b 17:b 19:b 61:g
+12503,11521  20  bad-alone: 8 left  kill: 2:b 3:b 7:b 11:b 13:b 29:g 37:g 41:b
+12511,6209  20  bad-alone: 8 left  kill: 2:b 3:b 13:b 37:b 101:g
+12520,1953  20  bad-alone: 4 left  kill: 2:b 5:b 17:b 29:g
+12563,12532  22  bad-alone: 24 left  kill: 2:b 5:b 17:b 29:g
+12579,619  20  bad-alone: 4 left  kill: 2:b 3:b 5:b 17:g 109:b
+12583,10727  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 61:g
+12584,10575  20  bad-alone: 6 left  kill: 2:b 3:b 5:b 11:b 29:g 41:b
+12595,3556  24  bad-alone: 4 left  kill: 2:b 3:b 13:b 17:g 229:b
+12604,11049  24  bad-alone: 4 left  kill: 2:b 5:b 17:g 29:b 37:g
+12619,6540  20  bad-alone: 2 left  kill: 3:b 5:b 7:b 41:g 1297:b
+12621,5549  24  bad-alone: 2 left  kill: 3:b 5:b 17:b 29:g
+12623,5500  22  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g
+12627,8827  24  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g 61:b
+12631,7584  22  bad-alone: 48 left  kill: 5:b 17:b 37:g
+12631,10161  24  bad-alone: 2 left  kill: 2:b 5:b 11:b 13:b 17:b 19:b 29:b 89:g
+12632,3951  18  bad-alone: 4 left  kill: 2:b 3:b 61:g
+12640,9399  20  bad-alone: 12 left  kill: 2:b 53:g 79:b 3835021:b
+12647,3400  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:b 109:g
+12661,3540  22  bad-alone: 2 left  kill: 2:b 3:b 11:b 29:g
+12675,5644  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 41:g 89:b 4441:b
+12679,9039  22  bad-alone: 2 left  kill: 2:b 29:g
+12679,9959  22  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 17:b 41:g
+12695,10308  20  bad-alone: 2 left  kill: 2:b 3:b 11:b 13:b 17:g 29:g
+12700,341  22  bad-alone: 2 left  kill: 5:b 13:b 61:g
+12705,4448  22  bad-alone: 8 left  kill: 2:b 3:b 11:b 29:g
+12705,5212  24  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+12719,5289  22  bad-alone: 4 left  kill: 2:b 5:b 29:g
+12719,5391  20  bad-alone: 2 left  kill: 2:b 5:b 101:g
+12737,7700  24  bad-alone: 4 left  kill: 2:b 5:b 37:g
+12737,11505  26  bad-alone: 8 left  kill: 2:b 5:b 29:g 101:b
+12741,6188  22  bad-alone: 16 left  kill: 2:b 5:b 41:g
+12744,25  18  bad-alone: 2 left  kill: 2:b 3:b 29:g
+12748,2225  22  bad-alone: 2 left  kill: 13:b 37:g
+12753,3760  22  bad-alone: 10 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 29:g 37:g 337:b
+12761,200  20  bad-alone: 4 left  kill: 2:b 13:b 17:g 720301:b
+12763,4060  18  bad-alone: 2 left  kill: 2:b 5:b 41:g
+12769,12719  18  bad-alone: 2 left  kill: 2:b 3:b 29:g
+12775,1417  20  bad-alone: 20 left  kill: 2:b 5:b 13:b 17:g 29:g 41:g
+12784,5451  22  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g 37:g 73:b
+12784,7663  22  bad-alone: 6 left  kill: 2:b 5:b 13:b 17:b 101:g
+12797,5580  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 23:b 29:g 31:b 37:b 41:b 1031:b
+12799,2111  18  bad-alone: 2 left  kill: 2:b 3:b 29:g
+12801,11375  22  bad-alone: 60 left  kill: 2:b 3:b 5:b 13:b 29:g 39389617:b
+12805,7236  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+12817,1319  18  bad-alone: 10 left  kill: 2:b 53:g
+12820,10237  20  bad-alone: 2 left  kill: 2:b 13:b 17:g 29:b 61:g
+12823,9967  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 37:g 41:g
+12831,6191  22  bad-alone: 8 left  kill: 3:b 7:b 13:b 29:g 61:b 2689:b
+12833,1057  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 23:b 37:g 41:b 463:b
+12833,9144  20  bad-alone: 2 left  kill: 2:b 13:b 17:b 37:g
+12836,5005  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:g
+12848,3965  26  bad-alone: 2 left  kill: 2:b 3:b 5:b 11:b 13:b 37:g
+12852,12263  20  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 29:g 31:b 12263:b
+12880,12567  20  bad-alone: 2 left  kill: 2:b 5:b 41:g
+12887,2617  22  bad-alone: 6 left  kill: 2:b 5:b 13:b 29:g 2137:b
+12911,4879  20  bad-alone: 6 left  kill: 2:b 3:b 13:b 29:g 61:g
+12920,453  24  bad-alone: 20 left  kill: 2:b 3:b 5:b 29:g
+12925,6324  24  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 17:b 29:g
+12927,5833  22  bad-alone: 2 left  kill: 2:b 29:g
+12929,6169  20  bad-alone: 16 left  kill: 2:b 3:b 5:b 97:g
+12955,492  22  bad-alone: 4 left  kill: 2:b 13:b 17:b 29:g 37:g 41:b 113:b 2591:b
+12959,9  16  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 17:g 53:g
+12959,791  18  bad-alone: 8 left  kill: 2:b 29:g 37:b
+12961,12561  20  bad-alone: 4 left  kill: 2:b 13:b 17:g 720301:b
+12967,2737  24  bad-alone: 10 left  kill: 2:b 3:b 5:b 11:b 17:b 29:g 31:b 37:g 41:g 151:b 181:g
+12967,2887  16  bad-alone: 2 left  kill: 7:b 13:b 37:g
+12988,4837  26  bad-alone: 8 left  kill: 2:b 3:b 5:b 17:b 61:g
+13000,2031  18  bad-alone: 8 left  kill: 2:b 3:b 5:b 13:b 61:g
+13000,10401  20  bad-alone: 6 left  kill: 2:b 3:b 29:g
+13000,12991  20  bad-alone: 4 left  kill: 2:b 5:b 17:b 61:g
+13015,12264  22  bad-alone: 10 left  kill: 2:b 3:b 5:b 109:g
+13023,2600  20  bad-alone: 4 left  kill: 2:b 29:g 73:b
+13041,1681  20  bad-alone: 2 left  kill: 5:b 29:g
+13041,9631  22  bad-alone: 10 left  kill: 3:b 13:b 37:g 53:g
+13041,12359  22  bad-alone: 2 left  kill: 5:b 13:b 61:g
+13060,6389  18  bad-alone: 4 left  kill: 3:b 5:b 29:g 37:b
+13067,453  22  bad-alone: 6 left  kill: 2:b 3:b 5:b 13:b 41:g
+13080,5519  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 41:g 2657:b
+13087,11767  22  bad-alone: 4 left  kill: 3:b 5:b 37:g
+13111,79  18  bad-alone: 4 left  kill: 13:b 37:g
+13125,8444  18  bad-alone: 2 left  kill: 2:b 3:b 13:b 29:g 41:g 2111:b
+13127,5273  20  bad-alone: 2 left  kill: 3:b 5:b 13:b 17:b 53:g 966481:b
+13135,2884  24  bad-alone: 10 left  kill: 2:b 13:b 41:g
+13153,1360  20  bad-alone: 4 left  kill: 2:b 3:b 29:g
+13153,5177  22  bad-alone: 8 left  kill: 2:b 5:b 13:b 73:g
+13153,11327  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+13175,10212  24  bad-alone: 8 left  kill: 2:b 5:b 17:b 53:g
+13175,11207  22  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g 41:b 89:g
+13179,7996  22  bad-alone: 88 left  kill: 2:b 5:b 17:g 29:g 41:g
+13180,3451  22  bad-alone: 2 left  kill: 2:b 13:b 17:b 53:g 193:b
+13184,4463  18  bad-alone: 20 left  kill: 2:b 3:b 5:b 41:g
+13185,9776  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:g 22961:b
+13188,3635  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 41:b 53:g 727:b
+13193,8892  26  bad-alone: 120 left  kill: 2:b 5:b 13:b 37:g
+13193,11247  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:b 37:g
+13200,12257  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 29:g
+13205,9796  26  bad-alone: 10 left  kill: 2:b 5:b 13:b 29:g
+13217,6047  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 29:g 239:b
+13241,7409  18  bad-alone: 6 left  kill: 2:b 3:b 7:b 13:b 89:g 101:g
+13252,6285  18  bad-alone: 4 left  kill: 3:b 5:b 37:g
+13260,12749  26  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:b 19:b 29:g 37:g 73:b
+13267,10556  18  bad-alone: 4 left  kill: 2:b 7:b 41:g
+13271,1519  24  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 73:g 97:g
+13275,7364  20  bad-alone: 8 left  kill: 3:b 13:b 29:g 73:g
+13279,4447  16  bad-alone: 16 left  kill: 2:b 5:b 37:g
+13284,5005  22  bad-alone: 4 left  kill: 2:b 5:b 11:b 17:b 29:g
+13295,7504  18  bad-alone: 2 left  kill: 2:b 29:g
+13297,2040  18  bad-alone: 2 left  kill: 2:b 13:b 37:b 41:g
+13301,6076  20  bad-alone: 4 left  kill: 2:b 5:b 13:b 53:g
+13312,3495  16  bad-alone: 6 left  kill: 2:b 3:b 37:g
+13312,8517  22  bad-alone: 8 left  kill: 2:b 5:b 17:b 29:g
+13312,10115  22  bad-alone: 2 left  kill: 2:b 5:b 29:g 2816809:b
+13313,6433  18  bad-alone: 2 left  kill: 3:b 5:b 13:b 53:g 97:g
+13325,816  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 29:g 37:g 41:b
+13335,6088  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 17:g 53:g 127:b
+13337,4888  20  bad-alone: 28 left  kill: 2:b 5:b 29:g
+13361,679  22  bad-alone: 8 left  kill: 2:b 3:b 5:b 29:g
+13363,1067  26  bad-alone: 2 left  kill: 5:b 11:b 13:b 17:b 23:b 37:b 41:g 53:b
+13368,4849  18  bad-alone: 2 left  kill: 2:b 3:b 29:g
+13373,12467  24  bad-alone: 20 left  kill: 2:b 3:b 5:b 29:g
+13392,12719  18  bad-alone: 8 left  kill: 2:b 7:b 13:b 23:b 37:g 109:b 673:b
+13395,6524  20  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 29:g
+13400,4247  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 61:g 137:b
+13423,5736  20  bad-alone: 4 left  kill: 5:b 13:b 29:g 421:b
+13432,7701  22  bad-alone: 2 left  kill: 2:b 5:b 11:b 17:b 37:g 521:b 36759169:b
+13439,1352  20  bad-alone: 2 left  kill: 37:g 41:b 157:b
+13441,4991  18  bad-alone: 4 left  kill: 2:b 17:b 61:g
+13445,952  20  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g
+13447,23  20  bad-alone: 2 left  kill: 2:b 13:b 29:g
+13447,193  22  bad-alone: 2 left  kill: 2:b 29:g 37:b 47:b
+13447,6913  22  bad-alone: 4 left  kill: 2:b 11:b 17:b 29:g 41:g 109:b
+13447,12463  22  bad-alone: 4 left  kill: 2:b 13:b 17:b 29:g 37:g 41:b 113:b 2591:b
+13448,3745  22  bad-alone: 2 left  kill: 2:b 5:b 37:g
+13460,9939  18  bad-alone: 4 left  kill: 2:b 3:b 13:b 61:g 673:b 3313:b
+13463,497  18  bad-alone: 4 left  kill: 2:b 5:b 29:g 37:b
+13488,12545  22  bad-alone: 16 left  kill: 2:b 3:b 5:b 29:g
+13489,527  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+13489,6271  22  bad-alone: 10 left  kill: 2:b 3:b 5:b 29:g
+13500,4231  22  bad-alone: 100 left  kill: 2:b 5:b 7:b 13:b 17:b 37:g 41:g 53:g
+13516,1625  24  bad-alone: 12 left  kill: 2:b 3:b 5:b 13:b 29:g 109:b
+13520,8313  22  bad-alone: 22 left  kill: 2:b 5:b 13:b 41:b 53:g 73:g
+13532,8499  18  bad-alone: 20 left  kill: 2:b 5:b 13:b 17:b 41:g 53:g 199:b 1621:b 2833:b
+13544,1695  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g 41:b 113:b
+13568,2625  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 41:g
+13571,420  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 13:b 41:b 89:g
+13577,927  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 23:b 53:g 6361:b
+13583,4623  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+13587,8987  22  bad-alone: 10 left  kill: 2:b 3:b 13:b 41:g
+13599,2039  18  bad-alone: 2 left  kill: 3:b 5:b 7:b 17:b 29:g 1021:b
+13600,3543  22  bad-alone: 2 left  kill: 2:b 3:b 29:g 113:b
+13604,7605  22  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 17:g 41:g 193:b 857:b
+13617,2569  18  bad-alone: 2 left  kill: 2:b 29:g
+13621,9660  24  bad-alone: 4 left  kill: 2:b 13:b 89:g
+13637,7140  24  bad-alone: 2 left  kill: 2:b 5:b 29:g 692281:b
+13640,2363  24  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 41:g 139:b
+13640,3423  24  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 13:b 17:b 29:g 31:b 113:b 601:b
+13651,8968  22  bad-alone: 2 left  kill: 2:b 3:b 29:g
+13652,12675  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 17:g 977:b 3761:b
+13653,8060  24  bad-alone: 2 left  kill: 2:b 53:g
+13671,151  18  bad-alone: 4 left  kill: 2:b 37:b 61:g
+13671,6472  18  bad-alone: 2 left  kill: 2:b 13:b 17:b 29:g 41:g 313:b
+13676,6557  20  bad-alone: 2 left  kill: 2:b 5:b 17:g 29:g
+13676,8755  24  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g 37:b
+13685,12324  24  bad-alone: 2 left  kill: 3:b 5:b 29:g 79:b 277:b
+13727,12840  22  bad-alone: 4 left  kill: 2:b 5:b 13:b 17:g 61:g
+13745,4448  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 113:b 1033:b 6121:b
+13755,2236  20  bad-alone: 2 left  kill: 5:b 17:b 29:g 61:b
+13764,13165  20  bad-alone: 4 left  kill: 2:b 3:b 17:b 31:b 41:g
+13769,5575  22  bad-alone: 4 left  kill: 2:b 3:b 5:b 7:b 17:b 31:b 37:g 241:b 433:b
+13777,7497  22  bad-alone: 6 left  kill: 2:b 5:b 13:b 37:g
+13780,11543  24  bad-alone: 4 left  kill: 2:b 3:b 5:b 41:g
+13780,11757  20  bad-alone: 30 left  kill: 2:b 3:b 5:b 13:b 17:b 41:g 89:g
+13795,5364  22  bad-alone: 4 left  kill: 2:b 5:b 13:b 17:b 31:b 41:b 97:g
+13799,1559  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+13799,7721  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+13800,12001  20  bad-alone: 2 left  kill: 2:b 5:b 29:g
+13817,6769  20  bad-alone: 4 left  kill: 2:b 29:g 41:b 101:b
+13820,11067  22  bad-alone: 4 left  kill: 2:b 5:b 13:b 17:b 61:g 2753:b
+13823,6783  22  bad-alone: 4 left  kill: 2:b 5:b 29:g
+13841,8463  20  bad-alone: 16 left  kill: 2:b 5:b 13:b 29:g
+13844,3715  18  bad-alone: 4 left  kill: 2:b 5:b 29:g
+13861,748  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+13884,4925  22  bad-alone: 14 left  kill: 2:b 3:b 5:b 13:b 17:b 73:g 97:g 1201:b 2687:b
+13888,3455  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+13916,10725  22  bad-alone: 2 left  kill: 2:b 3:b 11:b 29:g
+13919,17  20  bad-alone: 2 left  kill: 2:b 3:b 7:b 13:b 37:g 2580469:b
+13940,7189  24  bad-alone: 4 left  kill: 2:b 3:b 17:b 29:g
+13951,10649  22  bad-alone: 8 left  kill: 2:b 5:b 17:b 29:g 37:g 41:b 53:g 127:b
+13968,3175  22  bad-alone: 18 left  kill: 2:b 5:b 13:b 17:g 29:g 43:b
+13977,5087  18  bad-alone: 2 left  kill: 2:b 5:b 7:b 13:b 37:b 127:b 173:g
+13981,9571  22  bad-alone: 4 left  kill: 2:b 7:b 11:b 13:b 17:b 29:g
+13991,5663  20  bad-alone: 6 left  kill: 2:b 3:b 5:b 13:b 17:b 29:g 31:b 37:g
+13991,13151  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 13:b 41:b 89:g
+13992,335  20  bad-alone: 2 left  kill: 2:b 5:b 11:b 29:g 109:b
+13993,967  22  bad-alone: 8 left  kill: 3:b 29:g 61:g
+14000,13711  16  bad-alone: 2 left  kill: 2:b 29:g
+14008,9815  22  bad-alone: 12 left  kill: 17:b 37:g 61:g 73:g
+14019,5908  16  bad-alone: 6 left  kill: 2:b 3:b 5:b 7:b 17:g 37:b 61:g 4673:b
+14024,11743  16  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+14025,6233  22  bad-alone: 4 left  kill: 13:b 37:g 433:b
+14035,5356  22  bad-alone: 10 left  kill: 2:b 3:b 5:b 7:b 41:g 263:b
+14037,6916  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g 61:g
+14045,5436  20  bad-alone: 4 left  kill: 2:b 3:b 29:g
+14063,4943  22  bad-alone: 10 left  kill: 5:b 13:b 19:b 29:g
+14140,701  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g 73:g 101:b
+14141,12509  22  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 29:g 37:g 41:b
+14168,95  22  bad-alone: 2 left  kill: 2:b 7:b 11:b 13:b 17:b 19:b 29:g
+14208,3617  22  bad-alone: 8 left  kill: 3:b 5:b 61:g
+14260,2331  24  bad-alone: 90 left  kill: 2:b 3:b 13:b 29:g 37:b 41:g
+14263,14073  22  bad-alone: 2 left  kill: 2:b 7:b 11:b 13:b 17:b 19:b 29:g
+14264,775  20  bad-alone: 12 left  kill: 2:b 5:b 17:g 29:g 557:b
+14277,10027  20  bad-alone: 12 left  kill: 2:b 29:g 37:b
+14280,8651  24  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 29:g
+14284,3675  16  bad-alone: 2 left  kill: 41:g
+14289,161  20  bad-alone: 4 left  kill: 3:b 5:b 17:b 29:g
+14300,2911  22  bad-alone: 6 left  kill: 2:b 5:b 29:g 5737:b
+14327,5903  18  bad-alone: 24 left  kill: 3:b 5:b 29:g 89:g
+14327,13657  20  bad-alone: 2 left  kill: 2:b 5:b 11:b 29:g 109:b
+14349,10660  24  bad-alone: 2 left  kill: 13:b 29:g 73:b 3313:b
+14352,1055  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+14353,9457  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+14365,5844  20  bad-alone: 46 left  kill: 2:b 3:b 5:b 41:g 53:g
+14365,13748  20  bad-alone: 2 left  kill: 2:b 29:g 617:b
+14369,1601  18  bad-alone: 4 left  kill: 3:b 5:b 61:g
+14391,7888  20  bad-alone: 2 left  kill: 2:b 3:b 13:b 17:b 37:g 41:b 61:b 929:b
+14397,12493  20  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g
+14401,4240  18  bad-alone: 10 left  kill: 2:b 5:b 29:g 101:g
+14403,140  18  bad-alone: 4 left  kill: 2:b 17:b 61:g
+14403,1820  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 101:g
+14421,7420  22  bad-alone: 2 left  kill: 3:b 5:b 11:b 61:g
+14423,10920  20  bad-alone: 8 left  kill: 2:b 3:b 5:b 7:b 29:g 41:g
+14431,7920  22  bad-alone: 6 left  kill: 5:b 37:b 73:b 113:g
+14460,3997  18  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 37:g
+14472,12271  20  bad-alone: 2 left  kill: 2:b 3:b 29:g
+14473,10567  20  bad-alone: 4 left  kill: 2:b 5:b 17:b 29:g
+14476,1807  24  bad-alone: 32 left  kill: 3:b 13:b 29:g
+14479,4680  22  bad-alone: 6 left  kill: 2:b 5:b 17:b 29:g
+14483,2300  22  bad-alone: 12 left  kill: 5:b 13:b 17:g 37:g
+14495,11496  22  bad-alone: 270 left  kill: 2:b 29:g 37:g
+14507,8372  24  bad-alone: 16 left  kill: 2:b 5:b 13:b 17:g 89:b
+14513,11793  20  bad-alone: 4 left  kill: 2:b 3:b 29:g
+14537,5593  24  bad-alone: 4 left  kill: 2:b 3:b 13:b 17:b 29:g 37:g 73:b
+14543,12960  16  bad-alone: 8 left  kill: 5:b 29:g
+14543,14263  18  bad-alone: 4 left  kill: 2:b 17:b 61:g
+14580,5621  20  bad-alone: 8 left  kill: 2:b 13:b 89:g
+14600,1703  22  bad-alone: 2 left  kill: 5:b 29:g 13648561:b
+14609,13113  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+14616,2495  24  bad-alone: 4 left  kill: 2:b 3:b 37:g
+14617,6056  18  bad-alone: 2 left  kill: 2:b 13:b 17:g 29:g
+14623,2297  18  bad-alone: 8 left  kill: 2:b 5:b 13:b 37:g 47:b 2089:b
+14637,2600  22  bad-alone: 4 left  kill: 2:b 5:b 29:g 37:g 12037:b
+14644,10683  22  bad-alone: 2 left  kill: 2:b 13:b 29:g 109:g
+14653,6396  22  bad-alone: 2 left  kill: 2:b 13:b 17:b 29:g 73:b 97:b 1669:b
+14664,10415  22  bad-alone: 4 left  kill: 2:b 3:b 13:b 37:g 47:b 50162989:b
+14671,7153  22  bad-alone: 10 left  kill: 2:b 5:b 13:b 29:g
+14672,6705  20  bad-alone: 2 left  kill: 2:b 7:b 13:b 29:g 21377:b
+14675,9061  24  bad-alone: 4 left  kill: 2:b 29:g
+14688,9737  20  bad-alone: 4 left  kill: 2:b 3:b 5:b 13:b 41:g
+14693,10299  18  bad-alone: 2 left  kill: 2:b 3:b 7:b 11:b 13:b 53:g 181:b
+14697,5863  24  bad-alone: 4 left  kill: 11:b 17:b 29:g 726853:b
+14729,1324  22  bad-alone: 32 left  kill: 2:b 5:b 13:b 29:g
+14740,4557  24  bad-alone: 6 left  kill: 2:b 5:b 11:b 41:g
+14760,3437  22  bad-alone: 4 left  kill: 2:b 3:b 13:b 17:g 67:b 1189933:b
+14783,4369  20  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+14785,1856  18  bad-alone: 2 left  kill: 2:b 5:b 37:g
+14791,12087  20  bad-alone: 2 left  kill: 37:g 41:b 157:b
+14800,273  20  bad-alone: 6 left  kill: 2:b 5:b 13:b 29:g
+14821,2700  20  bad-alone: 4 left  kill: 2:b 5:b 37:g
+14833,508  22  bad-alone: 12 left  kill: 2:b 37:g
+14835,4667  24  bad-alone: 216 left  kill: 2:b 5:b 13:b 29:g
+14841,13439  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g 73:g 101:b
+14856,13585  26  bad-alone: 4 left  kill: 11:b 13:b 19:b 29:g 53:g 2017:b
+14864,4977  16  bad-alone: 6 left  kill: 2:b 5:b 7:b 13:b 37:g 79:b 929:b
+14875,3436  20  bad-alone: 2 left  kill: 2:b 13:b 29:g 41:b
+14875,3973  24  bad-alone: 20 left  kill: 2:b 17:b 37:g
+14875,8077  24  bad-alone: 4 left  kill: 2:b 13:b 29:g 61:g
+14885,6076  24  bad-alone: 8 left  kill: 2:b 5:b 13:b 41:g
+14885,13436  22  bad-alone: 8 left  kill: 2:b 17:b 89:g
+14891,579  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+14893,10476  20  bad-alone: 16 left  kill: 2:b 3:b 5:b 29:g
+14899,4532  22  bad-alone: 4 left  kill: 2:b 3:b 5:b 11:b 13:b 29:g 103:b 1481:b
+14903,9153  20  bad-alone: 8 left  kill: 2:b 17:b 37:g
+14903,9696  20  bad-alone: 8 left  kill: 2:b 3:b 5:b 37:g 41:b
+14921,5120  18  bad-alone: 4 left  kill: 2:b 3:b 5:b 41:g
+14924,835  24  bad-alone: 2 left  kill: 2:b 29:g 1009:b
+14928,8855  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 41:g
+14935,3672  22  bad-alone: 2 left  kill: 3:b 5:b 13:b 17:b 37:g 61:b 103:b
+14937,14680  20  bad-alone: 20 left  kill: 2:b 5:b 29:g 37:g
+14939,11696  22  bad-alone: 8 left  kill: 2:b 5:b 41:g
+14941,6324  22  bad-alone: 40 left  kill: 2:b 5:b 29:g
+14944,7575  18  bad-alone: 2 left  kill: 2:b 3:b 37:g 101:b
+14973,10523  22  bad-alone: 2 left  kill: 13:b 37:g
+14975,1176  18  bad-alone: 4 left  kill: 2:b 13:b 17:g 29:b 89:b
+14977,1337  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:b 31:b 89:g 101:g
