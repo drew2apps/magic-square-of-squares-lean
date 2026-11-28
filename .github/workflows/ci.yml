@@ -489,6 +489,11 @@ jobs:
           # the job ran silently until it was cancelled at its 150-minute limit; at f0d7edc it failed at h1_mine.py after 118 minutes)
           export PS4='+ [$(date -u +%T)] '
           set -x
+          # since the 0.7.0 release commit: python-flint, installed below for lball.py, makes sympy 1.14 use flint ground
+          # types; review scripts (experiments/referee_z7/ct_mine.py through review z11's loop, research-pairing/check_local.py,
+          # referee_z12) then get flint integers that fractions.Fraction refuses (TypeError at ct_mine.py:75, in h1_mine.py,
+          # on GitHub's runner at f0d7edc and 25f4e0b). The committed outputs were made with gmpy ground types, as here.
+          export SYMPY_GROUND_TYPES=gmpy
           pip install -q -r scripts/g1_full/requirements.txt
           # OUTPUTS.md: the first descent restricted to subsets of the forms on the 34 ratios (about 10 minutes), in the background
           (cd scripts/gauss_descent && python3 subsets.py $(cat pairs34.txt) > /tmp/subsets_34.out) &

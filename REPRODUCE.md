@@ -18,7 +18,7 @@ python3 scripts/verify_manifest.py
 | Mathlib and its dependencies | commit `0df444a360eaa60ab8c11dca51a86af692955474` and the revisions of `lake-manifest.json` | `lake-manifest.json` |
 | Python | 3.13 | `.github/workflows/ci.yml` |
 | PARI (through `cypari2`), passagemath (Sage libraries, eclib) | `cypari2==2.2.9` (PARI 2.17.4), `passagemath-*==10.8.14` | `scripts/g1_full/requirements.txt`; `passagemath-eclib==10.8.14` is installed in the job `four-points` for `eclib_check.py` |
-| sympy, python-flint, numpy | `sympy==1.14.0`, `python-flint==0.9.0`, `numpy==2.5.5` | `.github/workflows/ci.yml` |
+| sympy, python-flint, numpy | `sympy==1.14.0`, `python-flint==0.9.0`, `numpy==2.5.5`; with python-flint installed, set `SYMPY_GROUND_TYPES=gmpy` (the committed outputs were made with gmpy ground types; with flint ground types some review scripts stop with a `TypeError`, as `descents` did at `f0d7edc` and `25f4e0b`) | `.github/workflows/ci.yml` |
 | GitHub Actions | `actions/checkout`, `actions/setup-python`, `leanprover/lean-action`, each by commit hash | `.github/workflows/ci.yml` |
 | C compiler | `gcc` of the runner image `ubuntu-latest`, not pinned | — |
 
