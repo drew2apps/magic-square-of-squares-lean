@@ -121,6 +121,7 @@ MagicSquareOfSquares.CoverDescent.exists_nosq
 MagicSquareOfSquares.CoverDescent.exists_padic_point_of_table
 MagicSquareOfSquares.CoverDescent.exists_point_of_table
 MagicSquareOfSquares.CoverDescent.exists_pow_mul_not_dvd
+MagicSquareOfSquares.CoverDescent.exists_ratio_of_ne
 MagicSquareOfSquares.CoverDescent.exists_rec4
 MagicSquareOfSquares.CoverDescent.exists_sq_modEq_pow
 MagicSquareOfSquares.CoverDescent.exists_sq_modEq_two
@@ -133,6 +134,7 @@ MagicSquareOfSquares.CoverDescent.fact29
 MagicSquareOfSquares.CoverDescent.findMask.eq_def
 MagicSquareOfSquares.CoverDescent.fiveSquaresAt_exchange
 MagicSquareOfSquares.CoverDescent.five_pass_aux
+MagicSquareOfSquares.CoverDescent.fullSquares_param_mem_exceptions
 MagicSquareOfSquares.CoverDescent.gOkN_eq
 MagicSquareOfSquares.CoverDescent.gOkN_mod
 MagicSquareOfSquares.CoverDescent.gOk_of
@@ -182,6 +184,7 @@ MagicSquareOfSquares.CoverDescent.mask97
 MagicSquareOfSquares.CoverDescent.masks_ok
 MagicSquareOfSquares.CoverDescent.mem_dedupL
 MagicSquareOfSquares.CoverDescent.mem_exceptions_of_fullSquares
+MagicSquareOfSquares.CoverDescent.mem_exceptions_of_fullSquares_any
 MagicSquareOfSquares.CoverDescent.mem_flags
 MagicSquareOfSquares.CoverDescent.mem_inter
 MagicSquareOfSquares.CoverDescent.mem_of_findMask
@@ -377,6 +380,8 @@ MagicSquareOfSquares.G1.fivePrimes1000_spec
 MagicSquareOfSquares.G1.fivePrimes_spec
 MagicSquareOfSquares.G1.forms_double
 MagicSquareOfSquares.G1.fullSquares_exchange
+MagicSquareOfSquares.G1.fullSquares_inv
+MagicSquareOfSquares.G1.fullSquares_neg
 MagicSquareOfSquares.G1.fullTable_primes
 MagicSquareOfSquares.G1.fullTable_valid
 MagicSquareOfSquares.G1.gen_H_mul
@@ -395,6 +400,7 @@ MagicSquareOfSquares.G1.isSquare_congr_of_mul_sq
 MagicSquareOfSquares.G1.isSquare_mul_sq_iff
 MagicSquareOfSquares.G1.isSquare_norm_mod
 MagicSquareOfSquares.G1.isSquare_norm_of_normOk
+MagicSquareOfSquares.G1.isSquare_transport
 MagicSquareOfSquares.G1.lemmaB_identity
 MagicSquareOfSquares.G1.maskTable_primes
 MagicSquareOfSquares.G1.maskTable_valid
@@ -963,4 +969,4 @@ MagicSquareOfSquares.two_lines_exhaust
 MagicSquareOfSquares.two_mul_odd_mul_odd_ne_sq
 MagicSquareOfSquares.two_mul_two_odd_ne_sq
 axioms used: [Classical.choice, Quot.sound, propext]
-AUDIT OK: 1681 theorems (including auxiliary ones), standard axioms only
+AUDIT OK: 1697 theorems (including auxiliary ones), standard axioms only

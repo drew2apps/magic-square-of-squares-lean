@@ -96,3 +96,14 @@ The scripts read the first review's tables or the pilot's files from the current
     python3 ../research-pairing/note2/two2.py | diff - ../research-pairing/note2/two2.txt                        # 2 s
 
 (the line `sys.path.insert(0,'/tmp/t10')` of `closed_formula.py` and `shape.py` was removed, so that no folder outside the repository can supply their imports; that is the only change to the session's scripts). The review's checks: `../../referee_z13/`.
+
+## Prior art still to compare (run 12, after outside reviews of the release candidate)
+
+Not yet compared with formula (2), and asked of the session for revision 4: T. Fisher, *On binary quartics and the
+Cassels–Tate pairing*, Res. Number Theory 8 (2022) 74, arXiv:2208.14977 (a formula for the pairing on `Sel²` of any
+elliptic curve that needs no conic; PARI's `ellrank` uses it); and the curves `y² = x(x + a²)(x + b²)` attached to
+Pythagorean pairs by L. Halbeisen and N. Hungerbühler, *Pairing Pythagorean pairs*, J. Number Theory 233 (2022)
+467–480, arXiv:2101.08163, and with A. Shamsi Zargar, *Pairing powers of Pythagorean pairs*, Indag. Math. 36 (2025)
+903–911, arXiv:2405.12989 (positive rank of such a curve characterises a property of the pair). An outside review
+mentions a part II of the second paper (November 2026), which the conductor did not find. What formula (2) adds to
+these is not established.

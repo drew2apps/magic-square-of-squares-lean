@@ -46,7 +46,7 @@ Exact, Sage over `K`; about 40 s.
 - The covering is then `W² = G(t) = d3 (d1 u(t)² + (e1 − e3) z(t)²)`.
 - `G` is made integral and minimised at every prime of `2·Π(e_i − e_j)·d1 d2 d3`, and at every prime of the ideal
   `(I, J)`. The moves are invariant-preserving `π²`-moves at multiple roots mod `π`, and division by `π²`.
-- `G` is then reduced: its covariant point in hyperbolic 3-space is moved into the Picard fundamental domain.
+- `G` is then reduced: its covariant point in hyperbolic 3-space is moved into the Picard fundamental domain. *(Run 12, after review referee_run12.)* Two of the ten models are not reduced in this sense: for `E` "coset B" (`T` about 2.2·10⁴) and `E3` "torsion t1" (`T` about 3.5·10⁵) the floating-point minimiser's error in `z` is about 10⁻³ to 5·10⁻², the loop alternates translations by ±1 and stops at its cap of 500 moves, so the committed models and covariants are the state at the cap. The searches use the stored models and covariants, so the regions searched are the ones stated; only the word "reduced" is wrong for these two. The tolerance of the moves is `10⁻⁶` when `covers.py` runs (since run 12; one covariant lies on the corner `1/2 + i/2`, to `10⁻⁷`) and `10⁻⁹` when `altmodels.py` and `controls.py` import it, as when their outputs were made.
 - The change of variable is kept, and `G(t) = s² G0(M t)` is asserted exactly.
 - After minimisation, the odd part of `N(4I³ − J²)` is the same for every class of a curve:
   - on `E`: `3⁶·5¹⁶·29⁸·37⁴·181⁴·263⁴·991⁴·23490241⁴·395249137273⁴`;

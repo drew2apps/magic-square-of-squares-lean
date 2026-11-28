@@ -24,12 +24,15 @@ the parameter `t`.
   `fiveSquaresAt_exchange` for the integer forms (a separate statement, not used for `fullSquares_exchange`).
 - `CoverDescent.mem_exceptions_of_fullSquares` (`ExchangeCensus.lean`): for any `m` and `n ≠ 0`, if
   `FullSquares m n (u/v)` with `u : v` coprime and `0 < v < u ≤ 1000`, then `(u, v)` is one of the 306 pairs left by the
-  census in Lean. It covers `t = u/v > 1` only; `t ↦ −t` (which swaps `L` and `U`) and `t ↦ 1/t` (which swaps `F0` and
-  `F8`, each form divided by `t²`) are prose here. Every instance of its hypotheses found by the referee has
+  census in Lean. It covers `t = u/v > 1` only. Since run 12 (after the release candidate `c8b677a`, on an outside
+  review's suggestion) the rest is in Lean too: `G1.fullSquares_neg` (`t ↦ −t` swaps `L` and `U`), `G1.fullSquares_inv`
+  (for `t ≠ 0`, `t ↦ 1/t` swaps `F0` and `F8`, each form divided by `t²`), `CoverDescent.exists_ratio_of_ne` (every
+  `t ∉ {0, ±1}` is `±(u/v)^{±1}` with `0 < v < u` coprime) and `CoverDescent.fullSquares_param_mem_exceptions` (that
+  pair, if `u ≤ 1000`, is one of the 306). Every instance of its hypotheses found by the referee has
   `m/n ∈ {0, 1}`: the exchanges of the trivial points `t = 0, 1` of a ratio, e.g. `(m, n, u, v) = (1, 1, 4, 3)`.
 
-Ring identities and the census theorems; standard axioms (the axiom audit, `scripts/Audit.lean`, now lists 1,681
-theorems).
+Ring identities and the census theorems; standard axioms (the axiom audit, `scripts/Audit.lean`, listed 1,681
+theorems at run 10 and lists 1,697 since run 12).
 
 The nine cells are the same numbers up to the factor `v²/n²`, in the same arrangement (the referee's check in
 homogeneous coordinates: the matrices of entries are equal, the roots differ by `h ↦ −h`). So the exchange reads the
@@ -44,8 +47,8 @@ twice-square-type open ratios, 2 · 5 · 4 · 4 = 160).
 
 **Consequence (prose).** Every open ratio has a degenerate solution (`t = ±1` or `t = 0, ∞`), whose second ratio is
 `1 : 1` or `0 : 1`. For a solution with `t ∉ {0, ±1, ∞}` at one of the nine open ratios, normalise `t = ±(u/v)^{±1}`
-with `u > v ≥ 1` coprime; if `u ≤ 1000`, then `(u, v)` is not outside the 425 pairs nor among the 119 (Lean, as
-above), not among the 297 closed by the census as counted (tier B, including the 8 counted apart: there "closed" means
+with `u > v ≥ 1` coprime (Lean since run 12, as above); if `u ≤ 1000`, then `(u, v)` is not outside the 425 pairs nor
+among the 119 (Lean, as above), not among the 297 closed by the census as counted (tier B, including the 8 counted apart: there "closed" means
 that every solution has `t' ∈ {0, ±1, ∞}`, and `t' = m/n` is not), and not open (the check). So `u > 1000`.
 
 Rerun: `python3 -I experiments/exchange/open_pairs.py | diff - experiments/exchange/open_pairs.txt` (CI job `quick`).

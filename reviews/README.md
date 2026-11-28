@@ -60,6 +60,7 @@ the machines the agents ran on.
 | `review_z16.md` | run 11: exploration 5 §2–§3 (the centre in the bad-prime test, the ghost laws); `experiments/referee_z16/` |
 | `review_z17.md` | run 11: roadmap I, parts 1–2 (`experiments/roadmap-i/`); `experiments/referee_z17/` |
 | `panel_p1.md`, `panel_p2.md`, `panel_p3.md` | the release panel of 0.7.0: the maths referee (the new written proofs), the claims editor, the reproducibility and Lean-statement auditor |
+| `referee_run12.md` | run 12 (the changes after the release candidate `c8b677a`: every parameter in Lean, the `covers.py` tolerance, the text after outside reviews), before publication; it could not build the Lean (its fixes are in `CHANGES.md`, *Twelfth run*; its scratch folder is not committed) |
 | `referee_run9.md` | the integrated diff of run 9 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`) |
 | `referee_run10.md` | the integrated diff of run 10 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`; its scratch folder is not committed) |
 

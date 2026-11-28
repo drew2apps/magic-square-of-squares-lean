@@ -142,6 +142,16 @@ def covariant(G):
     x, y, lt = best.x
     return complex(x, y), float(np.exp(lt))
 
+# Tolerance of the moves in reduce_quartic. 1e-9 when this file is imported (altmodels.py and controls.py produced
+# their committed outputs with it); 1e-6 when covers.py itself runs (main below), since run 12: the covariant of the
+# quartic of E "torsion t1" lies on the corner 1/2 + i/2 of the domain (to 1e-7), where also |z|^2 + t^2 = 1, and with
+# 1e-9 the move was decided by the minimiser's rounding, which differs between machines (GitHub's runner printed
+# 0.500-0.500i, this machine 0.500+0.500i, for the same quartic). 1e-6 is above that rounding at this quartic, not at
+# every one: for E "coset B" (t about 2.2e4) and E3 "torsion t1" (t about 3.5e5) the minimiser's error in z is about
+# 1e-3 to 5e-2, the loop alternates translations by +-1 and stops at its cap of 500 moves, so those two models are the
+# state at the cap, not reduced (harmless for the searches, which use the stored models and covariants; see NOTES.md).
+TOL = 1e-9
+
 def reduce_quartic(G, Mtot):
     """move the covariant point into the fundamental domain of PSL2(Z[i]) (|re z|, |im z| <= 1/2, |z|^2 + t^2 >= 1)
     by translations t1 -> t1 + c t2 and the inversion (t1, t2) -> (-t2, t1); exact on G, floating point only in the
@@ -150,10 +160,10 @@ def reduce_quartic(G, Mtot):
         if coeffs(G)[0] == 0:
             G = subst(G, [[1, 1], [0, 1]]); Mtot = mmul(Mtot, [[1, 1], [0, 1]]); continue
         zc, tc = covariant(G)
-        if max(abs(zc.real), abs(zc.imag)) > 0.5 + 1e-9:
+        if max(abs(zc.real), abs(zc.imag)) > 0.5 + TOL:
             c = K(round(zc.real)) + K(round(zc.imag)) * I
             G = subst(G, [[1, c], [0, 1]]); Mtot = mmul(Mtot, [[1, c], [0, 1]]); continue
-        if abs(zc) ** 2 + tc ** 2 < 1 - 1e-9:
+        if abs(zc) ** 2 + tc ** 2 < 1 - TOL:
             M = [[0, -1], [1, 0]]
             G = subst(G, M); Mtot = mmul(Mtot, M); continue
         break
@@ -222,6 +232,8 @@ def curve_data(es, rng, name):
     return sel, E, comp, tbasis, rt
 
 def main():
+    global TOL
+    TOL = 1e-6
     rng = random.Random(20261127)
     t0 = time.time()
     say('covers.py (conductor-t13): 2-coverings of E = L1L3M1M2 of (627,364) and of E3 = E/<T3> over K = Q(i).')

@@ -1,7 +1,6 @@
 # t11: Fisher's higher descents on the nine I5 curves
 
-Written by an AI model (build agent t11), not read by a person. Experiment, not counted. Nothing here changes the Not reviewed by a separate agent; the pre-release maths referee (panel P1, `reviews/panel_p1.md`) read it: holds, with gaps (Fisher's paper read through summaries; the bounds hold up to level 4 only: a level-5 pairing could still lower them).
-census or any row's status.
+Written by an AI model (build agent t11), not read by a person. Experiment, not counted. Nothing here changes the census. Not reviewed by a separate agent; the pre-release maths referee (panel P1, `reviews/panel_p1.md`) read it: holds, with gaps (Fisher's paper read through summaries; the bounds hold up to level 4 only: a level-5 pairing could still lower them). Nothing here changes any row's status.
 
 ## Bottom line
 
