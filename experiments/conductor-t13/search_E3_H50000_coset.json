@@ -1,0 +1,14 @@
+{
+ "coset A": {
+  "hits": [],
+  "npairs": 3084208492
+ },
+ "coset A+B": {
+  "hits": [],
+  "npairs": 3084209985
+ },
+ "coset B": {
+  "hits": [],
+  "npairs": 3084026639
+ }
+}

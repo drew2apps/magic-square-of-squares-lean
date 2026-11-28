@@ -1,0 +1,4 @@
+E torsion t1 T = 0.7071068 h_p of torsion preimages: []
+E torsion t2 T = 1.195061 h_p of torsion preimages: [0.837, 1.951, 208655285105.682]
+E3 torsion t1 T = 353097.5 h_p of torsion preimages: []
+E3 torsion t2 T = 12.1173 h_p of torsion preimages: [15.879, 46.711, 8826464140.252]

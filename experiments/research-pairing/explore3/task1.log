@@ -1,0 +1,18 @@
+(a) 08 sample 300 of 1280 {-1: 300} bad [] t=1
+(a) LU sample 300 of 874 {-1: 300} bad [] t=1
+(b) mixed lines 6776 {-1: 6776} bad [] t=28
+  per curve {'0L': 1694, '0U': 1694, '8L': 1694, '8U': 1694}
+(c) controls on 300 lines (200 mixed + 100 of 08/LU):
+    ('<T1,b>', 1) 300
+    ('<T2,b>', 1) 300
+    ('<T3,b>', 1) 300
+    ('<a,T1>', 1) 300
+    ('<a,T2>', 1) 300
+    ('<a,T3>', 1) 300
+    ('<a,a>', 1) 300
+    ('<a,ab> (expect -1)', -1) 300
+    ('<b,a> (symmetry, expect -1)', -1) 300
+    ('<b,b>', 1) 300
+(d) 200 mixed lines x seeds (1,777,424242,99991): value tuples {(-1, -1, -1, -1): 200} ; lines where some local factor changed with the seed: 0
+partial factorizations {'partial_factor': 0} total time 44 s
+b first component (at e_r=e1) over 6776 mixed kill lines: {'b_r | 2R+R-, not 1,2': 3528, 'total: positive divisor of 2R+R- (incl 1,2)': 6776, 'b_r = 2': 488, 'b_r = 1': 2760}

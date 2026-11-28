@@ -1,0 +1,37 @@
+# z14 symbolic checks (sympy). Written by an AI model (reviewer z14); not read by a person.
+W = R+ R- = m**8 + 14*m**4*n**4 + n**8 ; equals m^8 + 14 m^4 n^4 + n^8: True
+W = A^4 - A^2 C^2 + C^4 = C^4 Phi_12(A/C): True ; Phi_12 = x**4 - x**2 + 1
+R+(r,1) = r**4 + 2*r**3 + 2*r**2 - 2*r + 1 ; irreducible over Q: True ; linear factors over Q(i, sqrt 3) = Q(zeta_12): 4
+R-(r,1) = r**4 - 2*r**3 + 2*r**2 + 2*r + 1 ; irreducible over Q: True ; linear factors over Q(i, sqrt 3) = Q(zeta_12): 4
+  so (Q(zeta_12) abelian, the root field of R+-) an odd prime p | R+-(m,n), p not dividing mn, splits completely in Q(zeta_12):
+  p = 1 mod 12 (not mod 24).  R+ - R- = 2AB = 4*m*n*(m - n)*(m + n) = 0 mod 8 when mn is even, so W = R+^2 = 1 mod 8
+  (odd-odd ratios: the same after removing 4^2); hence the Jacobi symbols (-1/W0), (2/W0) of the odd-exponent part W0
+  of W are 1 for every ratio, and the controls S*J(-1), S*J(2) of task23.py cannot fail
+mixed curve e2 - e1 = 2R-: True ; e3 - e1 = 2R+: True ; e3 - e2 = 4AB: True
+conic identity R+ s^2 - R- D^2 = 2AB d (d T^2 + 8C^2 T Z + 16A^2B^2/d Z^2) (A, B, C free): True
+2AB R+ = R+^2 - W (so 2AB R+ is a norm from Q(sqrt W) and the conic is soluble iff d is): True
+E_mix shifted, x(x^2 + a x + b): a = -4C^2: True ; b = 4W; isogenous a' = -2a = 8C^2, b' = a^2 - 4b = 16A^2B^2: True
+  -> w^2 = d t^4 + 8C^2 t^2 + 16A^2B^2/d is the quartic of the class d for the 2-isogenous curve Y^2 = X(X^2 + 8C^2 X + 16A^2B^2)
+alpha1 beta1 = alpha2 beta2 = AB/2: True ; R+ = alpha1^2 + beta1^2: True ; R- = alpha2^2 + beta2^2: True ; m^2 + n^2 = alpha1 - beta1 = alpha2 + beta2: True
+tangent lemma: -2 qT T L(P) = N(qT(u1 + sqrt d u3) - T(q1 + sqrt d q3)) on u1^2 - d u3^2 = c T^2 through Q: True
+  tangent form of cassels.py on H_2 (a = (1,d,d)): (a1 q1, -a3 q3, -(e3 - e1) qT) = (q1, -d q3, -2R+ qT), i.e. c = 2R+; on H_3 c = 2R-
+Delta(E_08) = 256*m**4*n**4*(m - n)**4*(m + n)**4*(m**2 + n**2)**4
+Delta(E_LU) = 256*m**4*n**4*(m - n)**4*(m + n)**4*(m**2 + n**2)**4
+Delta(E_mix) = 16384*m**2*n**2*(m - n)**2*(m + n)**2*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)**2*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)**2
+E_08: (deg a2, deg a4, deg a6) = [4, 8, 0] (K3 range: <= (4, 8, 12)); fibres (place, ord Delta, c4): [('-1', 4, 'c4 != 0'), ('-I', 4, 'c4 != 0'), ('0', 4, 'c4 != 0'), ('1', 4, 'c4 != 0'), ('I', 4, 'c4 != 0'), ('infinity', 4, 'c4 != 0')]; sum of ord Delta = 24
+E_LU: (deg a2, deg a4, deg a6) = [4, 8, 0] (K3 range: <= (4, 8, 12)); fibres (place, ord Delta, c4): [('-1', 4, 'c4 != 0'), ('-I', 4, 'c4 != 0'), ('0', 4, 'c4 != 0'), ('1', 4, 'c4 != 0'), ('I', 4, 'c4 != 0'), ('infinity', 4, 'c4 != 0')]; sum of ord Delta = 24
+E_mix: (deg a2, deg a4, deg a6) = [4, 8, 12] (K3 range: <= (4, 8, 12)); fibres (place, ord Delta, c4): [('-1', 2, 'c4 != 0'), ('-1/2 + I/2 - sqrt(6)*sqrt(-I)/2', 2, 'c4 != 0'), ('-1/2 + sqrt(6)*sqrt(-I)/2 + I/2', 2, 'c4 != 0'), ('-1/2 - I/2 + sqrt(6)*sqrt(I)/2', 2, 'c4 != 0'), ('-1/2 - sqrt(6)*sqrt(I)/2 - I/2', 2, 'c4 != 0'), ('0', 2, 'c4 != 0'), ('1', 2, 'c4 != 0'), ('1/2 + I/2 + sqrt(6)*sqrt(I)/2', 2, 'c4 != 0'), ('1/2 + sqrt(6)*sqrt(-I)/2 - I/2', 2, 'c4 != 0'), ('1/2 - I/2 - sqrt(6)*sqrt(-I)/2', 2, 'c4 != 0'), ('1/2 - sqrt(6)*sqrt(I)/2 + I/2', 2, 'c4 != 0'), ('infinity', 2, 'c4 != 0')]; sum of ord Delta = 24
+j(E_08) = 256 (A^4 - A^2 C^2 + C^4)^3 / (A^4 B^4 C^4): True ; so j(E_08) = 0 exactly at the 8 zeros of W, deg_r j(E_08) = 24
+j(E_LU) = j(E_08): True
+j(E_mix) = 16*(m**8 + 16*m**6*n**2 - 18*m**4*n**4 + 16*m**2*n**6 + n**8)**3/(m**2*n**2*(m - n)**2*(m + n)**2*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)**2*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)**2) -> at the zeros of W: j(E_mix) = infinity (I2 fibres), not 0; j(E_mix) = 0 where 16*(m**8 + 16*m**6*n**2 - 18*m**4*n**4 + 16*m**2*n**6 + n**8)**3
+E_08 twisted by -1 (y^2 = x(x+A^2)(x+C^2)), x -> x - C^2, is y^2 = x(x - B^2)(x - C^2) (the model of E_LU up to 2^2): True
+halves of (0,0) on E_08: x = ['(m - n)*(m + n)*(m**2 + n**2)', '-(m - n)*(m + n)*(m**2 + n**2)'], y^2 = ['-4*n**4*(m - n)**2*(m + n)**2*(m**2 + n**2)**2', '-4*m**4*(m - n)**2*(m + n)**2*(m**2 + n**2)**2']
+halves of (A^2,0) on E_08: x = ['(m - n)*(m + n)*(m + I*n)**2', '(m - n)*(m + n)*(m - I*n)**2'], y^2 = ['-4*m**2*n**2*(m - n)**2*(m + n)**2*(m + I*n)**4', '-4*m**2*n**2*(m - n)**2*(m + n)**2*(m - I*n)**4']
+halves of (C^2,0) on E_08: x = ['(m + n)**2*(m**2 + n**2)', '(m - n)**2*(m**2 + n**2)'], y^2 = ['4*m**2*n**2*(m + n)**4*(m**2 + n**2)**2', '4*m**2*n**2*(m - n)**4*(m**2 + n**2)**2']
+  y^2 at x = A^2 + iAB is the square of 2i mn(m^2 - n^2)(m + in)^2: True
+  (0,0): y = i A C (C - A) checks: True
+F_0(r, t) vanishes on t = g(r) and on its complex conjugate, g = I*r: True
+F_8(r, t) vanishes on t = g(r) and on its complex conjugate, g = I/r: True
+F_L(r, t) vanishes on t = g(r) and on its complex conjugate, g = (I*r + 1)/(r + I): True
+F_U(r, t) vanishes on t = g(r) and on its complex conjugate, g = (I*r - 1)/(r - I): True
+Delta(E_mix) at r = +-i (C = 0):  -16777216 (non-zero: the cusps +-i carry smooth fibres of E_mix)

@@ -1,0 +1,11 @@
+t11_theta.py --negative: forged inputs that must be refused. Written by an AI model (build agent t11), not read by a person.
+  refused: a forged minimal model (a4 + 1) against the census curve (not the same curve)
+  accepted (positive control): the hinted conic point over Q(sqrt 2) on its cone (rank_fisher5 step (7))
+  refused: the conic point moved off its cone (Z -> Z + 1) (P3 is not on the cone)
+  refused: a paired class 3 that is not in the Selmer group (not in the local image at some bad prime) (3 is not in the local image at 2 (E side))
+  refused: a class 1534898 of the other side (E') paired through the E-side C3: refused by the Selmer check (1534898 is not in the local image at 73 (E side))
+  refused: the same class with the Selmer check switched off: the local term must depend on the point (the term (f0(P), 1534898)_73 depends on the point P: {1, -1} (f is not a pushout for this pairing))
+  refused: f0 replaced by f0 + c e (not a pushout form): the local term depends on the point (the term (f0(P), 11878571404153441)_13 depends on the point P: {1, -1} (f is not a pushout for this )
+  refused: a level-3 twist by 3 (not in this side's S_1) (s is not in this side's S_1)
+  refused: a forged xi (times 10007) with the stored local points (xi has a prime outside S3)
+negative tests: 9 of 9 as expected

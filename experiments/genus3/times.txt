@@ -1,0 +1,12 @@
+genus3_split exit=0 8 s
+genus3_points exit=0 13 s
+genus3_points --negative exit=0 2 s
+genus3_isog exit=0 8 s
+genus3_mult exit=0 53 s
+kcurve_exact exit=0 1 s
+kcurve_exact --negative exit=0 2 s
+genus3_rank_upper exit=0 284 s
+session/verify_swap_and_genus3 exit=0 1 s
+session/genus3_ranks exit=0 34 s
+session/kcurve_not_qcurve exit=0 0 s
+session/isogeny_classes exit=0 4 s

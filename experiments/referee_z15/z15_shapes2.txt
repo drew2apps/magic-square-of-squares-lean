@@ -1,0 +1,18 @@
+z15_shapes2.py: written by an AI model (reviewer z15), not read by a person.
+(a) tuples surviving E_08 and E_LU, by shape:
+    ('S1', 'SURVIVES') 6
+    ('S1', 'killed on a mixed curve') 308
+    ('S2', 'SURVIVES') 4
+    ('S2', 'killed on a mixed curve') 168
+    ('a=1', 'killed on a mixed curve') 64
+    ('a=b=1', 'killed on a mixed curve') 64
+    ('b=1', 'killed on a mixed curve') 76
+    ('other', 'killed on a mixed curve') 350
+(b) per ratio and shape:
+    ('S1', 'class killed on E_08', 'all its tuples killed') 250
+    ('S1', 'class survives E_08', 'a tuple survives') 3
+    ('S1', 'class survives E_08', 'all its tuples killed') 80
+    ('S2', 'class killed on E_LU', 'all its tuples killed') 120
+    ('S2', 'class survives E_LU', 'a tuple survives') 2
+    ('S2', 'class survives E_LU', 'all its tuples killed') 44
+(c) ghost tuples per ghost ratio: [(2, 249), (4, 156), (8, 75), (16, 18), (32, 1)]

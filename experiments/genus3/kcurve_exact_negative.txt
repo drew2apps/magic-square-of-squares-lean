@@ -1,0 +1,7 @@
+kcurve_exact.py --negative
+  refused: a base change from Q (rational j) must show no asymmetric prime (a curve over Q (base change) shows no asymmetric prime)
+  refused: the norm j conj(j) (rational) must show no asymmetric prime (N(j) (rational) shows no asymmetric prime)
+  refused: a composite p (37 * 41 = 1517) refused by gauss_prime ()
+  refused: p = 3 mod 4 refused by gauss_prime ()
+  refused: a quartic with a double root (singular) (singular quartic)
+negative tests: 5 of 5 refused

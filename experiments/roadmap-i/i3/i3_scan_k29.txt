@@ -1,0 +1,2 @@
+range k = 29: 536870912 <= m < 1000000001; 1177 degenerate ratios (seed 3029); every bad prime tested
+ratios with tuples beyond those of their degenerate points: 0

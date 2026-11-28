@@ -111,3 +111,8 @@ Times (one process, PARI 2.17.4): about 25 s per ratio on average; the four list
 of its first three ratios with the committed script gives the same lines. The other outputs were written by `--write`.
 An earlier, slower version of the script tested both sign choices of every class. On the 662 tuples that it and the
 committed version both did, its verdicts (the killing pairs and the killing prime) are the same.
+
+## Later (run 10)
+
+On `E_08` and `E_LU` the pairing has a closed form in Hilbert and Legendre symbols of `δ`, tested against this pilot's
+`rank_second` values on full `Sel²` by review z12: `../research-pairing/NOTES.md`. For the four mixed curves no formula is known.

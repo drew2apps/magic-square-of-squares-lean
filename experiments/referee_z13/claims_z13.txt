@@ -1,0 +1,9 @@
+ratios 201 residual tuples 1766
+tuples killed on some pair curve 1762 ; killed on mixed curves only 232
+tuples killed on 08 or LU 1530
+08 kill lines 1280 A even: lines 72 distinct 24 | A odd: lines 1208 distinct 109
+LU kill lines 874 A even: lines 648 distinct 66 | A odd: lines 226 distinct 45
+(5623, 1017) (2, 1270798, 1, 2) d0*d8 = 2541596 dL*dU = 2 {'08': 'image', '0L': 'kernel', '0U': 'kernel', '8L': 'kernel', '8U': 'kernel', 'LU': 'kernel'}
+(5623, 1017) (635399, 1, 1, 2) d0*d8 = 635399 dL*dU = 2 {'08': 'image', '0L': 'kernel', '0U': 'kernel', '8L': 'kernel', '8U': 'kernel', 'LU': 'kernel'}
+(3320, 2303) (2, 1, 1, 635399) d0*d8 = 2 dL*dU = 635399 {'08': 'kernel', '0L': 'kernel', '0U': 'kernel', '8L': 'kernel', '8U': 'kernel', 'LU': 'image'}
+(3320, 2303) (2, 1, 1270798, 2) d0*d8 = 2 dL*dU = 2541596 {'08': 'kernel', '0L': 'kernel', '0U': 'kernel', '8L': 'kernel', '8U': 'kernel', 'LU': 'image'}

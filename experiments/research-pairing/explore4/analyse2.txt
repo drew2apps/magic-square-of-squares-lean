@@ -1,0 +1,26 @@
+ratios 937
+  shape,killed ('S1: d0d8~2, dLdU~m2-n2', False) 6
+  shape,killed ('S1: d0d8~2, dLdU~m2-n2', True) 1372
+  shape,killed ('S2: d0d8~mn, dLdU~2', False) 4
+  shape,killed ('S2: d0d8~mn, dLdU~2', True) 660
+  shape,killed ('a=1 only', True) 360
+  shape,killed ('a=b=1', True) 64
+  shape,killed ('b=1 only', True) 836
+  shape,killed ('other', True) 3602
+affine (coset of an F2-subspace)? {False: 247, True: 682, 'big': 8}
+sizes of residual sets [(2, 415), (4, 215), (6, 54), (8, 90), (10, 33), (12, 32), (14, 1), (16, 20), (18, 8), (20, 19), (22, 3), (24, 16), (28, 1), (30, 2), (32, 8), (34, 2), (36, 2), (40, 3), (46, 1), (48, 1), (50, 1), (60, 2), (88, 1), (90, 1), (100, 1), (120, 1), (180, 1), (216, 2), (270, 1)]
+special-shape tuples: 2042  ratios: 499
+   killed on ('08', '0L', '0U', '8L', '8U') 930
+   killed on ('0L', '0U', '8L', '8U') 446
+   killed on ('0L', '0U', '8L', '8U', 'LU') 428
+   killed on ('08', '0L', '8L') 50
+   killed on ('08', '0U', '8U') 50
+   killed on ('08',) 34
+   killed on ('LU',) 22
+   killed on ('0L', '0U', 'LU') 21
+   killed on ('8L', '8U', 'LU') 21
+   killed on ('0U', '8U') 11
+   killed on ('0L', '8L') 11
+   killed on () 10
+   killed on ('8L', '8U') 4
+   killed on ('0L', '0U') 4

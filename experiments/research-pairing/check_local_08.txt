@@ -1,0 +1,8 @@
+totals (curve, pairing value): {('08', -1): 1280}
+odd local terms (curve, case, prediction agrees):
+   ('08', '-dl square', True) 2462
+   ('08', 'dl square', True) 4906
+   ('08', 'p|C+A', True) 2972
+   ('08', 'p|C-A', True) 2644
+2-adic terms: {('08', 1): 1124, ('08', -1): 156}
+examples of disagreement: []

@@ -1,0 +1,7 @@
+(a) class-keeping four-form ratios (the 9,736 of g2_*_all.txt, called stage-1 by the session): 9736 (distinct 9736); ratios with residual tuples: 937; S1-shape at 333 ratios, S2-shape at 166, both 0
+    S1: every odd prime of odd exponent in m^2-n^2 is +-1 mod 8 at 333 of 333; condition holds without such a tuple at 1554 class-keepingstage-1 ratios; residues mod 8 of the primes not +-1 mod 8 that occur (to even power): {(): 239, (3,): 94}; parity {'opposite': 333}
+    S2: every odd prime of odd exponent in mn is +-1 mod 8 at 166 of 166; condition holds without such a tuple at 1392 class-keepingstage-1 ratios; residues mod 8 of the primes not +-1 mod 8 that occur (to even power): {(): 120, (3,): 46}; parity {'both odd': 166}
+(b) 3000 random coprime ratios (seed 2016), m < 4000, C not a square: (parity, a prime = 5 mod 8 divides m^2-n^2, in Sel^2): [(('both odd', False, False), 324), (('both odd', True, False), 657), (('opposite', False, True), 629), (('opposite', True, False), 1390)]
+    rule "opposite parity and no prime = 5 mod 8 divides m^2 - n^2": agrees on 3000 of 3000
+    opposite parity, no prime = 5 mod 8: by 2-adic type (H2 fails when mn = 2 mod 4): [(('4|mn', True), 313), (('mn=2 mod 4', True), 316)]
+    where membership fails (first prime found): [(('both odd', '2'), 981), (('opposite', '5 mod 8'), 1390)]

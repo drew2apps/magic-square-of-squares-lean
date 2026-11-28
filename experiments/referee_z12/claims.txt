@@ -1,0 +1,2 @@
+08 per kill line: {('conv1 value', -1): 1058, ('b_r=1', True): 668, ('b_r=1', False): 612, ('conv1 value', 1): 222}  per distinct (ratio,class,b): {('conv1 value', -1): 118, ('b_r=1', True): 83, ('b_r=1', False): 50, ('conv1 value', 1): 15}
+LU per kill line: {('conv1 value', -1): 762, ('b_r=1', True): 538, ('conv1 value', 1): 112, ('b_r=1', False): 336}  per distinct (ratio,class,b): {('conv1 value', -1): 96, ('b_r=1', True): 55, ('conv1 value', 1): 15, ('b_r=1', False): 56}

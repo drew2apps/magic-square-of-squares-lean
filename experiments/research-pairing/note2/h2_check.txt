@@ -1,0 +1,5 @@
+(725, 497) LU (A,C)= (360325, 386317) H2 fails dim Sel2 4 agree/disagree {True: 32, False: 32}
+(725, 497) 08 (A,C)= (139308, 386317) H2 dim Sel2 4 agree/disagree {True: 64}
+(535, 23) 08 (A,C)= (142848, 143377) H2 dim Sel2 4 agree/disagree {True: 64}
+(465, 416) LU (A,C)= (386880, 389281) H2 dim Sel2 6 agree/disagree {True: 256}
+(465, 416) 08 (A,C)= (43169, 389281) H2 dim Sel2 5 agree/disagree {True: 512}

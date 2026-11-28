@@ -1,0 +1,134 @@
+genus3_isog.py: the elliptic quotients of the note's isogeny_classes.py at (627,364), exactly
+
+Inside the groups (sympy, for general m, n):
+  F0*F4            ~ F8*F4            isomorphic by x -> 1/x, (x, y) -> (x', y/(cx+d)^2): True
+  F0*L             ~ F0*U             isomorphic by x -> -x, (x, y) -> (x', y/(cx+d)^2): True
+  F0*L             ~ F8*L             isomorphic by x -> 1/x, (x, y) -> (x', y/(cx+d)^2): True
+  F0*L             ~ F8*U             isomorphic by x -> -1/x, (x, y) -> (x', y/(cx+d)^2): True
+  F4*L             ~ F4*U             isomorphic by x -> -x, (x, y) -> (x', y/(cx+d)^2): True
+  [F4F0LU|x=t^2]   ~ [F4F8LU|x=t^2]   isomorphic by x -> 1/x, (x, y) -> (x', y/(cx+d)^2): True
+  [F4LU|x(..)]     ~ [F4LU|x=t^2]q    isomorphic by x -> 1/x, (x, y) -> (x', y/(cx+d)^2): True
+  [F0F8LU|x=t^2] -> E1, (x, y) -> (x + 1/x, y (x - 1/x)/(2x)), a morphism of degree 2 (z = x + 1/x has degree 2 in x, and on E1 degree 2; the map is the quotient by (x, y) -> (1/x, -y/x^2)): True
+  so the two curves of each group have isogenous Jacobians (isomorphic, or 2-isogenous for E1).
+
+Across the groups: for each pair of groups the first prime p >= 5 at which both are good and a_p differ
+  F0*F8            F0*F4            p =  17: a_p =   2,  -6
+  F0*F8            F0*L             p =  17: a_p =   2,  -6
+  F0*F8            F4*L             p =  17: a_p =   2,  -6
+  F0*F8            L*U              p =  23: a_p =   8,  -8
+  F0*F8            E1               p =  17: a_p =   2,  -6
+  F0*F8            E2               p =  17: a_p =   2,  -6
+  F0*F8            E3               p =  23: a_p =   8,   0
+  F0*F8            E+               p =  17: a_p =   2,  -6
+  F0*F8            E-               p =  23: a_p =   8,   0
+  F0*F8            [F4F0LU|x=t^2]   p =  17: a_p =   2,  -2
+  F0*F8            [F4F0F8|x(..)]   p =  17: a_p =   2,  -2
+  F0*F8            [F4LU|x(..)]     p =  17: a_p =   2,  -2
+  F0*F8            [F0LU|x(..)]     p =  17: a_p =   2,  -6
+  F0*F8            [F8LU|x(..)]     p =  23: a_p =   8,   4
+  F0*F4            F0*L             p =  23: a_p =   0,  -8
+  F0*F4            F4*L             p =  31: a_p =  -8,   8
+  F0*F4            L*U              p =  17: a_p =  -6,   2
+  F0*F4            E1               p =  31: a_p =  -8,   0
+  F0*F4            E2               p =  23: a_p =   0,  -8
+  F0*F4            E3               p =  17: a_p =  -6,   2
+  F0*F4            E+               p =  31: a_p =  -8,  -4
+  F0*F4            E-               p =  17: a_p =  -6,   2
+  F0*F4            [F4F0LU|x=t^2]   p =  17: a_p =  -6,  -2
+  F0*F4            [F4F0F8|x(..)]   p =  17: a_p =  -6,  -2
+  F0*F4            [F4LU|x(..)]     p =  17: a_p =  -6,  -2
+  F0*F4            [F0LU|x(..)]     p =  23: a_p =   0,  -4
+  F0*F4            [F8LU|x(..)]     p =  17: a_p =  -6,   2
+  F0*L             F4*L             p =  23: a_p =  -8,   0
+  F0*L             L*U              p =  17: a_p =  -6,   2
+  F0*L             E1               p =  23: a_p =  -8,   0
+  F0*L             E2               p =  41: a_p =  -2,  -6
+  F0*L             E3               p =  17: a_p =  -6,   2
+  F0*L             E+               p =  23: a_p =  -8,   0
+  F0*L             E-               p =  17: a_p =  -6,   2
+  F0*L             [F4F0LU|x=t^2]   p =  17: a_p =  -6,  -2
+  F0*L             [F4F0F8|x(..)]   p =  17: a_p =  -6,  -2
+  F0*L             [F4LU|x(..)]     p =  17: a_p =  -6,  -2
+  F0*L             [F0LU|x(..)]     p =  23: a_p =  -8,  -4
+  F0*L             [F8LU|x(..)]     p =  17: a_p =  -6,   2
+  F4*L             L*U              p =  17: a_p =  -6,   2
+  F4*L             E1               p =  31: a_p =   8,   0
+  F4*L             E2               p =  23: a_p =   0,  -8
+  F4*L             E3               p =  17: a_p =  -6,   2
+  F4*L             E+               p =  31: a_p =   8,  -4
+  F4*L             E-               p =  17: a_p =  -6,   2
+  F4*L             [F4F0LU|x=t^2]   p =  17: a_p =  -6,  -2
+  F4*L             [F4F0F8|x(..)]   p =  17: a_p =  -6,  -2
+  F4*L             [F4LU|x(..)]     p =  17: a_p =  -6,  -2
+  F4*L             [F0LU|x(..)]     p =  23: a_p =   0,  -4
+  F4*L             [F8LU|x(..)]     p =  17: a_p =  -6,   2
+  L*U              E1               p =  17: a_p =   2,  -6
+  L*U              E2               p =  17: a_p =   2,  -6
+  L*U              E3               p =  23: a_p =  -8,   0
+  L*U              E+               p =  17: a_p =   2,  -6
+  L*U              E-               p =  23: a_p =  -8,   0
+  L*U              [F4F0LU|x=t^2]   p =  17: a_p =   2,  -2
+  L*U              [F4F0F8|x(..)]   p =  17: a_p =   2,  -2
+  L*U              [F4LU|x(..)]     p =  17: a_p =   2,  -2
+  L*U              [F0LU|x(..)]     p =  17: a_p =   2,  -6
+  L*U              [F8LU|x(..)]     p =  23: a_p =  -8,   4
+  E1               E2               p =  23: a_p =   0,  -8
+  E1               E3               p =  17: a_p =  -6,   2
+  E1               E+               p =  31: a_p =   0,  -4
+  E1               E-               p =  17: a_p =  -6,   2
+  E1               [F4F0LU|x=t^2]   p =  17: a_p =  -6,  -2
+  E1               [F4F0F8|x(..)]   p =  17: a_p =  -6,  -2
+  E1               [F4LU|x(..)]     p =  17: a_p =  -6,  -2
+  E1               [F0LU|x(..)]     p =  23: a_p =   0,  -4
+  E1               [F8LU|x(..)]     p =  17: a_p =  -6,   2
+  E2               E3               p =  17: a_p =  -6,   2
+  E2               E+               p =  23: a_p =  -8,   0
+  E2               E-               p =  17: a_p =  -6,   2
+  E2               [F4F0LU|x=t^2]   p =  17: a_p =  -6,  -2
+  E2               [F4F0F8|x(..)]   p =  17: a_p =  -6,  -2
+  E2               [F4LU|x(..)]     p =  17: a_p =  -6,  -2
+  E2               [F0LU|x(..)]     p =  23: a_p =  -8,  -4
+  E2               [F8LU|x(..)]     p =  17: a_p =  -6,   2
+  E3               E+               p =  17: a_p =   2,  -6
+  E3               E-               p =  31: a_p =   8,   4
+  E3               [F4F0LU|x=t^2]   p =  17: a_p =   2,  -2
+  E3               [F4F0F8|x(..)]   p =  17: a_p =   2,  -2
+  E3               [F4LU|x(..)]     p =  17: a_p =   2,  -2
+  E3               [F0LU|x(..)]     p =  17: a_p =   2,  -6
+  E3               [F8LU|x(..)]     p =  23: a_p =   0,   4
+  E+               E-               p =  17: a_p =  -6,   2
+  E+               [F4F0LU|x=t^2]   p =  17: a_p =  -6,  -2
+  E+               [F4F0F8|x(..)]   p =  17: a_p =  -6,  -2
+  E+               [F4LU|x(..)]     p =  17: a_p =  -6,  -2
+  E+               [F0LU|x(..)]     p =  23: a_p =   0,  -4
+  E+               [F8LU|x(..)]     p =  17: a_p =  -6,   2
+  E-               [F4F0LU|x=t^2]   p =  17: a_p =   2,  -2
+  E-               [F4F0F8|x(..)]   p =  17: a_p =   2,  -2
+  E-               [F4LU|x(..)]     p =  17: a_p =   2,  -2
+  E-               [F0LU|x(..)]     p =  17: a_p =   2,  -6
+  E-               [F8LU|x(..)]     p =  23: a_p =   0,   4
+  [F4F0LU|x=t^2]   [F4F0F8|x(..)]   p =  23: a_p =  -4,  -8
+  [F4F0LU|x=t^2]   [F4LU|x(..)]     p =  23: a_p =  -4,   0
+  [F4F0LU|x=t^2]   [F0LU|x(..)]     p =  17: a_p =  -2,  -6
+  [F4F0LU|x=t^2]   [F8LU|x(..)]     p =  17: a_p =  -2,   2
+  [F4F0F8|x(..)]   [F4LU|x(..)]     p =  23: a_p =  -8,   0
+  [F4F0F8|x(..)]   [F0LU|x(..)]     p =  17: a_p =  -2,  -6
+  [F4F0F8|x(..)]   [F8LU|x(..)]     p =  17: a_p =  -2,   2
+  [F4LU|x(..)]     [F0LU|x(..)]     p =  17: a_p =  -2,  -6
+  [F4LU|x(..)]     [F8LU|x(..)]     p =  17: a_p =  -2,   2
+  [F0LU|x(..)]     [F8LU|x(..)]     p =  17: a_p =  -6,   2
+  all 105 pairs of the 15 groups are non-isogenous; the largest prime needed is 41
+  (inside each group a_p agree at the good primes < 300, as they must)
+
+Quadratic twists (the note's "twist pairs": |a_p| equal at 40 primes).  The Jacobian of y^2 = quartic with
+invariants I, J is Y^2 = X^3 - 27 I X - 27 J; its twist by d is (d^2 I, d^3 J).  Exact search: from the twist of
+the first curve by d, all curves reached by rational 2-isogenies (Velu: y^2 = x^3 + a x + b, T = (x0, 0),
+t = 3x0^2 + a: y^2 = x^3 + (a - 5t) x + (b - 7 x0 t)), up to depth 3, tested for isomorphism with the second
+(a' = u^4 a, b' = u^6 b with u rational).  d is read off from the signs a_p(b)/a_p(a) and confirmed by the search.
+  F0*F8  L*U    |a_p| equal at the good p < 1000; signs fit d = -1; the twist by d is isomorphic to it
+  F0*F4  F4*L   |a_p| equal at the good p < 1000; signs fit d = -2; isogenous to the twist by d by a chain of 1 rational 2-isogenies (exact)
+  F0*F4  F4*U   |a_p| equal at the good p < 1000; signs fit d = -2; isogenous to the twist by d by a chain of 1 rational 2-isogenies (exact)
+  F8*F4  F4*L   |a_p| equal at the good p < 1000; signs fit d = -2; isogenous to the twist by d by a chain of 1 rational 2-isogenies (exact)
+  F8*F4  F4*U   |a_p| equal at the good p < 1000; signs fit d = -2; isogenous to the twist by d by a chain of 1 rational 2-isogenies (exact)
+
+Multiplicities of these classes in the Jacobian of the curve of the five forms: genus3_mult.py.

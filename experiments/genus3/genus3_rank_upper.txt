@@ -1,0 +1,56 @@
+genus3_rank_upper.py: exact upper rank bounds (complete 2-descent + Cassels-Tate pairing, rank_second.py)
+  (195,28) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 3, pairing 0) => rank <= 1
+  (195,28) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 3 (Sel 5, pairing 0) => rank <= 3
+  (195,28) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 7, pairing 4), 5 (Sel 7, pairing 0) => rank <= 1
+  (223,167) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 3 (Sel 5, pairing 0) => rank <= 3
+  (223,167) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 3, pairing 0) => rank <= 1
+  (223,167) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 7, pairing 4), 5 (Sel 7, pairing 0) => rank <= 1
+  (440,279) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 5, pairing 2) => rank <= 1
+  (440,279) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 7, pairing 4) => rank <= 1
+  (440,279) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 2 (Sel 8, pairing 4), 4 (Sel 8, pairing 2) => rank <= 2
+  (609,200) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 4 (Sel 6, pairing 0) => rank <= 4
+  (609,200) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 4 (Sel 6, pairing 0) => rank <= 4
+  (609,200) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 2 (Sel 8, pairing 4), 4 (Sel 10, pairing 4) => rank <= 2
+  (627,364) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 3 (Sel 5, pairing 0) => rank <= 3
+  (627,364) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 3 (Sel 5, pairing 0) => rank <= 3
+  (627,364) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 7, pairing 4), 5 (Sel 9, pairing 2) => rank <= 1
+  (719,161) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 7, pairing 4) => rank <= 1
+  (719,161) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 5, pairing 2) => rank <= 1
+  (719,161) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 2 (Sel 8, pairing 4), 4 (Sel 8, pairing 2) => rank <= 2
+  (809,409) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 4 (Sel 6, pairing 0) => rank <= 4
+  (809,409) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 4 (Sel 6, pairing 0) => rank <= 4
+  (809,409) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 2 (Sel 8, pairing 4), 4 (Sel 10, pairing 4) => rank <= 2
+  (861,620) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 2 (Sel 4, pairing 0) => rank <= 2
+  (861,620) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 5, pairing 2) => rank <= 1
+  (861,620) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 3 (Sel 7, pairing 2), 3 (Sel 7, pairing 2) => rank <= 3
+  (991,263) E1: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 3 (Sel 5, pairing 0) => rank <= 3
+  (991,263) E2: 1 curve(s) with full 2-torsion in the 2-isogeny class; bounds 3 (Sel 5, pairing 0) => rank <= 3
+  (991,263) E3: 2 curve(s) with full 2-torsion in the 2-isogeny class; bounds 1 (Sel 7, pairing 4), 5 (Sel 9, pairing 2) => rank <= 1
+Summary with the exact lower bound 1 of genus3_points.py:
+  (195,28)    E1: rank = 1 (exact)
+  (195,28)    E2: 1 <= rank <= 3
+  (195,28)    E3: rank = 1 (exact)
+  (223,167)   E1: 1 <= rank <= 3
+  (223,167)   E2: rank = 1 (exact)
+  (223,167)   E3: rank = 1 (exact)
+  (440,279)   E1: rank = 1 (exact)
+  (440,279)   E2: rank = 1 (exact)
+  (440,279)   E3: 1 <= rank <= 2
+  (609,200)   E1: 1 <= rank <= 4
+  (609,200)   E2: 1 <= rank <= 4
+  (609,200)   E3: 1 <= rank <= 2
+  (627,364)   E1: 1 <= rank <= 3
+  (627,364)   E2: 1 <= rank <= 3
+  (627,364)   E3: rank = 1 (exact)
+  (719,161)   E1: rank = 1 (exact)
+  (719,161)   E2: rank = 1 (exact)
+  (719,161)   E3: 1 <= rank <= 2
+  (809,409)   E1: 1 <= rank <= 4
+  (809,409)   E2: 1 <= rank <= 4
+  (809,409)   E3: 1 <= rank <= 2
+  (861,620)   E1: 1 <= rank <= 2
+  (861,620)   E2: rank = 1 (exact)
+  (861,620)   E3: 1 <= rank <= 3
+  (991,263)   E1: 1 <= rank <= 3
+  (991,263)   E2: 1 <= rank <= 3
+  (991,263)   E3: rank = 1 (exact)

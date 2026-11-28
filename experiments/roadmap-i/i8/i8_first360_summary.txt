@@ -1,0 +1,24 @@
+I8 checkpoint: the Cassels-Tate pairing test of conductor-t10 on the first 360 ratios of i2_needgood_list.txt (lines 1 to 360, list order). Written by an AI model; not read by a person. Experiment, not counted; tier D.
+ratios: 360 done (residual tuples from i2_residual 360), 0 not done
+residual tuples: 3166; pairing-killed 3160; ratio excluded by a rank-0 pair curve 0; neither 6; undecided 0
+ratios all of whose tuples are pairing-killed: 357 of 360
+pairing kills per pair curve (a tuple counts once on each curve that kills it): 08:1836 0L:3058 0U:3058 8L:3058 8U:3058 LU:1794
+tuples pairing-killed only on the mixed curves 0L, 0U, 8L, 8U (not on 08 or LU): 462
+  NEITHER: (18313,120) [1, 2, 1, 335351569], killing good prime 61; per curve: 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image
+  NEITHER: (18313,120) [1, 2, 670703138, 2], killing good prime 61; per curve: 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image
+  NEITHER: (18433,18193) [2, 670703138, 2, 1], killing good prime 61; per curve: 08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+  NEITHER: (18433,18193) [335351569, 1, 2, 1], killing good prime 61; per curve: 08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+  NEITHER: (20056,19825) [2, 1, 1, 1], killing good prime 17; per curve: 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+  NEITHER: (20056,19825) [2, 1, 2, 2], killing good prime 17; per curve: 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+ratios that a pair curve of rank 0 excludes on its own (dim Sel^2 = 2, torsion complete, every point over t in {0, +-1, inf}): 11
+  (15232,5135) by E_LU
+  (15895,13312) by E_LU
+  (16399,7929) by E_08
+  (16879,1503) by E_08
+  (17395,13628) by E_LU
+  (17431,17289) by E_08
+  (17620,17179) by E_LU
+  (17647,9153) by E_08
+  (17836,15861) by E_LU
+  (18655,3544) by E_LU
+  (20059,340) by E_LU

@@ -1,0 +1,13 @@
+t11_theta.py: Fisher's higher descents on E1(6480,4961) (arXiv:1509.03234 Sects. 2, 3, 7), exact. Written by an AI model (build agent t11), not read by a person. Experiment, not counted.
+E1(6480,4961): (6480,4961) [CENSUS7000]
+  (0) model rebuilt from (m, n, d) by the census code = I5's minimal model [0, 1, 0, 9211122592674457236286980493932726649216639, 1318503358214771909347173196865869794685175648543198847781303935]; E: y^2 = x(x^2 + a x + b), a = -428478652648379840444, b = 9272320577932914217772059434089455615255684 (a^2 - 4b = -square)
+      a point of infinite order on E (PARI ellrank as a hint; on the curve, n G != O for n <= 12): rank >= 1
+  (1) rank_indep: |S'_1| = 16 (E side, d | b), |S_1| = 8 (E' side, d' | b'); after the second descent dim S'_2 <= 2, dim S_2 <= 3; known images: dim 1 (E side), 2 (E' side); exact bound 2 + 3 - 2 = 3
+      open cosets: E side [807642573697801]; E' side [-34129302]
+  type B: one open class on each side; Theta_4 needs both cone fields of one side; the cone fields of a level-3 lift of y are Q(sqrt y) and Q(sqrt -y) (Fisher Sect. 5; rank_fisher5 (4'))
+    y = 34129302: Q(sqrt 34129302): h = 16, R = 490.5; Q(sqrt -34129302): h = 2400   (PARI quadclassunit, GRH, for information only)
+    y = 20942341989: Q(sqrt 20942341989): h = 32, R = 2393.5; Q(sqrt -20942341989): h = 139520   (PARI quadclassunit, GRH, for information only)
+  E' side, class 34129302: lifts D_lam not excluded by the second descent: 16 (tried: up to 12); basis of the other side's S_1: [18427952670402562125659357940481, 153049, 28390707315241, 60884253118849]
+    lam = -4026559: pairings with the other side's S_1 18427952670402562125659357940481:+1 153049:+1 28390707315241:-1 60884253118849:-1; level-3 Selmer set empty (agrees)
+    lam = -16544359: pairings with the other side's S_1 18427952670402562125659357940481:+1 153049:+1 28390707315241:+1 60884253118849:+1; level-3 Selmer set non-empty (dim 3), xi = 1774064342, C3 checked locally soluble at R and 21 primes (agrees)
+  RESULT E1(6480,4961): NOT ATTEMPTED (time): the E' side lift of 34129302 exists (above); its fields Q(sqrt +-34129302) include a real one with regulator about 490; the E side fields have regulators >= 1.8e7; bound stays 3

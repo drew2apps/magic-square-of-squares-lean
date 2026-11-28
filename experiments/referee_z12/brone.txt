@@ -1,0 +1,1 @@
+b_r = 1 product formula vs rank_second (distinct (ratio, a, b), b a basis element with b_r = 1): {('08', True): 14110, ('LU', True): 7456} []

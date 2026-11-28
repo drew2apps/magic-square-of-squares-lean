@@ -1,0 +1,13 @@
+I4 exchange test on the points of G3's point searches. Written by an AI model; not read by a person. Experiment, not counted.
+dm_14000_0.jsonl: trivial 18
+dm_14000_1.jsonl: trivial 22
+dm_16000_0.jsonl: trivial 31
+dm_16000_1.jsonl: trivial 29
+sd_14000_0.jsonl: no 175, trivial 221
+sd_14000_1.jsonl: no 166, trivial 206
+sd_16000_0.jsonl: no 175, trivial 203
+sd_16000_1.jsonl: no 185, trivial 211
+sd_18000_0.jsonl: no 63, trivial 75
+sd_18000_1.jsonl: no 64, trivial 83
+all files: no 828, trivial 1099
+EXCHANGE FAILS or FAILS: 0

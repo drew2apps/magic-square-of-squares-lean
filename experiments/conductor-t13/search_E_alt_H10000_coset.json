@@ -1,0 +1,122 @@
+{
+ "coset A m01": {
+  "hits": [],
+  "npairs": 123360899
+ },
+ "coset A m02": {
+  "hits": [],
+  "npairs": 123360899
+ },
+ "coset A m03": {
+  "hits": [],
+  "npairs": 123350490
+ },
+ "coset A m04": {
+  "hits": [],
+  "npairs": 123350490
+ },
+ "coset A m05": {
+  "hits": [],
+  "npairs": 122990503
+ },
+ "coset A m06": {
+  "hits": [],
+  "npairs": 123361853
+ },
+ "coset A m07": {
+  "hits": [],
+  "npairs": 123350022
+ },
+ "coset A m08": {
+  "hits": [],
+  "npairs": 123350022
+ },
+ "coset A m09": {
+  "hits": [],
+  "npairs": 123361853
+ },
+ "coset A+B m01": {
+  "hits": [],
+  "npairs": 123358063
+ },
+ "coset A+B m02": {
+  "hits": [],
+  "npairs": 123358063
+ },
+ "coset A+B m03": {
+  "hits": [],
+  "npairs": 123361099
+ },
+ "coset A+B m04": {
+  "hits": [],
+  "npairs": 123361099
+ },
+ "coset A+B m05": {
+  "hits": [],
+  "npairs": 123340040
+ },
+ "coset A+B m06": {
+  "hits": [],
+  "npairs": 123361639
+ },
+ "coset A+B m07": {
+  "hits": [],
+  "npairs": 123354301
+ },
+ "coset A+B m08": {
+  "hits": [],
+  "npairs": 123354301
+ },
+ "coset A+B m09": {
+  "hits": [],
+  "npairs": 123361639
+ },
+ "coset B m01": {
+  "hits": [],
+  "npairs": 123360839
+ },
+ "coset B m02": {
+  "hits": [],
+  "npairs": 123360839
+ },
+ "coset B m03": {
+  "hits": [],
+  "npairs": 1
+ },
+ "coset B m04": {
+  "hits": [],
+  "npairs": 123334953
+ },
+ "coset B m05": {
+  "hits": [],
+  "npairs": 123334953
+ },
+ "coset B m06": {
+  "hits": [],
+  "npairs": 1
+ },
+ "coset B m07": {
+  "hits": [],
+  "npairs": 123195464
+ },
+ "coset B m08": {
+  "hits": [],
+  "npairs": 122693443
+ },
+ "coset B m09": {
+  "hits": [],
+  "npairs": 123361865
+ },
+ "coset B m10": {
+  "hits": [],
+  "npairs": 123357190
+ },
+ "coset B m11": {
+  "hits": [],
+  "npairs": 123357190
+ },
+ "coset B m12": {
+  "hits": [],
+  "npairs": 123361865
+ }
+}

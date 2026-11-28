@@ -1,0 +1,11 @@
+hm i1 i1_laws.py: PASS 1 s
+hm i1 i1_laws.py --negative: PASS 1 s
+hm i1 i1_negative.py: PASS 3 s
+hm i2 i2_residual.py --negative: PASS 4 s
+hm i4 i4_exchange.py --negative: PASS 1 s
+hm i4 i4_exchange.py: PASS 0 s
+hm i5 i5_rank.py --negative: PASS 2 s
+hm i8 i8_pairct.py --negative: PASS 21 s
+hm i8 i8_pairct.py --compare50: PASS 9 s
+hm i3 i3_scan.py --negative: PASS 27 s
+hm on a tampered expected output: FAIL (as it must)

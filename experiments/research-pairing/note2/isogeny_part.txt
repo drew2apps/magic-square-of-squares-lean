@@ -1,0 +1,7 @@
+146 ('08', "S' from factorisations = {b in Sel2 : b_r = 1}", True)
+29484 ('08', 'Theta = pairing', True)
+1198 ('08', "a in S'", True)
+133 ('LU', "S' from factorisations = {b in Sel2 : b_r = 1}", True)
+11928 ('LU', 'Theta = pairing', True)
+812 ('LU', "a in S'", True)
+dim S': {('08', 1): 7, ('08', 2): 29, ('08', 3): 30, ('08', 4): 41, ('08', 5): 23, ('08', 6): 13, ('08', 7): 3, ('LU', 1): 14, ('LU', 2): 42, ('LU', 3): 37, ('LU', 4): 21, ('LU', 5): 14, ('LU', 6): 5}

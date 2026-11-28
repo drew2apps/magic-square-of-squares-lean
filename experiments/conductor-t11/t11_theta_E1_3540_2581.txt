@@ -1,0 +1,11 @@
+t11_theta.py: Fisher's higher descents on E1(3540,2581) (arXiv:1509.03234 Sects. 2, 3, 7), exact. Written by an AI model (build agent t11), not read by a person. Experiment, not counted.
+E1(3540,2581): (3540,2581) [CENSUS5000], (6121,959) [CENSUS7000, partner]
+  (0) model rebuilt from (m, n, d) by the census code = I5's minimal model [0, -1, 0, 16899659070115573331857545392554393999753919, -4577250886777635699050726927293136713005349082509501848957193919]; E: y^2 = x(x^2 + a x + b), a = 809064137936339477276, b = 17117853996547130715897347965330891639880644 (a^2 - 4b = -square)
+      a point of infinite order on E (PARI ellrank as a hint; on the curve, n G != O for n <= 12): rank >= 1
+  (1) rank_indep: |S'_1| = 8 (E side, d | b), |S_1| = 4 (E' side, d' | b'); after the second descent dim S'_2 <= 3, dim S_2 <= 2; known images: dim 1 (E side), 2 (E' side); exact bound 3 + 2 - 2 = 3
+      open cosets: E side [234494823676754, 522222777812402, 1890333437563521337]; E' side []
+  type A: two open classes on the E side, the E' side all known; Theta'_3 needs one pushout over Q(sqrt w), w one of the six classes below; the cone fields of a level-3 lift of y are Q(sqrt y) and Q(sqrt y b0) (Fisher Sect. 5; rank_fisher5 (4'))
+    y = 234494823676754: Q(sqrt 234494823676754): h = 8, R = 2609334.9; Q(sqrt 79374105320574801874706): h = 320, R = 973368178.0   (PARI quadclassunit, GRH, for information only)
+    y = 522222777812402: Q(sqrt 522222777812402): h = 40, R = 396790.8; Q(sqrt 951286938875282): h = 32, R = 822600.1   (PARI quadclassunit, GRH, for information only)
+    y = 1890333437563521337: Q(sqrt 1890333437563521337): h = 8, R = 311646540.9; Q(sqrt 2461578531832805113): h = 8, R = 416279688.8   (PARI quadclassunit, GRH, for information only)
+  RESULT E1(3540,2581): NOT ATTEMPTED (field too large): every cone field is real quadratic with regulator >= 396790, where the conic points have coefficients of more than 10^5 digits; bound stays 3

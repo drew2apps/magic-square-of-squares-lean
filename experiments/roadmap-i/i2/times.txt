@@ -1,0 +1,13 @@
+i2_shape i1_classkept exit=137 1163 s
+i2_shape needgood worker 1 of 2 exit=137 1914 s
+i2_shape needgood worker 0 of 2 exit=143 2187 s
+i2_shape needgood worker 0 of 1 exit=143 7925 s
+i2_shape needgood worker 0 of 1 exit=143 370 s
+i2_shape needgood worker 0 of 1 exit=143 19 s
+i2_shape needgood worker 0 of 2 exit=143 15674 s
+i2_shape needgood worker 1 of 2 exit=143 15674 s
+i2_shape needgood worker 0 of 1 exit=0 11767 s
+i2_shape needgood worker 0 of 2 exit=0 6155 s
+i2_residual worker 0 of 1 exit=0 7352 s
+i2_residual merge exit=0
+i2_shape needgood worker 1 of 2 exit=0 12430 s

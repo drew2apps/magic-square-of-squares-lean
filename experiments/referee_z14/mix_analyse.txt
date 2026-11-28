@@ -1,0 +1,38 @@
+# z14 summary. Written by an AI model (reviewer z14); not read by a person.
+== mixtest: 134 curves (ratios outside the pilot, each its own curve up to isomorphism); kinds {('nd', 'opposite'): 80, ('tsq', 'odd-odd'): 6, ('nd', 'odd-odd'): 40, ('sq', 'opposite'): 8}
+model = t10 Pair (0L, 0U, 8L, 8U) on all curves: True
+dim Sel^2 histogram: {3: 9, 4: 25, 5: 42, 6: 26, 7: 16, 8: 11, 9: 4, 11: 1}
+DFull basis matrix: failures 0 ; diagonal all 1: True ; symmetry checks Counter({True: 402})
+(a) cassels.py vs DFull (bilinear), pairs (a, b): {'agree': 16401}
+    a per curve: 7..24 (all of Sel^2 on 34 curves)
+    first disagreements/failures: []
+    cassels.py seed 1 vs seed 77 (equal, equal to DFull): {'(True, True)': 1608}
+    DFull direct on non-basis a vs bilinear extension: {'agree': 1480}
+(b) Redei form vs DFull, pairs (d, beta) of V = {d: (1,d,d) in Sel^2}: {'agree': 863, 'insoluble': 4279, 'insoluble, pairing -1': 1266, 'insoluble, pairing 1': 3013, 'pairing -1': 169, 'pairing 1': 694, 'soluble': 863, 'solutions': 6904, 'solutions with p | x0 + y0 s': 417}
+    DFull direct on 3 Redei pairs per curve vs bilinear: {'agree': 320}
+    pairs with d = beta among the sampled Redei pairs: at most 1176 (all pairs taken on the 110 curves with (2^dim V - 1)^2 <= 150)
+    curves by dim V: {1: 41, 2: 47, 3: 22, 4: 12, 5: 9, 6: 2, 8: 1} ; soluble pairs with pairing -1 on 21 curves
+    curves with at least one soluble pair: 93; distinct soluble pairs are distinct by construction (sampled without repetition per curve)
+    first disagreements: []
+(c) V inside N = norms from Q(sqrt W): Counter({True: 134}) ; V supported on -1 and the primes of 2AB: Counter({True: 134})
+    (dim V, dim N on <-1, primes of 2AB>): {(1, 3): 7, (1, 4): 7, (1, 5): 19, (1, 6): 7, (1, 8): 1, (2, 4): 3, (2, 5): 10, (2, 6): 11, (2, 7): 15, (2, 8): 6, (2, 9): 1, (2, 10): 1, (3, 4): 1, (3, 5): 6, (3, 6): 5, (3, 7): 7, (3, 8): 1, (3, 9): 2, (4, 5): 1, (4, 6): 2, (4, 7): 5, (4, 8): 3, (4, 9): 1, (5, 6): 1, (5, 7): 2, (5, 8): 3, (5, 9): 2, (5, 10): 1, (6, 8): 1, (6, 9): 1, (8, 10): 1}
+    V = N (on <-1, primes of 2AB>) on 0 of 134 curves
+    note conic R+ s^2 - R- D^2 = 2AB d w^2: (d in N, qfsolve found a point): {'(False, False)': 2594, '(True, True)': 622}
+    odd primes of W with odd exponent, residues mod 24 seen: [1, 13] ; W with 2 to an odd power: 0
+== Theorem B (EXPLORATION_5 §1) vs DFull: 148 curves on 37 ratios
+  08           {'DFull direct = bilinear': 66, 'agree': 200, 'd = beta (trivial)': 125, 'pairing -1': 12, 'pairing 1': 188, 'skipped: beta not a norm from Q(sqrt d)': 783}
+  LU           {'DFull direct = bilinear': 54, 'agree': 98, 'd = beta (trivial)': 103, 'pairing -1': 8, 'pairing 1': 90, 'skipped: beta not a norm from Q(sqrt d)': 496}
+  mix          {'DFull direct = bilinear': 52, 'agree': 145, 'd = beta (trivial)': 83, 'pairing -1': 33, 'pairing 1': 112, 'skipped: beta not a norm from Q(sqrt d)': 573}
+  mix rotated  {'DFull direct = bilinear': 11, 'agree': 11, 'd = beta (trivial)': 11, 'pairing 1': 11}
+  first disagreements: []
+  DFull direct calls 183, equal to the bilinear value on 183; tested 454, agree 454, value -1 on 53; skipped (beta not a norm) 1852; local factor changed between two points: 0
+  ratios by kind: {('nd', 'opposite'): 20, ('nd', 'odd-odd'): 10, ('sq', 'opposite'): 7}
+== rank0 (EXPLORATION_3 §4) recomputed with full_selmer2 + DFull
+  nd5: 150 ratios (150 distinct): {'bound E_A = 0': 37, 'bound twist = 0': 34, 'diag not 1': 1, 'min = 0': 62, 'pairing failures': 4, 'parity (0, 0)': 36, 'parity (0, 1)': 47, 'parity (1, 0)': 41, 'parity (1, 1)': 26}
+  sq5: 80 ratios (80 distinct): {'bound E_A = 0': 24, 'bound twist = 0': 26, 'diag not 1': 0, 'min = 0': 40, 'pairing failures': 0, 'parity (0, 0)': 19, 'parity (0, 1)': 23, 'parity (1, 0)': 18, 'parity (1, 1)': 20}
+  nd6: 150 ratios (150 distinct): {'bound E_A = 0': 43, 'bound twist = 0': 47, 'diag not 1': 1, 'min = 0': 77, 'pairing failures': 1, 'parity (0, 0)': 40, 'parity (0, 1)': 37, 'parity (1, 0)': 41, 'parity (1, 1)': 32}
+  (dim, bound) on both curves equal to explore3 bound() (e3_rank0_perratio.jsonl): {('nd5', True): 150, ('nd6', True): 150, ('sq5', True): 80}
+  differences: []
+  explore3 bound() on nd5 (150 ratios): {'bound E_A = 0': 37, 'bound twist = 0': 34, 'min = 0': 62, 'parity (0, 0)': 36, 'parity (0, 1)': 47, 'parity (1, 0)': 41, 'parity (1, 1)': 26}
+  explore3 bound() on sq5 (80 ratios): {'bound E_A = 0': 24, 'bound twist = 0': 26, 'min = 0': 40, 'parity (0, 0)': 19, 'parity (0, 1)': 23, 'parity (1, 0)': 18, 'parity (1, 1)': 20}
+  explore3 bound() on nd6 (150 ratios): {'bound E_A = 0': 43, 'bound twist = 0': 47, 'min = 0': 77, 'parity (0, 0)': 40, 'parity (0, 1)': 37, 'parity (1, 0)': 41, 'parity (1, 1)': 32}

@@ -1,0 +1,12 @@
+t11_theta.py wall times on this machine (2 cores shared with other jobs, load average about 10; not in the outputs)
+E1(10512,145)-     70 s (142 s on a re-run under heavier load)
+Sig+(22057,2351)  117 s
+E1(4440,2231)      72 s
+E1(3540,2581)      20 s
+D1(12007,1799)     16 s
+E1(6480,4961)      36 s
+Sig+(12204,9853)   34 s
+E1(10512,145)+     34 s
+E1(8249,3720)     407 s (Theta_4 with K3, K5: three level-4 lifts)
+--negative         29 s
+finders (explore/, PARI): level-3 lifts 2-13 s each; conic points 1 s to 60 s where found; see NOTES.md for the ones that did not finish

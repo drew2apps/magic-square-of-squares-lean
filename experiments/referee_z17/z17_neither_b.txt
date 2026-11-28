@@ -1,0 +1,10 @@
+z17 (part b): the "neither" closures of I8. Written by an AI model (reviewer z17); not read by a person. PARI [2, 17, 4].
+(18313,120) Sig+: ellrank effort 1 [1,1] s=2 points 1; rootno -1; torsion [2]; conductor digits 59
+  dm_pari.rank_bounds (efforts 0, 1 over the isogeny class): [1,1]
+  isogeny class (PARI): 2 curves; rational 2-torsion points per curve [1, 1]
+(20056,19825) Sig-: ellrank effort 1 [1,1] s=4 points 1; rootno -1; torsion [2]; conductor digits 61
+  dm_pari.rank_bounds (efforts 0, 1 over the isogeny class): [1,1]
+  isogeny class (PARI): 2 curves; rational 2-torsion points per curve [1, 1]
+(39881,231) E: ellrank effort 1 [1,1] s=4 points 1; rootno -1; torsion [2, 2]; conductor digits 33
+  dm_pari.rank_bounds (efforts 0, 1 over the isogeny class): [1,1]
+  isogeny class (PARI): 6 curves; rational 2-torsion points per curve [3, 1, 1, 3, 1, 1]

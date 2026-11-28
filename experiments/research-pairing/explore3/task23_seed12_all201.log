@@ -1,0 +1,285 @@
+symbolic identity R+ s^2 - R- D^2 - 2ABd*(dT^2+8C^2TZ+(16A^2B^2/d)Z^2) == 0 : True
+ratio (465, 416) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 31, 881] | Sel2 dim (mine,file) 8 8 | pairs 14 t=0
+ratio (511, 260) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 73, 257] | Sel2 dim (mine,file) 8 8 | pairs 14 t=0
+ratio (771, 251) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 73, 257] | Sel2 dim (mine,file) 8 8 | pairs 14 t=1
+ratio (881, 49) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 31, 881] | Sel2 dim (mine,file) 8 8 | pairs 14 t=1
+ratio (988, 525) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 17, 89, 463] | Sel2 dim (mine,file) 9 9 | pairs 14 t=1
+ratio (1063, 260) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 2, 73, 7441] | Sel2 dim (mine,file) 7 7 | pairs 14 t=2
+ratio (1323, 803) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 2, 73, 7441] | Sel2 dim (mine,file) 7 7 | pairs 14 t=2
+ratio (1513, 463) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 17, 89, 463] | Sel2 dim (mine,file) 9 9 | pairs 14 t=2
+ratio (1780, 173) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 2759, 697438] | Sel2 dim (mine,file) 6 6 | pairs 14 t=3
+ratio (1852, 1155) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 62, 287, 679, 3241] | Sel2 dim (mine,file) 9 9 | pairs 14 t=3
+ratio (1953, 1000) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 953, 5906] | Sel2 dim (mine,file) 8 8 | pairs 14 t=3
+ratio (1953, 1607) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 2759, 697438] | Sel2 dim (mine,file) 6 6 | pairs 14 t=4
+ratio (2000, 79) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 79, 113] | Sel2 dim (mine,file) 8 8 | pairs 14 t=4
+ratio (2040, 959) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 23, 1598, 274, 50983] | Sel2 dim (mine,file) 9 9 | pairs 14 t=4
+ratio (2079, 1921) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 79, 113] | Sel2 dim (mine,file) 8 8 | pairs 14 t=5
+ratio (2260, 1547) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 17, 23, 217, 329, 791] | Sel2 dim (mine,file) 10 10 | pairs 14 t=5
+ratio (2372, 2085) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 14, 182737] | Sel2 dim (mine,file) 6 6 | pairs 14 t=6
+ratio (2395, 204) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 17, 23, 113, 313, 958] | Sel2 dim (mine,file) 10 10 | pairs 14 t=6
+ratio (2436, 1805) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 1262, 4241] | Sel2 dim (mine,file) 6 6 | pairs 14 t=7
+ratio (2567, 1344) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 5134, 1223, 7822] | Sel2 dim (mine,file) 9 9 | pairs 14 t=7
+ratio (2599, 2191) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 17, 23, 113, 313, 958] | Sel2 dim (mine,file) 10 10 | pairs 14 t=7
+ratio (2600, 2103) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 71, 4703] | Sel2 dim (mine,file) 8 8 | pairs 14 t=8
+ratio (2611, 2556) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 14, 142, 10334] | Sel2 dim (mine,file) 7 7 | pairs 14 t=8
+ratio (2679, 1400) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 329, 2558, 4079] | Sel2 dim (mine,file) 7 7 | pairs 14 t=8
+ratio (2717, 1260) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 217, 574, 658, 1358] | Sel2 dim (mine,file) 8 8 | pairs 14 t=9
+ratio (2745, 2528) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 17143, 2288482] | Sel2 dim (mine,file) 6 6 | pairs 14 t=9
+ratio (2775, 728) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 23, 31, 178, 113] | Sel2 dim (mine,file) 9 9 | pairs 14 t=9
+ratio (2821, 2676) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 23, 31, 223, 239] | Sel2 dim (mine,file) 10 10 | pairs 14 t=10
+ratio (2855, 288) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 238, 1057, 3143] | Sel2 dim (mine,file) 7 7 | pairs 14 t=10
+ratio (2859, 2380) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 14, 34, 29698] | Sel2 dim (mine,file) 7 7 | pairs 14 t=10
+ratio (2909, 1736) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 17, 23, 62, 1858] | Sel2 dim (mine,file) 9 9 | pairs 14 t=11
+ratio (2915, 332) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 82, 191] | Sel2 dim (mine,file) 8 8 | pairs 14 t=11
+ratio (2920, 13) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 17, 73] | Sel2 dim (mine,file) 8 8 | pairs 14 t=11
+ratio (2933, 2907) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 17, 73] | Sel2 dim (mine,file) 8 8 | pairs 14 t=12
+ratio (2953, 953) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 953, 5906] | Sel2 dim (mine,file) 8 8 | pairs 14 t=12
+ratio (2999, 1081) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 23, 1598, 274, 50983] | Sel2 dim (mine,file) 9 9 | pairs 14 t=13
+ratio (3007, 697) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 62, 287, 679, 3241] | Sel2 dim (mine,file) 9 9 | pairs 14 t=13
+ratio (3073, 412) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 17, 82, 103, 439, 887] | Sel2 dim (mine,file) 10 10 | pairs 14 t=14
+ratio (3136, 1825) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 23, 82, 146] | Sel2 dim (mine,file) 8 8 | pairs 14 t=14
+ratio (3143, 2567) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 238, 1057, 3143] | Sel2 dim (mine,file) 7 7 | pairs 14 t=15
+ratio (3163, 3116) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 23, 41, 47] | Sel2 dim (mine,file) 9 9 | pairs 14 t=15
+ratio (3165, 988) gens 10 dim of {d: (1,d,d) ELS} = 3 basis [-1, 14, 622] | Sel2 dim (mine,file) 6 6 | pairs 14 t=16
+ratio (3167, 420) gens 10 dim of {d: (1,d,d) ELS} = 3 basis [-1, 82, 22169] | Sel2 dim (mine,file) 6 6 | pairs 14 t=16
+ratio (3195, 2908) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 17, 82, 25489, 103234] | Sel2 dim (mine,file) 8 8 | pairs 14 t=16
+ratio (3220, 1027) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 34, 23, 62, 79, 274] | Sel2 dim (mine,file) 10 10 | pairs 14 t=16
+ratio (3236, 1755) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 23, 31, 809, 1481] | Sel2 dim (mine,file) 10 10 | pairs 14 t=17
+ratio (3247, 2583) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 82, 191] | Sel2 dim (mine,file) 8 8 | pairs 14 t=17
+ratio (3315, 2188) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 238, 46, 5503] | Sel2 dim (mine,file) 7 7 | pairs 14 t=18
+ratio (3320, 2303) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 1582, 39361] | Sel2 dim (mine,file) 6 6 | pairs 14 t=18
+ratio (3360, 2257) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 14, 82, 151111] | Sel2 dim (mine,file) 7 7 | pairs 14 t=18
+ratio (3395, 1504) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 23, 62, 94, 142, 194] | Sel2 dim (mine,file) 10 10 | pairs 14 t=18
+ratio (3419, 2492) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 7, 23, 178, 206, 257, 526] | Sel2 dim (mine,file) 10 10 | pairs 14 t=19
+ratio (3448, 105) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 862, 6686] | Sel2 dim (mine,file) 8 8 | pairs 14 t=19
+ratio (3471, 1960) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 178, 21154, 38017] | Sel2 dim (mine,file) 7 7 | pairs 14 t=20
+ratio (3485, 2661) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 17, 82, 103, 439, 887] | Sel2 dim (mine,file) 10 10 | pairs 14 t=20
+ratio (3500, 269) gens 8 dim of {d: (1,d,d) ELS} = 2 basis [-1, 2706142] | Sel2 dim (mine,file) 6 6 | pairs 9 t=21
+ratio (3503, 2047) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 23, 31, 178, 113] | Sel2 dim (mine,file) 9 9 | pairs 14 t=21
+ratio (3553, 3343) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 862, 6686] | Sel2 dim (mine,file) 8 8 | pairs 14 t=21
+ratio (3587, 2747) gens 10 dim of {d: (1,d,d) ELS} = 3 basis [-1, 82, 22169] | Sel2 dim (mine,file) 6 6 | pairs 14 t=22
+ratio (3692, 3269) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 7, 47, 71, 13922] | Sel2 dim (mine,file) 8 8 | pairs 14 t=22
+ratio (3700, 3581) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 14, 17, 809] | Sel2 dim (mine,file) 7 7 | pairs 14 t=22
+ratio (3708, 1885) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 47, 103, 12761] | Sel2 dim (mine,file) 8 8 | pairs 14 t=22
+ratio (3769, 3231) gens 8 dim of {d: (1,d,d) ELS} = 2 basis [-1, 2706142] | Sel2 dim (mine,file) 6 6 | pairs 9 t=23
+ratio (3807, 713) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 17, 23, 217, 329, 791] | Sel2 dim (mine,file) 10 10 | pairs 14 t=23
+ratio (3856, 615) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 17, 82, 482, 263, 926] | Sel2 dim (mine,file) 9 9 | pairs 14 t=24
+ratio (3900, 707) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 17, 217, 103, 271] | Sel2 dim (mine,file) 9 9 | pairs 14 t=24
+ratio (3911, 1223) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 5134, 1223, 7822] | Sel2 dim (mine,file) 9 9 | pairs 14 t=25
+ratio (3977, 1457) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 217, 574, 658, 1358] | Sel2 dim (mine,file) 8 8 | pairs 14 t=25
+ratio (4079, 1279) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 329, 2558, 4079] | Sel2 dim (mine,file) 7 7 | pairs 14 t=26
+ratio (4153, 2177) gens 10 dim of {d: (1,d,d) ELS} = 3 basis [-1, 14, 622] | Sel2 dim (mine,file) 6 6 | pairs 14 t=26
+ratio (4183, 900) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 23, 47, 89] | Sel2 dim (mine,file) 10 10 | pairs 14 t=26
+ratio (4225, 896) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 569, 3329] | Sel2 dim (mine,file) 8 8 | pairs 14 t=27
+ratio (4233, 2392) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 17, 23, 263] | Sel2 dim (mine,file) 9 9 | pairs 14 t=27
+ratio (4241, 631) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 1262, 4241] | Sel2 dim (mine,file) 6 6 | pairs 14 t=27
+ratio (4247, 2193) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 34, 23, 62, 79, 274] | Sel2 dim (mine,file) 10 10 | pairs 14 t=27
+ratio (4333, 508) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 238, 94, 103, 127] | Sel2 dim (mine,file) 8 8 | pairs 14 t=28
+ratio (4348, 3247) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 238, 2674, 22754, 2174] | Sel2 dim (mine,file) 9 9 | pairs 14 t=29
+ratio (4404, 2197) gens 9 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 23, 287, 367, 2207] | Sel2 dim (mine,file) 9 9 | pairs 14 t=29
+ratio (4424, 2057) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 17, 1106, 3682, 45367] | Sel2 dim (mine,file) 8 8 | pairs 14 t=29
+ratio (4457, 287) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 14, 182737] | Sel2 dim (mine,file) 6 6 | pairs 14 t=30
+ratio (4471, 3241) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 17, 82, 482, 263, 926] | Sel2 dim (mine,file) 9 9 | pairs 14 t=30
+ratio (4539, 164) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 238, 82, 623, 65842] | Sel2 dim (mine,file) 8 8 | pairs 14 t=31
+ratio (4545, 656) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 82, 1486, 7778] | Sel2 dim (mine,file) 8 8 | pairs 14 t=31
+ratio (4600, 1163) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 23, 113] | Sel2 dim (mine,file) 8 8 | pairs 14 t=32
+ratio (4607, 3193) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 17, 217, 103, 271] | Sel2 dim (mine,file) 9 9 | pairs 14 t=32
+ratio (4641, 2480) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 31, 2161, 7121] | Sel2 dim (mine,file) 10 10 | pairs 14 t=33
+ratio (4645, 1173) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 17, 23, 62, 1858] | Sel2 dim (mine,file) 9 9 | pairs 14 t=33
+ratio (4648, 1625) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 2, 4879, 51391] | Sel2 dim (mine,file) 7 7 | pairs 14 t=34
+ratio (4703, 497) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 71, 4703] | Sel2 dim (mine,file) 8 8 | pairs 14 t=34
+ratio (4703, 4375) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 238, 82, 623, 65842] | Sel2 dim (mine,file) 8 8 | pairs 14 t=34
+ratio (4807, 3600) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 23, 2414, 2402] | Sel2 dim (mine,file) 8 8 | pairs 14 t=35
+ratio (4828, 957) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 71, 79, 89] | Sel2 dim (mine,file) 10 10 | pairs 14 t=35
+ratio (4841, 3825) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 238, 94, 103, 127] | Sel2 dim (mine,file) 8 8 | pairs 14 t=36
+ratio (4899, 1891) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 23, 62, 94, 142, 194] | Sel2 dim (mine,file) 10 10 | pairs 14 t=36
+ratio (4920, 2561) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 41, 337, 7481] | Sel2 dim (mine,file) 9 9 | pairs 14 t=37
+ratio (4943, 4368) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 161, 4943, 130354] | Sel2 dim (mine,file) 7 7 | pairs 14 t=38
+ratio (4961, 1311) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 23, 82, 146] | Sel2 dim (mine,file) 8 8 | pairs 14 t=38
+ratio (4967, 1040) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 119, 4967, 42049] | Sel2 dim (mine,file) 8 8 | pairs 14 t=38
+ratio (4976, 2821) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 7, 46, 62, 226, 622, 862] | Sel2 dim (mine,file) 10 10 | pairs 14 t=39
+ratio (4991, 1481) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 23, 31, 809, 1481] | Sel2 dim (mine,file) 10 10 | pairs 14 t=39
+ratio (4997, 2260) gens 12 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 322, 82, 113, 263] | Sel2 dim (mine,file) 9 9 | pairs 14 t=40
+ratio (5105, 1416) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 62, 13042] | Sel2 dim (mine,file) 8 8 | pairs 14 t=40
+ratio (5265, 5032) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 2, 3961, 175049] | Sel2 dim (mine,file) 7 7 | pairs 14 t=41
+ratio (5500, 2051) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 14, 5787422] | Sel2 dim (mine,file) 6 6 | pairs 14 t=41
+ratio (5623, 1017) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 1582, 39361] | Sel2 dim (mine,file) 6 6 | pairs 14 t=41
+ratio (5673, 4700) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 322, 62, 287, 329] | Sel2 dim (mine,file) 8 8 | pairs 14 t=42
+ratio (5763, 3437) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 23, 113] | Sel2 dim (mine,file) 8 8 | pairs 14 t=42
+ratio (5801, 4681) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 217, 1057, 81214] | Sel2 dim (mine,file) 7 7 | pairs 14 t=43
+ratio (6391, 1560) gens 10 dim of {d: (1,d,d) ELS} = 3 basis [-1, 7, 76822562] | Sel2 dim (mine,file) 6 6 | pairs 14 t=43
+ratio (6868, 5005) gens 12 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 23, 31, 383] | Sel2 dim (mine,file) 9 9 | pairs 14 t=43
+ratio (6961, 423) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 7, 47, 71, 13922] | Sel2 dim (mine,file) 8 8 | pairs 14 t=43
+ratio (7068, 5749) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 2638, 3662] | Sel2 dim (mine,file) 8 8 | pairs 14 t=44
+ratio (7096, 5679) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 73, 559697] | Sel2 dim (mine,file) 8 8 | pairs 14 t=45
+ratio (7340, 2741) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 17, 146, 367, 1186] | Sel2 dim (mine,file) 9 9 | pairs 14 t=45
+ratio (7416, 3175) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 178, 1442, 127, 59374] | Sel2 dim (mine,file) 9 9 | pairs 14 t=46
+ratio (7679, 6120) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 238, 1559, 27598] | Sel2 dim (mine,file) 7 7 | pairs 14 t=46
+ratio (8400, 2327) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 2, 7, 6073] | Sel2 dim (mine,file) 7 7 | pairs 14 t=46
+ratio (8587, 1020) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 23, 31, 47] | Sel2 dim (mine,file) 10 10 | pairs 14 t=47
+ratio (8633, 4977) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 1106, 178, 194, 914, 19054] | Sel2 dim (mine,file) 9 9 | pairs 14 t=47
+ratio (8957, 8340) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 353, 617] | Sel2 dim (mine,file) 8 8 | pairs 14 t=48
+ratio (9055, 3664) gens 10 dim of {d: (1,d,d) ELS} = 2 basis [-1, 15237362] | Sel2 dim (mine,file) 5 5 | pairs 9 t=49
+ratio (9103, 4480) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 391, 1598, 9103] | Sel2 dim (mine,file) 7 7 | pairs 14 t=49
+ratio (9144, 3295) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 127, 1777, 5849] | Sel2 dim (mine,file) 8 8 | pairs 14 t=49
+ratio (9191, 7688) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 7, 62, 334, 16879] | Sel2 dim (mine,file) 8 8 | pairs 14 t=50
+ratio (9204, 6203) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 2201, 3001] | Sel2 dim (mine,file) 8 8 | pairs 14 t=50
+ratio (9220, 6539) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 34, 1442, 766, 7042] | Sel2 dim (mine,file) 8 8 | pairs 14 t=51
+ratio (9321, 2720) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 17, 46, 82, 239, 12041] | Sel2 dim (mine,file) 10 10 | pairs 14 t=51
+ratio (9401, 8207) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 17, 62, 142, 1106, 199] | Sel2 dim (mine,file) 9 9 | pairs 14 t=52
+ratio (9532, 4445) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 127, 10871, 33362, 71218] | Sel2 dim (mine,file) 8 8 | pairs 14 t=53
+ratio (9751, 5084) gens 12 dim of {d: (1,d,d) ELS} = 8 basis [-1, 2, 7, 23, 31, 41, 199, 359] | Sel2 dim (mine,file) 11 11 | pairs 14 t=53
+ratio (9815, 5648) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 151, 353, 21761] | Sel2 dim (mine,file) 9 9 | pairs 14 t=54
+ratio (9913, 9673) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 322, 862, 7966, 9793] | Sel2 dim (mine,file) 9 9 | pairs 14 t=54
+ratio (10060, 589) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 217, 82, 21298, 503] | Sel2 dim (mine,file) 9 9 | pairs 14 t=55
+ratio (10223, 1543) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 1543, 20446] | Sel2 dim (mine,file) 8 8 | pairs 14 t=55
+ratio (10359, 10088) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 161, 889, 1897, 781529] | Sel2 dim (mine,file) 9 9 | pairs 14 t=56
+ratio (10496, 5485) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 41, 1522, 1097] | Sel2 dim (mine,file) 9 9 | pairs 14 t=57
+ratio (10727, 10168) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 119, 217, 41, 1393, 4417] | Sel2 dim (mine,file) 10 10 | pairs 14 t=57
+ratio (10840, 927) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 322, 287, 1442, 1897, 862] | Sel2 dim (mine,file) 9 9 | pairs 14 t=58
+ratio (10915, 84) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 647, 21662] | Sel2 dim (mine,file) 8 8 | pairs 14 t=59
+ratio (10927, 1536) gens 8 dim of {d: (1,d,d) ELS} = 4 basis [-1, 1442, 446, 65737] | Sel2 dim (mine,file) 8 8 | pairs 14 t=59
+ratio (11063, 4841) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 23, 47, 71] | Sel2 dim (mine,file) 10 10 | pairs 14 t=59
+ratio (11125, 9539) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 2, 287, 623] | Sel2 dim (mine,file) 8 8 | pairs 14 t=60
+ratio (11239, 6360) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 82, 22478] | Sel2 dim (mine,file) 8 8 | pairs 14 t=60
+ratio (11315, 8652) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 62, 82, 15038, 35551, 194399] | Sel2 dim (mine,file) 10 10 | pairs 14 t=61
+ratio (11336, 1705) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 161, 217, 9631] | Sel2 dim (mine,file) 8 8 | pairs 14 t=62
+ratio (11425, 7952) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 23, 142, 302, 914, 4306] | Sel2 dim (mine,file) 10 10 | pairs 14 t=62
+ratio (11492, 5115) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 119, 31, 6377, 16607] | Sel2 dim (mine,file) 9 9 | pairs 14 t=63
+ratio (11552, 7327) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 17, 31, 431] | Sel2 dim (mine,file) 9 9 | pairs 14 t=64
+ratio (11596, 7403) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 446, 4193, 4222] | Sel2 dim (mine,file) 7 7 | pairs 14 t=64
+ratio (11719, 3751) gens 11 dim of {d: (1,d,d) ELS} = 3 basis [-1, 7, 726578] | Sel2 dim (mine,file) 6 6 | pairs 14 t=64
+ratio (11744, 105) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 34, 41, 206, 113, 367] | Sel2 dim (mine,file) 10 10 | pairs 14 t=65
+ratio (11849, 11639) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 34, 41, 206, 113, 367] | Sel2 dim (mine,file) 10 10 | pairs 14 t=65
+ratio (11960, 6919) gens 13 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 23, 31, 71] | Sel2 dim (mine,file) 10 10 | pairs 14 t=66
+ratio (12028, 2875) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 7, 46, 62, 194, 113, 4258] | Sel2 dim (mine,file) 10 10 | pairs 14 t=66
+ratio (12121, 8249) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 322, 3689, 194, 113] | Sel2 dim (mine,file) 8 8 | pairs 14 t=67
+ratio (12191, 984) gens 11 dim of {d: (1,d,d) ELS} = 8 basis [-1, 14, 17, 62, 82, 146, 334, 3202] | Sel2 dim (mine,file) 11 11 | pairs 14 t=68
+ratio (12231, 5591) gens 10 dim of {d: (1,d,d) ELS} = 2 basis [-1, 302] | Sel2 dim (mine,file) 6 6 | pairs 9 t=68
+ratio (12231, 10631) gens 9 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 1633, 3473, 244513] | Sel2 dim (mine,file) 9 9 | pairs 14 t=68
+ratio (12269, 7292) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 99698, 1823] | Sel2 dim (mine,file) 9 9 | pairs 14 t=69
+ratio (12281, 2583) gens 9 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 41, 929, 12281] | Sel2 dim (mine,file) 9 9 | pairs 14 t=70
+ratio (12284, 11865) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 82, 113] | Sel2 dim (mine,file) 8 8 | pairs 14 t=70
+ratio (12497, 10521) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 7, 34, 4173998] | Sel2 dim (mine,file) 7 7 | pairs 14 t=71
+ratio (12627, 8827) gens 12 dim of {d: (1,d,d) ELS} = 6 basis [-1, 7, 34, 46, 194, 631] | Sel2 dim (mine,file) 9 9 | pairs 14 t=71
+ratio (12675, 5644) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 9401, 1513, 18319] | Sel2 dim (mine,file) 8 8 | pairs 14 t=72
+ratio (12705, 4448) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 17, 23, 718, 2018] | Sel2 dim (mine,file) 9 9 | pairs 14 t=73
+ratio (12719, 5391) gens 10 dim of {d: (1,d,d) ELS} = 2 basis [-1, 15237362] | Sel2 dim (mine,file) 5 5 | pairs 9 t=73
+ratio (12797, 5580) gens 12 dim of {d: (1,d,d) ELS} = 8 basis [-1, 14, 17, 23, 62, 94, 191, 1031] | Sel2 dim (mine,file) 11 11 | pairs 14 t=73
+ratio (12929, 6169) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 217, 1393, 12929] | Sel2 dim (mine,file) 8 8 | pairs 14 t=74
+ratio (12959, 9) gens 8 dim of {d: (1,d,d) ELS} = 2 basis [-1, 25918] | Sel2 dim (mine,file) 8 8 | pairs 9 t=75
+ratio (12961, 12561) gens 10 dim of {d: (1,d,d) ELS} = 3 basis [-1, 158, 12761] | Sel2 dim (mine,file) 6 6 | pairs 14 t=75
+ratio (13125, 8444) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 4222, 3256919] | Sel2 dim (mine,file) 9 9 | pairs 14 t=75
+ratio (13271, 1519) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 34, 46, 62, 113, 1154] | Sel2 dim (mine,file) 10 10 | pairs 14 t=76
+ratio (13337, 4888) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 47, 71, 13337] | Sel2 dim (mine,file) 10 10 | pairs 14 t=76
+ratio (13423, 5736) gens 10 dim of {d: (1,d,d) ELS} = 8 basis [-1, 14, 17, 23, 62, 478, 433, 7687] | Sel2 dim (mine,file) 11 11 | pairs 14 t=77
+ratio (13439, 1352) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2686, 1513, 1057, 71842] | Sel2 dim (mine,file) 8 8 | pairs 14 t=78
+ratio (13489, 6271) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 41, 47, 401, 6271] | Sel2 dim (mine,file) 10 10 | pairs 14 t=78
+ratio (13500, 4231) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 23, 31, 4231] | Sel2 dim (mine,file) 10 10 | pairs 14 t=79
+ratio (13571, 420) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 238, 287, 823, 92057] | Sel2 dim (mine,file) 8 8 | pairs 14 t=79
+ratio (13599, 2039) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 14, 17, 6161858] | Sel2 dim (mine,file) 7 7 | pairs 14 t=80
+ratio (13617, 2569) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 14, 65326] | Sel2 dim (mine,file) 7 7 | pairs 14 t=80
+ratio (13671, 6472) gens 9 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 23, 19406, 50158, 624433] | Sel2 dim (mine,file) 9 9 | pairs 14 t=80
+ratio (13780, 11543) gens 12 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 17, 2231, 367] | Sel2 dim (mine,file) 9 9 | pairs 14 t=81
+ratio (13820, 11067) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 1054, 1394, 607, 46801] | Sel2 dim (mine,file) 9 9 | pairs 14 t=81
+ratio (13940, 7189) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 119, 41, 553] | Sel2 dim (mine,file) 8 8 | pairs 14 t=82
+ratio (14008, 9815) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 1751, 17969, 4193, 2647] | Sel2 dim (mine,file) 9 9 | pairs 14 t=83
+ratio (14025, 6233) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 17, 322, 542, 974, 1447] | Sel2 dim (mine,file) 9 9 | pairs 14 t=83
+ratio (14037, 6916) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 20953, 753319, 14242] | Sel2 dim (mine,file) 7 7 | pairs 14 t=84
+ratio (14349, 10660) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 119, 41, 89, 1967, 1037911] | Sel2 dim (mine,file) 10 10 | pairs 14 t=84
+ratio (14483, 2300) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 23, 31] | Sel2 dim (mine,file) 9 9 | pairs 14 t=85
+ratio (14495, 11496) gens 11 dim of {d: (1,d,d) ELS} = 8 basis [-1, 2, 7, 47, 79, 223, 479, 2999] | Sel2 dim (mine,file) 11 11 | pairs 14 t=85
+ratio (14513, 11793) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 391, 1262, 223601] | Sel2 dim (mine,file) 7 7 | pairs 14 t=86
+ratio (14543, 14263) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 28526, 1142638, 14543] | Sel2 dim (mine,file) 7 7 | pairs 14 t=86
+ratio (14653, 6396) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 23, 17794, 42098, 359] | Sel2 dim (mine,file) 8 8 | pairs 14 t=87
+ratio (14729, 1324) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 103, 383, 5351] | Sel2 dim (mine,file) 9 9 | pairs 14 t=87
+ratio (14791, 12087) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2686, 1513, 1057, 71842] | Sel2 dim (mine,file) 8 8 | pairs 14 t=88
+ratio (14800, 273) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 73, 199, 15073] | Sel2 dim (mine,file) 9 9 | pairs 14 t=88
+ratio (14885, 6076) gens 12 dim of {d: (1,d,d) ELS} = 8 basis [-1, 2, 7, 17, 23, 31, 137, 383] | Sel2 dim (mine,file) 11 11 | pairs 14 t=89
+ratio (14893, 10476) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 23, 194, 562, 1262, 2206] | Sel2 dim (mine,file) 10 10 | pairs 14 t=89
+ratio (14928, 8855) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 14, 17, 311, 2798, 279358] | Sel2 dim (mine,file) 9 9 | pairs 14 t=90
+ratio (14935, 3672) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 23, 1442, 192542, 27353] | Sel2 dim (mine,file) 8 8 | pairs 14 t=91
+ratio (14944, 7575) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 7, 6434, 7369] | Sel2 dim (mine,file) 7 7 | pairs 14 t=91
+
+=== TASK 2 ===
+ratios 201 dimension histogram of {d | (1,d,d) in Sel^2}: {2: 6, 3: 18, 4: 28, 5: 67, 6: 42, 7: 34, 8: 6}
+full Sel^2 dimension from my local images equals dim in data file: {True: 201}
+pairs 2784 {'agree': 2784, "('cassels value', 1)": 2277, "('diag <d,d>', 1)": 529, "('cassels value', -1)": 507}
+bad []
+
+=== TASK 3 ===
+{'x^2-dy^2=beta z^2 insoluble': 1882, ('insoluble, pairing', 1): 1596, 'soluble': 902, ('insoluble, pairing', -1): 286, 'x0+y0 s = 0 mod p for some p': 3}
+(dim of ELS set, dim of {d: norm from Q(sqrt W)}) histogram: {(2, 4): 1, (2, 5): 2, (2, 6): 1, (2, 7): 2, (3, 5): 2, (3, 6): 10, (3, 7): 2, (3, 8): 4, (4, 5): 1, (4, 6): 2, (4, 7): 12, (4, 8): 13, (5, 6): 2, (5, 7): 12, (5, 8): 20, (5, 9): 21, (5, 10): 10, (5, 11): 2, (6, 7): 1, (6, 8): 7, (6, 9): 12, (6, 10): 16, (6, 11): 6, (7, 9): 9, (7, 10): 13, (7, 11): 9, (7, 12): 2, (7, 13): 1, (8, 9): 1, (8, 10): 1, (8, 11): 2, (8, 12): 2}
+--- pairs of the Task-2 sample
+ S takes more than one value over the tested primitive solutions: 0 / 902 ; min #solutions tested 14
+ pairing = S for every tested solution: 902 / 902
+pairs with a solution and d square mod all p|W (odd mult): 902
+ pairing = S (plain): 902 / 902
+ pairing = S2 (other sign of s): 902 / 902
+ pairing = -S : 0
+ pairing = S*J(-1) : 902 / 902 | J factor = -1 on 0
+ pairing = S*J(2) : 902 / 902 | J factor = -1 on 0
+ pairing = S*J(z0) : 886 / 902 | J factor = -1 on 16
+ pairing = S*J(x0) : 746 / 902 | J factor = -1 on 156
+ pairing = S*J(y0) : 844 / 902 | J factor = -1 on 58
+ pairing = S*sign: -1 if d<0 and beta<0 : 902 / 902 | J factor = -1 on 0
+ restricted to pairing=-1 (221 pairs): S=-1 on 221
+ restricted to pairing=+1 (681 pairs): S=+1 on 681
+ value table (P,S): {(1, 1): 681, (-1, -1): 221}
+ by parity of m+n: {(1, 1, 1): 479, (1, -1, -1): 166, (0, 1, 1): 202, (0, -1, -1): 55}
+--- Task-2 sample, nontrivial (d!=1,beta!=1,d!=beta)
+ S takes more than one value over the tested primitive solutions: 0 / 797 ; min #solutions tested 14
+ pairing = S for every tested solution: 797 / 797
+pairs with a solution and d square mod all p|W (odd mult): 797
+ pairing = S (plain): 797 / 797
+ pairing = S2 (other sign of s): 797 / 797
+ pairing = -S : 0
+ pairing = S*J(-1) : 797 / 797 | J factor = -1 on 0
+ pairing = S*J(2) : 797 / 797 | J factor = -1 on 0
+ pairing = S*J(z0) : 783 / 797 | J factor = -1 on 14
+ pairing = S*J(x0) : 641 / 797 | J factor = -1 on 156
+ pairing = S*J(y0) : 743 / 797 | J factor = -1 on 54
+ pairing = S*sign: -1 if d<0 and beta<0 : 797 / 797 | J factor = -1 on 0
+ restricted to pairing=-1 (221 pairs): S=-1 on 221
+ restricted to pairing=+1 (576 pairs): S=+1 on 576
+ value table (P,S): {(1, 1): 576, (-1, -1): 221}
+ by parity of m+n: {(1, 1, 1): 404, (1, -1, -1): 166, (0, 1, 1): 172, (0, -1, -1): 55}
+--- extra random nontrivial soluble pairs
+ S takes more than one value over the tested primitive solutions: 0 / 15736 ; min #solutions tested 14
+ pairing = S for every tested solution: 15736 / 15736
+pairs with a solution and d square mod all p|W (odd mult): 15736
+ pairing = S (plain): 15736 / 15736
+ pairing = S2 (other sign of s): 15736 / 15736
+ pairing = -S : 0
+ pairing = S*J(-1) : 15736 / 15736 | J factor = -1 on 0
+ pairing = S*J(2) : 15736 / 15736 | J factor = -1 on 0
+ pairing = S*J(z0) : 12336 / 15736 | J factor = -1 on 3400
+ pairing = S*J(x0) : 9206 / 15736 | J factor = -1 on 6530
+ pairing = S*J(y0) : 12381 / 15736 | J factor = -1 on 3355
+ pairing = S*sign: -1 if d<0 and beta<0 : 15736 / 15736 | J factor = -1 on 0
+ restricted to pairing=-1 (6234 pairs): S=-1 on 6234
+ restricted to pairing=+1 (9502 pairs): S=+1 on 9502
+ value table (P,S): {(1, 1): 9502, (-1, -1): 6234}
+ by parity of m+n: {(1, 1, 1): 6623, (1, -1, -1): 4451, (0, 1, 1): 2879, (0, -1, -1): 1783}
+--- ALL
+ S takes more than one value over the tested primitive solutions: 0 / 16638 ; min #solutions tested 14
+ pairing = S for every tested solution: 16638 / 16638
+pairs with a solution and d square mod all p|W (odd mult): 16638
+ pairing = S (plain): 16638 / 16638
+ pairing = S2 (other sign of s): 16638 / 16638
+ pairing = -S : 0
+ pairing = S*J(-1) : 16638 / 16638 | J factor = -1 on 0
+ pairing = S*J(2) : 16638 / 16638 | J factor = -1 on 0
+ pairing = S*J(z0) : 13222 / 16638 | J factor = -1 on 3416
+ pairing = S*J(x0) : 9952 / 16638 | J factor = -1 on 6686
+ pairing = S*J(y0) : 13225 / 16638 | J factor = -1 on 3413
+ pairing = S*sign: -1 if d<0 and beta<0 : 16638 / 16638 | J factor = -1 on 0
+ restricted to pairing=-1 (6455 pairs): S=-1 on 6455
+ restricted to pairing=+1 (10183 pairs): S=+1 on 10183
+ value table (P,S): {(1, 1): 10183, (-1, -1): 6455}
+ by parity of m+n: {(1, 1, 1): 7102, (1, -1, -1): 4617, (0, 1, 1): 3081, (0, -1, -1): 1838}
+partial factorizations {'partial_factor': 0} time 92
+
+real	1m32.442s
+user	1m28.021s
+sys	0m4.554s

@@ -1,0 +1,6 @@
+# z14 section check. Written by an AI model (reviewer z14); not read by a person.
+(2, 1) psi(iota t0) = ('-73', '...') ellorder 0 | #E(Q)_tors 4 [2, 2] | N P = O: False
+(3, 2) psi(iota t0) = ('-769', '...') ellorder 0 | #E(Q)_tors 4 [2, 2] | N P = O: False
+(4, 1) psi(iota t0) = ('-1249', '...') ellorder 0 | #E(Q)_tors 4 [2, 2] | N P = O: False
+(7, 4) psi(iota t0) = ('-558625', '...') ellorder 0 | #E(Q)_tors 4 [2, 2] | N P = O: False
+(1234, 567) psi(iota t0) = ('-5080820312944108879057', '...') ellorder 0 | #E(Q)_tors 4 [2, 2] | N P = O: False

@@ -1,0 +1,5 @@
+69304 ('08', 'agree')
+1780 ('08', 'row without the full table')
+316 ('LU', 'a_r != 1 skipped')
+35096 ('LU', 'agree')
+784 ('LU', 'row without the full table')

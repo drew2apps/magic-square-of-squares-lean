@@ -1,0 +1,61 @@
+search.py (conductor-t13): curve E, H = 10000.  Written by an AI model (build agent t13); not read by a person.
+  coset A m01 T = 1.083: 7249 values of t2, 123360899 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (24 s)
+  coset A m02 T = 1.083: 7249 values of t2, 123360899 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (28 s)
+  coset A m03 T = 2.426: 3241 values of t2, 123350490 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (23 s)
+  coset A m04 T = 2.426: 3241 values of t2, 123350490 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (25 s)
+  coset A m05 T = 44.71: 174 values of t2, 122990503 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (23 s)
+  coset A m06 T = 1.087: 7222 values of t2, 123361853 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (34 s)
+  coset A m07 T = 2.801: 2803 values of t2, 123350022 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (31 s)
+  coset A m08 T = 2.801: 2803 values of t2, 123350022 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (32 s)
+  coset A m09 T = 1.087: 7222 values of t2, 123361853 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (38 s)
+  coset B m01 T = 1.195: 6577 values of t2, 123360839 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (38 s)
+  coset B m02 T = 1.195: 6577 values of t2, 123360839 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (39 s)
+  coset B m03 T = 2.173e+04: 0 values of t2, 1 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (0 s)
+  coset B m04 T = 4.484: 1754 values of t2, 123334953 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (30 s)
+  coset B m05 T = 4.484: 1754 values of t2, 123334953 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (29 s)
+  coset B m06 T = 2.173e+04: 0 values of t2, 1 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (0 s)
+  coset B m07 T = 21.93: 358 values of t2, 123195464 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (32 s)
+  coset B m08 T = 82.64: 94 values of t2, 122693443 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (30 s)
+  coset B m09 T = 0.9925: 7912 values of t2, 123361865 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (40 s)
+  coset B m10 T = 1.75: 4480 values of t2, 123357190 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (27 s)
+  coset B m11 T = 1.75: 4480 values of t2, 123357190 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (33 s)
+  coset B m12 T = 0.9925: 7912 values of t2, 123361865 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (18 s)
+  coset A+B m01 T = 1.442: 5453 values of t2, 123358063 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (18 s)
+  coset A+B m02 T = 1.442: 5453 values of t2, 123358063 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (19 s)
+  coset A+B m03 T = 1.151: 6824 values of t2, 123361099 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (18 s)
+  coset A+B m04 T = 1.151: 6824 values of t2, 123361099 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (19 s)
+  coset A+B m05 T = 3.713: 2115 values of t2, 123340040 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (14 s)
+  coset A+B m06 T = 1.088: 7216 values of t2, 123361639 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (20 s)
+  coset A+B m07 T = 1.99: 3948 values of t2, 123354301 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (17 s)
+  coset A+B m08 T = 1.99: 3948 values of t2, 123354301 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (17 s)
+  coset A+B m09 T = 1.088: 7216 values of t2, 123361639 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+     (20 s)

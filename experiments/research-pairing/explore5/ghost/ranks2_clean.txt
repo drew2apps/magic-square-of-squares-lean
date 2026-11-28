@@ -1,0 +1,42 @@
+(3320, 2303) C = {2621: 1, 6229: 1}
+   E_08: dim Sel2 5, dim kernel of pairing 3, dim torsion image 2 => rank <= 1; ellrank [1,1]; root number -1
+      ghost class in kernel: True; in torsion image: False
+      covering of class (1,19505,19505): rational points of height <= 100000 on the two quartic models: 0, 0  
+      covering of class (1,-19505,-19505): rational points of height <= 100000 on the two quartic models: 0, 0  
+   E_LU: dim Sel2 2, dim kernel of pairing 2, dim torsion image 2 => rank <= 0; ellrank [0,0]; root number 1
+      ghost class in kernel: True; in torsion image: True
+(5623, 1017) C = {2: 1, 2621: 1, 6229: 1}
+   E_08: dim Sel2 2, dim kernel of pairing 2, dim torsion image 2 => rank <= 0; ellrank [0,0]; root number 1
+      ghost class in kernel: True; in torsion image: True
+   E_LU: dim Sel2 5, dim kernel of pairing 3, dim torsion image 2 => rank <= 1; ellrank [1,1]; root number -1
+      ghost class in kernel: True; in torsion image: False
+      covering of class (1,19505,19505): rational points of height <= 100000 on the two quartic models: 0, 0  
+      covering of class (1,-19505,-19505): rational points of height <= 100000 on the two quartic models: 0, 0  
+(14903, 9696) C = {5: 2, 12644473: 1}
+   E_08: dim Sel2 4, dim kernel of pairing 4, dim torsion image 2 => rank <= 2; ellrank [0,2]; root number 1
+      ghost class in kernel: True; in torsion image: False
+      covering of class (1,4515609,4515609): rational points of height <= 100000 on the two quartic models: 0, 0  
+      covering of class (1,-4515609,-4515609): rational points of height <= 100000 on the two quartic models: 0, 0  
+   E_LU: dim Sel2 6, dim kernel of pairing 2, dim torsion image 2 => rank <= 0; ellrank [0,0]; root number 1
+      ghost class in kernel: True; in torsion image: True
+(9113, 3200) C = {17: 1, 5487457: 1}
+   E_08: dim Sel2 4, dim kernel of pairing 4, dim torsion image 2 => rank <= 2; ellrank [0,2]; root number 1
+      ghost class in kernel: True; in torsion image: False
+      covering of class (1,9113,9113): rational points of height <= 100000 on the two quartic models: 0, 0  
+      covering of class (1,-9113,-9113): rational points of height <= 100000 on the two quartic models: 0, 0  
+   E_LU: dim Sel2 3, dim kernel of pairing 3, dim torsion image 2 => rank <= 1; ellrank [1,1]; root number -1
+      ghost class in kernel: True; in torsion image: True
+(12313, 5913) C = {2: 1, 17: 1, 5487457: 1}
+   E_08: dim Sel2 3, dim kernel of pairing 3, dim torsion image 2 => rank <= 1; ellrank [1,1]; root number -1
+      ghost class in kernel: True; in torsion image: True
+   E_LU: dim Sel2 4, dim kernel of pairing 4, dim torsion image 2 => rank <= 2; ellrank [0,2]; root number 1
+      ghost class in kernel: True; in torsion image: False
+      covering of class (1,9113,9113): rational points of height <= 100000 on the two quartic models: 0, 0  
+      covering of class (1,-9113,-9113): rational points of height <= 100000 on the two quartic models: 0, 0  
+(24599, 5207) C = {2: 1, 5: 2, 12644473: 1}
+   E_08: dim Sel2 6, dim kernel of pairing 2, dim torsion image 2 => rank <= 0; ellrank [0,0]; root number 1
+      ghost class in kernel: True; in torsion image: True
+   E_LU: dim Sel2 4, dim kernel of pairing 4, dim torsion image 2 => rank <= 2; ellrank [0,2]; root number 1
+      ghost class in kernel: True; in torsion image: False
+      covering of class (1,4515609,4515609): rational points of height <= 100000 on the two quartic models: 0, 0  
+      covering of class (1,-4515609,-4515609): rational points of height <= 100000 on the two quartic models: 0, 0  

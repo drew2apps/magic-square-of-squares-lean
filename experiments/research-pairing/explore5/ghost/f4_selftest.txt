@@ -1,0 +1,7 @@
+(14903, 9696) primes [2, 3, 5, 7, 17, 41, 101, 127] repo Local: points 7090 failures 0 | exact_local: points 5199 failures 0
+(9113, 3200) primes [2, 3, 5, 7, 13, 17, 73] repo Local: points 5636 failures 0 | exact_local: points 4248 failures 0
+(3320, 2303) primes [2, 3, 5, 7, 47, 83, 113] repo Local: points 7274 failures 0 | exact_local: points 5283 failures 0
+(465, 416) primes [2, 3, 5, 7, 13, 31, 193] repo Local: points 5886 failures 0 | exact_local: points 4359 failures 0
+(627, 364) primes [2, 3, 5, 7, 11, 13, 19, 29] repo Local: points 6569 failures 0 | exact_local: points 4710 failures 0
+(4, 3) primes [2, 3, 5, 7] repo Local: points 2566 failures 0 | exact_local: points 1907 failures 0
+(7, 1) primes [2, 3, 5, 7] repo Local: points 2953 failures 0 | exact_local: points 2167 failures 0

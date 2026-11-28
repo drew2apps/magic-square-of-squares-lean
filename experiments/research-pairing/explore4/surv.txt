@@ -1,0 +1,30 @@
+(3320, 2303) S = {2621: 1, 6229: 1} mn sqf 39010 m^2-n^2 sqf 635399
+    E_08 dim Sel2 5 pairing rank 2 => rank <= 1 | PARI ellrank [1, 1] root number -1
+    E_LU dim Sel2 2 pairing rank 0 => rank <= 0 | PARI ellrank [0, 0] root number 1
+    E_mix dim Sel2 6 pairing rank 0 => rank <= 4 | PARI ellrank [2, 4] root number 1
+    tuple [2, 1, 1, 635399] d0d8 ~ 2  dLdU ~ 635399  classes: E_08 delta = 19505  E_LU (c_r,c_m) = (32652418, 1270798)
+    tuple [2, 1, 1270798, 2] d0d8 ~ 2  dLdU ~ 635399  classes: E_08 delta = 19505  E_LU (c_r,c_m) = (32652418, 1270798)
+(5623, 1017) S = {2: 1, 2621: 1, 6229: 1} mn sqf 635399 m^2-n^2 sqf 39010
+    E_08 dim Sel2 2 pairing rank 0 => rank <= 0 | PARI ellrank [0, 0] root number 1
+    E_LU dim Sel2 5 pairing rank 2 => rank <= 1 | PARI ellrank [1, 1] root number -1
+    E_mix dim Sel2 6 pairing rank 0 => rank <= 4 | PARI ellrank [2, 4] root number 1
+    tuple [2, 1270798, 1, 2] d0d8 ~ 635399  dLdU ~ 2  classes: E_08 delta = 1  E_LU (c_r,c_m) = (16326209, 1)
+    tuple [635399, 1, 1, 2] d0d8 ~ 635399  dLdU ~ 2  classes: E_08 delta = 1  E_LU (c_r,c_m) = (16326209, 1)
+(14903, 9696) S = {5: 2, 12644473: 1} mn sqf 9031218 m^2-n^2 sqf 128086993
+    E_08 dim Sel2 4 pairing rank 0 => rank <= 2 | PARI ellrank [0, 2] root number 1
+    E_LU dim Sel2 6 pairing rank 4 => rank <= 0 | PARI ellrank [0, 0] root number 1
+    E_mix dim Sel2 9 pairing rank 2 => rank <= 5 | PARI ellrank [1, 5] root number -1
+    tuple [1, 2, 10414, 49198] d0d8 ~ 2  dLdU ~ 128086993  classes: E_08 delta = 4515609  E_LU (c_r,c_m) = (25288946, 256173986)
+    tuple [1, 2, 24599, 5207] d0d8 ~ 2  dLdU ~ 128086993  classes: E_08 delta = 4515609  E_LU (c_r,c_m) = (25288946, 256173986)
+(9113, 3200) S = {17: 1, 5487457: 1} mn sqf 18226 m^2-n^2 sqf 898849
+    E_08 dim Sel2 4 pairing rank 0 => rank <= 2 | PARI ellrank [0, 2] root number 1
+    E_LU dim Sel2 3 pairing rank 0 => rank <= 1 | PARI ellrank [1, 1] root number -1
+    E_mix dim Sel2 7 pairing rank 2 => rank <= 3 | PARI ellrank [1, 3] root number -1
+    tuple [1, 2, 511, 1759] d0d8 ~ 2  dLdU ~ 898849  classes: E_08 delta = 9113  E_LU (c_r,c_m) = (186573538, 1797698)
+    tuple [1, 2, 3518, 1022] d0d8 ~ 2  dLdU ~ 898849  classes: E_08 delta = 9113  E_LU (c_r,c_m) = (186573538, 1797698)
+(12313, 5913) S = {2: 1, 17: 1, 5487457: 1} mn sqf 898849 m^2-n^2 sqf 18226
+    E_08 dim Sel2 3 pairing rank 0 => rank <= 1 | PARI ellrank [1, 1] root number -1
+    E_LU dim Sel2 4 pairing rank 0 => rank <= 2 | PARI ellrank [0, 2] root number 1
+    E_mix dim Sel2 7 pairing rank 2 => rank <= 3 | PARI ellrank [1, 3] root number -1
+    tuple [1022, 3518, 2, 1] d0d8 ~ 898849  dLdU ~ 2  classes: E_08 delta = 1  E_LU (c_r,c_m) = (93286769, 1)
+    tuple [1759, 511, 2, 1] d0d8 ~ 898849  dLdU ~ 2  classes: E_08 delta = 1  E_LU (c_r,c_m) = (93286769, 1)

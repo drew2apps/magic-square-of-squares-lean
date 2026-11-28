@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/home/claude/conductor/z17/experiments/roadmap-i/i1/i1_negative.py", line 13, in <module>
+    import i1_hunt as I
+ModuleNotFoundError: No module named 'i1_hunt'

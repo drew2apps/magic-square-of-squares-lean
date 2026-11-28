@@ -1,0 +1,64 @@
+z17: checks of roadmap-i/i2/i2_residual.jsonl. Written by an AI model (reviewer z17); not read by a person.
+(a) counts recomputed from the file
+  list lines 3876; records 3876; same ratios in the same order: True
+  sources in the list: {'g2-15000': 827, 'g2-997': 101, 'h2-exhaustive': 2807, 'h2-hunt': 141}
+  first G2 line (1-based): 2949; G2 lines: 928
+  every record has exactly the fields m, n, residual, kill, killing_prime: True; field order as documented: True
+  residual tuples: 32474; |S| from 2 to 834; every |S| even: True
+  |S| most common: 2: 1559, 4: 904, 8: 398, 6: 268, 10: 136, 12: 130
+  kill entries null: 0; largest killing prime per tuple: 229
+  killing_prime = max(kill) in every record: True; residual sorted in every record: True; no repeated tuple: True
+  killing_prime most common: 29: 1592, 37: 713, 41: 491, 53: 260, 61: 250, 17: 217
+(b) killing primes that are bad, not prime, or null: 0
+(c) recomputed with t10_pairct.residual() (seed 17: 30 of lines 1-2948, 20 of lines 2949-3876)
+  line 111 (17035,15964) h2-exhaustive: |S| = 2, P = 29, known tuples 0: same
+  line 255 (19384,4535) h2-exhaustive: |S| = 4, P = 29, known tuples 0: same
+  line 452 (22591,8160) h2-exhaustive: |S| = 4, P = 53, known tuples 0: same
+  line 564 (24076,19499) h2-exhaustive: |S| = 24, P = 29, known tuples 0: same
+  line 573 (24163,16813) h2-exhaustive: |S| = 2, P = 37, known tuples 0: same
+  line 619 (25009,19999) h2-exhaustive: |S| = 2, P = 53, known tuples 0: same
+  line 716 (26209,25369) h2-exhaustive: |S| = 4, P = 53, known tuples 0: same
+  line 806 (27256,20405) h2-exhaustive: |S| = 8, P = 29, known tuples 0: same
+  line 1020 (29575,21761) h2-exhaustive: |S| = 72, P = 97, known tuples 0: same
+  line 1034 (29767,27737) h2-exhaustive: |S| = 4, P = 37, known tuples 0: same
+  line 1140 (16631,9729) h2-exhaustive: |S| = 2, P = 53, known tuples 0: same
+  line 1187 (17459,560) h2-exhaustive: |S| = 4, P = 41, known tuples 0: same
+  line 1243 (18599,7561) h2-exhaustive: |S| = 2, P = 41, known tuples 0: same
+  line 1301 (19775,10608) h2-exhaustive: |S| = 6, P = 29, known tuples 0: same
+  line 1498 (23219,21060) h2-exhaustive: |S| = 2, P = 61, known tuples 0: same
+  line 1574 (24407,6503) h2-exhaustive: |S| = 2, P = 29, known tuples 0: same
+  line 1645 (25415,6328) h2-exhaustive: |S| = 6, P = 29, known tuples 0: same
+  line 1697 (25943,25040) h2-exhaustive: |S| = 2, P = 29, known tuples 0: same
+  line 1719 (26180,4797) h2-exhaustive: |S| = 4, P = 73, known tuples 0: same
+  line 2055 (15309,13676) h2-exhaustive: |S| = 4, P = 29, known tuples 0: same
+  line 2139 (17343,10433) h2-exhaustive: |S| = 2, P = 37, known tuples 0: same
+  line 2183 (18720,12031) h2-exhaustive: |S| = 4, P = 109, known tuples 0: same
+  line 2213 (19512,14641) h2-exhaustive: |S| = 2, P = 29, known tuples 0: same
+  line 2258 (20553,12004) h2-exhaustive: |S| = 36, P = 29, known tuples 0: same
+  line 2624 (27216,9745) h2-exhaustive: |S| = 2, P = 37, known tuples 0: same
+  line 2710 (28485,5948) h2-exhaustive: |S| = 18, P = 41, known tuples 0: same
+  line 2804 (29937,8617) h2-exhaustive: |S| = 2, P = 61, known tuples 0: same
+  line 2885 (630929,139272) h2-hunt: |S| = 8, P = 37, known tuples 0: same
+  line 2889 (1451377,577567) h2-hunt: |S| = 2, P = 37, known tuples 0: same
+  line 2891 (1322799,276799) h2-hunt: |S| = 4, P = 29, known tuples 0: same
+  line 3019 (6521,3689) g2-15000: |S| = 4, P = 29, known tuples 0: same
+  line 3032 (6805,1828) g2-15000: |S| = 2, P = 29, known tuples 0: same
+  line 3075 (7455,5344) g2-15000: |S| = 2, P = 29, known tuples 0: same
+  line 3094 (7819,5780) g2-15000: |S| = 2, P = 29, known tuples 0: same
+  line 3164 (8959,1345) g2-15000: |S| = 16, P = 41, known tuples 0: same
+  line 3265 (10129,3896) g2-15000: |S| = 4, P = 37, known tuples 0: same
+  line 3287 (10359,10088) g2-15000: |S| = 8, P = 61, known tuples 0: same
+  line 3368 (11305,8039) g2-15000: |S| = 4, P = 29, known tuples 0: same
+  line 3434 (12016,11105) g2-15000: |S| = 4, P = 29, known tuples 0: same
+  line 3468 (12308,9795) g2-15000: |S| = 2, P = 29, known tuples 0: same
+  line 3501 (12632,3951) g2-15000: |S| = 4, P = 61, known tuples 0: same
+  line 3521 (12763,4060) g2-15000: |S| = 2, P = 41, known tuples 0: same
+  line 3563 (13125,8444) g2-15000: |S| = 2, P = 41, known tuples 0: same
+  line 3603 (13392,12719) g2-15000: |S| = 8, P = 37, known tuples 0: same
+  line 3604 (13395,6524) g2-15000: |S| = 2, P = 29, known tuples 0: same
+  line 3651 (13769,5575) g2-15000: |S| = 4, P = 37, known tuples 0: same
+  line 3681 (14024,11743) g2-15000: |S| = 2, P = 29, known tuples 0: same
+  line 3770 (14939,11696) g2-15000: |S| = 8, P = 41, known tuples 0: same
+  line 3828 (3448,105) g2-997: |S| = 2, P = 29, known tuples 0: same
+  line 3852 (4348,3247) g2-997: |S| = 4, P = 29, known tuples 0: same
+  agree: 50 of 50 (326 tuples)

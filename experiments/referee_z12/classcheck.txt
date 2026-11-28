@@ -1,0 +1,1 @@
+class formula of section 1 on every residual tuple of the sampled ratios (both signs): {('08', True): 2064, ('LU', True): 1904}

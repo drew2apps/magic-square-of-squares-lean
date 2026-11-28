@@ -40,3 +40,5 @@ import MagicSquareOfSquares.G1SigmaGeneric
 import MagicSquareOfSquares.SecondDescentIdentities
 import MagicSquareOfSquares.TwoDescentMap
 import MagicSquareOfSquares.TwoDescentCertificates
+import MagicSquareOfSquares.Exchange
+import MagicSquareOfSquares.ExchangeCensus

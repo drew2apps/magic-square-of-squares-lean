@@ -3,12 +3,12 @@
 Written by AI models (Claude, made by Anthropic); **none of these is a reading by a person.** An outside review of
 commit `24d6ef6` asked whether the reviews that `CHANGES.md` and `LEDGER.md` mention ("reviewed by a separate AI
 agent") actually took place, since no report was committed. These are the reports, committed on 26 November 2026
-(UTC; runs 6 to 9's on 27 November) as they were written, unedited.
+(UTC; runs 6 to 10's on 27 November, run 11's on 28 November) as they were written, unedited apart from a provenance note at the top of some.
 
 How they were made: each piece of work was done by a build agent in its own git branch; a separate agent, which had not
 seen the work being produced, was then given the diff (not the build agent's summary) and asked to act as a hostile
 referee: restate the claims, recompute what it could with its own code, try to forge certificates, and list defects.
-Before each publication, one more agent reviewed the whole integrated diff (`referee_*.md`). The conductor applied the
+Before each publication, one more agent reviewed the whole integrated diff (`referee_*.md`; run 8's was not committed, and release 0.7.0 had a panel of three, `panel_p1.md` to `panel_p3.md`). The conductor applied the
 fixes; `CHANGES.md` says which. Commit hashes inside the reports are of local branches, not of `main`; paths are those of
 the machines the agents ran on.
 
@@ -53,7 +53,15 @@ the machines the agents ran on.
 | `referee_run7.md` | the integrated diff of run 7 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`) |
 | `review_z10.md` | run 8: `Θ₄` on `E⁺` of (945,248) (`rank_fisher_theta4_gen.py --side=E'`, the conic finder `rank_fisher_theta4_norm.py`) |
 | `review_z11.md` | run 9: `experiments/conductor-t10/` (the Cassels–Tate pairing on the pair curves against the good-prime removals); its scripts are in `experiments/referee_z11/` |
+| `review_z12.md` | run 10: `experiments/research-pairing/` (a separate AI session's closed formula for the Cassels–Tate pairing on `E_08`, `E_LU`, tested against `rank_second` on full `Sel²`); its scripts are in `experiments/referee_z12/` (paths in the review are the reviewer's scratch folder) |
+| `review_z13.md` | run 11: the second pairing note (`experiments/research-pairing/note2/`), revision 2 and revision 3; its scripts are in `experiments/referee_z13/` |
+| `review_z14.md` | run 11: explorations 3 and 5 §1 (the mixed curves, the Rédei form, Theorem B) and exploration 4 §5; `experiments/referee_z14/` |
+| `review_z15.md` | run 11: exploration 4 §1–§4 (the pairing on the 937 ratios, the ghost shape, cosets, root numbers); `experiments/referee_z15/` |
+| `review_z16.md` | run 11: exploration 5 §2–§3 (the centre in the bad-prime test, the ghost laws); `experiments/referee_z16/` |
+| `review_z17.md` | run 11: roadmap I, parts 1–2 (`experiments/roadmap-i/`); `experiments/referee_z17/` |
+| `panel_p1.md`, `panel_p2.md`, `panel_p3.md` | the release panel of 0.7.0: the maths referee (the new written proofs), the claims editor, the reproducibility and Lean-statement auditor |
 | `referee_run9.md` | the integrated diff of run 9 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`) |
+| `referee_run10.md` | the integrated diff of run 10 (after release 0.6.0), before publication (its fixes are in `CHANGES.md`; its scratch folder is not committed) |
 
 Work that `CHANGES.md` marks "not reviewed" (for example the (627,364) scripts `kctp_*` of run 4) has no report here. A few earlier reviews, among them those of `ClassPadic.lean` and of `0b34613`, were not saved.
 The outside reviews that Drew obtained from other tools are not included.

@@ -1,0 +1,11 @@
+genus3_points.py --negative
+  refused: a point moved off the curve (y + 1) (the point is not on the curve)
+  refused: a point of order 2 offered as a point of infinite order (n P = O for some n <= 12: the point is torsion)
+  refused: a torsion generator (from PARI elltors) offered as a point of infinite order (n P = O for some n <= 12: the point is torsion)
+  refused: the same point on the wrong curve (E2 of the same ratio) (the point is not on the curve)
+  refused: P and 3P offered as independent points (dependent points give F_2 rank 2 < 4)
+  refused: P, 2P and P + T offered to the mod-3 independence test (P, 2P, P + T give F_3-rank 1 < 2)
+  refused: an altered model (e2 + 1) (the point is not on the curve)
+  refused: the torsion list cut to the points of order 2 (the torsion list is incomplete (gcd #E(F_q) = 8, listed 4))
+  refused: a point of infinite order added to the torsion list (a listed torsion point has infinite order)
+negative tests: 9 of 9 refused

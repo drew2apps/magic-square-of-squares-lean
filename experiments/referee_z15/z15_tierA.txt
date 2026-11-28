@@ -1,0 +1,10 @@
+z15_tierA.py: written by an AI model (reviewer z15), not read by a person.
+937 ratios: in a 484 class 844; p = 5 mod 8 to an odd power in m^2+n^2 318; either 866; neither 71
+  survivor ratio (3320, 2303) : 484 classes [(151, 143)] ; p = 5 mod 8: [2621, 6229]
+  survivor ratio (5623, 1017) : 484 classes [(151, 135)] ; p = 5 mod 8: [2621, 6229]
+  survivor ratio (9113, 3200) : 484 classes [(47, 34), (151, 132), (271, 28)] ; p = 5 mod 8: []
+  survivor ratio (12313, 5913) : 484 classes [(47, 21), (151, 16), (271, 252)] ; p = 5 mod 8: []
+  survivor ratio (14903, 9696) : 484 classes [(89, 81), (103, 86), (151, 8)] ; p = 5 mod 8: []
+  degenerate control (627, 364) : 484 classes [] ; p = 5 mod 8: []
+  degenerate control (991, 263) : 484 classes [] ; p = 5 mod 8: []
+of the 71 not excluded: in the pilot 14, in my t10 reruns (all t10_*.jsonl now) 57, in neither 0

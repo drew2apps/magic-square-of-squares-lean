@@ -1,0 +1,2 @@
+replay: number of a-classes as recorded on 134 of 134 curves; number of Redei pairs as recorded on 134 of 134 curves
+soluble Redei pairs 863; with d = beta 40; with d != beta 823

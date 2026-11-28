@@ -1,0 +1,98 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000001536
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+(3320, 2303)
+   E_08 rank in [1,1], 0 points found, torsion [4, 2], root no -1
+      tuple [2, 1, 1, 635399] on 08: class (1, 19505); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1270798, 2] on 08: class (1, 19505); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_LU rank in [0,0], 0 points found, torsion [4, 2], root no 1
+      tuple [2, 1, 1, 635399] on LU: class (32652418, 1270798); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1270798, 2] on LU: class (32652418, 1270798); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_mix rank in [2,4], 1 points found, torsion [2, 2], root no 1
+      tuple [2, 1, 1, 635399] on 0L: class (2, 12393457495); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1, 635399] on 8U: class (2, 39010); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1, 635399] on 0U: class (2, 39010); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1, 635399] on 8L: class (2, 12393457495); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1270798, 2] on 0L: class (2, 39010); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1270798, 2] on 8U: class (2, 12393457495); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1270798, 2] on 0U: class (2, 12393457495); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1, 1270798, 2] on 8L: class (2, 39010); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+(5623, 1017)
+   E_08 rank in [0,0], 0 points found, torsion [4, 2], root no 1
+      tuple [2, 1270798, 1, 2] on 08: class (1, 1); in span of 2-torsion images: True; in span of images of found points + 2-torsion: True
+      tuple [635399, 1, 1, 2] on 08: class (1, 1); in span of 2-torsion images: True; in span of images of found points + 2-torsion: True
+   E_LU rank in [1,1], 0 points found, torsion [4, 2], root no -1
+      tuple [2, 1270798, 1, 2] on LU: class (16326209, 1); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [635399, 1, 1, 2] on LU: class (16326209, 1); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_mix rank in [2,4], 1 points found, torsion [2, 2], root no 1
+      tuple [2, 1270798, 1, 2] on 0L: class (2, 12393457495); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1270798, 1, 2] on 8U: class (2, 39010); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1270798, 1, 2] on 0U: class (2, 12393457495); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [2, 1270798, 1, 2] on 8L: class (2, 39010); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [635399, 1, 1, 2] on 0L: class (2, 39010); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [635399, 1, 1, 2] on 8U: class (2, 12393457495); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [635399, 1, 1, 2] on 0U: class (2, 39010); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [635399, 1, 1, 2] on 8L: class (2, 12393457495); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+(14903, 9696)
+   E_08 rank in [0,2], 0 points found, torsion [4, 2], root no 1
+      tuple [1, 2, 10414, 49198] on 08: class (1, 4515609); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 24599, 5207] on 08: class (1, 4515609); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_LU rank in [0,0], 0 points found, torsion [4, 2], root no 1
+      tuple [1, 2, 10414, 49198] on LU: class (25288946, 256173986); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 24599, 5207] on LU: class (25288946, 256173986); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_mix rank in [3,5], 2 points found, torsion [2, 2], root no -1
+      tuple [1, 2, 10414, 49198] on 0L: class (2, 111079465791); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 10414, 49198] on 8U: class (2, 47025552126); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 10414, 49198] on 0U: class (2, 47025552126); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 10414, 49198] on 8L: class (2, 111079465791); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 24599, 5207] on 0L: class (2, 47025552126); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 24599, 5207] on 8U: class (2, 111079465791); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 24599, 5207] on 0U: class (2, 111079465791); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 24599, 5207] on 8L: class (2, 47025552126); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+(9113, 3200)
+   E_08 rank in [0,2], 0 points found, torsion [4, 2], root no 1
+      tuple [1, 2, 511, 1759] on 08: class (1, 9113); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 3518, 1022] on 08: class (1, 9113); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_LU rank in [1,1], 0 points found, torsion [4, 2], root no -1
+      tuple [1, 2, 511, 1759] on LU: class (186573538, 1797698); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 3518, 1022] on LU: class (186573538, 1797698); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_mix rank in [1,3], 1 points found, torsion [2, 2], root no -1
+      tuple [1, 2, 511, 1759] on 0L: class (2, 32059534); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 511, 1759] on 8U: class (2, 4656743); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 511, 1759] on 0U: class (2, 4656743); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 511, 1759] on 8L: class (2, 32059534); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 3518, 1022] on 0L: class (2, 4656743); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 3518, 1022] on 8U: class (2, 32059534); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 3518, 1022] on 0U: class (2, 32059534); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1, 2, 3518, 1022] on 8L: class (2, 4656743); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+(12313, 5913)
+   E_08 rank in [1,1], 0 points found, torsion [4, 2], root no -1
+      tuple [1022, 3518, 2, 1] on 08: class (1, 1); in span of 2-torsion images: True; in span of images of found points + 2-torsion: True
+      tuple [1759, 511, 2, 1] on 08: class (1, 1); in span of 2-torsion images: True; in span of images of found points + 2-torsion: True
+   E_LU rank in [0,2], 0 points found, torsion [4, 2], root no 1
+      tuple [1022, 3518, 2, 1] on LU: class (93286769, 1); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1759, 511, 2, 1] on LU: class (93286769, 1); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_mix rank in [1,3], 1 points found, torsion [2, 2], root no -1
+      tuple [1022, 3518, 2, 1] on 0L: class (2, 32059534); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1022, 3518, 2, 1] on 8U: class (2, 4656743); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1022, 3518, 2, 1] on 0U: class (2, 32059534); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1022, 3518, 2, 1] on 8L: class (2, 4656743); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1759, 511, 2, 1] on 0L: class (2, 4656743); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1759, 511, 2, 1] on 8U: class (2, 32059534); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1759, 511, 2, 1] on 0U: class (2, 4656743); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [1759, 511, 2, 1] on 8L: class (2, 32059534); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+(24599, 5207)
+   E_08 rank in [0,0], 0 points found, torsion [4, 2], root no 1
+      tuple [5207, 24599, 2, 1] on 08: class (1, 1); in span of 2-torsion images: True; in span of images of found points + 2-torsion: True
+      tuple [49198, 10414, 2, 1] on 08: class (1, 1); in span of 2-torsion images: True; in span of images of found points + 2-torsion: True
+   E_LU rank in [0,2], 0 points found, torsion [4, 2], root no 1
+      tuple [5207, 24599, 2, 1] on LU: class (12644473, 1); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [49198, 10414, 2, 1] on LU: class (12644473, 1); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+   E_mix rank in [1,5], 1 points found, torsion [2, 2], root no -1
+      tuple [5207, 24599, 2, 1] on 0L: class (2, 111079465791); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [5207, 24599, 2, 1] on 8U: class (2, 47025552126); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [5207, 24599, 2, 1] on 0U: class (2, 111079465791); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [5207, 24599, 2, 1] on 8L: class (2, 47025552126); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [49198, 10414, 2, 1] on 0L: class (2, 47025552126); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [49198, 10414, 2, 1] on 8U: class (2, 111079465791); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [49198, 10414, 2, 1] on 0U: class (2, 47025552126); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False
+      tuple [49198, 10414, 2, 1] on 8L: class (2, 111079465791); in span of 2-torsion images: False; in span of images of found points + 2-torsion: False

@@ -1,0 +1,165 @@
+genus3_mult.py: multiplicities of rank-1 curves in J(X5), X5 the curve of the five forms (genus 49)
+control at (627,364): for 8 curves C_I of genus 2, 3, 4, L_p(C_I) = product of the L_p of the pieces at p = 17, 23 (16 checks, counts over F_{p^k}, k <= 4)
+
+(195,28): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 11 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+
+(223,167): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 11 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+
+(440,279): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 29 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 19 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 37 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 29 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 29 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 29 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 19 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 19 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+
+(609,200): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 11 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+
+(627,364): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 23 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 31 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 41 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 31 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 31 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 23 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 23 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+
+(719,161): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 37 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 19 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 29 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 29 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 29 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 19 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 19 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 29 => multiplicity <= 2
+
+(809,409): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 11 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+
+(861,620): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 11 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 19 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 11 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 11 => multiplicity <= 2
+
+(991,263): the 29 genus-1 pieces fall into 16 classes by a_p at the good primes < 600:
+  [F0*F8]                                          size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [F0*F4, F8*F4]                                   size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [F0*L, F0*U, F8*L, F8*U]                         size 4; genus-2 pieces excluded at p <= 23 => multiplicity <= 4
+  [F4*L, F4*U]                                     size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [L*U]                                            size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F8F4}/s, {F0F8F4}/is]                        size 2; genus-2 pieces excluded at p <= 31 => multiplicity <= 2
+  [{F0F8L}/tau, {F0F8U}/itau]                      size 2; genus-2 pieces excluded at p <= 41 => multiplicity <= 2
+  [{F0F8L}/itau, {F0F8U}/tau]                      size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0LU}/s, {F8LU}/is]                            size 2; genus-2 pieces excluded at p <= 17 => multiplicity <= 2
+  [{F0LU}/is, {F8LU}/s]                            size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [{F4LU}/s, {F4LU}/is]                            size 2; genus-2 pieces excluded at p <= 31 => multiplicity <= 2
+  [{F0F8F4L}/tau, {F0F8F4U}/tau]                   size 2; genus-2 pieces excluded at p <= 23 => multiplicity <= 2
+  [E1]                                             size 1; genus-2 pieces excluded at p <= 23 => multiplicity <= 1
+  [E2]                                             size 1; genus-2 pieces excluded at p <= 23 => multiplicity <= 1
+  [E3]                                             size 1; genus-2 pieces excluded at p <= 17 => multiplicity <= 1
+  [{F0F4LU}/s, {F8F4LU}/s]                         size 2; genus-2 pieces excluded at p <= 31 => multiplicity <= 2
+

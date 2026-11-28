@@ -1,0 +1,25 @@
+z17: I8 checkpoint recounted. Written by an AI model (reviewer z17); not read by a person.
+records 360; ratios = lines 1-360 of the list in order: True; sources of those lines: {'h2-exhaustive': 360}
+tuples and killing primes = those of i2_residual.jsonl lines 1-360: True; tuples there: 3166
+verdicts recomputed from the labels: {'neither': 6, 'pairing': 3160}; records whose killed_by or verdict disagree with the labels: 0
+kills per curve: 08:1836 0L:3058 0U:3058 8L:3058 8U:3058 LU:1794; killed only on mixed curves: 462
+per-curve labels over all tuples: {'image': 1394, 'kernel': 1740, 'killed': 15862}
+  neither: (18313,120) [1, 2, 1, 335351569] kill 61; 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image
+  neither: (18313,120) [1, 2, 670703138, 2] kill 61; 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image
+  neither: (18433,18193) [2, 670703138, 2, 1] kill 61; 08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+  neither: (18433,18193) [335351569, 1, 2, 1] kill 61; 08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+  neither: (20056,19825) [2, 1, 1, 1] kill 17; 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+  neither: (20056,19825) [2, 1, 2, 2] kill 17; 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+pair curves with dim Sel2 = 2 (rank0 entries), by (curve, excludes, complete): {('08', True, True): 4, ('LU', True, True): 7}
+ratios excluded by a rank-0 pair curve: 11
+  (15232,5135) by LU (torsion 8/8)
+  (15895,13312) by LU (torsion 8/8)
+  (16399,7929) by 08 (torsion 8/8)
+  (16879,1503) by 08 (torsion 8/8)
+  (17395,13628) by LU (torsion 8/8)
+  (17431,17289) by 08 (torsion 8/8)
+  (17620,17179) by LU (torsion 8/8)
+  (17647,9153) by 08 (torsion 8/8)
+  (17836,15861) by LU (torsion 8/8)
+  (18655,3544) by LU (torsion 8/8)
+  (20059,340) by LU (torsion 8/8)

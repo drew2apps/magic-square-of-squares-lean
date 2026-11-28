@@ -1,0 +1,7 @@
+reach.py (conductor-t13), H = 50000.  Written by an AI model (build agent t13); not read by a person.  A guide.
+  E   coset A    boundary h_p(t) = H: h(x) min 65.3, median 72.0, max 73.8  (29 samples)
+  E   coset B    boundary h_p(t) = H: h(x) min 67.1, median 71.8, max 74.0  (29 samples)
+  E   coset A+B  boundary h_p(t) = H: h(x) min 65.3, median 69.6, max 73.6  (32 samples)
+  E3  coset A    boundary h_p(t) = H: h(x) min 75.7, median 83.1, max 85.4  (32 samples)
+  E3  coset B    boundary h_p(t) = H: h(x) min 95.2, median 102.9, max 106.9  (32 samples)
+  E3  coset A+B  boundary h_p(t) = H: h(x) min 103.6, median 111.4, max 114.1  (32 samples)

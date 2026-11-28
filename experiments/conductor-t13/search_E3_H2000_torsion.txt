@@ -1,0 +1,7 @@
+search.py (conductor-t13): curve E3, H = 2000.  Written by an AI model (build agent t13); not read by a person.
+  torsion t1  T = 3.531e+05: 0 values of t2, 1 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 1 exact hits, 1 primitive
+     hit t1 = 1+0i, t2 = 0+0i
+  torsion t2  T = 12.12: 129 values of t2, 4916262 pairs (t1, t2), 44 sieve primes, 134 sieve survivors, 135 exact hits, 3 primitive
+     hit t1 = -20-4i, t2 = 1+0i
+     hit t1 = 1+0i, t2 = 0+0i
+     hit t1 = 6+3i, t2 = 1+0i

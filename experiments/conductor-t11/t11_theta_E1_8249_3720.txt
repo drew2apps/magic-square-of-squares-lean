@@ -1,0 +1,30 @@
+t11_theta.py: Fisher's higher descents on E1(8249,3720) (arXiv:1509.03234 Sects. 2, 3, 7), exact. Written by an AI model (build agent t11), not read by a person. Experiment, not counted.
+E1(8249,3720): (8249,3720) [CENSUS9000]
+  (0) model rebuilt from (m, n, d) by the census code = I5's minimal model [0, 1, 0, 263016164015259849023980430859354403964456553599, -65439936015720822957240852006058045665149706287739221875757099862115201]; E: y^2 = x(x^2 + a x + b), a = 637148337598427327611204, b = 398335498716739689878574060448482164403451996804 (a^2 - 4b = -square)
+      a point of infinite order on E (PARI ellrank as a hint; on the curve, n G != O for n <= 12): rank >= 1
+  (1) rank_indep: |S'_1| = 8 (E side, d | b), |S_1| = 64 (E' side, d' | b'); after the second descent dim S'_2 <= 3, dim S_2 <= 4; known images: dim 1 (E side), 2 (E' side); exact bound 3 + 4 - 2 = 5
+      open cosets: E side [13278577, 755496193, 3378195882300241]; E' side [113, 2991753233, 338068115329]
+  type C: two open classes on each side.  Theta_2 first (rational: no quadratic field)
+  (2) Theta_2(13278577, .) (E side, lifts lam = [-7, 7]): 113:+1 2991753233:-1 -1:+1 108415202:+1
+  (2) Theta_2(755496193, .) (E side, lifts lam = [6, -6]): 113:+1 2991753233:+1 -1:+1 108415202:+1
+  (2) Theta_2(113, .) (E' side, lifts lam = [339664827866, 26687961958641578]): 13278577:+1 755496193:+1 33889771822934965212738252024001:+1
+  (2) Theta_2(2991753233, .) (E' side, lifts lam = [-704698813, -55369215681829]): 13278577:-1 755496193:+1 33889771822934965212738252024001:+1
+  Theta_2 on (open E side) x (open E' side) = [[0, 1], [0, 0]] over F_2 (rank 1; both ways): S_3 = <known, 113> (dim 3), S'_3 = <known, 755496193> (dim 2); Theta_3, Theta'_3 alternating with one open class: 0; 4-descent bound (Lemma 2.2, n = 2) 3 + 2 - 2 = 3 (from 5)
+  Theta_4(113, 755496193): rank_fisher_theta4_gen on the E' side level-3 lift of 113 (xi twisted by 11969: the first xi has a non-zero level-4 obstruction on the excluded classes of S_1, as Thm 2.1 allows)
+  E' side, class 113: lifts D_lam not excluded by the second descent: 8 (tried: up to 12); basis of the other side's S_1: [33889771822934965212738252024001, 13278577, 755496193]
+    lam = 339664827866: pairings with the other side's S_1 33889771822934965212738252024001:+1 13278577:+1 755496193:+1; level-3 Selmer set non-empty (dim 6), xi = 7054917115, C3 checked locally soluble at R and 21 primes (agrees)
+  level-3 twist xi' = 84440302949435 = xi * 11969 (mod squares): C3 checked locally soluble at R and 21 primes
+rank_fisher_theta4_gen.py: Fisher's Theta_4 on E8249x (arXiv:1509.03234 Sects. 2, 3, 7), exact
+E: y^2 = x(x^2 + a x + b), a = 637148337598427327611204, b = 398335498716739689878574060448482164403451996804; known point with x = 162654561212219606073600
+the lifted class 113 (E' side) -> C3' (rank_fisher5 steps (1)-(8) re-run, conic points re-checked); L = Q(sqrt -113), L' = Q(sqrt 113)
+working curve (whose x-classes are the paired group): y^2 = x(x^2 + 637148337598427327611204 x + 398335498716739689878574060448482164403451996804) (E); paired class y = 755496193
+  y is in the local image at R and at the bad primes [2, 3, 5, 7, 13, 31, 73, 113, 241, 647, 9049, 11969, 1021429, 755496193, 14017410300001] (rank_indep certified images); y in S'_1, and S'_4 = S'_2 contains y (rank_fisher.py, levels 2-3)
+  pencil discriminant (1728 digits): primes [2, 3, 5, 7, 13, 31, 53, 73, 113, 241, 647, 9049, 11969, 1021429, 755496193, 1332819889, 14017410300001]; B0 = [2, 3, 5, 7, 13, 31, 53, 73, 113, 241, 647, 9049, 11969, 1021429, 755496193, 1332819889, 14017410300001]
+  level-4 twists Xi (sampled classes closed up to cosets, F_2 linear algebra) over R and [2, 3, 5, 7, 11, 13, 31, 53, 73, 113, 241, 647, 9049, 11969, 1021429, 755496193, 1332819889, 14017410300001]: 8: [1022537, 13577836289849, 772522810701641, 3454330282899641531417, 10258003626158164044857, 45868590644914673347318553609, 2609733378095292178050233395481, 34653545610508450523737734009865910537]
+  (K2) the classes [33889771822934965212738252024001] of the rational points pair to 0, as they must
+  (K3) the same value for the level-4 lifts [13577836289849, 772522810701641]
+  (K5) the same value with k_1 (1 + sqrt D1)^2, k_3 (1 + sqrt D3)^2 (another g0)
+
+RESULT: Theta_4(113, 755496193) on E8249x = 0 (the product of the local Hilbert symbols is +1)
+  => Theta_4 = 0: the bound stays 3 at this level
+  RESULT E1(8249,3720): bound 5 -> 3 (Theta_2, rank 1, exact through rank_second); Theta_4(113, 755496193) = 0: stays 3; not closed

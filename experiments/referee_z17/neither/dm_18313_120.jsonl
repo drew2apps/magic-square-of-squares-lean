@@ -1,0 +1,8 @@
+{"pair": [18313, 120], "curve": "E", "rank": [2, 2], "status": "rank not 1", "sec": 0.6, "of": [18313, 120]}
+{"pair": [18313, 120], "curve": "D1", "rank": [1, 3], "status": "rank not 1", "sec": 2.1, "of": [18313, 120]}
+{"pair": [18313, 120], "curve": "Sig+", "rank": [1, 1], "hG": 6.60407062184266, "B": 151.55878817564175, "amax": 58, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 119, "nt": 1, "t": {}, "status": "closed", "sec": 2.3, "of": [18313, 120]}
+{"pair": [18313, 120], "curve": "Sig-", "rank": [1, 3], "status": "rank not 1", "sec": 3.0, "of": [18313, 120]}
+{"pair": [18433, 18193], "curve": "E-partner", "rank": [2, 2], "status": "rank not 1", "sec": 0.2, "of": [18313, 120]}
+{"pair": [18433, 18193], "curve": "D1-partner", "rank": [1, 3], "status": "rank not 1", "sec": 2.4, "of": [18313, 120]}
+{"pair": [18433, 18193], "curve": "Sig+-partner", "rank": [1, 3], "status": "rank not 1", "sec": 0.7, "of": [18313, 120]}
+{"pair": [18433, 18193], "curve": "Sig--partner", "rank": [2, 2], "status": "rank not 1", "sec": 1.2, "of": [18313, 120]}

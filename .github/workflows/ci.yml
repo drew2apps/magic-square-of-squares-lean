@@ -3,7 +3,7 @@ name: CI
 # Two levels.  Every push to main runs `build` (Lean, the axiom audit, the generated files, the C searches) and `quick`
 # (the checkers that read committed transcripts and a few small reruns): about 20 minutes, most of it Lean. `rank` (the sub-project
 # lean_rank/ on Lean v4.36.0 with Stoll's EllipticCurves) also runs on every push, about 15 minutes.
-# The long jobs (`four-points`, `descents`, `last-pair`, `twist-search`, `scan-5000`, `scan-15000`; they run in parallel, the longest about 95 minutes) regenerate the main computed records
+# The long jobs (`four-points`, `descents`, `research`, `last-pair`, `twist-search`, `scan-5000`, `scan-15000`; they run in parallel, the longest, `descents`, about 2 hours) regenerate the main computed records
 # and stated samples of the others.  They do not regenerate everything: OUTPUTS.md lists the committed
 # outputs that no job reruns (the wide runs, the scan beyond 1100, the Magma transcripts and others).
 # They run on a pull request, on a tag, when the workflow is started by hand (Actions, CI, "Run workflow"), and on a push
@@ -147,6 +147,8 @@ jobs:
           set -e -o pipefail
           pip install -q -r scripts/g1_full/requirements.txt
           pip install -q sympy==1.14.0
+          # run 10 (tier D): the exchange symmetry at the nine open ratios (exact, a second)
+          python3 -I experiments/exchange/open_pairs.py | diff - experiments/exchange/open_pairs.txt
           python3 scripts/g1_full/check_sigma.py | diff - scripts/g1_full/check_sigma.txt
           python3 scripts/g1_full/sigma_exact.py | diff - scripts/g1_full/sigma_exact.txt
           (cd scripts/second_descent && python3 second_exact.py | diff - second_exact.txt)
@@ -668,11 +670,99 @@ jobs:
           python3 -I t10_pairct.py --summarize t10_997_a.txt,t10_997_b.txt,t10_15000_s100_a.txt,t10_15000_s100_b.txt 2>/dev/null | grep -v 'PARI stack' | diff - t10_summary.txt
           cd "$GITHUB_WORKSPACE/experiments/referee_z11"
           for s in rank0 recount wash_check pmat h1_mine forge_t10 z11_compare z11_pair forge_mine; do
-            python3 -I $s.py 2>/dev/null | grep -v 'PARI stack' | diff - $s.txt
+            # stderr is kept and shown on failure: h1_mine.py stopped after 4 lines on GitHub's runner at f0d7edc (run 9), not here
+            python3 -I $s.py 2>/tmp/z11_$s.err | grep -v 'PARI stack' | diff - $s.txt || { echo "== $s: stderr"; tail -40 /tmp/z11_$s.err; exit 1; }
           done
           python3 -I z11_compare.py --set mid 2>/dev/null | grep -v 'PARI stack' | diff - z11_compare_mid.txt
+          # run 10 (tier D): experiments/research-pairing, a closed formula for the pairing on E_08 and E_LU, rerun on the
+          # pilot's kill lines (no -I: the scripts import each other from their own folder; they read the t10 files here)
+          cd "$GITHUB_WORKSPACE/experiments/conductor-t10"
+          for w in 08 LU; do
+            python3 ../research-pairing/check_local.py $w 2>/dev/null | grep -v 'PARI stack' | diff - ../research-pairing/check_local_$w.txt
+          done
+          # review z12's checks (about a minute): its counts, the class formula, its own local terms, the b_r = 1 formula,
+          # the report's counts, and the full test rerun from scratch on 6 curves against the committed records
+          cd "$GITHUB_WORKSPACE/experiments/referee_z12"
+          for s in analyse classcheck zlocal brone claims rerun_compare; do
+            python3 -I $s.py 2>/dev/null | grep -v 'PARI stack' | diff - $s.txt
+          done
           cd "$GITHUB_WORKSPACE"
           # no program of this job may rewrite a committed file (OUTPUTS.md)
+          git diff --exit-code
+
+  research:
+    # Run 11 (tiers C and D, not counted): a separate AI research session's pairing notes and explorations with their
+    # reviews (experiments/research-pairing/note2, explore3-5; referee_z13 to z16), the genus-3 quotient (genus3), Fisher's
+    # pairings on I5's curves (conductor-t11), the (627,364) search over Q(i) (conductor-t13) and roadmap I with review
+    # z17 (roadmap-i, referee_z17). A job of its own so that descents stays under its time limit. About 30 minutes.
+    if: github.event_name != 'push' || startsWith(github.ref, 'refs/tags/') || contains(github.event.head_commit.message, '[full ci]')
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5.1.0
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6.3.0
+        with:
+          python-version: '3.13'
+      - name: pairing notes and reviews, genus 3, Fisher's pairings on I5's curves, (627,364) over Q(i), roadmap I
+        shell: bash
+        run: |
+          set -e -o pipefail
+          pip install -q -r scripts/g1_full/requirements.txt
+          pip install -q sympy==1.14.0
+          W="$GITHUB_WORKSPACE"
+          # d DIR EXPECTED ARGS...: runs python3 ARGS in DIR, compares stdout (PARI's stack notice removed) with EXPECTED, shows stderr on failure
+          d() { local dir="$1" out="$2"; shift 2; (cd "$W/$dir" && python3 "$@" 2>/tmp/d.err | grep -v 'PARI stack' | diff - "$out") || { echo "== $dir: $*"; tail -40 /tmp/d.err; exit 1; }; }
+          # scripts that print '# matches' or '# DIFFERS' and exit 0 either way
+          hm() { (cd "$W/$1" && shift && python3 "$@" 2>/dev/null | grep -v 'PARI stack' > /tmp/hm.out && ! grep -q 'DIFFERS' /tmp/hm.out && tail -1 /tmp/hm.out | grep -q '^# matches') || { echo "== hm $*"; tail -20 /tmp/hm.out; exit 1; }; }
+          # the second pairing note (revision 2's scripts; they import parse.py, ct08.py of the first note)
+          N=../research-pairing/note2
+          export PYTHONPATH=$W/experiments/research-pairing/note2:$W/experiments/research-pairing
+          for s in closed_formula isogeny_part shape radical; do d experiments/referee_z12 $N/$s.txt $N/$s.py; done
+          for s in two two2; do d experiments/conductor-t10 $N/$s.txt $N/$s.py; done
+          unset PYTHONPATH
+          # review z13 (the second note; revision 3's H2 table)
+          for s in gen_jobs:jobs claims_z13:claims_z13 analyse_z13:analyse_z13 rerun_z13:rerun_z13 h2_rerun_z13:h2_rerun_z13; do d experiments/referee_z13 ${s#*:}.txt -I ${s%%:*}.py; done
+          # review z14 (explorations 3 and 5: the mixed curves, the Redei form, Theorem B)
+          for s in ratios symbolic section_z14 mix_analyse; do d experiments/referee_z14 $s.txt -I $s.py; done
+          # review z16 (exploration 5: the centre form in the bad-prime test, the ghost laws)
+          for s in z16_witness z16_laws z16_summary z16_ghost; do d experiments/referee_z16 $s.txt -I $s.py; done
+          # the genus-3 quotient y^2 = F0 F8 L U and the corner K-curve of (627,364) (build agent t12)
+          G=experiments/genus3
+          d $G genus3_split.txt -I genus3_split.py
+          d $G genus3_points.txt -I genus3_points.py; d $G genus3_points_negative.txt -I genus3_points.py --negative
+          d $G genus3_isog_627_364.txt -I genus3_isog.py
+          d $G genus3_mult.txt -I genus3_mult.py
+          d $G kcurve_exact.txt -I kcurve_exact.py; d $G kcurve_exact_negative.txt -I kcurve_exact.py --negative
+          d $G genus3_rank_upper.txt -I genus3_rank_upper.py
+          for s in verify_swap_and_genus3 genus3_ranks kcurve_not_qcurve; do d $G/session $s.txt -I $s.py; done
+          d $G/session isogeny_classes_627_364.txt -I isogeny_classes.py
+          # Fisher's pairings on the nine curves of I5 (build agent t11; each prints '# matches')
+          for c in "E1(10512,145)-" "Sig+(22057,2351)" "E1(4440,2231)" "E1(8249,3720)" "E1(3540,2581)" "D1(12007,1799)" "E1(6480,4961)" "Sig+(12204,9853)" "E1(10512,145)+"; do
+            hm experiments/conductor-t11 -I t11_theta.py "$c"
+          done
+          hm experiments/conductor-t11 -I t11_theta.py --negative
+          # (627,364): the 2-coverings over Z[i] and the torsion searches (build agent t13)
+          T=experiments/conductor-t13
+          d $T covers.txt covers.py
+          d $T search_E_H2000_torsion.txt search.py --curve=E --H=2000 --classes=torsion
+          d $T search_E3_H2000_torsion.txt search.py --curve=E3 --H=2000 --classes=torsion
+          d $T search_E3_alt_H2000_torsion.txt search.py --models=altmodels.json --curve=E3 --H=2000 --classes=torsion --skipbase
+          d $T search_E_alt_H2000_torsion.txt search.py --models=altmodels.json --curve=E --H=2000 --classes=torsion --skipbase
+          d $T certify.txt certify.py search_E_H50000_coset.json search_E3_H50000_coset.json search_E3_H100000_from50000_cosetA.json search_E3_H100000_from50000_cosetB.json search_E_alt_H10000_coset.json search_E3_alt_H10000_coset.json search_E_H2000_torsion.json search_E3_H2000_torsion.json search_E_alt_H2000_torsion.json search_E3_alt_H2000_torsion.json
+          # roadmap I (a separate long-running AI session) and review z17
+          R=experiments/roadmap-i
+          hm $R/i1 i1_laws.py; hm $R/i1 i1_laws.py --negative; hm $R/i1 i1_negative.py
+          hm $R/i2 i2_residual.py --negative
+          hm $R/i3 i3_scan.py --negative
+          hm $R/i4 i4_exchange.py --negative
+          hm $R/i5 i5_rank.py --negative
+          hm $R/i8 i8_pairct.py --negative; hm $R/i8 i8_pairct.py --compare50
+          for s in z17_i8count z17_i8compare z17_i2check; do hm experiments/referee_z17 -I $s.py; done
+          for p in a b c e; do hm experiments/referee_z17 -I z17_neither.py $p; done
+          # review z15 (exploration 4: the 937 ratios, the ghost shape, cosets, tier A)
+          for s in z15_shapes z15_shapes2 z15_shapes3 z15_partners z15_tierA z15_compare z15_ghostsample z15_rankbound z15_residual_all; do d experiments/referee_z15 $s.txt -I $s.py; done
+          cd "$W"
+          # no program of this job may rewrite a committed file
           git diff --exit-code
 
   last-pair:

@@ -1,0 +1,5 @@
+320 ('O+', 'k=5', 'agree')
+184 ('O+', 'k=7', 'agree')
+472 ('O-', 'k=5', 'agree')
+458 ('O-', 'k=7', 'agree')
+disagreements by class:

@@ -1,0 +1,4 @@
+search.py (conductor-t13): curve E3, H = 50000.  Written by an AI model (build agent t13); not read by a person.
+  coset A     T = 1.067: 36791 values of t2, 3084208492 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+  coset B     T = 5.534: 7098 values of t2, 3084026639 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive
+  coset A+B   T = 1: 39259 values of t2, 3084209985 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 0 exact hits, 0 primitive

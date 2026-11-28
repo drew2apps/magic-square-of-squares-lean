@@ -1,0 +1,38 @@
+z17 (part d): the "neither" closures of I8. Written by an AI model (reviewer z17); not read by a person. PARI [2, 17, 4].
+(18313,120) Sig+: class member [0, -1, 0, -1895761370730983506460574387541246233568141703591041, 31846140275004847614883871590963150466042278447501134821807413660726156543105], one 2-torsion point: rank_indep.rank_bound rank <= 3
+    first descent: |Sel(phi)| <= 64, |Sel(phi^)| <= 2, rank <= 5; bad primes [2, 3, 5, 7, 13, 17, 23, 41, 73, 113, 3793, 18313, 18433, 110533, 279001, 481177, 113953902298519441]
+    E: Selmer 64 classes, known subgroup 4, cosets excluded by the second descent 12, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+    E': Selmer 2 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+(18313,120) Sig+: class member [0, -1, 0, -1897015367034003472975195476344144631100597172423041, 31801996407606322999423003533538127163158016871344948639540500567528275538305], one 2-torsion point: rank_indep.rank_bound rank <= 3
+    first descent: |Sel(phi)| <= 2, |Sel(phi^)| <= 64, rank <= 5; bad primes [2, 3, 5, 7, 13, 17, 23, 41, 73, 113, 3793, 18313, 18433, 110533, 279001, 481177, 113953902298519441]
+    E: Selmer 2 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+    E': Selmer 64 classes, known subgroup 4, cosets excluded by the second descent 12, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+  exact bound over the class: rank <= 3
+(20056,19825) Sig-: class member [0, 1, 0, -337272074977272672783507202758591793901780647325902081, 75390858773032736247371647638283958461476515794137300552247567121521104046874975], one 2-torsion point: rank_indep.rank_bound rank <= 3
+    first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 16, rank <= 5; bad primes [2, 3, 5, 7, 11, 13, 19, 23, 41, 61, 109, 2099, 19396921, 625134378252660721, 639786331617509521]
+    E: Selmer 8 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+    E': Selmer 16 classes, known subgroup 2, cosets excluded by the second descent 6, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+(20056,19825) Sig-: class member [0, 1, 0, -337272074978036770651610012584253505607764713278702081, 75390858772674056720229073176917527472367322457981398219213349169532378697594975], one 2-torsion point: rank_indep.rank_bound rank <= 3
+    first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 8, rank <= 5; bad primes [2, 3, 5, 7, 11, 13, 19, 23, 41, 61, 109, 2099, 19396921, 625134378252660721, 639786331617509521]
+    E: Selmer 16 classes, known subgroup 2, cosets excluded by the second descent 6, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+    E': Selmer 8 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  exact bound over the class: rank <= 3
+(39881,231) E: class member [0, -1, 0, -533287790282155883462962157820554880, 149896182574993764369007970421475366870351756711430400], full 2-torsion: H7 step (bound_full): dim Sel^2 = 7, Cassels-Tate pairing of rank 4, rank <= 1
+(39881,231) E: class member [0, -1, 0, -8532604635510167696304816688342678880, 9593355706059414444943759926097656782070242280215913600], one 2-torsion point: rank_indep.rank_bound rank <= 5
+    first descent: |Sel(phi)| <= 2, |Sel(phi^)| <= 64, rank <= 5; bad primes [2, 3, 5, 7, 11, 13, 19, 23, 41, 61, 109, 2099, 19396921]
+    E: Selmer 2 classes, known subgroup 1, cosets excluded by the second descent 0, not excluded 1: image <= 2^1 (control: 0 classes of known points survive, as they must)
+    E': Selmer 64 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 15: image <= 2^6 (control: 2 classes of known points survive, as they must)
+(39881,231) E: class member [0, -1, 0, -533019413599836072080551773605630880, 150054588401373629018059270770074505820534270295587200], one 2-torsion point: rank_indep.rank_bound rank <= 5
+    first descent: |Sel(phi)| <= 2, |Sel(phi^)| <= 256, rank <= 7; bad primes [2, 3, 5, 7, 11, 13, 19, 23, 41, 61, 109, 2099, 19396921]
+    E: Selmer 2 classes, known subgroup 1, cosets excluded by the second descent 0, not excluded 1: image <= 2^1 (control: 0 classes of known points survive, as they must)
+    E': Selmer 256 classes, known subgroup 4, cosets excluded by the second descent 48, not excluded 15: image <= 2^6 (control: 2 classes of known points survive, as they must)
+(39881,231) E: class member [0, -1, 0, -33347260998050133371746898676354880, 2339652429512505724900912225061733188953050720870400], full 2-torsion: H7 step (bound_full): dim Sel^2 = 3, Cassels-Tate pairing of rank 0, rank <= 1
+(39881,231) E: class member [0, -1, 0, -1368575127079752267169693037288000, 62041600529013367910312963634843222995858137316352], one 2-torsion point: rank_indep.rank_bound rank <= 1
+    first descent: |Sel(phi)| <= 1, |Sel(phi^)| <= 128, rank <= 5; bad primes [2, 3, 5, 7, 11, 13, 19, 23, 41, 61, 109, 2099, 19396921]
+    E: Selmer 1 classes, known subgroup 1, cosets excluded by the second descent 0, not excluded 0: image <= 2^0 (control: 0 classes of known points survive, as they must)
+    E': Selmer 128 classes, known subgroup 4, cosets excluded by the second descent 30, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+(39881,231) E: class member [0, -1, 0, -45065705649470480953766929757224960, 550215338974757416533232824442959655579379852699392], one 2-torsion point: rank_indep.rank_bound rank <= 1
+    first descent: |Sel(phi)| <= 1, |Sel(phi^)| <= 32, rank <= 3; bad primes [2, 3, 5, 7, 11, 13, 19, 23, 41, 61, 109, 2099, 19396921]
+    E: Selmer 1 classes, known subgroup 1, cosets excluded by the second descent 0, not excluded 0: image <= 2^0 (control: 0 classes of known points survive, as they must)
+    E': Selmer 32 classes, known subgroup 4, cosets excluded by the second descent 6, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  exact bound over the class: rank <= 1

@@ -326,6 +326,13 @@ MagicSquareOfSquares.Elliptic _private.MagicSquareOfSquares.Elliptic.0.MagicSqua
 MagicSquareOfSquares.Elliptic _private.MagicSquareOfSquares.Elliptic.0.MagicSquareOfSquares.ne_zero_of_nodup
 MagicSquareOfSquares.Examples MagicSquareOfSquares.bremner_not_isSquare._proof_1_1
 MagicSquareOfSquares.Examples MagicSquareOfSquares.bremner_not_isSquare._proof_1_2
+MagicSquareOfSquares.Exchange MagicSquareOfSquares.G1.fullSquares_exchange._simp_1_10
+MagicSquareOfSquares.Exchange MagicSquareOfSquares.G1.fullSquares_exchange._simp_1_11
+MagicSquareOfSquares.Exchange MagicSquareOfSquares.G1.fullSquares_exchange._simp_1_12
+MagicSquareOfSquares.Exchange MagicSquareOfSquares.G1.fullSquares_exchange._simp_1_13
+MagicSquareOfSquares.Exchange MagicSquareOfSquares.G1.fullSquares_exchange._simp_1_14
+MagicSquareOfSquares.Exchange MagicSquareOfSquares.G1.fullSquares_exchange._simp_1_8
+MagicSquareOfSquares.Exchange MagicSquareOfSquares.G1.fullSquares_exchange._simp_1_9
 MagicSquareOfSquares.G1 MagicSquareOfSquares.G1.obstructsProj.eq_1
 MagicSquareOfSquares.G1 MagicSquareOfSquares.G1.sqTriple.eq_1
 MagicSquareOfSquares.G1 _private.MagicSquareOfSquares.G1.0.MagicSquareOfSquares.G1.core
@@ -708,4 +715,4 @@ MagicSquareOfSquares.TwoDescentMap MagicSquareOfSquares.TwoDescent.indep_of_alph
 MagicSquareOfSquares.TwoDescentMap MagicSquareOfSquares.TwoDescent.indep_of_alpha._proof_1_2
 MagicSquareOfSquares.TwoDescentMap MagicSquareOfSquares.TwoDescent.indep_of_alpha._proof_1_3
 MagicSquareOfSquares.TwoDescentMap MagicSquareOfSquares.TwoDescent.indep_of_alpha_int._abel_1_1
-AUDIT INTERNAL: 949 theorems printed by Audit.lean, 710 auxiliary, 1659 in all
+AUDIT INTERNAL: 964 theorems printed by Audit.lean, 717 auxiliary, 1681 in all

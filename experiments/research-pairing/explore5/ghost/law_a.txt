@@ -1,0 +1,3 @@
+S1 ratios 333 S2 ratios 166 both 0
+S1 vs [odd-exp primes of m^2-n^2 all +-1 mod 8], [all primes]: [(('S1', True, False), 94), (('S1', True, True), 239), (('no', False, False), 7849), (('no', True, False), 728), (('no', True, True), 826)]
+S2 vs [odd-exp primes of mn all +-1 mod 8], [all primes]: [(('S2', True, False), 46), (('S2', True, True), 120), (('no', False, False), 8178), (('no', True, False), 645), (('no', True, True), 747)]

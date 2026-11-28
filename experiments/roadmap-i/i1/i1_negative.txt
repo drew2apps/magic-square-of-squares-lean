@@ -1,0 +1,4 @@
+I1 negative and positive controls. Written by an AI model; not read by a person. Experiment, not counted.
+forged survivor (308,185): recomputed, bad primes alone empty the set (P = 0): claim refused
+degenerate ratio (7,1) with 2 known tuples, forged table at p = 5 without its known tuple: refused (known point rejected)
+positive control (204724,97893), an H1 phantom: need returns P = None (not emptied by good primes to 5000, as the phantom tuples require)

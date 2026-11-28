@@ -1,0 +1,119 @@
+I5: exact rank bounds for the curves of the rows conditional on a rank being 1. Written by an AI model; not read by a person. Experiment, not counted.
+E1(3540,2581): curve E1 of (3540,2581) with d = -11740078; the rows resting on its rank: (3540,2581) [CENSUS5000], (6121,959) [CENSUS7000, its partner]
+  minimal model [0, -1, 0, 16899659070115573331857545392554393999753919, -4577250886777635699050726927293136713005349082509501848957193919] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [0, -1, 0, -4293100682038755015476824652131254012478081, -576447110258273965555953530980310342672113405258724121677109119] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 4, |Sel(phi^)| <= 8, rank <= 3; bad primes [2, 3, 5, 7, 13, 29, 59, 89, 137, 337, 601, 769, 6121, 127261, 150517, 3413941, 4109317]
+  E: Selmer 4 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+  on [0, -1, 0, 16899659070115573331857545392554393999753919, -4577250886777635699050726927293136713005349082509501848957193919] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 4, rank <= 3; bad primes [2, 3, 5, 7, 13, 29, 59, 89, 137, 337, 601, 769, 6121, 127261, 150517, 3413941, 4109317]
+  E: Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  exact rank bound (least over the class) 3; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+E1(4440,2231): curve E1 of (4440,2231) with d = -13342; the rows resting on its rank: (4440,2231) [CENSUS5000], (6671,2209) [CENSUS7000, its partner]
+  minimal model [0, -1, 0, 39795335239688639860836320471793848959, -84072399232288381781467536481424339431003081071435104895] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [0, -1, 0, -13446491125275553996266523211029863041, -12085415807661139154953866283671761724606191077993741695] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 4, |Sel(phi^)| <= 32, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 37, 97, 241, 953, 1321, 2293, 3049, 4969, 41161, 240499468681]
+  E: Selmer 4 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 32 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 15: image <= 2^5 (control: 0 classes of known points survive, as they must)
+  on [0, -1, 0, 39795335239688639860836320471793848959, -84072399232288381781467536481424339431003081071435104895] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 32, |Sel(phi^)| <= 4, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 37, 97, 241, 953, 1321, 2293, 3049, 4969, 41161, 240499468681]
+  E: Selmer 32 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 15: image <= 2^5 (control: 0 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  exact rank bound (least over the class) 5; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+E1(6480,4961): curve E1 of (6480,4961) with d = 709342; the rows resting on its rank: (6480,4961) [CENSUS7000]
+  minimal model [0, 1, 0, 9211122592674457236286980493932726649216639, 1318503358214771909347173196865869794685175648543198847781303935] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [0, 1, 0, -2321905018561882115785832292282159464191361, 165450260790313063016574361192081316420481732665268142293099135] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 16, rank <= 5; bad primes [2, 3, 5, 11, 13, 17, 31, 41, 61, 193, 673, 829, 8161, 565429, 50886973, 5047860733]
+  E: Selmer 8 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  E': Selmer 16 classes, known subgroup 2, cosets excluded by the second descent 6, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+  on [0, 1, 0, 9211122592674457236286980493932726649216639, 1318503358214771909347173196865869794685175648543198847781303935] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 8, rank <= 5; bad primes [2, 3, 5, 11, 13, 17, 31, 41, 61, 193, 673, 829, 8161, 565429, 50886973, 5047860733]
+  E: Selmer 16 classes, known subgroup 2, cosets excluded by the second descent 6, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  exact rank bound (least over the class) 3; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+E1(8249,3720): curve E1 of (8249,3720) with d = -108415202; the rows resting on its rank: (8249,3720) [CENSUS9000]
+  minimal model [0, 1, 0, 263016164015259849023980430859354403964456553599, -65439936015720822957240852006058045665149706287739221875757099862115201] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [0, 1, 0, -108041333098027412523055616961441026128300214401, -10275580279915836963937901489520015559501557064679814623277560601014401] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 64, |Sel(phi^)| <= 8, rank <= 7; bad primes [2, 3, 5, 7, 13, 31, 73, 113, 241, 647, 9049, 11969, 1021429, 755496193, 14017410300001]
+  E: Selmer 64 classes, known subgroup 4, cosets excluded by the second descent 12, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+  on [0, 1, 0, 263016164015259849023980430859354403964456553599, -65439936015720822957240852006058045665149706287739221875757099862115201] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 64, rank <= 7; bad primes [2, 3, 5, 7, 13, 31, 73, 113, 241, 647, 9049, 11969, 1021429, 755496193, 14017410300001]
+  E: Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+  E': Selmer 64 classes, known subgroup 4, cosets excluded by the second descent 12, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+  exact rank bound (least over the class) 5; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+E1(10512,145)+: curve E1 of (10512,145) with d = 220962238; the rows resting on its rank: (10512,145), (10657,10367) [CENSUS11000] (route log_10512_220962238)
+  minimal model [0, 1, 0, -2419208314318668146199775264884775233139683805441, 1463244133933325813781975262027627717377710145889707390761192388296636159] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [0, 1, 0, -2426136499556765358403338405197153710529979997441, 1454524054111208874234348797817247357104591428305105313274478141076079359] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 32, |Sel(phi^)| <= 4, rank <= 5; bad primes [2, 3, 5, 7, 13, 29, 73, 1481, 10513, 10657, 913736261857957, 12552170367451681]
+  E: Selmer 32 classes, known subgroup 4, cosets excluded by the second descent 6, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+  on [0, 1, 0, -2419208314318668146199775264884775233139683805441, 1463244133933325813781975262027627717377710145889707390761192388296636159] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 4, |Sel(phi^)| <= 32, rank <= 5; bad primes [2, 3, 5, 7, 13, 29, 73, 1481, 10513, 10657, 913736261857957, 12552170367451681]
+  E: Selmer 4 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+  E': Selmer 32 classes, known subgroup 4, cosets excluded by the second descent 6, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  exact rank bound (least over the class) 3; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+E1(10512,145)-: curve E1 of (10512,145) with d = -220962238; the rows resting on its rank: (10512,145), (10657,10367) [CENSUS11000] (route log_10512_-220962238)
+  minimal model [0, -1, 0, -2419208314318668146199775264884775233139683805441, -1463244133933325813781975262027627717377710145889707390761192388296636159] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [0, -1, 0, -2426136499556765358403338405197153710529979997441, -1454524054111208874234348797817247357104591428305105313274478141076079359] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 8, rank <= 5; bad primes [2, 3, 5, 7, 13, 29, 73, 1481, 10513, 10657, 913736261857957, 12552170367451681]
+  E: Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 3, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+  on [0, -1, 0, -2419208314318668146199775264884775233139683805441, -1463244133933325813781975262027627717377710145889707390761192388296636159] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 16, rank <= 5; bad primes [2, 3, 5, 7, 13, 29, 73, 1481, 10513, 10657, 913736261857957, 12552170367451681]
+  E: Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+  E': Selmer 16 classes, known subgroup 4, cosets excluded by the second descent 3, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  exact rank bound (least over the class) 3; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+D1(12007,1799): curve D1 of (12007,1799); the rows resting on its rank: (6903,5104) [CENSUS7000] (DM on D1 of its partner, assuming rank 1); (12007,1799) [G3]
+  minimal model [0, 0, 0, -2100795130954721348682439136479163983865084, 1304206922206538200817834175771821647493983141228332733879641600] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [0, 0, 0, -2165958689710674784609240860295356354433729, 1226923427623869266095591828422795486462148666627169033910955200] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 4, |Sel(phi^)| <= 8, rank <= 3; bad primes [2, 7, 11, 13, 29, 59, 181, 257, 2221, 12007, 17209, 20593, 565177, 337693466449]
+  E: Selmer 4 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+  on [0, 0, 0, -2100795130954721348682439136479163983865084, 1304206922206538200817834175771821647493983141228332733879641600] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 4, rank <= 3; bad primes [2, 7, 11, 13, 29, 59, 181, 257, 2221, 12007, 17209, 20593, 565177, 337693466449]
+  E: Selmer 8 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 3: image <= 2^3 (control: 0 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  exact rank bound (least over the class) 3; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+Sig+(12204,9853): curve Sig+ of (12204,9853); the rows resting on its rank: G3 open (12204,9853): its only curve with PARI bounds [1,3]
+  minimal model [0, -1, 0, -86753333016712673790059436059407475720840059034305, -3978647120759912663046198465625130039355274066092469254836088590418933674303] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [0, -1, 0, -270811577958281874994430873205205734122236323815425, -1702865699443557269117006966671502023576618916439626539756935782390927909375] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 16, |Sel(phi^)| <= 8, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 59, 113, 137, 167, 2351, 3137, 3696500229970189, 72996415149588793]
+  E: Selmer 16 classes, known subgroup 2, cosets excluded by the second descent 6, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+  E': Selmer 8 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  on [0, -1, 0, -86753333016712673790059436059407475720840059034305, -3978647120759912663046198465625130039355274066092469254836088590418933674303] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 8, |Sel(phi^)| <= 16, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 59, 113, 137, 167, 2351, 3137, 3696500229970189, 72996415149588793]
+  E: Selmer 8 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 1: image <= 2^3 (control: 2 classes of known points survive, as they must)
+  E': Selmer 16 classes, known subgroup 2, cosets excluded by the second descent 6, not excluded 1: image <= 2^2 (control: 0 classes of known points survive, as they must)
+  exact rank bound (least over the class) 3; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+Sig+(22057,2351): curve Sig+ of (22057,2351); the rows resting on its rank: G3 open (12204,9853), through its partner (22057,2351): PARI bounds [1,3]
+  minimal model [1, 0, 0, -3273186841081526246623448342297018808717045938715, 5262479891378770656266792116117772613394291382315357263651247762914134225] (checked: same c4, c6 up to u^4, u^6)
+  isogeny class (PARI, each checked by point counts mod p < 1000): 2 curves, rational 2-torsion points [1, 1]
+  on [1, 0, 0, -4351285031391616216703842997198138158196125060635, 3490338284271668944303441181080076745381243767134907651053069818009484497] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 32, |Sel(phi^)| <= 4, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 59, 113, 137, 167, 2351, 3137, 3696500229970189, 72996415149588793]
+  E: Selmer 32 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 15: image <= 2^5 (control: 0 classes of known points survive, as they must)
+  E': Selmer 4 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  on [1, 0, 0, -3273186841081526246623448342297018808717045938715, 5262479891378770656266792116117772613394291382315357263651247762914134225] (one rational 2-torsion point): rank_indep.py's descent via 2-isogeny and second descent
+  first descent: |Sel(phi)| <= 4, |Sel(phi^)| <= 32, rank <= 5; bad primes [2, 3, 5, 7, 13, 23, 59, 113, 137, 167, 2351, 3137, 3696500229970189, 72996415149588793]
+  E: Selmer 4 classes, known subgroup 4, cosets excluded by the second descent 0, not excluded 0: image <= 2^2 (control: 2 classes of known points survive, as they must)
+  E': Selmer 32 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 15: image <= 2^5 (control: 0 classes of known points survive, as they must)
+  exact rank bound (least over the class) 5; a point of infinite order known, so rank >= 1
+  root number -1 (PARI ellrootno; under the parity conjecture the rank is odd)
+# matches

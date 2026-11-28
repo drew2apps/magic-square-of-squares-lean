@@ -1,0 +1,16 @@
+{
+ "files": [
+  "search_E_H50000_coset.json",
+  "search_E3_H50000_coset.json",
+  "search_E3_H100000_from50000_cosetA.json",
+  "search_E3_H100000_from50000_cosetB.json",
+  "search_E_alt_H10000_coset.json",
+  "search_E3_alt_H10000_coset.json",
+  "search_E_H2000_torsion.json",
+  "search_E3_H2000_torsion.json",
+  "search_E_alt_H2000_torsion.json",
+  "search_E3_alt_H2000_torsion.json"
+ ],
+ "note": "Written by an AI model (build agent t13), not read by a person. Points of E(K) of infinite order found by search.py (exact coordinates as strings in K = Q(i)); empty if none was found.",
+ "points_on_E": []
+}

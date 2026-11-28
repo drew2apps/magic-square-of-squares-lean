@@ -1,0 +1,28 @@
+degenerate (4, 3) 5-tuples left 2 known [(2, 1, 1, 7, 2), (2, 1, 14, 2, 1)] all known kept: True
+degenerate (12, 5) 5-tuples left 2 known [(2, 1, 7, 17, 2), (2, 1, 34, 14, 1)] all known kept: True
+degenerate (7, 1) 5-tuples left 2 known [(7, 1, 1, 2, 1), (2, 14, 1, 2, 2)] all known kept: True
+degenerate (17, 7) 5-tuples left 2 known [(17, 7, 1, 2, 1), (14, 34, 1, 2, 2)] all known kept: True
+degenerate (21, 20) 5-tuples left 2 known [(1, 2, 1, 41, 1), (1, 2, 82, 2, 2)] all known kept: True
+degenerate (41, 1) 5-tuples left 2 known [(41, 1, 2, 1, 2), (2, 82, 2, 1, 1)] all known kept: True
+(3320, 2303) 4-form residual 2 | 5-form residual 0 | 4-tuples that extend 0
+(5623, 1017) 4-form residual 2 | 5-form residual 0 | 4-tuples that extend 0
+(9113, 3200) 4-form residual 2 | 5-form residual 0 | 4-tuples that extend 0
+(12313, 5913) 4-form residual 2 | 5-form residual 0 | 4-tuples that extend 0
+(14903, 9696) 4-form residual 8 | 5-form residual 8 | 4-tuples that extend 4
+     (1, 2, 1, 5207, 1)
+     (1, 2, 1, 5207, 12644473)
+     (1, 2, 10414, 2, 2)
+     (1, 2, 10414, 2, 25288946)
+     (1, 2, 10414, 49198, 2)
+     (1, 2, 10414, 49198, 25288946)
+     (1, 2, 24599, 5207, 1)
+     (1, 2, 24599, 5207, 12644473)
+(24599, 5207) 4-form residual 8 | 5-form residual 8 | 4-tuples that extend 4
+     (2, 10414, 2, 1, 1)
+     (2, 10414, 2, 1, 12644473)
+     (5207, 1, 2, 1, 2)
+     (5207, 1, 2, 1, 25288946)
+     (5207, 24599, 2, 1, 2)
+     (5207, 24599, 2, 1, 25288946)
+     (49198, 10414, 2, 1, 1)
+     (49198, 10414, 2, 1, 12644473)

@@ -1,0 +1,37 @@
+search.py (conductor-t13): curve E3, H = 2000.  Written by an AI model (build agent t13); not read by a person.
+  torsion t1 m01 T = 0.5616: 2799 values of t2, 4933626 pairs (t1, t2), 44 sieve primes, 3563 sieve survivors, 3564 exact hits, 4 primitive
+     hit t1 = 0+0i, t2 = 1+0i
+     hit t1 = 0+1i, t2 = 1+1i
+     hit t1 = 1+0i, t2 = 0+0i
+     hit t1 = 1+1i, t2 = 1+0i
+  torsion t1 m02 T = 3.531e+05: 0 values of t2, 1 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 1 exact hits, 1 primitive
+     hit t1 = 1+0i, t2 = 0+0i
+  torsion t1 m03 T = 72.85: 22 values of t2, 4818080 pairs (t1, t2), 44 sieve primes, 35 sieve survivors, 36 exact hits, 4 primitive
+     hit t1 = -57-13i, t2 = 1+0i
+     hit t1 = 0-1i, t2 = 1+1i
+     hit t1 = 1+0i, t2 = 0+0i
+     hit t1 = 56+12i, t2 = 1+0i
+  torsion t1 m04 T = 3.531e+05: 0 values of t2, 1 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 1 exact hits, 1 primitive
+     hit t1 = 1+0i, t2 = 0+0i
+  torsion t1 m05 T = 356.3: 5 values of t2, 4413449 pairs (t1, t2), 44 sieve primes, 4 sieve survivors, 5 exact hits, 3 primitive
+     hit t1 = -265-99i, t2 = 1+0i
+     hit t1 = 1+0i, t2 = 0+0i
+     hit t1 = 362+265i, t2 = 1+0i
+  torsion t1 m06 T = 356.3: 5 values of t2, 4413449 pairs (t1, t2), 44 sieve primes, 4 sieve survivors, 5 exact hits, 3 primitive
+     hit t1 = -362-265i, t2 = 1+0i
+     hit t1 = 1+0i, t2 = 0+0i
+     hit t1 = 265+99i, t2 = 1+0i
+  torsion t1 m07 T = 1343: 1 values of t2, 2772928 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 1 exact hits, 1 primitive
+     hit t1 = 1+0i, t2 = 0+0i
+  torsion t1 m08 T = 1343: 1 values of t2, 2772928 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 1 exact hits, 1 primitive
+     hit t1 = 1+0i, t2 = 0+0i
+  torsion t1 m09 T = 4315: 0 values of t2, 1 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 1 exact hits, 1 primitive
+     hit t1 = 1+0i, t2 = 0+0i
+  torsion t2 m01 T = 103.8: 15 values of t2, 4773406 pairs (t1, t2), 44 sieve primes, 5 sieve survivors, 6 exact hits, 2 primitive
+     hit t1 = -175+7i, t2 = 1+0i
+     hit t1 = 1+0i, t2 = 0+0i
+  torsion t2 m02 T = 1.201e+04: 0 values of t2, 1 pairs (t1, t2), 44 sieve primes, 0 sieve survivors, 1 exact hits, 1 primitive
+     hit t1 = 1+0i, t2 = 0+0i
+  torsion t2 m03 T = 16.56: 93 values of t2, 4908250 pairs (t1, t2), 44 sieve primes, 73 sieve survivors, 74 exact hits, 2 primitive
+     hit t1 = -8+5i, t2 = 1+0i
+     hit t1 = 1+0i, t2 = 0+0i

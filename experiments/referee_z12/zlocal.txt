@@ -1,0 +1,39 @@
+('coprime', '08', '-dl square', 'agree') 376
+('coprime', '08', 'dl square', 'agree') 992
+('coprime', '08', 'p|C+A', 'agree') 1120
+('coprime', '08', 'p|C-A', 'agree') 832
+('coprime', 'LU', '-dl square', 'agree') 288
+('coprime', 'LU', 'dl square', 'agree') 900
+('coprime', 'LU', 'p|C+A', 'agree') 1360
+('coprime', 'LU', 'p|C-A', 'agree') 960
+('m<n', '08', '-dl square', 'agree') 92
+('m<n', '08', 'dl square', 'agree') 240
+('m<n', '08', 'p|C+A', 'agree') 240
+('m<n', '08', 'p|C-A', 'agree') 224
+('m<n', 'LU', '-dl square', 'agree') 64
+('m<n', 'LU', 'dl square', 'agree') 212
+('m<n', 'LU', 'p|C+A', 'agree') 368
+('m<n', 'LU', 'p|C-A', 'agree') 208
+('noncoprime', '08', '-dl square', 'agree') 12
+('noncoprime', '08', 'dl square', 'agree') 40
+('noncoprime', '08', 'p|C+A', 'agree') 48
+('noncoprime', '08', 'p|C-A', 'DISAGREE') 14
+('noncoprime', '08', 'p|C-A', 'agree') 70
+('noncoprime', 'LU', '-dl square', 'agree') 16
+('noncoprime', 'LU', 'dl square', 'agree') 40
+('noncoprime', 'LU', 'p|C+A', 'agree') 64
+('noncoprime', 'LU', 'p|C-A', 'DISAGREE') 20
+('noncoprime', 'LU', 'p|C-A', 'agree') 52
+solubility claims (tag, claim, holds): {('coprime', 'p|A: p∤δ and ±δ square', True): 433, ('coprime', 'p|C: δ square', True): 206, ('noncoprime', 'p|A: p∤δ and ±δ square', True): 41, ('noncoprime', 'p|C: δ square', True): 28, ('noncoprime', 'p|C: δ square', False): 19, ('noncoprime', 'p|A: p∤δ and ±δ square', False): 9, ('m<n', 'p|A: p∤δ and ±δ square', True): 104, ('m<n', 'p|C: δ square', True): 48}
+   ('noncoprime', '08', 6, 3, 3, 'p|C-A', 'dl', 2, 'b', (2, 1), 'table', 1, 'local', -1)
+   ('noncoprime', '08', 6, 3, 3, 'p|C-A', 'dl', 2, 'b', (1, 2), 'table', 1, 'local', -1)
+   ('noncoprime', 'LU', 6, 3, 3, 'p|C-A', 'dl', 6, 'b', (1, 6), 'table', 1, 'local', -1)
+   ('noncoprime', 'LU', 6, 3, 3, 'p|C-A', 'dl', 6, 'b', (1, 2), 'table', 1, 'local', -1)
+   ('noncoprime', 'LU', 6, 3, 3, 'p|C-A', 'dl', 3, 'b', (1, 3), 'table', 1, 'local', -1)
+   ('noncoprime', 'LU', 6, 3, 3, 'p|C-A', 'dl', 3, 'b', (1, 2), 'table', 1, 'local', -1)
+   ('noncoprime', 'LU', 6, 3, 3, 'p|C-A', 'dl', 2, 'b', (1, 6), 'table', 1, 'local', -1)
+   ('noncoprime', 'LU', 6, 3, 3, 'p|C-A', 'dl', 2, 'b', (1, 3), 'table', 1, 'local', -1)
+   ('noncoprime', '08', 9, 3, 3, 'p|C-A', 'dl', 6, 'b', (1, 6), 'table', 1, 'local', -1)
+   ('noncoprime', '08', 9, 3, 3, 'p|C-A', 'dl', 6, 'b', (1, 2), 'table', 1, 'local', -1)
+   ('noncoprime', '08', 9, 3, 3, 'p|C-A', 'dl', 3, 'b', (1, 3), 'table', 1, 'local', -1)
+   ('noncoprime', '08', 9, 3, 3, 'p|C-A', 'dl', 3, 'b', (1, 2), 'table', 1, 'local', -1)

@@ -1,0 +1,22 @@
+z15_models.py: written by an AI model (reviewer z15), not read by a person.
+(3320, 2303) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(5623, 1017) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(9113, 3200) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(12313, 5913) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(14903, 9696) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(2859, 2380) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(7927, 5040) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(8117, 4140) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(9464, 1705) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(10727, 10168) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(11468, 6725) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(12443, 4476) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(12705, 4448) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(12967, 2737) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(13335, 6088) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(13361, 679) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(13617, 2569) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(13780, 11757) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(14327, 13657) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+(14349, 10660) 08:iso 0L:iso 0U:iso 8L:iso 8U:iso LU:iso
+isomorphic: 120 of 120

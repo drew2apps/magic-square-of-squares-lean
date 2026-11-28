@@ -1,0 +1,5 @@
+I1 laws, negative and positive controls. Written by an AI model; not read by a person.
+forged claim "0000 is allowed at good 17 for some residue": refused
+positive control: 0001 is allowed at good 17 for some residue: yes
+ratio (2589210,888599), 313 | Q+ once: forged claim "0110 allowed": refused
+positive control: 1111 allowed: yes

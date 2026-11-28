@@ -1,0 +1,5 @@
+I2 residual tuples, negative and positive controls. Written by an AI model; not read by a person.
+true record for (15001,2081): 2 residual tuples, killing prime 29: accepted
+forged residual tuple [1, 1, 2, 3]: refused
+forged killing prime 23: refused
+forged record with a residual tuple left out: refused

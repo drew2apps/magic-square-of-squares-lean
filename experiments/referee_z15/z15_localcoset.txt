@@ -1,0 +1,4 @@
+z15_localcoset.py: written by an AI model (reviewer z15), not read by a person.
+odd bad primes with a non-trivial allowed set, over the 937 ratios: coset 8489, not a coset 4514
+    ('residual NOT coset', 'an odd local set is not a coset') 255
+    ('residual coset', 'an odd local set is not a coset') 682

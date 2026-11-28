@@ -1,0 +1,5 @@
+z15_shapes3.py: written by an AI model (reviewer z15), not read by a person.
+ratios by composition of the residual set: {'mixed': 136, 'no ghost': 438, 'all ghost': 363} ; of them with a survivor: {'mixed': 1, 'no ghost': 0, 'all ghost': 4}
+survivor ratios (m, n, residual size, ghost tuples, survivors): [(3320, 2303, 2, 2, 2), (5623, 1017, 2, 2, 2), (14903, 9696, 8, 4, 2), (9113, 3200, 2, 2, 2), (12313, 5913, 2, 2, 2)]
+residual size 2, both ghost: 228
+ratios by which tuples survive E_08 and E_LU: {'no tuple reaches the mixed curves': 720, 'only ghost reach': 119, 'only non-ghost reach': 88, 'ghost and non-ghost reach': 10} ; with a survivor: {'no tuple reaches the mixed curves': 0, 'only ghost reach': 5, 'only non-ghost reach': 0, 'ghost and non-ghost reach': 0}

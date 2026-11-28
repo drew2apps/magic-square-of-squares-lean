@@ -1,0 +1,66 @@
+{
+ "coset A m01": {
+  "hits": [],
+  "npairs": 123361521
+ },
+ "coset A m02": {
+  "hits": [],
+  "npairs": 123342875
+ },
+ "coset A m03": {
+  "hits": [],
+  "npairs": 123353410
+ },
+ "coset A+B m01": {
+  "hits": [],
+  "npairs": 123360855
+ },
+ "coset A+B m02": {
+  "hits": [],
+  "npairs": 123361220
+ },
+ "coset A+B m03": {
+  "hits": [],
+  "npairs": 123347180
+ },
+ "coset A+B m04": {
+  "hits": [],
+  "npairs": 123334562
+ },
+ "coset A+B m05": {
+  "hits": [],
+  "npairs": 123362782
+ },
+ "coset A+B m06": {
+  "hits": [],
+  "npairs": 123361980
+ },
+ "coset B m01": {
+  "hits": [],
+  "npairs": 123358234
+ },
+ "coset B m02": {
+  "hits": [],
+  "npairs": 123351519
+ },
+ "coset B m03": {
+  "hits": [],
+  "npairs": 123346573
+ },
+ "coset B m04": {
+  "hits": [],
+  "npairs": 123362751
+ },
+ "coset B m05": {
+  "hits": [],
+  "npairs": 123361499
+ },
+ "coset B m06": {
+  "hits": [],
+  "npairs": 123357587
+ },
+ "coset B m07": {
+  "hits": [],
+  "npairs": 123360904
+ }
+}

@@ -1,0 +1,2 @@
+effort 4: [1, 1], 0 point(s), images span 2; ghost class not in the span
+effort 5: [1, 1], 1 point(s), images span 3; ghost class IS the class of a point found

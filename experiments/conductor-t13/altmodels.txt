@@ -1,0 +1,11 @@
+altmodels.py (conductor-t13).  Written by an AI model (build agent t13); not read by a person.
+  E coset A: models per prime {'-95732*i + 621357': 4, '-671*i - 4800': 4, '991': 0, '263': 1} -> 10 models after reduction
+  E coset B: models per prime {'-95732*i + 621357': 4, '-671*i - 4800': 4, '991': 2, '263': 2} -> 13 models after reduction
+  E coset A+B: models per prime {'-95732*i + 621357': 4, '-671*i - 4800': 4, '991': 0, '263': 1} -> 10 models after reduction
+  E torsion t1: models per prime {'-95732*i + 621357': 4, '-671*i - 4800': 3, '991': 0, '263': 0} -> 10 models after reduction
+  E torsion t2: models per prime {'-95732*i + 621357': 2, '-671*i - 4800': 1, '991': 0, '263': 1} -> 5 models after reduction
+  E3 coset A: models per prime {'-95732*i + 621357': 0, '-671*i - 4800': 0, '991': 2, '263': 4} -> 4 models after reduction
+  E3 coset B: models per prime {'-95732*i + 621357': 2, '-671*i - 4800': 2, '991': 4, '263': 4} -> 8 models after reduction
+  E3 coset A+B: models per prime {'-95732*i + 621357': 2, '-671*i - 4800': 2, '991': 2, '263': 4} -> 7 models after reduction
+  E3 torsion t1: models per prime {'-95732*i + 621357': 2, '-671*i - 4800': 2, '991': 4, '263': 4} -> 10 models after reduction
+  E3 torsion t2: models per prime {'-95732*i + 621357': 0, '-671*i - 4800': 2, '991': 1, '263': 2} -> 4 models after reduction

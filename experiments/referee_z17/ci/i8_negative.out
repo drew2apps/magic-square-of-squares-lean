@@ -1,0 +1,11 @@
+PARI stack size set to 500000000 bytes, maximum size set to 4000002048
+I8 negative and positive controls. Written by an AI model; not read by a person.
+true residual record of (15001,2081): accepted
+forged residual tuple: refused (tuple [1, 1, 2, 3] not allowed at the bad prime 2)
+forged killing prime 23 (a good prime below the true one): refused (tuple [1, 1, 2, 1] allowed at its killing prime 23)
+positive control (5623,1017) (t10: E_08 of rank 0): E_08 torsion 8 of bound 8, points over t in ['-1/1', '0/1', '1/1', 'inf']: excludes the ratio
+  its tuples: ['rank 0 of E_08']
+forged: the torsion of E_08 with one point left out: refused (not complete)
+forged: a rank-0 claim on E_0L (dim Sel2 = 6): refused
+positive control (4457,287) (t10: both tuples pairing-killed by 0L,0U,8L,8U): [41, 31199, 1, 2] pairing by 0L,0U,8L,8U; [62398, 82, 1, 2] pairing by 0L,0U,8L,8U
+# matches

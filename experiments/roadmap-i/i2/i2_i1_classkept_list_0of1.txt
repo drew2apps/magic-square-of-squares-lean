@@ -1,0 +1,29 @@
+1097705,550604 0 28 - 0 kill=[2:2 5:2 13:2 73:2]
+156887577,143562092 0 32 - 0 kill=[2:2 5:4 13:2 17:2 43:2 73:2]
+172983,148520 0 26 - 0 kill=[2:2 13:2 1597:2]
+183124,539 0 22 - 0 kill=[2:2 3:2 5:2 17:2]
+225924,69649 0 28 - 0 kill=[3:2 5:2 13:2 73:2]
+234913,61148 0 26 - 0 kill=[2:2 29:2]
+238989,117824 0 28 - 0 kill=[5:2 11:2 13:2 29:2 41:2]
+2674377,1885892 0 28 - 0 kill=[2:2 5:2 41:2]
+308,185 0 20 - 0 kill=[2:2 5:2 29:2]
+335143916,279093591 MEMORY: over the per-process memory limit of run_i2.sh, not done
+340,53 0 18 - 0 kill=[2:2 13:2 17:2]
+358148,250087 0 26 - 0 kill=[2:2 5:2 13:2 37:2]
+392932,125777 0 24 - 0 kill=[2:2 5:2 17:2]
+449909,413264 0 26 - 0 kill=[2:2 5:2 181:2]
+471597,172960 0 24 - 0 kill=[2:2 13:2]
+621437309,63174836 0 32 - 0 kill=[2:2 5:2 17:2 37:2 277:2]
+651432,64265 2 22 coset 29 kill=[2:2 3:2 29:2] S=2,1,322,1042;2,1,521,161
+726100,480963 MEMORY: over the per-process memory limit of run_i2.sh, not done
+84697,78540 0 24 - 0 kill=[2:3 3:2 11:2 13:4 17:5 37:4 47:2 131:2]
+1037411335213,9085 MEMORY: over the per-process memory limit of run_i2.sh, not done
+1247577551500,7023 0 30 - 0 kill=[2:3 3:1 5:1 7:2 11:2 13:2 17:5 41:2 73:2 937:2 1321:2 2341:3 54367:2]
+1306936960,7596161 0 30 - 0 kill=[2:2 3:2 5:2 11:2 13:2 17:2 541:2]
+1419446173223,463 MEMORY: over the per-process memory limit of run_i2.sh, not done
+1576718793964,3471 MEMORY: over the per-process memory limit of run_i2.sh, not done
+233570277,677075 MEMORY: over the per-process memory limit of run_i2.sh, not done
+23746525140,545237 MEMORY: over the per-process memory limit of run_i2.sh, not done
+45364602280,56287 MEMORY: over the per-process memory limit of run_i2.sh, not done
+559041464,23486071 MEMORY: over the per-process memory limit of run_i2.sh, not done
+69243112,5127009 MEMORY: over the per-process memory limit of run_i2.sh, not done

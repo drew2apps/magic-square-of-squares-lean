@@ -1,0 +1,26 @@
+H1's 12 phantom pairs (24 ratios), every bad prime tested
+still phantoms: 14 of 24
+(204724,97893) PHANTOM: class dim 0; every bad prime; good primes to 20000; known [(2, 1, 106831, 302617), (2, 1, 605234, 213662)]; extra [(2, 1, 119521, 270487), (2, 1, 540974, 239042)]
+(302617,106831) PHANTOM: class dim 0; every bad prime; good primes to 20000; known [(213662, 605234, 1, 2), (302617, 106831, 1, 2)]; extra [(239042, 540974, 1, 2), (270487, 119521, 1, 2)]
+(413004,148603) PHANTOM: class dim 3; every bad prime; good primes to 20000; known [(2, 1, 264401, 561607), (2, 1, 1123214, 528802)]; extra [(2, 17105249, 264401, 561607), (2, 17105249, 1123214, 528802), (34210498, 1, 264401, 561607), (34210498, 1, 1123214, 528802)]
+(561607,264401) PHANTOM: class dim 3; every bad prime; good primes to 20000; known [(528802, 1123214, 1, 2), (561607, 264401, 1, 2)]; extra [(528802, 1123214, 1, 34210498), (528802, 1123214, 17105249, 2), (561607, 264401, 1, 34210498), (561607, 264401, 17105249, 2)]
+(756492,255635) PHANTOM: class dim 0; every bad prime; good primes to 20000; known [(2, 1, 500857, 1012127), (2, 1, 2024254, 1001714)]; extra [(2, 1, 2113, 239910503), (2, 1, 479821006, 4226)]
+(1012127,500857) PHANTOM: class dim 0; every bad prime; good primes to 20000; known [(1001714, 2024254, 1, 2), (1012127, 500857, 1, 2)]; extra [(4226, 479821006, 1, 2), (239910503, 2113, 1, 2)]
+(853587,255916) PHANTOM: class dim 1; every bad prime; good primes to 20000; known [(1, 2, 597671, 1109503), (1, 2, 2219006, 1195342)]; extra [(1, 1918, 597671, 1109503), (1, 1918, 2219006, 1195342), (959, 2, 597671, 1109503), (959, 2, 2219006, 1195342)]
+(1109503,597671) PHANTOM: class dim 1; every bad prime; good primes to 20000; known [(1109503, 597671, 2, 1), (1195342, 2219006, 2, 1)]; extra [(1109503, 597671, 2, 959), (1109503, 597671, 1918, 1), (1195342, 2219006, 2, 959), (1195342, 2219006, 1918, 1)]
+(1992873,999664) PHANTOM: class dim 0; every bad prime; good primes to 20000; known [(1, 2, 993209, 2992537), (1, 2, 5985074, 1986418)]; extra [(1, 2, 322, 36921921506), (1, 2, 18460960753, 161)]
+(2992537,993209) PHANTOM: class dim 0; every bad prime; good primes to 20000; known [(1986418, 5985074, 2, 1), (2992537, 993209, 2, 1)]; extra [(161, 18460960753, 2, 1), (36921921506, 322, 2, 1)]
+(11875080,6497849) not a phantom: class dim 0; extra tuples removed at 5462461 (octic), a bad prime H1 did not test (untested bad primes: 6)
+(18372929,5377231) not a phantom: class dim 0; extra tuples removed at 5462461 (octic), a bad prime H1 did not test (untested bad primes: 6)
+(32396425,3694248) not a phantom: class dim 0; extra tuples removed at 218077 (octic), a bad prime H1 did not test (untested bad primes: 8)
+(36090673,28702177) not a phantom: class dim 0; extra tuples removed at 218077 (octic), a bad prime H1 did not test (untested bad primes: 8)
+(175775580,15972419) not a phantom: class dim 0; extra tuples removed at 10057297 (octic), a bad prime H1 did not test (untested bad primes: 6)
+(191747999,159803161) not a phantom: class dim 0; extra tuples removed at 10057297 (octic), a bad prime H1 did not test (untested bad primes: 6)
+(189089400,156063271) PHANTOM: class dim 1; every bad prime; good primes to 20000; known [(2, 1, 33026129, 345152671), (2, 1, 690305342, 66052258)]; extra [(2, 1, 1346, 33875354047966), (2, 1, 16937677023983, 673)]
+(345152671,33026129) PHANTOM: class dim 1; every bad prime; good primes to 20000; known [(66052258, 690305342, 1, 2), (345152671, 33026129, 1, 2)]; extra [(673, 16937677023983, 1, 2), (33875354047966, 1346, 1, 2)]
+(231641256,72371617) PHANTOM: class dim 0; every bad prime; good primes to 20000; known [(2, 1, 159269639, 304012873), (2, 1, 608025746, 318539278)]; extra [(2, 1, 1, 48420020534062847), (2, 1, 96840041068125694, 2)]
+(304012873,159269639) PHANTOM: class dim 0; every bad prime; good primes to 20000; known [(304012873, 159269639, 1, 2), (318539278, 608025746, 1, 2)]; extra [(2, 96840041068125694, 1, 2), (48420020534062847, 1, 1, 2)]
+(234319635,115640732) not a phantom: class dim 0; extra tuples removed at 21062406847889269 (octic), a bad prime H1 did not test (untested bad primes: 8)
+(349960367,118678903) not a phantom: class dim 0; extra tuples removed at 21062406847889269 (octic), a bad prime H1 did not test (untested bad primes: 8)
+(518804652,31743595) not a phantom: class dim 2; extra tuples removed at 1650997632721 (octic), a bad prime H1 did not test (untested bad primes: 6)
+(550548247,487061057) not a phantom: class dim 2; extra tuples removed at 1650997632721 (octic), a bad prime H1 did not test (untested bad primes: 6)

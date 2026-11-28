@@ -1,0 +1,29 @@
+ratios: mine 937, EXPLORATION_4 tables 937, same set: True
+four-form tuples: mine 6904, EXPLORATION_4 6904, equal at every ratio: True
+five forms: ratios that keep a 5-tuple 211 of 937; 4-tuples that extend 1370 of 6904; 5-tuples 2108
+against the session's f4_all.jsonl (937 of the 937 present): same n5 and same extending 4-tuples at every ratio: True
+pairing flags: 0 entries "outside Sel^2"; pairing survivors 10 tuples at 5 ratios: [(3320, 2303), (5623, 1017), (9113, 3200), (12313, 5913), (14903, 9696)]
+pairing survivors that extend to a 5-tuple: {(14903, 9696): [(1, 2, 10414, 49198), (1, 2, 24599, 5207)]}
+   (3320, 2303): survivors [(2, 1, 1, 635399), (2, 1, 1270798, 2)]; 5-tuples here 0
+   (5623, 1017): survivors [(2, 1270798, 1, 2), (635399, 1, 1, 2)]; 5-tuples here 0
+   (9113, 3200): survivors [(1, 2, 511, 1759), (1, 2, 3518, 1022)]; 5-tuples here 0
+   (12313, 5913): survivors [(1022, 3518, 2, 1), (1759, 511, 2, 1)]; 5-tuples here 0
+   (14903, 9696): survivors [(1, 2, 10414, 49198), (1, 2, 24599, 5207)]; 5-tuples here 8
+ratios of the 937 with a prime = 5 mod 8 to an odd power in m^2 + n^2 (excluded by G1Primes.lean, tier A): 318
+   of these, keep a 5-tuple: 0;   ratios without such a prime: 619, of which keep a 5-tuple: 211
+   four-form tuples at the ratios without such a prime: 5194, of which extend: 1370
+   pairing-survivor ratios with such a prime: [(3320, 2303), (5623, 1017)]
+5-tuples whose d4 has a prime of even exponent in m^2 + n^2: 0
+sample biased: 269 ratios, four-form tuples equal to the session's at every ratio: True; keep a 5-tuple 46; 4-tuples that extend 118 of 1096; pairing survivors 6, of which extend 0
+sample random: 14 ratios, four-form tuples equal to the session's at every ratio: True; keep a 5-tuple 4; 4-tuples that extend 10 of 52; pairing survivors 0, of which extend 0
+sample fewp: 38 ratios, four-form tuples equal to the session's at every ratio: True; keep a 5-tuple 4; 4-tuples that extend 18 of 218; pairing survivors 0, of which extend 0
+open (195,28): four-form 2, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+open (223,167): four-form 2, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+open (440,279): four-form 2, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+open (609,200): four-form 4, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+open (627,364): four-form 4, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+open (719,161): four-form 2, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+open (809,409): four-form 4, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+open (861,620): four-form 2, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+open (991,263): four-form 4, five-form 2; the five-form tuples are exactly the 2 degenerate ones: True
+(24599,5207), not degenerate: four-form 8, five-form 8

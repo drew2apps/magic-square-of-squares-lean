@@ -11,8 +11,8 @@ identifiers:
   - type: doi
     value: 10.5281/zenodo.24435351
     description: "Zenodo concept DOI; resolves to the latest archived version"
-version: 0.6.0
-date-released: 2026-11-27
+version: 0.7.0
+date-released: 2026-11-28
 abstract: >-
   Lean 4 proofs of the known necessary conditions and reformulations for a 3x3 magic square of
   squares (an open problem), and kernel-checked conditions on two ratios of sums of edge roots.

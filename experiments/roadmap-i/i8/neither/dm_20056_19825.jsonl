@@ -1,0 +1,8 @@
+{"pair": [20056, 19825], "curve": "E", "rank": [2, 2], "status": "rank not 1", "sec": 1.2, "of": [20056, 19825]}
+{"pair": [20056, 19825], "curve": "D1", "rank": [2, 2], "status": "rank not 1", "sec": 4.6, "of": [20056, 19825]}
+{"pair": [20056, 19825], "curve": "Sig+", "rank": [2, 2], "status": "rank not 1", "sec": 2.4, "of": [20056, 19825]}
+{"pair": [20056, 19825], "curve": "Sig-", "rank": [1, 1], "hG": 7.088294913647848, "B": 158.0354373605286, "amax": 55, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 2, "ncand": 113, "nt": 1, "t": {}, "status": "closed", "sec": 2.7, "of": [20056, 19825]}
+{"pair": [39881, 231], "curve": "E-partner", "rank": [1, 1], "hG": 10.019346413909174, "B": 99.66606340081626, "amax": 28, "gens": "pari, saturated at primes <= 1000 (conditional)", "ntors": 4, "ncand": 115, "nt": 57, "t": {}, "status": "closed", "sec": 2.3, "of": [20056, 19825]}
+{"pair": [39881, 231], "curve": "D1-partner", "rank": [2, 2], "status": "rank not 1", "sec": 2.5, "of": [20056, 19825]}
+{"pair": [39881, 231], "curve": "Sig+-partner", "rank": [2, 2], "status": "rank not 1", "sec": 4.8, "of": [20056, 19825]}
+{"pair": [39881, 231], "curve": "Sig--partner", "rank": [1, 3], "status": "rank not 1", "sec": 4.9, "of": [20056, 19825]}

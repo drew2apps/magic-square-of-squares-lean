@@ -1,0 +1,31 @@
+z15_rankbound.py: written by an AI model (reviewer z15), not read by a person.
+(3320,2303) E_08: dim Sel2 5, pairing matrix rank 2 (symmetric True, alternating True) => rank <= 1; PARI ellrank effort 2 [1,1]; root number -1; images of torsion + points found span 2
+    tuple (2, 1, 1, 635399): class (1, 19505); pairs trivially with all of Sel2: True; class of a point found: False
+    tuple (2, 1, 1270798, 2): class (1, 19505); pairs trivially with all of Sel2: True; class of a point found: False
+(3320,2303) E_LU: dim Sel2 2, pairing matrix rank 0 (symmetric True, alternating True) => rank <= 0; PARI ellrank effort 2 [0,0]; root number +1; images of torsion + points found span 2
+    tuple (2, 1, 1, 635399): class (32652418, 1270798); pairs trivially with all of Sel2: True; class of a point found: True
+    tuple (2, 1, 1270798, 2): class (32652418, 1270798); pairs trivially with all of Sel2: True; class of a point found: True
+(5623,1017) E_08: dim Sel2 2, pairing matrix rank 0 (symmetric True, alternating True) => rank <= 0; PARI ellrank effort 2 [0,0]; root number +1; images of torsion + points found span 2
+    tuple (2, 1270798, 1, 2): class (1, 1); pairs trivially with all of Sel2: True; class of a point found: True
+    tuple (635399, 1, 1, 2): class (1, 1); pairs trivially with all of Sel2: True; class of a point found: True
+(5623,1017) E_LU: dim Sel2 5, pairing matrix rank 2 (symmetric True, alternating True) => rank <= 1; PARI ellrank effort 2 [1,1]; root number -1; images of torsion + points found span 2
+    tuple (2, 1270798, 1, 2): class (16326209, 1); pairs trivially with all of Sel2: True; class of a point found: False
+    tuple (635399, 1, 1, 2): class (16326209, 1); pairs trivially with all of Sel2: True; class of a point found: False
+(9113,3200) E_08: dim Sel2 4, pairing matrix rank 0 (symmetric True, alternating True) => rank <= 2; PARI ellrank effort 2 [0,2]; root number +1; images of torsion + points found span 2
+    tuple (1, 2, 511, 1759): class (1, 9113); pairs trivially with all of Sel2: True; class of a point found: False
+    tuple (1, 2, 3518, 1022): class (1, 9113); pairs trivially with all of Sel2: True; class of a point found: False
+(9113,3200) E_LU: dim Sel2 3, pairing matrix rank 0 (symmetric True, alternating True) => rank <= 1; PARI ellrank effort 2 [1,1]; root number -1; images of torsion + points found span 2
+    tuple (1, 2, 511, 1759): class (186573538, 1797698); pairs trivially with all of Sel2: True; class of a point found: True
+    tuple (1, 2, 3518, 1022): class (186573538, 1797698); pairs trivially with all of Sel2: True; class of a point found: True
+(12313,5913) E_08: dim Sel2 3, pairing matrix rank 0 (symmetric True, alternating True) => rank <= 1; PARI ellrank effort 2 [1,1]; root number -1; images of torsion + points found span 2
+    tuple (1022, 3518, 2, 1): class (1, 1); pairs trivially with all of Sel2: True; class of a point found: True
+    tuple (1759, 511, 2, 1): class (1, 1); pairs trivially with all of Sel2: True; class of a point found: True
+(12313,5913) E_LU: dim Sel2 4, pairing matrix rank 0 (symmetric True, alternating True) => rank <= 2; PARI ellrank effort 2 [0,2]; root number +1; images of torsion + points found span 2
+    tuple (1022, 3518, 2, 1): class (93286769, 1); pairs trivially with all of Sel2: True; class of a point found: False
+    tuple (1759, 511, 2, 1): class (93286769, 1); pairs trivially with all of Sel2: True; class of a point found: False
+(14903,9696) E_08: dim Sel2 4, pairing matrix rank 0 (symmetric True, alternating True) => rank <= 2; PARI ellrank effort 2 [0,2]; root number +1; images of torsion + points found span 2
+    tuple (1, 2, 10414, 49198): class (1, 4515609); pairs trivially with all of Sel2: True; class of a point found: False
+    tuple (1, 2, 24599, 5207): class (1, 4515609); pairs trivially with all of Sel2: True; class of a point found: False
+(14903,9696) E_LU: dim Sel2 6, pairing matrix rank 4 (symmetric True, alternating True) => rank <= 0; PARI ellrank effort 2 [0,0]; root number +1; images of torsion + points found span 2
+    tuple (1, 2, 10414, 49198): class (25288946, 256173986); pairs trivially with all of Sel2: True; class of a point found: True
+    tuple (1, 2, 24599, 5207): class (25288946, 256173986); pairs trivially with all of Sel2: True; class of a point found: True

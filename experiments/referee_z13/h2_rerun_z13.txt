@@ -1,0 +1,5 @@
+(725, 497) LU (A,C)= (360325, 386317) H2 fails dim Sel2 4 agree 32 disagree 32 undefined 0 S' = {b_r = 1} True Theta agree/disagree 16 0
+(725, 497) 08 (A,C)= (139308, 386317) H2 dim Sel2 4 agree 64 disagree 0 undefined 0 S' = {b_r = 1} True Theta agree/disagree 16 0
+(535, 23) 08 (A,C)= (142848, 143377) H2 dim Sel2 4 agree 64 disagree 0 undefined 0 S' = {b_r = 1} True Theta agree/disagree 16 0
+(465, 416) LU (A,C)= (386880, 389281) H2 dim Sel2 6 agree 256 disagree 0 undefined 0 S' = {b_r = 1} True Theta agree/disagree 16 0
+(465, 416) 08 (A,C)= (43169, 389281) H2 dim Sel2 5 agree 512 disagree 0 undefined 0 S' = {b_r = 1} True Theta agree/disagree 256 0

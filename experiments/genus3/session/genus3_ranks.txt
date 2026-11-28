@@ -1,0 +1,27 @@
+(195, 28) E1 rank 1
+(195, 28) E2 class size 4 bounds per curve [(1, 3, '[2, 2]'), (1, 3, '[4]'), (1, 3, '[4]'), (1, 3, '[2]')] => rank in [1, 3] root -1
+(195, 28) E3 rank 1
+(223, 167) E1 class size 4 bounds per curve [(1, 3, '[2, 2]'), (1, 3, '[4]'), (1, 3, '[4]'), (1, 3, '[2]')] => rank in [1, 3] root -1
+(223, 167) E2 rank 1
+(223, 167) E3 rank 1
+(440, 279) E1 rank 1
+(440, 279) E2 rank 1
+(440, 279) E3 rank 2
+(719, 161) E1 rank 1
+(719, 161) E2 rank 1
+(719, 161) E3 rank 2
+(609, 200) E1 class size 4 bounds per curve [(2, 4, '[2, 2]'), (2, 4, '[4]'), (0, 4, '[4]'), (2, 4, '[2]')] => rank in [2, 4] root 1
+(609, 200) E2 class size 4 bounds per curve [(2, 4, '[2, 2]'), (0, 2, '[4]'), (0, 4, '[4]'), (0, 4, '[2]')] => rank in [2, 2] root 1
+(609, 200) E3 rank 2
+(809, 409) E1 class size 4 bounds per curve [(2, 4, '[2, 2]'), (2, 2, '[4]'), (0, 4, '[4]'), (0, 4, '[2]')] => rank in [2, 2] root 1
+(809, 409) E2 class size 4 bounds per curve [(0, 4, '[2, 2]'), (2, 4, '[4]'), (0, 4, '[4]'), (0, 4, '[2]')] => rank in [2, 4] root 1
+(809, 409) E3 rank 2
+(627, 364) E1 class size 4 bounds per curve [(1, 3, '[2, 2]'), (1, 3, '[4]'), (1, 3, '[4]'), (1, 3, '[2]')] => rank in [1, 3] root -1
+(627, 364) E2 class size 4 bounds per curve [(1, 3, '[2, 2]'), (1, 3, '[4]'), (1, 3, '[4]'), (1, 3, '[2]')] => rank in [1, 3] root -1
+(627, 364) E3 rank 1
+(991, 263) E1 class size 4 bounds per curve [(1, 3, '[2, 2]'), (1, 3, '[4]'), (1, 3, '[4]'), (1, 3, '[2]')] => rank in [1, 3] root -1
+(991, 263) E2 class size 4 bounds per curve [(1, 3, '[2, 2]'), (1, 3, '[4]'), (1, 3, '[4]'), (1, 3, '[2]')] => rank in [1, 3] root -1
+(991, 263) E3 rank 1
+(861, 620) E1 rank 2
+(861, 620) E2 rank 1
+(861, 620) E3 class size 6 bounds per curve [(1, 3, '[4, 2]'), (1, 3, '[4]'), (1, 5, '[4]'), (1, 3, '[2, 2]'), (1, 5, '[2]'), (1, 5, '[2]')] => rank in [1, 3] root -1

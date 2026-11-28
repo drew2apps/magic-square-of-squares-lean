@@ -26,7 +26,7 @@ Fisher's notation is used (Section 2):
 2. **Fisher, Lemma 2.2.** The `2^n`-descent bound is
    `rank E(Q) <= dim S_{2n-1} + dim S'_{2n} - 2`, and the same holds with the primes swapped.
 3. **Fisher, Section 3 (the Cassels–Tate pairing by pushouts).**
-   - Let `x` be in `Sel(m)`, with covering curve `C`, and let `y` be in the first Selmer group of the other side.
+   - Let `x` be in `Sel(m)`, with covering curve `C`, and let `y` be in the first Selmer group of the other side when `m` is even, of the same side when `m` is odd (run 11, panel P1; `experiments/conductor-t11/` uses the odd case for `Θ₃`).
      Then `<x, y> = sum_v (f(P_v), y)_v`. Here `f` is in `Q(C)` with `div f = 2b`, where `b` is a rational divisor
      whose class corresponds to the rational 2-torsion point. The points `P_v` are in `C(Q_v)`.
    - Also `Theta_m(alpha_1, beta_1) = <alpha_m, beta_1>`, for any lift `alpha_m` (Section 4).

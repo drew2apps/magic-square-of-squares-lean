@@ -1,0 +1,4 @@
+i5_rank exit=0 60 s
+i5_rank (9 curves) exit=0 175 s
+i5_rank --negative: under 10 s
+i5_rank (9 curves, rewrite) exit=0 175 s

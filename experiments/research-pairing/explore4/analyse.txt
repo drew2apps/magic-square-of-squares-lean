@@ -1,0 +1,10 @@
+pilot ratios in my run: 201 tuples 1766 ; (mine killed, pilot killed) counts over (tuple,curve): {(True, True): 8930, (False, False): 1666}
+ratios 937 residual tuples 6904 classes outside Sel2: 0
+killed per curve: {'08': 4580, 'LU': 3122, '0L': 6587, '0U': 6587, '8L': 6587, '8U': 6587}
+tuples killed on E_08 or E_LU: 5864 of 6904
+ratios with a surviving tuple: 5
+   3320 2303 tuples [[2, 1, 1, 635399], [2, 1, 1270798, 2]] dims {'08': 5, 'LU': 2, '0L': 6, '8U': 6, '0U': 6, '8L': 6}
+   5623 1017 tuples [[2, 1270798, 1, 2], [635399, 1, 1, 2]] dims {'08': 2, 'LU': 5, '0L': 6, '8U': 6, '0U': 6, '8L': 6}
+   14903 9696 tuples [[1, 2, 10414, 49198], [1, 2, 24599, 5207]] dims {'08': 4, 'LU': 6, '0L': 9, '8U': 9, '0U': 9, '8L': 9}
+   9113 3200 tuples [[1, 2, 511, 1759], [1, 2, 3518, 1022]] dims {'08': 4, 'LU': 3, '0L': 7, '8U': 7, '0U': 7, '8L': 7}
+   12313 5913 tuples [[1022, 3518, 2, 1], [1759, 511, 2, 1]] dims {'08': 3, 'LU': 4, '0L': 7, '8U': 7, '0U': 7, '8L': 7}

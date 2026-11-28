@@ -1,0 +1,13 @@
+i1_hunt seed 1 take 300 exit=0 83 s
+i1_hunt seed 2 take 300 exit=0 100 s
+i1_hunt seed 3 take 300 exit=0 119 s
+i1_hunt mode B seed 3 take 600 exit=143 421 s
+i1_hunt mode B seed 2 take 600 exit=143 421 s
+i1_hunt mode B seed 1 take 600 exit=143 421 s
+i1_hunt mode B seed 2 take 173 exit=0 268 s
+i1_hunt mode B seed 3 take 173 exit=0 270 s
+i1_hunt mode B seed 1 take 173 exit=0 275 s
+i1_negative exit=0 2 s
+i1_negative (rewrite) exit=1 3 s
+i1_laws: 1 s; i1_laws --negative: 1 s
+i1_hunt mode C seed 1 take 150 exit=0 4772 s

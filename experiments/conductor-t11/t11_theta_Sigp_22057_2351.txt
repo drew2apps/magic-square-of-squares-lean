@@ -1,0 +1,78 @@
+t11_theta.py: Fisher's higher descents on Sig+(22057,2351) (arXiv:1509.03234 Sects. 2, 3, 7), exact. Written by an AI model (build agent t11), not read by a person. Experiment, not counted.
+Sig+(22057,2351): (12204,9853) [G3 open] through its partner (22057,2351)
+  (0) model rebuilt from (m, n, d) by the census code = I5's minimal model [1, 0, 0, -3273186841081526246623448342297018808717045938715, 5262479891378770656266792116117772613394291382315357263651247762914134225]; E: y^2 = x(x^2 + a x + b), a = -28178852984450642091682514, b = 212311595715789866306041726761194213511747056100625 (a^2 - 4b = -square)
+      a point of infinite order on E (PARI ellrank as a hint; on the curve, n G != O for n <= 12): rank >= 1
+  (1) rank_indep: |S'_1| = 4 (E side, d | b), |S_1| = 32 (E' side, d' | b'); after the second descent dim S'_2 <= 2, dim S_2 <= 5; known images: dim 2 (E side), 1 (E' side); exact bound 2 + 5 - 2 = 5
+      open cosets: E side []; E' side [-14, 274, 339, -959, 4746, -92886, 108146, -325101, -378511, 7408001, -36661494, -103712014, -128315229, 2511312339, 35158372746]
+  type A' on the E' side: S_1 = S_2 (no class excluded) of dim 5 = <-1> + 4 open (basis 14, 274, 339, 108146); the E side all known, so Theta_2 = 0 and S_3 = S_2; Theta_3 is alternating on S_3 with -1 in its kernel
+  E' side, class 14: lifts D_lam not excluded by the second descent: 4 (tried: up to 12); basis of the other side's S_1: [3507806450036906700772673980394401, 48054502989612457]
+    lam = -130: pairings with the other side's S_1 3507806450036906700772673980394401:+1 48054502989612457:+1; level-3 Selmer set non-empty (dim 5), xi = 2147354029, C3 checked locally soluble at R and 19 primes (agrees)
+  C3' of y = 14 (E' side; lam = -130, xi = 2147354029): rank_fisher5 steps (1)-(6) checked; the U pair over Q(sqrt -14) has a checked conic point (tangent plane l, N(l) rational: a pushout form, Lemma 7.1)
+  pushout f of the U pair (over Q(sqrt -14)), f = s0 f0 with f0 primitive; pencil discriminant 1533 digits, primes [2, 3, 5, 7, 13, 23, 59, 61, 113, 137, 167, 2351, 3137, 22275771079907, 3696500229970189, 72996415149588793]; f0 mod p in span(QA, QB) only for p in [2, 3, 5, 13, 23, 59, 61, 113, 137, 2351, 3137, 22275771079907]
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 59, 61, 113, 137, 167, 2351, 3137, 22275771079907, 3696500229970189, 72996415149588793]
+  R: real points of C3' (interval enclosures), signs of f0 there [1]; (I4) at p = 5 f0 takes the classes [(0, 0), (0, 1), (1, 0), (1, 1)]
+  sum_v (f(P_v), -1)_v: the term is -1 exactly at [2, 23]; product = +1
+  sum_v (f(P_v), 14)_v: the term is -1 exactly at [7, 23]; product = +1
+  sum_v (f(P_v), 274)_v: the term is -1 exactly at [2, 23]; product = +1
+  sum_v (f(P_v), 339)_v: the term is -1 exactly at [2, 23, 113]; product = -1
+  sum_v (f(P_v), 108146)_v: the term is -1 exactly at [2, 23]; product = +1
+    p = 2: classes of f0 on C3'(Q_p) [(0, 3)]; terms -1:-1 14:+1 274:-1 339:-1 108146:-1
+    p = 3: classes of f0 on C3'(Q_p) [(0, 0)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 5: classes of f0 on C3'(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 7: classes of f0 on C3'(Q_p) [(0, 1)]; terms -1:+1 14:-1 274:+1 339:+1 108146:+1
+    p = 11: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 13: classes of f0 on C3'(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 17: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 19: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 23: classes of f0 on C3'(Q_p) [(1, 1)]; terms -1:-1 14:-1 274:-1 339:-1 108146:-1
+    p = 29: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 31: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 37: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 41: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 43: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 59: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 61: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 113: classes of f0 on C3'(Q_p) [(0, 1)]; terms -1:+1 14:+1 274:+1 339:-1 108146:+1
+    p = 137: classes of f0 on C3'(Q_p) [(0, 0)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 167: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 2351: classes of f0 on C3'(Q_p) [(0, 0)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 3137: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 22275771079907: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 3696500229970189: classes of f0 on C3'(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 72996415149588793: classes of f0 on C3'(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+  E' side, class -274: lifts D_lam not excluded by the second descent: 4 (tried: up to 12); basis of the other side's S_1: [3507806450036906700772673980394401, 48054502989612457]
+    lam = 65: pairings with the other side's S_1 3507806450036906700772673980394401:+1 48054502989612457:+1; level-3 Selmer set non-empty (dim 5), xi = 699250877, C3 checked locally soluble at R and 18 primes (agrees)
+  C3' of y = -274 (E' side; lam = 65, xi = 699250877): rank_fisher5 steps (1)-(7) checked; the V pair over Q(sqrt -274) has a checked conic point (tangent plane l, N(l) rational: a pushout form, Lemma 7.1)
+  pushout f of the V pair (over Q(sqrt -274)), f = s0 f0 with f0 primitive; pencil discriminant 1457 digits, primes [2, 3, 5, 7, 11, 13, 23, 59, 113, 137, 167, 2351, 3137, 6361, 37496707, 3696500229970189, 72996415149588793]; f0 mod p in span(QA, QB) only for p in [2, 5, 13, 113, 167, 2351, 3137, 6361, 37496707]
+  S = {R} u [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 59, 113, 137, 167, 2351, 3137, 6361, 37496707, 3696500229970189, 72996415149588793]
+  R: real points of C3' (interval enclosures), signs of f0 there [1]; (I4) at p = 5 f0 takes the classes [(0, 0), (0, 1), (1, 0), (1, 1)]
+  sum_v (f(P_v), -1)_v: the term is -1 exactly at no place; product = +1
+  sum_v (f(P_v), 14)_v: the term is -1 exactly at no place; product = +1
+  sum_v (f(P_v), 274)_v: the term is -1 exactly at no place; product = +1
+  sum_v (f(P_v), 339)_v: the term is -1 exactly at no place; product = +1
+  sum_v (f(P_v), 108146)_v: the term is -1 exactly at [23, 2351]; product = +1
+    p = 2: classes of f0 on C3'(Q_p) [(0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 3: classes of f0 on C3'(Q_p) [(0, 0)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 5: classes of f0 on C3'(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 7: classes of f0 on C3'(Q_p) [(0, 0)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 11: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 13: classes of f0 on C3'(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 17: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 19: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 23: classes of f0 on C3'(Q_p) [(0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:-1
+    p = 29: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 31: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 37: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 41: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 43: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 59: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 113: classes of f0 on C3'(Q_p) [(0, 0)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 137: classes of f0 on C3'(Q_p) [(0, 0)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 167: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 2351: classes of f0 on C3'(Q_p) [(0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:-1
+    p = 3137: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 6361: classes of f0 on C3'(Q_p) [(0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 37496707: classes of f0 on C3'(Q_p) [(0, 0), (0, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 3696500229970189: classes of f0 on C3'(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+    p = 72996415149588793: classes of f0 on C3'(Q_p) [(0, 0), (0, 1), (1, 0), (1, 1)]; terms -1:+1 14:+1 274:+1 339:+1 108146:+1
+  RESULT Sig+(22057,2351): Theta_3(14, 339) != 0 and Theta_3(274, .) = 0: Theta_3 has rank exactly 2 on the 4-dim open part (274 in its kernel), dim S_4 = 3, rank <= dim S'_3 + dim S_4 - 2 = 2 + 3 - 2 = 3 (from 5); Theta_4 = 0 (S'_4 all known); not closed

@@ -1,0 +1,9 @@
+z15_degenerate.py: written by an AI model (reviewer z15), not read by a person.
+degenerate ratios m <= 3000: 910 ; solutions by shape: {'S1': 1068, 'S2': 752, 'other': 0} ; wrong shape: []
+products (d0d8, dLdU) of my evaluation equal those of tuple_descent.magic's known tuples at 910 of 910 ratios
+  (4,3) residual tuples (* = known): (2, 1, 1, 7)*:S1 (2, 1, 14, 2)*:S1
+  (7,1) residual tuples (* = known): (2, 14, 1, 2)*:S2 (7, 1, 1, 2)*:S2
+  (12,5) residual tuples (* = known): (2, 1, 7, 17)*:S1 (2, 1, 14, 34):S1 (2, 1, 17, 7):S1 (2, 1, 34, 14)*:S1
+  (17,7) residual tuples (* = known): (7, 17, 1, 2):S2 (14, 34, 1, 2)*:S2 (17, 7, 1, 2)*:S2 (34, 14, 1, 2):S2
+  (627,364) residual tuples (* = known): (1, 2, 1, 260633):S1 (1, 2, 263, 991)*:S1 (1, 2, 1982, 526)*:S1 (1, 2, 521266, 2):S1
+  (991,263) residual tuples (* = known): (2, 521266, 2, 1):S2 (526, 1982, 2, 1)*:S2 (991, 263, 2, 1)*:S2 (260633, 1, 2, 1):S2

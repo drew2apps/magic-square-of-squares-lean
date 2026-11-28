@@ -1,0 +1,7 @@
+(5623, 1017, '08') dim Sel2 2 rows 2 pairings 4 same as committed ; ct08 = rank_second
+(3320, 2303, '08') dim Sel2 5 rows 16 pairings 80 same as committed ; ct08 = rank_second
+(771, 251, '08') dim Sel2 5 rows 4 pairings 20 same as committed ; ct08 = rank_second
+(1323, 803, '08') dim Sel2 4 rows 4 pairings 16 same as committed ; ct08 = rank_second
+(511, 260, 'LU') dim Sel2 5 rows 6 pairings 30 same as committed ; ct08 = rank_second
+(988, 525, 'LU') dim Sel2 5 rows 6 pairings 30 same as committed ; ct08 = rank_second
+all same, all agree

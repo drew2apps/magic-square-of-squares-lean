@@ -1,0 +1,12 @@
+S1 ratios 333 parities Counter({(0, 1): 181, (1, 0): 152}) killed on E_08: 250 killed on E_LU ever: 0
+q1 [((0, False), 57), ((0, True), 26), ((1, False), 147), ((1, True), 103)]
+q1o [((0, False), 38), ((0, True), 45), ((1, False), 100), ((1, True), 150)]
+q2 [((0, False), 58), ((0, True), 25), ((1, False), 188), ((1, True), 62)]
+q3 [((0, False), 40), ((0, True), 43), ((1, False), 114), ((1, True), 136)]
+q4 [((0, False), 68), ((0, True), 15), ((1, False), 202), ((1, True), 48)]
+q3b [((0, True), 83), ((1, True), 250)]
+q4b [((0, False), 51), ((0, True), 32), ((1, False), 99), ((1, True), 151)]
+k08,q1,q2,q3b [((0, False, False, True), 39), ((0, False, True, True), 18), ((0, True, False, True), 19), ((0, True, True, True), 7), ((1, False, False, True), 114), ((1, False, True, True), 33), ((1, True, False, True), 74), ((1, True, True, True), 29)]
+k08 vs q1&q2 [((0, False), 76), ((0, True), 7), ((1, False), 221), ((1, True), 29)]
+k08 vs q1&q2&q3 [((0, False), 78), ((0, True), 5), ((1, False), 236), ((1, True), 14)]
+k08 vs number of odd-exponent primes of C [((0, 1), 17), ((0, 2), 39), ((0, 3), 21), ((0, 4), 5), ((0, 5), 1), ((1, 1), 85), ((1, 2), 106), ((1, 3), 54), ((1, 4), 5)]

@@ -1,0 +1,11 @@
+t11_theta.py: Fisher's higher descents on E1(10512,145)+ (arXiv:1509.03234 Sects. 2, 3, 7), exact. Written by an AI model (build agent t11), not read by a person. Experiment, not counted.
+E1(10512,145)+: (10512,145), (10657,10367) [CENSUS11000]
+  (0) model rebuilt from (m, n, d) by the census code = I5's minimal model [0, 1, 0, -2419208314318668146199775264884775233139683805441, 1463244133933325813781975262027627717377710145889707390761192388296636159]; E: y^2 = x(x^2 + a x + b), a = -5394164471918681772032636, b = 7279795135717915517650727843653936827067999230724 (a^2 - 4b = -square)
+      a point of infinite order on E (PARI ellrank as a hint; on the curve, n G != O for n <= 12): rank >= 1
+  (1) rank_indep: |S'_1| = 4 (E side, d | b), |S_1| = 32 (E' side, d' | b'); after the second descent dim S'_2 <= 2, dim S_2 <= 3; known images: dim 1 (E side), 2 (E' side); exact bound 2 + 3 - 2 = 3
+      open cosets: E side [11878571404153441]; E' side [-23868431349]
+  type B: one open class on each side (E' side 23868431349, E side 11878571404153441); the cone fields of a level-3 lift of y are Q(sqrt y) and Q(sqrt -y) (Fisher Sect. 5; rank_fisher5 (4'))
+    y = 23868431349: Q(sqrt 23868431349): h = 1360, R = 60.4; Q(sqrt -23868431349): h = 130048   (PARI quadclassunit, GRH, for information only)
+  E' side, class 23868431349: lifts D_lam not excluded by the second descent: 4 (tried: up to 12); basis of the other side's S_1: [149101851986873727851682277384321, 11878571404153441]
+    lam = -13: pairings with the other side's S_1 149101851986873727851682277384321:+1 11878571404153441:+1; level-3 Selmer set non-empty (dim 5), xi = 730, C3 checked locally soluble at R and 18 primes (agrees)
+  RESULT E1(10512,145)+: UNFINISHED (time): the E' side lift of 23868431349 exists (above); the finder over Q(sqrt -23868431349) (class group [4064, 4, 2, 2, 2], reduced norms of 134 and 76 digits) did not finish in 20 minutes; the E side fields have regulators >= 1.4e8; bound stays 3

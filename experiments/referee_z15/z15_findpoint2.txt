@@ -1,0 +1,5 @@
+(3320,2303) E_08 (t10 model, A = (149623691668481, -13670615799110163664906240000, -2045448003244324123162320114612028221440000) ): point found with ellrank effort 4 : x = 4781618873217804087093656704/8554332198841
+   canonical height 39.7528532685515 ; order 0
+   ghost class (1, 19505) in the span of torsion and this point: True
+(5623,1017) E_LU and (3320,2303) E_08 have the same minimal model: True
+   image point on (5623,1017) E_LU checked on the curve; surviving class (16326209, 1) in the span of torsion and it: True

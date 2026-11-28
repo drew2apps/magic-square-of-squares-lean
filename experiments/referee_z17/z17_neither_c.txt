@@ -1,0 +1,7 @@
+z17 (part c): the "neither" closures of I8. Written by an AI model (reviewer z17); not read by a person. PARI [2, 17, 4].
+(18313,120) Sig+: {"B": 151.55878817564175, "amax": 58, "curve": "Sig+", "gens": "pari, saturated at primes <= 1000 (conditional)", "hG": 6.60407062184266, "ncand": 119, "nt": 1, "ntors": 2, "pair": [18313, 120], "rank": [1, 1], "status": "closed", "t": {}}
+  fields that differ from the committed record: none
+(20056,19825) Sig-: {"B": 158.0354373605286, "amax": 55, "curve": "Sig-", "gens": "pari, saturated at primes <= 1000 (conditional)", "hG": 7.088294913647848, "ncand": 113, "nt": 1, "ntors": 2, "pair": [20056, 19825], "rank": [1, 1], "status": "closed", "t": {}}
+  fields that differ from the committed record: none
+(39881,231) E: {"B": 99.66606340081626, "amax": 28, "curve": "E", "gens": "pari, saturated at primes <= 1000 (conditional)", "hG": 10.019346413909174, "ncand": 115, "nt": 57, "ntors": 4, "pair": [39881, 231], "rank": [1, 1], "status": "closed", "t": {}}
+  fields that differ from the committed record: none

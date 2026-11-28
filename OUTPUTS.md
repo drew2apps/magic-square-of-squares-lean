@@ -3,7 +3,7 @@
 Written 25 November 2026 (UTC) by an AI model (Claude); not read by a person.
 
 **What CI does.** The jobs of `.github/workflows/ci.yml` rerun programs and compare what they print with committed files
-by `diff` (`REPRODUCE.md`, section 4). The jobs `build`, `quick`, `four-points`, `descents`, `last-pair` and `scan-15000`
+by `diff` (`REPRODUCE.md`, section 4). The jobs `build`, `quick`, `four-points`, `descents`, `research`, `last-pair`, `square-section` and `scan-15000`
 end with `git diff --exit-code` (the first had it before), so a program that rewrites a committed file instead of
 printing it fails the job. **What CI does not do.** It does not run Magma (its answers are transcripts of the public
 calculator) or the long runs of class B below, and it cannot check the notes of class C that were written by hand. A
@@ -185,7 +185,7 @@ Times from a 2-core container.
 | `reviews/*.md` | C | review reports written by AI agents; no checker | none | |
 
 **Counts, all tables.** The four tables list 117 rows (a row may name several files; the five rows that are A for part of a file and B for the rest count as A): 47 of class A, 32 of class B, 26 of class C
-and 12 of class D (before this release: 106, that is 41, 30, 24 and 11).
+and 12 of class D (before release 0.6.0: 106, that is 41, 30, 24 and 11).
 
 **Added on 27 November 2026 (UTC), run 6, after release 0.6.0** (written by an AI model; not read by a person). Fable run 5 part 2, `Θ₄` on three more curves, and Fable's roadmap G; each reviewed by a separate AI agent (`reviews/review_x4.md`, `review_y5.md`, `review_x6.md`). Paths under `scripts/` unless they start with `experiments/` or `reviews/`.
 
@@ -266,5 +266,44 @@ and 12 of class D (before this release: 106, that is 41, 30, 24 and 11).
 | `experiments/referee_z11/` outputs of `rank0`, `recount`, `wash_check`, `pmat`, `h1_mine`, `forge_t10`, `z11_compare` (and `--set mid`), `z11_pair`, `forge_mine` | A | `python3 -I <script>.py` in `referee_z11/` | descents | about 4.5 minutes together |
 | `experiments/referee_z11/z11_compare_big.txt`, `z11_compare_batch30.txt`, `oom_check` output | B | `python3 -I z11_compare.py --set big` (`--set batch30`), `oom_check.py` | none | 4 to 6 min each |
 
-**Counts, all tables, after run 9.** The eight tables list 176 rows: 76 of class A, 57 of class B, 27 of class C and 16
-of class D (171 after run 8, 168 after run 7, 146 after run 6, 117 before run 6).
+**Added on 27 November 2026 (UTC), run 10, after release 0.6.0** (written by an AI model; not read by a person). The exchange symmetry at the open ratios, and a separate AI session's closed formula for the pairing on `E_08`, `E_LU`, reviewed by a separate AI agent (`reviews/review_z12.md`).
+
+| File | Class | Command | CI job | Time |
+|---|---|---|---|---|
+| `experiments/exchange/open_pairs.txt` | A | `python3 -I experiments/exchange/open_pairs.py` | quick | under a second |
+| `experiments/research-pairing/check_local_08.txt`, `check_local_LU.txt` | A | `python3 ../research-pairing/check_local.py 08` (`LU`), run from `experiments/conductor-t10/` | descents | about 7 s together |
+| `experiments/referee_z12/` outputs of `analyse`, `classcheck`, `zlocal`, `brone`, `claims`, `rerun_compare` | A | `python3 -I <script>.py` in `referee_z12/` (`rerun_compare.py` reruns the full test on 6 curves and compares with `full[01].jsonl`) | descents | about 45 s together |
+| `experiments/referee_z12/full0.jsonl`, `full1.jsonl` (and `part0.jsonl`, `part1.jsonl`, the logs) | B | `python3 fulltest.py <out> 1,7 m,n,08 ...` with the job lists `jobs0.txt`, `jobs0b.txt`, `jobs1.txt` (restart with `fulltest_lowmem.py`); 6 of the 279 curves rerun in CI | none | about 90 min of CPU |
+| `experiments/referee_z12/conv_part.txt` | B | `python3 -I convtest.py conv_part.txt 1,3 part0.jsonl part1.jsonl` | none | several minutes |
+
+**Added on 28 November 2026 (UTC), run 11, after release 0.6.0** (written by an AI model; not read by a person). A separate research session's notes and a separate long-running session's roadmap I, with reviews z13–z17, and three build agents (t11, t12, t13). CI job `research` unless noted.
+
+| File | Class | Command | CI job | Time |
+|---|---|---|---|---|
+| `experiments/research-pairing/note2/closed_formula.txt`, `isogeny_part.txt`, `shape.txt`, `radical.txt`, `two.txt`, `two2.txt` | A | the scripts of `note2/`, from `referee_z12/` (the first four) or `conductor-t10/` (the last two), with `PYTHONPATH` as in `note2/NOTES.md` | research | about 2 minutes together |
+| `experiments/research-pairing/note2/h2_check.txt` | C | the session's `h2_check.py` does not run here (a missing module); `referee_z13/h2_rerun_z13.py` recomputes its table | research (the rerun) | 50 s |
+| `experiments/referee_z13/` outputs of `gen_jobs` (`jobs.txt`), `claims_z13`, `analyse_z13`, `rerun_z13`, `h2_rerun_z13` | A | `python3 -I <script>.py` in `referee_z13/` | research | about 3 minutes |
+| `experiments/referee_z13/indep_a.jsonl`, `indep_b.jsonl` (and logs) | B | `python3 z13_indep.py` with `jobs.txt` (`rerun_z13.py` reruns 25 curves) | none | about 30 min of CPU |
+| `experiments/research-pairing/explore3/` (`rank0.txt`, logs), `explore4/` outputs, `explore5/` outputs (`redei_k.txt`, `ghost/`, `kcurve/`) | C | the session's scripts name its own folders and do not run as committed; the reviews recompute what they check (`referee_z14`, `z15`, `z16`) | none |  |
+| `experiments/referee_z14/` outputs of `ratios`, `symbolic`, `section_z14`, `mix_analyse` | A | `python3 -I <script>.py` in `referee_z14/` | research | seconds |
+| `experiments/referee_z14/` other outputs (`mixtest`, `theoremB_z14`, `rank0_z14`, `kappa_z14`, `conic_test`, `redei_trivial`, `claims_z14`) and the JSONL records | B | the scripts in `referee_z14/` (`claims_z14.py` reads the session's logs from the reviewer's scratch folder) | none | 1 to 20 minutes each |
+| `experiments/referee_z15/` outputs of `z15_shapes`, `z15_shapes2`, `z15_shapes3`, `z15_partners`, `z15_tierA`, `z15_compare`, `z15_ghostsample`, `z15_rankbound`, `z15_residual_all` | A | `python3 -I <script>.py` in `referee_z15/` | research | about 70 s |
+| `experiments/referee_z15/t10_*.jsonl`, `z15_findpoint*.txt`, `z15_localcoset.txt`, `z15_degenerate.txt`, `z15_models.txt`, `z15_rootno.txt` | B | `z15_t10run.py` (the repository's `t10_pairct`, 194 runs on 174 ratios, about 90 min of CPU), `z15_findpoint*.py` (PARI's `ellrank`, 5–20 min each), the others a few minutes each | none | |
+| `experiments/referee_z16/` outputs of `z16_witness`, `z16_laws`, `z16_summary`, `z16_ghost` | A | `python3 -I <script>.py` in `referee_z16/` | research | about 75 s |
+| `experiments/referee_z16/out937.jsonl`, `out_samples.jsonl`, `out_open.jsonl` | B | `python3 z16_five.py` | none | about 17 min of CPU |
+| `experiments/genus3/` outputs of `genus3_split`, `genus3_points` (and `--negative`), `genus3_isog`, `genus3_mult`, `kcurve_exact` (and `--negative`), `genus3_rank_upper`, and the session's four scripts in `session/` | A | `python3 -I <script>.py` in `genus3/` (resp. `genus3/session/`) | research | about 7 minutes |
+| `experiments/conductor-t11/t11_theta_*.txt`, `t11_theta_negative.txt` | A | `python3 -I t11_theta.py "<curve>"` (from the hints, no finder), `--negative` | research | about 15 minutes |
+| `experiments/conductor-t11/explore/` | B | the finders and exploration scripts; nothing rests on them | none | hours |
+| `experiments/conductor-t13/covers.txt`, `search_*_H2000_torsion.txt`, `certify.txt` | A | `python3 covers.py`; `search.py` as in `NOTES.md`; `certify.py` with the ten search files | research | about 2 minutes |
+| `experiments/conductor-t13/search_*_coset*.txt`, `controls.txt`, `altmodels.txt`, `calib_torsion.txt`, `reach_H50000.txt` | B | `search.py`, `controls.py`, `altmodels.py` as in `NOTES.md` | none | minutes to hours (the coset searches: 3–8 min of CPU per 3·10⁹ pairs) |
+| `experiments/roadmap-i/` controls (`i1_laws`, `i1_negative`, `i2_residual --negative`, `i3_scan --negative`, `i4_exchange --negative`, `i5_rank --negative`, `i8_pairct --negative`, `--compare50`) | A | through `hm`, as in `roadmap-i/NOTES.md` | research | about 3 minutes |
+| `experiments/roadmap-i/` results (`i2_residual.jsonl`, `i8_first360.jsonl`, `i1_hunt_*.txt`, `i3_scan_k*.txt`, `i4` chunks, `i5_rank.txt`) | B | the session's runs (`run_*.sh`); `i5_rank.py` 3–8 min, `i3_scan.py 13` 1.5–5 min | none | hours for the hunts and I2, I8 |
+| `experiments/referee_z17/` outputs of `z17_i8count`, `z17_i8compare`, `z17_i2check`, `z17_neither` (a, b, c, e) | A | `python3 -I <script>.py [part]` in `referee_z17/` | research | about a minute |
+| `experiments/referee_z17/z17_neither_d.txt`, `z17_i8_sample.txt` | B | `z17_neither.py d`; the t10 reruns | none | 2–4 min; about 20 min |
+| `experiments/conductor-t13/covers.json`, `altmodels.json`, the ten `search_*.json`, `hints_t13.json` (empty) | D | written by `covers.py`, `altmodels.py`, `search.py` with `--write`; read by `certify.py` and the searches | research (read) |  |
+| `experiments/genus3/genus3_points_hints.json`; `experiments/conductor-t11/t11_hints.json` | D | the points and conic data found by the finders; read and re-checked exactly by `genus3_points.py`, `t11_theta.py` | research (read) |  |
+| `experiments/referee_z15/` (`*order*.txt`, `s80_*`, `sample80_*`, `session_data/`), `experiments/referee_z16/` (`ratios*`, `data/`, `sess/`), `experiments/referee_z17/` (`ci/`, `neither/`), `experiments/roadmap-i/` (`i8/neither/`, `i8_first360_summary.txt`, the `i2` lists, the `i4` records), `experiments/referee_z14/e3_rank0_rerun.txt` | D | inputs, job lists, copies of a session's records and the reviewers' intermediate records, read by the scripts of the same folder | research (some read) |  |
+| the `times.txt` files and `logs/` of runs 6–11 | C | notes of the runs as they were made (times, logs); no program regenerates them | none |  |
+
+**Counts, all tables, after run 11.** The ten tables list 205 rows: 89 of class A, 67 of class B, 30 of class C and 19
+of class D (181 after run 10, 176 after run 9, 171 after run 8, 168 after run 7, 146 after run 6, 117 before run 6).

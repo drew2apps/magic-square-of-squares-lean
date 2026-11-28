@@ -8,7 +8,7 @@ For a reader who wants to rerun things, possibly on a machine without network ac
 python3 scripts/verify_manifest.py
 ```
 
-`MANIFEST.sha256` lists the SHA-256 of every file. The command needs only Python 3 and ends with `MANIFEST OK` when every file has the listed hash and no file is unlisted (build directories `.lake` and Python caches are ignored). CI runs it on every push, so no result file can change without the manifest changing in the same commit. The archived releases at Zenodo (doi:10.5281/zenodo.24435351) are copies of tagged commits; the last tag is `v0.6.0`.
+`MANIFEST.sha256` lists the SHA-256 of every file. The command needs only Python 3 and ends with `MANIFEST OK` when every file has the listed hash and no file is unlisted (build directories `.lake` and Python caches are ignored). CI runs it on every push, so no result file can change without the manifest changing in the same commit. The archived releases at Zenodo (doi:10.5281/zenodo.24435351) are copies of tagged commits; the last tag is `v0.7.0`.
 
 ## 2. Pinned versions
 
@@ -46,20 +46,21 @@ lake env lean scripts/CoverDescentChecks.lean     # the count 306 + 119 = 425, a
 
 ## 4. The computations
 
-The executable specification is `.github/workflows/ci.yml`: every job is plain shell, uses no network after `pip install`, and compares its output with committed files by `diff`. To rerun a job by hand, run the commands of its `run:` block from the root of the repository.
+The executable specification is `.github/workflows/ci.yml`: every job is plain shell, uses no network after `pip install`, and compares its output with committed files by `diff`. To rerun a job by hand, run the commands of its `run:` block from the root of the repository after `export GITHUB_WORKSPACE=$PWD` (the jobs `quick`, `descents` and `research` use it).
 
 | Job | What it reruns | Time on GitHub's runner |
 |---|---|---|
 | `build` | Lean; the axiom audit; generated Lean files; the C searches on small ranges | about 20 minutes |
 | `rank` (every push) | The sub-project `lean_rank/`: Lean v4.36.0, Mathlib v4.36.0 (compiled files from Mathlib's cache) and M. Stoll's `EllipticCurves` 2164fb5 (compiled from source); every `#print axioms` line of `LeanRank/*.lean` (file and line) answered in the output of `lake build`, the three standard axioms only, no `sorry` (177 lines at run 5, 147 at run 4); six files that must compile (`RankChecks`, `E1RankChecks`, `CensusClosureChecks`, `CensusClosureAxioms`, and the negative controls `RankZeroForge`, `RankZeroCensusForge`); ten files of forged claims, each of which must fail at exactly the listed lines (`RankForge`, `FamilyForge`, `LemmaDForge`, `LemmaDBridgeForge`, `E1DescentForge`, `TorsionE1Forge`, `CensusClosureForge`, `CensusClosureAxiomsForge`, and since run 5 `TwoDescentCertForge`, `UniformRankAllForge`) | 6 minutes at run 3 on GitHub; the run-4 modules add about 15 minutes on a loaded 8-core machine (`E1Descent` alone about 8); the job's limit is 150 minutes |
 | `quick` | The manifest; the transcript checkers; counts; a small rerun of every descent program; Proposition 1 of the rational distance note; the exact checks behind `lean_rank` (the `ℚ(√2)` points of Lemma D, the 2-adic classes of the certificate of `RankZero.lean`) and a regeneration of `RankZeroCensus.lean` by its generator, which must refuse `(15, 8)`; since run 4 the exact checks of `E1(ℚ(√2))` (`e1_rank0_check.py`, `torsion_e1_check.py`), a regeneration of `CensusClosure.lean` with `census_closure_check.py`, `selmer_square.py --max 300`, `review_t8_rank1.py`, and `lball_exact53.py` on three curves; since run 5 the torsion step of the 19 census `L`-value closures (`torsion_exact.py`, `census_lvalue_exact.py --torsion`), the order of `G` on `E⁺` of (72,65) (`rank_fisher_theta4_order.py`) and the (627,364) period ratio (`kctp_isog_exact.py`, Sage) | about 15 to 20 minutes (13 at `78659d1`; limit 45) |
-| `four-points`, `descents`, `last-pair` | The four-point tier and the two descent experiments in full, stated samples of the rest | up to about an hour each (`descents` about 90 minutes since run 4, with `lball_exact53.py` on 51 curves and the `Θ₄` and Fisher scripts; run 5 adds about 5 minutes for `experiments/census-wide/g4k/` and `rank1/`; limit 150) |
+| `four-points`, `descents`, `last-pair` | The four-point tier and the two descent experiments in full, stated samples of the rest | up to about an hour each (`descents` about 90 minutes since run 4, with `lball_exact53.py` on 51 curves and the `Θ₄` and Fisher scripts; run 5 adds about 5 minutes for `experiments/census-wide/g4k/` and `rank1/`; about 2 hours since runs 7–10; limit 150) |
+| `research` | Since run 11: the second pairing note and explorations 3–5 with reviews z13–z16, the genus-3 quotient, Fisher's pairings on I5's curves, the (627,364) coverings over `ℚ(i)`, roadmap I with review z17 | about 30 minutes; limit 90 |
 | `scan-5000` | The four-class descent on all 20,423 ratios to 5000; both rational-distance scans and the exhaustion on six lines; the third implementation on the 157 ratios that ranks leave | about an hour |
 | `scan-15000` | The criterion and the four-class descent for `5000 < m ≤ 15000` | about 50 minutes (48 at `c122d93`) |
 | `twist-search` | The C search of twists | minutes |
 | `square-section` (since 26 November 2026) | `square_section.py --mmax 300` (`SQUARE_SECTION.md`), against its two outputs | about 5 minutes (7 on a loaded 2-core container) |
 
-The long jobs run on a pull request, on a tag, by hand, and on a push whose commit message contains `[full ci]`; on other pushes they are skipped, and a green mark then says less. `OUTPUTS.md` lists the committed outputs that no job reruns, with the command and time of each (the wide runs, the scan beyond 1100, the Magma transcripts and others); the jobs `build`, `quick`, `four-points`, `descents`, `last-pair`, `square-section`, `scan-15000` and `scan-5000` end with `git diff --exit-code`.
+The long jobs run on a pull request, on a tag, by hand, and on a push whose commit message contains `[full ci]`; on other pushes they are skipped, and a green mark then says less. `OUTPUTS.md` lists the committed outputs that no job reruns, with the command and time of each (the wide runs, the scan beyond 1100, the Magma transcripts and others); the jobs `build`, `quick`, `four-points`, `descents`, `research`, `last-pair`, `square-section` and `scan-15000` end with `git diff --exit-code`.
 
 ## 5. What a rerun does not show
 

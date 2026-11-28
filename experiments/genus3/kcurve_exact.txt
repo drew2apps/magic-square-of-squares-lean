@@ -1,0 +1,25 @@
+kcurve_exact.py: the corner curve y^2 = L1 L3 M1 M2 of (627,364) over K = Q(i)
+  Q(s) = (-119962342500, 0)s^0 + (-136995220625, 208352079936)s^1 + (239924685000, 237934993296)s^2 + (136995220625, -208352079936)s^3 + (-119962342500, 0)s^4
+         (coefficients as (real part, imaginary part), s^0 first)
+  j = 6912 I^3/(4I^3 - J^2) in Q(i): j is not rational (Im j != 0): True
+  j of the conjugate quartic L1 L3 M3 M4 (= conj of Q) is conj(j): True
+  p = 37 = 6^2 + 1^2: v_pi(j) = -4 at pi = 6 + 1i, 3 at its conjugate
+  p = 181 = 10^2 + 9^2: v_pi(j) = 3 at pi = 10 + 9i, -4 at its conjugate
+  p = 23490241 = 4800^2 + 671^2: v_pi(j) = -4 at pi = 4800 + 671i, 3 at its conjugate
+  p = 395249137273 = 621357^2 + 95732^2: v_pi(j) = 3 at pi = 621357 + 95732i, -4 at its conjugate
+  primes where exactly one of pi, conj(pi) has v(j) < 0: [37, 181, 23490241, 395249137273]
+  the common denominator of Re j, Im j has the primes [5, 29, 37, 181, 263, 991, 23490241, 395249137273]
+    p = 5: v(j) = -8, -8 at the two primes above p
+    p = 29: v(j) = -4, -4 at the two primes above p
+    p = 37: v(j) = -4, 3 at the two primes above p
+    p = 181: v(j) = 3, -4 at the two primes above p
+    p = 23490241: v(j) = -4, 3 at the two primes above p
+    p = 395249137273: v(j) = 3, -4 at the two primes above p
+  asymmetric split primes among them: [37, 181, 23490241, 395249137273]
+  => E is non-CM and not isogenous over Kbar to its conjugate: not a Q-curve (NOTES.md, section D)
+PARI cross-check (a guide): PARI's j of ellfromeqn equals the j above: True
+  p = 37: conductor exponents at the two primes above p [0, 1], v(j) there [3, -4]
+  p = 181: conductor exponents at the two primes above p [0, 1], v(j) there [3, -4]
+  p = 23490241: conductor exponents at the two primes above p [0, 1], v(j) there [3, -4]
+  p = 395249137273: conductor exponents at the two primes above p [0, 1], v(j) there [3, -4]
+  conductor norm 5683468881658146768135645923544141966400 = [2, 6; 5, 2; 29, 2; 37, 1; 181, 1; 263, 2; 991, 2; 23490241, 1; 395249137273, 1]

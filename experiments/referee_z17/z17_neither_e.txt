@@ -1,0 +1,4 @@
+z17 (part e): the "neither" closures of I8. Written by an AI model (reviewer z17); not read by a person. PARI [2, 17, 4].
+(18313,120) Sig+: PARI point on the curve (exact): True; k G != O for k <= 12 (exact group law): True, so rank >= 1
+(20056,19825) Sig-: PARI point on the curve (exact): True; k G != O for k <= 12 (exact group law): True, so rank >= 1
+(39881,231) E: PARI point on the curve (exact): True; k G != O for k <= 12 (exact group law): True, so rank >= 1

@@ -1,0 +1,13 @@
+t11_theta.py: Fisher's higher descents on D1(12007,1799) (arXiv:1509.03234 Sects. 2, 3, 7), exact. Written by an AI model (build agent t11), not read by a person. Experiment, not counted.
+D1(12007,1799): (6903,5104) [CENSUS7000], (12007,1799) [G3]
+  (0) model rebuilt from (m, n, d) by the census code = I5's minimal model [0, 0, 0, -2100795130954721348682439136479163983865084, 1304206922206538200817834175771821647493983141228332733879641600]; E: y^2 = x(x^2 + a x + b), a = -5082825172629274012800, b = 6510908780883215041013082925649307537414916 (a^2 - 4b = -square)
+      a point of infinite order on E (PARI ellrank as a hint; on the curve, n G != O for n <= 12): rank >= 1
+  (1) rank_indep: |S'_1| = 8 (E side, d | b), |S_1| = 4 (E' side, d' | b'); after the second descent dim S'_2 <= 3, dim S_2 <= 2; known images: dim 1 (E side), 2 (E' side); exact bound 3 + 2 - 2 = 3
+      open cosets: E side [354384937, 3909914385316993, 4678765003011961]; E' side []
+  type A: two open classes on the E side, the E' side all known; the cone fields of a level-3 lift of y are Q(sqrt y) and Q(sqrt y b0) (Fisher Sect. 5; rank_fisher5 (4'))
+    y = 354384937: Q(sqrt 354384937): h = 2, R = 18900.3; Q(sqrt 76724536132053369392473): h = 8, R = 60853841536.4   (PARI quadclassunit, GRH, for information only)
+    y = 3909914385316993: Q(sqrt 3909914385316993): h = 120, R = 863994.6; Q(sqrt 6954121554584257): h = 10, R = 12945219.9   (PARI quadclassunit, GRH, for information only)
+    y = 4678765003011961: Q(sqrt 4678765003011961): h = 8, R = 23853067.8; Q(sqrt 5811366864120841): h = 4, R = 62630263.7   (PARI quadclassunit, GRH, for information only)
+  E side, class 354384937: lifts D_lam not excluded by the second descent: 4 (tried: up to 12); basis of the other side's S_1: [-1, 244673]
+    lam = -21600593: pairings with the other side's S_1 -1:+1 244673:+1; level-3 Selmer set non-empty (dim 3), xi = -86787220877393, C3 checked locally soluble at R and 20 primes (agrees)
+  RESULT D1(12007,1799): FAILED (no conic point found): the level-3 lift of 354384937 exists (above); its V pair is over Q(sqrt 354384937) (regulator about 18900): after the square reduction the conic coefficients have 5115 and 15443 digits; the lattice finder found no point (20 trials), the norm finder stopped in its lattice reduction (precision); every other field is larger; bound stays 3

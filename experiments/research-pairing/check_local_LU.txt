@@ -1,0 +1,8 @@
+totals (curve, pairing value): {('LU', -1): 874}
+odd local terms (curve, case, prediction agrees):
+   ('LU', '-dl square', True) 1440
+   ('LU', 'dl square', True) 3210
+   ('LU', 'p|C+A', True) 2528
+   ('LU', 'p|C-A', True) 1676
+2-adic terms: {('LU', 1): 752, ('LU', -1): 122}
+examples of disagreement: []

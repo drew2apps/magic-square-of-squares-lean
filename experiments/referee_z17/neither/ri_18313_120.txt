@@ -1,0 +1,5 @@
+PARI point True
+  first descent: |Sel(phi)| <= 64, |Sel(phi^)| <= 2, rank <= 5; bad primes [2, 3, 5, 7, 13, 17, 23, 41, 73, 113, 3793, 18313, 18433, 110533, 279001, 481177, 113953902298519441]
+  E: Selmer 64 classes, known subgroup 4, cosets excluded by the second descent 12, not excluded 3: image <= 2^4 (control: 2 classes of known points survive, as they must)
+  E': Selmer 2 classes, known subgroup 2, cosets excluded by the second descent 0, not excluded 0: image <= 2^1 (control: 0 classes of known points survive, as they must)
+rank <= 3

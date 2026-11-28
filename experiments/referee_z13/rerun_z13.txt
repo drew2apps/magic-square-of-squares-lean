@@ -1,0 +1,26 @@
+9908 8865 08 rand20k pairs 128 disagree 0 same as committed
+9725 3589 LU rand20k pairs 32 disagree 0 same as committed
+10028 6149 08 rand20k pairs 2048 disagree 0 same as committed
+455 48 LU rand20k pairs 32 disagree 0 same as committed
+824 203 08 rand2k pairs 128 disagree 0 same as committed
+1567 72 08 rand2k pairs 64 disagree 0 same as committed
+1055 687 LU rand2k pairs 256 disagree 0 same as committed
+11953 8231 08 bothodd pairs 256 disagree 0 same as committed
+2333 605 08 bothodd pairs 8 disagree 0 same as committed
+18596 1503 08 v5_08 pairs 64 disagree 0 same as committed
+14916 13595 LU v5_08 pairs 32 disagree 0 same as committed
+14923 3405 08 v5_LU pairs 256 disagree 0 same as committed
+14597 5373 08 v5_LU pairs 128 disagree 0 same as committed
+10735 1872 08 square pairs 256 disagree 0 same as committed
+6784 1287 LU square pairs 64 disagree 0 same as committed
+8431 809 08 twicesquare pairs 8 disagree 0 same as committed
+16249 9809 08 twicesquare pairs 8 disagree 0 same as committed
+4 1 08 small pairs 8 disagree 0 same as committed
+4 1 LU small pairs 32 disagree 0 same as committed
+11 4 08 small pairs 32 disagree 0 same as committed
+15 1 LU small pairs 32 disagree 0 same as committed
+17 4 08 small pairs 8 disagree 0 same as committed
+11277 5150 08 noH2_08 pairs 2048 disagree 1024 same as committed
+725 497 LU noH2_LU pairs 64 disagree 32 same as committed
+10699 2089 LU noH2_LU pairs 512 disagree 256 same as committed
+rerun 25 curves: identical 25 different 0

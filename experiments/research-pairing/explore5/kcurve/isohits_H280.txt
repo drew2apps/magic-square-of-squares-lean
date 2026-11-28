@@ -1,0 +1,6 @@
+DONE iso3_c1 H=280 places=80 hits=0
+DONE iso3_c4 H=280 places=80 hits=0
+DONE iso3_c12 H=280 places=80 hits=0
+DONE iso3_c8 H=280 places=80 hits=0
+DONE iso3_c5 H=280 places=80 hits=0
+DONE iso3_c13 H=280 places=80 hits=0

@@ -1,0 +1,997 @@
+291,224  16  bad-alone: EMPTY  kill: 2:b 13:b
+292,133  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+308,185  20  bad-alone: EMPTY  kill: 2:b 5:b 29:b
+340,53  18  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+393,287  18  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+408,203  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 29:b
+425,159  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+465,416  16  bad-alone: 6 left  kill: 2:b 5:b 7:b 41:g
+493,123  20  bad-alone: EMPTY  kill: 2:b 5:b 29:b
+496,391  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+496,461  18  bad-alone: EMPTY  kill: 2:b 5:b
+511,260  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:g
+513,352  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+515,67  16  bad-alone: EMPTY  kill: 2:b 13:b
+611,205  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 29:b
+644,241  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b
+697,640  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+704,585  18  bad-alone: EMPTY  kill: 2:b 11:b 17:b 197:b 409:b
+725,164  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 29:b
+771,251  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:g
+777,620  20  bad-alone: EMPTY  kill: 2:b 11:b 13:b
+784,31  16  bad-alone: EMPTY  kill: 2:b 3:b 5:b 163:b
+796,369  18  bad-alone: EMPTY  kill: 2:b 5:b
+799,484  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+815,753  16  bad-alone: EMPTY  kill: 2:b 3:b 5:b 163:b
+844,689  20  bad-alone: EMPTY  kill: 2:b 5:b 29:b
+865,161  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+881,49  16  bad-alone: 6 left  kill: 2:b 5:b 7:b 41:g
+885,403  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b
+887,105  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+889,561  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 29:b
+916,729  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+935,284  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 53:b
+937,700  16  bad-alone: EMPTY  kill: 2:b 13:b
+952,173  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+957,35  18  bad-alone: EMPTY  kill: 2:b 5:b
+988,525  20  bad-alone: 2 left  kill: 2:b 3:b 37:g
+1020,149  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+1020,761  20  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+1036,75  18  bad-alone: EMPTY  kill: 11:b 13:b 37:b
+1037,400  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1063,260  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:g
+1111,961  18  bad-alone: EMPTY  kill: 11:b 13:b 37:b
+1125,779  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+1133,272  20  bad-alone: EMPTY  kill: 2:b 5:b 41:b 281:b
+1144,459  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1148,425  20  bad-alone: EMPTY  kill: 2:b 17:b 37:b
+1155,248  20  bad-alone: EMPTY  kill: 2:b 13:b
+1165,427  18  bad-alone: EMPTY  kill: 2:b 5:b
+1168,743  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1169,871  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+1173,868  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1184,839  18  bad-alone: EMPTY  kill: 2:b 5:b
+1196,181  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1207,32  18  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+1209,1064  20  bad-alone: EMPTY  kill: 5:b 13:b
+1219,651  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 53:b
+1232,155  20  bad-alone: EMPTY  kill: 11:b 13:b 31:b 115237:b
+1239,1175  18  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+1241,604  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 73:b
+1276,5  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 29:b
+1281,1271  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 29:b
+1283,315  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+1289,119  18  bad-alone: EMPTY  kill: 2:b 11:b 17:b 197:b 409:b
+1312,207  20  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+1316,801  20  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+1323,803  18  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:g
+1337,57  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1360,567  20  bad-alone: EMPTY  kill: 2:b 5:b 61:b
+1377,1015  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1387,1077  20  bad-alone: EMPTY  kill: 11:b 13:b 31:b 115237:b
+1397,157  20  bad-alone: EMPTY  kill: 2:b 11:b 13:b
+1403,907  20  bad-alone: EMPTY  kill: 2:b 13:b
+1405,861  20  bad-alone: EMPTY  kill: 2:b 5:b 41:b 281:b
+1424,409  20  bad-alone: EMPTY  kill: 2:b 5:b
+1428,235  18  bad-alone: EMPTY  kill: 2:b 13:b
+1435,1128  20  bad-alone: EMPTY  kill: 2:b 13:b
+1437,637  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1468,93  18  bad-alone: EMPTY  kill: 2:b 5:b 2953:b
+1472,721  18  bad-alone: EMPTY  kill: 2:b 13:b
+1475,1092  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 17:b 29:b
+1476,595  20  bad-alone: EMPTY  kill: 2:b 13:b
+1480,273  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 29:b 1753:b
+1496,145  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1508,17  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+1513,463  20  bad-alone: 2 left  kill: 2:b 3:b 37:g
+1513,552  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+1516,301  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+1517,1468  18  bad-alone: EMPTY  kill: 5:b 37:b 41:b
+1519,1105  20  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+1525,1491  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+1525,804  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 17:b 97:b 137:b
+1525,868  18  bad-alone: EMPTY  kill: 2:b 13:b 205993:b
+1528,663  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1533,1340  20  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+1533,155  20  bad-alone: EMPTY  kill: 2:b 5:b 29:b
+1544,1085  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 97:b
+1561,1375  18  bad-alone: EMPTY  kill: 2:b 5:b 2953:b
+1564,801  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1573,723  20  bad-alone: EMPTY  kill: 2:b 17:b 37:b
+1580,1237  16  bad-alone: EMPTY  kill: 2:b 13:b 17:b 37:b
+1592,637  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1603,685  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1615,828  20  bad-alone: EMPTY  kill: 2:b 349:b
+1623,680  20  bad-alone: EMPTY  kill: 2:b 277:b
+1625,644  18  bad-alone: EMPTY  kill: 2:b 109:b 22741:b
+1627,420  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 1621:b 19249:b
+1636,271  18  bad-alone: EMPTY  kill: 2:b 5:b
+1637,237  16  bad-alone: EMPTY  kill: 2:b 13:b
+1641,1351  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1645,187  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+1660,1519  20  bad-alone: EMPTY  kill: 3:b 5:b 7:b 11:b 13:b 17:b 31:b
+1663,1193  18  bad-alone: EMPTY  kill: 2:b 13:b
+1688,357  18  bad-alone: EMPTY  kill: 2:b 5:b
+1732,1547  20  bad-alone: EMPTY  kill: 2:b 5:b
+1736,281  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1736,41  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+1736,559  22  bad-alone: EMPTY  kill: 2:b 3:b 16477:b
+1751,736  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 29:b
+1753,1207  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 29:b 1753:b
+1777,1695  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+1777,400  16  bad-alone: EMPTY  kill: 2:b 3:b 13:b 73:b 11197:b
+1780,173  18  bad-alone: 2 left  kill: 2:b 13:b 61:g
+1781,259  20  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+1784,441  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1796,805  18  bad-alone: EMPTY  kill: 2:b 13:b
+1800,559  20  bad-alone: EMPTY  kill: 13:b 37:b 313:b
+1813,1084  14  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 2897:b
+1813,884  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+1817,1215  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+1825,772  18  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+1833,1015  20  bad-alone: EMPTY  kill: 2:b 5:b
+1836,341  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b 10597:b
+1840,1037  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+1845,637  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 73:b
+1847,1728  18  bad-alone: EMPTY  kill: 2:b 13:b
+1852,1155  22  bad-alone: 2 left  kill: 2:b 5:b 29:g
+1852,357  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 37:b
+1860,917  20  bad-alone: EMPTY  kill: 5:b 9901:b
+1869,1160  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 89:b
+1873,700  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 1201:b
+1896,385  18  bad-alone: EMPTY  kill: 5:b 13:b 61:b 79:b
+1897,440  22  bad-alone: EMPTY  kill: 5:b 13:b 271:b 831661:b
+1904,1559  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1907,1365  18  bad-alone: EMPTY  kill: 2:b 5:b
+1911,425  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1921,1760  20  bad-alone: EMPTY  kill: 2:b 13:b 73:b
+1924,575  22  bad-alone: EMPTY  kill: 2:b 3:b 37:b 1213:b
+1927,793  20  bad-alone: EMPTY  kill: 2:b 5:b 61:b
+1928,1795  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 109:b 241:b
+1932,1553  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1932,85  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 2017:b
+1948,639  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+1953,1000  16  bad-alone: 2 left  kill: 41:g
+1953,1607  18  bad-alone: 2 left  kill: 2:b 13:b 61:g
+1972,1913  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+1976,1309  24  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+1984,1729  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b 37:b
+1988,1455  22  bad-alone: EMPTY  kill: 2:b 13:b 41:b
+2000,79  18  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+2009,236  18  bad-alone: EMPTY  kill: 2:b 5:b
+2017,1455  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2017,1847  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 2017:b
+2023,1436  16  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+2023,345  18  bad-alone: EMPTY  kill: 2:b 5:b
+2035,124  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2035,1916  20  bad-alone: EMPTY  kill: 2:b 13:b 15217:b
+2040,959  20  bad-alone: 10 left  kill: 2:b 5:b 29:g 101:g
+2041,305  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2044,1475  20  bad-alone: EMPTY  kill: 2:b 13:b
+2044,1955  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 41:b
+2045,1331  18  bad-alone: EMPTY  kill: 2:b 5:b
+2047,1207  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 1621:b 19249:b
+2063,1948  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2065,961  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+2071,881  20  bad-alone: EMPTY  kill: 2:b 13:b
+2077,940  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b
+2079,1921  18  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+2091,184  20  bad-alone: EMPTY  kill: 2:b 37:b
+2097,1880  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2108,1623  22  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+2113,1700  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2117,515  20  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+2121,2024  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2132,2047  22  bad-alone: EMPTY  kill: 5:b 17:b 8677:b
+2145,1816  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 11:b 37:b 1093:b
+2148,1303  20  bad-alone: EMPTY  kill: 2:b 13:b
+2159,1911  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2169,1736  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 241:b
+2177,1377  16  bad-alone: EMPTY  kill: 2:b 3:b 13:b 73:b 11197:b
+2177,1495  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b 10597:b
+2191,865  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2193,751  18  bad-alone: EMPTY  kill: 2:b 13:b
+2207,1780  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b 61:b
+2209,1495  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 37:b
+2212,1209  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 29:b 70501:b
+2216,2125  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2225,1343  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2229,955  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2231,1720  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2232,1057  22  bad-alone: EMPTY  kill: 5:b 17:b 26317:b
+2244,31  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 61:b
+2245,1036  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2245,1773  18  bad-alone: EMPTY  kill: 2:b 5:b
+2255,1196  24  bad-alone: EMPTY  kill: 2:b 5:b 11:b 17:b 29:b
+2260,1547  22  bad-alone: 20 left  kill: 2:b 5:b 29:g 41:g 149:b 2115433:b
+2261,1024  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+2269,981  18  bad-alone: EMPTY  kill: 2:b 109:b 22741:b
+2272,1879  16  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+2273,145  20  bad-alone: EMPTY  kill: 5:b 13:b
+2275,1907  20  bad-alone: EMPTY  kill: 2:b 37:b
+2275,2213  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 61:b
+2277,1412  22  bad-alone: EMPTY  kill: 5:b 13:b 17:b
+2281,1511  18  bad-alone: EMPTY  kill: 5:b 13:b 61:b 79:b
+2285,868  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+2288,1387  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 17:b
+2295,1177  22  bad-alone: EMPTY  kill: 2:b 3:b 16477:b
+2296,775  20  bad-alone: EMPTY  kill: 2:b 13:b 37:b 53:b
+2300,1397  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2303,943  20  bad-alone: EMPTY  kill: 2:b 277:b
+2329,1304  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+2329,721  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 17:b 97:b 137:b
+2337,1457  22  bad-alone: EMPTY  kill: 5:b 13:b 271:b 831661:b
+2344,833  16  bad-alone: EMPTY  kill: 13:b 1861:b
+2348,955  18  bad-alone: EMPTY  kill: 5:b 13:b 61:b 191:b
+2352,1403  20  bad-alone: EMPTY  kill: 2:b 13:b 73:b
+2359,1241  20  bad-alone: EMPTY  kill: 13:b 37:b 313:b
+2365,763  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2372,2085  18  bad-alone: 2 left  kill: 2:b 5:b 101:g
+2375,1836  18  bad-alone: EMPTY  kill: 5:b 11:b 13:b
+2380,1403  22  bad-alone: EMPTY  kill: 2:b 13:b 5521:b
+2380,923  22  bad-alone: EMPTY  kill: 2:b 13:b 29:b 97:b
+2384,1921  20  bad-alone: EMPTY  kill: 2:b 17:b 481141:b
+2385,292  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2392,917  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+2393,657  18  bad-alone: EMPTY  kill: 2:b 13:b 205993:b
+2395,204  20  bad-alone: 2 left  kill: 5:b 13:b 41:g
+2400,1687  20  bad-alone: EMPTY  kill: 2:b 13:b 37:b 61:b
+2417,768  18  bad-alone: EMPTY  kill: 2:b 13:b
+2421,316  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+2423,748  20  bad-alone: EMPTY  kill: 3:b 5:b 7:b 11:b 13:b 17:b
+2428,1177  20  bad-alone: EMPTY  kill: 2:b 5:b 11:b 37:b
+2436,1805  18  bad-alone: 2 left  kill: 3:b 7:b 13:b 37:g 4241:b
+2443,787  20  bad-alone: EMPTY  kill: 2:b 349:b
+2460,1127  22  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b 23:b 37:b 41:b 43:b
+2461,140  20  bad-alone: EMPTY  kill: 2:b 11:b 13:b
+2487,1015  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 29:b
+2495,728  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 53:b
+2496,1921  20  bad-alone: EMPTY  kill: 3:b 5:b 37:b
+2499,1349  22  bad-alone: EMPTY  kill: 2:b 3:b 37:b 1213:b
+2499,956  18  bad-alone: EMPTY  kill: 2:b 13:b
+2501,2140  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+2512,897  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+2513,2172  20  bad-alone: EMPTY  kill: 2:b 5:b 257:b
+2516,2041  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 17:b 31:b 37:b
+2523,248  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+2524,1351  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2540,2493  18  bad-alone: EMPTY  kill: 5:b 13:b
+2548,1215  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 53:b
+2551,1904  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+2553,548  20  bad-alone: EMPTY  kill: 2:b 5:b 401:b
+2563,307  20  bad-alone: EMPTY  kill: 2:b 13:b
+2567,1344  16  bad-alone: 12 left  kill: 5:b 13:b 37:g 73:g
+2567,2492  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+2567,383  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 17:b 29:b
+2573,1173  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 1201:b
+2581,1904  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+2583,1880  20  bad-alone: EMPTY  kill: 2:b 13:b
+2584,1715  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+2587,1309  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2597,1053  18  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2599,2191  20  bad-alone: 2 left  kill: 5:b 13:b 41:g
+2600,1739  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 464437:b
+2600,2103  18  bad-alone: 18 left  kill: 2:b 5:b 13:b 53:g
+2601,2321  20  bad-alone: EMPTY  kill: 2:b 11:b 13:b
+2601,991  18  bad-alone: EMPTY  kill: 2:b 13:b
+2604,425  20  bad-alone: EMPTY  kill: 2:b 13:b 181:b
+2604,779  22  bad-alone: EMPTY  kill: 3:b 5:b 7549:b
+2611,2556  18  bad-alone: 4 left  kill: 2:b 3:b 29:g
+2624,1343  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+2624,1757  18  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2628,329  18  bad-alone: EMPTY  kill: 2:b 13:b
+2629,364  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2629,459  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 97:b
+2632,1683  22  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+2635,368  22  bad-alone: EMPTY  kill: 3:b 5:b 661:b
+2639,1252  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 29:b
+2653,968  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2677,2093  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2679,1400  18  bad-alone: 4 left  kill: 13:b 17:b 29:g
+2688,391  16  bad-alone: EMPTY  kill: 2:b 7:b 13:b 17:b 1693:b 2297:b
+2688,559  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 17:b
+2697,929  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+2701,784  20  bad-alone: EMPTY  kill: 5:b 13:b
+2717,1260  24  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+2725,1916  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2737,1488  20  bad-alone: EMPTY  kill: 13:b 1171117:b
+2737,2105  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+2737,2252  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2737,580  22  bad-alone: EMPTY  kill: 3:b 13:b 29:b
+2743,980  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b 157:b
+2745,2528  18  bad-alone: 2 left  kill: 2:b 5:b 29:g 8269:b
+2753,68  20  bad-alone: EMPTY  kill: 2:b 13:b
+2756,2319  22  bad-alone: EMPTY  kill: 2:b 5:b
+2771,2275  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+2775,728  22  bad-alone: 6 left  kill: 2:b 3:b 5:b 13:b 29:g 89:b 113:b 853:b
+2777,943  20  bad-alone: EMPTY  kill: 5:b 9901:b
+2779,1436  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2788,1253  20  bad-alone: EMPTY  kill: 2:b 5:b
+2791,1416  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+2801,64  18  bad-alone: EMPTY  kill: 2:b 5:b
+2807,2788  20  bad-alone: EMPTY  kill: 2:b 5:b 19:b
+2817,343  16  bad-alone: EMPTY  kill: 2:b 13:b 17:b 37:b
+2821,2676  22  bad-alone: 32 left  kill: 2:b 5:b 13:b 37:g
+2821,2685  20  bad-alone: EMPTY  kill: 2:b 13:b
+2821,704  22  bad-alone: EMPTY  kill: 2:b 11:b 29:b 1693777:b
+2855,288  18  bad-alone: 4 left  kill: 2:b 5:b 13:b 17:b 29:g 53:g 50497:b
+2856,151  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2859,2380  20  bad-alone: 4 left  kill: 2:b 5:b 29:g 89:g
+2860,147  20  bad-alone: EMPTY  kill: 2:b 3:b 7:b 11:b 97:b 157:b
+2865,2737  18  bad-alone: EMPTY  kill: 2:b 5:b
+2868,1967  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2873,193  20  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+2877,803  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+2884,2509  18  bad-alone: EMPTY  kill: 2:b 5:b 5393:b
+2897,729  14  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 2897:b
+2900,653  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 11:b 13:b 19:b 29:b
+2901,2132  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b 337:b
+2905,1384  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b 83:b
+2909,1736  20  bad-alone: 8 left  kill: 2:b 5:b 13:b 37:g
+2915,332  22  bad-alone: 4 left  kill: 2:b 3:b 13:b 29:g 37:g 41:b
+2920,13  20  bad-alone: 2 left  kill: 2:b 5:b 29:g
+2924,341  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+2933,2907  20  bad-alone: 2 left  kill: 2:b 5:b 29:g
+2944,2859  18  bad-alone: EMPTY  kill: 5:b 17:b 397:b
+2952,2287  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 41:b
+2952,761  18  bad-alone: EMPTY  kill: 7:b 37:b 61:b 761:b
+2953,953  16  bad-alone: 2 left  kill: 41:g
+2957,2299  18  bad-alone: EMPTY  kill: 2:b 13:b
+2960,2661  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+2968,2425  18  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+2968,783  22  bad-alone: EMPTY  kill: 5:b 13:b 29:b
+2969,2492  18  bad-alone: EMPTY  kill: 2:b 13:b
+2976,2771  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+2984,1909  20  bad-alone: EMPTY  kill: 5:b 13:b 113:b
+2985,49  18  bad-alone: EMPTY  kill: 5:b 37:b 41:b
+2993,2265  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+2999,1081  20  bad-alone: 10 left  kill: 2:b 5:b 29:g 101:g
+2999,1656  20  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+3001,2004  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3003,2267  22  bad-alone: EMPTY  kill: 3:b 5:b 661:b
+3003,40  20  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+3004,1819  22  bad-alone: EMPTY  kill: 2:b 13:b
+3007,2705  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3007,2713  20  bad-alone: EMPTY  kill: 2:b 3:b 7:b 11:b 97:b 157:b
+3007,648  20  bad-alone: EMPTY  kill: 2:b 5:b 97:b
+3007,697  22  bad-alone: 2 left  kill: 2:b 5:b 29:g
+3017,1137  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b
+3024,1069  18  bad-alone: EMPTY  kill: 2:b 13:b
+3029,2179  20  bad-alone: EMPTY  kill: 2:b 13:b 181:b
+3029,709  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 89:b
+3031,1564  20  bad-alone: EMPTY  kill: 2:b 5:b
+3031,2924  20  bad-alone: EMPTY  kill: 2:b 5:b
+3040,833  18  bad-alone: EMPTY  kill: 2:b 13:b
+3041,816  20  bad-alone: EMPTY  kill: 2:b 5:b 7:b 17:b 19:b
+3043,2963  20  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+3052,1195  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 109:b 229:b
+3065,2108  22  bad-alone: EMPTY  kill: 2:b 11:b 13:b 17:b
+3071,1521  20  bad-alone: EMPTY  kill: 2:b 13:b 37:b 53:b
+3073,412  20  bad-alone: 4 left  kill: 2:b 29:g
+3075,1724  18  bad-alone: EMPTY  kill: 2:b 109:b
+3077,948  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 293:b 116797:b
+3079,2297  16  bad-alone: EMPTY  kill: 2:b 7:b 13:b 17:b 1693:b 2297:b
+3095,832  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 29:b 1848193:b
+3100,1743  22  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+3101,2005  20  bad-alone: EMPTY  kill: 2:b 5:b 401:b
+3105,1568  18  bad-alone: EMPTY  kill: 2:b 3:b 29:b
+3109,2212  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3115,1968  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b 41:b 89:b
+3128,1595  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3136,1825  20  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 29:g
+3136,1989  20  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+3136,2521  16  bad-alone: EMPTY  kill: 5:b 13:b
+3143,2567  18  bad-alone: 4 left  kill: 2:b 5:b 13:b 17:b 29:g 53:g 50497:b
+3153,1417  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+3163,3116  20  bad-alone: 24 left  kill: 2:b 5:b 13:b 29:g
+3165,988  20  bad-alone: 2 left  kill: 3:b 7:b 19:b 29:g 61:b
+3167,420  20  bad-alone: 2 left  kill: 2:b 13:b 29:b 37:g
+3167,668  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3171,1675  20  bad-alone: EMPTY  kill: 3:b 5:b 7:b 11:b 13:b 17:b
+3175,2852  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 23:b 31:b 127:b 277:b
+3177,1511  16  bad-alone: EMPTY  kill: 13:b 1861:b
+3179,141  20  bad-alone: EMPTY  kill: 3:b 5:b 7:b 11:b 13:b 17:b 31:b
+3180,1463  22  bad-alone: EMPTY  kill: 3:b 5:b 7:b 11:b 13:b 17:b
+3184,1  16  bad-alone: EMPTY  kill: 2:b 5:b
+3185,1649  18  bad-alone: EMPTY  kill: 2:b 13:b
+3185,3183  16  bad-alone: EMPTY  kill: 2:b 5:b
+3195,2908  20  bad-alone: 2 left  kill: 2:b 5:b 37:g
+3209,256  16  bad-alone: EMPTY  kill: 2:b 5:b
+3209,612  16  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3220,1027  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 37:g
+3220,593  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+3223,1767  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 53:b
+3224,759  24  bad-alone: EMPTY  kill: 2:b 5:b 11:b 11257:b
+3229,1972  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+3236,1755  20  bad-alone: 18 left  kill: 2:b 29:g 1481:b
+3236,873  18  bad-alone: EMPTY  kill: 2:b 5:b 97:b 139:b
+3240,449  18  bad-alone: EMPTY  kill: 5:b 13:b 449:b
+3241,2136  22  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b 19:b
+3245,2072  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+3247,1140  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 43:b
+3247,1960  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 17:b 29:b
+3247,2129  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 17:b
+3247,252  18  bad-alone: EMPTY  kill: 2:b 5:b
+3247,2583  22  bad-alone: 4 left  kill: 2:b 3:b 13:b 29:g 37:g 41:b
+3247,672  18  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b
+3248,2873  18  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+3249,496  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+3265,2583  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+3268,1393  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+3271,2760  20  bad-alone: EMPTY  kill: 5:b 13:b
+3276,1555  18  bad-alone: EMPTY  kill: 3:b 7:b 13:b 53:b 1721:b
+3276,289  22  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b 23:b 29:b 31:b
+3279,185  20  bad-alone: EMPTY  kill: 2:b 5:b
+3281,1209  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3281,3180  22  bad-alone: EMPTY  kill: 2:b 13:b 29:b
+3285,1237  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+3285,667  24  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+3289,1175  22  bad-alone: EMPTY  kill: 5:b 17:b 26317:b
+3289,1436  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3295,1748  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 19:b
+3295,712  18  bad-alone: EMPTY  kill: 2:b 13:b 89:b
+3303,1393  18  bad-alone: EMPTY  kill: 5:b 13:b 61:b 191:b
+3303,1457  22  bad-alone: EMPTY  kill: 2:b 13:b 29:b 97:b
+3304,3015  20  bad-alone: EMPTY  kill: 2:b 3:b 7:b 13:b 17:b 59:b 89:b 1567981:b
+3309,1475  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+3312,2213  20  bad-alone: EMPTY  kill: 2:b 13:b
+3315,2188  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 29:g
+3317,168  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 41:b
+3317,2157  22  bad-alone: EMPTY  kill: 3:b 13:b 29:b
+3320,2303  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 17:g 29:g
+3323,992  18  bad-alone: EMPTY  kill: 2:b 5:b
+3328,2629  20  bad-alone: EMPTY  kill: 2:b 37:b 233:b
+3332,453  18  bad-alone: EMPTY  kill: 2:b 5:b
+3335,532  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3356,2279  20  bad-alone: EMPTY  kill: 2:b 5:b
+3360,2257  20  bad-alone: 4 left  kill: 2:b 5:b 29:g
+3363,140  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 19:b 37:b 59:b 113:b
+3375,1708  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+3375,244  20  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 61:b 97:b
+3381,2560  18  bad-alone: EMPTY  kill: 5:b 37:b
+3383,1825  22  bad-alone: EMPTY  kill: 3:b 5:b 7549:b
+3384,35  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3387,812  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3393,3376  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b 29:b 73:b
+3395,1348  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 337:b
+3395,1504  22  bad-alone: 12 left  kill: 2:b 5:b 29:g 61:b
+3399,2296  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 409:b
+3400,1927  20  bad-alone: EMPTY  kill: 2:b 13:b 97:b
+3400,3283  20  bad-alone: EMPTY  kill: 2:b 61:b
+3405,868  20  bad-alone: EMPTY  kill: 2:b 13:b 43:b
+3409,1615  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+3416,2691  22  bad-alone: EMPTY  kill: 2:b 13:b 29:b
+3419,2492  20  bad-alone: 20 left  kill: 2:b 5:b 17:g 37:g 89:b 3189229:b
+3419,3349  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3421,1003  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 29:b 70501:b
+3425,3068  22  bad-alone: EMPTY  kill: 3:b 5:b 41:b 149:b
+3431,644  20  bad-alone: EMPTY  kill: 2:b 13:b 73:b
+3437,592  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+3443,533  22  bad-alone: EMPTY  kill: 2:b 13:b 41:b
+3444,1801  20  bad-alone: EMPTY  kill: 2:b 5:b
+3444,2701  20  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+3447,2860  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 11:b 53:b
+3448,105  20  bad-alone: 2 left  kill: 2:b 3:b 29:g
+3451,1059  24  bad-alone: EMPTY  kill: 2:b 5:b 11:b 17:b 29:b
+3451,496  20  bad-alone: EMPTY  kill: 2:b 5:b
+3451,845  20  bad-alone: EMPTY  kill: 2:b 13:b
+3455,1543  18  bad-alone: EMPTY  kill: 2:b 13:b
+3457,1224  20  bad-alone: EMPTY  kill: 2:b 5:b 303553:b
+3457,448  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3459,587  16  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+3463,345  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3463,600  18  bad-alone: EMPTY  kill: 5:b 113:b 157:b
+3465,2953  16  bad-alone: EMPTY  kill: 2:b 5:b
+3471,1960  18  bad-alone: 2 left  kill: 2:b 29:g 37:g
+3472,533  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+3481,2564  20  bad-alone: EMPTY  kill: 2:b 5:b
+3485,1917  20  bad-alone: EMPTY  kill: 5:b 13:b
+3485,2661  20  bad-alone: 4 left  kill: 2:b 29:g
+3485,3149  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 41:b
+3485,379  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3492,1513  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3492,2645  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 23:b 97:b 229:b
+3499,2995  18  bad-alone: EMPTY  kill: 2:b 5:b
+3500,1209  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b 29:b 97:b
+3500,1591  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 37:b 43:b 1697:b
+3500,269  16  bad-alone: 2 left  kill: 5:b 13:b 61:g
+3501,1316  20  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+3503,1512  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 59:b
+3503,2047  22  bad-alone: 6 left  kill: 2:b 3:b 5:b 13:b 29:g 89:b 113:b 853:b
+3503,3223  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 19:b 37:b 59:b 113:b
+3512,2387  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3516,1475  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+3519,569  20  bad-alone: EMPTY  kill: 2:b 13:b
+3524,3231  18  bad-alone: EMPTY  kill: 2:b 5:b
+3525,2117  22  bad-alone: EMPTY  kill: 2:b 11:b 29:b 1693777:b
+3548,175  18  bad-alone: EMPTY  kill: 3:b 5:b 13:b 673:b
+3553,1872  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 41:b
+3553,2247  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 11:b 13:b 19:b 29:b
+3553,3343  20  bad-alone: 2 left  kill: 2:b 3:b 29:g
+3555,644  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b 41:b
+3565,2924  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b 23:b 29:b 31:b 641:b
+3565,2987  22  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b 23:b 29:b 31:b
+3565,628  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 23:b 31:b 89:b 157:b 599:b
+3575,119  18  bad-alone: EMPTY  kill: 2:b 13:b
+3577,520  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 37:b
+3579,1300  22  bad-alone: EMPTY  kill: 2:b 17:b 53:b
+3584,2329  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3584,2535  18  bad-alone: EMPTY  kill: 2:b 3:b 29:b
+3587,1333  22  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b 23:b 37:b 41:b 43:b
+3587,2747  20  bad-alone: 2 left  kill: 2:b 13:b 29:b 37:g
+3589,236  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3593,548  20  bad-alone: EMPTY  kill: 5:b 13:b
+3596,3519  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3604,1351  20  bad-alone: EMPTY  kill: 2:b 5:b
+3604,2197  18  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+3604,2829  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3605,1251  20  bad-alone: EMPTY  kill: 2:b 5:b 11:b 37:b
+3605,2396  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3611,1316  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 97:b
+3613,3128  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3616,641  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 113:b 641:b
+3619,3131  20  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 61:b 97:b
+3620,721  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+3620,799  22  bad-alone: EMPTY  kill: 3:b 5:b 7:b 13:b 17:b 31:b 181:b
+3621,1685  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3623,2972  18  bad-alone: EMPTY  kill: 2:b 5:b 13633:b
+3633,1025  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+3640,3443  20  bad-alone: EMPTY  kill: 2:b 197:b
+3644,217  20  bad-alone: EMPTY  kill: 2:b 149:b
+3649,2760  24  bad-alone: EMPTY  kill: 3:b 5:b 13:b 17:b 89:b 97:b
+3655,176  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b
+3655,2359  20  bad-alone: EMPTY  kill: 2:b 5:b 97:b
+3657,1312  20  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+3657,2824  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+3672,3157  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3675,3176  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b
+3675,901  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 17:b
+3681,161  20  bad-alone: EMPTY  kill: 2:b 13:b 73:b
+3687,2548  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+3689,2791  18  bad-alone: EMPTY  kill: 5:b 13:b 449:b
+3689,3484  22  bad-alone: EMPTY  kill: 2:b 5:b
+3689,865  22  bad-alone: EMPTY  kill: 5:b 13:b 17:b
+3692,3269  18  bad-alone: 2 left  kill: 2:b 5:b 13:b 101:g
+3696,1915  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3697,903  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3700,3581  18  bad-alone: 2 left  kill: 2:b 5:b 29:g
+3708,1885  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g
+3713,2191  18  bad-alone: EMPTY  kill: 7:b 37:b 61:b 761:b
+3713,255  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b 37:b
+3719,2284  20  bad-alone: EMPTY  kill: 2:b 5:b
+3720,1547  24  bad-alone: EMPTY  kill: 13:b 53:b 101:b
+3723,133  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 109:b 241:b
+3723,1763  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b 157:b
+3723,3373  18  bad-alone: EMPTY  kill: 3:b 5:b 13:b 673:b
+3725,904  20  bad-alone: EMPTY  kill: 2:b 13:b
+3728,675  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+3731,485  22  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+3732,875  18  bad-alone: EMPTY  kill: 5:b 1875229:b
+3736,2175  20  bad-alone: EMPTY  kill: 5:b 13:b 299329:b
+3736,3705  20  bad-alone: EMPTY  kill: 877:b 3533653:b
+3740,91  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 37:b
+3745,2753  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+3751,2185  22  bad-alone: EMPTY  kill: 5:b 13:b 29:b
+3752,3473  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3755,949  20  bad-alone: EMPTY  kill: 2:b 13:b 73:b
+3756,2741  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3757,1832  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 11:b 13:b 17:b 23:b
+3757,240  18  bad-alone: EMPTY  kill: 2:b 109:b
+3757,2772  20  bad-alone: EMPTY  kill: 2:b 5:b
+3760,1763  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3761,1136  18  bad-alone: EMPTY  kill: 2:b 5:b
+3763,1333  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 53:b
+3769,3231  16  bad-alone: 2 left  kill: 5:b 13:b 61:g
+3772,2667  24  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+3779,2800  20  bad-alone: EMPTY  kill: 2:b 5:b 7:b 11:b 13:b 89:b
+3780,1009  18  bad-alone: EMPTY  kill: 2:b 13:b
+3783,977  22  bad-alone: EMPTY  kill: 2:b 13:b 5521:b
+3785,2879  18  bad-alone: EMPTY  kill: 2:b 5:b
+3792,103  22  bad-alone: EMPTY  kill: 5:b 17:b 109:b
+3792,1633  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b 193:b
+3792,3719  18  bad-alone: EMPTY  kill: 2:b 17:b 29:b
+3800,281  22  bad-alone: EMPTY  kill: 3:b 5:b 11:b 13:b 17:b 37:b 41:b
+3800,587  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 17:b 19:b 41:b 421:b
+3807,713  22  bad-alone: 20 left  kill: 2:b 5:b 29:g 41:g 149:b 2115433:b
+3813,2627  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+3813,413  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3821,2597  16  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3825,3353  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3831,3479  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b
+3831,3649  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 37:b
+3832,1173  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3832,2285  20  bad-alone: EMPTY  kill: 5:b 13:b 17:b
+3835,2499  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3844,1035  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 53:b
+3844,1295  18  bad-alone: EMPTY  kill: 2:b 13:b
+3844,1855  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3848,1913  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 73:b
+3856,615  20  bad-alone: 4 left  kill: 2:b 3:b 13:b 29:g 41:b 241:b
+3857,2225  20  bad-alone: EMPTY  kill: 2:b 5:b 7:b 17:b 19:b
+3861,3427  20  bad-alone: EMPTY  kill: 2:b 149:b
+3864,629  20  bad-alone: EMPTY  kill: 2:b 13:b
+3867,1960  16  bad-alone: EMPTY  kill: 2:b 13:b
+3867,2803  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3869,2296  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 41:b
+3871,2328  16  bad-alone: EMPTY  kill: 2:b 13:b 6285889:b
+3873,2207  18  bad-alone: EMPTY  kill: 2:b 13:b
+3875,1173  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3885,59  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3887,2716  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+3889,140  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+3891,1387  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 29:b
+3895,3689  22  bad-alone: EMPTY  kill: 5:b 17:b 109:b
+3900,707  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+3905,3009  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+3905,433  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 241:b
+3911,1223  16  bad-alone: 12 left  kill: 5:b 13:b 37:g 73:g
+3919,2575  18  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b
+3920,1087  16  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+3920,1333  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3920,799  20  bad-alone: EMPTY  kill: 3:b 5:b 13:b 17:b 3121:b 10145329:b
+3927,2263  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 29:b 1848193:b
+3927,2888  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 17:b 19:b
+3931,2244  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+3935,2884  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3944,3521  20  bad-alone: EMPTY  kill: 5:b 29:b
+3947,2955  20  bad-alone: EMPTY  kill: 2:b 5:b
+3951,119  20  bad-alone: EMPTY  kill: 2:b 13:b 15217:b
+3951,511  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+3960,1633  24  bad-alone: EMPTY  kill: 5:b 13:b 17:b
+3961,329  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 11:b 37:b 1093:b
+3964,1771  24  bad-alone: EMPTY  kill: 13:b 17:b 37:b
+3967,1281  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+3977,1457  24  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+3977,217  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+3983,2465  24  bad-alone: EMPTY  kill: 2:b 5:b 11:b 11257:b
+3983,832  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 569:b
+3987,427  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b 61:b
+3993,1624  20  bad-alone: EMPTY  kill: 13:b 29:b
+3997,1612  22  bad-alone: EMPTY  kill: 2:b 5:b
+3997,3517  18  bad-alone: EMPTY  kill: 2:b 109:b
+3999,89  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 41:b
+4000,1193  16  bad-alone: EMPTY  kill: 2:b 5:b 13:b 401:b
+4005,2939  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+4007,2583  18  bad-alone: EMPTY  kill: 2:b 13:b 89:b
+4011,115  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4017,1232  22  bad-alone: EMPTY  kill: 5:b 13:b
+4025,2129  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 293:b 116797:b
+4025,632  20  bad-alone: EMPTY  kill: 3:b 5:b 349:b
+4029,2572  22  bad-alone: EMPTY  kill: 2:b 13:b 97:b 1009:b
+4029,2845  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4029,3749  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4032,2887  20  bad-alone: EMPTY  kill: 2:b 13:b
+4040,589  22  bad-alone: EMPTY  kill: 2:b 17:b 29:b
+4041,1535  20  bad-alone: EMPTY  kill: 2:b 5:b
+4045,3492  18  bad-alone: EMPTY  kill: 2:b 13:b 7537:b 98377:b
+4052,3345  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4061,252  20  bad-alone: EMPTY  kill: 2:b 5:b 19:b
+4063,2863  18  bad-alone: EMPTY  kill: 5:b 113:b 157:b
+4064,3055  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 29:b 47:b 1009:b
+4073,1140  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4073,2288  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4073,3212  22  bad-alone: EMPTY  kill: 5:b 13:b 41:b
+4075,2787  20  bad-alone: EMPTY  kill: 2:b 13:b 73:b
+4079,1279  18  bad-alone: 4 left  kill: 13:b 17:b 29:g
+4081,3519  22  bad-alone: EMPTY  kill: 3:b 5:b 11:b 13:b 17:b 37:b 41:b
+4087,713  20  bad-alone: EMPTY  kill: 2:b 13:b 37:b 61:b
+4092,445  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 89:b
+4093,1955  18  bad-alone: EMPTY  kill: 2:b 13:b
+4095,712  24  bad-alone: EMPTY  kill: 2:b 11:b 509:b
+4096,2415  18  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b 23:b 41:b 1889:b
+4097,3057  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 37:b
+4100,2023  22  bad-alone: EMPTY  kill: 2:b 17:b 7717:b
+4100,2207  20  bad-alone: EMPTY  kill: 2:b 17:b 53:b
+4100,2331  22  bad-alone: EMPTY  kill: 2:b 13:b 29:b 41:b 59:b
+4101,3380  18  bad-alone: EMPTY  kill: 3:b 5:b 73:b 7481:b 125053:b
+4105,984  18  bad-alone: EMPTY  kill: 5:b 13:b 17:b 65257:b
+4109,2363  18  bad-alone: EMPTY  kill: 2:b 5:b 97:b 139:b
+4125,2032  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4141,3045  20  bad-alone: EMPTY  kill: 5:b 13:b
+4145,97  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4148,403  24  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+4151,393  16  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+4153,2177  20  bad-alone: 2 left  kill: 3:b 7:b 19:b 29:g 61:b
+4153,868  18  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+4164,3961  20  bad-alone: EMPTY  kill: 2:b 13:b
+4165,3596  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+4172,653  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4179,85  22  bad-alone: EMPTY  kill: 5:b 17:b 8677:b
+4183,452  22  bad-alone: EMPTY  kill: 2:b 13:b 41:b
+4183,900  22  bad-alone: 8 left  kill: 2:b 5:b 13:b 29:g 89:b
+4184,3519  20  bad-alone: EMPTY  kill: 2:b 5:b 109:b
+4191,476  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4193,2132  22  bad-alone: EMPTY  kill: 2:b 11:b 17:b 109:b
+4193,2937  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 23:b 31:b 89:b 157:b 599:b
+4199,2575  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4199,2911  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b 41:b
+4200,3979  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+4204,161  20  bad-alone: EMPTY  kill: 2:b 5:b 97:b
+4204,1649  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4207,1375  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+4211,539  18  bad-alone: EMPTY  kill: 5:b 11:b 13:b
+4215,1343  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4216,3239  22  bad-alone: EMPTY  kill: 2:b 13:b 41:b
+4223,2900  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 29:b
+4225,1249  20  bad-alone: EMPTY  kill: 13:b 1171117:b
+4225,896  16  bad-alone: 12 left  kill: 2:b 29:g 37:g
+4228,3995  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4233,2392  22  bad-alone: 12 left  kill: 2:b 5:b 37:g
+4240,4069  20  bad-alone: EMPTY  kill: 2:b 19:b 109:b
+4241,631  18  bad-alone: 2 left  kill: 3:b 7:b 13:b 37:g 4241:b
+4244,161  18  bad-alone: EMPTY  kill: 2:b 5:b
+4247,1428  20  bad-alone: EMPTY  kill: 2:b 13:b
+4247,1857  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 109:b 229:b
+4247,2193  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 13:b 37:g
+4251,1724  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b
+4257,2975  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b 113:b 641:b
+4264,1071  24  bad-alone: EMPTY  kill: 2:b 5:b 61:b
+4273,2537  20  bad-alone: EMPTY  kill: 2:b 13:b 43:b
+4276,3235  20  bad-alone: EMPTY  kill: 2:b 29:b
+4277,1264  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+4277,92  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b 193:b
+4289,1521  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b 83:b
+4292,4123  24  bad-alone: EMPTY  kill: 2:b 3:b 5:b 29:b
+4299,869  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4304,2325  18  bad-alone: EMPTY  kill: 5:b 13:b
+4305,3224  22  bad-alone: EMPTY  kill: 5:b 2437:b
+4305,463  20  bad-alone: EMPTY  kill: 2:b 17:b 481141:b
+4313,3809  20  bad-alone: EMPTY  kill: 2:b 5:b 19:b
+4315,2331  18  bad-alone: EMPTY  kill: 2:b 5:b
+4315,949  22  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+4316,2191  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4316,31  20  bad-alone: EMPTY  kill: 2:b 5:b
+4320,3193  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 977:b
+4324,1979  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+4331,1696  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+4333,508  20  bad-alone: 8 left  kill: 2:b 37:g
+4336,3871  20  bad-alone: EMPTY  kill: 2:b 5:b 29:b
+4339,861  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 464437:b
+4340,1737  22  bad-alone: EMPTY  kill: 5:b 13:b 19:b 73:b
+4340,187  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 31:b 4153:b 8233:b
+4340,867  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 44257:b
+4341,2899  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+4341,91  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4347,4285  20  bad-alone: EMPTY  kill: 2:b 5:b
+4348,3247  20  bad-alone: 4 left  kill: 2:b 5:b 13:b 29:g
+4348,4193  20  bad-alone: EMPTY  kill: 2:b 5:b 269:b 613:b
+4361,2844  22  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+4361,3048  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4365,4043  20  bad-alone: EMPTY  kill: 2:b 5:b 97:b
+4368,2449  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 101:b
+4369,4185  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b 193:b
+4371,3164  24  bad-alone: EMPTY  kill: 2:b 13:b 457:b
+4381,867  18  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4385,3808  18  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+4387,2107  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 43:b
+4387,3213  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 17:b 19:b 41:b 421:b
+4387,884  22  bad-alone: EMPTY  kill: 3:b 5:b 13:b 17:b 41:b
+4388,2633  20  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+4391,84  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4392,1519  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4397,1660  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 83:b 673:b 3049:b 34129:b
+4400,1271  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4403,3053  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+4403,3068  24  bad-alone: EMPTY  kill: 2:b 5:b
+4404,2197  18  bad-alone: 8 left  kill: 2:b 5:b 61:g
+4405,4083  18  bad-alone: EMPTY  kill: 2:b 5:b
+4407,1312  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4417,2248  20  bad-alone: EMPTY  kill: 2:b 5:b
+4417,575  20  bad-alone: EMPTY  kill: 3:b 5:b 37:b
+4419,2821  22  bad-alone: EMPTY  kill: 3:b 5:b 7:b 13:b 17:b 31:b 181:b
+4424,2057  18  bad-alone: 2 left  kill: 5:b 13:b 41:g
+4428,1879  18  bad-alone: EMPTY  kill: 2:b 17:b 53:b
+4428,1963  24  bad-alone: EMPTY  kill: 2:b 5:b
+4428,2125  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 73:b 6553:b
+4429,4004  22  bad-alone: EMPTY  kill: 5:b 11:b 17:b 37:b
+4439,3976  22  bad-alone: EMPTY  kill: 2:b 5:b 193:b
+4451,1176  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4452,1885  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 17:b 29:b 37:b
+4452,3313  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4455,647  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4457,287  18  bad-alone: 2 left  kill: 2:b 5:b 101:g
+4463,703  20  bad-alone: EMPTY  kill: 2:b 13:b
+4465,2696  24  bad-alone: EMPTY  kill: 2:b 11:b 13:b 17:b
+4467,2920  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b
+4469,2404  22  bad-alone: EMPTY  kill: 2:b 5:b
+4471,3241  20  bad-alone: 4 left  kill: 2:b 3:b 13:b 29:g 41:b 241:b
+4471,644  24  bad-alone: EMPTY  kill: 2:b 5:b 11:b
+4472,3571  20  bad-alone: EMPTY  kill: 2:b 5:b 53:b
+4475,4307  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4480,1651  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 53:b
+4485,677  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+4488,3913  24  bad-alone: EMPTY  kill: 3:b 5:b 13:b 10477:b
+4492,4305  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 11:b 13:b 17:b 41:b
+4493,3235  20  bad-alone: EMPTY  kill: 2:b 13:b
+4500,1049  20  bad-alone: EMPTY  kill: 2:b 3:b 29:b
+4500,2507  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4500,3493  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4508,153  22  bad-alone: EMPTY  kill: 2:b 5:b 59:b
+4508,2503  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+4508,3481  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+4509,2996  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4520,4151  22  bad-alone: EMPTY  kill: 2:b 13:b 41:b
+4527,4153  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 31:b 4153:b 8233:b
+4529,3016  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 29:b
+4537,3647  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 89:b
+4539,1480  24  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 17:b 19:b 89:b
+4539,164  18  bad-alone: 4 left  kill: 2:b 5:b 13:b 53:g 241:b
+4539,3356  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+4544,3191  22  bad-alone: EMPTY  kill: 2:b 5:b
+4544,3919  18  bad-alone: EMPTY  kill: 2:b 5:b
+4545,656  18  bad-alone: 2 left  kill: 2:b 13:b 29:g
+4551,3745  24  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+4556,2325  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 17:b 31:b 73:b 97:b
+4556,3465  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 17:b 67:b 73:b
+4556,71  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+4557,475  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 17:b 31:b 37:b
+4559,4520  20  bad-alone: EMPTY  kill: 2:b 13:b 41:b
+4560,1271  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+4567,2852  18  bad-alone: EMPTY  kill: 2:b 5:b 113:b
+4571,372  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4580,3519  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4584,959  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4588,2587  24  bad-alone: EMPTY  kill: 2:b 5:b
+4591,344  20  bad-alone: EMPTY  kill: 2:b 5:b
+4592,1945  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4592,767  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b 233:b
+4595,1467  20  bad-alone: EMPTY  kill: 2:b 5:b
+4600,1163  20  bad-alone: 4 left  kill: 2:b 5:b 29:g
+4600,3961  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4600,503  18  bad-alone: EMPTY  kill: 2:b 13:b 17:b 503:b 20089:b
+4607,2857  18  bad-alone: EMPTY  kill: 5:b 1875229:b
+4607,3193  22  bad-alone: 2 left  kill: 2:b 5:b 13:b 29:g
+4619,2324  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4619,3592  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4619,4236  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 17:b
+4620,2449  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+4620,667  24  bad-alone: EMPTY  kill: 2:b 13:b
+4627,4485  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+4628,805  20  bad-alone: EMPTY  kill: 2:b 3:b 37:b
+4629,2821  20  bad-alone: EMPTY  kill: 2:b 13:b
+4629,3451  22  bad-alone: EMPTY  kill: 2:b 17:b 29:b
+4632,1573  24  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+4635,3731  22  bad-alone: EMPTY  kill: 2:b 13:b 41:b
+4636,3395  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 61:b
+4641,2480  20  bad-alone: 2 left  kill: 2:b 3:b 5:b 7:b 17:b 29:g 2161:b 7121:b
+4641,361  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+4641,4616  18  bad-alone: EMPTY  kill: 2:b 397:b
+4641,809  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4643,1717  22  bad-alone: EMPTY  kill: 3:b 5:b 7:b 11:b 13:b 17:b
+4645,1173  20  bad-alone: 8 left  kill: 2:b 5:b 13:b 37:g
+4648,1625  20  bad-alone: 2 left  kill: 2:b 5:b 13:b 37:g 8353:b
+4648,3427  24  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4651,2068  18  bad-alone: EMPTY  kill: 13:b 99349:b
+4655,1343  20  bad-alone: EMPTY  kill: 2:b 5:b 73:b
+4655,2232  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b 31:b 97:b
+4657,3393  20  bad-alone: EMPTY  kill: 3:b 5:b 349:b
+4661,1875  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4661,4355  22  bad-alone: EMPTY  kill: 2:b 5:b 59:b
+4664,1927  22  bad-alone: EMPTY  kill: 2:b 5:b 11:b 13:b 17:b
+4667,3715  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4673,1537  18  bad-alone: EMPTY  kill: 2:b 3:b 29:b
+4675,2668  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4675,316  22  bad-alone: EMPTY  kill: 2:b 3:b 17:b 181:b
+4676,509  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4681,2233  20  bad-alone: EMPTY  kill: 2:b 5:b 303553:b
+4681,2420  22  bad-alone: EMPTY  kill: 2:b 13:b 3793:b
+4683,1508  22  bad-alone: EMPTY  kill: 5:b 13:b 41:b 421:b
+4685,341  20  bad-alone: EMPTY  kill: 2:b 5:b 257:b
+4692,1645  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4692,583  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 17:b
+4699,924  20  bad-alone: EMPTY  kill: 5:b 13:b 61:b
+4700,1389  20  bad-alone: EMPTY  kill: 2:b 5:b 7:b 11:b 13:b 47:b 6089:b
+4701,1796  20  bad-alone: EMPTY  kill: 2:b 5:b 89:b
+4703,1148  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+4703,4375  18  bad-alone: 4 left  kill: 2:b 5:b 13:b 53:g 241:b
+4703,497  18  bad-alone: 18 left  kill: 2:b 5:b 13:b 53:g
+4705,1784  20  bad-alone: EMPTY  kill: 13:b 109:b 9337:b
+4709,2291  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b 29:b 97:b
+4711,2448  18  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4711,3364  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4711,4216  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4712,3723  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b 73:b
+4715,2384  22  bad-alone: EMPTY  kill: 5:b 37:b
+4719,3121  20  bad-alone: EMPTY  kill: 3:b 5:b 13:b 17:b 3121:b 10145329:b
+4723,1533  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4725,1853  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4739,1156  18  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b
+4743,2047  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 337:b
+4743,80  20  bad-alone: EMPTY  kill: 13:b 54013:b
+4744,681  20  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+4749,3020  22  bad-alone: EMPTY  kill: 13:b 157:b
+4756,119  20  bad-alone: EMPTY  kill: 2:b 13:b 349:b
+4759,2716  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4760,2497  24  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4764,11  18  bad-alone: EMPTY  kill: 2:b 5:b 11:b
+4765,2632  20  bad-alone: EMPTY  kill: 2:b 17:b 479533:b
+4768,2695  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4772,3337  22  bad-alone: EMPTY  kill: 5:b 13:b 17:b
+4775,4753  18  bad-alone: EMPTY  kill: 2:b 5:b 11:b
+4788,2363  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 13:b 37:b
+4789,2771  18  bad-alone: EMPTY  kill: 2:b 13:b
+4792,2565  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b 73:b 131:b 599:b
+4793,3932  18  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+4793,4200  18  bad-alone: EMPTY  kill: 2:b 5:b 7:b 13:b 17:b 23:b 1297:b
+4795,3852  20  bad-alone: EMPTY  kill: 5:b 13:b 137:b
+4796,2429  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4799,1351  18  bad-alone: EMPTY  kill: 2:b 109:b
+4804,2611  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4807,3383  24  bad-alone: EMPTY  kill: 2:b 11:b 509:b
+4807,3600  22  bad-alone: 4 left  kill: 2:b 5:b 17:b 37:g
+4815,3151  20  bad-alone: EMPTY  kill: 2:b 3:b 5:b 569:b
+4817,2185  20  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+4823,1185  22  bad-alone: EMPTY  kill: 2:b 13:b
+4823,4663  20  bad-alone: EMPTY  kill: 13:b 54013:b
+4825,1428  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 109:b
+4825,3519  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4828,147  20  bad-alone: EMPTY  kill: 2:b 17:b 37:b
+4828,957  24  bad-alone: 16 left  kill: 2:b 5:b 29:b 61:g
+4829,1784  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4831,1721  18  bad-alone: EMPTY  kill: 3:b 7:b 13:b 53:b 1721:b
+4835,901  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4836,4445  22  bad-alone: EMPTY  kill: 3:b 5:b 17:b 229:b 541:b
+4836,799  24  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4837,2388  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4841,1400  20  bad-alone: EMPTY  kill: 2:b 37:b 4657:b
+4841,3825  20  bad-alone: 8 left  kill: 2:b 37:g
+4843,1357  22  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+4844,4209  22  bad-alone: EMPTY  kill: 2:b 13:b
+4848,973  18  bad-alone: EMPTY  kill: 3:b 5:b 13:b
+4860,2023  16  bad-alone: EMPTY  kill: 2:b 37:b
+4871,4584  20  bad-alone: EMPTY  kill: 2:b 5:b
+4875,4637  20  bad-alone: EMPTY  kill: 2:b 13:b 349:b
+4876,899  24  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+4879,2279  22  bad-alone: EMPTY  kill: 2:b 17:b 53:b
+4879,2809  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 53:b
+4879,3016  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4879,3596  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4879,360  20  bad-alone: EMPTY  kill: 2:b 17:b 37:b
+4879,4328  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+4879,4572  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 41:b
+4880,673  18  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4885,2064  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4888,3493  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 7:b 13:b 17:b 31:b
+4893,1075  20  bad-alone: EMPTY  kill: 5:b 13:b 113:b
+4897,2625  18  bad-alone: EMPTY  kill: 2:b 5:b
+4897,4812  22  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+4899,1891  22  bad-alone: 12 left  kill: 2:b 5:b 29:g 61:b
+4899,3536  24  bad-alone: EMPTY  kill: 3:b 5:b 37:b
+4900,2571  20  bad-alone: EMPTY  kill: 2:b 13:b 8097289:b
+4916,819  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 17:b
+4919,96  20  bad-alone: EMPTY  kill: 2:b 5:b
+4920,2561  20  bad-alone: 2 left  kill: 5:b 13:b 17:b 29:g 7481:b
+4924,2335  20  bad-alone: EMPTY  kill: 2:b 17:b 61:b
+4927,2295  22  bad-alone: EMPTY  kill: 2:b 3:b 5:b 97:b
+4931,1036  22  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4935,4247  20  bad-alone: EMPTY  kill: 2:b 5:b
+4939,2516  22  bad-alone: EMPTY  kill: 2:b 13:b 17:b 37:b
+4943,140  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4943,1968  18  bad-alone: EMPTY  kill: 2:b 5:b 37:b
+4943,4199  20  bad-alone: EMPTY  kill: 2:b 13:b 17:b
+4943,4368  18  bad-alone: 4 left  kill: 41:g
+4943,448  18  bad-alone: EMPTY  kill: 2:b 3:b 5:b
+4951,4744  18  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4955,2253  20  bad-alone: EMPTY  kill: 2:b 5:b
+4960,1883  20  bad-alone: EMPTY  kill: 7:b 13:b 17:b 37:b
+4960,2363  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b
+4961,1311  20  bad-alone: 2 left  kill: 3:b 5:b 7:b 13:b 29:g
+4961,2564  22  bad-alone: EMPTY  kill: 2:b 5:b
+4964,2661  20  bad-alone: EMPTY  kill: 2:b 37:b
+4967,1040  20  bad-alone: 2 left  kill: 2:b 5:b 11:b 17:b 29:g 73:b 4967:b
+4968,4193  18  bad-alone: EMPTY  kill: 2:b 5:b 117673:b
+4969,2345  20  bad-alone: EMPTY  kill: 2:b 5:b 41:b
+4975,4681  20  bad-alone: EMPTY  kill: 2:b 17:b 37:b
+4976,2821  22  bad-alone: 40 left  kill: 2:b 5:b 17:g 37:b
+4981,584  20  bad-alone: EMPTY  kill: 2:b 13:b 53:b
+4984,1139  22  bad-alone: EMPTY  kill: 2:b 5:b
+4988,347  24  bad-alone: EMPTY  kill: 2:b 13:b
+4989,485  20  bad-alone: EMPTY  kill: 2:b 5:b 17:b
+4991,1481  20  bad-alone: 18 left  kill: 2:b 29:g 1481:b
+4991,2041  22  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4991,2416  20  bad-alone: EMPTY  kill: 2:b 3:b 13:b
+4991,4359  22  bad-alone: EMPTY  kill: 2:b 3:b 17:b 181:b
+4993,1780  20  bad-alone: EMPTY  kill: 2:b 5:b 13:b 37:b
+4997,2260  24  bad-alone: 2 left  kill: 2:b 3:b 5:b 17:b 37:g 113:b
+4999,2176  18  bad-alone: EMPTY  kill: 2:b 3:b 13:b 17:b
+5000,621  20  bad-alone: EMPTY  kill: 2:b 3:b 29:b

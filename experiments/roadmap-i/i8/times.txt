@@ -1,0 +1,4 @@
+i8 --negative exit=0 13 s (PARI 2.19.1)
+i8 --compare50 (seed 1, first 2,900) exit=0 5 s
+i2_residual --negative, i8 --negative, i8 --compare50 under PARI 2.17.2 (cypari2 2.2.3 in a venv): all three print exactly the committed outputs; 3 s, 12 s, 5 s
+i8_checkpoint 360 3 --write exit=0 under 1 s (00:09 UTC)

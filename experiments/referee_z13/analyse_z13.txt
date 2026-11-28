@@ -1,0 +1,36 @@
+records 378 errors 0
+curves 378 ; distinct curves (A, C) 352
+dims of Sel^2: {2: 51, 3: 105, 4: 123, 5: 59, 6: 31, 7: 6, 8: 3}
+dims of S': {1: 102, 2: 130, 3: 74, 4: 44, 5: 19, 6: 7, 7: 2}
+total S' = {b_r = 1} 378
+total bilinearity checks 11585
+total bilinearity failures 0
+total curves 378
+total pairs agree 197692
+total pairs agree_direct 16778
+total pairs disagree 3188
+total pairs disagree_direct 250
+total pairs undefined 0
+total theta agree 99384
+total theta disagree 0
+within H2, distinct curves: {'3 | B': 168, 'A odd': 168, 'A odd, v2(C -+ A) = 5': 86, "S' = {b_r = 1}": 336, 'curves': 336, 'pairs agree': 193576, 'pairs agree_direct': 16004, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'theta agree': 96216, 'theta disagree': 0}
+smallest disagreement (all outside H2): 725 497 LU A, B, C = 360325 139308 386317 v2(C - A), v2(C + A) = 3 1 Sel2 basis [[1, -1], [1, 741], [5365, 435], [386317, 47]] [{'a': [1, 1], 'b': [5365, 435], 'rs': 1, 'f': -1}]
+curves with a disagreement: 16 of which within H2: 0
+bothodd {'A odd': 15, 'A odd, max v2(C-+A) = 11': 2, 'A odd, max v2(C-+A) = 17': 1, 'A odd, max v2(C-+A) = 5': 6, 'A odd, max v2(C-+A) = 7': 3, 'A odd, max v2(C-+A) = 9': 3, 'H2 holds': 30, "S' = {b_r = 1}": 30, 'a evaluated by rank_second': 322, 'a in total': 322, 'bilinearity checks': 1477, 'bilinearity failures': 0, 'curves': 30, 'pairs agree': 40488, 'pairs agree_direct': 1952, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 18828, 'theta disagree': 0}
+noH2_08 {'A odd': 8, 'A odd, max v2(C-+A) = 3': 8, 'H2 holds': 0, "S' = {b_r = 1}": 8, 'a evaluated by rank_second': 84, 'a in total': 84, 'bilinearity checks': 328, 'bilinearity failures': 0, 'curves': 8, 'pairs agree': 2192, 'pairs agree_direct': 302, 'pairs disagree': 2192, 'pairs disagree_direct': 158, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 2120, 'theta disagree': 0}
+noH2_LU {'A odd': 8, 'A odd, max v2(C-+A) = 3': 8, 'H2 holds': 0, "S' = {b_r = 1}": 8, 'a evaluated by rank_second': 56, 'a in total': 56, 'bilinearity checks': 152, 'bilinearity failures': 0, 'curves': 8, 'pairs agree': 996, 'pairs agree_direct': 180, 'pairs disagree': 996, 'pairs disagree_direct': 92, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 632, 'theta disagree': 0}
+rand20k {'A odd': 40, 'A odd, max v2(C-+A) = 11': 2, 'A odd, max v2(C-+A) = 5': 18, 'A odd, max v2(C-+A) = 7': 13, 'A odd, max v2(C-+A) = 9': 7, 'H2 holds': 80, "S' = {b_r = 1}": 80, 'a evaluated by rank_second': 854, 'a in total': 854, 'bilinearity checks': 3432, 'bilinearity failures': 0, 'curves': 80, 'pairs agree': 73712, 'pairs agree_direct': 4778, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 31316, 'theta disagree': 0}
+rand2k {'A odd': 30, 'A odd, max v2(C-+A) = 5': 13, 'A odd, max v2(C-+A) = 7': 12, 'A odd, max v2(C-+A) = 9': 5, 'H2 holds': 60, "S' = {b_r = 1}": 60, 'a evaluated by rank_second': 476, 'a in total': 476, 'bilinearity checks': 1500, 'bilinearity failures': 0, 'curves': 60, 'pairs agree': 22024, 'pairs agree_direct': 2370, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 9816, 'theta disagree': 0}
+small {'A odd': 44, 'A odd, max v2(C-+A) = 5': 20, 'A odd, max v2(C-+A) = 7': 14, 'A odd, max v2(C-+A) = 9': 10, 'H2 holds': 88, "S' = {b_r = 1}": 88, 'a evaluated by rank_second': 340, 'a in total': 340, 'bilinearity checks': 379, 'bilinearity failures': 0, 'curves': 88, 'pairs agree': 4072, 'pairs agree_direct': 1140, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 1816, 'theta disagree': 0}
+square {'A odd': 14, 'A odd, max v2(C-+A) = 11': 2, 'A odd, max v2(C-+A) = 15': 1, 'A odd, max v2(C-+A) = 5': 5, 'A odd, max v2(C-+A) = 7': 2, 'A odd, max v2(C-+A) = 9': 4, 'H2 holds': 28, "S' = {b_r = 1}": 28, 'a evaluated by rank_second': 380, 'a in total': 380, 'bilinearity checks': 1398, 'bilinearity failures': 0, 'curves': 28, 'pairs agree': 14024, 'pairs agree_direct': 1862, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 12952, 'theta disagree': 0}
+twicesquare {'A odd': 14, 'A odd, max v2(C-+A) = 11': 1, 'A odd, max v2(C-+A) = 15': 2, 'A odd, max v2(C-+A) = 5': 7, 'A odd, max v2(C-+A) = 7': 2, 'A odd, max v2(C-+A) = 9': 2, 'H2 holds': 28, "S' = {b_r = 1}": 28, 'a evaluated by rank_second': 396, 'a in total': 396, 'bilinearity checks': 1532, 'bilinearity failures': 0, 'curves': 28, 'pairs agree': 19192, 'pairs agree_direct': 2028, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 13336, 'theta disagree': 0}
+v5_08 {'A odd': 12, 'A odd, max v2(C-+A) = 5': 12, 'H2 holds': 24, "S' = {b_r = 1}": 24, 'a evaluated by rank_second': 170, 'a in total': 170, 'bilinearity checks': 457, 'bilinearity failures': 0, 'curves': 24, 'pairs agree': 5488, 'pairs agree_direct': 792, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 2316, 'theta disagree': 0}
+v5_LU {'A odd': 12, 'A odd, max v2(C-+A) = 5': 12, 'H2 holds': 24, "S' = {b_r = 1}": 24, 'a evaluated by rank_second': 254, 'a in total': 254, 'bilinearity checks': 930, 'bilinearity failures': 0, 'curves': 24, 'pairs agree': 15504, 'pairs agree_direct': 1374, 'pairs disagree': 0, 'pairs disagree_direct': 0, 'pairs undefined': 0, 'rank_second failures': 0, 'theta agree': 6252, 'theta disagree': 0}
+formula (2) disagrees: 938 505 08 H2 False {'agree': 8, 'disagree': 8, 'undefined': 0, 'agree_direct': 2, 'disagree_direct': 4} [{'a': [1, 1], 'b': [1134869, 236845], 'rs': 1, 'f': -1}, {'a': [1, 1], 'b': [1134869, -236845], 'rs': 1, 'f': -1}]
+formula (2) disagrees: 2722 429 08 H2 False {'agree': 32, 'disagree': 32, 'undefined': 0, 'agree_direct': 12, 'disagree_direct': 4} [{'a': [1, 1], 'b': [303733, 53079], 'rs': 1, 'f': -1}, {'a': [1, 1], 'b': [303733, -53079], 'rs': 1, 'f': -1}]
+formula (2) disagrees: 5318 4811 08 H2 False {'agree': 32, 'disagree': 32, 'undefined': 0, 'agree_direct': 12, 'disagree_direct': 4} [{'a': [1, 1], 'b': [59453, 1], 'rs': 1, 'f': -1}, {'a': [1, 1], 'b': [59453, -1], 'rs': 1, 'f': -1}]
+(e1) branches (i), (ii) where both apply: {'agree': 388216}
+(e2) sign of sqrt(d): {'(-1, b_r)_p = 1': 862880}
+(e3) square type, E_08: {"(1, 2mn, 2mn) in S' True, in the radical of Theta True, 2mn = +-square False": 14}
+(e4) representative q^2 d instead of d: [(535, 23, '08', 'd', 1, 'b', (41, 1), 'p', 41, 'q', 7, 'squarefree d', 1, 'q^2 d', -1)]
+(e5) E_08, not of square type: {"m, n of odd parity: (1, 2mn, 2mn) in S' False, in the radical False": 60, "m, n of opposite parity: (1, 2mn, 2mn) in S' False, in the radical False": 61, "m, n of opposite parity: (1, 2mn, 2mn) in S' True, in the radical False": 16, "m, n of opposite parity: (1, 2mn, 2mn) in S' True, in the radical True": 16}

@@ -1,0 +1,41 @@
+z15_shapes.py: written by an AI model (reviewer z15), not read by a person.
+session ratios 937 ; tuples 6904 ; errors 0
+residual sets equal to the repository-code recomputation (z15_residual_all.jsonl): 937 of 937
+
+shape counts (shape, killed on some curve):
+    ('S1', False) 6
+    ('S1', True) 1372
+    ('S2', False) 4
+    ('S2', True) 660
+    ('a=1', True) 360
+    ('a=b=1', True) 64
+    ('b=1', True) 836
+    ('other', True) 3602
+ghost-shape tuples (S1 or S2): 2042 at 499 ratios; killed: 2032 {'on E_08 or E_LU': 1556, 'only on mixed curves': 476}
+tuples killed on no curve: 10 at 5 ratios:
+    (3320, 2303, [2, 1, 1, 635399], 'S1')
+    (3320, 2303, [2, 1, 1270798, 2], 'S1')
+    (5623, 1017, [2, 1270798, 1, 2], 'S2')
+    (5623, 1017, [635399, 1, 1, 2], 'S2')
+    (14903, 9696, [1, 2, 10414, 49198], 'S1')
+    (14903, 9696, [1, 2, 24599, 5207], 'S1')
+    (9113, 3200, [1, 2, 511, 1759], 'S1')
+    (9113, 3200, [1, 2, 3518, 1022], 'S1')
+    (12313, 5913, [1022, 3518, 2, 1], 'S2')
+    (12313, 5913, [1759, 511, 2, 1], 'S2')
+ratios where the S1 tuples (resp. S2) do not all have the same E_08 (resp. E_LU) verdict (they have one class there): []
+a = 1 killed on E_08, or b = 1 killed on E_LU (impossible for a torsion class): [] 0
+classes outside Sel2: 0
+killed per curve: {'08': 4580, 'LU': 3122, '0L': 6587, '0U': 6587, '8L': 6587, '8U': 6587}
+tuples surviving E_08 and E_LU, by (shape, killed on a mixed curve): {('S1', True): 308, ('not ghost', True): 554, ('S2', True): 168, ('S1', False): 6, ('S2', False): 4}
+
+coset of an F2-subspace (exact rank test, all sizes): {False: 255, True: 682} ; by list (m<=5000?, coset?): {(True, False): 31, (True, True): 70, (False, True): 612, (False, False): 224}
+sizes: [(2, 415), (4, 215), (6, 54), (8, 90), (10, 33), (12, 32), (14, 1), (16, 20), (18, 8), (20, 19), (22, 3), (24, 16), (28, 1), (30, 2), (32, 8), (34, 2), (36, 2), (40, 3), (46, 1), (48, 1), (50, 1), (60, 2), (88, 1), (90, 1), (100, 1), (120, 1), (180, 1), (216, 2), (270, 1)]
+odd sizes: []
+translation stabilisers:
+    ('stabiliser dim>0', False, 'contains (1,1,c,c) c=sqf(2(m2-n2))', False, 'contains (c,c,1,1) c=sqf(2mn)', False) 61
+    ('stabiliser dim>0', True, 'contains (1,1,c,c) c=sqf(2(m2-n2))', False, 'contains (c,c,1,1) c=sqf(2mn)', False) 452
+    ('stabiliser dim>0', True, 'contains (1,1,c,c) c=sqf(2(m2-n2))', False, 'contains (c,c,1,1) c=sqf(2mn)', True) 141
+    ('stabiliser dim>0', True, 'contains (1,1,c,c) c=sqf(2(m2-n2))', True, 'contains (c,c,1,1) c=sqf(2mn)', False) 283
+ratios with tuples after bad primes: m<=5000 101, 5000<m<=15000 836; with a tuple after the six pairings: 1, 4
+rates: 101/997 = 10.13%, 836/8739 = 9.57%, 1/997 = 0.100%, 4/8739 = 0.046%

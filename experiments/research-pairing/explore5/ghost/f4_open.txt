@@ -1,0 +1,9 @@
+(195, 28) four-form residual 2 | five-form residual 2 | 4-tuples that extend 2
+(223, 167) four-form residual 2 | five-form residual 2 | 4-tuples that extend 2
+(440, 279) four-form residual 2 | five-form residual 2 | 4-tuples that extend 2
+(719, 161) four-form residual 2 | five-form residual 2 | 4-tuples that extend 2
+(609, 200) four-form residual 4 | five-form residual 2 | 4-tuples that extend 2
+(809, 409) four-form residual 4 | five-form residual 2 | 4-tuples that extend 2
+(627, 364) four-form residual 4 | five-form residual 2 | 4-tuples that extend 2
+(991, 263) four-form residual 4 | five-form residual 2 | 4-tuples that extend 2
+(861, 620) four-form residual 2 | five-form residual 2 | 4-tuples that extend 2

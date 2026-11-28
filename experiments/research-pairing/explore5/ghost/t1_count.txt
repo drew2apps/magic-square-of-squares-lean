@@ -1,0 +1,36 @@
+/tmp/ghost/samp_biased.jsonl ratios tried: >= 5892 (still running)
+    ratios with residual tuples 269
+    tuples 1096
+    ghost-shape tuples 622
+    survivors 6
+    survivors not of ghost shape 0
+    outside Sel2 0
+    errors 0
+    skipped (over 400 tuples) 0
+    ratios with a survivor: 3
+       (90384, 58537, [2, 1, 31847, 148921], True, {5: 2, 89: 1, 109: 1, 137: 1, 349: 1})
+       (90384, 58537, [2, 1, 297842, 63694], True, {5: 2, 89: 1, 109: 1, 137: 1, 349: 1})
+       (126127, 16889, [2, 4260317806, 1, 2], True, {2: 1, 5: 2, 173: 1, 313: 1, 5981: 1})
+       (126127, 16889, [2130158903, 1, 1, 2], True, {2: 1, 5: 2, 173: 1, 313: 1, 5981: 1})
+       (115513, 18217, [36434, 231026, 2, 1], True, {2: 1, 53: 1, 129010493: 1})
+       (115513, 18217, [115513, 18217, 2, 1], True, {2: 1, 53: 1, 129010493: 1})
+/tmp/ghost/samp_fewp.jsonl ratios tried: 2244
+    ratios with residual tuples 38
+    tuples 218
+    ghost-shape tuples 56
+    survivors 0
+    survivors not of ghost shape 0
+    outside Sel2 0
+    errors 0
+    skipped (over 400 tuples) 0
+    ratios with a survivor: 0
+/tmp/ghost/samp_random.jsonl ratios tried: 1836
+    ratios with residual tuples 14
+    tuples 52
+    ghost-shape tuples 30
+    survivors 0
+    survivors not of ghost shape 0
+    outside Sel2 0
+    errors 0
+    skipped (over 400 tuples) 0
+    ratios with a survivor: 0

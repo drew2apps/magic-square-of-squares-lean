@@ -1,0 +1,46 @@
+genus3_split.py: X: y^2 = F0 F8 L U and its three elliptic quotients (sympy 1.14.0; exact over Q(m, n))
+
+(1) L = (m+n)^2(t-1)^2 + (m-n)^2(t+1)^2 and U = (m-n)^2(t-1)^2 + (m+n)^2(t+1)^2 (the note's L, U): True
+    f(-t) = f(t): True;  t^8 f(1/t) = f(t): True;  deg_t f = 8, leading coefficient 4*m**2*n**2*(m**2 + n**2)**2
+    F0 F8 = x(Az + B): True;  L U = 4x(Cz + D): True   (x = t^2, z = x + 1/x)
+(2) sigma, tau, iota map X to X, have order 2 and commute: True
+    the eight elements sigma^a tau^b iota^c are pairwise distinct as maps: True
+(3) Y = y/(2t^2) and z are fixed by sigma and tau, and Y^2 = (Az + B)(Cz + D) on X: True
+(4) phi_1 = (z, w_1), w_1 = (y/2t^2)(t^2 - t^-2): on E1: True; fixed by K1 = <sigma, iota tau> and (z, w) -> (z, -w) for the other four: True
+(4) phi_2 = (z, w_2), w_2 = (y/2t^2)(t + 1/t): on E2: True; fixed by K2 = <tau, iota sigma> and (z, w) -> (z, -w) for the other four: True
+(4) phi_3 = (z, w_3), w_3 = (y/2t^2)(t - 1/t): on E3: True; fixed by K3 = <sigma tau, iota sigma> and (z, w) -> (z, -w) for the other four: True
+(5) deg phi_i = 4 for each i: z = t^2 + t^-2 is (t^4 + 1)/t^2, of degree 4 in t, so of degree 8 on X (deg t = 2);
+    on E_i, z has degree 2; so deg phi_i = 8/2 = 4 = |K_i| and phi_i is the quotient map X -> X/K_i (NOTES.md)
+(6) sum_i sum_{g in K_i} g = 3*sigma^0 tau^0 iota^0 + 1*sigma^0 tau^1 iota^0 + 2*sigma^0 tau^1 iota^1 + 1*sigma^1 tau^0 iota^0 + 2*sigma^1 tau^0 iota^1 + 1*sigma^1 tau^1 iota^0 + 2*sigma^1 tau^1 iota^1; with iota = -1 it is 3 - sigma - tau - sigma tau = 4 - sum_{G'} g: True
+(7) discriminants and resultants (factorised):
+    disc_t F0 = -4*m**2*n**2
+    disc_t F8 = -4*m**2*n**2
+    disc_t L = -16*(m - n)**2*(m + n)**2
+    disc_t U = -16*(m - n)**2*(m + n)**2
+    Res_t(F0, F8) = (m - n)**2*(m + n)**2*(m**2 + n**2)**2
+    Res_t(F0, L) = 4*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)
+    Res_t(F0, U) = 4*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)
+    Res_t(F8, L) = 4*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)
+    Res_t(F8, U) = 4*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)
+    Res_t(L, U) = 1024*m**2*n**2*(m**2 + n**2)**2
+    E1: degree 4 in z, leading coefficient m**2*n**2*(m**2 + n**2)**2, discriminant 65536*m**4*n**4*(m - n)**8*(m + n)**8*(m**2 + n**2)**4*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)**2*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)**2
+    E2: degree 3 in z, leading coefficient m**2*n**2*(m**2 + n**2)**2, discriminant 256*m**4*n**4*(m - n)**4*(m + n)**4*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)**2*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)**2
+    E3: degree 3 in z, leading coefficient m**2*n**2*(m**2 + n**2)**2, discriminant 16*(m - n)**4*(m + n)**4*(m**2 + n**2)**4*(m**4 - 2*m**3*n + 2*m**2*n**2 + 2*m*n**3 + n**4)**2*(m**4 + 2*m**3*n + 2*m**2*n**2 - 2*m*n**3 + n**4)**2
+    checked: every content is +-2^k and every irreducible factor is one of m, n, m - n, m + n, m^2 + n^2 and
+    the two quartic factors q1 q2 = m^8 + 14m^4n^4 + n^8 (product checked); q1 q2 > 0 for real (m, n) != 0
+    (the leading coefficients of F0, F8, L, U are n^2, m^2, 2S, 2S); over Q the condition is m n (m^2 - n^2) != 0
+
+Control, not a proof: point counts over F_p and F_{p^2} (pure Python; the curves above with m, n substituted).
+  (195,28): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 99 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 11 primes < 60
+  (223,167): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 99 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 11 primes < 60
+  (440,279): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 98 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 9 primes < 60
+  (609,200): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 102 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 11 primes < 60
+  (627,364): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 98 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 8 primes < 60
+  (719,161): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 98 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 9 primes < 60
+  (809,409): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 102 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 11 primes < 60
+  (861,620): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 98 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 9 primes < 60
+  (991,263): a_p(X) = a_p(E1) + a_p(E2) + a_p(E3) at all 98 good primes 5 <= p < 600; #X(F_{p^2}) agrees at 8 primes < 60
+  total: 892 prime tests over F_p, 87 over F_{p^2}; no mismatch
+
+Result: the maps phi_1, phi_2, phi_3 exist over Q for all m, n, and (6) with the argument of NOTES.md gives
+J(X) ~ E1 x E2 x E3 over Q whenever m n (m^2 - n^2) != 0 (m, n rational).

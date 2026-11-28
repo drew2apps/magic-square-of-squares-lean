@@ -1,0 +1,3 @@
+# z14 conic_test. Written by an AI model (reviewer z14); not read by a person.
+explore3 conic_pairing vs DFull on 134 curves: {'agree': 558, 'pairing -1': 73, 'pairing 1': 485}
+first disagreements/failures: []

@@ -1,0 +1,135 @@
+# z14 test ratios (seed 14): m,n kind parity origin; 134 ratios, 134 distinct mixed curves; pilot ratios 201 excluded with partners
+4771,595 nd odd-odd random
+10791,7369 nd odd-odd random
+4967,3823 nd odd-odd random
+11213,6500 nd opposite random
+4320,1829 nd opposite random
+10352,8459 nd opposite random
+2705,44 nd opposite random
+5525,228 nd opposite random
+3352,1565 nd opposite random
+6616,4779 nd opposite random
+9485,5968 nd opposite random
+2971,388 nd opposite random
+10228,3575 nd opposite random
+1469,571 nd odd-odd random
+4601,969 nd odd-odd random
+461,83 nd odd-odd random
+12132,6749 nd opposite random
+8617,1524 nd opposite random
+11232,2759 nd opposite random
+8765,6336 nd opposite random
+6459,1936 nd opposite random
+10085,8013 nd odd-odd random
+5696,4665 nd opposite random
+8,5 nd opposite random
+4124,933 nd opposite random
+4337,1495 nd odd-odd random
+9897,5440 nd opposite random
+6007,4017 nd odd-odd random
+9073,5152 nd opposite random
+7997,7499 nd odd-odd random
+896,709 nd opposite random
+835,804 nd opposite random
+8871,6964 nd opposite random
+6863,1056 nd opposite random
+11524,759 nd opposite random
+7677,2180 nd opposite random
+7701,2644 nd opposite random
+1259,749 nd odd-odd random
+1017,697 nd odd-odd random
+10515,8888 nd opposite random
+6988,6879 nd opposite random
+329,152 nd opposite random
+4069,1155 nd odd-odd random
+11879,127 nd odd-odd random
+14015,2023 nd odd-odd random
+5667,2732 nd opposite random
+2245,1156 nd opposite random
+421,331 nd odd-odd random
+11153,6863 nd odd-odd random
+3641,3391 nd odd-odd random
+14203,10845 nd odd-odd random
+9149,824 nd opposite random
+7532,1843 nd opposite random
+1121,153 nd odd-odd random
+3321,1576 nd opposite random
+5963,3875 nd odd-odd random
+7792,7407 nd opposite random
+5028,3983 nd opposite random
+5983,5204 nd opposite random
+4849,3023 nd odd-odd random
+2161,935 nd odd-odd random
+14819,14155 nd odd-odd random
+13311,5740 nd opposite random
+14145,9104 nd opposite random
+7084,905 nd opposite random
+252,11 nd opposite random
+5005,2232 nd opposite random
+9741,7237 nd odd-odd random
+1839,791 nd odd-odd random
+12700,1849 nd opposite random
+8905,3368 nd opposite random
+8889,8824 nd opposite random
+8735,1321 nd odd-odd random
+14144,10263 nd opposite random
+7717,2597 nd odd-odd random
+12773,1619 nd odd-odd random
+652,549 nd opposite random
+1019,548 nd opposite random
+4000,2213 nd opposite random
+1707,724 nd opposite random
+12329,1092 nd opposite random
+2512,2287 nd opposite random
+8876,6911 nd opposite random
+4933,2000 nd opposite random
+13204,4861 nd opposite random
+3355,588 nd opposite random
+3503,1609 nd odd-odd random
+568,283 nd opposite random
+2213,941 nd odd-odd random
+853,829 nd odd-odd random
+13881,13423 nd odd-odd random
+12228,811 nd opposite random
+2477,1864 nd opposite random
+8717,5324 nd opposite random
+6952,2613 nd opposite random
+5293,4404 nd opposite random
+5624,521 nd opposite random
+4043,661 nd odd-odd random
+11643,6341 nd odd-odd random
+12473,6300 nd opposite random
+9352,3879 nd opposite random
+1271,588 nd opposite random
+3397,3141 nd odd-odd random
+10780,8521 nd opposite random
+5416,2949 nd opposite random
+12260,4347 nd opposite random
+6353,2300 nd opposite random
+297,65 nd odd-odd random
+1999,1012 nd opposite random
+13633,10636 nd opposite random
+905,239 nd odd-odd random
+373,28 nd opposite random
+2904,1577 nd opposite random
+647,216 nd opposite random
+4865,1048 nd opposite random
+1052,1041 nd opposite random
+1751,1488 nd opposite random
+12639,200 nd opposite random
+9195,6691 nd odd-odd random
+2437,211 nd odd-odd random
+351,280 sq opposite square type
+6768,2975 sq opposite square type
+1643,924 sq opposite square type
+3776,2457 sq opposite square type
+1680,649 sq opposite square type
+5904,3503 sq opposite square type
+2835,2668 sq opposite square type
+6783,5456 sq opposite square type
+289,23 tsq odd-odd twice-square type
+4153,2737 tsq odd-odd twice-square type
+697,329 tsq odd-odd twice-square type
+8999,1081 tsq odd-odd twice-square type
+9751,4591 tsq odd-odd twice-square type
+4097,1129 tsq odd-odd twice-square type

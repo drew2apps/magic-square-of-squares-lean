@@ -1,0 +1,16 @@
+# z14 claims check. Written by an AI model (reviewer z14); not read by a person.
+pilot files read by parse.load(): ['t10_15000_s100_a.txt', 't10_15000_s100_b.txt', 't10_997_a.txt', 't10_997_b.txt']
+ratios: 201 curve blocks of E_08 for 201 distinct ratios (max repetitions 1); distinct mixed curves 160
+pair-curve blocks: 1206 ({'08': 201, '0L': 201, '0U': 201, '8L': 201, '8U': 201, 'LU': 201})
+ratios whose four mixed blocks print the same model e: {True: 201}
+mixed kill lines: 6776; distinct (ratio, curve, tuple) 6776; distinct (ratio, curve, a, b) 4732; distinct (ratio, a, b) 1183; distinct (curve up to iso, a, b) 1009; distinct (curve up to iso, a) 1009
+  per curve name: {'0L': 1694, '0U': 1694, '8L': 1694, '8U': 1694}
+  first component of b: lines {'other': 3528, 'b1 = 2': 488, 'b1 = 1': 2760}; distinct (curve up to iso, a, b) {'other': 530, 'b1 = 2': 79, 'b1 = 1': 400}
+  first component of the killed class a over the lines: {2: 6776} (so no kill line has a = (1, d, d))
+08 kill lines: 1280; distinct (ratio, curve, tuple) 1280; distinct (ratio, curve, a, b) 133; distinct (ratio, a, b) 133; distinct (curve up to iso, a, b) 133; distinct (curve up to iso, a) 133
+LU kill lines: 874; distinct (ratio, curve, tuple) 874; distinct (ratio, curve, a, b) 111; distinct (ratio, a, b) 111; distinct (curve up to iso, a, b) 111; distinct (curve up to iso, a) 111
+kappa formula (class = (2, kappa D), kappa = sqf(mn(m^2-n^2)) x (1: 0L, 8U; 2: 0U, 8L)), all tuple lines of the mixed blocks: {('0L', True): 1694, ('0U', True): 1694, ('8L', True): 1694, ('8U', True): 1694}
+  distinct (ratio, curve, tuple): {('0L', True): 1694, ('0U', True): 1694, ('8L', True): 1694, ('8U', True): 1694}
+  the constant kappa is one number per (ratio, curve): blocks with tuple lines {('0L', 'both odd'): 62, ('0L', 'm even'): 59, ('0L', 'n even'): 75, ('0U', 'both odd'): 62, ('0U', 'm even'): 59, ('0U', 'n even'): 75, ('8L', 'both odd'): 62, ('8L', 'm even'): 59, ('8L', 'n even'): 75, ('8U', 'both odd'): 62, ('8U', 'm even'): 59, ('8U', 'n even'): 75} ; distinct ratios 196
+task23 seed 11: 60 ratios, 57 distinct mixed curves (3 curves sampled twice), Task-2 pairs 2995
+task23 seed 12: 201 ratios, 160 distinct mixed curves (41 curves sampled twice), Task-2 pairs 2784

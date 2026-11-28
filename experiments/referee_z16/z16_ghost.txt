@@ -1,0 +1,25 @@
+937 (m <= 15000)   {'ratios': 937, 'in the 484 classes': 844, 'prime = 5 mod 8 to odd power in C': 318, 'either': 866, 'five-form run': 937, 'keep a 5-tuple': 211, 'keep a 5-tuple and pass both filters': 29, 'tuples': 6904, 'pairing survivors': 10, 'ratios with a survivor': 5}
+sample biased      {'ratios': 269, 'in the 484 classes': 268, 'prime = 5 mod 8 to odd power in C': 112, 'either': 268, 'five-form run': 269, 'keep a 5-tuple': 46, 'keep a 5-tuple and pass both filters': 0, 'tuples': 1096, 'pairing survivors': 6, 'ratios with a survivor': 3}
+sample random      {'ratios': 14, 'in the 484 classes': 14, 'prime = 5 mod 8 to odd power in C': 6, 'either': 14, 'five-form run': 14, 'keep a 5-tuple': 4, 'keep a 5-tuple and pass both filters': 0, 'tuples': 52, 'pairing survivors': 0, 'ratios with a survivor': 0}
+sample fewp        {'ratios': 38, 'in the 484 classes': 38, 'prime = 5 mod 8 to odd power in C': 14, 'either': 38, 'five-form run': 38, 'keep a 5-tuple': 4, 'keep a 5-tuple and pass both filters': 0, 'tuples': 218, 'pairing survivors': 0, 'ratios with a survivor': 0}
+survivors (ratio, tuple, shape, in the 484 classes, prime = 5 mod 8 to odd power in C, extends to a 5-tuple):
+   (3320, 2303) (2, 1, 1, 635399) S1 484:True 5mod8:True ext:False  C = {2621: 1, 6229: 1}
+   (3320, 2303) (2, 1, 1270798, 2) S1 484:True 5mod8:True ext:False  C = {2621: 1, 6229: 1}
+   (5623, 1017) (2, 1270798, 1, 2) S2 484:True 5mod8:True ext:False  C = {2: 1, 2621: 1, 6229: 1}
+   (5623, 1017) (635399, 1, 1, 2) S2 484:True 5mod8:True ext:False  C = {2: 1, 2621: 1, 6229: 1}
+   (14903, 9696) (1, 2, 10414, 49198) S1 484:True 5mod8:False ext:True  C = {5: 2, 12644473: 1}
+   (14903, 9696) (1, 2, 24599, 5207) S1 484:True 5mod8:False ext:True  C = {5: 2, 12644473: 1}
+   (9113, 3200) (1, 2, 511, 1759) S1 484:True 5mod8:False ext:False  C = {17: 1, 5487457: 1}
+   (9113, 3200) (1, 2, 3518, 1022) S1 484:True 5mod8:False ext:False  C = {17: 1, 5487457: 1}
+   (12313, 5913) (1022, 3518, 2, 1) S2 484:True 5mod8:False ext:False  C = {2: 1, 17: 1, 5487457: 1}
+   (12313, 5913) (1759, 511, 2, 1) S2 484:True 5mod8:False ext:False  C = {2: 1, 17: 1, 5487457: 1}
+   (90384, 58537) (2, 1, 31847, 148921) S1 484:True 5mod8:True ext:False  C = {5: 2, 89: 1, 109: 1, 137: 1, 349: 1}
+   (90384, 58537) (2, 1, 297842, 63694) S1 484:True 5mod8:True ext:False  C = {5: 2, 89: 1, 109: 1, 137: 1, 349: 1}
+   (126127, 16889) (2, 4260317806, 1, 2) S2 484:True 5mod8:True ext:False  C = {2: 1, 5: 2, 173: 1, 313: 1, 5981: 1}
+   (126127, 16889) (2130158903, 1, 1, 2) S2 484:True 5mod8:True ext:False  C = {2: 1, 5: 2, 173: 1, 313: 1, 5981: 1}
+   (115513, 18217) (36434, 231026, 2, 1) S2 484:True 5mod8:True ext:False  C = {2: 1, 53: 1, 129010493: 1}
+   (115513, 18217) (115513, 18217, 2, 1) S2 484:True 5mod8:True ext:False  C = {2: 1, 53: 1, 129010493: 1}
+partner (24599,5207) (not in the data files): 484 classes [89, 103, 151], primes = 5 mod 8 of odd exponent [], C = {2: 1, 5: 2, 12644473: 1}
+survivor ratios: 8 (+ the partner); shapes {'S1': 8, 'S2': 8}
+937 passing the 484 classes and the 5 mod 8 condition: 71 ratios, 688 four-form tuples, 0 pairing survivors; with F4: 29 ratios keep a 5-tuple, 186 4-tuples extend, 260 5-tuples
+   by the 484 classes alone: 844 of 937 excluded; by the 5 mod 8 condition alone: 318; by the 484 classes, among the 211 that keep a 5-tuple: 182

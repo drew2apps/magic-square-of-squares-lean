@@ -1,0 +1,22 @@
+# z14 kappa check. Written by an AI model (reviewer z14); not read by a person.
+4771,595 nd odd-odd 0L:ok 0U:ok 8L:ok 8U:ok
+10791,7369 nd odd-odd 0L:ok 0U:ok 8L:ok 8U:ok
+4967,3823 nd odd-odd 0L:ok 0U:ok 8L:ok 8U:ok
+11213,6500 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+4320,1829 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+10352,8459 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+2705,44 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+5525,228 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+3352,1565 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+6616,4779 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+9485,5968 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+2971,388 nd opposite 0L:ok 0U:ok 8L:ok 8U:ok
+351,280 sq opposite 0L:ok 0U:ok 8L:ok 8U:ok
+6768,2975 sq opposite 0L:ok 0U:ok 8L:ok 8U:ok
+1643,924 sq opposite 0L:ok 0U:ok 8L:ok 8U:ok
+3776,2457 sq opposite 0L:ok 0U:ok 8L:ok 8U:ok
+1680,649 sq opposite 0L:ok 0U:ok 8L:ok 8U:ok
+5904,3503 sq opposite 0L:ok 0U:ok 8L:ok 8U:ok
+2835,2668 sq opposite 0L:ok 0U:ok 8L:ok 8U:ok
+6783,5456 sq opposite 0L:ok 0U:ok 8L:ok 8U:ok
+total {'ok': 80}

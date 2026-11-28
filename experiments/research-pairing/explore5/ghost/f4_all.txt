@@ -1,0 +1,20 @@
+PARI stack size set to 1000000000 bytes, maximum size set to 1000001536
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+('list', '4-tuples') 6904
+('list', '4-tuples that extend to a 5-tuple') 1370
+('list', 'pairing survivors') 10
+('list', 'pairing survivors that extend') 2
+('list', 'ratios') 937
+('list', 'ratios with a pairing survivor') 5
+('list', 'ratios with a pairing survivor that extends') 1
+('list', 'ratios with a residual 5-tuple') 211
+('list', 'tuples alive after pairing AND F4') 2
+('sample', '4-tuples') 1096
+('sample', '4-tuples that extend to a 5-tuple') 118
+('sample', 'pairing survivors') 6
+('sample', 'pairing survivors that extend') 0
+('sample', 'ratios') 269
+('sample', 'ratios with a pairing survivor') 3
+('sample', 'ratios with a pairing survivor that extends') 0
+('sample', 'ratios with a residual 5-tuple') 46
+('sample', 'tuples alive after pairing AND F4') 0

@@ -1,0 +1,12 @@
+curves done: {'08': 146, 'LU': 133} errors: 0 []
+distinct (ratio,curve,a,b) triples, b over the Sel2 basis:
+   ('08', 'sel', 'agree') 16692
+   ('08', 'tuple', 'agree') 1736
+   ('LU', 'sel', 'agree') 8950
+   ('LU', 'tuple', 'agree') 1540
+values of rank_second on those triples: {('08', 'sel', -1): 5800, ('08', 'sel', 1): 10892, ('08', 'tuple', -1): 482, ('08', 'tuple', 1): 1254, ('LU', 'sel', -1): 2446, ('LU', 'sel', 1): 6504, ('LU', 'tuple', -1): 300, ('LU', 'tuple', 1): 1240}
+None counts: {}
+ct08 seed 1 vs seed 7 differences: 0 []
+ct08 over all of Sel2 vs linear extension of rank_second: {('08', 'ct over all Sel2 = linear extension of rs'): 69304, ('LU', 'ct over all Sel2 = linear extension of rs'): 47712}
+tuple classes / a not in Sel2: 0 []
+disagreements: 0

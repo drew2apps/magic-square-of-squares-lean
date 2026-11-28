@@ -1,0 +1,26 @@
+z17: t10 from scratch on 18 of I8's 360 ratios (the 3 "neither" ratios, then 15 drawn with seed 17) against i8_first360.jsonl. Written by an AI model (reviewer z17); not read by a person.
+(18313,120): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 2; dim Sel2 08:6 0L:6 0U:6 8L:6 8U:6 LU:5
+    not killed: [1, 2, 1, 335351569] kill 61; 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image
+    not killed: [1, 2, 670703138, 2] kill 61; 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:image
+(18433,18193): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 2; dim Sel2 08:5 0L:6 0U:6 8L:6 8U:6 LU:6
+    not killed: [2, 670703138, 2, 1] kill 61; 08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+    not killed: [335351569, 1, 2, 1] kill 61; 08:image 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+(20056,19825): 6 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 2; dim Sel2 08:7 0L:7 0U:7 8L:7 8U:7 LU:3
+    not killed: [2, 1, 1, 1] kill 17; 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+    not killed: [2, 1, 2, 2] kill 17; 08:kernel 0L:kernel 0U:kernel 8L:kernel 8U:kernel LU:kernel
+(15280,3471): 8 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:5 0L:11 0U:11 8L:11 8U:11 LU:5
+(16111,7375): 4 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:4 0L:7 0U:7 8L:7 8U:7 LU:5
+(16699,7420): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:5 0L:7 0U:7 8L:7 8U:7 LU:6
+(17344,6967): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:4 0L:8 0U:8 8L:8 8U:8 LU:4
+(17365,3052): 4 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:6 0L:11 0U:11 8L:11 8U:11 LU:3
+(17521,1879): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:4 0L:7 0U:7 8L:7 8U:7 LU:6
+(17560,14501): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:6 0L:7 0U:7 8L:7 8U:7 LU:4
+(17617,1057): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:4 0L:8 0U:8 8L:8 8U:8 LU:6
+(18247,13879): 8 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:5 0L:9 0U:9 8L:9 8U:9 LU:6
+(18343,2068): 4 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:7 0L:7 0U:7 8L:7 8U:7 LU:4
+(18751,1841): 50 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:6 0L:10 0U:10 8L:10 8U:10 LU:8
+(18763,18420): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:8 0L:6 0U:6 8L:6 8U:6 LU:4
+(19687,10343): 4 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:4 0L:8 0U:8 8L:8 8U:8 LU:7
+(19825,8344): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:5 0L:8 0U:8 8L:8 8U:8 LU:4
+(20809,3311): 2 tuples (known 0); tuples and killing primes same; killing curves same; labels same; not killed: 0; dim Sel2 08:4 0L:7 0U:7 8L:7 8U:7 LU:7
+ratios: 18; tuples 108; same tuples and killing primes 18; same killing curves (the verdicts) 18; same labels 18

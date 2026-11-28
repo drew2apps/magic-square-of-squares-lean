@@ -1,0 +1,5 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+new primes left out: (853587,255916): PHANTOM (comes back as in H1, as it must)
+new primes left out: (11875080,6497849): PHANTOM (comes back as in H1, as it must)
+forged tuple (1109503, 597671, 6, 1) at (1109503,597671): refused, as it must be
+# matches

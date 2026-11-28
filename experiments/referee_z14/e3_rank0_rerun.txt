@@ -1,0 +1,37 @@
+nd ratios 150 failures 0 time 26 s
+   37 ('bound on E_A', 0)
+   61 ('bound on E_A', 1)
+   46 ('bound on E_A', 2)
+   6 ('bound on E_A', 3)
+   34 ('bound on twist', 0)
+   71 ('bound on twist', 1)
+   43 ('bound on twist', 2)
+   2 ('bound on twist', 3)
+   62 ('min of the two bounds', 0)
+   70 ('min of the two bounds', 1)
+   18 ('min of the two bounds', 2)
+   36 ('parity of the two bounds', (0, 0))
+   47 ('parity of the two bounds', (0, 1))
+   41 ('parity of the two bounds', (1, 0))
+   26 ('parity of the two bounds', (1, 1))
+
+real	0m26.298s
+user	0m4.353s
+sys	0m0.020s
+sq ratios 80 failures 0 time 12 s
+   24 ('bound on E_A', 0)
+   34 ('bound on E_A', 1)
+   17 ('bound on E_A', 2)
+   4 ('bound on E_A', 3)
+   1 ('bound on E_A', 4)
+   26 ('bound on twist', 0)
+   42 ('bound on twist', 1)
+   11 ('bound on twist', 2)
+   1 ('bound on twist', 3)
+   40 ('min of the two bounds', 0)
+   36 ('min of the two bounds', 1)
+   4 ('min of the two bounds', 2)
+   19 ('parity of the two bounds', (0, 0))
+   23 ('parity of the two bounds', (0, 1))
+   18 ('parity of the two bounds', (1, 0))
+   20 ('parity of the two bounds', (1, 1))

@@ -1,0 +1,86 @@
+certify.py (conductor-t13).  Written by an AI model (build agent t13); not read by a person.
+  E coset A (search_E_H50000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B (search_E_H50000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B (search_E_H50000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A (search_E3_H50000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B (search_E3_H50000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A+B (search_E3_H50000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A (search_E3_H100000_from50000_cosetA.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A+B (search_E3_H100000_from50000_cosetA.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B (search_E3_H100000_from50000_cosetB.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m01 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m02 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m03 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m04 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m05 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m06 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m07 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m08 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A m09 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m01 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m02 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m03 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m04 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m05 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m06 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m07 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m08 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m09 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m10 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m11 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset B m12 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m01 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m02 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m03 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m04 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m05 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m06 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m07 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m08 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E coset A+B m09 (search_E_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A m01 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A m02 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A m03 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B m01 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B m02 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B m03 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B m04 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B m05 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B m06 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset B m07 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A+B m01 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A+B m02 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A+B m03 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A+B m04 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A+B m05 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E3 coset A+B m06 (search_E3_alt_H10000_coset.json): 0 hits: 0 above O, 0 torsion, 0 of infinite order
+  E torsion t1 (search_E_H2000_torsion.json): 4 hits: 0 above O, 4 torsion, 0 of infinite order
+  E torsion t2 (search_E_H2000_torsion.json): 3 hits: 0 above O, 3 torsion, 0 of infinite order
+  E3 torsion t1 (search_E3_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E3 torsion t2 (search_E3_H2000_torsion.json): 3 hits: 0 above O, 3 torsion, 0 of infinite order
+  E torsion t1 m01 (search_E_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E torsion t1 m02 (search_E_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E torsion t1 m03 (search_E_alt_H2000_torsion.json): 4 hits: 0 above O, 4 torsion, 0 of infinite order
+  E torsion t1 m04 (search_E_alt_H2000_torsion.json): 4 hits: 0 above O, 4 torsion, 0 of infinite order
+  E torsion t1 m05 (search_E_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E torsion t1 m06 (search_E_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E torsion t1 m07 (search_E_alt_H2000_torsion.json): 2 hits: 0 above O, 2 torsion, 0 of infinite order
+  E torsion t1 m08 (search_E_alt_H2000_torsion.json): 2 hits: 0 above O, 2 torsion, 0 of infinite order
+  E torsion t1 m09 (search_E_alt_H2000_torsion.json): 4 hits: 0 above O, 4 torsion, 0 of infinite order
+  E torsion t2 m01 (search_E_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E torsion t2 m02 (search_E_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E torsion t2 m03 (search_E_alt_H2000_torsion.json): 3 hits: 0 above O, 3 torsion, 0 of infinite order
+  E torsion t2 m04 (search_E_alt_H2000_torsion.json): 3 hits: 0 above O, 3 torsion, 0 of infinite order
+  E3 torsion t1 m01 (search_E3_alt_H2000_torsion.json): 4 hits: 0 above O, 4 torsion, 0 of infinite order
+  E3 torsion t1 m02 (search_E3_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E3 torsion t1 m03 (search_E3_alt_H2000_torsion.json): 4 hits: 0 above O, 4 torsion, 0 of infinite order
+  E3 torsion t1 m04 (search_E3_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E3 torsion t1 m05 (search_E3_alt_H2000_torsion.json): 3 hits: 0 above O, 3 torsion, 0 of infinite order
+  E3 torsion t1 m06 (search_E3_alt_H2000_torsion.json): 3 hits: 0 above O, 3 torsion, 0 of infinite order
+  E3 torsion t1 m07 (search_E3_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E3 torsion t1 m08 (search_E3_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E3 torsion t1 m09 (search_E3_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E3 torsion t2 m01 (search_E3_alt_H2000_torsion.json): 2 hits: 0 above O, 2 torsion, 0 of infinite order
+  E3 torsion t2 m02 (search_E3_alt_H2000_torsion.json): 1 hits: 0 above O, 1 torsion, 0 of infinite order
+  E3 torsion t2 m03 (search_E3_alt_H2000_torsion.json): 2 hits: 0 above O, 2 torsion, 0 of infinite order
+points of infinite order found: 0

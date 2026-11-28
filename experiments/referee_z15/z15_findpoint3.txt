@@ -1,0 +1,15 @@
+(14903,9696) E_LU: torsion [4, 2]
+(3320,2303) E_LU: torsion [4, 2]
+(5623,1017) E_08: torsion [4, 2]
+(9113,3200) E_LU: torsion [4, 2]
+(12313,5913) E_08: torsion [4, 2]
+(9113,3200) E_08: torsion [4, 2]
+   effort 3: [0, 2], 0 point(s), images span 2; surviving class not in the span
+   effort 4: [0, 2], 0 point(s), images span 2; surviving class not in the span
+   effort 5: [0, 2], 0 point(s), images span 2; surviving class not in the span
+   effort 6: [0, 2], 0 point(s), images span 2; surviving class not in the span
+(14903,9696) E_08: torsion [4, 2]
+   effort 3: [0, 2], 0 point(s), images span 2; surviving class not in the span
+   effort 4: [0, 2], 0 point(s), images span 2; surviving class not in the span
+   effort 5: [0, 2], 0 point(s), images span 2; surviving class not in the span
+   effort 6: [0, 2], 0 point(s), images span 2; surviving class not in the span

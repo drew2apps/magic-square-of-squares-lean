@@ -1,0 +1,15 @@
+t11_theta.py: Fisher's higher descents on Sig+(12204,9853) (arXiv:1509.03234 Sects. 2, 3, 7), exact. Written by an AI model (build agent t11), not read by a person. Experiment, not counted.
+Sig+(12204,9853): (12204,9853) [G3 open]
+  (0) model rebuilt from (m, n, d) by the census code = I5's minimal model [0, -1, 0, -86753333016712673790059436059407475720840059034305, -3978647120759912663046198465625130039355274066092469254836088590418933674303]; E: y^2 = x(x^2 + a x + b), a = 52990557155399077923391196, b = 849246382863159465224166907044776854046988224402500 (a^2 - 4b = -square)
+      a point of infinite order on E (PARI ellrank as a hint; on the curve, n G != O for n <= 12): rank >= 1
+  (1) rank_indep: |S'_1| = 8 (E side, d | b), |S_1| = 16 (E' side, d' | b'); after the second descent dim S'_2 <= 3, dim S_2 <= 2; known images: dim 2 (E side), 1 (E' side); exact bound 3 + 2 - 2 = 3
+      open cosets: E side [2]; E' side [-959]
+  type B: one open class on each side (E' side: 959; E side: 2); Theta_4 needs both cone fields of one side; the E side fields include Q(sqrt 7015612900073813401545347960788802), so the E' side; the cone fields of a level-3 lift of y are Q(sqrt y) and Q(sqrt -y) (Fisher Sect. 5; rank_fisher5 (4'))
+    y = 959: Q(sqrt 959): h = 4, R = 7.6; Q(sqrt -959): h = 36   (PARI quadclassunit, GRH, for information only)
+  E' side, class 959: lifts D_lam not excluded by the second descent: 8 (tried: up to 12); basis of the other side's S_1: [3507806450036906700772673980394401, 2, 48054502989612457]
+    lam = 1: pairings with the other side's S_1 3507806450036906700772673980394401:+1 2:+1 48054502989612457:+1; level-3 Selmer set non-empty (dim 4), xi = 13087887695, C3 checked locally soluble at R and 21 primes (agrees)
+  lift of 959 (lam = 1, xi = 13087887695): the U pair over Q(sqrt -959) has a checked conic point (rank_fisher5 (6)); the V pair over Q(sqrt 959): no point found
+  E' side, class -959: lifts D_lam not excluded by the second descent: 8 (tried: up to 12); basis of the other side's S_1: [3507806450036906700772673980394401, 2, 48054502989612457]
+    lam = -1: pairings with the other side's S_1 3507806450036906700772673980394401:+1 2:+1 48054502989612457:+1; level-3 Selmer set non-empty (dim 4), xi = 152534293, C3 checked locally soluble at R and 21 primes (agrees)
+  lift of -959 (lam = -1, xi = 152534293): the U pair over Q(sqrt 959) has a checked conic point (rank_fisher5 (6)); the V pair over Q(sqrt -959): no point found
+  RESULT Sig+(12204,9853): UNFINISHED (finder): for each lift tried the U-pair conic point is found in seconds, but the V-pair conic has coefficient norms with cofactors of 289 and 364 digits (after the known primes and p < 1e5) that were not factored, so its square parts cannot be reduced and neither finder got a point in 20 minutes; Theta_4 not computed; bound stays 3

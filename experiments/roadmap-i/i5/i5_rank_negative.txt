@@ -1,0 +1,5 @@
+I5 negative and positive controls. Written by an AI model; not read by a person.
+forged isogenous curve (a4 + 4*10^6): refused
+positive control, the 2-isogenous curve PARI finds: accepted
+forged point (y + 1): refused (not on the curve)
+positive control, the hint point: on the curve

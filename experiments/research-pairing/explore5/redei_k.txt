@@ -1,0 +1,8 @@
+('E_08', 'no pi or no point') 2251
+('E_08', True) 239
+('E_LU', 'no pi or no point') 115
+('E_LU', True) 31
+('E_mix', 'no pi or no point') 1807
+('E_mix', True) 507
+('random e', 'no pi or no point') 27
+('random e', True) 7

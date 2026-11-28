@@ -1,0 +1,3 @@
+z15_residual_all.py: written by an AI model (reviewer z15), not read by a person.
+ratios in the G2 lists with tuples left: 937 ; ratios in the session output: 937 ; same set: True
+residual tuples (repository code): 6904 ; known tuples: 0 ; ratios where the session differs: 0 []

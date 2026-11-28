@@ -1,8 +1,10 @@
-# Experiments beyond the census (26 November 2026)
+# Experiments beyond the census (since 26 November 2026)
 
-Written by an AI model (Claude) in a separate session, and committed here unchanged except for the corrections listed below; no person has
-read any of it. **Nothing in this folder is counted in the census** (which stops at `m ≤ 1000`, `README.md`), nothing is
-in Lean, and every result is tier D of `LEDGER.md` (computed, with the labels each write-up gives). It is kept here so
+Written by AI models (Claude): separate AI sessions, build agents and reviewing agents, whose work is committed here unchanged
+except for the corrections listed in each folder's notes; no person has read any of it. **Nothing in this folder is counted in
+the census** (which stops at `m ≤ 1000`, `README.md`). Most results are tier D of `LEDGER.md` (computed, with the labels each
+write-up gives); some have a written proof (tier C: `research-pairing/note2/`, `explore5/` §1, `genus3/`, `conductor-t11/`), and
+`exchange/` goes with the Lean files `Exchange.lean` and `ExchangeCensus.lean` (tier A). It is kept here so
 that the results can be cited and rerun.
 
 ## What is here
@@ -17,7 +19,13 @@ that the results can be cited and rerun.
 | `roadmap-g/` | `g1/` … `g4/NOTES.md` (with the session's `REPORT_G1.md` … `REPORT_G4.md`) | run 6, Roadmap G: a stress test of the four-class reduction on 340,000 random ratios to `m = 10⁹` (no survivor) with an exact local test at odd primes (`g1/`); which primes empty the four-class set, test 6 of `COMPLETE.md` §7 answered **no** (`g2/`); the census of the two degenerate types for `11000 < m ≤ 13000` (4 open, 3 conditional; `g3/`; in run 7 extended to `14000`: 916 ratios, 6 open, 3 conditional); a point search on the square-type fibres to `m = 20,000`, a search, not a certificate (`g4/`) |
 | `roadmap-h/` | `NOTES.md` and `h1/` … `h7/NOTES.md` (with the session's `HANDOFF_ROADMAP_H.md` and `REPORT_H<n>.md`) | run 7, Roadmap H: phantoms of the four-class descent (7 true partner pairs, all explained; `h1/`); no survivor among every non-degenerate ratio with `15000 < m ≤ 30000` (`h2/`); tables of the local images at good primes `≤ 1153`, the session's completeness step withdrawn (`h3/`); G1's three out-of-memory ratios (`h4/`); the quotients of (627,364), (991,263) (`h6/`); rank 1 for F4's `g4·K` at four ratios and the `E04` bounds of tier B by a full-2-torsion isogenous curve (`h7/`); G3's block `13000 < m ≤ 14000` is under `roadmap-g/g3/` |
 | `conductor-t10/` | `NOTES.md` | run 9: are the good-prime removals of the four-class descent shadowed by the Cassels–Tate pairing on the pair curves? On 201 ratios that need a good prime, each of the 1,766 tuples left by the bad primes is also removed by the pairing (1,762) or by a pair curve of rank 0 (4); not at the degenerate controls (627,364), (991,263) (a candidate mechanism, not a proof; review z11: holds with gaps) |
-| `referee_x6/`, `referee_z7/`, `referee_z8/`, `referee_z9/`, `referee_z11/` | `README.md` in each (z7–z9, z11) | the reviews' own checks of roadmap G (run 6), roadmap H (run 7) and `conductor-t10` (run 9) |
+| `research-pairing/` | `NOTES.md` (with the session's `PAIRING_FORMULA.md`) | run 10: on the pair curves `E_08`, `E_LU` (Frey curves of a Pythagorean triple) the Cassels–Tate pairing in closed form, Hilbert and Legendre symbols of `δ = mn·d0·d8`, resp. `(m² − n²)·dL·dU` (term at 2 numerical); agrees with `rank_second` on 28,918 distinct cases on 146 and 133 of the pilot's ratios (review z12: holds on the sample tested, with corrections: coprime `m > n`, counts per distinct case, literature); no known formula for the four mixed curves. Run 11: `note2/` (the local terms derived, tier C; review z13), `explore3/` (the mixed curves: a Rédei symbol with third entry `W`; review z14), `explore4/` (the pairing on all 937 four-form ratios `m ≤ 15000`; review z15), `explore5/` (Theorem B; the centre in the bad-prime test; ghost laws; reviews z14, z16) |
+| `exchange/` | `NOTES.md` | run 10: the exchange symmetry for the rational system (tier A, `Exchange.lean`, `ExchangeCensus.lean`; for `IsMSS` the second ratio was already in the library) and a check at the nine open ratios: a solution there with `t ∉ {0, ±1, ∞}` has its second ratio outside the census range (not reviewed by a separate agent apart from the pre-publication referee) |
+| `genus3/` | `NOTES.md` | run 11 (build agent t12, on a separate session's note): `y² = F0·F8·L·U` has its Jacobian isogenous to `E1 × E2 × E3` (tier C); at the open ratios every `E_i` has a point of infinite order, so no rank-0 closure and no Demjanenko–Manin route; the (627,364) corner curve over `ℚ(i)` is not a ℚ-curve; not reviewed by a separate agent |
+| `conductor-t11/` | `NOTES.md` | run 11 (build agent t11): Fisher's pairings on I5's nine curves; two bounds 5 → 3, none reaches 1, so the rows conditional on a rank being 1 stay conditional (tier C; not reviewed by a separate agent) |
+| `conductor-t13/` | `NOTES.md` | run 11 (build agent t13): (627,364) over `ℚ(i)`, a 2-covering search of about 5·10¹⁰ pairs, no point of infinite order; rank 2 not proved (tier D; not reviewed by a separate agent) |
+| `roadmap-i/` | `NOTES.md` and the session's `HANDOFF_ROADMAP_I*.md`, `REPORT_I<n>.md` | run 11: a separate long-running session's roadmap I, parts 1–2 (I1, I2, I3, I4 interim, I5, I8 checkpoint); review z17: every output reproduces under PARI 2.17.4, with corrections |
+| `referee_x6/`, `referee_z7/`, `referee_z8/`, `referee_z9/`, `referee_z11/` … `referee_z17/` | `README.md` in each (z7–z9, z11–z14, z17; z15, z16 in their reports) | the reviews' own checks of roadmap G (run 6), roadmap H (run 7), `conductor-t10` (run 9), `research-pairing` (runs 10, 11) and roadmap I (run 11) |
 | `HANDOFF_26NOV.md` | | the session's one-page summary |
 
 The pipeline is: congruences (`census2000/gen_pairs.py`) → the repository's class criterion → second descent

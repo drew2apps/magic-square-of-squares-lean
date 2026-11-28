@@ -1,0 +1,10 @@
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+PARI stack size set to 2000000000 bytes, maximum size set to 2000003072
+I4 exchange test, negative and positive controls. Written by an AI model; not read by a person.
+positive control: (14744,3633), t = 1 degenerate (reported by the second descent): trivial
+forged: the same point reported as a SOLUTION: refused
+forged: t = 2/3 reported as degenerate: refused
+forged: a SOLUTION whose u : v is 7 : 1: refused (degenerate ratio)
+forged: a SOLUTION whose u : v is 3 : 2: refused (in a class of modp_classes.txt)
+positive control: u : v = 308 : 185 (I1, design B): accepted (keeps a class (dim 0))
+# matches

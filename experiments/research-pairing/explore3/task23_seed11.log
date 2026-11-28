@@ -1,0 +1,144 @@
+symbolic identity R+ s^2 - R- D^2 - 2ABd*(dT^2+8C^2TZ+(16A^2B^2/d)Z^2) == 0 : True
+ratio (511, 260) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 73, 257] | Sel2 dim (mine,file) 8 8 | pairs 50 t=0
+ratio (881, 49) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 31, 881] | Sel2 dim (mine,file) 8 8 | pairs 50 t=1
+ratio (1513, 463) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 17, 89, 463] | Sel2 dim (mine,file) 9 9 | pairs 50 t=2
+ratio (1852, 1155) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 62, 287, 679, 3241] | Sel2 dim (mine,file) 9 9 | pairs 50 t=3
+ratio (1953, 1000) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 953, 5906] | Sel2 dim (mine,file) 8 8 | pairs 50 t=5
+ratio (2260, 1547) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 17, 23, 217, 329, 791] | Sel2 dim (mine,file) 10 10 | pairs 50 t=6
+ratio (2372, 2085) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 14, 182737] | Sel2 dim (mine,file) 6 6 | pairs 49 t=8
+ratio (2600, 2103) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 71, 4703] | Sel2 dim (mine,file) 8 8 | pairs 50 t=8
+ratio (2679, 1400) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 329, 2558, 4079] | Sel2 dim (mine,file) 7 7 | pairs 50 t=9
+ratio (2717, 1260) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 217, 574, 658, 1358] | Sel2 dim (mine,file) 8 8 | pairs 50 t=10
+ratio (3007, 697) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 62, 287, 679, 3241] | Sel2 dim (mine,file) 9 9 | pairs 50 t=10
+ratio (3163, 3116) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 23, 41, 47] | Sel2 dim (mine,file) 9 9 | pairs 50 t=12
+ratio (3315, 2188) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 238, 46, 5503] | Sel2 dim (mine,file) 7 7 | pairs 50 t=14
+ratio (3320, 2303) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 1582, 39361] | Sel2 dim (mine,file) 6 6 | pairs 49 t=14
+ratio (3395, 1504) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 23, 62, 94, 142, 194] | Sel2 dim (mine,file) 10 10 | pairs 50 t=15
+ratio (3587, 2747) gens 10 dim of {d: (1,d,d) ELS} = 3 basis [-1, 82, 22169] | Sel2 dim (mine,file) 6 6 | pairs 49 t=17
+ratio (3692, 3269) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 7, 47, 71, 13922] | Sel2 dim (mine,file) 8 8 | pairs 50 t=17
+ratio (3708, 1885) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 47, 103, 12761] | Sel2 dim (mine,file) 8 8 | pairs 50 t=18
+ratio (3900, 707) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 17, 217, 103, 271] | Sel2 dim (mine,file) 9 9 | pairs 50 t=19
+ratio (4225, 896) gens 8 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 569, 3329] | Sel2 dim (mine,file) 8 8 | pairs 50 t=21
+ratio (4241, 631) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 1262, 4241] | Sel2 dim (mine,file) 6 6 | pairs 49 t=23
+ratio (4333, 508) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 238, 94, 103, 127] | Sel2 dim (mine,file) 8 8 | pairs 50 t=23
+ratio (4404, 2197) gens 9 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 23, 287, 367, 2207] | Sel2 dim (mine,file) 9 9 | pairs 50 t=24
+ratio (4471, 3241) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 17, 82, 482, 263, 926] | Sel2 dim (mine,file) 9 9 | pairs 50 t=25
+ratio (4600, 1163) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 23, 113] | Sel2 dim (mine,file) 8 8 | pairs 50 t=27
+ratio (5105, 1416) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 17, 62, 13042] | Sel2 dim (mine,file) 8 8 | pairs 50 t=28
+ratio (5623, 1017) gens 9 dim of {d: (1,d,d) ELS} = 3 basis [-1, 1582, 39361] | Sel2 dim (mine,file) 6 6 | pairs 49 t=29
+ratio (7096, 5679) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 73, 559697] | Sel2 dim (mine,file) 8 8 | pairs 50 t=29
+ratio (7416, 3175) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 178, 1442, 127, 59374] | Sel2 dim (mine,file) 9 9 | pairs 50 t=30
+ratio (7679, 6120) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 238, 1559, 27598] | Sel2 dim (mine,file) 7 7 | pairs 50 t=32
+ratio (8587, 1020) gens 12 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 23, 31, 47] | Sel2 dim (mine,file) 10 10 | pairs 50 t=32
+ratio (8633, 4977) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 1106, 178, 194, 914, 19054] | Sel2 dim (mine,file) 9 9 | pairs 50 t=34
+ratio (8957, 8340) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 7, 353, 617] | Sel2 dim (mine,file) 8 8 | pairs 50 t=36
+ratio (9103, 4480) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 391, 1598, 9103] | Sel2 dim (mine,file) 7 7 | pairs 50 t=37
+ratio (9401, 8207) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 17, 62, 142, 1106, 199] | Sel2 dim (mine,file) 9 9 | pairs 50 t=38
+ratio (9815, 5648) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 151, 353, 21761] | Sel2 dim (mine,file) 9 9 | pairs 50 t=39
+ratio (9913, 9673) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 238, 322, 862, 7966, 9793] | Sel2 dim (mine,file) 9 9 | pairs 50 t=41
+ratio (10060, 589) gens 12 dim of {d: (1,d,d) ELS} = 5 basis [-1, 217, 82, 21298, 503] | Sel2 dim (mine,file) 9 9 | pairs 50 t=43
+ratio (10496, 5485) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 41, 1522, 1097] | Sel2 dim (mine,file) 9 9 | pairs 50 t=44
+ratio (10840, 927) gens 10 dim of {d: (1,d,d) ELS} = 6 basis [-1, 322, 287, 1442, 1897, 862] | Sel2 dim (mine,file) 9 9 | pairs 50 t=45
+ratio (11125, 9539) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 2, 287, 623] | Sel2 dim (mine,file) 8 8 | pairs 50 t=46
+ratio (11315, 8652) gens 11 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 62, 82, 15038, 35551, 194399] | Sel2 dim (mine,file) 10 10 | pairs 50 t=47
+ratio (11744, 105) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 34, 41, 206, 113, 367] | Sel2 dim (mine,file) 10 10 | pairs 50 t=50
+ratio (11849, 11639) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 34, 41, 206, 113, 367] | Sel2 dim (mine,file) 10 10 | pairs 50 t=52
+ratio (11960, 6919) gens 13 dim of {d: (1,d,d) ELS} = 7 basis [-1, 2, 7, 17, 23, 31, 71] | Sel2 dim (mine,file) 10 10 | pairs 50 t=55
+ratio (12028, 2875) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 7, 46, 62, 194, 113, 4258] | Sel2 dim (mine,file) 10 10 | pairs 50 t=57
+ratio (12231, 10631) gens 9 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 1633, 3473, 244513] | Sel2 dim (mine,file) 9 9 | pairs 50 t=59
+ratio (12269, 7292) gens 9 dim of {d: (1,d,d) ELS} = 5 basis [-1, 14, 62, 99698, 1823] | Sel2 dim (mine,file) 9 9 | pairs 50 t=61
+ratio (12281, 2583) gens 9 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 41, 929, 12281] | Sel2 dim (mine,file) 9 9 | pairs 50 t=62
+ratio (12497, 10521) gens 10 dim of {d: (1,d,d) ELS} = 4 basis [-1, 7, 34, 4173998] | Sel2 dim (mine,file) 7 7 | pairs 50 t=64
+ratio (12627, 8827) gens 12 dim of {d: (1,d,d) ELS} = 6 basis [-1, 7, 34, 46, 194, 631] | Sel2 dim (mine,file) 9 9 | pairs 50 t=65
+ratio (12797, 5580) gens 12 dim of {d: (1,d,d) ELS} = 8 basis [-1, 14, 17, 23, 62, 94, 191, 1031] | Sel2 dim (mine,file) 11 11 | pairs 50 t=67
+ratio (12929, 6169) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2, 217, 1393, 12929] | Sel2 dim (mine,file) 8 8 | pairs 50 t=70
+ratio (13571, 420) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 238, 287, 823, 92057] | Sel2 dim (mine,file) 8 8 | pairs 50 t=71
+ratio (14495, 11496) gens 11 dim of {d: (1,d,d) ELS} = 8 basis [-1, 2, 7, 47, 79, 223, 479, 2999] | Sel2 dim (mine,file) 11 11 | pairs 50 t=72
+ratio (14653, 6396) gens 11 dim of {d: (1,d,d) ELS} = 5 basis [-1, 23, 17794, 42098, 359] | Sel2 dim (mine,file) 8 8 | pairs 50 t=74
+ratio (14729, 1324) gens 11 dim of {d: (1,d,d) ELS} = 6 basis [-1, 2, 7, 103, 383, 5351] | Sel2 dim (mine,file) 9 9 | pairs 50 t=75
+ratio (14791, 12087) gens 10 dim of {d: (1,d,d) ELS} = 5 basis [-1, 2686, 1513, 1057, 71842] | Sel2 dim (mine,file) 8 8 | pairs 50 t=77
+ratio (14893, 10476) gens 10 dim of {d: (1,d,d) ELS} = 7 basis [-1, 14, 23, 194, 562, 1262, 2206] | Sel2 dim (mine,file) 10 10 | pairs 50 t=78
+ratio (14944, 7575) gens 9 dim of {d: (1,d,d) ELS} = 4 basis [-1, 7, 6434, 7369] | Sel2 dim (mine,file) 7 7 | pairs 50 t=80
+
+=== TASK 2 ===
+ratios 60 dimension histogram of {d | (1,d,d) in Sel^2}: {3: 5, 4: 7, 5: 20, 6: 17, 7: 9, 8: 2}
+full Sel^2 dimension from my local images equals dim in data file: {True: 60}
+pairs 2995 {'agree': 2995, "('cassels value', 1)": 2040, "('diag <d,d>', 1)": 370, "('cassels value', -1)": 955}
+bad []
+
+=== TASK 3 ===
+{'x^2-dy^2=beta z^2 insoluble': 2248, ('insoluble, pairing', 1): 1510, 'soluble': 747, ('insoluble, pairing', -1): 738, 'x0+y0 s = 0 mod p for some p': 11}
+(dim of ELS set, dim of {d: norm from Q(sqrt W)}) histogram: {(3, 5): 1, (3, 6): 3, (3, 7): 1, (4, 6): 1, (4, 7): 2, (4, 8): 4, (5, 7): 4, (5, 8): 7, (5, 9): 7, (5, 10): 2, (6, 8): 4, (6, 9): 6, (6, 10): 5, (6, 11): 2, (7, 9): 5, (7, 10): 2, (7, 12): 1, (7, 13): 1, (8, 11): 2}
+--- pairs of the Task-2 sample
+ S takes more than one value over the tested primitive solutions: 0 / 747 ; min #solutions tested 14
+ pairing = S for every tested solution: 747 / 747
+pairs with a solution and d square mod all p|W (odd mult): 747
+ pairing = S (plain): 747 / 747
+ pairing = S2 (other sign of s): 747 / 747
+ pairing = -S : 0
+ pairing = S*J(-1) : 747 / 747 | J factor = -1 on 0
+ pairing = S*J(2) : 747 / 747 | J factor = -1 on 0
+ pairing = S*J(z0) : 678 / 747 | J factor = -1 on 69
+ pairing = S*J(x0) : 546 / 747 | J factor = -1 on 201
+ pairing = S*J(y0) : 669 / 747 | J factor = -1 on 78
+ pairing = S*sign: -1 if d<0 and beta<0 : 747 / 747 | J factor = -1 on 0
+ restricted to pairing=-1 (217 pairs): S=-1 on 217
+ restricted to pairing=+1 (530 pairs): S=+1 on 530
+ value table (P,S): {(1, 1): 530, (-1, -1): 217}
+ by parity of m+n: {(1, 1, 1): 339, (1, -1, -1): 150, (0, 1, 1): 191, (0, -1, -1): 67}
+--- Task-2 sample, nontrivial (d!=1,beta!=1,d!=beta)
+ S takes more than one value over the tested primitive solutions: 0 / 663 ; min #solutions tested 14
+ pairing = S for every tested solution: 663 / 663
+pairs with a solution and d square mod all p|W (odd mult): 663
+ pairing = S (plain): 663 / 663
+ pairing = S2 (other sign of s): 663 / 663
+ pairing = -S : 0
+ pairing = S*J(-1) : 663 / 663 | J factor = -1 on 0
+ pairing = S*J(2) : 663 / 663 | J factor = -1 on 0
+ pairing = S*J(z0) : 602 / 663 | J factor = -1 on 61
+ pairing = S*J(x0) : 462 / 663 | J factor = -1 on 201
+ pairing = S*J(y0) : 599 / 663 | J factor = -1 on 64
+ pairing = S*sign: -1 if d<0 and beta<0 : 663 / 663 | J factor = -1 on 0
+ restricted to pairing=-1 (217 pairs): S=-1 on 217
+ restricted to pairing=+1 (446 pairs): S=+1 on 446
+ value table (P,S): {(1, 1): 446, (-1, -1): 217}
+ by parity of m+n: {(1, 1, 1): 284, (1, -1, -1): 150, (0, 1, 1): 162, (0, -1, -1): 67}
+--- extra random nontrivial soluble pairs
+ S takes more than one value over the tested primitive solutions: 0 / 13413 ; min #solutions tested 14
+ pairing = S for every tested solution: 13413 / 13413
+pairs with a solution and d square mod all p|W (odd mult): 13413
+ pairing = S (plain): 13413 / 13413
+ pairing = S2 (other sign of s): 13413 / 13413
+ pairing = -S : 0
+ pairing = S*J(-1) : 13413 / 13413 | J factor = -1 on 0
+ pairing = S*J(2) : 13413 / 13413 | J factor = -1 on 0
+ pairing = S*J(z0) : 10304 / 13413 | J factor = -1 on 3109
+ pairing = S*J(x0) : 8381 / 13413 | J factor = -1 on 5032
+ pairing = S*J(y0) : 10370 / 13413 | J factor = -1 on 3043
+ pairing = S*sign: -1 if d<0 and beta<0 : 13413 / 13413 | J factor = -1 on 0
+ restricted to pairing=-1 (5633 pairs): S=-1 on 5633
+ restricted to pairing=+1 (7780 pairs): S=+1 on 7780
+ value table (P,S): {(1, 1): 7780, (-1, -1): 5633}
+ by parity of m+n: {(1, 1, 1): 5398, (1, -1, -1): 4028, (0, 1, 1): 2382, (0, -1, -1): 1605}
+--- ALL
+ S takes more than one value over the tested primitive solutions: 0 / 14160 ; min #solutions tested 14
+ pairing = S for every tested solution: 14160 / 14160
+pairs with a solution and d square mod all p|W (odd mult): 14160
+ pairing = S (plain): 14160 / 14160
+ pairing = S2 (other sign of s): 14160 / 14160
+ pairing = -S : 0
+ pairing = S*J(-1) : 14160 / 14160 | J factor = -1 on 0
+ pairing = S*J(2) : 14160 / 14160 | J factor = -1 on 0
+ pairing = S*J(z0) : 10982 / 14160 | J factor = -1 on 3178
+ pairing = S*J(x0) : 8927 / 14160 | J factor = -1 on 5233
+ pairing = S*J(y0) : 11039 / 14160 | J factor = -1 on 3121
+ pairing = S*sign: -1 if d<0 and beta<0 : 14160 / 14160 | J factor = -1 on 0
+ restricted to pairing=-1 (5850 pairs): S=-1 on 5850
+ restricted to pairing=+1 (8310 pairs): S=+1 on 8310
+ value table (P,S): {(1, 1): 8310, (-1, -1): 5850}
+ by parity of m+n: {(1, 1, 1): 5737, (1, -1, -1): 4178, (0, 1, 1): 2573, (0, -1, -1): 1672}
+partial factorizations {'partial_factor': 0} time 81
+
+real	1m21.556s
+user	1m17.889s
+sys	0m3.650s
